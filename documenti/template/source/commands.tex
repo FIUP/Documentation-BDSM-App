@@ -1,0 +1,90 @@
+% DEFINIZIONE COMANDI BASE CHE POI ANDRANNO RIDEFINITI
+
+
+% COMANDI DA RIDEFINIRE
+
+% Nome del documento
+\newcommand{\documentName}{\_\_DOC\_NAME\_\_}
+
+% Versione del documento
+\newcommand{\documentVersion}{\_\_DOC\_VERSION\_\_}
+
+% Data del documento
+\newcommand{\documentDate}{\_\_YYYY-MM-GG\_\_}
+
+% Editori del documento
+\newcommand{\documentEditors}{
+	\begin{itemize}[leftmargin=0cm] % Elimina lo spazio tra il simbolo dell' item e il suo contenuto
+		\item[] \_\_Cognome1\_Nome1\_\_ % [] Rimuove il simbolo associato all'item
+		\item[] \_\_Cognome2\_Nome2\_\_
+	\end{itemize}
+}
+
+% Verificatore del documento
+\newcommand{\documentVerifiers}{
+	\begin{itemize}[leftmargin=0cm]
+		\item[] \_\_Cognome1\_Nome1\_\_
+	\end{itemize}
+}
+
+% Approvazione del documento
+\newcommand{\documentApprovers}{
+	\begin{itemize}[leftmargin=0cm]
+		\item[] \_\_Cognome1\_Nome1\_\_
+	\end{itemize}
+}
+
+% Lista di distribuzione del documento
+\newcommand{\documentDistributionList}{
+	\begin{itemize}[leftmargin=0cm]
+		\item[] \groupName
+		\item[] \commitNameM
+		\item[] \commitNameS
+		\item[] \proposerName
+	\end{itemize}
+}
+
+% Uso del documento
+\newcommand{\documentUsage}{{\_\_Interno/Esterno\_\_}}
+
+% ====================================================================
+
+% COMANDI DA NON RIDEFINIRE
+
+% Nome del progetto
+\newcommand{\projectName}{BDSMApp}
+
+% Email ufficiale del gruppo
+\newcommand{\groupEmail}{
+	\textit{\href{mailto:mashup.unipd@gmail.com}{mashup.unipd@gmail.com}}
+}
+% Nome del gruppo
+\newcommand{\groupName}{\emph{MashUp}}
+
+% Ruoli del progetto
+\newcommand{\roleProjectManager}{\emph{Responsabile di Progetto}}
+\newcommand{\roleAdministrator}{\emph{Amministratore di Progetto}}
+\newcommand{\roleAnalyst}{\emph{Analista}}
+\newcommand{\roleProgrammer}{\emph{Programmatore}}
+\newcommand{\roleDesigner}{\emph{Progettista}}
+\newcommand{\roleVerifier}{\emph{Verificatore}}
+
+% logo del gruppo
+\newcommand{\logoHor}{\includegraphics[width=4cm,height=4cm]{../template/immagini/logo/logo\_orizzontale.pdf}}
+\newcommand{\logoVerFirstPage}{\includegraphics[width=4cm,height=4cm]{../template/immagini/logo/logo\_verticale.pdf}}
+
+% Referenti e commitenti (M = master, S = slave)
+\newcommand{\proposerName}{\emph{Dott. David Santucci} - Zing}
+\newcommand{\commitNameM}{\emph{Prof. Tullio Vardanega}}
+\newcommand{\commitNameS}{\emph{Prof. Riccardo Cardin}}
+
+% Abbreviazioni per richiamare il nome esteso dei diversi documenti da redarre
+\newcommand{\glossDoc}{\emph{Glossario}}
+\newcommand{\studio}{\emph{Studio di Fattibilità \currentVersion}}
+\newcommand{\analisi}{\emph{Analisi dei Requisiti \currentVersion}}
+\newcommand{\PdP}{\emph{Piano di Progetto \currentVersion}}
+\newcommand{\PdQ}{\emph{Piano di Qualifica \currentVersion}}
+\newcommand{\NdP}{\emph{Norme di Progetto \currentVersion}}
+
+% TO DO - parte sul glossario e su alcune specifiche dello scopo del documento
+
