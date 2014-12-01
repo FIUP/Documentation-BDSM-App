@@ -1,3 +1,0 @@
-- Script Phyton generati con con Phyton 2.7 utilizzando l'IDE IDLE fornito assieme alle librerie.
-- Tutti i nomi degli script in minuscolo e se ci sono spazi usare "_"
-	Es. nome_mio_script.py
