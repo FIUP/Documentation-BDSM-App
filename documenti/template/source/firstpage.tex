@@ -1,17 +1,51 @@
+% =================================================================================================
+% File:			firstpage.tex
+% Description:	Defiinisce i contenuti obbligatori della prima pagina
+% Created:		2014/12/05
+% Author:		Santacatterina Luca
+% Email:		s88.luca@gmail.com
+% =================================================================================================
+% Modification History:
+% Version		Modifier Date		Change											Author
+% 0.0.1 		2014/12/05 			Prima emissione 								Luca S.
+% =================================================================================================
+
+
 % DEFINIZIONE DELLA PRIMA PAGINA
 
-
+\thispagestyle{empty}
+\setlength{\topmargin}{-60pt}
+% Logo del gruppo
 \begin{figure}[!t]
 	\centering
-	% \logoVerFirstPage NON FUNZIONA
-	\includegraphics[width=8cm]{../template/immagini/logo/logo_verticale.pdf}
+	\includegraphics[width=10cm]{../template/images/logo/zing.pdf}
+\end{figure}
+\vspace{1pt}
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=8cm]{../template/images/logo/logo_verticale.pdf}
 \end{figure}
 
+% Email del gruppo
 \begin{center}
- 		\groupEmail
+ 	\groupEmail
 \end{center}
 
-\begin{center}	
-		\vspace{1cm}
-		\input{../template/source/doc_information}
+% Informazioni del documento
+\begin{center}
+\vspace{1cm}
+	\textbf{\Large Informazioni Documento} \\[10pt]
+	\begin{longtable}{l|p{150pt}}
+		\textbf{Nome documento} & \documentName \\ & \\
+		\textbf{Versione} & \documentVersion \\ & \\
+		\textbf{Data redazione} & \documentDate \\ & \\
+		\textbf{Redattori} & \parbox[t]{\textwidth}{\documentEditors} \\ & \\
+		\textbf{Verificatori} & \parbox{\textwidth}{\documentVerifiers} \\ & \\
+		\textbf{Approvazione} & \parbox{\textwidth}{\documentApprovers} \\ & \\
+		\textbf{Lista distribuzione} & \parbox{\textwidth}{\documentDistributionList} \\ & \\
+		\textbf{Uso} & \parbox{\textwidth}{\documentUsage} \\
+	\end{longtable}
+	\vspace{10pt}
+	\textbf{\Large Sommario} \\
 \end{center}
+\documentSummary
