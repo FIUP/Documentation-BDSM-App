@@ -14,9 +14,13 @@
 doc:
 	@echo "Enter a document name:"
 	@read DOC_NAME; \
-	cp -r template_document $$DOC_NAME; \
-	cd $$DOC_NAME; \
-	mv nome_del_documento.tex $$DOC_NAME.tex; \
-	rm nome_del_documento.pdf; \
-	sed -i '' "s/nome_del_documento/$$DOC_NAME/g" Makefile; \
-	echo "Generazione struttura $$DOC_NAME completata"
+	if [ ! -d $$DOC_NAME ]; then \
+		cp -r template_document $$DOC_NAME; \
+		cd $$DOC_NAME; \
+		mv nome_del_documento.tex $$DOC_NAME.tex; \
+		rm nome_del_documento.pdf; \
+		sed -i '' "s/nome_del_documento/$$DOC_NAME/g" Makefile; \
+		echo "Generazione struttura $$DOC_NAME completata"; \
+	else \
+		echo "Cartella già presente. Non serve creare una nuova struttura!"; \
+	fi
