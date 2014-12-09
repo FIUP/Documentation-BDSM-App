@@ -12,5 +12,6 @@ Thumbs.db
 *.aux
 *.synctex.gz
 
-
+# rimuove il tracciamento dei file spazzatura temporanei che vengono generati da Astah
+*.asta.bak
 
