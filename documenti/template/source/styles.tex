@@ -44,6 +44,11 @@
 	\pagestyle{fancy}
 	% HEADER
 	\fancyhead{}
+<<<<<<< HEAD
+=======
+	\setlength{\topmargin}{-65pt}
+	\setlength{\headsep}{65pt}
+>>>>>>> develop
 	\fancyhead[L]{\definecolor{titlepagecolor}{cmyk}{0,0,0,0.40}
 	\begin{tikzpicture}[remember picture,overlay]
 		\path [fill=titlepagecolor](-20,1.8) rectangle(1\paperwidth,-0.3);
@@ -52,7 +57,11 @@
 	\fancyhead[R]{\uppercase{\leftmark}}
 	% FOOTER
 	\fancyfoot{}
+<<<<<<< HEAD
 	\fancyfoot[L]{\documentName}
+=======
+	\fancyfoot[L]{\documentName~\documentVersion}
+>>>>>>> develop
 	\fancyfoot[R]{Pagina \thepage~di~\pageref{LastPage}}
 	\setcounter{page}{0}
 	\pagenumbering{arabic}
