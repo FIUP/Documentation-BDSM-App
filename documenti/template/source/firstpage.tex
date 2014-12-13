@@ -1,0 +1,51 @@
+% =================================================================================================
+% File:			firstpage.tex
+% Description:	Defiinisce i contenuti obbligatori della prima pagina
+% Created:		2014/12/05
+% Author:		Santacatterina Luca
+% Email:		s88.luca@gmail.com
+% =================================================================================================
+% Modification History:
+% Version		Modifier Date		Change											Author
+% 0.0.1 		2014/12/05 			Prima emissione 								Luca S.
+% =================================================================================================
+%
+
+
+% DEFINIZIONE DELLA PRIMA PAGINA
+
+\thispagestyle{empty}
+\setlength{\topmargin}{-60pt}
+% Logo del gruppo
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=10cm]{../template/images/logo/zing.pdf}
+\end{figure}
+\vspace{1pt}
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=8cm]{../template/images/logo/logo_verticale.pdf}
+\end{figure}
+
+% Email del gruppo
+\begin{center}
+ 	\groupEmail
+\end{center}
+
+% Informazioni del documento
+\begin{center}
+\vspace{1cm}
+	\textbf{\Large Informazioni Documento} \\[10pt]
+	\begin{longtable}{l|p{150pt}}
+		\textbf{Nome documento} & \documentName \\ & \\
+		\textbf{Data redazione} & \documentDate \\ & \\
+		\textbf{Redattori} & \parbox[t]{\linewidth}{\documentEditors} \\ & \\
+		\textbf{Verificatori} & \parbox{\linewidth}{\documentVerifiers} \\ & \\
+		\textbf{Approvazione} & \parbox{\linewidth}{\documentApprovers} \\ & \\
+		\textbf{Lista distribuzione} & \parbox{\linewidth}{\documentDistributionList} \\ & \\
+		\textbf{Uso} & \parbox{\linewidth}{\documentUsage} \\
+	\end{longtable}
+	\vspace{10pt}
+	\textbf{\Large Sommario} \\
+\end{center}
+\documentSummary
