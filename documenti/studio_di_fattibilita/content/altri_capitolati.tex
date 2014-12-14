@@ -41,9 +41,31 @@ Il gruppo ha subito deciso di scartare il secondo capitolato. Sebbene tutti gli 
 \subsection{Capitolato C3: Nor(r)is}
 
 \subsubsection{Descrizione}
+Il capitolato propone lo sviluppo di un framework, denominato Norris, per la produzione di grafici in tempo reale a partire da sorgenti arbitrarie. I grafici saranno sviluppati interamente tramite le API messe a disposizione da Norris, sia per la veste grafica che per i dati e dovranno essere disponibili quattro rappresentazioni:
+\begin{itemize}
+\item \textbf{Bar chart}
+\item \textbf{Line chart}
+\item \textbf{Map chart}
+\item \textbf{Formato tabellare}
+\end{itemize}
+L'aggiornamento dei grafici, inoltre, potrà avvenire in tre modi: 
+\begin{itemize}
+\item \textbf{Place}: dove il valore aggiorato sostituisce il precedente.
+\item \textbf{Stream}: dove i valori già presenti rimancono visibili, ma ne vengono aggiunti di nuovi-
+\item \textbf{Movie}: combina i medoti precedenti, permettendo la sostituzione di dati, l'aggiunta di nuovi valori e la loro rimozione.
+\end{itemize}
+Il framework metterà dunque a disposizione una componente WebSocket che aggiornerà i grafici in tempo reale, che sarà realizzata tramite la libreria Socket.io. Tra le altre tecnologie, troviamo Node.js ed il relativo framework Express per lo sviluppo lato server, mentre AngularJS per il front-end. Opzionalmente, è inoltre richiesta la progettazione di un'applicazione Android per la visualizzazione dei grafici a partire da un server arbitrario in cui è presente un'istanza di Norris.
 
 \subsubsection{Valutazione}
-
+Il capitolato in questione è stato valutato attentamente dal gruppo ma nella fase finale di analisi, è stato scartato in favore del primo. Di seguito gli aspetti positivi identificati:
+\begin{itemize}
+\item \textbf{Interesse del dominio tecnologico}: il gruppo ha da subito dimostrato forte interesse per le tecnologie in uso, ritenute innovative e di grande utilità per la formazione personale e lavorativa di ognuno.
+\end{itemize}
+Di seguito, invece, gli aspetti negativi che hanno portato il gruppo a scartare il capitolato:
+\begin{itemize}
+\item \textbf{Scarsa conoscenza del dominio tecnologico}: sebbene l'interesse dimostrato per l'apprendimento delle tecnologie in uso, le scarse conoscenze di quest'ultime ha compromesso la decisione finale.
+\item \textbf{Grossa mole di lavoro}: il gruppo ha concluso che la mole lavorativa necessaria per lo svolgimento del capitolato avrebbe potuto compromettere l'esito finale.
+\end{itemize}
 
 % CAPITOLATO 4
 
