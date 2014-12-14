@@ -1,7 +1,0 @@
-Title: Creato branch feature-ver
-Desc: Creato branch e caricato verbale del 2014-11-26
-
-# Description (required) (si può anche andare a capo)
-# Se ci saranno particolare script azionabili al momento del commit si potrà inserire qua un comando che lancerà l'azione
-# Se si usa Asana per gestire il ticketing e si è connessi a GitHub come gestore di repository, decommentare il commento seguente
-Task: Reported in #id_task 21831613566757
