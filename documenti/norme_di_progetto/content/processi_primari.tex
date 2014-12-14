@@ -6,12 +6,13 @@
 % Email:		tesser.paolo@mashup-unipd.it
 % =================================================================================================
 % Modification History:
-% Version		Modifier Date		Change											Author
-% 0.0.1 		2014/12/11 			Inizializzazione del file e inizio stesura		Tesser Paolo
+% Version		Modifier Date		Change													Author
+% 0.0.1 		2014/12/11 			Inizializzazione del file e inizio stesura				Tesser Paolo
 % =================================================================================================
-% 0.0.2			2014/12/12			continuazione stesura sottosezione fornitura	Tesser Paolo
+% 0.0.2			2014/12/12			continuazione stesura sottosezione fornitura			Tesser Paolo
 % =================================================================================================
-%
+% 0.0.3			2014/12/12			completamento sottosezione stesura e inizio sviluppo	Tesser Paolo
+% =================================================================================================
 %
 
 
@@ -20,7 +21,7 @@
 \section{Processi Primari}
 Nella sezione dei Processi Primari sono descritti i processi e le attività che servono alle parti prime durante il ciclo di vita del software. \\
 Queste parti sono l'acquirente, il fornitore, lo sviluppatore, l'operatore e il manutentore del prodotto software. \\
-Il gruppo \groupName{} si occuperà solo della fornitura e dello sviluppo. Il Processo di Acquisizione spetterà al proponente e al committente del capitolato scelto, mentre il Processo di Manutenzione non potrà essere attuato per vincoli temporali. \\
+Il gruppo \groupName{} si occuperà solo dei Processi di Fornitura e di Sviluppo. Il Processo di Acquisizione spetterà al proponente e al committente del capitolato scelto, mentre il Processo di Manutenzione non potrà essere attuato per vincoli temporali. \\
 Nonostante questo l'applicativo \projectName{} e la documentazione fornita con esso dovranno garantire la possibilità futura di procedere con le attività presenti in questo processo a discrezione del proponente.
 
 	\subsection{Processo di Fornitura}
@@ -28,11 +29,11 @@ Nonostante questo l'applicativo \projectName{} e la documentazione fornita con e
 		
 			\paragraph{Accettazione}
 				\subparagraph{Discussione e scelta del capitolato}
-Il Project Manager ha il compito di organizzare	gli incontri iniziali per permettere ai componenti del gruppo di discutere e esaminare i capitolati selezionati dal committente. \\
+Il \roleProjectManager{} ha il compito di organizzare	gli incontri iniziali per permettere ai componenti del gruppo di discutere e esaminare i capitolati selezionati dal committente. \\
 Dalle riunioni emergerà la scelta effettuata dal team. \\
 Le valutazioni che hanno portato ha prendere questa decisione verranno documentate in dei verbali.
 				\subparagraph{Studio di Fattibilità}
-Agli analisti spetta il compito di redigere lo TO DO, basandosi sui verbali citati in precedenza.
+Agli \emph{Analisti} spetta il compito di redigere lo \docNameVersionSdF{}, basandosi sui verbali citati in precedenza.
 Per realizzare il documento dovranno essere presi in considerazione i seguenti punti per ogni capitolato, con maggiore dettaglio per quello preso in carico.
 					\begin{itemize}
 						\item \textbf{dominio tecnologico e applicativo:} si valutano le conoscenze attuali del team riguardo le tecnologie richieste;
@@ -41,23 +42,40 @@ Per realizzare il documento dovranno essere presi in considerazione i seguenti p
 					\end{itemize}
 			\paragraph{Preparazione della risposta}
 				\subparagraph{Definizione e preparazione della proposta}
-TO DO
-			
+I membri del gruppo \groupName{} dovranno redigere i seguenti documenti: \\
+					\begin{itemize}
+						\item \docNameVersionSdF
+						\item \docNameVersionAdR
+						\item \docNameVersionPdP
+						\item \docNameVersionPdQ
+						\item \docNameVersionNdP
+					\end{itemize}
+In allegato a essi si dovrà consegnare una \emph{lettera di presentazione}. \\
+Starà quindi al committente e al proponete valutare l'offerta ricevuta e decidere se accettare o meno la proposta fatta.
+					
 			\paragraph{Pianificazione}
 				\subparagraph{Scelta del modello di ciclo di vita}
-Il Project Manager
+Il \roleProjectManager{} avrà il compito di scegliere il modello di ciclo di vita adatto per lo sviluppo del prodotto richiesto.
 				\subparagraph{Sviluppo e documentazione del Piano di Progetto}
-TO DO
-
-				
+Il \roleProjectManager{} dovrà eseguire una serie di compiti per delineare i lavori che i membri del team dovranno andare ad eseguire, calcolandone i costi e le tempistiche. Il tutto verrà documento nel \docNameVersionPdP{}.
+		
 	\subsection{Processo di Sviluppo}
 		\subsubsection{Attività}
 			\paragraph{Analisi dei requisiti}
-			
+Dopo avere redatto lo \docNameSdF{}, agli \emph{Analisti} spetterà il compito di scrivere il documento \docNameVersionAdR{}. \\
+L'obiettivo sarà quello di cercare e produrre dei requisiti a partire dalle informazioni a disposizione del team. \\
+Le risorse che potranno essere utilizzate per questo scopo provengono dal capitolato d'appalto e dagli incontri con il proponente e con il committente. \\
+
 		\subsubsection{Norme}
 			\paragraph{Classificazione requisiti}
-TO DO			
+TO DO (da completare una volta deciso come classificare i requisiti)			
 			\paragraph{Classificazione casi d'uso}
-TO DO
+I casi d'uso devono essere divisi in ordine gerarchico secondo il seguente schema: \\
+				\begin{center}
+					UC[Codice]
+				\end{center}
+TO DO (prendere STANDARD per la classificazione)
 
 		\subsubsection{Strumenti}
+			\paragraph{requirementsTool}
+TO DO (da completare una volta generato l'applicativo)
