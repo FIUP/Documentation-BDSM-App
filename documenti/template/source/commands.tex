@@ -1,0 +1,72 @@
+% =================================================================================================
+% File:			commands.tex
+% Description:	Defiinisce i comandi personalizzati utilizzati per redarre i documenti
+% Created:		2014/12/05
+% Author:		Santacatterina Luca
+% Email:		s88.luca@gmail.com
+% =================================================================================================
+% Modification History:
+% Version		Modifier Date		Change											Author
+% 0.0.1 		2014/12/05 			Prima emissione 								Luca S.
+% =================================================================================================
+%
+
+% DEFINIZIONE COMANDI BASE CHE POI ANDRANNO RIDEFINITI
+
+% ==================================================================================================
+% COMANDI DA RIDEFINIRE
+% ==================================================================================================
+
+% Nome/Versione/Data del documento
+\newcommand{\documentName}{ERRORE}
+\newcommand{\documentVersion}{ERRORE}
+\newcommand{\documentDate}{ERRORE}
+
+% Editori del documento
+\newcommand{\documentEditors}{ERRORE}
+
+% Verificatore del documento
+\newcommand{\documentVerifiers}{ERRORE}
+
+% Approvazione del documento
+\newcommand{\documentApprovers}{ERRORE}
+
+% Lista di distribuzione del documento
+\newcommand{\documentDistributionList}{\groupName\\\commitNameM\\\commitNameS\\\proposerName}
+
+% Uso del documento
+\newcommand{\documentUsage}{ERRORE}
+
+
+% Sommario del documento
+\newcommand{\documentSummary}{ERRORE}
+
+% ==================================================================================================
+% COMANDI DA NON RIDEFINIRE
+% ==================================================================================================
+
+% Nome del progetto
+\newcommand{\projectName}{BDSMApp}
+\newcommand{\groupEmail}{\textit{\href{mailto:info@mashup-unipd.it}{info@mashup-unipd.it}}}
+\newcommand{\groupName}{\emph{MashUp}}
+
+% Ruoli del progetto
+\newcommand{\roleProjectManager}{\emph{Responsabile di Progetto}}
+\newcommand{\roleAdministrator}{\emph{Amministratore di Progetto}}
+\newcommand{\roleAnalyst}{\emph{Analista}}
+\newcommand{\roleProgrammer}{\emph{Programmatore}}
+\newcommand{\roleDesigner}{\emph{Progettista}}
+\newcommand{\roleVerifier}{\emph{Verificatore}}
+
+% Referenti e commitenti (M = master, S = slave)
+\newcommand{\proposerName}{\emph{Dott. David Santucci} - Zing}
+\newcommand{\commitNameM}{\emph{Prof. Tullio Vardanega}}
+\newcommand{\commitNameS}{\emph{Prof. Riccardo Cardin}}
+
+% Abbreviazioni per richiamare il nome esteso dei diversi documenti da redarre
+\newcommand{\docGlossary}{\emph{Glossario}}
+\newcommand{\docAdR}{\emph{Analisi dei Requisiti \currentVersion}}
+\newcommand{\docNdP}{\emph{Norme di Progetto \currentVersion}}
+\newcommand{\docPdP}{\emph{Piano di Progetto \currentVersion}}
+\newcommand{\docPdQ}{\emph{Piano di Qualifica \currentVersion}}
+\newcommand{\docSdF}{\emph{Studio di Fattibilità \currentVersion}}

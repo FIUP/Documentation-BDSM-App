@@ -1,0 +1,44 @@
+% =================================================================================================
+% File:			verbale_interno_2014-11-26.tex
+% Description:	Descrive il primo incontro datato 2014-11-26 
+% Created:		2014/12/11
+% Author:		Ceccon Lorenzo
+% Email:		ceccon.lorenzo@mashup-unipd.it
+% =================================================================================================
+% Modification History:
+% Version		Modifier Date		Change											Author
+% 0.0.1 		2014/12/12 			Iniziata stesura del documento					Lorenzo C.
+% =================================================================================================
+%
+
+% TEMPLATE DA USARE AD OGNI NUOVO DOCUMENTO
+
+\input{../template/source/packages}
+\input{../template/source/commands}
+\input{../template/source/styles}
+
+\begin{document}
+	\newcommand{\latex}{\LaTeX\xspace}
+	% COMANDI DA RIDEFINIRE
+	\renewcommand{\documentName}{Verbale del 2014-11-26}
+	\renewcommand{\documentDate}{2014-12-12}
+	\renewcommand{\documentEditors}{Ceccon Lorenzo}
+	\renewcommand{\documentVerifiers}{Faccin Nicola}
+	\renewcommand{\documentApprovers}{Tesser Paolo}
+	\renewcommand{\documentDistributionList}{MashUp\\Prof. Tullio Vardanega\\Prof. Cardin Riccardo}
+	\renewcommand{\documentUsage}{Interno}
+	\renewcommand{\documentSummary}{Questo documento riassume il primo incontro tra i membri del gruppo MashUp.}
+
+	% FRONTESPIZIO
+	\pagenumbering{gobble}
+	\pagestyle{styleFirstPage}
+	\input{../template/source/firstpage}
+	\pagebreak
+
+
+	% PAGINE CONTENUTI
+	\setcounter{page}{1}
+	\pagestyle{styleDocPages}
+	\input{doc_to_modify/content_files}
+
+\end{document}
