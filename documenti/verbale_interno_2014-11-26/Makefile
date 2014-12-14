@@ -2,11 +2,7 @@ latex=pdflatex -synctex=1 -interaction=nonstopmode
 # aspell=sudo aspell --mode=tex --lang=it check
 
 compile: 
-<<<<<<< HEAD
-	$(latex) Verbale_Interno_2014-11-26.tex && $(latex) Verbale_Interno_2014-11-26.tex
-=======
-	$(latex) nome_del_documento.tex && $(latex) nome_del_documento.tex
->>>>>>> a832c2ccc18967166c62b459de65c98f82df83cf
+	$(latex) verbale_interno_2014-11-26.tex && $(latex) verbale_interno_2014-11-26.tex
 	rm -rf *.aux 
 	rm -rf *.log
 	rm -rf *.out
@@ -14,10 +10,10 @@ compile:
 	rm -rf *.synctex.gz
 	rm -rf *.lof
 	rm -rf *.lot
-	open nome_del_documento.pdf
+	open verbale_interno_2014-11-26.pdf
 
 aspell:
-	# $(aspell) Studio_di_Fattibilita.tex
+	# $(aspell) verbale_interno_2014-11-26.tex
 	# cd Doc_to_Modify && $(aspell) History.tex
 	# cd content &&  $(aspell) Introduzione.tex
 	# cd content &&  $(aspell) Capitolato_1.tex
