@@ -41,7 +41,7 @@ Il gruppo ha subito deciso di scartare il secondo capitolato. Sebbene tutti gli 
 \subsection{Capitolato C3: Nor(r)is}
 
 \subsubsection{Descrizione}
-Il capitolato propone lo sviluppo di un framework, denominato Norris, per la produzione di grafici in tempo reale a partire da sorgenti arbitrarie. I grafici saranno sviluppati interamente tramite le API messe a disposizione da Norris, sia per la veste grafica che per i dati e dovranno essere disponibili quattro rappresentazioni:
+Il capitolato propone lo sviluppo di un framework, denominato \emph{Norris}, per la produzione di grafici in tempo reale a partire da sorgenti arbitrarie. I grafici saranno sviluppati interamente tramite le API messe a disposizione da \emph{Norris}, sia per la veste grafica che per i dati e dovranno essere disponibili quattro rappresentazioni:
 \begin{itemize}
 \item \textbf{Bar chart}
 \item \textbf{Line chart}
@@ -54,7 +54,7 @@ L'aggiornamento dei grafici, inoltre, potrà avvenire in tre modi:
 \item \textbf{Stream}: dove i valori già presenti rimancono visibili, ma ne vengono aggiunti di nuovi.
 \item \textbf{Movie}: combina i medoti precedenti, permettendo la sostituzione di dati, l'aggiunta di nuovi valori e la loro rimozione.
 \end{itemize}
-Il framework metterà dunque a disposizione una componente WebSocket che aggiornerà i grafici in tempo reale, che sarà realizzata tramite la libreria Socket.io. Tra le altre tecnologie, troviamo Node.js ed il relativo framework Express per lo sviluppo lato server, mentre AngularJS per il front-end. Opzionalmente, è inoltre richiesta la progettazione di un'applicazione Android per la visualizzazione dei grafici a partire da un server arbitrario in cui è presente un'istanza di Norris.
+Il framework metterà dunque a disposizione una componente WebSocket che aggiornerà i grafici in tempo reale, che sarà realizzata tramite la libreria Socket.io. Tra le altre tecnologie, troviamo Node.js ed il relativo framework Express per lo sviluppo lato server, mentre AngularJS per il front-end. Opzionalmente, è inoltre richiesta la progettazione di un'applicazione Android per la visualizzazione dei grafici a partire da un server arbitrario in cui è presente un'istanza di \emph{Norris}.
 
 \subsubsection{Valutazione}
 Il capitolato in questione è stato valutato attentamente dal gruppo ma nella fase finale di analisi, è stato scartato in favore del primo. Di seguito gli aspetti positivi identificati:
@@ -72,14 +72,33 @@ Di seguito, invece, gli aspetti negativi che hanno portato il gruppo a scartare 
 \subsection{Capitolato C4: Premi}
 
 \subsubsection{Descrizione}
+Il capitolato propone lo sviluppo di un software per la presentazione di slide denominato \emph{Premi}. L'applicativo non dovrà essere basato su PowerPoint ma, al contrario, dovrà puntare all'originalità nel suo campo sperimentando e proponendo nuove modalità di creazione e presentazione di uno slideshow. Oltre agli aspetti innovativi, il software dovrà essere in grado di sviolgere le operazioni più comuni per un presentatore di slide, come:
+\begin{itemize}
+\item Creazione di una presetazione
+\item Presentazione di slide
+\item Presentazione nel browser
+\item Stampa delle presentazione
+\end{itemize}
+Il prodotto dovrà essere progettato esclusivamente tramite l'uso di tecnologie web (HTML5 e JavaScript) o SVG (InkScape) e le numerose librerie a disposizioni, come Impress.js, Reveal.js, Deck.js, Google slides template o Slides. Il sistema dovrà adattarsi anche per form factor di tipo mobile.
 
 \subsubsection{Valutazione}
-
+Il capitolato in questione è stato scartato nelle prime fasi di analisi. Di seguito gli aspetti negativi evidenziati dal gruppo:
+\begin{itemize}
+\item \textbf{Scarso interesse del dominio applicativo}: il capitolato propone lo sviluppo di un software in un campo ormai consolidato e ricco di alternative. Le richieste di sperimentazione e innovazione, inoltre, non hanno stimoltato l'interesse del gruppo.
+\item \textbf{Scarso interesse del dominio tecnologico}: il gruppo ha dimostrato fin da subito scarso interesse nel produrre un applicativo per la presenzione di slide, a partire dall'analisi dei requisiti all'utilizzo delle tecnologie in gioco.
+\end{itemize}
 
 % CAPITOLATO 5
 
 \subsection{Capitolato C5: sHike}
 
 \subsubsection{Descrizione}
+Il capitolato propone lo sviluppo di un piattaforma software mirata agli sport e attività  in montagna tramite l'uso di uno smartwatch (\emph{WearIT}fornito dal proponente) con relativa applicazione e servizio web dedicato (\emph{WearIT Cloud Portal}). Lo scopo finale della piattaforma, è quello di fornire all'utilizzatore dello smartwatch informazioni su percorsi sicuri da seguire nelle zone di montagna, tempi di viaggio, condizioni atmosferiche e accesso ai principali servizi oltre che registrare in modo continuo la posizione dell'utente. L'applicazione, quindi, dovrà sfruttare tutte le caratteristiche software e hardware diponibili in \emph{WearIT} per offrire all'utilizzatore finale la miglior esperienza possibile in ambienti di montagna, inviando i tutti i dati collezionati al servizio cloud al termine dell'utilizzo.
+Lo smartwatch è basato sul sistema operativo Android 4.4.2 e sarà distribuito con un SDK del sistema operativo appositamente modificato per rispondere alle esigenze di \emph{WearIT}.
 
 \subsubsection{Valutazione}
+Di seguito gli aspetti nagativi che hanno portato il gruppo a scartare il capitolato in questione:
+\begin{itemize}
+\item \textbf{Scarso interesse del dominio applicativo}: il gruppo dimostrato scarso interesse nello sviluppo di una piattaforma software intorno ad uno smartwatch ed in particolar modo le sue applicazioni in ambito escursionistico.
+\item \textbf{Scarsa utilità nel mondo del lavoro}: le tecnologie in uso, essendo particolarmente specifiche di una piattaforma o addirittura proprietarie, sono state ritenuto poco adette per la formazione lavorativa.
+\end{itemize}
