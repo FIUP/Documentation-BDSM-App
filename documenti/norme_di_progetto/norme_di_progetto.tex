@@ -1,0 +1,53 @@
+% =================================================================================================
+% File:			norme_di_progetto.tex
+% Description:	Definisce il modello generale per il documento delle norme di progetto
+% Created:		2014/12/10
+% Author:		Tesser Paolo
+% Email:		tesser.paolo@mashup-unipd.it
+% =================================================================================================
+% Modification History:
+% Version		Modifier Date		Change											Author
+% 0.0.1 		2014/12/10 			ridefinizione comandi base						Tesser Paolo
+% =================================================================================================
+%
+
+% TEMPLATE DA USARE AD OGNI NUOVO DOCUMENTO
+
+\input{../template/source/packages}
+\input{../template/source/commands}
+\input{../template/source/styles}
+
+\begin{document}
+	% COMANDI DA RIDEFINIRE
+	\renewcommand{\documentName}{Norme di Progetto}
+	\renewcommand{\documentVersion}{v0.0.1}
+	\renewcommand{\documentDate}{2014/12/10}
+	\renewcommand{\documentEditors}{Santacatterina Luca \\ Tesser Paolo}
+	\renewcommand{\documentVerifiers}{Roetta Marco}
+	\renewcommand{\documentApprovers}{Cusinato Giacomo}
+	\renewcommand{\documentUsage}{Interno}
+	\renewcommand{\documentDistributionList}{\groupName}
+	\renewcommand{\documentSummary}{Questo documento vuol definire le norme volte alla regolamentazione delle attività del gruppo \groupName necessarie al processo di sviluppo del progetto \projectName.}
+
+	% FRONTESPIZIO
+	\pagenumbering{gobble}
+	\pagestyle{styleFirstPage}
+	\input{../template/source/firstpage}
+	\pagebreak
+
+
+	% PAGINA REVISIONI & PAGINA INDICI
+	\setcounter{page}{1}
+	\pagestyle{styleIndexPage}
+	\input{doc_to_modify/history}
+	\pagebreak
+	\tableofcontents
+	\pagebreak
+
+
+	% PAGINE CONTENUTI
+	\setcounter{page}{1}
+	\pagestyle{styleDocPages}
+	\input{doc_to_modify/content_files}
+
+\end{document}

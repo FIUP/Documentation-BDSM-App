@@ -1,0 +1,98 @@
+% =================================================================================================
+% File:			processi_primari.tex
+% Description:	Definisce il capitolo dei processi primari
+% Created:		2014/12/11
+% Author:		Tesser paolo
+% Email:		tesser.paolo@mashup-unipd.it
+% =================================================================================================
+% Modification History:
+% Version		Modifier Date		Change													Author
+% 0.0.1 		2014/12/11 			Inizializzazione del file e inizio stesura				Tesser Paolo
+% =================================================================================================
+% 0.0.2			2014/12/12			continuazione stesura sottosezione fornitura			Tesser Paolo
+% =================================================================================================
+% 0.0.3			2014/12/12			completamento sottosezione stesura e inizio sviluppo	Tesser Paolo
+% =================================================================================================
+%
+
+
+% CONTENUTO DEL CAPITOLO
+
+\section{Processi Primari}
+Nella sezione dei Processi Primari sono descritti i processi e le attività che servono alle parti prime durante il ciclo di vita del software. \\
+Queste parti sono l'acquirente, il fornitore, lo sviluppatore, l'operatore e il manutentore del prodotto software. \\
+Il gruppo \groupName{} si occuperà solo dei Processi di Fornitura e di Sviluppo. Il Processo di Acquisizione spetterà al proponente e al committente del capitolato scelto, mentre il Processo di Manutenzione non potrà essere attuato per vincoli temporali. \\
+Nonostante questo l'applicativo \projectName{} e la documentazione fornita con esso dovranno garantire la possibilità futura di procedere con le attività presenti in questo processo a discrezione del proponente.
+
+	\subsection{Processo di Fornitura}
+		\subsubsection{Attività}
+		
+			\paragraph{Accettazione}
+				\subparagraph{Discussione e scelta del capitolato}
+Il \roleProjectManager{} ha il compito di organizzare	gli incontri iniziali per permettere ai componenti del gruppo di discutere e esaminare i capitolati selezionati dal committente. \\
+Dalle riunioni emergerà la scelta effettuata dal team. \\
+Le valutazioni che hanno portato ha prendere questa decisione verranno documentate in dei verbali.
+				\subparagraph{Studio di Fattibilità}
+Agli \emph{Analisti} spetta il compito di redigere lo \docNameVersionSdF{}, basandosi sui verbali citati in precedenza.
+Per realizzare il documento dovranno essere presi in considerazione i seguenti punti per ogni capitolato, con maggiore dettaglio per quello preso in carico.
+					\begin{itemize}
+						\item \textbf{dominio tecnologico e applicativo:} si valutano le conoscenze attuali del team riguardo le tecnologie richieste;
+						\item \textbf{interesse strategico:} si valuta quanto interesse abbia il team ad apprendere gli strumenti che serviranno a realizzare il capitolato in questione;
+						\item \textbf{rischi possibili:} si analizzano i possibili punti critici in merito anche alle valutazione effettuate nei punti precedenti.
+					\end{itemize}
+			\paragraph{Preparazione della risposta}
+				\subparagraph{Definizione e preparazione della proposta}
+I membri del gruppo \groupName{} dovranno redigere i seguenti documenti: \\
+					\begin{itemize}
+						\item \docNameVersionSdF
+						\item \docNameVersionAdR
+						\item \docNameVersionPdP
+						\item \docNameVersionPdQ
+						\item \docNameVersionNdP
+					\end{itemize}
+In allegato a essi si dovrà consegnare una \emph{lettera di presentazione}. \\
+Starà quindi al committente e al proponete valutare l'offerta ricevuta e decidere se accettare o meno la proposta fatta.
+					
+			\paragraph{Pianificazione}
+				\subparagraph{Scelta del modello di ciclo di vita}
+Il \roleProjectManager{} avrà il compito di scegliere, se non indicato dal proponente, il modello di ciclo di vita adatto per lo sviluppo del prodotto richiesto.
+				\subparagraph{Sviluppo e documentazione del Piano di Progetto}
+Il \roleProjectManager{} dovrà eseguire una serie di compiti per delineare i lavori che i membri del team dovranno andare ad eseguire, calcolandone i costi e le tempistiche. Il tutto verrà documento nel \docNameVersionPdP{}.
+		
+	\subsection{Processo di Sviluppo}
+		\subsubsection{Attività}
+			\paragraph{Analisi dei requisiti}
+Dopo avere redatto lo \docNameSdF{}, agli \emph{Analisti} spetterà il compito di scrivere il documento \docNameVersionAdR{}. \\
+L'obiettivo sarà quello di cercare e produrre dei requisiti a partire dalle informazioni a disposizione del team. \\
+Le risorse che potranno essere utilizzate per questo scopo provengono dal capitolato d'appalto e dagli incontri con il proponente e con il committente. \\
+
+		\subsubsection{Norme}
+			\paragraph{Classificazione requisiti}
+TO DO (da completare una volta deciso come classificare i requisiti)
+			
+			\paragraph{Classificazione casi d'uso}
+I casi d'uso devono essere divisi in ordine gerarchico secondo il seguente schema: \\
+				\begin{center}
+					UC[Codice]
+				\end{center}
+				\begin{itemize}
+					\item \textbf{Codice}: è il codice gerarchico e univoco per identificare ogni caso d'uso.
+				\end{itemize}
+			\noindent Per ogni caso d'uso dovranno essere presenti anche le seguenti informazioni:
+				\begin{itemize}
+					\item \textbf{descrizione}: fornire una breve descrizione del caso d'uso che sia il meno ambigua possibile;
+					\item \textbf{attori principali}: elenco degli attori principali coinvolti nel caso d'uso;
+					\item \textbf{attori secondari}: elenco degli attori secondari coinvolti nel caso d'uso;
+					\item \textbf{scenari principali}: descrizione dei possibili scenari principali;
+					\item \textbf{scenari alternativi}: descrizione dei possibili scenari secondari;
+					\item \textbf{pre-condizioni}: condizione di partenza sempre vera all'inizio del caso d’uso;
+					\item \textbf{flusso degli eventi}: ordine di esecuzione dei casi d'uso figli;
+					\item \textbf{inclusioni}: spiegazione di tutte le inclusioni se presenti;
+					\item \textbf{estensioni}: spiegazione di tutte le estensioni se presenti;
+					\item \textbf{generalizzazioni}: spiegazione di tutte le generalizzazioni, se presenti;;
+					\item \textbf{post-condizioni}: condizione finale sempre vera alla fine dell'esecuzione del caso d'uso.
+				\end{itemize}	
+
+		\subsubsection{Strumenti}
+			\paragraph{requirementsTool}
+TO DO (da completare una volta generato l'applicativo)
