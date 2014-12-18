@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "*** Start: Test pre-push script ***";
+
+# exec python script/asana_api/main.py
+
+echo "*** End: Test pre-push script ***";
