@@ -1,8 +1,8 @@
 latex=pdflatex -synctex=1 -interaction=nonstopmode
 # aspell=sudo aspell --mode=tex --lang=it check
 
-compile:
-	$(latex) nome_del_documento.tex && $(latex) nome_del_documento.tex
+compile: 
+	$(latex) piano_di_qualifica.tex && $(latex) piano_di_qualifica.tex
 	rm -rf *.aux 
 	rm -rf *.log
 	rm -rf *.out
@@ -10,10 +10,10 @@ compile:
 	rm -rf *.synctex.gz
 	rm -rf *.lof
 	rm -rf *.lot
-	open nome_del_documento.pdf
+	open piano_di_qualifica.pdf
 
 aspell:
-	# $(aspell) Studio_di_Fattibilita.tex
+	# $(aspell) piano_di_qualifica.tex
 	# cd Doc_to_Modify && $(aspell) History.tex
 	# cd content &&  $(aspell) Introduzione.tex
 	# cd content &&  $(aspell) Capitolato_1.tex

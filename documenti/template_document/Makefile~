@@ -1,7 +1,7 @@
 latex=pdflatex -synctex=1 -interaction=nonstopmode
 # aspell=sudo aspell --mode=tex --lang=it check
 
-compile:
+compile: 
 	$(latex) nome_del_documento.tex && $(latex) nome_del_documento.tex
 	rm -rf *.aux 
 	rm -rf *.log
