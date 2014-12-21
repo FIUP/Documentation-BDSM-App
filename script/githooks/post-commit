@@ -4,7 +4,8 @@ echo "*** Start: Test post-commit script ***";
 
 branch=$(git rev-parse --abbrev-ref HEAD)
 list_message=$(git log origin/${branch}..${branch})
-echo ${list_message}
-exec python script/asana_api/option_commit_msg.py ${branch} ${list_message}
+
+echo "*** Esecuzione script option_commit_msg.py ***";
+exec python script/asana_api/option_commit_msg.py ${branch} "${list_message}"
 
 echo "*** End: Test post-commit script ***";
