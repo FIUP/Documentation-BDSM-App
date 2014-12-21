@@ -1,17 +1,24 @@
+# -*- coding: utf-8 -*-
 __author__ = 'ptesser'
 
 from newapi import my_api
-from date import date
 import subprocess
 import sys
 
-# branch_name_cmd = ["git", "rev-parse", "--abbrev-ref", "HEAD"]
-# branch_name = subprocess.Popen(branch_name_cmd, stdout=subprocess.PIPE, shell=True)
-# (output, err) = branch_name.communicate()
-# print "Branch name from py: ", branch_name
 
 # MAIN
 
-print "Branch name from bash: ", sys.argv[1]
-print "List of commit message: ", sys.argv[2]
+print "Execution script from branch: ", sys.argv[1]
+print "List of commit message: "
+print sys.argv[2]
 
+list_commit_queue = sys.argv[2].split("END")
+print list_commit_queue
+
+for commit_msg in list_commit_queue:
+    if commit_msg != "":  # per non eseguire le istruzioni sull'ultimo valore che è sempre vuoto
+        print 1
+
+
+checkout_asana_cmd = ["git", "checkout", "script/asana_api"]
+subprocess.call(checkout_asana_cmd)
