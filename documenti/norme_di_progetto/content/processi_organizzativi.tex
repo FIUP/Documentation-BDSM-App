@@ -60,7 +60,9 @@
 			\paragraph{Gestione dei ticket} \label{sec:gestione_dei_ticket}
 			TO DO			
 			\paragraph{Gestione delle change request}
-			TO DO			
+			TO DO
+			
+					
 		\subsubsection{Procedure}
 			\paragraph{Procedura d'assegnazione dei ticket}
 			TO DO
@@ -81,20 +83,63 @@
 			Il compito di garantire che non siano stati fatti errori spetta al \roleVerifier, il quale, una volta riscontrata una incongruenza, dovrà notificarla al \roleProjectManager{} che avrà il compito di risolverla. \\ 
 			Vengono ora presentati i diversi ruoli, delineandone le mansioni e le responsabilità.
 				\subparagraph{Responsabile di Progetto}
-				TO DO
+				Il \roleProjectManager{} rappresenta il team e il progetto verso il committente e il proponente TO DO\\
+				Ha quindi le seguenti responsabilità e compiti:
+					\begin{itemize}
+						\item pianificazione e coordinamento delle attività;
+						\item gestione e controllo delle risorse;
+						\item analisi e gestione dei rischi;
+						\item approvazione dell'offerta economica;
+						\item assicurarsi che tutte le attività svolte siano conformi alle \docNameVersionNdP{} e rispettino la pianificazione effettuata nel \docNameVersionPdP;
+						\item garantire che non ci siano conflitti di interesse. A tal proposito, se il \roleProjectManager{} dovesse prendere parte alla stesura di qualche documento, dovrà nominare un \roleProjectManager delegato che avrà il compito di sostituirlo nell'approvazione di quei documenti;
+						\item redigere il \docNameVersionPdP.
+					\end{itemize}
+					
 				\subparagraph{Amministratore}
-				TO DO
+				L'\roleAdministrator{} è il responsabile dell'ambiente di lavoro.
+				Ha quindi il compito di:
+					\begin{itemize}
+						\item ricercare e implementare strumenti che automatizzino il maggior numero di operazioni;
+						\item gestire il versionamento del codice e della documentazione di progetto;
+						\item fornire procedure 
+						\item redigere le \docNameVersionNdP.
+					\end{itemize}
 				\subparagraph{Analista}
-				TO DO
+				L'\roleAnalyst{} TO DO \\
+				Ha quindi il compito di:
+					\begin{itemize}
+						\item TO DO
+						\item TO DO
+						\item redigere lo \docNameVersionSdF;
+						\item redigere l'\docNameVersionAdR.
+					\end{itemize}
 				\subparagraph{Progettista}
-				TO DO
+				Il \roleDesigner{} TO DO \\
+				Ha quindi il compito di:
+					\begin{itemize}
+						\item TO DO
+						\item TO DO
+						\item redigere il \docNameVersionPdQ.
+					\end{itemize}
 				\subparagraph{Programmatore}
-				TO DO
+				Il \roleProgrammer{} TO DO \\
+				Ha quindi il compito di:
+					\begin{itemize}
+						\item TO DO
+						\item TO DO
+					\end{itemize}
 				\subparagraph{Verificatore}
-				TO DO
+				Ha quindi il compito di:
+				Il \roleVerifier{} TO DO
+					\begin{itemize}
+						\item TO DO
+						\item TO DO
+						\item redige il \docNameVersionPdQ{} per la parte che illustra l'esito e la completezza delle verifiche effettuate.
+					\end{itemize}
+			
 			
 			\paragraph{Formato dei ticket}
-			TO DO			
+			TO DO		
 			\paragraph{Formato delle change request}
 			TO DO	
 	
@@ -129,14 +174,16 @@
 	\subsection{Gestione delle Infrastrutture}
 		\subsubsection{Attività}
 			\paragraph{Gestione del Repository}
-			TO DO
-			Il gruppo ha deciso di utilizzare due repository che servono a svolgere funzioni diverse, ma necessarie, allo sviluppo del sistema finale.
+			Il gruppo ha deciso di utilizzare due repository che servono a svolgere funzioni diverse, ma necessarie, allo sviluppo del sistema finale. \\
+			Il servizio di hosting scelto consente, tramite licenza ``educational'', di impostare la visibilità degli ambienti come privata. \\
+			Una volta iscritti i membri dovranno comunicare all'\roleAdministrator{} il loro nome utente che provvederà ad autorizzarne l'accesso.
 				\begin{itemize}
 					\item \textbf{doc\_BDSM\_App}: gestione della documentazione;
 					\item \textbf{src\_BDSM\_App}: gestione del codice;
 				\end{itemize}
 			\paragraph{Gestione dei Git Hooks}
 			TO DO
+			
 			
 		\subsubsection{Procedure}
 			\paragraph{Installazione Git Hooks}
@@ -160,16 +207,28 @@
 				\subparagraph{Struttura di doc\_BDSM\_App}
 				Le cartelle nel repository verranno organizzate nel seguente modo a partire dalla root:
 					\begin{itemize}
-						\item \textbf{Consegne}: contenente i documenti finali con anche la versione da consegnare alle diverse revisioni. Sono presenti le cartelle:
+						\item \textbf{consegne}: contenente i documenti finali con anche la versione da consegnare alle diverse revisioni. Sono presenti le cartelle:
 							\begin{itemize}
-								\item TO DO
+								\item \textbf{revisione\_dei\_requisiti}: contenente i documenti necessari alla revisione dei requisiti;
+								\item \textbf{revisione\_di\_progettazione}: contenente i documenti necessari alla revisione di progettazione;
+								\item \textbf{revisione\_di\_qualifica}: contenente i documenti necessari alla revisione di qualifica;
+								\item \textbf{revisione\_di\_accettazione}: contenente i documenti necessari alla revisione di accettazione.
+							\end{itemize}
+						\noindent
+						All'interno di ciascuna di esse ci sarà un'ulteriore suddivisione in due categorie:
+							\begin{itemize}
+								\item \textbf{interni}: contenente i documenti necessari al gruppo per la sua organizzazione;
+								\item \textbf{esterni}: contenente i documenti necessari alla pianificazione e all'avanzamento dello sviluppo.
 							\end{itemize}
 							
-							
-						\item \textbf{Documenti}:
+						\item \textbf{documenti}:
 							\begin{itemize}
-								\item TO DO
+								\item \textbf{template}: contenente i file che servono per gestire in maniera univoca la redazione di un documento;
+								\item \textbf{template\_document}: contenente i file di esempio che dovranno essere utilizzati per ogni documento reale;
+								\item una cartella per ogni documento che avrà come nome quello del documento in questione (esempio: norme\_di\_progetto).
 							\end{itemize}
+							
+						\item \textbf{script}: contenente tutti gli script necessari ad automatizzare il lavoro e il controllo della documentazione.
 					\end{itemize}
 					
 				\subparagraph{Nomi dei file in src\_BDSM\_App}
@@ -186,21 +245,50 @@
 
 				\subparagraph{Messaggio di commit} \label{sec:messaggio_di_commit}
 				Il messaggio di commit dovrà essere conforme alla seguente notazione:
-				TO DO
+				\begin{verbatim}
+					Title:
+					Desc:
+					Task: Reported in #id_task
+					Option: [option][option]
+					END
+				\end{verbatim}
+				% \lstnewenvironment{testo}[1][]
+				% {
+				%	\lstset{
+				%		basicstyle=\small\ttfamily, 
+				%		columns=fullflexible,
+				%		keywordstyle=\color{red}\bfseries, 
+				%		commentstyle=\color{blue},
+				%		language=C++, % non importa il linguaggio in questo caso perchè è solo testo
+				%		basicstyle=\small,
+				%		numbers=left,
+				%		numberstyle=\tiny,
+				%		stepnumber=1,
+				%		numbersep=5pt,
+				%		frame=shadowbox,
+				%		#1
+				%	}
+				% }{}
+				
+				% \begin{testo}[caption={Template messaggio di commit}]
+				%	Title:
+				%	Desc:
+				%	Task: Reported in #id_task
+				%	Option: [option][option]
+				%	END
+				% \end{testo}
+				
 					\begin{itemize}
 						\item \textbf{Title}: inserire una breve descrizione come titolo di quello che è stato fatto;
 						\item \textbf{Desc}: inserire una descrizione più esaustiva dell'attività svolta qualora non fosse sufficiente quella data nel titolo;
-						\item \textbf{Task}: TO DO
+						\item \textbf{Task}: al posto della dicitura ``id\_task'' inserire l'id del task effettivo reperibile su Asana. TO DO
 						\item \textbf{Option}: Le opzioni applicabili sono:
 							\begin{itemize}
 								\item \textbf{complete}: per chiudere il task qualora fosse l'ultimo necessario allo svolgimento del compito indicato;
 								\item \textbf{delay}: per aggiungere il tag DELAY al task se si è in ritardo con lo svolgimento del compito assegnato.
 							\end{itemize}
-							
 					\end{itemize}
-					
-					
-					
+									
 		\subsubsection{Strumenti}
 			\paragraph{Git}
 			Git è il sistema di controllo di versione utilizzato per entrambi i repository del team.	
