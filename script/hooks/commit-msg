@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec script/githooks/commit-msg $1
