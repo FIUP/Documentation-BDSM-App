@@ -58,22 +58,35 @@
 				Ad ogni membro del gruppo è consentito chiedere la convocazione di una riunione esterna. Il \roleProjectManager, oltre ad accertarsi dei motivi e delle necessità di tale incontro, dovrà garantire che siano presenti almeno due componenti del team. Sarà compito di uno dei presenti, delegato di volta in volta, redigere il verbale dell’incontro avvenuto.
 				
 			\paragraph{Gestione dei ticket} \label{sec:gestione_dei_ticket}
-			TO DO			
+			Il \roleProjectManager{} ha il compito di pianificare i compiti che i singoli membri del team andranno a svolgere singolarmente. \\
+			TO DO
 			\paragraph{Gestione delle change request}
 			TO DO
 			
 					
 		\subsubsection{Procedure}
 			\paragraph{Procedura d'assegnazione dei ticket}
-			TO DO
+			Il \roleProjectManager{} dovrà eseguire i seguenti passi, riassunti in seguito nella figura TO DO.
+				\begin{enumerate}
+					\item TO DO
+				\end{enumerate}
+			
 			\paragraph{Procedura di ricezione dei ticket}
 			TO DO
+				\begin{enumerate}
+					\item TO DO
+				\end{enumerate}
 			\paragraph{Procedura di generazione di una change request}
 			TO DO
+				\begin{enumerate}
+					\item TO DO
+				\end{enumerate}
 			\paragraph{Procedura di rilevazione dei rischi}
 			TO DO
-
-
+				\begin{enumerate}
+					\item TO DO
+				\end{enumerate}
+				
 		\subsubsection{Norme}
 			\paragraph{Ruoli di Progetto}
 			Lo sviluppo di un progetto necessita della collaborazione di diverse persone che andranno a ricoprire incarichi che rappresentano delle figure aziendali. \\
@@ -83,7 +96,7 @@
 			Il compito di garantire che non siano stati fatti errori spetta al \roleVerifier, il quale, una volta riscontrata una incongruenza, dovrà notificarla al \roleProjectManager{} che avrà il compito di risolverla. \\ 
 			Vengono ora presentati i diversi ruoli, delineandone le mansioni e le responsabilità.
 				\subparagraph{Responsabile di Progetto}
-				Il \roleProjectManager{} rappresenta il team e il progetto verso il committente e il proponente TO DO\\
+				Il \roleProjectManager{} rappresenta il team e il progetto verso il committente e il proponente TO DO \\
 				Ha quindi le seguenti responsabilità e compiti:
 					\begin{itemize}
 						\item pianificazione e coordinamento delle attività;
@@ -96,52 +109,60 @@
 					\end{itemize}
 					
 				\subparagraph{Amministratore}
-				L'\roleAdministrator{} è il responsabile dell'ambiente di lavoro.
+				L'\roleAdministrator{} è il responsabile dell'ambiente di lavoro. \\
 				Ha quindi il compito di:
 					\begin{itemize}
 						\item ricercare e implementare strumenti che automatizzino il maggior numero di operazioni;
 						\item gestire il versionamento del codice e della documentazione di progetto;
-						\item fornire procedure 
+						\item fornire procedure che servono a garantire la qualità del prodotto uscente da un determinato compito;
 						\item redigere le \docNameVersionNdP.
 					\end{itemize}
 				\subparagraph{Analista}
-				L'\roleAnalyst{} TO DO \\
+				L'\roleAnalyst{} è il responsabile dell'attività di analisi.\\
 				Ha quindi il compito di:
 					\begin{itemize}
-						\item TO DO
-						\item TO DO
+						\item comprendere a pieno la natura del problema e la sua complessità;
+						\item ricercare i requisiti che servono per realizzare il prodotto richiesto dal proponente;
 						\item redigere lo \docNameVersionSdF;
 						\item redigere l'\docNameVersionAdR.
 					\end{itemize}
 				\subparagraph{Progettista}
-				Il \roleDesigner{} TO DO \\
+				Il \roleDesigner{} è il responsabile delle attività di progettazione. \\
 				Ha quindi il compito di:
 					\begin{itemize}
-						\item TO DO
-						\item TO DO
+						\item effettuare scelte progettuali estratte da soluzioni note e fortemente testate (design pattern);
+						\item effettuare scelte progettuali che permettano al sistema di essere il più facilmente mantenibile in futuro;
+						\item produrre una soluzione comprensibile, attuabile e motivata;
 						\item redigere il \docNameVersionPdQ.
 					\end{itemize}
 				\subparagraph{Programmatore}
-				Il \roleProgrammer{} TO DO \\
+				Il \roleProgrammer{} è il responsabile delle attività di codifica necessarie a portare il prodotto in uno stato che riesca a soddisfare i requisiti richiesti. Deve inoltre programmare i componenti che servono a verificare il sistema. \\
 				Ha quindi il compito di:
 					\begin{itemize}
-						\item TO DO
-						\item TO DO
+						\item scrive codice che rispetti le metriche stabilite per la sua scrittura;
+						\item implementare lo soluzione descritte dal \roleDesigner;
+						\item implementare i test sul codice prodotto.
 					\end{itemize}
 				\subparagraph{Verificatore}
+				Il \roleVerifier{} è il responsabile delle attività di verifica. \\
 				Ha quindi il compito di:
-				Il \roleVerifier{} TO DO
 					\begin{itemize}
-						\item TO DO
-						\item TO DO
+						\item controllare la conformità di ogni stadio del ciclo di vita del prodotto;
+						\item garantire che le attività svolte siano conformi alle norme stabilite;
 						\item redige il \docNameVersionPdQ{} per la parte che illustra l'esito e la completezza delle verifiche effettuate.
 					\end{itemize}
-			
-			
+		
 			\paragraph{Formato dei ticket}
-			TO DO		
+			I ticket che si andranno ad aprire devono contenere le seguente informazioni:
+				\begin{itemize}
+					\item TO DO
+				\end{itemize}
 			\paragraph{Formato delle change request}
-			TO DO	
+			Le change request che si andranno ad aprire devono contenere le seguente informazioni:
+				\begin{itemize}
+					\item TO DO
+				\end{itemize}
+	
 	
 		\subsubsection{Strumenti}
 			\paragraph{Asana} \label{sec:Asana}
@@ -182,15 +203,46 @@
 					\item \textbf{src\_BDSM\_App}: gestione del codice;
 				\end{itemize}
 			\paragraph{Gestione dei Git Hooks}
+			L'\roleAdministrator{} ha il compito di mantenere gli script che permettono di tenere il repository consistente con le norme descritte in questo documento. \\
+			Questo strumento per sua natura ha dei limiti \\
+			L'\roleAdministrator{} provvederà a notificare ai membri del gruppo quando applicare la procedura descritta nella sezione \ref{sec:installazione_git_hooks} tramite i sistemi visti nella sezione \ref{sec:comunicazioni_interne}. \\
+			La notifica potrà avvenire principalmente in due casi:
+				\begin{itemize}
+					\item la prima volta che un membro clona il repository in locale nella sua macchina;
+					\item ogni volta che l'\roleAdministrator{} effettua un aggiornamento degli script.
+				\end{itemize}
+			\paragraph{Gestione del template messaggio di commit}
 			TO DO
 			
 			
 		\subsubsection{Procedure}
-			\paragraph{Installazione Git Hooks}
-			TO DO
-			\paragraph{Installazione messaggio di commit}
-			TO DO
+			\paragraph{Installazione e manutenzione Git Hooks} \label{sec:installazione_git_hooks}
+			I membri del team dovranno eseguire questa procedura una volta ricevuta la notifica da parte dell'\roleAdministrator. \\
+			Il diagramma presente nella figura TO DO illustra in maniera più schematizzata i compiti da eseguire.
+				\begin{enumerate}
+					\item entrare dalla root del repository nella cartella ```script'';
+					\item digitare dal terminale il comando:
+						\begin{center}
+							make hook
+						\end{center}
+				\end{enumerate}
+			DIAGRAMMA DI FLUSSO TO DO
 			
+			\paragraph{Installazione e manutenzione messaggio di commit}
+			I membri del team dovranno eseguire questa procedura una volta ricevuta la notifica da parte dell'\roleAdministrator. \\
+			Il diagramma presente nella figura TO DO illustra in maniera più schematizzata i compiti da eseguire.
+				\begin{enumerate}
+					\item scaricare il nuovo template allegato alla notifica ricevuta che avrà nome ```gitmessage.txt'';
+					\item se è la prima volta che si esegue procedura, lanciare il seguente comando dal terminale, altrimenti passare al passo successivo:
+						\begin{center}
+							git config --global core.editor ``mate''
+						\end{center}
+					\noindent
+					Sostituite ``mate'' con l'editor che preferite;
+					\item entrate nella directory principale dell'utente (esempio: /Users/nomeutente);
+					\item copiate il file allegato in questa cartella rinominandolo in modo da renderlo nascosto inserendo un punto davanti al nome (esempio: .gitmessage.txt).
+				\end{enumerate}
+			DIAGRAMMA DI FLUSSO TO DO
 			
 		\subsubsection{Norme}
 			\paragraph{Repository}
@@ -243,7 +295,7 @@
 					\end{center}
 					Ogni membro del gruppo dovrà leggere l'articolo e applicarlo secondo le norme di denominazione dei branch presenti in esso.
 
-				\subparagraph{Messaggio di commit} \label{sec:messaggio_di_commit}
+				\subparagraph{Template messaggio di commit} \label{sec:messaggio_di_commit}
 				Il messaggio di commit dovrà essere conforme alla seguente notazione:
 				\begin{verbatim}
 					Title:
@@ -279,7 +331,7 @@
 				% \end{testo}
 				
 					\begin{itemize}
-						\item \textbf{Title}: inserire una breve descrizione come titolo di quello che è stato fatto;
+						\item \textbf{Title}: inserire una breve descrizione come titolo di quello che è stato fatto (massimo 43 caratteri);
 						\item \textbf{Desc}: inserire una descrizione più esaustiva dell'attività svolta qualora non fosse sufficiente quella data nel titolo;
 						\item \textbf{Task}: al posto della dicitura ``id\_task'' inserire l'id del task effettivo reperibile su Asana. TO DO
 						\item \textbf{Option}: Le opzioni applicabili sono:
