@@ -10,7 +10,11 @@ compile:
 	rm -rf *.synctex.gz
 	rm -rf *.lof
 	rm -rf *.lot
-	open piano_di_qualifica.pdf
+	@echo "*** Apertura file PDF ***"
+	@case $(shell uname) in \
+		Darwin*) open piano_di_qualifica.pdf;; \
+		Linux*) piano_di_qualifica.pdf;; \
+	esac
 
 aspell:
 	# $(aspell) piano_di_qualifica.tex

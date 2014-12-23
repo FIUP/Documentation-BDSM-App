@@ -10,7 +10,11 @@ compile:
 	rm -rf *.synctex.gz
 	rm -rf *.lof
 	rm -rf *.lot
-	open verbale_interno_2014-11-26.pdf
+	@echo "*** Apertura file PDF ***"
+	@case $(shell uname) in \
+		Darwin*) verbale_interno_2014-11-26.pdf;; \
+		Linux*) verbale_interno_2014-11-26.pdf;; \
+	esac
 
 aspell:
 	# $(aspell) verbale_interno_2014-11-26.tex
