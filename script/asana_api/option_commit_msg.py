@@ -59,7 +59,7 @@ for commit_msg in list_commit_queue:
                 if option_list is not None:
                     for option in option_list:
                         option_msg_str = str(option)[1:-1]
-                        if option_msg_str != "option" or id_task_str != "id_task":
+                        if option_msg_str != "option" and id_task_str != "id_task":
                             try:
                                 options_cmd[option_msg_str](id_task_str)
                             except asana.AsanaException:
