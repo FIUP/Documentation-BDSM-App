@@ -11,130 +11,163 @@
 % =================================================================================================
 % 0.0.2			2015/01/02			suddivisi paragrafi presenti nel doc			Tesser Paolo
 % =================================================================================================
-%
+% 0.0.3			2015/01/03			inserite tabelle								Tesser Paolo
 % =================================================================================================
 %
 
 % CONTENUTO DEL CAPITOLO
+\appendix
+% \setcounter{table}{0}
 
 \section{Organigramma} % (fold)
 \label{sec:organigramma}
 	\subsection{Redazione} % (fold)
 	\label{sub:redazione}
-		\begin{longtable}{c|c|c}
-			\label{tab:redazione}
-			\textbf{Nome} & \textbf{Data} & \textbf{Firma} \\
-			\hline
-			Tesser Paolo &
-			aaaa-mm-dd &
-			TO DO
-		\end{longtable}
+		\begin{table}[!h]
+			\begin{center}
+				\begin{tabularx}{0.8\textwidth}{|X|X|X|}
+					\hline
+					\textbf{Nome} & \textbf{Data} & \textbf{Firma} \\
+					\hline
+					\rule[-4mm]{0mm}{1cm}
+					Tesser Paolo &
+					2014/12/16 &
+					TO DO \\
+					\hline
+				\end{tabularx}
+			\end{center}
+		\caption{Redazione}
+		\end{table}
 	% subsection redazione (end)
-
+	
 	\subsection{Approvazione} % (fold)
 	\label{sub:approvazione}
-		\begin{longtable}{c|c|c}
-			\label{tab:approvazione}
-			\textbf{Nome} & \textbf{Data} & \textbf{Firma} \\
-			\hline
-			Vardanega Tullio &
-			aaaa-mm-dd &
-			\\
-			\hline
-			Cusinato Giacomo &
-			aaaa-mm-dd &
-			TO DO \\
-		\end{longtable}
+		\begin{table}[!h]
+			\begin{center}
+				\begin{tabularx}{0.8\textwidth}{|X|X|X|}
+					\hline
+					\textbf{Nome} & \textbf{Data} & \textbf{Firma} \\
+					\hline
+					\rule[-4mm]{0mm}{1cm}
+					Vardanega Tullio &
+					2015/01/23 &
+					\\
+					\hline
+					\rule[-4mm]{0mm}{1cm}
+					Cusinato Giacomo &
+					2015/01/23 &
+					TO DO \\
+					\hline
+				\end{tabularx}
+			\end{center}
+		\caption{Approvazione}
+		\end{table}
 	% subsection approvazione (end)
 	
 	\subsection{Accettazione componenti} % (fold)
 	\label{sub:accettazione_componenti}
-		\begin{longtable}{c|c|c}
-			\label{tab:accettazione_componenti}
-			\textbf{Nome} & \textbf{Data} & \textbf{Firma} \\
-			\hline
-			Carnovalini Filippo &
-			aaaa-mm-dd &
-			TO DO \\
-			\hline
-			
-			Ceccon Lorenzo &
-			aaaa-mm-dd &
-			TO DO \\
-			\hline
-			
-			Cusinato Giacomo &
-			aaaa-mm-dd &
-			TO DO \\
-			\hline
-			
-			Faccin Nicola &
-			aaaa-mm-dd &
-			TO DO \\
-			\hline
-			
-			Roetta Marco &
-			aaaa-mm-dd &
-			TO DO \\
-			\hline
-			
-			Santacatterina Luca &
-			aaaa-mm-dd &
-			TO DO \\
-			\hline
-			
-			Tesser Paolo &
-			aaaa-mm-dd &
-			TO DO
-		\end{longtable}
+		\begin{table}[!h]
+			\begin{center}
+				\begin{tabularx}{0.8\textwidth}{|p{5cm}|c|X|}
+					\hline
+					\textbf{Nome} & \textbf{Data} & \textbf{Firma} \\
+					\hline
+					\rule[-4mm]{0mm}{1cm}
+					Carnovalini Filippo &
+					aaaa-mm-dd &
+					TO DO \\
+					\hline
+					\rule[-4mm]{0mm}{1cm}
+					Ceccon Lorenzo &
+					aaaa-mm-dd &
+					TO DO \\
+					\hline
+					\rule[-4mm]{0mm}{1cm}
+					Cusinato Giacomo &
+					aaaa-mm-dd &
+					TO DO \\
+					\hline
+					\rule[-4mm]{0mm}{1cm}
+					Faccin Nicola &
+					aaaa-mm-dd &
+					TO DO \\
+					\hline
+					\rule[-4mm]{0mm}{1cm}
+					Roetta Marco &
+					aaaa-mm-dd &
+					TO DO \\
+					\hline
+					\rule[-4mm]{0mm}{1cm}
+					Santacatterina Luca &
+					aaaa-mm-dd &
+					TO DO \\
+					\hline
+					\rule[-4mm]{0mm}{1cm}
+					Tesser Paolo &
+					aaaa-mm-dd &
+					TO DO \\
+					\hline
+				\end{tabularx}
+			\end{center}
+		\caption{Accettazione componenti}
+		\end{table}
 	% subsection accettazione_componenti (end)
+	
+	\pagebreak
 	
 	\subsection{Componenti} % (fold)
 	\label{sub:componenti}
-		\begin{longtable}{c|c|c}
-			\label{tab:componenti}
-			\textbf{Nome} & \textbf{Matricola} & \textbf{Email} \\
-			\hline
-			Carnovalini Filippo &
-			TO DO &
-			carnovalini.filippo@mashup-unipd.it  \\
-			\hline
+		\begin{table}[!h]
+			\begin{center}
+				\begin{tabularx}{0.95\textwidth}{|l|c|X|}
+					\hline
+					\textbf{Nome} & \textbf{Matricola} & \textbf{Email} \\
+					\hline
+					Carnovalini Filippo &
+					1048335 &
+					carnovalini.filippo@mashup-unipd.it  \\
+					\hline
 			
-			Ceccon Lorenzo &
-			TO DO &
-			ceccon.lorenzo@mashup-unipd.it \\
-			\hline
+					Ceccon Lorenzo &
+					1026118 &
+					ceccon.lorenzo@mashup-unipd.it \\
+					\hline
 			
-			Cusinato Giacomo &
-			TO DO &
-			cusinato.giacomo@mashup-unipd.it \\
-			\hline
+					Cusinato Giacomo &
+					1054137 &
+					cusinato.giacomo@mashup-unipd.it \\
+					\hline
 			
-			Faccin Nicola &
-			TO DO &
-			faccin.nicola@mashup-unipd.it \\
-			\hline
+					Faccin Nicola &
+					1005999 &
+					faccin.nicola@mashup-unipd.it \\
+					\hline
 			
-			Roetta Marco &
-			TO DO &
-			roetta.marco@mashup-unipd.it \\
-			\hline
+					Roetta Marco &
+					1001887 &
+					roetta.marco@mashup-unipd.it \\
+					\hline
 			
-			Santacatterina Luca &
-			TO DO &
-			santacatterina.luca@mashup-unipd.it \\
-			\hline
+					Santacatterina Luca &
+				 	619555 &
+					santacatterina.luca@mashup-unipd.it \\
+					\hline
 			
-			Tesser Paolo &
-			1026527 &
-			tesser.paolo@mashup-unipd.it
-		\end{longtable}
+					Tesser Paolo &
+					1026527 &
+					tesser.paolo@mashup-unipd.it \\
+					\hline					
+				\end{tabularx}	
+			\end{center}
+		\caption{Componenti}
+		\end{table}
 	% subsection componenti (end)
 
 	\subsection{Definizione dei ruoli} % (fold)
 	\label{sub:definizione_dei_ruoli}
-	TO DO \\
-	- citare le norme di progetto \\
+	Durante lo sviluppo del progetto i membri del gruppo dovranno alternarsi almeno una volta tutti i ruoli previsti nelle \docNameVersionNdP{}, senza che ci siano conflitti d'interesse. \\
+	Il costo, ad ora, delle figure aziendali presenti è esposto al seguente link: \\
+	\url{http://www.math.unipd.it/~tullio/IS-1/2014/Progetto/PD01b.html}
 	% subsection definizione_dei_ruoli (end)
 
 % section organigramma (end)
