@@ -21,6 +21,7 @@
 % =================================================================================================
 % 0.0.7			2014/12/26			completate procedure e diagrammi in gestione proc	Tesser Paolo
 % =================================================================================================
+% 0.0.8			2015/01/03			aggiunta sez. che spiega l'applicativo Asana		Tesser Paolo
 %
 
 % CONTENUTO DEL CAPITOLO
@@ -61,7 +62,37 @@
 				Il \roleProjectManager{} ha il compito di concordare la data, l’ora e il luogo dell'incontro con il proponente o con il committente attraverso 	il meccanismo visto nella sezione \ref{sec:comunicazioni_esterne}. \\
 				Una volta trovato l'accordo dovrà notificarlo agli altri membri secondo i metodi presenti nella sezione \ref{sec:comunicazioni_interne}. \\
 				Ad ogni membro del gruppo è consentito chiedere la convocazione di una riunione esterna. Il \roleProjectManager, oltre ad accertarsi dei motivi e delle necessità di tale incontro, dovrà garantire che siano presenti almeno due componenti del team. Sarà compito di uno dei presenti, delegato di volta in volta, redigere il verbale dell’incontro avvenuto.
-				
+			
+			\paragraph{Gestione del sistema di ticketing} % (fold)
+			\label{par:gestione_del_sistema_di_ticketing}
+			Il sistema scelto per gestire i task da assegnare ai membri del team è Asana. \\
+			In esso si possono creare diverse viste per diversificare i task a seconda dell'ambito per il quale vengono aperti. Le viste presenti sono:
+				\begin{itemize}
+					\item \textbf{Bug Tracking Document}: vista dedicata ai task necessari alla risoluzione di problemi legati ai documenti;
+					\item \textbf{Bug Tracking Source}: vista dedicata ai task necessari alla risoluzione di problemi legati al codice sorgente;
+					\item \textbf{Change Request Document}: vista dedicata ai task aperti per proporre dei cambiamenti/miglioramenti al \roleProjectManager{} legati ai documenti;
+					\item \textbf{Change Request Source}: vista dedicata ai task aperti per proporre dei cambiamenti/miglioramenti al \roleProjectManager{} legati al codice sorgente;
+					\item \textbf{Fasi di avanzamento}: vista dedicata ai task che servono per soddisfare le milestone fissate nel \docNameVersionPdP per portare a compimento il progetto scelto;
+					\item \textbf{Presentazioni}: vista dedicata ai task che servono a portare a compimento le presentazione che il gruppo \groupName{} deve affrontare in corrispondenza di ogni revisione di progetto decisa dal committente;
+					\item \textbf{Revisioni}: vista dedicata ai task che servono per soddisfare le revisioni d'avanzamento decise dal committente allo scopo di verificare lo sviluppo del progetto;
+					\item \textbf{Stesura Documenti}: vista dedicata ai task che servono nell'avanzamento della redazione dei documenti di progetto.
+				\end{itemize}
+			\noindent
+			Ogni task può appartenere a più viste. Sarà compito del \roleProjectManager{} valutare se i task che apre possano essere presenti in diverse parti per facilitarne il controllo. I task invece che andranno ad aprire gli altri membri saranno collocati in un'unica vista come esposto nelle procedure.
+			% paragraph gestione_del_sistema_di_ticketing (end)
+			
+			\paragraph{Gestione delle Milestone} % (fold)
+			\label{par:gestione_delle_milestone}
+			Il \roleProjectManager{} deve pianificare i punti di controllo che il team deve raggiungere e che richiedono il soddisfacimento di alcune attività per poterli superare con successo. \\
+			Una milestone in Asana è semplicemente un task particolare generato inserendo il carattere ``:'' alla fine del titolo. Questo creerà in automatico una rappresentazione grafica diversa rispetto ai normali task. \\
+			Possono essere inserite solo nelle seguenti viste:
+				\begin{itemize}
+					\item \textbf{Fasi di avanzamento}
+					\item \textbf{Presentazioni}
+					\item \textbf{Revisioni}
+				\end{itemize}
+			% paragraph gestione_delle_milestone (end)
+			
 			\paragraph{Gestione dei task}
 			\label{sec:gestione_dei_task}
 			Il \roleProjectManager{} deve pianificare e assegnare i compiti che i singoli membri dovranno andare a eseguire. Per farlo viene usato l'applicazione web Asana che consente di creare facilmente i task. \\
@@ -95,10 +126,23 @@
 
 			
 		\subsubsection{Procedure}
+			\paragraph{Procedura di generazione di una milestone} % (fold)
+			\label{par:procedura_di_generazione_di_una_milestone}
+			Il \roleProjectManager{} dovrà eseguire i seguenti passi per generare una milestone e potrà farlo solo entrando nelle viste elencate nella sezione \ref{par:gestione_delle_milestone}:
+				\begin{enumerate}
+					\item definire il titolo della milestone;
+					\item inserire alla fine del titolo il carattere ``:'';
+					\item definire la data in cui verrà effettuato il controllo del raggiungimento degli obiettivi prefissati;
+					\item inserire una descrizione generale sulla natura del controllo che verrà apportato e sui macro obiettivi da raggiungere.
+				\end{enumerate}
+			\noindent
+			I task che serviranno per soddisfare gli obiettivi prefissati dovranno essere collocati sotto la milestone creata.
+			% paragraph procedura_di_generazione_di_una_milestone (end)
+		
 			\paragraph{Procedura d'assegnazione dei task}
 			\label{par:procedura_assegnazione_task}
 			Il \roleProjectManager{} dovrà eseguire i seguenti passi, riassunti in seguito nella figura \ref{fig:procedura_assegnazione_task}. \\
-			Per effettuare più velocemente un'assegnazione si potrà servire del template illustrato nella figura \ref{fig:template_task_asana}.
+			Per effettuare un'assegnazione si deve servire del template illustrato nella figura \ref{fig:template_task_asana} disponibile nella vista ``Fasi di avanzamento'' di Asana.
 				\begin{enumerate}
 					\item definire il titolo del task secondo le norme presenti nella sezione \ref{par:formato_dei_task};
 					\item se necessario, fornire una descrizione più esaustiva del compito da svolgere;
@@ -159,10 +203,11 @@
 					\label{fig:procedura_svolgimento_task}				
 				\end{figure}
 				
-			\paragraph{Procedura di svolgimento di una change request}
+			\paragraph{Procedura di svolgimento di una change request} % (fold)
+			\label{par:procedura_di_svolgimento_di_una_change_request}
 			(NOTA: DA SPOSTARE NEL PROCESSO DI SUPPORTO -> Risoluzione di Problemi) \\
-			Ogni membro del gruppo, che intenda proporre dei cambiamenti o introdurre degli avanzamenti, è tenuto a seguire questa procedura . \\
-			Per effettuare più velocemente l'apertura di una change request si potrà servire del template illustrato nella figura \ref{fig:template_change_request_asana}.
+			Ogni membro del gruppo, che intenda proporre dei cambiamenti o introdurre degli avanzamenti, è tenuto a seguire questa procedura. \\
+			Per effettuare l'apertura di una change request si deve servire del template illustrato nella figura \ref{fig:template_change_request_asana} disponibile nella vista ``Change Request Document'' o ``Change Request Source'' di Asana a seconda del tipo di proposta che si vuole effettuare.
 				\begin{enumerate}
 					\item definire il titolo del cambiamento/avanzamento;
 					\item definire una descrizione dettagliata del motivo che ha portato alla proposta e le fonti che garantiscono la bontà del cambiamento/avanzamento che si vuole attuare;
@@ -183,7 +228,9 @@
 					\caption{Diagramma di attività - procedura di svolgimento di una change request}
 					\label{fig:procedura_generazione_change_request}		
 				\end{figure}
-			
+				
+			% paragraph procedura_di_svolgimento_di_una_change_request (end)
+					
 			\paragraph{Procedura di rilevazione dei rischi}
 			Il \roleProjectManager{} ha il compito di individuare i rischi trovati nel \docNameVersionPdP. \\
 			Questa attività è iterativa durante tutto il progetto e necessita di un continuo monitoraggio dei rischi rilevati nel periodo iniziale. Proprio per la sua natura non finita, si può andare in contro a problemi non previsti inizialmente. \\
