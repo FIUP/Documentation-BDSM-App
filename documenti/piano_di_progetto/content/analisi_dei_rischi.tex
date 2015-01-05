@@ -11,6 +11,8 @@
 % =================================================================================================
 % 0.0.2			2015/01/03			iniziata prima stesura							Tesser Paolo
 % =================================================================================================
+% 0.0.3			2015/01/05			continuata stesura in dettaglio					Tesser Paolo
+% =================================================================================================
 %
 % =================================================================================================
 %
@@ -19,10 +21,10 @@
 
 \section{Analisi dei rischi} % (fold)
 \label{sec:analisi_dei_rischi}
-Per gestire al meglio l'avanzamento del progetto, incorrendo il meno possibile in problematica di natura varia, si è effettuata un attenta analisi dei rischi. La procedura seguente viene utilizzata per gestire i rischi.
+Per gestire al meglio l'avanzamento del progetto, incorrendo il meno possibile in problematiche di natura varia, si è effettuata un attenta analisi dei rischi. La procedura seguente viene utilizzata per gestire i rischi.
 	\begin{enumerate}
 		\item \textbf{Identificazione}: identificare tutti i possibili rischi che potrebbero ostacolare il corretto avanzamento del progetto. \\
-		I rischi possono essere: di progetto, di prodotto e business;
+		I rischi possono essere: di progetto, di prodotto e di business;
 		\item \textbf{Analisi}: valutare la probabilità di occorrenza del rischio e valutare i suoi possibili effetti sul progetto;
 		\item \textbf{Pianificazione}: redigere un piano su come affrontare i rischi, istituendo metodi per annullare o per mitigare il loro effetto;
 		\item \textbf{Monitoraggio}: controllare regolarmente i rischi pianificati e rivisitare il piano qualora si abbiano più informazione sui rischi trovati o ne venissero identificati di nuovi.
@@ -37,6 +39,9 @@ Ogni rischio individuato viene descritto con:
 		\item Metodi di rilevazione
 		\item Contromisure
 	\end{itemize}
+\noindent
+Per ogni rischio inoltre andrà riportato se sono avvenuti riscontri di esso durante lo svolgimento del progetto.
+
 	\subsection{Rischi tecnologici} % (fold)
 	\label{sub:rischi_tecnologici}
 		\subsubsection{Inesperienza sulle tecnologie scelte} % (fold)
@@ -44,10 +49,13 @@ Ogni rischio individuato viene descritto con:
 			\begin{itemize}
 				\item \textbf{Probabilità di occorrenza}: Alta;
 				\item \textbf{Grado di pericolosità}: Alto;
-				\item \textbf{Descrizione}: TO DO;
-				\item \textbf{Metodi di rilevazione}: TO DO;
-				\item \textbf{Contromisure}: TO DO.
+				\item \textbf{Descrizione}: la maggior parte delle tecnologie adottate per sviluppare il progetto sono del tutto sconosciute o quasi alla maggioranza dei membri del gruppo;
+				\item \textbf{Metodi di rilevazione}: il \roleProjectManager{} ha il compito di verificare il grado di conoscenza di ogni membro;
+				\item \textbf{Contromisure}: non è possibile annullare i ritardi qualora il rischio venisse riscontrato, ma per minimizzarli il \roleProjectManager{} dovrà effettuare un'attenta pianificazione che consenta a ciascun membro di avere il tempo necessario per acquisire le conoscenza attraverso il materiale fornito dal \roleAdministrator.
 			\end{itemize}
+		\noindent
+		\textbf{Riscontro effettivo}: \\
+		Non sono stati riscontrati problemi inerenti a questo rischio in quanto le tecnologie scelte devono essere ancora utilizzate.
 		% subsubsection inesperienza_sulle_tecnlogie_scelte (end)
 		
 		\subsubsection{Problemi Hardware} % (fold)
@@ -55,59 +63,65 @@ Ogni rischio individuato viene descritto con:
 			\begin{itemize}
 				\item \textbf{Probabilità di occorrenza}: Bassa;
 				\item \textbf{Grado di pericolosità}: Medio;
-				\item \textbf{Descrizione}: TO DO;
-				\item \textbf{Metodi di rilevazione}: TO DO;
-				\item \textbf{Contromisure}: TO DO.
+				\item \textbf{Descrizione}: i computer utilizzati dai membri del gruppo, non essendo predisposti a uno scopo professionale ed essendo impiegati anche per altre attività al di fuori di quelle relative al progetto possono subire danneggiamenti con la possibile perdita di dati;
+				\item \textbf{Metodi di rilevazione}: ogni membro del gruppo dovrà avere cura dei propri strumenti e verificarne settimanalmente il funzionamento;
+				\item \textbf{Contromisure}: nel caso si guastasse una delle macchine verrà riparata il prima possibile. Nel frattempo il lavoro proseguirà su una messa a disposizione dal laboratorio. La possibile perdita dei dati sarà minimizzata in quanto ogni membro, terminata la sessione di lavoro, dovrà eseguire il push sul repository, presente su un servizio di hosting, esterno al controllo del team.
 			\end{itemize}
+		\noindent
+		\textbf{Riscontro effettivo}: \\
+		Non sono stati riscontrati problemi inerenti a questo rischio.
 		% subsubsection problemi_hardware (end)
 		
 		\subsubsection{Problemi Software} % (fold)
 		\label{ssub:problemi_software}
 			\begin{itemize}
 				\item \textbf{Probabilità di occorrenza}: Bassa;
-				\item \textbf{Grado di pericolosità}: Basso;
-				\item \textbf{Descrizione}: TO DO;
-				\item \textbf{Metodi di rilevazione}: TO DO;
-				\item \textbf{Contromisure}: TO DO.
+				\item \textbf{Grado di pericolosità}: Medio;
+				\item \textbf{Descrizione}: l'utilizzo di numerosi applicativi esterni potrebbe far aumentare il rischio che uno di essi possa corrompersi per cause non imputabili ai membri del gruppo, in particolare per quanto riguarda le applicazioni web;
+				\item \textbf{Metodi di rilevazione}: il \roleAdministrator{} verificherà giornalmente il funzionamento degli applicativi web usati. I membri del gruppo inoltre dovranno notificare al \roleAdministrator{} se si verificassero dei problemi con i software utilizzati in locale;
+				\item \textbf{Contromisure}: per quanto riguarda gli strumenti usati in locale dai componenti, qualora smettessero di funzionare, dovranno essere scaricati di nuovi dal loro sito ufficiale. Se il problema dovesse ripetersi più volte l'\roleAdministrator{} avrà il compito di cercare nuovi strumenti sostitutivi. \\
+				Per quanto riguarda invece gli strumenti web utilizzati, in particolare per il servizio di hosting del repository e per il sistema di ticketing, verranno effettuati giornalmente dei backup per minimizzare la possibile perdita dei dati.
 			\end{itemize}
+		\noindent
+		\textbf{Riscontro effettivo}: \\
+		Non sono stati riscontrati problemi inerenti a questo rischio.
 		% subsubsection problemi_software (end)
 		
 	% subsection rischi_tecnologici (end)
 	
 	\subsection{Rischi dovuti al personale} % (fold)
 	\label{sub:rischi_dovuti_al_personale}
-		\subsubsection{Impegni personali dei componenti} % (fold)
+		\subsubsection{Impegni personali o problemi di salute dei componenti} % (fold)
 		\label{ssub:impegni_personali_dei_componenti}
 			\begin{itemize}
-				\item \textbf{Probabilità di occorrenza}: Medio;
+				\item \textbf{Probabilità di occorrenza}: Media;
 				\item \textbf{Grado di pericolosità}: Medio;
-				\item \textbf{Descrizione}: TO DO;
-				\item \textbf{Metodi di rilevazione}: TO DO;
-				\item \textbf{Contromisure}: TO DO.
+				\item \textbf{Descrizione}: ogni membro del gruppo ha impegni e necessità personali esterni allo svolgimento del progetto che potrebbero renderlo non disponibile in certe occasioni. Nel team inoltre sono presenti anche degli studenti lavoratori che quindi periodicamente non sono disponibili. \\
+				Può accadere anche che i membri del gruppo si ammalino;
+				\item \textbf{Metodi di rilevazione}: i membri dovranno rendere noti i loro impegni fissi al \roleProjectManager{} il quale, grazie all'ausilio di calendari di gruppo, potrà pianificare al meglio la gestione delle risorse. \\
+				Se l'impegno non è fisso o un membro dovesse ammalarsi, dovrà essere lo stesso comunicato al \roleProjectManager{} con un anticipo di almeno 24 ore per l'impegno e, per quanto riguarda le malattie, quando la salute lo riterrà possibile;
+				\item \textbf{Contromisure}: dopo avere ricevuto notifica dell'impegno da parte del membro il \roleProjectManager{} dovrà effettuare una nuova pianificazione inerente al periodo riscontrato. Questo comporterà un sovraccarico temporaneo delle risorse per sopperire all'assenza del componente, ma consentirà di annullare i ritardi. \\
+				Non è possibile annullare il rischio di ritardo nel caso di malattia, ma solo di minimizzarlo.
 			\end{itemize}
+		\noindent
+		\textbf{Riscontro effettivo}: \\
+		Una notevole parte del gruppo si è ammalata durante il primo periodo. Questo ha portato ad alcuni ritardi nelle attività e ad un sovraccarico di alcune risorse, che non hanno però compromesso il raggiungimento della milestone fissata per la revisione dei requisiti.
 		% subsubsection impegni_personali_dei_componenti (end)
 		
 		\subsubsection{Problemi tra i componenti} % (fold)
 		\label{ssub:problemi_tra_i_componenti}
 			\begin{itemize}
-				\item \textbf{Probabilità di occorrenza}: Basso;
-				\item \textbf{Grado di pericolosità}: Bassa;
-				\item \textbf{Descrizione}: TO DO;
-				\item \textbf{Metodi di rilevazione}: TO DO;
-				\item \textbf{Contromisure}: TO DO.
+				\item \textbf{Probabilità di occorrenza}: Bassa;
+				\item \textbf{Grado di pericolosità}: Medio;
+				\item \textbf{Descrizione}: il gruppo è formato da individui diversi sia per idee sia per comportamenti. Per quasi tutti è la prima esperienza in un lavoro collaborativo così numeroso e questo può portare alla nascita di incomprensioni e dissidi. Tutto ciò potrebbe portare il team ad essere meno efficace e meno efficiente, appesantendo l'ambiente lavorativo;
+				\item \textbf{Metodi di rilevazione}: ogni membro dovrà fare presente al \roleProjectManager{} se si venissero a verificare dei conflitti con altri componenti;
+				\item \textbf{Contromisure}: una stretta collaborazione, in particolare modo nelle scelte di fattori trasversali alle risorse, cercherà di annullare i possibili disaccordi. \\
+				Qualora ciò non fosse sufficiente il \roleProjectManager{} dovrà cercare di risolvere il conflitto tra le parti. Se ciò non riuscisse ad avvenire in pieno, egli dovrà di cercare di minimizzare il contatto tra le due risorse grazie ad un'attenta pianificazione. \\
 			\end{itemize}
+		\noindent
+		\textbf{Riscontro effettivo}: \\
+		Non sono stati riscontrati problemi inerenti a questo rischio.
 		% subsubsection problemi_tra_i_componenti (end)
-		
-		\subsubsection{Inesperienza sul lavoro di gruppo} % (fold)
-		\label{ssub:inesperienza_su_lavoro_di_gruppo}
-			\begin{itemize}
-				\item \textbf{Probabilità di occorrenza}: Alta;
-				\item \textbf{Grado di pericolosità}: Media;
-				\item \textbf{Descrizione}: TO DO;
-				\item \textbf{Metodi di rilevazione}: TO DO;
-				\item \textbf{Contromisure}: TO DO.
-			\end{itemize}
-		% subsubsection inesperienza_su_lavoro_di_gruppo (end)
 		
 	% subsection rischi_dovuti_al_personale (end)
 	
@@ -120,7 +134,19 @@ Ogni rischio individuato viene descritto con:
 	
 	\subsection{Rischi dovuti agli strumenti} % (fold)
 	\label{sub:rischi_dovuti_agli_strumenti}
-	TO DO
+		\subsubsection{Inesperienza del gruppo sugli strumenti utilizzati} % (fold)
+		\label{ssub:inesperienza_del_gruppo_sugli_strumenti_utilizzati}
+			\begin{itemize}
+				\item \textbf{Probabilità di occorrenza}: Media;
+				\item \textbf{Grado di pericolosità}: Basso;
+				\item \textbf{Descrizione}: lo sviluppo di un progetto di gruppo richiede l'utilizzo di strumenti software che nessun componente ha mai utilizzato o quasi. Questo può generare dei ritardi dovuti ai tempi necessari a capire il funzionamento di tali mezzi;
+				\item \textbf{Metodi di rilevazione}: il \roleProjectManager{} verificherà di volta in volta il livello di conoscenza sugli strumenti  scelti dal \roleAdministrator{} da parte dei membri;
+				\item \textbf{Contromisure}: TO DO.
+			\end{itemize}
+		\noindent
+		\textbf{Riscontro effettivo}: \\
+		E' capitato che un membro del gruppo TO DO
+		% subsubsection inesperienza_del_gruppo_sugli_strumenti_utilizzati (end)
 	% subsection rischi_dovuti_agli_strumenti (end)
 	
 	
@@ -130,13 +156,16 @@ Ogni rischio individuato viene descritto con:
 		\begin{itemize}
 			\item \textbf{Probabilità di occorrenza}: Alta;
 			\item \textbf{Grado di pericolosità}: Alto;
-			\item \textbf{Descrizione}: TO DO;
-			\item \textbf{Metodi di rilevazione}: TO DO;
-			\item \textbf{Contromisure}: TO DO.
+			\item \textbf{Descrizione}: l'analisi del capitolato può non essere esaustiva e che il problema non venga capito fino in fondo. Può avvenire anche che i requisiti trovati siano in parte errati o incompleti. Questo potrebbe accadere facilmente in quanto le richieste del proponente sono state molto libere e poco specifiche;
+			\item \textbf{Metodi di rilevazione}: per verificare che ci siano il meno possibile errori durante la fase di analisi che possano ritardare l'avanzamento del progetto vengono effettuati degli incontri con il proponente;
+			\item \textbf{Contromisure}: non si può annullare del tutto questo rischio, ma per minimizzarlo vengono organizzati degli incontri con il proponente per ricevere un feedback sui contenuti fino a quel momento sviluppati. \\
+			Verranno inoltre corretti errori o mancanze esposte dal committente dopo l'esito di ogni revisione in particolare al termine della revisione dei requisiti.			
 		\end{itemize}
+	\noindent
+	\textbf{Riscontro effettivo}: \\
+	Al momento i requisiti sono stati solamente presentati al proponente. TO DO \\
+	Non si hanno ancora avuto riscontri dal committente in quanto non si è effettuata nessuna revisione di progetto.
 	% subsection rischi_dovuti_ai_requisiti (end)
-	
-	
 	
 	\subsection{Rischi dovuti a stime errate} % (fold)
 	\label{sub:rischi_dovuti_a_stime_errate}
@@ -149,6 +178,8 @@ Ogni rischio individuato viene descritto con:
 				\item \textbf{Metodi di rilevazione}: TO DO;
 				\item \textbf{Contromisure}: TO DO.
 			\end{itemize}
+		\noindent
+		\textbf{Riscontro effettivo}: \\
 		% subsubsection tempi_di_sviluppo_sottostimati (end)
 		
 		\subsubsection{Tempi di sviluppo sovrastimati} % (fold)
@@ -160,6 +191,8 @@ Ogni rischio individuato viene descritto con:
 				\item \textbf{Metodi di rilevazione}: TO DO;
 				\item \textbf{Contromisure}: TO DO.
 			\end{itemize}
+		\noindent
+		\textbf{Riscontro effettivo}: \\
 		% subsubsection tempi_di_sviluppo_sovrastimati (end)
 		
 	% subsection rischi_dovuti_a_stime_errate (end)
