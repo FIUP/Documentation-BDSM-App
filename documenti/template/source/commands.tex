@@ -15,8 +15,9 @@
 % =================================================================================================
 % 0.0.4			2015/01/02			inserito comando per le revisioni					Tesser Paolo
 % =================================================================================================
+% 0.0.5			2015/01/07			inseriti comandi per i documenti mancanti			Tesser Paolo
+% =================================================================================================
 %
-
 % DEFINIZIONE COMANDI BASE CHE POI ANDRANNO RIDEFINITI
 
 % ==================================================================================================
@@ -47,13 +48,15 @@
 \newcommand{\documentSummary}{ERRORE}
 
 % Vesione dei documenti
-\newcommand{\docVersionAdR}{\emph{v0.0.1}}
-\newcommand{\docVersionGlo}{\emph{v0.0.1}}
-\newcommand{\docVersionNdP}{\emph{v0.0.1}}
-\newcommand{\docVersionPdP}{\emph{v0.0.1}}
-\newcommand{\docVersionPdQ}{\emph{v0.0.1}}
-\newcommand{\docVersionSdF}{\emph{v1.0.0}}
-
+\newcommand{\docVersionAdR}{\emph{v0.0.1}} % Analisi dei Requisiti
+\newcommand{\docVersionGlo}{\emph{v0.0.1}} % Glossario
+\newcommand{\docVersionNdP}{\emph{v0.0.1}} % Norme di Progetto
+\newcommand{\docVersionPdP}{\emph{v0.0.1}} % Piano di Progetto
+\newcommand{\docVersionPdQ}{\emph{v0.0.1}} % Piano di Qualifica
+\newcommand{\docVersionSdF}{\emph{v1.0.0}} % Studio di Fattibilità
+\newcommand{\docVersionST}{\emph{v1.0.0}} % Specifica Tecnica
+\newcommand{\docVersionDdP}{\emph{v1.0.0}} % Definizione di Prodotto
+\newcommand{\docVersionMU}{\emph{v1.0.0}} % Manuale Utente
 
 % ==================================================================================================
 % COMANDI DA NON RIDEFINIRE
@@ -78,7 +81,7 @@
 \newcommand{\commitNameS}{\emph{Prof. Riccardo Cardin}}
 
 % Abbreviazioni per richiamare il nome esteso dei diversi documenti da redarre
-\newcommand{\docGlossary}{\emph{Glossario}}
+\newcommand{\docGlossary}{\emph{Glossario}} 
 \newcommand{\docAdR}{\emph{Analisi dei Requisiti \currentVersion}}
 \newcommand{\docNdP}{\emph{Norme di Progetto \currentVersion}}
 \newcommand{\docPdP}{\emph{Piano di Progetto \currentVersion}}
@@ -86,20 +89,26 @@
 \newcommand{\docSdF}{\emph{Studio di Fattibilità \currentVersion}}
 
 % Nome dei documenti
-\newcommand{\docNameAdR}{\emph{Analisi dei Requisiti}}
-\newcommand{\docNameGlo}{\emph{Glossario}}
-\newcommand{\docNameNdP}{\emph{Norme di Progetto}}
-\newcommand{\docNamePdP}{\emph{Piano di Progetto}}
-\newcommand{\docNamePdQ}{\emph{Piano di Qualifica}}
-\newcommand{\docNameSdF}{\emph{Studio di Fattibilità}}
+\newcommand{\docNameAdR}{\emph{Analisi dei Requisiti}} % Analisi dei Requisiti
+\newcommand{\docNameGlo}{\emph{Glossario}} % Glossario
+\newcommand{\docNameNdP}{\emph{Norme di Progetto}} % Norme di Progetto
+\newcommand{\docNamePdP}{\emph{Piano di Progetto}} % Piano di Progetto
+\newcommand{\docNamePdQ}{\emph{Piano di Qualifica}} % Piano di Qualifica
+\newcommand{\docNameSdF}{\emph{Studio di Fattibilità}} % Studio di Fattibilità
+\newcommand{\docNameST}{\emph{Specifica Tecnica}} % Specifica Tecnica
+\newcommand{\docNameDdP}{\emph{Definizione di Prodotto}} % Definizione di Prodotto
+\newcommand{\docNameMU}{\emph{Manuale Utente}} % Manuale Utente
 
 % Nome e versione dei documenti
-\newcommand{\docNameVersionAdR}{\docNameAdR{} \docVersionAdR}
-\newcommand{\docNameVersionGlo}{\docNameGlo{} \docVersionGlo}
-\newcommand{\docNameVersionNdP}{\docNameNdP{} \docVersionNdP}
-\newcommand{\docNameVersionPdP}{\docNamePdP{} \docVersionPdP}
-\newcommand{\docNameVersionPdQ}{\docNamePdQ{} \docVersionPdQ}
-\newcommand{\docNameVersionSdF}{\docNameSdF{} \docVersionSdF}
+\newcommand{\docNameVersionAdR}{\docNameAdR{} \docVersionAdR} % Analisi dei Requisiti
+\newcommand{\docNameVersionGlo}{\docNameGlo{} \docVersionGlo} % Glossario
+\newcommand{\docNameVersionNdP}{\docNameNdP{} \docVersionNdP} % Norme di Progetto
+\newcommand{\docNameVersionPdP}{\docNamePdP{} \docVersionPdP} % Piano di Progetto
+\newcommand{\docNameVersionPdQ}{\docNamePdQ{} \docVersionPdQ} % Piano di Qualifica
+\newcommand{\docNameVersionSdF}{\docNameSdF{} \docVersionSdF} % Studio di Fattibilità
+\newcommand{\docNameVersionST}{\docNameST{} \docVersionST} % Specifica Tecnica
+\newcommand{\docNameVersionDdP}{\docNameDdP{} \docVersionDdP} % Definizione di Prodotto
+\newcommand{\docNameVersionMU}{\docNameMU{} \docVersionMU} % Manuale Utente
 
 % Nome delle revisioni
 \newcommand{\RR}{\emph{Revisione dei Requisiti}}
