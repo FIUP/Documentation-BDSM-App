@@ -26,12 +26,13 @@ I diagrammi delle attività presenti in questa sezione sono stati rappresentati 
 	Questa fase comincia con la presentazione delle regole e delle scadenze da parte del committente e termina con un giorno scelto dal \roleProjectManager{} nel quale le scelte principali sugli strumenti e la loro implementazione sono state ritenute sufficienti per proseguire alla fase seguente. \\
 	Le attività che verranno svolte sono:
 		\begin{itemize}
-			\item \textbf{Individualizzazione degli strumenti}: TO DO;
-			\item \textbf{Apprendimento degli strumenti}: TO DO;
-			\item \textbf{Implementazione degli strumenti}: TO DO.
+			\item \textbf{Individualizzazione degli strumenti}: l'\roleAdministrator{} ha il compito di scegliere i principali strumenti che servono per il lavoro collaborativo. In particolare quelli per redigere la documentazione, il sistema di ticketing e il repository. Dovrà inoltre trovare/creare degli script che automatizzino i controlli per conformare il lavoro svolto con le \docNameVersionNdP;
+			\item \textbf{Apprendimento degli strumenti}: tutti i membri del gruppo dovranno documentarsi sugli strumenti scelti per apprenderne il funzionamento, qualora non conoscessero già come utilizzarli, grazie anche ai documenti informativi condivisi dall'\roleAdministrator;
+			\item \textbf{Implementazione degli strumenti}: l'\roleAdministrator{} avrà il compito di implementare e configurare gli strumenti trovati;
+			\item \textbf{Norme di Progetto}: l'\roleAdministrator{} una volta implementati gli strumenti di scrittura dei documenti, potrà iniziare a redarre le \docNameVersionNdP{}. Queste possono essere iniziate da subito perché non necessitano della scelta del capitolato.
 		\end{itemize}
 	\noindent
-	Nonostante la terminazione di questa fase sia fissata in un giorno preciso, la ricerca di strumenti più efficienti e migliorativi per l'avanzamento deve essere sempre portata avanti da parte dell'\roleAdministrator.
+	Nonostante la terminazione di questa fase sia fissata in un giorno preciso, la ricerca di strumenti più efficienti e migliorativi per l'avanzamento del progetto deve essere sempre portata avanti da parte dell'\roleAdministrator.
 	 
 		\subsubsection{Diagramma delle attività} % (fold)
 		\label{ssub:diagramma_delle_attivita}
@@ -45,12 +46,12 @@ I diagrammi delle attività presenti in questa sezione sono stati rappresentati 
 	Questa fase comincia dopo la scelta e l'implementazione degli strumenti necessari a definire il repository utilizzato dal team e le strutture di base per redigere la documentazione. Terminerà con la scadenza di consegna dell'offerta, cioè con la consegna della \RR. \\
 	Le attività che verranno svolte sono:
 		\begin{itemize}
-			\item \textbf{Norme di Progetto}: TO DO;
-			\item \textbf{Studio di Fattibilità}: TO DO;
-			\item \textbf{Analisi dei Requisiti}: TO DO;
-			\item \textbf{Piano di Progetto}: TO DO;
-			\item \textbf{Piano di Qualifica}: TO DO;
-			\item \textbf{Glossario}: TO DO;
+			\item \textbf{Norme di Progetto}: viene continuata l'attività di stesura delle \docNameVersionNdP;
+			\item \textbf{Studio di Fattibilità}: gli \emph{Analisti} devono valutare tutti i capitolati proposti e redarre lo \docNameVersionSdF{} al termine del quale si andrà a decidere il capitolo;
+			\item \textbf{Analisi dei Requisiti}: gli \emph{Analisti} iniziano la ricerca dei requisiti e la loro stesura nel documento \docNameVersionAdR{}. Questa attività comprende anche degli incontri con il proponente;
+			\item \textbf{Piano di Progetto}: il \roleProjectManager{} andrà a pianificare le attività che i membri del gruppo andranno a svolgere. Le decisioni prese andranno documentate nel \docNameVersionPdP;
+			\item \textbf{Piano di Qualifica}: i \emph{Verificatori} ;
+			\item \textbf{Glossario}: viene redatto il \docNameVersionGlo;
 		\end{itemize}
 	
 		\subsubsection{Diagramma delle attività} % (fold)
@@ -66,8 +67,8 @@ I diagrammi delle attività presenti in questa sezione sono stati rappresentati 
 	Questa fase comincia qualche giorno dopo il termine della consegna della \RR{} e termina con la \RR{} stessa.
 	Le attività che verranno svolte sono:
 		\begin{itemize}
-			\item \textbf{Analisi di dettaglio}: TO DO;
-			\item \textbf{Incremento e Verifica}: TO CHANGE - i documenti già redatti verranno aggiornati e migliorati a seconda del risultato ottenuto nella \RR.
+			\item \textbf{Analisi di dettaglio}: gli \emph{Analisti} andranno a consolidare i requisiti trovati e a migliorare il \docNameVersionAdR;
+			\item \textbf{Incremento e Verifica}: i documenti già redatti verranno aggiornati e migliorati.
 		\end{itemize}
 	
 		\subsubsection{Diagramma delle attività} % (fold)
@@ -78,13 +79,13 @@ I diagrammi delle attività presenti in questa sezione sono stati rappresentati 
 	
 	\subsection{Progettazione architetturale} % (fold)
 	\label{sub:progettazione_architetturale}
-	\textbf{Periodo}:  2015/02/10 - RP min (-1) \\
-	Questa fase comincia qualche giorno prima della \RR{} e termina con la consegna della \RPmin.
+	\textbf{Periodo}:  2015/02/16 - 2015/03/31 \\
+	Questa fase comincia qualche giorno dopo della \RR{} e termina con un incontro con il proponente.
 	Le attività che verranno svolte sono:
 		\begin{itemize}
-			\item \textbf{Specifica Tecnica}: il \roleDesigner{} ha il compito di fornire delle scelte progettuali di alto livello del prodotto finale. Il tutto verrà redatto nel documento \docNameST{} \emph{v.1.0.0} TO DO;
-			\item \textbf{Incontro con il proponente}: TO DO;
-			\item \textbf{Incremento e Verifica}: i documenti già redatti verranno aggiornati e migliorati a seconda del risultato ottenuto nella \RR.
+			\item \textbf{Specifica Tecnica}: il \roleDesigner{} ha il compito di fornire delle scelte progettuali di alto livello del prodotto finale. Il tutto verrà redatto nel documento \docNameVersionST{} che conterrà i design pattern che verranno utilizzati e l'architettura a grandi linee del prodotto;
+			\item \textbf{Incremento e Verifica}: i documenti già redatti verranno aggiornati e migliorati a seconda del risultato ottenuto nella \RR;
+			\item \textbf{Incontro con il proponente}: viene effettuato un incontro con il proponente per valutare se le scelte fatte sono conformi alle aspettative.
 		\end{itemize}
 		
 		\subsubsection{Diagramma delle attività} % (fold)
@@ -95,13 +96,15 @@ I diagrammi delle attività presenti in questa sezione sono stati rappresentati 
 	
 	\subsection{Progettazione di dettaglio e codifica dei requisiti obbligatori} % (fold)
 	\label{sub:progettazione_di_dettaglio_e_codifica_dei_requisiti_obbligatori}
-	\textbf{Periodo}:  RP min (+1/2) - step 1 (da decidere) \\
-	Questa fase comincia con la \RPmin{} e termina con un incontro con il proponente per ricevere un feedback sul lavoro svolto per soddisfare i requisiti obbligatori trovati.
+	\textbf{Periodo}:  2015/04/01 - 2015/04/24 \\
+	Questa fase comincia dopo l'incontro con il proponente per avere delle valutazioni sulla fase di progettazione architetturale svolta e termina sempre con un incontro con il proponente per ricevere un feedback sul lavoro svolto per soddisfare i requisiti obbligatori trovati.
 	Le attività che verranno svolte sono:
 		\begin{itemize}
-			\item \textbf{Definizione di Prodotto}: TO DO;
-			\item \textbf{Manuale utente e amministratore}: TO DO;
-			\item \textbf{Incremento e Verifica}: i documenti già redatti verranno aggiornati e migliorati a seconda del riscontro ottenuto dall'incontro con il proponente.
+			\item \textbf{Definizione di Prodotto}: viene redatta la \docNameVersionDdP{} relativa alla parte inerente ai requisiti obbligatori. In esso verranno definiti con profondità la struttura e le relazioni dei vari componenti del sistema basandosi sulla \docNameVersionST;
+			\item \textbf{Manuale utente}: viene iniziata la redazione del \docNameVersionMU{} che servirà per fornire indicazione agli utilizzatori del sistema;
+			\item \textbf{Codifica}: i \emph{Programmatori} iniziano lo sviluppo del codice del prodotto necessario al soddisfacimento dei requisiti obbligatori. Per la codifica andrà seguito il \docNameVersionDdP;
+			\item \textbf{Incremento e Verifica}: i documenti già redatti verranno aggiornati e migliorati a seconda del riscontro ottenuto dall'incontro con il proponente;
+			\item \textbf{Consegna}: andranno consegnati al committente i documenti relativi alla fase di progettazione architetturale esposta nella sezione \ref{sub:progettazione_architetturale}. La consegna andrà effettuata in data 2015/04/20.
 		\end{itemize}
 		
 		\subsubsection{Diagramma delle attività} % (fold)
@@ -112,11 +115,13 @@ I diagrammi delle attività presenti in questa sezione sono stati rappresentati 
 	
 	\subsection{Progettazione di dettaglio e codifica dei requisiti desiderabili} % (fold)
 	\label{sub:progettazione_di_dettaglio_e_codifica_dei_requisiti_desiderabili}
-	\textbf{Periodo}:  step 1 (da decidere) - step 2 (da decidere) \\
-	Questa fase comincia dopo l'incontro con il proponente e termina con un altro incontro con il proponente per ricevere un feedback sul lavoro svolto per soddisfare i requisiti desiderabili trovati.
+	\textbf{Periodo}:  2015/04/27 - 2015/05/11 \\
+	Questa fase comincia dopo il precedente incontro con proponente e termina con un altro incontro con il proponente per ricevere un feedback sul lavoro svolto per soddisfare i requisiti desiderabili trovati.
 	Le attività che verranno svolte sono:
 		\begin{itemize}
-			\item \textbf{Incremento e Verifica}: i documenti già redatti verranno aggiornati e migliorati a seconda del riscontro ottenuto dall'incontro con il proponente.
+			\item \textbf{Definizione di Prodotto}: viene redatta la \docNameVersionDdP{} relativa alla parte inerente ai requisiti desiderabili. In esso verranno definiti con profondità la struttura e le relazioni dei vari componenti del sistema basandosi sulla \docNameVersionST;;
+			\item \textbf{Codifica}: i \emph{Programmatori} iniziano lo sviluppo del codice del prodotto necessario al soddisfacimento dei requisiti desiderabili. Per la codifica andrà seguito il \docNameVersionDdP;
+			\item \textbf{Incremento e Verifica}: i documenti già redatti verranno aggiornati e migliorati a seconda del riscontro ottenuto dall'incontro con il proponente e dall'esito della \RPmin.
 		\end{itemize}
 		
 		\subsubsection{Diagramma delle attività} % (fold)
@@ -127,11 +132,13 @@ I diagrammi delle attività presenti in questa sezione sono stati rappresentati 
 	
 	\subsection{Progettazione di dettaglio e codifica dei requisiti opzionali} % (fold)
 	\label{sub:progettazione_di_dettaglio_e_codifica_dei_requisiti_opzionali}
-	\textbf{Periodo}:  step 2 (da decidere) - 2015/05/29 (mettere data della consegna) \\
+	\textbf{Periodo}:  2015/05/12 - 2015/05/21 \\
 	Questa fase comincia dopo l'incontro con il proponente per la valutazione sui requisiti desiderabili e termina con la consegna della \RQ.
 	Le attività che verranno svolte sono:
 		\begin{itemize}
-			\item \textbf{Incremento e Verifica}: TO DO.
+			\item \textbf{Definizione di Prodotto}: viene redatta la \docNameVersionDdP{} relativa alla parte inerente ai requisiti opzionali. In esso verranno definiti con profondità la struttura e le relazioni dei vari componenti del sistema basandosi sulla \docNameVersionST;;
+			\item \textbf{Codifica}: i \emph{Programmatori} iniziano lo sviluppo del codice del prodotto necessario al soddisfacimento dei requisiti opzionali. Per la codifica andrà seguito il \docNameVersionDdP;
+			\item \textbf{Incremento e Verifica}: i documenti già redatti verranno aggiornati e migliorati a seconda del riscontro ottenuto dall'incontro con il proponente.
 		\end{itemize}
 			
 		\subsubsection{Diagramma delle attività} % (fold)
@@ -142,12 +149,12 @@ I diagrammi delle attività presenti in questa sezione sono stati rappresentati 
 	
 	\subsection{Validazione} % (fold)
 	\label{sub:validazione}
-	\textbf{Periodo}:  step 2 (da definire) - 2015/06/18 \\
+	\textbf{Periodo}:  2015/05/22 - 2015/06/17 \\
 	Questa fase comincia dopo la consegna della \RQ{} e termina con la consegna della \RA.
 	Le attività che verranno svolte sono:
 		\begin{itemize}
-			\item \textbf{Incremento e Verifica}: TO DO;
-			\item \textbf{Validazione}: TO DO;
+			\item \textbf{Incremento e Verifica}: i documenti già redatti verranno aggiornati e migliorati a seconda dall'esito della \RQ;
+			\item \textbf{Validazione e collaudo}: il prodotto viene eseguito e testato per dimostrare che è conforme alle specifiche e soddisfa i requisiti proposti al proponente;
 		\end{itemize}
 		
 		\subsubsection{Diagramma delle attività} % (fold)
