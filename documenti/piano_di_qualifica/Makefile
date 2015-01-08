@@ -17,7 +17,7 @@ compile:
 	esac
 
 aspell:
-	# $(aspell) piano_di_qualifica.tex
+	# $(aspell) Studio_di_Fattibilita.tex
 	# cd Doc_to_Modify && $(aspell) History.tex
 	# cd content &&  $(aspell) Introduzione.tex
 	# cd content &&  $(aspell) Capitolato_1.tex
