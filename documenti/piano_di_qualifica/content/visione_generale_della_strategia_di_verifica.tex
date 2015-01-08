@@ -1,16 +1,87 @@
 % =================================================================================================
-% File:			nome_del_capitolo.tex
-% Description:	Defiinisce la sezione relativa a ...
-% Created:		2014/12/05
-% Author:		Santacatterina Luca
-% Email:		s88.luca@gmail.com
+% File:			visione_generale_della_strategia_di_verifica.tex
+% Description:	Definisce la sezione relativa alla sezione della strategia
+% Created:		2014/12/16
+% Author:		Ceccon Lorenzo / Faccin Nicola
+% Email:		ceccon.lorenzo@mashup.unipd.it / faccin.nicola@mashup.unipd.it
 % =================================================================================================
 % Modification History:
 % Version		Modifier Date		Change											Author
-% 0.0.1 		2014/12/05 			iniziata stesura documento di prova				Luca S.
+% 0.0.1 		2014/12/05 			iniziata stesura documento sezione				Lorenzo C./Nicola F.
 % =================================================================================================
 %
 
 % CONTENUTO DEL CAPITOLO
 
 \section{Visione generale della strategia di verifica}
+
+	\subsection{Definizione degli obiettivi}
+	Per garantire la qualità di processo necessaria per ottenere la qualità di prodotto che si intende raggiungere, è stato scelto di basarsi su due modelli:
+	\begin{itemize}
+  		\item \textbf{SPICE:} \textit{definito nello standard ISO/IEC 15504 è il modello di riferimento per dare un giudizio di maturità e individuare azioni migliorative.}
+ 		 \item \textbf{PDCA:} \textit{serve per promuovere il miglioramento continuo dei processi e per ottimizzare l'utilizzo di risorse.}
+	\end{itemize}
+	Per massimizzare l'efficacia della qualità del prodotto si è deciso di puntare sullo standard ISO/IEC 9126 che definisce le metriche per la sua misurazione.
+	
+	\subsection{Organizzazione}
+	
+	\subsection{Pianificazione strategica e temporale}
+	L'attività di verifica necessaria, per il miglioramento della qualità dei processi e del prodotto, deve essere sistematica ed organizzata. Ciò permetterà l'individuazione e la correzione degli errori il prima possibile evitando la propagazione di questi ultimi in larga scala.\\
+	Ciascuna attività che riguarda la documentazione o la codifica dovrà essere preceduta da uno studio preliminare che ci permetta di rendere chiaro la struttura degli stessi. Questo studio preventivo ci consentirà di ottenere un maggiore livello di qualità e una minore possibilità di fallimento. \\
+	Per quanto riguarda le tempistiche, l'obbiettivo primario è quello di rispettare le scadenze forniteci del committente.
+	\subsection{Responsabilità}
+	Le responsabilità relative all'assegnazione degli incarichi appartengono al Responsabile di Progetto, mentre le responsabilità relative all'adeguamento dell'ambiente di lavoro per lo svolgimento di tutti i compiti necessari alla realizzazione del progetto appartengono all'Amministratore di Progetto.
+
+	\subsection{Risorse necessarie}
+	Le risorse necessarie alla verifica della qualità dei processi e del prodotto sono:
+		\begin{itemize}
+  			\item \textbf{Risorse umane:} \textnormal{di Progetto controlla la qualità dei processi interni, l'Amministratore definisce le norme e i piani per le attività di verifica, il Programmatore esegue le prove di verifica e validazione del codice, il Verificatore esegue la verifica dei documenti e fornisce i risultati delle prove effettuate.}
+  			\item \textbf{Risorse software:} \textnormal{Sono necessari strumenti per il tracciamento dei requisiti, per la stesura dei documenti in \LaTeX, per la creazione di diagrammi UML, per lo sviluppo del prodotto e per supporto e verifica del codice.}
+  			\item \textbf{Risorse hardware:} \textnormal{Sono necessari computer per scrivere documentazioni e codice del prodotto e stabili dove poter lavorare al progetto.}
+		\end{itemize}
+		
+	\subsection{Misure e metriche}
+	Descrizione delle metriche e delle misure per rendere quantificabili e conseguentemente qualificabili i processi, i documenti e il software prodotto.
+
+		\subsubsection{Metriche per i processi}
+		L'organizzazione interna dei processi si basa sul principio PDCA, che è in grado di garantire un miglioramento continuo della qualità di tutti i processi e conseguentemente dei prodotti derivanti dai processi.
+I processi saranno pianificati dettagliatamente rispetto ai requisiti e alle risorse disponibili. Se durante il processo di verifica l'analisi evidenzia dei valori che si discostano, in modo peggiorativo, dai piani prefissati, questo denoterà la presenza di un problema che verrà risolto in modo correttivo sul processo o eventualmente sul piano iniziale dello stesso.\\
+		Le misurazioni sul processo consistono in:
+			\begin{itemize}
+				\item Tempo impiegato per essere completato
+				\item Cicli iterativi interni al processo
+				\item Risorse utilizzate e/o consumate durante il processo
+				\item Attinenza ai piani stabiliti
+				\item Soddisfazione dei requisiti richiesti
+			\end{itemize}
+
+		\subsubsection{Metriche per i documenti}
+		\textbf{Indice Gulpease} :questo indice, tarato specificatamente per la lingua italiana, ha anche il vantaggio di utilizzare la lunghezza delle parole in lettere e non delle sillabe, semplificandone il calcolo.
+			\begin{center}
+				\begin{math}
+					89+\frac{300*(Numero\quad delle\quad frasi)-10*(Numero\quad delle\quad lettere)}{Numero\quad delle\quad parole}
+				\end{math}
+			\end{center}
+		100 indica la leggibilità più alta mentre 0 quella più bassa, sono presenti dei range così da poter quantificare meglio la complessità del documento in analisi:
+			\begin{itemize}
+				\item inferiori a 80 sono difficili da leggere per chi ha la licenza elementare;
+				\item inferiori a 60 sono difficili da leggere per che ha la licenza media;
+				\item inferiori a 40 difficili da leggere per chi possiede un diploma superiore;
+			\end{itemize}
+		Range-ottimale[50-100], range-accettazione [40-100].
+
+		\subsubsection{Metriche per il software}
+			\begin{itemize}
+				\item \textbf{Complessità Ciclomatica} \textnormal{: è utilizzata per misurare la complessità di un metodo, attraverso il grafo di controllo di flusso che misura direttamente il numero di cammini linearmente indipendenti. I nodi di questo grafo rappresentano gruppi indivisibili di istruzioni e gli archi connettono due nodi solamente se le istruzioni di un nodo possono essere eseguite immediatamente dopo le istruzioni dell'altro nodo.\\
+				In questo progetto si cercherà di rispettare la raccomandazione di \textit{McCabe}, che sviluppò tale teoria, ossia quella di non superare una complessità di 10. Rispettando questo vincolo si aumentano le possibilità di riuso del codice, manutenibilità, coesione e correttezza di quest'ultimo. Il vincolo presentato sarà di tipo lasco, ossia potrà essere portato a valori maggiori nell'eventualità porti a notevoli benefici in termini di velocità di esecuzione.\\ \\
+				Valore-ottimale <10, valore-accettazione <15.}
+				\item \textbf{Numero di metodi} \textnormal{: metrica utilizzata per calcolare una media delle occorrenze dei metodi per package; valori alti potrebbero indicare la necessità di scomporlo.\\ \\ 					Range-ottimale [3-8], range-accettazione [3-10].}
+				\item \textbf{Numero di parametri} \textnormal{: metrica utilizzata per calcolare il numero di parametri formali di un metodo. Un valore basso e indice di maggior manutenibilità e astrazione del codice.\\ \\
+				Range-ottimale [0-4], range-accettazione [0-8].}
+				\item \textbf{Linee di codice per linee di commento} \textnormal{: metrica atta a migliorare la manutenibilità del codice attraverso il monitoraggio del rapporto tra questi valori.\\ \\
+				Valore-ottimale <0.20, valore-accettazione <0.35}
+				\item \textbf{Bugs for lines of code} \textnormal{: metrica per la misura dei bug trovati per un certo quantitativo di linee di codice. Questa metrica è utile in quanto all'aumentare dell'ampiezza del codice si aumenta la probabilità di nascondere degli errori. Presupponendo che nessuno del gruppo avrà conoscenze sufficienti dello stack tecnologico che si andrà ad utilizzare si partirà con un valore di accettazione alto per poi cercare di ridurlo in modo incrementale. L'obbiettivo fissato è quello di raggiungere valori compresi tra 0 e 20. Difficoltà particolari verranno gestite dal responsabile di progetto.}
+				\item \textbf{Numero di livelli di annidamento} \textnormal{: metrica per misurare il livello di annidamento dei metodi. Un numero elevato comporta eccessiva complessità del codice e ne riduce il livello di astrazione.\\ \\
+				Range-ottimale [1-4], range-accettazione [1-6].}
+			\end{itemize}
+
