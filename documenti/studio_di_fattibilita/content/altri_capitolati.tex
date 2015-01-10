@@ -11,6 +11,8 @@
 % =================================================================================================
 % 0.0.2 		2014/12/14 			Completata prima stesura capitolo				Cusinato Giacomo
 % =================================================================================================
+% 0.0.3 		2015/01/10 			Revisione capito								Cusinato Giacomo
+% =================================================================================================
 %
 
 % CONTENUTO DEL CAPITOLO
@@ -21,21 +23,15 @@
 \subsection{Capitolato C2: GUS}
 
 \subsubsection{Descrizione}
-Il capitolato propone lo sviluppo di un software applicabile nell'industria del vetro per il controllo della presenza di impurità e imperfezioni nelle fasi finali del ciclo produttivo del materiale. Il software dovrà analizzare un'immagine del prodotto ottenuta tramite uno scanner momenti prima dell'utima fase di lavorazione e, tramite un'accurata analisi, dovrà stabilire la conformità o meno del vetro analizzato. L'applicativo finale dovrà produrre risultati efficaci al 100\% e fornire le seguenti caratteristiche:
-\begin{itemize}
-\item \textbf{Interfaccia user friendly}: il prodotto sarà infatti utilizzato da diverse tipologie di utenza.
-\item \textbf{Gestione delle ricette}: la tipologia di analisi del vetro può subire variazioni a seconda di diversi fattori, come l'utilizzo finale o il cliente del prodotto ma anche la dimensione della lastra o la forma e posizione dell'impurità trovata. Ogni analisi può quindi essere assegnata ad una ricetta diversa secondo le normative e le richieste dell'ambito.
-\item \textbf{Errori e reportistica}: definire due livelli di segnalazioni (errore e difetto).
-\item \textbf{Statistiche}: per eseguire un controllo qualità continuo ed una chiara casistica dei possibili difetti presenti in fase di produzione.
-\item \textbf{Interfaccia web}: per controllare lo stato della produzione in tempo reale da remoto.
-\end{itemize} 
-Per quanto riguarda le tecnologie in uso, il software principale dovrà essere sviluppato in ambito C++ tramite le librerie Qt mentre il database dovrà essere di tipo relazionale utilizzando i DBMS MySQL o PostgreSQL. Per quanto riguarda l'interfaccia web, invece, è necessario progettare una UI responsive per ogni dispositivo, linguaggi consigliati: PHP e JavaScript (in ambito AngularJS). 
+Il capitolato propone lo sviluppo di un software applicabile nell'industria del vetro per il controllo della presenza di impurità e imperfezioni nelle fasi finali del ciclo produttivo del materiale. Il software dovrà analizzare un'immagine del prodotto ottenuta tramite uno scanner momenti prima dell'utima fase di lavorazione e, tramite un'accurata analisi, dovrà stabilire la conformità o meno del vetro analizzato. L'applicativo finale dovrà produrre risultati efficaci al 100\% in realazione al contesto in cui si inserisce il vetro in esame. Sarà richiesta, infatti, la possibilità di creare delle ricette in base al tipo di analisi che verrà effettuata la quale può subire variazioni a seconda di diversi fattori, come l'utilizzo finale o il cliente del prodotto ma anche la dimensione della lastra o la forma e posizione dell'impurità.
+L'interfaccia utente del programma, inoltre, richiede un'analisi approfondita in quanto dovrà risultare il più user friendly possibile considerando le diverse tipologie di utenza.
+Le tecnologie in uso sono ben note al gruppo in quando è richiesto l'utilizzo del linguaggio C++ in ambito Qt per l'applicativo principale ed un database di tipo relazionale MySQL per memorizzare analisi effettuate, errori raccolti e generare statistiche sulla produzione. Per il controllo da remoto, inoltre, è richiesta un'interfaccia web responsive da realizzare tramite il framework AngularJS e tecnologie web annesse.
 
 \subsubsection{Valutazione}
 Il gruppo ha subito deciso di scartare il secondo capitolato. Sebbene tutti gli studenti del gruppo abbiano una buona familiarità con la maggior parte delle tecnologie in uso, è stato scelto di non scegliere il capitolato in questione per le seguenti motivazioni:
 \begin{itemize}
 \item \textbf{Poco interesse nel dominio tecnologico}: in particolare, il gruppo ha da subito dimostrato poco interesse sul lato algoritmico del progetto, in particolare sull'analisi di risoluzione del problema con alte prestazioni e percentuali di efficacia.
-\item \textbf{Tecnologie già utilizzate}: il gruppo ha preferito evitare di lavorare con tecnologie già utilizzate per semplice interesse personale.
+\item \textbf{Tecnologie già utilizzate}: in quando il capitolato richide l'utilizzo di linguaggi già utilizzati nel corso degli studi universitari, il gruppo ha preferito evitare di lavorare nuovamente con tali tecnologie per semplice interesse personale.
 \end{itemize}
 
 % CAPITOLATO 3
@@ -43,20 +39,8 @@ Il gruppo ha subito deciso di scartare il secondo capitolato. Sebbene tutti gli 
 \subsection{Capitolato C3: Nor(r)is}
 
 \subsubsection{Descrizione}
-Il capitolato propone lo sviluppo di un framework, denominato \emph{Norris}, per la produzione di grafici in tempo reale a partire da sorgenti arbitrarie. I grafici saranno sviluppati interamente tramite le API messe a disposizione da \emph{Norris}, sia per la veste grafica che per i dati e dovranno essere disponibili in quattro rappresentazioni:
-\begin{itemize}
-\item \textbf{Bar chart}
-\item \textbf{Line chart}
-\item \textbf{Map chart}
-\item \textbf{Formato tabellare}
-\end{itemize}
-L'aggiornamento dei grafici, inoltre, potrà avvenire in tre modi: 
-\begin{itemize}
-\item \textbf{Place}: dove il valore aggiornato sostituisce il precedente.
-\item \textbf{Stream}: dove i valori già presenti rimancono visibili, ma ne vengono aggiunti di nuovi.
-\item \textbf{Movie}: combina i medoti precedenti, permettendo la sostituzione di dati, l'aggiunta di nuovi valori e la loro rimozione.
-\end{itemize}
-Il framework metterà dunque a disposizione una componente WebSocket che aggiornerà i grafici in tempo reale, che sarà realizzata tramite la libreria Socket.io. Tra le altre tecnologie, troviamo Node.js ed il relativo framework Express per lo sviluppo lato server, mentre AngularJS per il front-end. Opzionalmente, è inoltre richiesta la progettazione di un'applicazione Android per la visualizzazione dei grafici a partire da un server arbitrario in cui è presente un'istanza di \emph{Norris}.
+Il capitolato propone lo sviluppo di un framework, denominato \emph{Norris}, per la produzione di grafici in tempo reale a partire da sorgenti arbitrarie. Il prodotto si inserisce nel contesto del real-time busines intelligence (RTBI), un insieme di processi aziendali che permettono l'acquisizione di informazioni in tempo reale per ottenere determinate stime e statistiche del quadro aziendale. \emph{Norris} si inserisce in questo contesto proponendo la creazione di un framework che possa rispondere alle esigenze dello sviluppatore, tramite un set di API che permettano la costruzione di grafici indipedentemente dalla sorgente dei dati, e dall'esperto di dominio, ovvero il fruitore dell'applicativo finale.
+Il framework metterà dunque a disposizione una componente WebSocket che aggiornerà i grafici in tempo reale, che sarà realizzata tramite la libreria Socket.io. Tra le altre tecnologie, troviamo Node.js ed il relativo framework Express per lo sviluppo lato server, mentre AngularJS per il front-end. Opzionalmente, è inoltre richiesta la progettazione di un'applicazione Android in cui sarà possibile visualizzare i grafici prodotti da qualsiasi server in cui sia presente un'istanza di  \emph{Norris}.
 
 \subsubsection{Valutazione}
 Il capitolato in questione è stato valutato attentamente dal gruppo ma nelle fasi finale di analisi, è stato scartato in favore del primo. Di seguito gli aspetti positivi identificati:
@@ -74,13 +58,7 @@ Di seguito, invece, gli aspetti negativi che hanno portato il gruppo a scartare 
 \subsection{Capitolato C4: Premi}
 
 \subsubsection{Descrizione}
-Il capitolato propone lo sviluppo di un software per la presentazione di slide denominato \emph{Premi}. L'applicativo non dovrà essere basato su PowerPoint ma, al contrario, dovrà puntare all'originalità nel suo campo sperimentando e proponendo nuove modalità di creazione e presentazione di uno slideshow. Oltre agli aspetti innovativi, il software dovrà essere in grado di svolgere le operazioni più comuni per un presentatore di slide, come:
-\begin{itemize}
-\item Creazione di una presetazione
-\item Presentazione di slide
-\item Presentazione nel browser
-\item Stampa delle presentazione
-\end{itemize}
+Il capitolato propone lo sviluppo di un software per la presentazione di slide denominato \emph{Premi}. L'applicativo non dovrà essere basato su PowerPoint ma, al contrario, dovrà puntare all'originalità nel suo campo sperimentando e proponendo nuove modalità di creazione e presentazione di uno slideshow. Oltre agli aspetti il software dovrà essere in grado di svolgere le operazioni più comuni per un presentatore di slide, come la creazione di una presenztazione, la presentazione di slide e la sua stampa.
 Il prodotto dovrà essere progettato esclusivamente tramite l'uso di tecnologie web (HTML5 e JavaScript) o SVG (InkScape) e le numerose librerie a disposizioni, come Impress.js, Reveal.js, Deck.js, Google slides template o Slides. Il sistema dovrà adattarsi anche a form factor di tipo mobile.
 
 \subsubsection{Valutazione}
@@ -95,8 +73,8 @@ Il capitolato in questione è stato scartato nelle prime fasi di analisi. Di seg
 \subsection{Capitolato C5: sHike}
 
 \subsubsection{Descrizione}
-Il capitolato propone lo sviluppo di un piattaforma software mirata agli sport e attività  in montagna tramite l'uso di uno smartwatch (\emph{WearIT}, fornito dal proponente) con relativa applicazione e servizio web dedicato (\emph{WearIT Cloud Portal}). Lo scopo finale della piattaforma, è quello di fornire all'utilizzatore dello smartwatch informazioni su percorsi sicuri da seguire nelle zone di montagna, tempi di viaggio, condizioni atmosferiche e accesso ai principali servizi oltre che registrare in modo continuo la posizione dell'utente. L'applicazione, quindi, dovrà sfruttare tutte le caratteristiche software e hardware diponibili in \emph{WearIT} per offrire all'utilizzatore finale la miglior esperienza possibile in ambienti di montagna, inviando tutti i dati collezionati al servizio cloud al termine dell'utilizzo.
-Lo smartwatch è basato sul sistema operativo Android 4.4.2 e sarà distribuito con un SDK del sistema operativo appositamente modificato per rispondere alle esigenze di \emph{WearIT}.
+Il capitolato propone lo sviluppo di un piattaforma software mirata a sport ed attività  in montagna tramite l'uso di uno smartwatch (\emph{WearIT}, fornito dal proponente) con relativa applicazione e servizio web dedicato (\emph{WearIT Cloud Portal}). Lo scopo finale della piattaforma, è quello di fornire all'utilizzatore dello smartwatch informazioni su percorsi sicuri da seguire nelle zone di montagna, tempi di viaggio, condizioni atmosferiche e accesso ai principali servizi oltre che registrare in modo continuo la posizione dell'utente. L'applicazione, quindi, dovrà sfruttare tutte le caratteristiche software e hardware diponibili in \emph{WearIT} per offrire all'utilizzatore finale la miglior esperienza possibile in ambienti di montagna, inviando tutti i dati collezionati al servizio cloud al termine dell'utilizzo.
+Lo smartwatch è basato sul sistema operativo Android 4.4.2 e sarà distribuito con un SDK del sistema operativo appositamente modificato per rispondere alle esigenze di \emph{WearIT}. Il Software Development Kit di Google fornisce un IDE basato su Intellij IDEA progettato su misura per lo sviluppo di applicazioni Android in ambito Java. Lo standard JSON, inoltre, è utilizzato per lo scambio di informazioni dalla smartwatch alla rete cloud di \emph{WearIT}, la quale fornisce un set di API e servizi specifici per la piattaforma in questione.
 
 \subsubsection{Valutazione}
 Di seguito gli aspetti nagativi che hanno portato il gruppo a scartare il capitolato in questione:
