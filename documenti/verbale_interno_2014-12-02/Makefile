@@ -2,7 +2,7 @@ latex=pdflatex -synctex=1 -interaction=nonstopmode
 # aspell=sudo aspell --mode=tex --lang=it check
 
 compile: 
-	$(latex) nome_del_documento.tex && $(latex) nome_del_documento.tex
+	$(latex) verbale_interno_2014-12-02.tex && $(latex) verbale_interno_2014-12-02.tex
 	rm -rf *.aux 
 	rm -rf *.log
 	rm -rf *.out
@@ -12,8 +12,8 @@ compile:
 	rm -rf *.lot
 	@echo "*** Apertura file PDF ***"
 	@case $(shell uname) in \
-		Darwin*) nome_del_documento.pdf;; \
-		Linux*) nome_del_documento.pdf;; \
+		Darwin*) verbale_interno_2014-12-02.pdf;; \
+		Linux*) verbale_interno_2014-12-02.pdf;; \
 	esac
 
 aspell:
