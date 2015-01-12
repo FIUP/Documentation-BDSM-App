@@ -58,30 +58,64 @@ Il servizio ha erogato correttamente le funzionalità richieste dall'utente.
 Utente: utente non autenticato che accede al servizio.
 
 \item \textbf{Pre Condizione:}
-L’utente che accede alla pagina di accesso è sconosciuto al sistema
+L'utente che accede alla pagina di accesso è sconosciuto al sistema.
 
 \item \textbf{Descrizione:}
-L’utente può autenticarsi per poter accedere ai servizi offerti dalla piattaforma
+L'utente può autenticarsi per poter accedere ai servizi offerti dalla piattaforma.
 
 \item \textbf{Post Condizione:}
-L’utente è riconosciuto dal sistema
+L'utente è riconosciuto dal sistema.
 
 \item \textbf{Possibili Errori:}
-Messaggio di errore in caso di informazioni di accesso errate
+Viene mostrato un messaggio di errore nel caso in cui i dati forniti siano errati.
 
 \end{itemize}
 
 \subsubsection{UC 1.1.1: Inserimento dati di accesso}
 
-\subsubsection{UC1.1.1.1: inserimento utente}
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} In questa sezione viene richiesto all'utente di inserire i suoi dati di accesso al sistema per autenticarsi.
+\item \textbf{Precondizione:} L'utente visualizza correttamente la pagina.
+\item \textbf{Postcondizione:} L'utente viene reindirizzato alla schermata principale.
+\end{itemize}
 
-\subsubsection{UC1.1.1.2: inserimento password}
+\subsubsection{UC 1.1.1.1: inserimento utente}
 
-\subsubsection{UC1.1.1.3: conferma login}
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} Viene richiesto all'utente di inserire il suo username univoco per essere riconosciuto dal sistema. 
+\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire l’username.
+\item \textbf{Postcondizione:} L'utente ha inserito l'username.
+\end{itemize}
 
-\subsubsection{UC1.1.2: Autenticazione fallita}
+\subsubsection{UC 1.1.1.2: inserimento password}
 
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} Viene richiesto all'utente di inserire la propria password personale.
+\item \textbf{Precondizione:} Il sistema fornisce una schermata in cui è possibile inserire la password.
+\item \textbf{Postcondizione:} L'utente ha inserito la password.
+\end{itemize}
 
+\subsubsection{UC 1.1.1.3: conferma login}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} Viene richiesto all'utente di confermare i dati inserito con la pressione di un pulsante di conferma.
+\item \textbf{Precondizione:} Il sistema fornisce un pulsante per confermare la volontà di fare l'accesso.
+\item \textbf{Postcondizione:} L'utente ha eseguito l'accesso.
+\item \textbf{Estensioni:} Autenticazione fallita. [UC 1.1.2] 
+\end{itemize}
+
+\subsubsection{UC 1.1.2: Autenticazione fallita}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} Viene mostrato all'utente un messaggio di errore che riporta l'incorrettezza dei dati inseriti. Viene visualizzato un pulsante per tornare alals chermata di accesso.
+\item \textbf{Precondizione:} Il sistema ha ricevuta una richiesta di accesso con dati errati.
+\item \textbf{Postcondizione:} L'utente ha preso atto del messaggio di errore.
+\end{itemize}
 
 \subsection{UC 1.2: Visione informazioni utente e statistiche}
 
@@ -101,14 +135,39 @@ Le informazioni richieste dall'utente sono state fornite
 \textbf{Possibili Errori:}
 In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
 
-
 \subsubsection{UC 1.2.1: Apertura pannello informazioni}
 
 \subsubsection{UC 1.2.1.1: Visualizza informazioni utente}
 
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} Viene mostrata all'utente una pagina con il riepilogo dei sui dati, quali:
+\begin{enumerate}
+\item Il nome utente;
+\item Il nome e il cognome del proprietario dell'account;
+\item La data dell'ultimo accesso effettuato;
+\end{enumerate}
+\item \textbf{Precondizione:} L'utente ha selezionato il pulsante di visualizzazione informazioni.
+\item \textbf{Postcondizione:} L'utente ha ottenuto le informazioni richieste.
+\end{itemize}
+
 \subsubsection{UC 1.2.1.2: Visualizza Statistiche utente}
 
-\subsubsection{UC 1.3: Visualizzazione, creazione e modifica viste}
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} Viene mostrata all'utente una pagina con il riepilogo delle sue statistiche, quali:
+\begin{enumerate}
+\item Numero di viste attive;
+\item Numero di ricette attive;
+\item Numero di accessi negli ultimi 30 giorni;
+\end{enumerate}
+\item \textbf{Precondizione:} L'utente ha selezionato il pulsante di visualizzazione statistiche.
+\item \textbf{Postcondizione:} L'utente ha ottenuto le informazioni richieste.
+\end{itemize}
+
+
+
+\subsection{UC 1.3: Visualizzazione, creazione e modifica viste}
 
 \textbf{Attori Coinvolti:}
 Utente autenticato: utente autenticato che ha acceduto al servizio
@@ -132,167 +191,142 @@ Le informazioni aggiunte sono state salvate nel sistema.
 In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
 
 \subsubsection{UC 1.3.1: Visualizza viste}
-
 \subsubsection{UC 1.3.1.1: Apertura elenco viste}
-
-
 \subsubsection{UC 1.3.2: Aggiungi una vista}
-
 \subsubsection{UC 1.3.2.1: Apertura pannello inserimento nuova lista}
-
 \subsubsection{UC 1.3.2.2: Inserimento delle informazioni}
-
 \subsubsection{UC 1.3.2.3: Conferma delle informazioni inserite}
-
 \subsubsection{UC 1.3.3: Inserimetno fallito - Eccezione}
-
-\subsection{UC 1.3.4: Modifica una vista}
-
+\subsubsection{UC 1.3.4: Modifica una vista}
 \subsubsection{UC 1.3.4.1: selezione di una vista}
-
 \subsubsection{UC 1.3.4.2: apertura pannello modifica}
-
 \subsubsection{UC 1.3.4.3: inserimento dei dati}
-
 \subsubsection{UC 1.3.4.4: conferma dei dati inseriti}
-
-<<extend>>
-
 \subsubsection{UC 1.3.5: Errore nella modifica dei dati}
-
 \subsubsection{UC 1.3.6: Eliminazione di una vista}
-
 \subsubsection{UC 1.3.6.1: selezione di una vista}
-
 \subsubsection{UC 1.3.6.2: conferma eliminazione di una vista}
+
+
 
 \subsection{UC 1.4: Visualizzazione, creazione e modifica ricette e schedulazioni associate}
 
 \textbf{Attori Coinvolti:}
-Utente autenticato: utente autenticato che ha acceduto al servizio
-Utente amministratore autenticato: utente autenticato in grado di accedere a tutte le aree del servizio
+Utente
 
-\textbf{Pre Condizione:}
-        L’utente deve aver fatto l’accesso nell’apposita pagina.
+\textbf{Precondizione:}
+L’utente deve aver fatto l’accesso nell’apposita pagina.
 
 \textbf{Descrizione:}
-        Gli utenti autenticati possono vedere in questa pagina le ricette e i dati ad esse associati. 
+Gli utenti possono vedere in questa pagina le ricette e i dati ad esse associati. 
 Si rende disponibile per ciascuna vista un pannello per modificarne i parametri. 
 Si può creare una nuova ricetta. 
 Si può eliminare una ricetta esistente.
 Si può modificare la cadenza con cui i dati di una ricetta vengono aggiornati automaticamente.
 
 \textbf{Post Condizione:}
-        Le informazioni richieste dall’utente sono state fornite
+Le informazioni richieste dall'utente sono state fornite.
 Le impostazioni modificate sono state salvate nel sistema.
 Le informazioni aggiunte sono state salvate nel sistema.
 
 \textbf{Possibili Errori:}
-    In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
+In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
 
-\subsubsection{UC1.4.1: Visualizza ricette}
-\subsubsection{UC1.4.1.1: Apertura elenco ricette}
-\subsubsection{UC1.4.2: Aggiungi una vista}
-\subsubsection{UC1.4.2.1: Apertura pannello inserimento nuova ricetta}
-\subsubsection{UC1.4.2.2: Inserimento delle informazioni }
-\subsubsection{UC1.4.2.3: Conferma delle informazioni inserite}
-<<extend>>
-\subsubsection{UC1.4.3: Inserimetno fallito - Eccezione}
-\subsubsection{UC1.4.4: Modifica una ricetta}
-\subsubsection{UC1.4.4.1: selezione di una ricetta}
-\subsubsection{UC1.4.4.2: apertura pannello modifica ricetta}
-\subsubsection{UC1.4.4.3: inserimento dei dati}
-\subsubsection{UC1.4.4.4: conferma dei dati inseriti}
-<<extend>>
-\subsubsection{UC1.4.5: Errore nella modifica dei dati}
-\subsubsection{UC1.4.6: Modifica di una schedulazione associata}
-\subsubsection{UC1.4.6.1: selezione di una ricetta}
-\subsubsection{UC1.4.6.2: apertura pannello modifica schedulazione}
-\subsubsection{UC1.4.6.3: inserimento dei dati}
-\subsubsection{UC1.4.6.4: conferma dei dati inseriti}
-<<extend>>
-\subsubsection{UC1.4.7: Errore nella modifica dei dati}
+\subsubsection{UC 1.4.1: Visualizza ricette}
+\subsubsection{UC 1.4.1.1: Apertura elenco ricette}
+\subsubsection{UC 1.4.2: Aggiungi una vista}
+\subsubsection{UC 1.4.2.1: Apertura pannello inserimento nuova ricetta}
+\subsubsection{UC 1.4.2.2: Inserimento delle informazioni }
+\subsubsection{UC 1.4.2.3: Conferma delle informazioni inserite}
+\subsubsection{UC 1.4.3: Inserimetno fallito - Eccezione}
+\subsubsection{UC 1.4.4: Modifica una ricetta}
+\subsubsection{UC 1.4.4.1: selezione di una ricetta}
+\subsubsection{UC 1.4.4.2: apertura pannello modifica ricetta}
+\subsubsection{UC 1.4.4.3: inserimento dei dati}
+\subsubsection{UC 1.4.4.4: conferma dei dati inseriti}
+\subsubsection{UC 1.4.5: Errore nella modifica dei dati}
+\subsubsection{UC 1.4.6: Modifica di una schedulazione associata}
+\subsubsection{UC 1.4.6.1: selezione di una ricetta}
+\subsubsection{UC 1.4.6.2: apertura pannello modifica schedulazione}
+\subsubsection{UC 1.4.6.3: inserimento dei dati}
+\subsubsection{UC 1.4.6.4: conferma dei dati inseriti}
+\subsubsection{UC 1.4.7: Errore nella modifica dei dati}
 
-\subsubsection{UC1.4.8: Eliminazione di una ricetta}
+\subsubsection{UC 1.4.8: Eliminazione di una ricetta}
 
 \textbf{Attori Coinvolti:}
-Utente autenticato: utente autenticato che ha acceduto al servizio
-Utente amministratore autenticato: utente autenticato in grado di accedere a tutte le aree del servizio
+Utente
 
-\textbf{Pre Condizione:}
-        L’utente deve aver fatto l’accesso nell’apposita pagina.
+\textbf{Precondizione:}
+L’utente deve aver visualizzato la schermata di gestione delle ricette.
 
 Descrizione:
 L’utente può eliminare una ricetta e tutti i dati ad essa associati.
-Si possono eliminare solo le ricette non più utilizzate in una o più viste.    
+Si possono eliminare solo le ricette non più utilizzate in una o più viste proprie o di un altro utente.    
 
 \textbf{Post Condizione:}
-        Le informazioni richieste dall’utente sono state fornite
+Le informazioni richieste dall'utente sono state fornite.
 La ricetta(e) desiderata(e) e i dati ad essa(e) associati è(sono) stati cancellati dal sistema.
 
 \textbf{Possibili Errori:}
 In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
-In caso di ricetta in uso o in fase di aggiornamento a causa di una schedulazione viene visualizzato un messaggio di errore e nessun dato viene alterato da questa oeprazione.
+In caso di ricetta in uso o in fase di aggiornamento a causa di una schedulazione viene visualizzato un messaggio di errore e nessun dato viene alterato.
+
+\subsubsection{UC 1.4.8.1: selezione di una ricetta}
+\subsubsection{UC 1.4.8.2: conferma eliminazione di una ricetta}
+\subsubsection{UC 1.4.9: Modifica Layout viste }
+\subsubsection{UC 1.4.9.1: apertura pannello modifica layout}
+\subsubsection{UC 1.4.9.2: selezione della visualizzazione}
+\subsubsection{UC 1.4.9.3: conferma o annulla modifiche}
 
 
-\subsubsection{UC1.4.8.1: selezione di una ricetta}
-\subsubsection{UC1.4.8.2: conferma eliminazione di una ricetta}
 
-\subsubsection{UC1.4.9: Modifica Layout viste }
-\subsubsection{UC1.4.9.1: apertura pannello modifica layout}
-\subsubsection{UC1.4.9.2: selezione della visualizzazione}
-\subsubsection{UC1.4.9.3: conferma o annulla modifiche}
-
-\subsection{UC1.5: Modifica Password di accesso}
+\subsection{UC 1.5: Modifica Password di accesso}
 
 \textbf{Attori Coinvolti:}
-Utente autenticato: utente autenticato che ha acceduto al servizio
-Utente amministratore autenticato: utente autenticato in grado di accedere a tutte le aree del servizio
+Utente
 
 \textbf{Pre Condizione:}
-    L’utente dispone di una password di accesso valida e risulta autenticato al servizio.
+L'utente dispone di una password di accesso valida e risulta autenticato al servizio.
 
 \textbf{Descrizione:}
-    L’utente può cambiare la password attualmente in uso inserendo la vecchia password, la nuova password, la conferma della nuova password e confermando la modifica.
+L'utente può cambiare la password attualmente in uso inserendo la vecchia password, la nuova password, la conferma della nuova password e infine confermando la modifica.
 
 \textbf{Post Condizione:}
-    La nuova password per l’utente è attiva, la vecchia password non è più valida.
+La nuova password per l'utente è attiva, la vecchia password non è più valida.
 
 \textbf{Possibili Errori:}
 Messaggio di errore in caso di informazioni inserite errate oppure la nuova password non soddisfa i criteri di sistema indicati.
 
-\subsubsection{UC1.5.1: Inserimento di una nuova password}
-\subsubsection{UC1.5.1.1: inserimento password}
-\subsubsection{UC1.5.1.2: conferma inserimento password }
-\subsubsection{UC1.5.1.3: conferma}
-extend
-\subsubsection{UC1.5.2: Password inserita non conforme alle regole}
+\subsubsection{UC 1.5.1: Inserimento di una nuova password}
+\subsubsection{UC 1.5.1.1: inserimento password}
+\subsubsection{UC 1.5.1.2: conferma inserimento password }
+\subsubsection{UC 1.5.1.3: conferma}
+\subsubsection{UC 1.5.2: Password inserita non conforme alle regole}
 
-\subsection{UC1.6: Logout}
-\subsubsection{UC1.6.1: pressione tasto logout}
-\subsubsection{UC1.6.2: conferma della volonta di fare logout}
+\subsection{UC 1.6: Logout}
+\subsubsection{UC 1.6.1: pressione tasto logout}
+\subsubsection{UC 1.6.2: conferma della volonta di fare logout}
 
-\subsection{UC1.7: Amministrazione utenti}
-\subsubsection{UC1.7.1: visualizzazione elenco utenti}
-\subsubsection{UC1.7.2: modifica permessi utente}
-\subsubsection{UC1.7.2.1: apertura elenco utenti}
-\subsubsection{UC1.7.2.2: selezione modifica su un utente}
-\subsubsection{UC1.7.2.3: selezione nuovo ruolo}
-\subsubsection{UC1.7.2.4: conferma delle modifiche}
-\subsubsection{UC1.7.3: crea un nuovo utente}
-\subsubsection{UC1.7.3.1: apertura pannello inserimento}
-\subsubsection{UC1.7.3.2: Inserimento dei parametri}
-\subsubsection{UC1.7.3.3: conferma dei dati inseriti}
-<<extend>>
-\subsubsection{UC1.7.4: dati inseriti errati}
+\subsection{UC 1.7: Amministrazione utenti}
+\subsubsection{UC 1.7.1: visualizzazione elenco utenti}
+\subsubsection{UC 1.7.2: modifica permessi utente}
+\subsubsection{UC 1.7.2.1: apertura elenco utenti}
+\subsubsection{UC 1.7.2.2: selezione modifica su un utente}
+\subsubsection{UC 1.7.2.3: selezione nuovo ruolo}
+\subsubsection{UC 1.7.2.4: conferma delle modifiche}
+\subsubsection{UC 1.7.3: crea un nuovo utente}
+\subsubsection{UC 1.7.3.1: apertura pannello inserimento}
+\subsubsection{UC 1.7.3.2: Inserimento dei parametri}
+\subsubsection{UC 1.7.3.3: conferma dei dati inseriti}
+\subsubsection{UC 1.7.4: dati inseriti errati}
 ( nome esistente, caratteri speciali )
 
-\subsubsection{UC1.7.5: elimina un utente}
-\subsubsection{UC1.7.5.1: selezione di un utente}
-\subsubsection{UC1.7.5.2: pressione pulsante elimina}
-\subsubsection{UC1.7.5.3: conferma eliminazione}
-<<extend>> 
-\subsubsection{UC1.7.6: errore nell’eliminazione}
+\subsubsection{UC 1.7.5: elimina un utente}
+\subsubsection{UC 1.7.5.1: selezione di un utente}
+\subsubsection{UC 1.7.5.2: pressione pulsante elimina}
+\subsubsection{UC 1.7.5.3: conferma eliminazione}
+\subsubsection{UC 1.7.6: errore nell’eliminazione}
 ( risorsa occupata, utente loggato, viste in aggiornamento )
 
 
