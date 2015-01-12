@@ -15,4 +15,5 @@ Thumbs.db
 
 # rimuove il tracciamento dei file spazzatura temporanei che vengono generati da Astah
 *.asta.bak
+*.asta.lock
 
