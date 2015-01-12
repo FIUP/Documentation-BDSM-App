@@ -1,0 +1,36 @@
+REST
+API
+Google Cloud Platform
+App Engine
+Cloud SQL
+Cloud Database
+BigQuery
+HTML5
+CSS3
+JavaScript
+TwitterBootstrap
+Big Data
+C++
+Qt
+Database
+MySql
+AngularJS
+Responsive
+PowerPoint
+SVG
+Inkscape
+Impress.js
+Reveal.js
+Deck.js
+Google slides template
+Slides
+SDK
+IDE
+Intellij IDEA
+JSON
+Java
+Android
+proponente
+committente
+PDCA
+design pattern
