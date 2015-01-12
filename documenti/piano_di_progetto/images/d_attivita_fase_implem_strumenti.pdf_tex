@@ -1,0 +1,173 @@
+%% Creator: Inkscape inkscape 0.48.5, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'd_attivita_fase_implem_strumenti.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{842bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.70665083)%
+    \put(0,0){\includegraphics[width=\unitlength]{d_attivita_fase_implem_strumenti.pdf}}%
+    \put(0.5682304,0.64827791){\makebox(0,0)[lb]{\smash{D}}}%
+    \put(0.58194774,0.64827791){\makebox(0,0)[lb]{\smash{L}}}%
+    \put(0.58194774,0.66199525){\makebox(0,0)[lb]{\smash{24 nov 14}}}%
+    \put(0.59566508,0.64827791){\makebox(0,0)[lb]{\smash{M}}}%
+    \put(0.60938242,0.64827791){\makebox(0,0)[lb]{\smash{M}}}%
+    \put(0.62309976,0.64827791){\makebox(0,0)[lb]{\smash{G}}}%
+    \put(0.6368171,0.64827791){\makebox(0,0)[lb]{\smash{V}}}%
+    \put(0.65053444,0.64827791){\makebox(0,0)[lb]{\smash{S}}}%
+    \put(0.66425178,0.64827791){\makebox(0,0)[lb]{\smash{D}}}%
+    \put(0.67796912,0.64827791){\makebox(0,0)[lb]{\smash{L}}}%
+    \put(0.67796912,0.66199525){\makebox(0,0)[lb]{\smash{1 dic 14}}}%
+    \put(0.69168646,0.64827791){\makebox(0,0)[lb]{\smash{M}}}%
+    \put(0.7054038,0.64827791){\makebox(0,0)[lb]{\smash{M}}}%
+    \put(0.71912114,0.64827791){\makebox(0,0)[lb]{\smash{G}}}%
+    \put(0.73283848,0.64827791){\makebox(0,0)[lb]{\smash{V}}}%
+    \put(0.74655582,0.64827791){\makebox(0,0)[lb]{\smash{S}}}%
+    \put(0.76027316,0.64827791){\makebox(0,0)[lb]{\smash{D}}}%
+    \put(0.7739905,0.64827791){\makebox(0,0)[lb]{\smash{L}}}%
+    \put(0.7739905,0.66199525){\makebox(0,0)[lb]{\smash{8 dic 14}}}%
+    \put(0.78770784,0.64827791){\makebox(0,0)[lb]{\smash{M}}}%
+    \put(0.80142518,0.64827791){\makebox(0,0)[lb]{\smash{M}}}%
+    \put(0.81514252,0.64827791){\makebox(0,0)[lb]{\smash{G}}}%
+    \put(0.82885986,0.64827791){\makebox(0,0)[lb]{\smash{V}}}%
+    \put(0.8425772,0.64827791){\makebox(0,0)[lb]{\smash{S}}}%
+    \put(0.85629454,0.64827791){\makebox(0,0)[lb]{\smash{D}}}%
+    \put(0.87001188,0.64827791){\makebox(0,0)[lb]{\smash{L}}}%
+    \put(0.87001188,0.66199525){\makebox(0,0)[lb]{\smash{15 dic 14}}}%
+    \put(0.88372922,0.64827791){\makebox(0,0)[lb]{\smash{M}}}%
+    \put(0.89744656,0.64827791){\makebox(0,0)[lb]{\smash{M}}}%
+    \put(0.9111639,0.64827791){\makebox(0,0)[lb]{\smash{G}}}%
+    \put(0.92488124,0.64827791){\makebox(0,0)[lb]{\smash{V}}}%
+    \put(0.93859857,0.64827791){\makebox(0,0)[lb]{\smash{S}}}%
+    \put(0.95231591,0.64827791){\makebox(0,0)[lb]{\smash{D}}}%
+    \put(0.96603325,0.64827791){\makebox(0,0)[lb]{\smash{L}}}%
+    \put(0.96603325,0.66199525){\makebox(0,0)[lb]{\smash{22 dic 14}}}%
+    \put(0.97975059,0.64827791){\makebox(0,0)[lb]{\smash{M}}}%
+    \put(0.99346793,0.64827791){\makebox(0,0)[lb]{\smash{M}}}%
+    \put(1.00718527,0.64827791){\makebox(0,0)[lb]{\smash{G}}}%
+    \put(1.02090261,0.64827791){\makebox(0,0)[lb]{\smash{V}}}%
+    \put(1.03461995,0.64827791){\makebox(0,0)[lb]{\smash{S}}}%
+    \put(1.04833729,0.64827791){\makebox(0,0)[lb]{\smash{D}}}%
+    \put(1.06205463,0.64827791){\makebox(0,0)[lb]{\smash{L}}}%
+    \put(1.06205463,0.66199525){\makebox(0,0)[lb]{\smash{29 dic 14}}}%
+    \put(1.07577197,0.64827791){\makebox(0,0)[lb]{\smash{M}}}%
+    \put(1.08948931,0.64827791){\makebox(0,0)[lb]{\smash{M}}}%
+    \put(1.10320665,0.64827791){\makebox(0,0)[lb]{\smash{G}}}%
+    \put(1.11692399,0.64827791){\makebox(0,0)[lb]{\smash{V}}}%
+    \put(1.13064133,0.64827791){\makebox(0,0)[lb]{\smash{S}}}%
+    \put(1.14435867,0.64827791){\makebox(0,0)[lb]{\smash{D}}}%
+    \put(1.15807601,0.64827791){\makebox(0,0)[lb]{\smash{L}}}%
+    \put(1.15807601,0.66199525){\makebox(0,0)[lb]{\smash{5 gen 15}}}%
+    \put(1.17179335,0.64827791){\makebox(0,0)[lb]{\smash{M}}}%
+    \put(1.18551069,0.64827791){\makebox(0,0)[lb]{\smash{M}}}%
+    \put(0.04971496,0.63315914){\makebox(0,0)[lb]{\smash{1}}}%
+    \put(0.08446556,0.63407363){\makebox(0,0)[lb]{\smash{Ricerca degli strumenti}}}%
+    \put(0.2947981,0.63315914){\makebox(0,0)[lb]{\smash{3 giorni?}}}%
+    \put(0.3542399,0.63315914){\makebox(0,0)[lb]{\smash{26/11/14 8.00}}}%
+    \put(0.45940618,0.63315914){\makebox(0,0)[lb]{\smash{28/11/14 17.00}}}%
+    \put(0.04971496,0.61578385){\makebox(0,0)[lb]{\smash{2}}}%
+    \put(0.09269596,0.61669834){\makebox(0,0)[lb]{\smash{Strumenti per la documentazione}}}%
+    \put(0.30394299,0.61578385){\makebox(0,0)[lb]{\smash{2 giorni?}}}%
+    \put(0.3542399,0.61578385){\makebox(0,0)[lb]{\smash{26/11/14 8.00}}}%
+    \put(0.45940618,0.61578385){\makebox(0,0)[lb]{\smash{27/11/14 17.00}}}%
+    \put(0.04971496,0.59840855){\makebox(0,0)[lb]{\smash{3}}}%
+    \put(0.09269596,0.59932304){\makebox(0,0)[lb]{\smash{Strumenti di supporto}}}%
+    \put(0.30394299,0.59840855){\makebox(0,0)[lb]{\smash{2 giorni?}}}%
+    \put(0.3542399,0.59840855){\makebox(0,0)[lb]{\smash{26/11/14 8.00}}}%
+    \put(0.45940618,0.59840855){\makebox(0,0)[lb]{\smash{27/11/14 17.00}}}%
+    \put(0.04971496,0.58103325){\makebox(0,0)[lb]{\smash{4}}}%
+    \put(0.09269596,0.58194774){\makebox(0,0)[lb]{\smash{Script}}}%
+    \put(0.30394299,0.58103325){\makebox(0,0)[lb]{\smash{3 giorni?}}}%
+    \put(0.3542399,0.58103325){\makebox(0,0)[lb]{\smash{26/11/14 8.00}}}%
+    \put(0.45940618,0.58103325){\makebox(0,0)[lb]{\smash{28/11/14 17.00}}}%
+    \put(0.04971496,0.56365796){\makebox(0,0)[lb]{\smash{5}}}%
+    \put(0.08446556,0.56457245){\makebox(0,0)[lb]{\smash{Apprendimento degli strumenti}}}%
+    \put(0.29845606,0.56365796){\makebox(0,0)[lb]{\smash{3 giorni?}}}%
+    \put(0.3542399,0.56365796){\makebox(0,0)[lb]{\smash{28/11/14 8.00}}}%
+    \put(0.45940618,0.56365796){\makebox(0,0)[lb]{\smash{02/12/14 17.00}}}%
+    \put(0.04971496,0.54628266){\makebox(0,0)[lb]{\smash{6}}}%
+    \put(0.09269596,0.54719715){\makebox(0,0)[lb]{\smash{Strumenti per la documentazione}}}%
+    \put(0.30394299,0.54628266){\makebox(0,0)[lb]{\smash{2 giorni?}}}%
+    \put(0.3542399,0.54628266){\makebox(0,0)[lb]{\smash{28/11/14 8.00}}}%
+    \put(0.45940618,0.54628266){\makebox(0,0)[lb]{\smash{01/12/14 17.00}}}%
+    \put(0.04971496,0.52890736){\makebox(0,0)[lb]{\smash{7}}}%
+    \put(0.09269596,0.52982185){\makebox(0,0)[lb]{\smash{Strumenti di supporto}}}%
+    \put(0.30394299,0.52890736){\makebox(0,0)[lb]{\smash{3 giorni?}}}%
+    \put(0.3542399,0.52890736){\makebox(0,0)[lb]{\smash{28/11/14 8.00}}}%
+    \put(0.45940618,0.52890736){\makebox(0,0)[lb]{\smash{02/12/14 17.00}}}%
+    \put(0.04971496,0.51153207){\makebox(0,0)[lb]{\smash{8}}}%
+    \put(0.08446556,0.51244656){\makebox(0,0)[lb]{\smash{Implemetazione strumenti}}}%
+    \put(0.29845606,0.51153207){\makebox(0,0)[lb]{\smash{4 giorni?}}}%
+    \put(0.3542399,0.51153207){\makebox(0,0)[lb]{\smash{02/12/14 8.00}}}%
+    \put(0.45940618,0.51153207){\makebox(0,0)[lb]{\smash{05/12/14 17.00}}}%
+    \put(0.04971496,0.49415677){\makebox(0,0)[lb]{\smash{9}}}%
+    \put(0.09269596,0.49507126){\makebox(0,0)[lb]{\smash{Strumenti per la documentazione}}}%
+    \put(0.30851544,0.49415677){\makebox(0,0)[lb]{\smash{4 giorni}}}%
+    \put(0.3542399,0.49415677){\makebox(0,0)[lb]{\smash{02/12/14 8.00}}}%
+    \put(0.45940618,0.49415677){\makebox(0,0)[lb]{\smash{05/12/14 17.00}}}%
+    \put(0.04605701,0.47678147){\makebox(0,0)[lb]{\smash{10}}}%
+    \put(0.09269596,0.47769596){\makebox(0,0)[lb]{\smash{Strumenti di supporto}}}%
+    \put(0.30394299,0.47678147){\makebox(0,0)[lb]{\smash{4 giorni?}}}%
+    \put(0.3542399,0.47678147){\makebox(0,0)[lb]{\smash{02/12/14 8.00}}}%
+    \put(0.45940618,0.47678147){\makebox(0,0)[lb]{\smash{05/12/14 17.00}}}%
+    \put(0.04605701,0.45940618){\makebox(0,0)[lb]{\smash{11}}}%
+    \put(0.09269596,0.46032067){\makebox(0,0)[lb]{\smash{Script}}}%
+    \put(0.30394299,0.45940618){\makebox(0,0)[lb]{\smash{4 giorni?}}}%
+    \put(0.3542399,0.45940618){\makebox(0,0)[lb]{\smash{02/12/14 8.00}}}%
+    \put(0.45940618,0.45940618){\makebox(0,0)[lb]{\smash{05/12/14 17.00}}}%
+    \put(0.04605701,0.44203088){\makebox(0,0)[lb]{\smash{12}}}%
+    \put(0.08446556,0.44294537){\makebox(0,0)[lb]{\smash{Terminazione fase}}}%
+    \put(0.30851544,0.44203088){\makebox(0,0)[lb]{\smash{0 giorni}}}%
+    \put(0.3542399,0.44203088){\makebox(0,0)[lb]{\smash{08/12/14 8.00}}}%
+    \put(0.45940618,0.44203088){\makebox(0,0)[lb]{\smash{08/12/14 8.00}}}%
+    \put(0.16402613,0.65510689){\makebox(0,0)[lb]{\smash{Nome}}}%
+    \put(0.30028504,0.65510689){\makebox(0,0)[lb]{\smash{Durata}}}%
+    \put(0.38807601,0.65510689){\makebox(0,0)[lb]{\smash{Avvio}}}%
+    \put(0.48866983,0.65510689){\makebox(0,0)[lb]{\smash{Termine}}}%
+    \put(0.78770784,0.44385986){\makebox(0,0)[lb]{\smash{08/12}}}%
+    \put(0.37527316,0.03691211){\makebox(0,0)[lb]{\smash{attivita_fase_implem_strumenti - pagina1}}}%
+  \end{picture}%
+\endgroup%
