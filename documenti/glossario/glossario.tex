@@ -1,0 +1,54 @@
+% =================================================================================================
+% File:			glossario.tex
+% Description:	Defiinisce la struttura del documento di Nome del documento 
+% Created:		2014/12/29
+% Author:		Ceccon Lorenzo
+% Email:		ceccon.lorenzo@mashup-unipd.it
+% =================================================================================================
+% Modification History:
+% Version		Modifier Date		Change											Author
+% 0.0.1 		2014/12/29 			Ridefiniti comandi								Ceccon Lorenzo
+% =================================================================================================
+%
+% =================================================================================================
+%
+
+% TEMPLATE DA USARE AD OGNI NUOVO DOCUMENTO
+
+\input{../template/source/packages}
+\input{../template/source/commands}
+\input{../template/source/styles}
+
+\begin{document}
+	% COMANDI DA RIDEFINIRE
+	\renewcommand{\documentName}{\docNameGlo}
+	\renewcommand{\documentVersion}{\docVersionGlo}
+	\renewcommand{\documentDate}{2014/12/29}
+	\renewcommand{\documentEditors}{Ceccato Lorenzo \\ Faccin Nicola}
+	\renewcommand{\documentVerifiers}{Santacatterina Luca}
+	\renewcommand{\documentApprovers}{Tesser Paolo}
+	\renewcommand{\documentUsage}{Esterno}
+	\renewcommand{\documentSummary}{Documento contenente le definizioni dei termini possibilmente ambigui.}
+
+	% FRONTESPIZIO
+	\pagenumbering{gobble}
+	\pagestyle{styleFirstPage}
+	\input{../template/source/firstpage}
+	\pagebreak
+
+
+	% PAGINA REVISIONI & PAGINA INDICI
+	\setcounter{page}{1}
+	\pagestyle{styleIndexPage}
+	\input{doc_to_modify/history}
+	% \pagebreak
+	% \tableofcontents
+	\pagebreak
+
+
+	% PAGINE CONTENUTI
+	\setcounter{page}{1}
+	\pagestyle{styleDocPages}
+	\input{doc_to_modify/content_files}
+
+\end{document}
