@@ -7,7 +7,11 @@
 % =================================================================================================
 % Modification History:
 % Version		Modifier Date		Change											Author
-% 0.0.1 		2014/12/11 			Iniziata stesura C1								Giacomo C.
+% 0.0.1 		2014/12/11 			Iniziata stesura C1							    Cusinato Giacomo
+% =================================================================================================
+% 0.0.2 		2014/12/13 			Completata prima stesura C1						Cusinato Giacomo
+% =================================================================================================
+% 0.0.3 		2015/01/08 			Revisione capitolo 								Cusinato Giacomo
 % =================================================================================================
 %
 
@@ -25,30 +29,15 @@ Le piattaforme social moderne generano ormai enormi quantitativi di dati e la po
 L'applicazione quindi andra a fornire un gran set di informazioni consumabili da sviluppatori tramite API esposte da un'architettura REST ed una relativa interfaccia web. 
 
 \subsubsection{Dominio tecnologico}
-Per la realizzazione dell'infrastruttura richiesta, il proponente consiglia l'uso della Google Cloud Platform, un'insieme di tool e prodotti che permettono lo sviluppo di applicazivi software interamente nel cloud. I servizi integrati nella Google Cloud Platform sono resi disponibili attraverso un'intefaccia web, strumenti per l'uso tramite riga di comando e REST API. Tra essi troviamo:
-\begin{itemize}
-\item \textbf{Google App Engine}: una Platform as a Service (PaaS) che permette di sviluppare ed eseguire applicazioni nel cloud offrendo alta scalabilità e bassi costi di manutenzione. Linguaggi disponibili: Python, Java, PHP, Go.
-\item \textbf{Google Compute Engine}: una Infrastructure as a Service che permette di eseguire macchine virtuali su richiesta.
-\item \textbf{Google Cloud Storage}: spazio per lo storage di file.
-\item \textbf{Google Cloud Datastore}: database NoSQL.
-\item \textbf{Google Cloud SQL}: database MySQL.
-\item \textbf{Google BigQuery}: tool per l'analisi di grandi quantitativi di dati tramite l'uso di query SQL-like.
-\item \textbf{Google Cloud Endpoint}: strumento per la creazione di servizi web consumabili di dispositivi iOS, Android e client JavaScript.
-\item \textbf{Google Cloud DNS}: servizio DNS ospitato dell'infrastruttura Google.
-\end{itemize}
-La raccolta dei dati viene effettuata grazie alle API esposte dai principali social network, quali:
-\begin{itemize}
-\item \textbf{Facebook}: \url{https://developers.facebook.com/}
-\item \textbf{Twitter}: \url{https://dev.twitter.com/}
-\item \textbf{Instagram}: \url{http://instagram.com/developer/}
-\end{itemize}
+Per la realizzazione dell'infrastruttura richiesta, il proponente consiglia l'uso della Google Cloud Platform: un'insieme di tool e prodotti che facilitano lo sviluppo di applicativi software nel cloud grazie all'alta scalabilità ed affidabilità proprie dell'infrastruttura disposta da Google. App Engine (incluso appunto nella Google Cloud Platform), permette l'hosting, lo sviluppo, il testing e la gestione di applicazioni che si appoggiano al runtime offerto dalla piattaforma (che supporta diversi linguaggi, quali Java e Python), senza costi di manutenzione e configurazione associati allo sviluppatore. Per gli applicativi che si appoggiano ad un database, inoltre, Google Cloud Platform mette a disposizione Cloud SQL e Cloud Datatore per basi di dati rispettivamente relazionali e non relazionali. In ambito big data analytics, la piattaforma di Google dispone di BigQuery che consente l'analisi di grandi collezioni di dati ad elevate performance tramite l'utilizzo di servizi REST consumabili da tutti i linguaggi offerti tramite apposite librerie.
+La raccolta dei dati viene effettuata grazie alle API esposte dai principali social network e gestite interamente tramite la Google Cloud Platform, tramite cui è possibile determinare le modalità di persistenza ed aggiornamento. 
 Per quanto rigurda l'interfaccia web, le tecnologie da utilizzare sono a carico del gruppo, sebbene siano consigliati i classici linguaggi di programmazione web (HTML5, CSS3, JavaScript) e l'utilizzo di un framework resposive come Twitter Bootstrap.
+
 \subsection{Valutazione}
 Di seguito sono elencati gli aspetti positivi che hanno portato il gruppo alla scelta del primo capitolato.
 \begin{itemize}
 \item \textbf{Interesse verso il dominio applicativo}: la maggior parte del gruppo ha ritenuto d'interesse lo studio della Big Data Analisys e gli ambiti ad essa collegati.
 \item \textbf{Interesse e conoscenze del dominio tecnologico}: il gruppo ha dimostrato forte interesse per quanto riguarda tutte le tecnologie disponibili per la creazione dell'infrastruttura software e forte propensione all'apprendimento di quelle sconosciute. Inoltre tutti i componenti del gruppo hanno già avuto esperienze con determinate tecnologie web front-end e linguaggi di programmazione proposti dalla Google Cloud Platform.
-\item \textbf{Incontro col proponente (?)}
 \end{itemize}
 Di seguito, invece, gli aspetti negativi identificati:
 \begin{itemize}

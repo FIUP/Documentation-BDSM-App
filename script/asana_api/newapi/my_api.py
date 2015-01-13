@@ -15,5 +15,11 @@ class MyAPI:
             if space['name'] == project_name:
                 return space['id']
 
+    def get_id_tag(self, workspace_id, tag_name):
+        my_tags = self.__asana_api.get_tags(workspace_id)
+        for tag in my_tags:
+            if tag['name'] == tag_name:
+                return tag['id']
+
     def get_asana_api(self):
         return self.__asana_api

@@ -10,7 +10,11 @@ compile:
 	rm -rf *.synctex.gz
 	rm -rf *.lof
 	rm -rf *.lot
-	open analisi_dei_requisiti.pdf
+	@echo "*** Apertura file PDF ***"
+	@case $(shell uname) in \
+		Darwin*) open analisi_dei_requisiti.pdf;; \
+		Linux*) analisi_dei_requisiti.pdf;; \
+	esac
 
 aspell:
 	# $(aspell) Studio_di_Fattibilita.tex

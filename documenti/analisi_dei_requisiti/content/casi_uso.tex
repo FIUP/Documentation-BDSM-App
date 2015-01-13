@@ -1,0 +1,881 @@
+% =================================================================================================
+% File:			capitolo_3.tex
+% Description:	Definisce il capitolo che descrive generalmente il prodotto per il commitente
+% Created:		2014/12/10
+% Author:		Roetta Marco
+% Email:		roetta.marco@mashup-unipd.it
+% =================================================================================================
+% Modification History:
+% Version		Modifier Date		Change											Author
+% 0.0.1 		2014/12/10 			aggiunta sezione e iniziata stesura				Roetta Marco
+% =================================================================================================
+% Version		Modifier Date		Change											Author
+% 0.0.2 		2015/01/12 			Aggiunto elenco Casi d'uso incompleto			Roetta Marco
+% =================================================================================================
+% Version		Modifier Date		Change											Author
+% 0.0.3 		2015/01/12 			Aggiunta descrizione ai casi principali			Roetta Marco
+% =================================================================================================
+% Version		Modifier Date		Change											Author
+% 0.0.4 		2015/01/13 			Aggiunte altre descrizioni				 		Roetta Marco
+% =================================================================================================
+% Version		Modifier Date		Change											Author
+% 0.0.5 		2015/01/13 			Completato elenco UC					 		Roetta Marco
+% =================================================================================================
+
+
+% CONTENUTO DEL CAPITOLO
+
+\section{Casi d'uso}
+
+\subsection{UC 1: Caso d’uso pubblico}
+
+\begin{itemize}
+
+\item \textbf{Attori Coinvolti:}
+Utente sconosciuto: utente non autenticato che accede al servizio.
+Utente autenticato: utente autenticato che ha acceduto al servizio.
+Utente amministratore: utente autenticato che ha acceduto al servizio e che dispone dei permessi per visualizzare tutte le aree.
+
+\item \textbf{Descrizione:}
+Questa è la schermata che viene mostrata ad un utente che non si è ancora autenticato al sistema.
+Un utente sconosciuto può autenticarsi. 
+Un utente autenticato può vedere le statistiche e modificare la propria password, può visualizzare, creare e modificare le proprie viste e le proprie ricette. 
+Un utente amministratore può fare tutte le operazioni di un utente autenticato, più ha la possibilità di aggiungere un utente, eliminare un utente e tutte le sue viste e modificare i privilegi di un altro utente.
+
+\item \textbf{Possibili Errori:}
+Viene visualizzato un messaggio di errore nel caso le informazioni di accesso inserite siano errate.
+
+\item \textbf{Post-condizioni:}
+Il servizio ha erogato correttamente le funzionalità richieste dall'utente.
+
+\end{itemize}
+
+\subsection{UC 1.1: Autenticazione utente}
+
+\begin{itemize}
+
+\item \textbf{Attori Coinvolti:}
+Utente: utente non autenticato che accede al servizio.
+
+\item \textbf{Pre Condizione:}
+L'utente che accede alla pagina di accesso è sconosciuto al sistema.
+
+\item \textbf{Descrizione:}
+L'utente può autenticarsi per poter accedere ai servizi offerti dalla piattaforma.
+
+\item \textbf{Post Condizione:}
+L'utente è riconosciuto dal sistema.
+
+\item \textbf{Possibili Errori:}
+Viene mostrato un messaggio di errore nel caso in cui i dati forniti siano errati.
+
+\end{itemize}
+
+\subsubsection{UC 1.1.1: Inserimento dati di accesso}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} In questa sezione viene richiesto all'utente di inserire i suoi dati di accesso al sistema per autenticarsi.
+\item \textbf{Precondizione:} L'utente visualizza correttamente la pagina.
+\item \textbf{Postcondizione:} L'utente viene reindirizzato alla schermata principale.
+\end{itemize}
+
+\subsubsection{UC 1.1.1.1: inserimento utente}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} Viene richiesto all'utente di inserire il suo username univoco per essere riconosciuto dal sistema. 
+\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire l’username.
+\item \textbf{Postcondizione:} L'utente ha inserito l'username.
+\end{itemize}
+
+\subsubsection{UC 1.1.1.2: inserimento password}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} Viene richiesto all'utente di inserire la propria password personale.
+\item \textbf{Precondizione:} Il sistema fornisce una schermata in cui è possibile inserire la password.
+\item \textbf{Postcondizione:} L'utente ha inserito la password.
+\end{itemize}
+
+\subsubsection{UC 1.1.1.3: conferma login}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} Viene richiesto all'utente di confermare i dati inserito con la pressione di un pulsante di conferma.
+\item \textbf{Precondizione:} Il sistema fornisce un pulsante per confermare la volontà di fare l'accesso.
+\item \textbf{Postcondizione:} L'utente ha eseguito l'accesso.
+\item \textbf{Estensioni:} Autenticazione fallita. [UC 1.1.2] 
+\end{itemize}
+
+\subsubsection{UC 1.1.2: Autenticazione fallita}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} Viene mostrato all'utente un messaggio di errore che riporta l'incorrettezza dei dati inseriti. Viene visualizzato un pulsante per tornare alals chermata di accesso.
+\item \textbf{Precondizione:} Il sistema ha ricevuta una richiesta di accesso con dati errati.
+\item \textbf{Postcondizione:} L'utente ha preso atto del messaggio di errore.
+\end{itemize}
+
+\subsection{UC 1.2: Visione informazioni utente e statistiche}
+
+\textbf{Attori Coinvolti:}
+Utente autenticato: utente autenticato che ha acceduto al servizio
+Utente amministratore autenticato: utente autenticato in grado di accedere a tutte le aree del servizio
+
+\textbf{Pre Condizione:}
+L'utente deve aver fatto l'accesso nell'apposita pagina.
+
+\textbf{Descrizione:}
+Gli utenti autenticati possono vedere una serie di informazioni relative alla loro attività, come la data dell’ultimo accesso effettuato e il numero di ricette e viste attive.
+
+\textbf{Post Condizione:}
+Le informazioni richieste dall'utente sono state fornite
+
+\textbf{Possibili Errori:}
+In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
+
+\subsubsection{UC 1.2.1: Apertura pannello informazioni}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} Dalla home page contenente i grafici dell'utente è possibile, tramite un apposito menu, accedere al pannello informazioni e statistiche attinenti all'utente attualmente connesso.
+\item \textbf{Precondizione:} L'utente ha selezionato il pulsante di apertura del menù utente.
+\item \textbf{Postcondizione:} L'utente ha visualizzato il contenuto del menù.
+\end{itemize}
+
+\subsubsection{UC 1.2.1.1: Visualizza informazioni utente}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} Viene mostrata all'utente una pagina con il riepilogo dei sui dati, quali:
+\begin{enumerate}
+\item Il nome utente;
+\item Il nome e il cognome del proprietario dell'account;
+\item La data dell'ultimo accesso effettuato;
+\end{enumerate}
+\item \textbf{Precondizione:} L'utente ha selezionato il pulsante di visualizzazione informazioni.
+\item \textbf{Postcondizione:} L'utente ha ottenuto le informazioni richieste.
+\end{itemize}
+
+\subsubsection{UC 1.2.1.2: Visualizza Statistiche utente}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} Viene mostrata all'utente una pagina con il riepilogo delle sue statistiche, quali:
+\begin{enumerate}
+\item Numero di viste attive;
+\item Numero di ricette attive;
+\item Numero di accessi negli ultimi 30 giorni;
+\end{enumerate}
+\item \textbf{Precondizione:} L'utente ha selezionato il pulsante di visualizzazione statistiche.
+\item \textbf{Postcondizione:} L'utente ha ottenuto le informazioni richieste.
+\end{itemize}
+
+
+
+\subsection{UC 1.3: Visualizzazione, creazione e modifica viste}
+
+\begin{itemize}
+\item \textbf{Attori Coinvolti:}
+Utente autenticato: utente autenticato che ha acceduto al servizio
+Utente amministratore autenticato: utente autenticato in grado di accedere a tutte le aree del servizio
+
+\item \textbf{Pre Condizione:}
+L’utente deve aver fatto l’accesso nell’apposita pagina.
+
+\item \textbf{Descrizione:}
+Gli utenti autenticati possono vedere in questa pagina le viste e i dati ad esse associati. 
+Si rende disponibile per ciascuna vista un pannello per modificarne i parametri. 
+Si può creare una nuova vista. 
+Si può eliminare una vista esistente.
+
+\item \textbf{Post Condizione:}
+Le informazioni richieste dall’utente sono state fornite
+Le impostazioni modificate sono state salvate nel sistema.
+Le informazioni aggiunte sono state salvate nel sistema.
+
+\item \textbf{Possibili Errori:}    
+In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
+\end{itemize}
+
+\subsubsection{UC 1.3.1: Visualizza viste}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} Questa è la home screen dell'utente attualmente connesso. Qui è possibile visualizzare tutti o parte dei suoi grafici e accedere ai menu di configurazione.
+\item \textbf{Precondizione:} L'utente ha effettuato il login oppure ha selezionato il pulsante per accedere a questa pagina.
+\item \textbf{Postcondizione:} L'utente viene reindirizzato alla home screen e visualizza le informazioni richieste.
+\end{itemize}
+
+\subsubsection{UC 1.3.1.1: Apertura elenco viste}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} Premendo sull'apposito pulsante è possibile far comparire a video l'elenco di tutte le viste utente.
+\item \textbf{Precondizione:} L'utente si trova nella home screen.
+\item \textbf{Postcondizione:} L'utente ha ottenuto l'elenco di tutte le sue viste
+\end{itemize}
+
+\subsubsection{UC 1.3.2: Aggiungi una vista}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} Dalla home screen l'utente può aggiungere una nuova vista premendo sull'apposito pulsante, compilando i dati richiesti e confermando l'operazione.
+\item \textbf{Precondizione:} L'utente si è autenticato e si trova nella home screen.
+\item \textbf{Postcondizione:} L'utente ha creato una nuovo vista.
+\end{itemize}
+
+\subsubsection{UC 1.3.2.1: Apertura pannello inserimento nuova lista}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} L'utente ha a disposizione un pulsante per aprire il pannello in cui inserire e selezionare i dati per la creazione di una nuova vista.
+\item \textbf{Precondizione:} L'utente si trova nella home screen.
+\item \textbf{Postcondizione:} L'utente ha aperto il pannello di creazione di una nuova vista.
+\end{itemize}
+
+\subsubsection{UC 1.3.2.2: Inserimento delle informazioni}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} L'utente può inserire il nome e i parametri obbligatori e facoltativi relativi ad una nuova vista.
+\item \textbf{Precondizione:} L'utente ha aperto il pannello di inserimento nuova vista.
+\item \textbf{Postcondizione:} L'utente ha inserito le informazioni richieste.
+\end{itemize}
+
+\subsubsection{UC 1.3.2.3: Conferma delle informazioni inserite}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} L'utente è tenuto a confermare i parametri inseriti nel pannello di creazione di una nuova vista prima di poter utilizzare il grafico associato.
+\item \textbf{Precondizione:} L'utente ha inserito almeno tutti i parametri obbligatori richiesti.
+\item \textbf{Postcondizione:} L'utente ha confermato i parametri inseriti e la vista è stata salvata nel sistema.
+\item \textbf{Possibili Errori:} L'utente ha inserito delle informazioni errate o non ha rispettato i vincoli del sistema. 
+\end{itemize}
+
+\subsubsection{UC 1.3.3: Creazione nuova vista fallito}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} In caso i dati inseriti non rispettino i vincoli del sistema oppure se si verifica un errore lato server viene visualizzata questa pagina di errore con i dettagli dei vincoli non rispettati o una breve descrizione dell'errore rilevato.
+\item \textbf{Precondizione:} L'utente ha inserito dei dati che non rispettano i vincoli dl sistema.
+Il server ha sollevato un'eccezione durante il salvataggio dei dati.
+\item \textbf{Postcondizione:} Nessuna modifica richiesta è stata salvata nel sistema.
+\end{itemize}
+
+\subsubsection{UC 1.3.4: Modifica una vista}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} L'utente può modificare i parametri associati ad una specifica vista.
+\item \textbf{Precondizione:} La vista è stata creata ed è disponibile nell'elenco viste dell'utente.
+\item \textbf{Postcondizione:} I parametri relativi alla vista sono stati modificati.
+\end{itemize}
+
+\subsubsection{UC 1.3.4.1: selezione di una vista}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.3.4.2: apertura pannello modifica}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.3.4.3: inserimento dei dati}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.3.4.4: conferma dei dati inseriti}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.3.5: Errore nella modifica dei dati}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.3.6: Eliminazione di una vista}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.3.6.1: selezione di una vista}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.3.6.2: conferma eliminazione di una vista}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+
+
+\subsection{UC 1.4: Visualizzazione, creazione e modifica ricette e schedulazioni associate}
+
+\begin{itemize}
+\item \textbf{Attori Coinvolti:}
+Utente
+
+\item \textbf{Precondizione:}
+L’utente deve aver fatto l’accesso nell’apposita pagina.
+
+\item \textbf{Descrizione:}
+Gli utenti possono vedere in questa pagina le ricette e i dati ad esse associati. 
+Si rende disponibile per ciascuna vista un pannello per modificarne i parametri. 
+Si può creare una nuova ricetta. 
+Si può eliminare una ricetta esistente.
+Si può modificare la cadenza con cui i dati di una ricetta vengono aggiornati automaticamente.
+
+\item \textbf{Post Condizione:}
+Le informazioni richieste dall'utente sono state fornite.
+Le impostazioni modificate sono state salvate nel sistema.
+Le informazioni aggiunte sono state salvate nel sistema.
+
+\item \textbf{Possibili Errori:}
+In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
+\end{itemize}
+
+\subsubsection{UC 1.4.1: Visualizza ricette}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.4.1.1: Apertura elenco ricette}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.4.2: Aggiungi una vista}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.4.2.1: Apertura pannello inserimento nuova ricetta}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.4.2.2: Inserimento delle informazioni }
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.4.2.3: Conferma delle informazioni inserite}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.4.3: Inserimetno fallito - Eccezione}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.4.4: Modifica una ricetta}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.4.4.1: selezione di una ricetta}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.4.4.2: apertura pannello modifica ricetta}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.4.4.3: inserimento dei dati}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.4.4.4: conferma dei dati inseriti}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.4.5: Errore nella modifica dei dati}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.4.6: Modifica di una schedulazione associata}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.4.6.1: selezione di una ricetta}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.4.6.2: apertura pannello modifica schedulazione}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.4.6.3: inserimento dei dati}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.4.6.4: conferma dei dati inseriti}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.4.7: Errore nella modifica dei dati}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.4.8: Eliminazione di una ricetta}
+
+\textbf{Attori Coinvolti:}
+Utente
+
+\textbf{Precondizione:}
+L’utente deve aver visualizzato la schermata di gestione delle ricette.
+
+Descrizione:
+L’utente può eliminare una ricetta e tutti i dati ad essa associati.
+Si possono eliminare solo le ricette non più utilizzate in una o più viste proprie o di un altro utente.    
+
+\textbf{Post Condizione:}
+Le informazioni richieste dall'utente sono state fornite.
+La ricetta(e) desiderata(e) e i dati ad essa(e) associati è(sono) stati cancellati dal sistema.
+
+\textbf{Possibili Errori:}
+In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
+In caso di ricetta in uso o in fase di aggiornamento a causa di una schedulazione viene visualizzato un messaggio di errore e nessun dato viene alterato.
+
+\subsubsection{UC 1.4.8.1: selezione di una ricetta}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.4.8.2: conferma eliminazione di una ricetta}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.4.9: Modifica Layout viste }
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.4.9.1: apertura pannello modifica layout}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.4.9.2: selezione della visualizzazione}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.4.9.3: Conferma delle modifiche}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} Dopo aver selezionato il nuovo layout per i grafici sulla home screen l'utente deve confermare le modifiche apportate affinchè diventino attive. La conferma delle modifiche avviene solamente tramite la pressione del pulsante di conferma.
+\item \textbf{Precondizione:} L'utente ha effettuato delle modifiche alle impostazioni di visualizzazione.
+\item \textbf{Postcondizione:} Le modifiche sono state salvate e sono ora attive.
+\end{itemize}
+
+\subsubsection{UC 1.4.9.4: Annullamento delle modifiche}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} Per annullare le modifiche apportate alle impostazioni di visualizzazione si può premere il pulsante annulla oppure abbandonare semplicemente la pagina.
+\item \textbf{Precondizione:} L'utente ha effettuato delle modifiche alle impostazioni di visualizzazione.
+\item \textbf{Postcondizione:} Le modifiche sono state annullate. Le impostazioni di visualizzazione precedenti sono ancora attive. 
+\end{itemize}
+
+
+
+\subsection{UC 1.5: Modifica Password di accesso}
+
+\textbf{Attori Coinvolti:}
+Utente
+
+\textbf{Pre Condizione:}
+L'utente dispone di una password di accesso valida e risulta autenticato al servizio.
+
+\textbf{Descrizione:}
+L'utente può cambiare la password attualmente in uso inserendo la vecchia password, la nuova password, la conferma della nuova password e infine confermando la modifica.
+
+\textbf{Post Condizione:}
+La nuova password per l'utente è attiva, la vecchia password non è più valida.
+
+\textbf{Possibili Errori:}
+Messaggio di errore in caso di informazioni inserite errate oppure la nuova password non soddisfa i criteri di sistema indicati.
+
+\subsubsection{UC 1.5.1: Inserimento di una nuova password}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.5.1.1: Inserimento password}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.5.1.2: Conferma inserimento password }
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.5.1.3: Conferma operazione}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.5.2: Password inserita non conforme alle regole}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsection{UC 1.6: Logout}
+
+\textbf{Attori Coinvolti:}
+Utente, Utente amministratore
+
+\textbf{Pre Condizione:}
+L'utente risulta autenticato al servizio.
+
+\textbf{Descrizione:}
+L'utente può terminare la sessione di lavoro e liberare la postazione per un altro utente.
+Questa operazione può essere eseguita premendo il pulsante Logout dal menù dell'applicazione.
+
+\textbf{Post Condizione:}
+La sessione di lavoro è terminata. Viene mostrata la schermata di Login.
+
+\textbf{Possibili Errori:}
+La sessione è scaduta. Non è quindi possibile eseguire questa operazione.
+
+\subsubsection{UC 1.6.1: Pressione tasto logout}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.6.2: Conferma della volontà di fare logout}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+
+
+\subsection{UC 1.7: Amministrazione degli utenti}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.7.1: Visualizzazione elenco utenti}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.7.2: Modifica permessi utente}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.7.2.1: Apertura elenco utenti}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.7.2.2: Selezione modifica su un utente}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.7.2.3: Selezione nuovo ruolo}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.7.2.4: Conferma delle modifiche}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.7.3: Creazione di un nuovo utente}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.7.3.1: Apertura pannello nuovo utente}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.7.3.2: Inserimento dei parametri}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.7.3.3: Conferma dei dati inseriti}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.7.4: Dati inseriti errati}
+( nome esistente, caratteri speciali )
+\subsubsection{UC 1.7.5: Eliminazione di un utente}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.7.5.1: Selezione di un utente}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.7.5.2: Pressione pulsante elimina}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.7.5.3: Conferma eliminazione}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC 1.7.6: Errore nell’eliminazione dell'utente}
+( risorsa occupata, utente loggato, viste in aggiornamento )
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} 
+\item \textbf{Postcondizione:} 
+\end{itemize}
+
+
+
+
+

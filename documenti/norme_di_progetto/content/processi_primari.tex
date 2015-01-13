@@ -13,6 +13,8 @@
 % =================================================================================================
 % 0.0.3			2014/12/12			completamento sottosezione stesura e inizio sviluppo	Tesser Paolo
 % =================================================================================================
+% 0.0.4			2015/01/08			stesura classificazione requisiti						Tesser Paolo
+% =================================================================================================
 %
 
 
@@ -68,7 +70,38 @@ Le risorse che potranno essere utilizzate per questo scopo provengono dal capito
 
 		\subsubsection{Norme}
 			\paragraph{Classificazione requisiti}
-TO DO (da completare una volta deciso come classificare i requisiti)
+I requisiti prodotti dovranno essere classificati a seconda del tipo e dell'importanza, seguendo la seguente notazione:
+				\begin{center}
+					R[Importanza][Tipo][Codice]
+				\end{center}
+			\noindent
+				\begin{itemize}
+					\item \textbf{Importanza}: i valori che può assumere sono:
+						\begin{itemize}
+							\item 0: requisito obbligatorio;
+							\item 1: requisito desiderabile;
+							\item 2: requisito opzionale.
+						\end{itemize}
+					\item \textbf{Tipo}: i valori che può assumere sono:
+						\begin{itemize}
+							\item F: requisito funzionale;
+							\item P: requisito prestazionale;
+							\item Q: requisito di qualità;
+							\item V: requisito di vincolo.
+						\end{itemize}
+					\item \textbf{Codice}: è il codice gerarchico e univoco del vincolo espresso nella forma X.X.X dove X è un valore numerico.
+				\end{itemize}
+			\noindent
+			Ogni requisito inoltre dovrà contenere le seguente informazioni:
+				\begin{itemize}
+					\item \textbf{Descrizione}: descrizione del requisito il meno possibile ambigua;
+					\item \textbf{Fonte}: la scelta può ricadere tra:
+						\begin{itemize}
+							\item \textbf{capitolato}: è il requisito che viene trovato dalle specifiche del capitolato di appalto;
+							\item \textbf{interno}: è il requisito che viene trovato dagli \emph{Analisti} durante un'analisi più approfondita;
+							\item \textbf{caso d'uso}: è il requisito che viene trovato a partire da uno o più casi d'uso. In tal caso andrà specificato il codice del caso d'uso a cui si riferisce.
+						\end{itemize}
+				\end{itemize}
 			
 			\paragraph{Classificazione casi d'uso}
 I casi d'uso devono essere divisi in ordine gerarchico secondo il seguente schema: \\
@@ -91,8 +124,18 @@ I casi d'uso devono essere divisi in ordine gerarchico secondo il seguente schem
 					\item \textbf{estensioni}: spiegazione di tutte le estensioni se presenti;
 					\item \textbf{generalizzazioni}: spiegazione di tutte le generalizzazioni, se presenti;;
 					\item \textbf{post-condizioni}: condizione finale sempre vera alla fine dell'esecuzione del caso d'uso.
-				\end{itemize}	
-
+				\end{itemize}
+				
+				
+		\subsubsection{Attività} % (fold)
+		\label{ssub:attivita}
+			\paragraph{Tracciamento} % (fold)
+			\label{par:tracciamento}
+			TO DO (nel caso il sistema di ticketing non fosse pronto)
+			% paragraph tracciamento (end)
+			
+		% subsubsection attività (end)
+		
 		\subsubsection{Strumenti}
 			\paragraph{requirementsTool}
-TO DO (da completare una volta generato l'applicativo)
+			TO DO (da completare una volta generato l'applicativo)
