@@ -176,26 +176,28 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 
 \subsection{UC 1.3: Visualizzazione, creazione e modifica viste}
 
-\textbf{Attori Coinvolti:}
+\begin{itemize}
+\item \textbf{Attori Coinvolti:}
 Utente autenticato: utente autenticato che ha acceduto al servizio
 Utente amministratore autenticato: utente autenticato in grado di accedere a tutte le aree del servizio
 
-\textbf{Pre Condizione:}
+\item \textbf{Pre Condizione:}
 L’utente deve aver fatto l’accesso nell’apposita pagina.
 
-\textbf{Descrizione:}
+\item \textbf{Descrizione:}
 Gli utenti autenticati possono vedere in questa pagina le viste e i dati ad esse associati. 
 Si rende disponibile per ciascuna vista un pannello per modificarne i parametri. 
 Si può creare una nuova vista. 
 Si può eliminare una vista esistente.
 
-\textbf{Post Condizione:}
+\item \textbf{Post Condizione:}
 Le informazioni richieste dall’utente sono state fornite
 Le impostazioni modificate sono state salvate nel sistema.
 Le informazioni aggiunte sono state salvate nel sistema.
 
-\textbf{Possibili Errori:}    
+\item \textbf{Possibili Errori:}    
 In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
+\end{itemize}
 
 \subsubsection{UC 1.3.1: Visualizza viste}
 
@@ -210,45 +212,46 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Descrizione:} Premendo sull'apposito pulsante è possibile far comparire a video l'elenco di tutte le viste utente.
+\item \textbf{Precondizione:} L'utente si trova nella home screen.
+\item \textbf{Postcondizione:} L'utente ha ottenuto l'elenco di tutte le sue viste
 \end{itemize}
 
 \subsubsection{UC 1.3.2: Aggiungi una vista}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Descrizione:} Dalla home screen l'utente può aggiungere una nuova vista premendo sull'apposito pulsante, compilando i dati richiesti e confermando l'operazione.
+\item \textbf{Precondizione:} L'utente si è autenticato e si trova nella home screen.
+\item \textbf{Postcondizione:} L'utente ha creato una nuovo vista.
 \end{itemize}
 
 \subsubsection{UC 1.3.2.1: Apertura pannello inserimento nuova lista}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Descrizione:} L'utente ha a disposizione un pulsante per aprire il pannello in cui inserire e selezionare i dati per la creazione di una nuova vista.
+\item \textbf{Precondizione:} L'utente si trova nella home screen.
+\item \textbf{Postcondizione:} L'utente ha aperto il pannello di creazione di una nuova vista.
 \end{itemize}
 
 \subsubsection{UC 1.3.2.2: Inserimento delle informazioni}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Descrizione:} L'utente può inserire il nome e i parametri obbligatori e facoltativi relativi ad una nuova vista.
+\item \textbf{Precondizione:} L'utente ha aperto il pannello di inserimento nuova vista.
+\item \textbf{Postcondizione:} L'utente ha inserito le informazioni richieste.
 \end{itemize}
 
 \subsubsection{UC 1.3.2.3: Conferma delle informazioni inserite}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Descrizione:} L'utente è tenuto a confermare i parametri inseriti nel pannello di creazione di una nuova vista prima di poter utilizzare il grafico associato.
+\item \textbf{Precondizione:} L'utente ha inserito almeno tutti i parametri obbligatori richiesti.
+\item \textbf{Postcondizione:} L'utente ha confermato i parametri inseriti e la vista è stata salvata nel sistema.
+\item \textbf{Possibili Errori:} L'utente ha inserito delle informazioni errate o non ha rispettato i vincoli del sistema. 
 \end{itemize}
 
 \subsubsection{UC 1.3.3: Creazione nuova vista fallito}
@@ -265,9 +268,9 @@ Il server ha sollevato un'eccezione durante il salvataggio dei dati.
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Descrizione:} L'utente può modificare i parametri associati ad una specifica vista.
+\item \textbf{Precondizione:} La vista è stata creata ed è disponibile nell'elenco viste dell'utente.
+\item \textbf{Postcondizione:} I parametri relativi alla vista sono stati modificati.
 \end{itemize}
 
 \subsubsection{UC 1.3.4.1: selezione di una vista}
@@ -346,26 +349,28 @@ Il server ha sollevato un'eccezione durante il salvataggio dei dati.
 
 \subsection{UC 1.4: Visualizzazione, creazione e modifica ricette e schedulazioni associate}
 
-\textbf{Attori Coinvolti:}
+\begin{itemize}
+\item \textbf{Attori Coinvolti:}
 Utente
 
-\textbf{Precondizione:}
+\item \textbf{Precondizione:}
 L’utente deve aver fatto l’accesso nell’apposita pagina.
 
-\textbf{Descrizione:}
+\item \textbf{Descrizione:}
 Gli utenti possono vedere in questa pagina le ricette e i dati ad esse associati. 
 Si rende disponibile per ciascuna vista un pannello per modificarne i parametri. 
 Si può creare una nuova ricetta. 
 Si può eliminare una ricetta esistente.
 Si può modificare la cadenza con cui i dati di una ricetta vengono aggiornati automaticamente.
 
-\textbf{Post Condizione:}
+\item \textbf{Post Condizione:}
 Le informazioni richieste dall'utente sono state fornite.
 Le impostazioni modificate sono state salvate nel sistema.
 Le informazioni aggiunte sono state salvate nel sistema.
 
-\textbf{Possibili Errori:}
+\item \textbf{Possibili Errori:}
 In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
+\end{itemize}
 
 \subsubsection{UC 1.4.1: Visualizza ricette}
 
