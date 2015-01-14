@@ -17,3 +17,17 @@ Thumbs.db
 *.asta.bak
 *.asta.lock
 
+# rimuove i file .pdf generati dalla compilazione in LaTex che possono causare conflitti durante il pull
+
+documenti/analisi_dei_requisiti/analisi_dei_requisiti.pdf
+documenti/norme_di_progetto/norme_di_progetto.pdf
+documenti/glossario/glossario.pdf
+documenti/piano_di_progetto/piano_di_progetto.pdf
+documenti/piano_di_qualifica/piano_di_qualifica.pdf
+documenti/studio_di_fattibilita/studio_di_fattibilita.pdf
+documenti/lettera_di_presentazione/lettera_di_presentazione.pdf
+documenti/piano_di_progetto/verbale_interno_2014_11_26.pdf
+documenti/piano_di_progetto/verbale_interno_2014_12_02.pdf
+documenti/piano_di_progetto/verbale_esterno_2015_14_01.pdf
+documenti/piano_di_progetto/piano_di_progetto.pdf
+documenti/piano_di_progetto/piano_di_progetto.pdf
