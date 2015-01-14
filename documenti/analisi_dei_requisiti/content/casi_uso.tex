@@ -226,7 +226,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 \item \textbf{Postcondizione:} L'utente ha creato una nuovo vista.
 \end{itemize}
 
-\subsubsection{UC 1.3.2.1: Apertura pannello inserimento nuova lista}
+\subsubsection{UC 1.3.2.1: Apertura pannello inserimento nuova vista}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
@@ -347,21 +347,19 @@ Il server ha sollevato un'eccezione durante il salvataggio dei dati.
 
 
 
-\subsection{UC 1.4: Visualizzazione, creazione e modifica ricette e schedulazioni associate}
+\subsection{UC 1.4: Visualizzazione e creazione di ricette}
 
 \begin{itemize}
 \item \textbf{Attori Coinvolti:}
-Utente
+Utente Amministratore
 
 \item \textbf{Precondizione:}
 L’utente deve aver fatto l’accesso nell’apposita pagina.
 
 \item \textbf{Descrizione:}
-Gli utenti possono vedere in questa pagina le ricette e i dati ad esse associati. 
-Si rende disponibile per ciascuna vista un pannello per modificarne i parametri. 
+Gli utenti possono vedere in questa pagina le ricette e i dati ad esse associati.  
 Si può creare una nuova ricetta. 
 Si può eliminare una ricetta esistente.
-Si può modificare la cadenza con cui i dati di una ricetta vengono aggiornati automaticamente.
 
 \item \textbf{Post Condizione:}
 Le informazioni richieste dall'utente sono state fornite.
@@ -375,7 +373,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 \subsubsection{UC 1.4.1: Visualizza ricette}
 
 \begin{itemize}
-\item \textbf{Attori:} Utente
+\item \textbf{Attori:} Utente Amministratore
 \item \textbf{Descrizione:} 
 \item \textbf{Precondizione:} 
 \item \textbf{Postcondizione:} 
@@ -384,7 +382,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 \subsubsection{UC 1.4.1.1: Apertura elenco ricette}
 
 \begin{itemize}
-\item \textbf{Attori:} Utente
+\item \textbf{Attori:} Utente Amministratore
 \item \textbf{Descrizione:} 
 \item \textbf{Precondizione:} 
 \item \textbf{Postcondizione:} 
@@ -393,7 +391,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 \subsubsection{UC 1.4.2: Aggiungi una ricetta}
 
 \begin{itemize}
-\item \textbf{Attori:} Utente
+\item \textbf{Attori:} Utente Amministratore
 \item \textbf{Descrizione:} 
 \item \textbf{Precondizione:} 
 \item \textbf{Postcondizione:} 
@@ -402,7 +400,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 \subsubsection{UC 1.4.2.1: Apertura pannello inserimento nuova ricetta}
 
 \begin{itemize}
-\item \textbf{Attori:} Utente
+\item \textbf{Attori:} Utente Amministratore
 \item \textbf{Descrizione:} 
 \item \textbf{Precondizione:} 
 \item \textbf{Postcondizione:} 
@@ -411,7 +409,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 \subsubsection{UC 1.4.2.2: Inserimento delle informazioni }
 
 \begin{itemize}
-\item \textbf{Attori:} Utente
+\item \textbf{Attori:} Utente Amministratore
 \item \textbf{Descrizione:} 
 \item \textbf{Precondizione:} 
 \item \textbf{Postcondizione:} 
@@ -420,7 +418,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 \subsubsection{UC 1.4.2.3: Conferma delle informazioni inserite}
 
 \begin{itemize}
-\item \textbf{Attori:} Utente
+\item \textbf{Attori:} Utente Amministratore
 \item \textbf{Descrizione:} 
 \item \textbf{Precondizione:} 
 \item \textbf{Postcondizione:} 
@@ -429,124 +427,16 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 \subsubsection{UC 1.4.3: Inserimetno fallito - Eccezione}
 
 \begin{itemize}
-\item \textbf{Attori:} Utente
+\item \textbf{Attori:} Utente Amministratore
 \item \textbf{Descrizione:} 
 \item \textbf{Precondizione:} 
 \item \textbf{Postcondizione:} 
 \end{itemize}
 
-\subsubsection{UC 1.4.4: Modifica una ricetta}
-
-\begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
-\end{itemize}
-
-\subsubsection{UC 1.4.4.1: selezione di una ricetta}
-
-\begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
-\end{itemize}
-
-\subsubsection{UC 1.4.4.2: apertura pannello modifica ricetta}
-
-\begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
-\end{itemize}
-
-\subsubsection{UC 1.4.4.3: inserimento dei dati}
-
-\begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
-\end{itemize}
-
-\subsubsection{UC 1.4.4.4: conferma dei dati inseriti}
-
-\begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
-\end{itemize}
-
-\subsubsection{UC 1.4.5: Errore nella modifica dei dati}
-
-\begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
-\end{itemize}
-
-\subsubsection{UC 1.4.6: Modifica di una schedulazione associata}
-
-\begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
-\end{itemize}
-
-\subsubsection{UC 1.4.6.1: selezione di una ricetta}
-
-\begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
-\end{itemize}
-
-\subsubsection{UC 1.4.6.2: apertura pannello modifica schedulazione}
-
-\begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
-\end{itemize}
-
-\subsubsection{UC 1.4.6.3: inserimento dei dati}
-
-\begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
-\end{itemize}
-
-\subsubsection{UC 1.4.6.4: conferma dei dati inseriti}
-
-\begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
-\end{itemize}
-
-\subsubsection{UC 1.4.7: Errore nella modifica dei dati}
-
-\begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
-\end{itemize}
-
-\subsubsection{UC 1.4.8: Eliminazione di una ricetta}
+\subsubsection{UC 1.4.4: Eliminazione di una ricetta}
 
 \textbf{Attori Coinvolti:}
-Utente
+Utente Amministratore
 
 \textbf{Precondizione:}
 L’utente deve aver visualizzato la schermata di gestione delle ricette.
@@ -563,67 +453,22 @@ La ricetta(e) desiderata(e) e i dati ad essa(e) associati è(sono) stati cancell
 In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
 In caso di ricetta in uso o in fase di aggiornamento a causa di una schedulazione viene visualizzato un messaggio di errore e nessun dato viene alterato.
 
-\subsubsection{UC 1.4.8.1: selezione di una ricetta}
+\subsubsection{UC 1.4.4.1: selezione di una ricetta}
 
 \begin{itemize}
-\item \textbf{Attori:} Utente
+\item \textbf{Attori:} Utente Amministratore
 \item \textbf{Descrizione:} 
 \item \textbf{Precondizione:} 
 \item \textbf{Postcondizione:} 
 \end{itemize}
 
-\subsubsection{UC 1.4.8.2: conferma eliminazione di una ricetta}
+\subsubsection{UC 1.4.4.2: conferma eliminazione di una ricetta}
 
 \begin{itemize}
-\item \textbf{Attori:} Utente
+\item \textbf{Attori:} Utente Amministratore
 \item \textbf{Descrizione:} 
 \item \textbf{Precondizione:} 
 \item \textbf{Postcondizione:} 
-\end{itemize}
-
-\subsubsection{UC 1.4.9: Modifica Layout viste }
-
-\begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
-\end{itemize}
-
-\subsubsection{UC 1.4.9.1: apertura pannello modifica layout}
-
-\begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
-\end{itemize}
-
-\subsubsection{UC 1.4.9.2: selezione della visualizzazione}
-
-\begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
-\end{itemize}
-
-\subsubsection{UC 1.4.9.3: Conferma delle modifiche}
-
-\begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} Dopo aver selezionato il nuovo layout per i grafici sulla home screen l'utente deve confermare le modifiche apportate affinchè diventino attive. La conferma delle modifiche avviene solamente tramite la pressione del pulsante di conferma.
-\item \textbf{Precondizione:} L'utente ha effettuato delle modifiche alle impostazioni di visualizzazione.
-\item \textbf{Postcondizione:} Le modifiche sono state salvate e sono ora attive.
-\end{itemize}
-
-\subsubsection{UC 1.4.9.4: Annullamento delle modifiche}
-
-\begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} Per annullare le modifiche apportate alle impostazioni di visualizzazione si può premere il pulsante annulla oppure abbandonare semplicemente la pagina.
-\item \textbf{Precondizione:} L'utente ha effettuato delle modifiche alle impostazioni di visualizzazione.
-\item \textbf{Postcondizione:} Le modifiche sono state annullate. Le impostazioni di visualizzazione precedenti sono ancora attive. 
 \end{itemize}
 
 
