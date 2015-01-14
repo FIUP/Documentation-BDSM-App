@@ -16,80 +16,56 @@
 
 \section{Processi di Supporto}
 
-\subsection{Processo di documentazione}
-Con il processo di documentazione, il gruppo \groupName intende riportare tutte le informazioni acquisite durante il ciclo di vita del software.
-In particolare si andranno ad identificare gli standard per la creazione e stesura dei documenti, nonchè tutti i processi atti a redendere i documenti formalmente corretti.
-
-	\subsubsection{Pianificazione}
-	Con l'attività di pianificazione si va ad identificare quali documenti il gruppo dovrà produrre per poter sviluppare correttamente tutto il ciclo di vita del software. 
-
-		%\paragraph{Classificazione dei documenti}
-
-			%\subparagraph{Documenti informali}
-
-			%\subparagraph{Documenti formali}
-
-		\paragraph{Tipologia dei documenti}
+	\subsection{Processo di documentazione}
 	
-			\subparagraph{Analisi dei requisiti}
-				TO DO
-			\subparagraph{Glossario}
-				TO DO
-			\subparagraph{Norme di progetto}
-				TO DO
-			\subparagraph{Piano di progetto}
-				TO DO
-			\subparagraph{Piano di qualifica}
-				TO DO
-			\subparagraph{Specifica tecnica}
-				TO DO
-			\subparagraph{Studio di fattibilità}
-				TO DO
-			\subparagraph{Verbali}
-				TO DO
-	
-	
-	
-		\paragraph{Gestione dei documenti}
-		Per ogni documento che il responabile di progetto ritiene utile essere steso dovrà essere generato con appositi tools messi a disposizione. Essi permettono di mantenere un certo ordine e rigore logico.  
+		\subsubsection{Attività}
+
+			\subparagraph{Documentazione}
+			Con il processo di documentazione, il gruppo \groupName intende riportare tutte le informazioni acquisite durante il ciclo di vita del software.
+			In particolare si andranno ad identificare gli standard per la creazione e stesura dei documenti, nonchè tutti i processi atti a redendere i documenti formalmente corretti.
+
+		\subsubsection{Procedure}
+
+			\paragraph{Gestione dei documenti}
+			Per ogni documento che il \roleProjectManager ritiene utile essere steso dovrà essere generato con appositi tools messi a disposizione. Essi permettono di mantenere un certo ordine e rigore logico.  
 
 				\subparagraph{Creazione di un nuovo documento}
-				Ogni qualvolta il responsabile di progetto voglia creare un nuovo documento dovrà eseguire i seguenti passi:
+				Ogni qualvolta il \roleProjectManager voglia creare un nuovo documento dovrà eseguire i seguenti passi:
 				\begin{enumerate}
-					\item posizionarsi all'interno della cartella \emph{documenti} presente nel repository;
-					\item invocare il comando \emph{make nome\textunderscore del\textunderscore documento}.
+				\item posizionarsi all'interno della cartella \emph{documenti} presente nel repository;
+				\item invocare il comando \emph{make nome\textunderscore del\textunderscore documento}.
 				\end{enumerate}
 				Al termine dell'esceuzione dello script sarà presente una nuova cartella già rinominata correttamente con all'interno presenti tutti i file utili per l'inizio della stesura del nuovo documento.
-				
+
 				\subparagraph{Avanzamento di un documento}
 				Alla fine di ogni avanzamento il documento dovrà essere sottoposto a molteplici procedure. Essi possono essere così definite:
 				\begin{enumerate}
-					\item il redattore dovrà effettuare l'upload del documento all'interno del branch predisposto presente nel repository;
-					\item il redattore segnerà come completato il tiket assegnatogli;
-					\item il responsabile di progetto riceverà automaticamente una mail con la conferma dell'avvenuta conclusione;
-					\item il responsabile di progetto assegnerà un tiket di verfica del documento ad un verificatore che non abbia già provveduto alla stesura del documento;
-					\item qualora il documento sia corretto si procederà alla chiusura del tiket, avvisando automaticamente il responsabile di progetto, che a sua volta provvedrà a contrassegnare il documento come approvato. Altrimenti il verficatore assegnerà nuovi tiket al redattore. In seguito il redattore provvederà a rieseguire tutti i passi del seguente elenco;
+				\item il redattore dovrà effettuare l'upload del documento all'interno del branch predisposto presente nel repository;
+				\item il redattore segnerà come completato il tiket assegnatogli;
+				\item il \roleProjectManager riceverà automaticamente una mail con la conferma dell'avvenuta conclusione;
+				\item il \roleProjectManager assegnerà un tiket di verfica del documento ad un verificatore che non abbia già provveduto alla stesura del documento;
+				\item qualora il documento sia corretto si procederà alla chiusura del tiket, avvisando automaticamente il \roleProjectManager, che a sua volta provvedrà a contrassegnare il documento come approvato. Altrimenti il \roleVerifier assegnerà nuovi tiket al redattore. In seguito il redattore provvederà a rieseguire tutti i passi del seguente elenco;
 				\end{enumerate}
 
+			\paragraph{Gestione del glossario} TO DO
+				\subparagraph{Inserimento di un termine} TO DO
+				\subparagraph{Eliminazione di un termine} TO DO
 
-			\paragraph{Procedure di gestione del Glossario}
-				TO DO
-				\subparagraph{Inserimento di un termine}
-					TO DO
-				\subparagraph{Eliminazione di un termine}
-					TO DO
+		\subsubsection{Norme}
 
-		\subsubsection{Progettazione e sviluppo dei documenti}
-		Per ogni documento che si erige si dovrà rispettare un ben preciso layout di sviluppo. Si raccolgono di seguito le informazioni utili per la composizione delle prime pagine, le sezioni e le norme tipografiche da utilizzare in fase di scrittura.
+			\paragraph{Progettazione e sviluppo dei documenti}
+			Per ogni documento che si erige si dovrà rispettare un ben preciso layout di sviluppo. Si raccolgono di seguito le informazioni utili per la composizione delle prime pagine, le sezioni e le norme tipografiche da utilizzare in fase di scrittura.
 
-			\paragraph{Versionamento}
+			\paragraph{Versionamento} TO DO
 
 			\paragraph{Template}
 			Al fine di ottenere dei documenti formattati correttamente si è predisposto un template in Latex da seguire scrupolosamente. Esso deve essere utilizzato come linea guida per lo sviluppo dei documenti. Ogni tipologia di documento, prima pagina, indici, contenuti interni, lettere hanno uno stile definito in maniera univoca. Esso ne permette una gestione capillare ed omogenea.\\
 
+%%%%%%%%% INSERIRE TEMPLATE HEADER
+
 			\paragraph{Struttura dei documenti}
 			Per facilitare la stesura e la gestione si è provvisto alla creazione di un cartella per ogni documento, essa è ha come titolo il nome del documento.\\
-			Nella \emph{root} della cartella è presente il file che gestise il contenuto della prima pagina. Esso ha il compito di includere tutti gli stili e a linkare tutte le sezioni utili alla costruzione del documento.\\
+			Nella root della cartella è presente il file che gestise il contenuto della prima pagina. Esso ha il compito di includere tutti gli stili e a linkare tutte le sezioni utili alla costruzione del documento.\\
 			All'interno della cartella \emph{content} sono presenti tutti i file, divisi per capitolo, contenti il testo dell'intero documento.\\
 			Le cartelle \emph{diagrams} e \emph{images} hanno il compito di contentere i releativi diagrammi ed immagini usati nei singoli documenti.\\
 			Nella cartella \emph{doc\textunderscore to\textunderscore modify} sono presenti due files, il primo \emph{content\textunderscore files.tex} raggruppa tutti i sottocapitoli e li ordina in base alle scelte dell'utente. Il secondo file \emph{history.tex} contiene la storia della creazione e modifica apportata al documento.
@@ -109,7 +85,7 @@ In particolare si andranno ad identificare gli standard per la creazione e stesu
 					\item uso interno o esterno del documento;
 					\item sommario contenente una breve descrizione del documento.
 				\end{itemize}
-				
+			
 				\subparagraph{Diario delle revisioni}
 				Successivamente nella seconda pagina è presente l'elenco delle revisioni apportate al documento. Esso risulta utile per il tracciamento in fase di eleaborazione del documento. Permette di conoscere l'autore delle rispettive sezioni. L'elenco è formato da :
 				\begin{itemize}
@@ -120,10 +96,10 @@ In particolare si andranno ad identificare gli standard per la creazione e stesu
 				\end{itemize}
 
 				\subparagraph{Indici}
-				Subito dopo il \emph{Diario delle revisioni} è presente l'indice generale del documento. Esso è reperibile in tutti i documenti ad esclusione del \emph{Glossario}.\\
+				Subito dopo il \emph{Diario delle revisioni} è presente l'indice generale del documento. Esso è reperibile in tutti i documenti ad esclusione del \docGlossary.\\
 				Nella parte iniziale l'indice fa rifermento ai capitoli e sottocapitoli.\\
 				Se presenti immagini e/o tabelle, in automatico è possibile trovare anche il relativo indice associato.
-				
+			
 				\subparagraph{Formattazione di una pagina}
 				Tutti i documenti descrittivi sono formati da una intestazione è da un piè di pagina ben definito.\\
 				Sono presente due bande di colore grigio chiaro agli estermi del documento.\\
@@ -132,33 +108,30 @@ In particolare si andranno ad identificare gli standard per la creazione e stesu
 				Nella parte destra è presente il numero di pagina formato da "Pagina X di Y", dove con "X" si indica la pagina corrente e con "Y" il numero totale di pagine presenti ad esclusione della prima pagina, del diario delle revisioni e degli indici.
 
 			\paragraph{Suddivisione sezioni documenti}
+
+				\subparagraph{\docNameSdF} il documento raccoglie le motivazioni e le considerazioni che il gruppo ha elaborato per l'accettazione o meno del progetto da sviluppare. All'interno del documento può essere presente un'analisi che ha portato all'esclusione di altri capitolati.\\
+				Il documento è di tipo interno.
+
+				\subparagraph{\docNameNdP} il documento raccoglie tutte le attività, norme, procedure e strumenti che il gruppo adotterà durante lo sviluppo del progetto se esso verrà concesso.\\
+				Il documento è di tipo interno.
 				
-				\subparagraph{Studio di fattibilità}
-					TO DO
-				
-				\subparagraph{Norme di progetto}
-					TO DO
-				
-				\subparagraph{Piano di progetto}
-					TO DO
-				
-				\subparagraph{Piano di qualifica}
-					TO DO
-				
-				\subparagraph{Analisi dei requisiti}
-					TO DO
-				
-				\subparagraph{Specifica tecnica}
-					TO DO
-				
-				\subparagraph{Definizione di prodotto}
-					TO DO
-				
-				\subparagraph{Glossario}
-					TO DO
-				
-				\subparagraph{Verbali}
-					TO DO
+				\subparagraph{\docNamePdP} il documento specifica la pianificazione impiegata per lo svolgimento del progetto. Sono contenute tutte le attività con le relative tempistiche e i relativi rischi. Sono inoltre presenti le specifiche di ogni risorsa impiegata;\\
+				Il documento è di tipo esterno.
+
+				\subparagraph{\docNamePdQ} il documento specifica le strategie applicate al capitolato per ottenere gli obiettivi di qualità. Sono inoltre presenti le attività di verifica e pianificazione con i relativi test che si andranno a sviluppare. \\
+				Il documento è di tipo esterno.
+
+				\subparagraph{\docNameAdR} il documento identifica e descrive i requisiti necessari all'implementazione del progetto. Saranno inoltre integrati i casi d'uso ed i requisiti utili allo sviluppo del progetto. Saranno altresì presenti i digrammi grafici di interazione tra utenti e sistema.\\
+				Il documento è di tipo esterno.
+
+				\subparagraph{\docNameST} il documento identifica una prima progettazione ad altro livello del sistema che si andrà a sviluppare. Sarrano individuati e dettagliatamente specificati i design pattern utilizzati nel progetto.\\
+				Il documento è di tipo esterno.
+
+				\subparagraph{\docNameDdP} il documento identifica dettagliatamente il prodotto che si va a sviluppare. Tale documento sarà utilizzato dai programmatori per poter sviluppare il software.\\ 
+				Il documento è di tipo esterno.
+
+				\subparagraph{\docNameGlo} il documento raccoglie tutti i termini usati nella documentazione e ne riporta una definizione più descrittiva.  
+				Il documento è di tipo esterno.
 
 
 			\paragraph{Norme tipografiche}
@@ -184,8 +157,7 @@ In particolare si andranno ad identificare gli standard per la creazione e stesu
 				\item \textbf{Spazi:} non dovranno mai essere presenti spazi doppi, o spazi per la tabulazione.
 				\end{itemize}				
 				
-				\subparagraph{Composizione del testo}
-				TODO
+				\subparagraph{Composizione del testo} TO DO
 				
 				\subparagraph{Formati ricorrenti}
 				\begin{itemize}
@@ -203,7 +175,6 @@ In particolare si andranno ad identificare gli standard per la creazione e stesu
 				\item \textbf{Riferimenti ai documenti: ogni riferimento ai documenti deve presentare il nome del documento e la sua attuale revisione} ;
 				\end{itemize}
 
-					
 			\paragraph{Componenti grafiche}
 				
 				\subparagraph{Immagini}
@@ -218,11 +189,15 @@ In particolare si andranno ad identificare gli standard per la creazione e stesu
 				Assieme al digramma deve essere fornita una descrizione ed una parola chiave per poter riportare nel testo il diagramma di rifermento.\\
 				Il numero viene assegnato automaticamente dal software \LaTeX.
 				
-				%\subparagraph{Tabelle}
+				\subparagraph{Tabelle} TO DO
 
-		%\subsubsection{Produzione}
 
-			%\paragraph{Automatizzazione dei paragrafi}
+
+
+
+
+
+
 
 	\subsection{Processo di verifica}
 	Con il processo di verifica si vuole introdurre una approfonsita anlisi del rispetto dei requisiti fissati prima dell'inizio del progetto.\\
