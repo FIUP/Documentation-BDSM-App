@@ -143,7 +143,7 @@ L'applicazione sarà composta da due parti:
     \pgfmathsetmacro{\r}{1}
     \def\c{(0,0)}
     \node[pie title] at (90:1.3) {#2};
-    \foreach \v/\s in{#3}{
+    \foreach \v\s in{#3}{
         \pgfmathsetmacro{\deltaA}{\v/100*360}
         \pgfmathsetmacro{\nextA}{\curA + \deltaA}
         \pgfmathsetmacro{\midA}{(\curA+\nextA)/2}
@@ -168,7 +168,7 @@ L'applicazione sarà composta da due parti:
     \path
         \foreach \n/\s in {#2}
             {
-                  ++(0,-10pt) node[\s,legend box] {} +(5pt,0) node[legend label] {\n}
+                  ++(0,-5pt) node[\s,legend box] {} +(5pt,0) node[legend label] {\n} % ++(x,y) -> y: spazio tra i vari campi della legenda, x: l'obliquità
             }
     ;
     \end{scope}

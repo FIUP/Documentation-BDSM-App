@@ -11,7 +11,7 @@
 % =================================================================================================
 % 0.0.2			2015/01/08			scelta sezioni									Tesser Paolo
 % =================================================================================================
-%
+% 0.0.3			2015/01/14			stesi grafici a torta							Tesser Paolo
 % =================================================================================================
 %
 
@@ -48,6 +48,8 @@
 				\end{center}
 			\caption{Ricerca e implementazione degli strumenti - Ore non rendicontate}
 			\end{table}
+			
+		
 		% subsubsection suddivisione_del_lavoro (end)
 		
 		\subsubsection{Prospetto economico} % (fold)
@@ -79,7 +81,59 @@
 			\end{table}
 
 		\noindent
-		TO DO
+		I valori delle ore sono riassunte nel seguente grafico a torta che espone l’incidenza delle ore per ruolo sul totale.
+		\begin{center}
+			\begin{figure}[htbp]
+				\begin{tikzpicture}
+				[
+				    pie chart,
+				    slice type={pm}{blu},
+				    slice type={an}{rosso},
+				    slice type={pt}{giallo},
+				    slice type={am}{viola},
+				    slice type={pr}{verde},
+					slice type={ve}{rame},
+				    pie values/.style={font={\normalsize}},
+				    scale=2.5
+				]
+
+				    \pie{Ore per ruolo sul totale}{6/pm,44/an,35/am,15/ve}
+
+				    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+				\end{tikzpicture}
+			\vspace{0.8cm}
+			\caption{Ricerca e implementazione strumenti - Ore per ruolo sul totale}
+			\end{figure}
+		\end{center}
+		
+		\noindent
+		I valori dei costi sono riassunti nel seguente grafico a torta che espone l’incidenza dei costi per ruolo sul totale.
+		\begin{center}
+			\begin{figure}[htbp]
+				\begin{tikzpicture}
+				[
+				    pie chart,
+				    slice type={pm}{blu},
+				    slice type={an}{rosso},
+				    slice type={pt}{giallo},
+				    slice type={am}{viola},
+				    slice type={pr}{verde},
+					slice type={ve}{rame},
+				    pie values/.style={font={\normalsize}},
+				    scale=2.5
+				]
+
+				    \pie{Costi per ruolo sul totale}{11/pm,42/an,19/am,28/ve}
+
+				    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+				\end{tikzpicture}
+			\vspace{0.8cm}
+			\caption{Ricerca e implementazione strumenti - Costi per ruolo sul totale}
+			\end{figure}
+		\end{center}			
+		
 		% subsubsection prospetto_economico (end)
 		
 	% subsection ricerca_e_implementazione_degli_strumenti (end)
@@ -144,8 +198,59 @@
 			\caption{Analisi dei requisiti - Costo per ruolo}
 			\end{table}
 			
-		\noindent
-		TO DO
+			\noindent
+			I valori delle ore sono riassunte nel seguente grafico a torta che espone l’incidenza delle ore per ruolo sul totale.
+			\begin{center}
+				\begin{figure}[htbp]
+					\begin{tikzpicture}
+					[
+					    pie chart,
+					    slice type={pm}{blu},
+					    slice type={an}{rosso},
+					    slice type={pt}{giallo},
+					    slice type={am}{viola},
+					    slice type={pr}{verde},
+						slice type={ve}{rame},
+					    pie values/.style={font={\normalsize}},
+					    scale=2.5
+					]
+
+					    \pie{Ore per ruolo sul totale}{11/pm,42/an,19/am,28/ve}
+
+					    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+					\end{tikzpicture}
+				\vspace{0.8cm}
+				\caption{Analisi dei requisiti - Ore per ruolo sul totale}
+				\end{figure}
+			\end{center}
+
+			\noindent
+			I valori dei costi sono riassunti nel seguente grafico a torta che espone l’incidenza dei costi per ruolo sul totale.
+			\begin{center}
+				\begin{figure}[htbp]
+					\begin{tikzpicture}
+					[
+					    pie chart,
+					    slice type={pm}{blu},
+					    slice type={an}{rosso},
+					    slice type={pt}{giallo},
+					    slice type={am}{viola},
+					    slice type={pr}{verde},
+						slice type={ve}{rame},
+					    pie values/.style={font={\normalsize}},
+					    scale=2.5
+					]
+
+					    \pie{Costi per ruolo sul totale}{16/pm,48/an,17/am,19/ve}
+
+					    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+					\end{tikzpicture}
+				\vspace{0.8cm}
+				\caption{Analisi dei requisiti - Costi per ruolo sul totale}
+				\end{figure}
+			\end{center}
 		% subsubsection prospetto_economico (end)
 		
 	% subsection analisi_dei_requisiti (end)
@@ -209,8 +314,59 @@
 			\caption{Analisi di dettaglio - Costo per ruolo}
 			\end{table}
 
-		\noindent
-		TO DO
+			\noindent
+			I valori delle ore sono riassunte nel seguente grafico a torta che espone l’incidenza delle ore per ruolo sul totale.
+			\begin{center}
+				\begin{figure}[htbp]
+					\begin{tikzpicture}
+					[
+					    pie chart,
+					    slice type={pm}{blu},
+					    slice type={an}{rosso},
+					    slice type={pt}{giallo},
+					    slice type={am}{viola},
+					    slice type={pr}{verde},
+						slice type={ve}{rame},
+					    pie values/.style={font={\normalsize}},
+					    scale=2.5
+					]
+
+					    \pie{Ore per ruolo sul totale}{7/pm,41/an,9/am,43/ve}
+
+					    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+					\end{tikzpicture}
+				\vspace{0.8cm}
+				\caption{Analisi di dettaglio - Ore per ruolo sul totale}
+				\end{figure}
+			\end{center}
+
+			\noindent
+			I valori dei costi sono riassunti nel seguente grafico a torta che espone l’incidenza dei costi per ruolo sul totale.
+			\begin{center}
+				\begin{figure}[htbp]
+					\begin{tikzpicture}
+					[
+					    pie chart,
+					    slice type={pm}{blu},
+					    slice type={an}{rosso},
+					    slice type={pt}{giallo},
+					    slice type={am}{viola},
+					    slice type={pr}{verde},
+						slice type={ve}{rame},
+					    pie values/.style={font={\normalsize}},
+					    scale=2.5
+					]
+
+					    \pie{Costi per ruolo sul totale}{10/pm,50/an,9/am,31/ve}
+
+					    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+					\end{tikzpicture}
+				\vspace{0.8cm}
+				\caption{Analisi di dettaglio - Costi per ruolo sul totale}
+				\end{figure}
+			\end{center}
 		% subsubsection prospetto_economico (end)
 		
 	% subsection analisi_di_dettaglio (end)
@@ -275,8 +431,59 @@
 			\caption{Progettazione architetturale - Costo per ruolo}
 			\end{table}
 			
-		\noindent
-		TO DO	
+			\noindent
+			I valori delle ore sono riassunte nel seguente grafico a torta che espone l’incidenza delle ore per ruolo sul totale.
+			\begin{center}
+				\begin{figure}[htbp]
+					\begin{tikzpicture}
+					[
+					    pie chart,
+					    slice type={pm}{blu},
+					    slice type={an}{rosso},
+					    slice type={pt}{giallo},
+					    slice type={am}{viola},
+					    slice type={pr}{verde},
+						slice type={ve}{rame},
+					    pie values/.style={font={\normalsize}},
+					    scale=2.5
+					]
+
+					    \pie{Ore per ruolo sul totale}{4/pm,21/an,46/pt,5/am,24/ve}
+
+					    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+					\end{tikzpicture}
+				\vspace{0.8cm}
+				\caption{Progettazione architetturale - Ore per ruolo sul totale}
+				\end{figure}
+			\end{center}
+
+			\noindent
+			I valori dei costi sono riassunti nel seguente grafico a torta che espone l’incidenza dei costi per ruolo sul totale.
+			\begin{center}
+				\begin{figure}[htbp]
+					\begin{tikzpicture}
+					[
+					    pie chart,
+					    slice type={pm}{blu},
+					    slice type={an}{rosso},
+					    slice type={pt}{giallo},
+					    slice type={am}{viola},
+					    slice type={pr}{verde},
+						slice type={ve}{rame},
+					    pie values/.style={font={\normalsize}},
+					    scale=2.5
+					]
+
+					    \pie{Costi per ruolo sul totale}{6/pm,25/an,48/pt,4/am,17/ve}
+
+					    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+					\end{tikzpicture}
+				\vspace{0.8cm}
+				\caption{Progettazione architetturale - Costi per ruolo sul totale}
+				\end{figure}
+			\end{center}
 		% subsubsection prospetto_economico (end)
 		
 	% subsection progettazione_architetturale (end)
@@ -340,8 +547,59 @@
 			\caption{Progettazione di dettaglio e codifica dei requisiti obbligatori - Costo per ruolo}
 			\end{table}
 		
-		\noindent
-		TO DO
+			\noindent
+			I valori delle ore sono riassunte nel seguente grafico a torta che espone l’incidenza delle ore per ruolo sul totale.
+			\begin{center}
+				\begin{figure}[htbp]
+					\begin{tikzpicture}
+					[
+					    pie chart,
+					    slice type={pm}{blu},
+					    slice type={an}{rosso},
+					    slice type={pt}{giallo},
+					    slice type={am}{viola},
+					    slice type={pr}{verde},
+						slice type={ve}{rame},
+					    pie values/.style={font={\normalsize}},
+					    scale=2.5
+					]
+
+					    \pie{Ore per ruolo sul totale}{5/pm,10/an,21/pt,4/am,34/pr,26/ve}
+
+					    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+					\end{tikzpicture}
+				\vspace{0.8cm}
+				\caption{Progettazione di dettaglio e codifica dei requisiti obbligatori - Ore per ruolo sul totale}
+				\end{figure}
+			\end{center}
+
+			\noindent
+			I valori dei costi sono riassunti nel seguente grafico a torta che espone l’incidenza dei costi per ruolo sul totale.
+			\begin{center}
+				\begin{figure}[htbp]
+					\begin{tikzpicture}
+					[
+					    pie chart,
+					    slice type={pm}{blu},
+					    slice type={an}{rosso},
+					    slice type={pt}{giallo},
+					    slice type={am}{viola},
+					    slice type={pr}{verde},
+						slice type={ve}{rame},
+					    pie values/.style={font={\normalsize}},
+					    scale=2.5
+					]
+
+					    \pie{Costi per ruolo sul totale}{8/pm,14/an,25/pt,4/am,28/pr,21/ve}
+
+					    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+					\end{tikzpicture}
+				\vspace{0.8cm}
+				\caption{Progettazione di dettaglio e codifica dei requisiti obbligatori - Costi per ruolo sul totale}
+				\end{figure}
+			\end{center}
 		% subsubsection prospetto_economico (end)
 		
 	% subsection progettazione_di_dettaglio_e_codifica_dei_requisiti_obbligatori (end)
@@ -405,8 +663,59 @@
 				\caption{Progettazione di dettaglio e codifica dei requisiti desiderabili - Costo per ruolo}
 				\end{table}
 
-			\noindent
-			TO DO
+				\noindent
+				I valori delle ore sono riassunte nel seguente grafico a torta che espone l’incidenza delle ore per ruolo sul totale.
+				\begin{center}
+					\begin{figure}[htbp]
+						\begin{tikzpicture}
+						[
+						    pie chart,
+						    slice type={pm}{blu},
+						    slice type={an}{rosso},
+						    slice type={pt}{giallo},
+						    slice type={am}{viola},
+						    slice type={pr}{verde},
+							slice type={ve}{rame},
+						    pie values/.style={font={\normalsize}},
+						    scale=2.5
+						]
+
+						    \pie{Ore per ruolo sul totale}{6/pm,25/pt,5/am,29/pr,35/ve}
+
+						    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+						\end{tikzpicture}
+					\vspace{0.8cm}
+					\caption{Progettazione di dettaglio e codifica dei requisiti desiderabili - Ore per ruolo sul totale}
+					\end{figure}
+				\end{center}
+
+				\noindent
+				I valori dei costi sono riassunti nel seguente grafico a torta che espone l’incidenza dei costi per ruolo sul totale.
+				\begin{center}
+					\begin{figure}[htbp]
+						\begin{tikzpicture}
+						[
+						    pie chart,
+						    slice type={pm}{blu},
+						    slice type={an}{rosso},
+						    slice type={pt}{giallo},
+						    slice type={am}{viola},
+						    slice type={pr}{verde},
+							slice type={ve}{rame},
+						    pie values/.style={font={\normalsize}},
+						    scale=2.5
+						]
+
+						    \pie{Costi per ruolo sul totale}{11/pm,30/pt,6/am,24/pr,29/ve}
+
+						    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+						\end{tikzpicture}
+					\vspace{0.8cm}
+					\caption{Progettazione di dettaglio e codifica dei requisiti desiderabili - Costi per ruolo sul totale}
+					\end{figure}
+				\end{center}
 		% subsubsection prospetto_economico (end)
 		
 	% subsection progettazione_di_dettaglio_e_codifica_dei_requisiti_desiderabili (end)
@@ -471,8 +780,59 @@
 				\caption{Progettazione di dettaglio e codifica dei requisiti opzionali - Costo per ruolo}
 				\end{table}
 
-			\noindent
-			TO DO
+				\noindent
+				I valori delle ore sono riassunte nel seguente grafico a torta che espone l’incidenza delle ore per ruolo sul totale.
+				\begin{center}
+					\begin{figure}[htbp]
+						\begin{tikzpicture}
+						[
+						    pie chart,
+						    slice type={pm}{blu},
+						    slice type={an}{rosso},
+						    slice type={pt}{giallo},
+						    slice type={am}{viola},
+						    slice type={pr}{verde},
+							slice type={ve}{rame},
+						    pie values/.style={font={\normalsize}},
+						    scale=2.5
+						]
+
+						    \pie{Ore per ruolo sul totale}{7/pm,24/pt,4/am,35/pr,30/ve}
+
+						    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+						\end{tikzpicture}
+					\vspace{0.8cm}
+					\caption{Progettazione di dettaglio e codifica dei requisiti opzionali - Ore per ruolo sul totale}
+					\end{figure}
+				\end{center}
+
+				\noindent
+				I valori dei costi sono riassunti nel seguente grafico a torta che espone l’incidenza dei costi per ruolo sul totale.
+				\begin{center}
+					\begin{figure}[htbp]
+						\begin{tikzpicture}
+						[
+						    pie chart,
+						    slice type={pm}{blu},
+						    slice type={an}{rosso},
+						    slice type={pt}{giallo},
+						    slice type={am}{viola},
+						    slice type={pr}{verde},
+							slice type={ve}{rame},
+						    pie values/.style={font={\normalsize}},
+						    scale=2.5
+						]
+
+						    \pie{Costi per ruolo sul totale}{12/pm,29/pt,5/am,29/pr,25/ve}
+
+						    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+						\end{tikzpicture}
+					\vspace{0.8cm}
+					\caption{Progettazione di dettaglio e codifica dei requisiti opzionali - Costi per ruolo sul totale}
+					\end{figure}
+				\end{center}
 		% subsubsection prospetto_economico (end)
 		
 	% subsection progettazione_di_dettaglio_e_codifica_dei_requisiti_opzionali (end)
@@ -536,8 +896,59 @@
 				\caption{Validazione - Costo per ruolo}
 				\end{table}
 
-			\noindent
-			TO DO
+				\noindent
+				I valori delle ore sono riassunte nel seguente grafico a torta che espone l’incidenza delle ore per ruolo sul totale.
+				\begin{center}
+					\begin{figure}[htbp]
+						\begin{tikzpicture}
+						[
+						    pie chart,
+						    slice type={pm}{blu},
+						    slice type={an}{rosso},
+						    slice type={pt}{giallo},
+						    slice type={am}{viola},
+						    slice type={pr}{verde},
+							slice type={ve}{rame},
+						    pie values/.style={font={\normalsize}},
+						    scale=2.5
+						]
+
+						    \pie{Ore per ruolo sul totale}{6/pm,12/pt,5/am,23/pr,54/ve}
+
+						    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+						\end{tikzpicture}
+					\vspace{0.8cm}
+					\caption{Validazione - Ore per ruolo sul totale}
+					\end{figure}
+				\end{center}
+
+				\noindent
+				I valori dei costi sono riassunti nel seguente grafico a torta che espone l’incidenza dei costi per ruolo sul totale.
+				\begin{center}
+					\begin{figure}[htbp]
+						\begin{tikzpicture}
+						[
+						    pie chart,
+						    slice type={pm}{blu},
+						    slice type={an}{rosso},
+						    slice type={pt}{giallo},
+						    slice type={am}{viola},
+						    slice type={pr}{verde},
+							slice type={ve}{rame},
+						    pie values/.style={font={\normalsize}},
+						    scale=2.5
+						]
+
+						    \pie{Costi per ruolo sul totale}{11/pm,16/pt,6/am,20/pr,47/ve}
+
+						    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+						\end{tikzpicture}
+					\vspace{0.8cm}
+					\caption{Validazione - Costi per ruolo sul totale}
+					\end{figure}
+				\end{center}
 		% subsubsection prospetto_economico (end)
 		
 	% subsection validazione (end)
@@ -601,6 +1012,60 @@
 					\end{center}
 				\caption{Ore totali non rendicontate - Costo per ruolo}
 				\end{table}
+				
+				\noindent
+				I valori delle ore sono riassunte nel seguente grafico a torta che espone l’incidenza delle ore per ruolo sul totale.
+				\begin{center}
+					\begin{figure}[htbp]
+						\begin{tikzpicture}
+						[
+						    pie chart,
+						    slice type={pm}{blu},
+						    slice type={an}{rosso},
+						    slice type={pt}{giallo},
+						    slice type={am}{viola},
+						    slice type={pr}{verde},
+							slice type={ve}{rame},
+						    pie values/.style={font={\normalsize}},
+						    scale=2.5
+						]
+
+						    \pie{Ore per ruolo sul totale}{9/pm,41/an,19/am,31/ve}
+
+						    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+						\end{tikzpicture}
+					\vspace{0.8cm}
+					\caption{Ore totali non rendicontate - Ore per ruolo sul totale}
+					\end{figure}
+				\end{center}
+
+				\noindent
+				I valori dei costi sono riassunti nel seguente grafico a torta che espone l’incidenza dei costi per ruolo sul totale.
+				\begin{center}
+					\begin{figure}[htbp]
+						\begin{tikzpicture}
+						[
+						    pie chart,
+						    slice type={pm}{blu},
+						    slice type={an}{rosso},
+						    slice type={pt}{giallo},
+						    slice type={am}{viola},
+						    slice type={pr}{verde},
+							slice type={ve}{rame},
+						    pie values/.style={font={\normalsize}},
+						    scale=2.5
+						]
+
+						    \pie{Costi per ruolo sul totale}{12/pm,49/an,17/am,22/ve}
+
+						    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+						\end{tikzpicture}
+					\vspace{0.8cm}
+					\caption{Ore totali non rendicontate - Costi per ruolo sul totale}
+					\end{figure}
+				\end{center}
 			% paragraph prospetto_economico (end)
 			
 		% subsubsection ore_totali_non_rendicontate (end)
@@ -661,6 +1126,60 @@
 					\end{center}
 				\caption{Ore totali di investimento rendicontate - Costo per ruolo}
 				\end{table}
+				
+				\noindent
+				I valori delle ore sono riassunte nel seguente grafico a torta che espone l’incidenza delle ore per ruolo sul totale.
+				\begin{center}
+					\begin{figure}[htbp]
+						\begin{tikzpicture}
+						[
+						    pie chart,
+						    slice type={pm}{blu},
+						    slice type={an}{rosso},
+						    slice type={pt}{giallo},
+						    slice type={am}{viola},
+						    slice type={pr}{verde},
+							slice type={ve}{rame},
+						    pie values/.style={font={\normalsize}},
+						    scale=2.5
+						]
+
+						    \pie{Ore per ruolo sul totale}{6/pm,8/an,27/pt,4/am,23/pr,32/ve}
+
+						    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+						\end{tikzpicture}
+					\vspace{0.8cm}
+					\caption{Ore totali di investimento rendicontate - Ore per ruolo sul totale}
+					\end{figure}
+				\end{center}
+
+				\noindent
+				I valori dei costi sono riassunti nel seguente grafico a torta che espone l’incidenza dei costi per ruolo sul totale.
+				\begin{center}
+					\begin{figure}[htbp]
+						\begin{tikzpicture}
+						[
+						    pie chart,
+						    slice type={pm}{blu},
+						    slice type={an}{rosso},
+						    slice type={pt}{giallo},
+						    slice type={am}{viola},
+						    slice type={pr}{verde},
+							slice type={ve}{rame},
+						    pie values/.style={font={\normalsize}},
+						    scale=2.5
+						]
+
+						    \pie{Costi per ruolo sul totale}{9/pm,11/an,32/pt,5/am,19/pr,25/ve}
+
+						    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+						\end{tikzpicture}
+					\vspace{0.8cm}
+					\caption{Ore totali di investimento rendicontate - Costi per ruolo sul totale}
+					\end{figure}
+				\end{center}
 			% paragraph prospetto_economico (end)
 			
 		% subsubsection ore_totali_di_investimento (end)
