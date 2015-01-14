@@ -15,14 +15,6 @@
 
 \section{Visione generale della strategia di verifica}
 
-	\subsection{Definizione degli obiettivi}
-	Per garantire la qualità di processo necessaria per ottenere la qualità di prodotto che si intende raggiungere, è stato scelto di basarsi su due modelli:
-	\begin{itemize}
-  		\item \textbf{SPICE:} \textit{definito nello standard ISO/IEC 15504 è il modello di riferimento per dare un giudizio di maturità e individuare azioni migliorative.}
- 		 \item \textbf{PDCA:} \textit{serve per promuovere il miglioramento continuo dei processi e per ottimizzare l'utilizzo di risorse.}
-	\end{itemize}
-	Per massimizzare l'efficacia della qualità del prodotto si è deciso di puntare sullo standard ISO/IEC 9126 che definisce le metriche per la sua misurazione.
-	
 	\subsection{Organizzazione}
 	L'attività di verifica accompagnerà l'intero ciclo di vita del software e sarà effettuata su tutti i processi realizzati e sugli output prodotti da questi ultimi. La verifica sarà applicata solamente ai cambiamenti effettuati dall'ultima versione approvata del prodotto.\\
 	Il team ha scelto di adottare un modello di ciclo di vita di tipo incrementale suddiviso in diverse fasi e riportate dettagliatamente nel \docNameVersionPdP. Per ciascuna di questa fase verranno utilizzate specifiche attività di verifica.\\ Il processo di verifica sarà così composto:
@@ -48,7 +40,25 @@
   			\item \textbf{Risorse software:} \textnormal{Sono necessari strumenti per il tracciamento dei requisiti, per la stesura dei documenti in \LaTeX, per la creazione di diagrammi UML, per lo sviluppo del prodotto e per supporto e verifica del codice.}
   			\item \textbf{Risorse hardware:} \textnormal{Sono necessari computer per scrivere documentazioni e codice del prodotto e stabili dove poter lavorare al progetto.}
 		\end{itemize}
-		
+
+	\subsection{Tecniche}
+		\subsubsection{Analisi Statica}
+		Comprende due tipologie di analisi che verranno utilizzate durante tutto il ciclo di vita del software, queste sono applicabili sia alla documentazione che appunto al software:
+			\begin{itemize}
+				\item \textbf{Walkthrough:} tecnica necessaria nelle prime fasi del progetto, vista l'inesperienza da parte del gruppo nell'attuare un tipo di verifica più precisa e mirata. Questo tipo di analisi è molto dispendioso in quanto prevede una lettura critica del codice o del documento in analisi, senza avere idea del tipo di anomalia ricercata. Una volta trovata l'anomalia, nella fase di redazione dei documenti o nella fase di codifica che sia, verrà aggiunta alla lista di controllo così che in futuro si venga ad utilizzare sempre di più l'Ispection a discapito del Walkthrought;
+				\item \textbf{Ispection:} lettura mirata del codice e/o dei documenti, guidata da una
+lista di controllo definita gradualmente, sia grazie all'esperienza personale, sia attraverso l'arricchimento derivante dall'attività di Walkthrough. Ogni difetto riscontrato verrà corretto e documentato con dei rapporti sulle attività svolte. La lista di controllo inizialmente non sarà abbastanza ampia da garantire l'affidabilità dell'elemento analizzato, per questo almeno nelle prime fasi verrà affiancata al Walkthrought.
+			\end{itemize}
+		\subsubsection{Analisi Dinamica}
+		Applicabile solamente al prodotto software e permette di verificarlo e validarlo attraverso test. Questi test per essere significativi devono essere ripetibili, ossia dato lo stesso input sul medesimo ambiente di esecuzione, forniscono lo stesso risultato. In questo modo è più facile riscontrare l'origine di eventuali errori.
+			\begin{itemize}
+				\item \textbf{Test di unità:} verifica ogni singola unità del prodotto software, avvalendosi di strumenti come driver e/o stub. In particolare si verifica che per ogni unità siano esplorati tutti i cammini di esecuzione possibili e che i requisiti per quella determinata unità siano soddisfatti;
+				\item \textbf{Test di integrazione:} verifica dei componenti costituiti dall'integrazione di più unità che hanno soddisfatto i test di unità; aiuta ad identificare errori residui nella realizzazione dei componenti, modifiche delle interfacce o cambiamenti nei requisiti. A questo scopo verranno utilizzate classi simulate per verificarne l'interazione, senza più la necessità di verificare il loro comportamento interno;
+				\item \textbf{Test di sistema:} validazione del sistema attraverso la verifica della copertura di tutti i requisiti individuati nell'Analisi dei Requisiti;
+				\item \textbf{Test di regressione:} ogni qualvolta che si applica una modifica ad una parte del codice precedentemente testato, devono essere svolti tutti i test di unità e integrazione ad essa relativa;
+				\item \textbf{Test di accettazione:} collaudo controllato dal committente, se quest'ultimo ha esito positivo, si procede al rilascio del prodotto.
+			\end{itemize}
+
 	\subsection{Misure e metriche}
 	Descrizione delle metriche e delle misure per rendere quantificabili e conseguentemente qualificabili i processi, i documenti e il software prodotto.
 
@@ -93,22 +103,5 @@ I processi saranno pianificati dettagliatamente rispetto ai requisiti e alle ris
 				\item \textbf{Numero di livelli di annidamento} \textnormal{: metrica per misurare il livello di annidamento dei metodi. Un numero elevato comporta eccessiva complessità del codice e ne riduce il livello di astrazione.\\ \\
 				Range-ottimale [1-4], range-accettazione [1-6].}
 			\end{itemize}
-\subsection{Tecniche}
-\subsubsection{Analisi Statica}
-Comprende due tipologie di analisi che verranno utilizzate durante tutto il ciclo di vita del software, queste sono applicabili sia alla documentazione che appunto al software:
-\begin{itemize}
-\item \textbf{Walkthrough} :tecnica necessaria nelle prime fasi del progetto, vista l'inesperienza da parte del gruppo nell'attuare un tipo di verifica più precisa e mirata. Questo tipo di analisi è molto dispendioso in quanto prevede una lettura critica del codice o del documento in analisi, senza avere idea del tipo di anomalia ricercata. Una volta trovata l'anomalia, nella fase di redazione dei documenti o nella fase di codifica che sia, verrà aggiunta alla lista di controllo così che in futuro si venga ad utilizzare sempre di più l'Ispection a discapito del Walkthrought.
-\item \textbf{Ispection} :lettura mirata del codice e/o dei documenti, guidata da una
-lista di controllo definita gradualmente, sia grazie all'esperienza personale, sia attraverso l'arricchimento derivante dall'attività di Walkthrough. Ogni difetto riscontrato verrà corretto e documentato con dei rapporti sulle attività svolte. La lista di controllo inizialmente non sarà abbastanza ampia da garantire l'affidabilità dell'elemento analizzato, per questo almeno nelle prime fasi verrà affiancata al Walkthrought.
-\end{itemize}
-\subsubsection{Analisi Dinamica}
-Applicabile solamente al prodotto software e permette di verificarlo e validarlo attraverso test. Questi test per essere significativi devono essere ripetibili, ossia dato lo stesso input sul medesimo ambiente di esecuzione, forniscono lo stesso risultato. In questo modo è più facile riscontrare l'origine di eventuali errori.
-\begin{itemize}
-\item\textbf{Test di unità} :verifica ogni singola unità del prodotto software, avvalendosi di strumenti come driver e/o stub. In particolare si verifica che per ogni unità siano esplorati tutti i cammini di esecuzione possibili e che i requisiti per quella determinata unità siano soddisfatti;
-\item\textbf{Test di integrazione} :verifica dei componenti costituiti dall'integrazione di più unità che hanno soddisfatto i test di unità; aiuta ad identificare errori residui nella realizzazione dei componenti, modifiche delle interfacce o cambiamenti nei requisiti. A questo scopo verranno utilizzate classi simulate per verificarne l'interazione, senza più la necessità di verificare il loro comportamento interno.
-\item\textbf{Test di sistema} :validazione del sistema attraverso la verifica della copertura di tutti i requisiti individuati nell'Analisi dei Requisiti.
-\item\textbf{Test di regressione} :ogni qualvolta che si applica una modifica ad una parte del codice precedentemente testato, devono essere svolti tutti i test di unità e integrazione ad essa relativa.
-\item\textbf{Test di accettazione} :collaudo controllato dal committente, se quest'ultimo ha esito positivo, si procede al rilascio del prodotto.
 
-\end{itemize}
 	\pagebreak
