@@ -636,7 +636,7 @@ La sessione è scaduta. Non è quindi possibile eseguire questa operazione.
 \item \textbf{Postcondizione:} 
 \end{itemize}
 
-\subsubsection{UC 1.7.5: Eliminazione di un utente}
+\subsubsection{UC 1.7.3: Eliminazione di un utente}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
@@ -645,7 +645,7 @@ La sessione è scaduta. Non è quindi possibile eseguire questa operazione.
 \item \textbf{Postcondizione:} 
 \end{itemize}
 
-\subsubsection{UC 1.7.5.1: Selezione di un utente}
+\subsubsection{UC 1.7.3.1: Selezione di un utente}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
@@ -654,7 +654,7 @@ La sessione è scaduta. Non è quindi possibile eseguire questa operazione.
 \item \textbf{Postcondizione:} 
 \end{itemize}
 
-\subsubsection{UC 1.7.5.2: Pressione pulsante elimina}
+\subsubsection{UC 1.7.3.2: Pressione pulsante elimina}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
@@ -663,7 +663,7 @@ La sessione è scaduta. Non è quindi possibile eseguire questa operazione.
 \item \textbf{Postcondizione:} 
 \end{itemize}
 
-\subsubsection{UC 1.7.5.3: Conferma eliminazione}
+\subsubsection{UC 1.7.3.3: Conferma eliminazione}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
@@ -672,7 +672,7 @@ La sessione è scaduta. Non è quindi possibile eseguire questa operazione.
 \item \textbf{Postcondizione:} 
 \end{itemize}
 
-\subsubsection{UC 1.7.6: Errore nell’eliminazione dell'utente}
+\subsubsection{UC 1.7.4: Errore nell’eliminazione dell'utente}
 ( risorsa occupata, utente loggato, viste in aggiornamento )
 
 \begin{itemize}
@@ -686,19 +686,30 @@ La sessione è scaduta. Non è quindi possibile eseguire questa operazione.
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
-\end{itemize}
+\item \textbf{Descrizione:} un utente deve poter creare un account per poter eseguire il login
+all’interno del sistema e usufruire delle funzionalità offerte.
+\item \textbf{Precondizione:} l'utente accede al sito web tramite un browser supportato
+dal sistema.
+\item \textbf{Postcondizione:} il sistema ha memorizzato i dati relativi all’account utente e
+ripresenta a questi la schermata iniziale.
+\item \textbf{Flusso principale degli eventi:}
 
+\begin{enumerate}
+\item inserimento username (UC 1.8.1);
+\item inserimento email (UC 1.8.2);
+\item inserimento password (UC 1.8.3);
+\item conferma registrazione (UC 1.8.4).
+\end{enumerate}
+
+\end{itemize}
 
 \subsubsection{UC 1.8.1: Inserimento username}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Descrizione:} l'utente deve inserire il proprio nome utente per essere riconoscibile univocamente all'interno del sistema e per poter gestire le proprie View.
+\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire l'username per il nuovo account.
+\item \textbf{Postcondizione:} l'utente ha inserito il proprio username.
 \end{itemize}
 
 \subsubsection{UC 1.8.2: Inserimento mail}
@@ -706,8 +717,8 @@ La sessione è scaduta. Non è quindi possibile eseguire questa operazione.
 \begin{itemize}
 \item \textbf{Attori:} Utente
 \item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire la mail per il nuovo account.
+\item \textbf{Postcondizione:} l'utente ha inserito il proprio indirizzo mail.
 \end{itemize}
 
 \subsubsection{UC 1.8.3: Inserimento password}
@@ -715,17 +726,27 @@ La sessione è scaduta. Non è quindi possibile eseguire questa operazione.
 \begin{itemize}
 \item \textbf{Attori:} Utente
 \item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire la password per il nuovo account.
+\item \textbf{Postcondizione:} l'utente ha inserito la password.
 \end{itemize}
 
 \subsubsection{UC 1.8.4: Conferma registrazione}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Descrizione:} l'utente deve poter confermare i dati inseriti durante la registrazione.
+\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile confermare i dati inseriti in precedenza per la creazione di un nuovo account.
+\item \textbf{Postcondizione:} l'utente ha confermato di voler creare un nuovo account all'interno
+del sistema.
+\end{itemize}
+
+\subsubsection{UC 1.8.4: Errore durante la registrazione}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} se vengono inseriti dei dati non conformi ai vincoli di sistema indicati durante la registrazione viene visualizzata una schermata di errore. 
+\item \textbf{Precondizione:} i dati inseriti non rispettano uno o più vincoli di sistema.
+\item \textbf{Postcondizione:} l'utente ha visualizzato l'errore relativo ai dati inseriti.
 \end{itemize}
 
 
