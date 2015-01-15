@@ -21,6 +21,9 @@
 % Version		Modifier Date		Change											Author
 % 0.0.5 		2015/01/13 			Completato elenco UC					 		Roetta Marco
 % =================================================================================================
+% Version		Modifier Date		Change											Author
+% 0.0.6 		2015/01/15 			Modifica UC dopo incontro				 		Roetta Marco
+% =================================================================================================
 
 
 % CONTENUTO DEL CAPITOLO
@@ -263,7 +266,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 \begin{itemize}
 \item \textbf{Attori:} Utente
 \item \textbf{Descrizione:} L'utente può modificare i parametri associati ad una specifica View.
-\item \textbf{Precondizione:} La vista è stata creata ed è disponibile nell'elenco Views dell'utente.
+\item \textbf{Precondizione:} La View è stata creata ed è disponibile nell'elenco Views dell'utente.
 \item \textbf{Postcondizione:} I parametri relativi alla View sono stati modificati.
 \end{itemize}
 
@@ -271,181 +274,186 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Descrizione:} L'utente deve selezionare la View desiderata dall'elenco delle View per poterla visualizzare e modificare.
+\item \textbf{Precondizione:} L'utente si trova nel suo elenco delle View.
+\item \textbf{Postcondizione:} L'utente ha selezionato e visualizzato la View desiderata.
 \end{itemize}
 
 \subsubsection{UC 1.3.4.2: apertura pannello modifica}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Descrizione:} L'utente può selezionare il pulsante modifica dal pannello della View attualmente visualizzata per modificarne i parametri.
+\item \textbf{Precondizione:} L'utente ha visualizzato correttamente una View.
+\item \textbf{Postcondizione:} L'utente ha aperto il pannello modifica View.
 \end{itemize}
 
 \subsubsection{UC 1.3.4.3: inserimento dei dati}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Descrizione:} L'utente può inserire i nuovi parametri della View aggiungendoli a quelli esistenti oppure sovrascrivendoli.
+\item \textbf{Precondizione:} L'utente ha visualizzato il pannello modifica View.
+\item \textbf{Postcondizione:} L'utente ha inserito i nuovi parametri.
 \end{itemize}
 
 \subsubsection{UC 1.3.4.4: conferma dei dati inseriti}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Descrizione:} L'utente deve confermare i parametri inseriti perima che questi siano attivi.
+\item \textbf{Precondizione:} L'utente ha inserito i parametri desiderati nei campi del pannello di modifica View.
+\item \textbf{Postcondizione:} I nuovi parametri sono stati memorizzati nel sistema e sono ora attivi.
 \end{itemize}
 
 \subsubsection{UC 1.3.5: Errore nella modifica dei dati}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Descrizione:} L'utente visualizza una schermata di errore con i parametri che ha inserito non conformi ai vincoli di sistema.
+\item \textbf{Precondizione:} L'utente ha inserito dei parametri non validi.
+\item \textbf{Postcondizione:} L'utente ha visualizzato il messaggio di errore e ha preso atto dei parametri inseriti non conformi ai vincoli di sistema.
 \end{itemize}
 
 \subsubsection{UC 1.3.6: Eliminazione di una View}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Descrizione:} L'utente può eliminare una View precedentemente creata.
+\item \textbf{Precondizione:} L'utente ha creato almeno una View e questa è visualizzata nell'elenco delle sue View.
+\item \textbf{Postcondizione:} L'utente ha cancellato una View dal suo profilo.
 \end{itemize}
 
-\subsubsection{UC 1.3.6.1: selezione di una View}
+\subsubsection{UC 1.3.6.1: Selezione di una View}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Descrizione:} L'utente deve selezionare la View desiderata dall'elenco delle View per poterla visualizzare e modificare.
+\item \textbf{Precondizione:} L'utente si trova nel suo elenco delle View.
+\item \textbf{Postcondizione:} L'utente ha selezionato e visualizzato la View desiderata.
 \end{itemize}
 
-\subsubsection{UC 1.3.6.2: conferma eliminazione di una View}
+\subsubsection{UC 1.3.6.2: Eliminazione di una View}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Descrizione:} L'utente può selezionare il pulsante Elimina View dalla View correntemente visualizzata.
+\item \textbf{Precondizione:} L'utente ha visualizzato correttamente una delle sue View.
+\item \textbf{Postcondizione:} L'utente ha selezionato il pulsante Elimina View.
 \end{itemize}
+
+\subsubsection{UC 1.3.6.3: Conferma eliminazione di una View}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} L'utente deve confermare l'eliminazione delle View selezionando il pulsante di conferma sul messaggio di conferma eliminazione View.
+\item \textbf{Precondizione:} L'utente ha selezionato il pulsante di eliminazione di una View.
+\item \textbf{Postcondizione:} L'utente ha confermato l'eliminazione e la View è stata eliminata dal sistema.
+\end{itemize}
+
 
 
 
 \subsection{UC 1.4: Gestione delle Recipe}
 
 \begin{itemize}
-\item \textbf{Attori Coinvolti:}
-Utente Amministratore
+\item \textbf{Attori Coinvolti:} Utente Amministratore
 
-\item \textbf{Precondizione:}
-L’utente deve aver fatto l’accesso nell’apposita pagina.
+\item \textbf{Precondizione:} L'utente deve aver fatto l'accesso nell'apposita pagina.
 
-\item \textbf{Descrizione:}
-Gli utenti possono vedere in questa pagina le ricette e i dati ad esse associati.  
-Si può creare una nuova ricetta. 
-Si può eliminare una ricetta esistente.
+\item \textbf{Descrizione:} Gli utenti amministratori possono vedere in questa pagina le ricette e i dati ad esse associati. Essi possono creare oppure eliminare una Recipe.
 
-\item \textbf{Post Condizione:}
-Le informazioni richieste dall'utente sono state fornite.
-Le impostazioni modificate sono state salvate nel sistema.
-Le informazioni aggiunte sono state salvate nel sistema.
+\item \textbf{Postcondizione:} Le informazioni richieste dall'utente sono state fornite.
+Le Recipe eliminate sono state cancellate dal sistema.
+Le Recipe aggiunte sono state salvate nel sistema.
 
-\item \textbf{Possibili Errori:}
-In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
+\item \textbf{Possibili Errori:} In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
 \end{itemize}
 
-\subsubsection{UC 1.4.1: Visualizza Recipe}
+\subsubsection{UC 1.4.1: Visualizza Recipes}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente Amministratore
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Descrizione:} L'utente amministratore può visualizzare l'elenco di tutte le Recipe salvate nel sistema selezionando l'apposito pulsante nella sua home screen.
+\item \textbf{Precondizione:} L'utente amministratore ha effettutao l'accesso al sistema e si trova nella sua home screen.
+\item \textbf{Postcondizione:} L'utente ha visualizzato correttamente l'elenco delle Recipes salvate nel sistema.
 \end{itemize}
 
-\subsubsection{UC 1.4.1.1: Apertura elenco Recipe}
+\subsubsection{UC 1.4.2: Aggiungi una nuova Recipe}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente Amministratore
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Descrizione:} L'utente amministratore può aggiungere una nuova Recipe al sistema.
+\item \textbf{Precondizione:} L'utente amministratore ha visualizzato l'elenco delle Recipes salvate nel sistema.
+\item \textbf{Postcondizione:} L'utente amministratore ha salvato una nuova Recipe nel sistema.
 \end{itemize}
 
-\subsubsection{UC 1.4.2: Aggiungi una Recipe}
+\subsubsection{UC 1.4.2.1: Apertura elenco Recipes}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente Amministratore
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Descrizione:} L'utente amministratore può visualizzare l'elenco delle Recipes salvate nel sistema premendo l'apposito pulsante nella sua Home Screen.
+\item \textbf{Precondizione:} L'utente amministratore ha effettuato l'accesso al sistema.
+\item \textbf{Postcondizione:} L'utente amministratore ha visualizzato correttamente l'elenco delle Recipes.
 \end{itemize}
 
-\subsubsection{UC 1.4.2.1: Apertura pannello inserimento nuova Recipe}
+\subsubsection{UC 1.4.2.2: Apertura pannello inserimento nuova Recipe}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente Amministratore
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Descrizione:} L'utente amministratore può selezionare il pulsante di inserimento di una nuova Recipe dall'elenco delle Recipes.
+\item \textbf{Precondizione:} L'utente amministratore ha visualizzato l'elenco delle Recipes.
+\item \textbf{Postcondizione:} L'utente amministratore ha visualizzato il pannello di inserimento nuova Recipe.
 \end{itemize}
 
-\subsubsection{UC 1.4.2.2: Inserimento delle informazioni }
+\subsubsection{UC 1.4.2.3: Inserimento delle informazioni }
 
 \begin{itemize}
 \item \textbf{Attori:} Utente Amministratore
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Descrizione:} L'utente amministratore può inserire il nome ed i parametri per la nuova Recipe nel pannell odi inserimento nuova Recipe.
+\item \textbf{Precondizione:} L'utente amministratore ha selezionato il pulsante per l'inseriemnto di una nuova Recipe.
+\item \textbf{Postcondizione:} L'utente ha inserito tutti i parametri richiesti dal sistema.
 \end{itemize}
 
-\subsubsection{UC 1.4.2.3: Conferma delle informazioni inserite}
+\subsubsection{UC 1.4.2.4: Conferma delle informazioni inserite}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente Amministratore
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Descrizione:} L'utente amministratore deve confermare i parametri inseriti prima che questi siano attivi nel sistema.
+\item \textbf{Precondizione:} L'utente ha inserito almeno tutti i parametri obbligatori richiesti dal sistema.
+\item \textbf{Postcondizione:} L'utente amministratore ha confermato i parametri inseriti.
 \end{itemize}
 
-\subsubsection{UC 1.4.3: Errore nell'inserimetno di una Recipe}
+\subsubsection{UC 1.4.3: Errore nell'inserimento di una nuova Recipe}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente Amministratore
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Descrizione:} L'utente amministratore ha inserito dei parmetri che non rispettano i vincoli di sistema durante l'inserimento di una nuova Recipe.
+\item \textbf{Precondizione:} L'utente amministratore ha selezionato il pulsante di conferma per la creazione di una nuova Recipe.
+\item \textbf{Postcondizione:} L'utente amministratore ha visualizzato un messaggio di errore contenente l'elenco dei parametri inseriti non corretti oppure contenente l'eccezione sollevata dal sistema durante il salvataggio della nuova Recipe.
 \end{itemize}
 
 \subsubsection{UC 1.4.4: Eliminazione di una Recipe}
 
+\begin{itemize}
 \textbf{Attori Coinvolti:}
 Utente Amministratore
 
 \textbf{Precondizione:}
-L’utente deve aver visualizzato la schermata di gestione delle ricette.
+L'utente amministratore deve aver visualizzato la schermata di gestione delle Recipes.
 
 Descrizione:
-L’utente può eliminare una ricetta e tutti i dati ad essa associati.
-Si possono eliminare solo le ricette non più utilizzate in una o più viste proprie o di un altro utente.    
+L'utente amministratore può eliminare una Recipe e tutti i dati ad essa associati.
+Si possono eliminare solo le Recipe non più utilizzate in una o più viste proprie o di un altro utente.    
 
 \textbf{Post Condizione:}
 Le informazioni richieste dall'utente sono state fornite.
-La ricetta(e) desiderata(e) e i dati ad essa(e) associati è(sono) stati cancellati dal sistema.
+La Recipe desiderata e tutti i dati ad essa associati sono stati eliminati dal sistema.
 
 \textbf{Possibili Errori:}
 In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
-In caso di ricetta in uso o in fase di aggiornamento a causa di una schedulazione viene visualizzato un messaggio di errore e nessun dato viene alterato.
+In caso di Recipe in uso o in fase di aggiornamento a causa di una schedulazione viene visualizzato un messaggio di errore e nessun dato viene alterato o cancellato.
+\end{itemize}
 
 \subsubsection{UC 1.4.4.1: selezione di una Recipe}
 
