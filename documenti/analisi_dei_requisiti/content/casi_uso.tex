@@ -174,24 +174,19 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 
 
 
-\subsection{UC 1.3: Visualizzazione, creazione e modifica viste}
+\subsection{UC 1.3: Gestione delle View}
 
 \begin{itemize}
-\item \textbf{Attori Coinvolti:}
-Utente autenticato: utente autenticato che ha acceduto al servizio
-Utente amministratore autenticato: utente autenticato in grado di accedere a tutte le aree del servizio
+\item \textbf{Attori Coinvolti:} Utente, Utente amministratore
+\item \textbf{Pre Condizione:} L’utente deve aver fatto l’accesso nell’apposita pagina.
 
-\item \textbf{Pre Condizione:}
-L’utente deve aver fatto l’accesso nell’apposita pagina.
-
-\item \textbf{Descrizione:}
-Gli utenti autenticati possono vedere in questa pagina le viste e i dati ad esse associati. 
-Si rende disponibile per ciascuna vista un pannello per modificarne i parametri. 
-Si può creare una nuova vista. 
-Si può eliminare una vista esistente.
+\item \textbf{Descrizione:} Gli utenti autenticati possono vedere in questa pagina le Views e i dati ad esse associati. 
+Si rende disponibile per ciascuna View un pannello per modificarne i parametri. 
+Si può creare una nuova View. 
+Si può eliminare una View esistente.
 
 \item \textbf{Post Condizione:}
-Le informazioni richieste dall’utente sono state fornite
+Le informazioni richieste dall'utente sono state fornite
 Le impostazioni modificate sono state salvate nel sistema.
 Le informazioni aggiunte sono state salvate nel sistema.
 
@@ -199,48 +194,48 @@ Le informazioni aggiunte sono state salvate nel sistema.
 In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
 \end{itemize}
 
-\subsubsection{UC 1.3.1: Visualizza viste}
+\subsubsection{UC 1.3.1: Visualizza Views}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} Questa è la home screen dell'utente attualmente connesso. Qui è possibile visualizzare tutti o parte dei suoi grafici e accedere ai menu di configurazione.
+\item \textbf{Descrizione:} Questa è la home screen dell'utente attualmente connesso. Qui è possibile visualizzare tutti o parte delle sue View e accedere ai menu di configurazione.
 \item \textbf{Precondizione:} L'utente ha effettuato il login oppure ha selezionato il pulsante per accedere a questa pagina.
 \item \textbf{Postcondizione:} L'utente viene reindirizzato alla home screen e visualizza le informazioni richieste.
 \end{itemize}
 
-\subsubsection{UC 1.3.1.1: Apertura elenco viste}
+\subsubsection{UC 1.3.1.1: Apertura elenco Views}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} Premendo sull'apposito pulsante è possibile far comparire a video l'elenco di tutte le viste utente.
+\item \textbf{Descrizione:} Premendo sull'apposito pulsante è possibile far comparire a video l'elenco di tutte le Views utente.
 \item \textbf{Precondizione:} L'utente si trova nella home screen.
-\item \textbf{Postcondizione:} L'utente ha ottenuto l'elenco di tutte le sue viste
+\item \textbf{Postcondizione:} L'utente ha ottenuto l'elenco di tutte le sue Views
 \end{itemize}
 
-\subsubsection{UC 1.3.2: Aggiungi una vista}
+\subsubsection{UC 1.3.2: Aggiungi una View}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} Dalla home screen l'utente può aggiungere una nuova vista premendo sull'apposito pulsante, compilando i dati richiesti e confermando l'operazione.
+\item \textbf{Descrizione:} Dalla home screen l'utente può aggiungere una nuova View premendo sull'apposito pulsante, compilando i dati richiesti e confermando l'operazione.
 \item \textbf{Precondizione:} L'utente si è autenticato e si trova nella home screen.
-\item \textbf{Postcondizione:} L'utente ha creato una nuovo vista.
+\item \textbf{Postcondizione:} L'utente ha creato una nuovo View.
 \end{itemize}
 
-\subsubsection{UC 1.3.2.1: Apertura pannello inserimento nuova vista}
+\subsubsection{UC 1.3.2.1: Apertura pannello inserimento nuova View}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} L'utente ha a disposizione un pulsante per aprire il pannello in cui inserire e selezionare i dati per la creazione di una nuova vista.
+\item \textbf{Descrizione:} L'utente ha a disposizione un pulsante per aprire il pannello in cui inserire e selezionare i dati per la creazione di una nuova View.
 \item \textbf{Precondizione:} L'utente si trova nella home screen.
-\item \textbf{Postcondizione:} L'utente ha aperto il pannello di creazione di una nuova vista.
+\item \textbf{Postcondizione:} L'utente ha aperto il pannello di creazione di una nuova View.
 \end{itemize}
 
 \subsubsection{UC 1.3.2.2: Inserimento delle informazioni}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} L'utente può inserire il nome e i parametri obbligatori e facoltativi relativi ad una nuova vista.
-\item \textbf{Precondizione:} L'utente ha aperto il pannello di inserimento nuova vista.
+\item \textbf{Descrizione:} L'utente può inserire il nome e i parametri obbligatori e facoltativi relativi ad una nuova View.
+\item \textbf{Precondizione:} L'utente ha aperto il pannello di inserimento nuova View.
 \item \textbf{Postcondizione:} L'utente ha inserito le informazioni richieste.
 \end{itemize}
 
@@ -248,32 +243,31 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} L'utente è tenuto a confermare i parametri inseriti nel pannello di creazione di una nuova vista prima di poter utilizzare il grafico associato.
+\item \textbf{Descrizione:} L'utente è tenuto a confermare i parametri inseriti nel pannello di creazione di una nuova View prima di poter utilizzare il grafico associato.
 \item \textbf{Precondizione:} L'utente ha inserito almeno tutti i parametri obbligatori richiesti.
-\item \textbf{Postcondizione:} L'utente ha confermato i parametri inseriti e la vista è stata salvata nel sistema.
+\item \textbf{Postcondizione:} L'utente ha confermato i parametri inseriti e la View è stata salvata nel sistema.
 \item \textbf{Possibili Errori:} L'utente ha inserito delle informazioni errate o non ha rispettato i vincoli del sistema. 
 \end{itemize}
 
-\subsubsection{UC 1.3.3: Creazione nuova vista fallito}
+\subsubsection{UC 1.3.3: Errroe nella Creazione di nuova View}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
 \item \textbf{Descrizione:} In caso i dati inseriti non rispettino i vincoli del sistema oppure se si verifica un errore lato server viene visualizzata questa pagina di errore con i dettagli dei vincoli non rispettati o una breve descrizione dell'errore rilevato.
-\item \textbf{Precondizione:} L'utente ha inserito dei dati che non rispettano i vincoli dl sistema.
-Il server ha sollevato un'eccezione durante il salvataggio dei dati.
+\item \textbf{Precondizione:} L'utente ha inserito dei dati che non rispettano i vincoli dl sistema. Il server ha sollevato un'eccezione durante il salvataggio dei dati.
 \item \textbf{Postcondizione:} Nessuna modifica richiesta è stata salvata nel sistema.
 \end{itemize}
 
-\subsubsection{UC 1.3.4: Modifica una vista}
+\subsubsection{UC 1.3.4: Modifica una View}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} L'utente può modificare i parametri associati ad una specifica vista.
-\item \textbf{Precondizione:} La vista è stata creata ed è disponibile nell'elenco viste dell'utente.
-\item \textbf{Postcondizione:} I parametri relativi alla vista sono stati modificati.
+\item \textbf{Descrizione:} L'utente può modificare i parametri associati ad una specifica View.
+\item \textbf{Precondizione:} La vista è stata creata ed è disponibile nell'elenco Views dell'utente.
+\item \textbf{Postcondizione:} I parametri relativi alla View sono stati modificati.
 \end{itemize}
 
-\subsubsection{UC 1.3.4.1: selezione di una vista}
+\subsubsection{UC 1.3.4.1: selezione di una View}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
@@ -318,7 +312,7 @@ Il server ha sollevato un'eccezione durante il salvataggio dei dati.
 \item \textbf{Postcondizione:} 
 \end{itemize}
 
-\subsubsection{UC 1.3.6: Eliminazione di una vista}
+\subsubsection{UC 1.3.6: Eliminazione di una View}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
@@ -327,7 +321,7 @@ Il server ha sollevato un'eccezione durante il salvataggio dei dati.
 \item \textbf{Postcondizione:} 
 \end{itemize}
 
-\subsubsection{UC 1.3.6.1: selezione di una vista}
+\subsubsection{UC 1.3.6.1: selezione di una View}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
@@ -336,7 +330,7 @@ Il server ha sollevato un'eccezione durante il salvataggio dei dati.
 \item \textbf{Postcondizione:} 
 \end{itemize}
 
-\subsubsection{UC 1.3.6.2: conferma eliminazione di una vista}
+\subsubsection{UC 1.3.6.2: conferma eliminazione di una View}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
@@ -347,7 +341,7 @@ Il server ha sollevato un'eccezione durante il salvataggio dei dati.
 
 
 
-\subsection{UC 1.4: Visualizzazione e creazione di ricette}
+\subsection{UC 1.4: Gestione delle Recipe}
 
 \begin{itemize}
 \item \textbf{Attori Coinvolti:}
@@ -370,7 +364,7 @@ Le informazioni aggiunte sono state salvate nel sistema.
 In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
 \end{itemize}
 
-\subsubsection{UC 1.4.1: Visualizza ricette}
+\subsubsection{UC 1.4.1: Visualizza Recipe}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente Amministratore
@@ -379,7 +373,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 \item \textbf{Postcondizione:} 
 \end{itemize}
 
-\subsubsection{UC 1.4.1.1: Apertura elenco ricette}
+\subsubsection{UC 1.4.1.1: Apertura elenco Recipe}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente Amministratore
@@ -388,7 +382,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 \item \textbf{Postcondizione:} 
 \end{itemize}
 
-\subsubsection{UC 1.4.2: Aggiungi una ricetta}
+\subsubsection{UC 1.4.2: Aggiungi una Recipe}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente Amministratore
@@ -397,7 +391,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 \item \textbf{Postcondizione:} 
 \end{itemize}
 
-\subsubsection{UC 1.4.2.1: Apertura pannello inserimento nuova ricetta}
+\subsubsection{UC 1.4.2.1: Apertura pannello inserimento nuova Recipe}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente Amministratore
@@ -424,7 +418,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 \item \textbf{Postcondizione:} 
 \end{itemize}
 
-\subsubsection{UC 1.4.3: Inserimetno fallito - Eccezione}
+\subsubsection{UC 1.4.3: Errore nell'inserimetno di una Recipe}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente Amministratore
@@ -433,7 +427,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 \item \textbf{Postcondizione:} 
 \end{itemize}
 
-\subsubsection{UC 1.4.4: Eliminazione di una ricetta}
+\subsubsection{UC 1.4.4: Eliminazione di una Recipe}
 
 \textbf{Attori Coinvolti:}
 Utente Amministratore
@@ -453,7 +447,7 @@ La ricetta(e) desiderata(e) e i dati ad essa(e) associati è(sono) stati cancell
 In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
 In caso di ricetta in uso o in fase di aggiornamento a causa di una schedulazione viene visualizzato un messaggio di errore e nessun dato viene alterato.
 
-\subsubsection{UC 1.4.4.1: selezione di una ricetta}
+\subsubsection{UC 1.4.4.1: selezione di una Recipe}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente Amministratore
@@ -462,7 +456,7 @@ In caso di ricetta in uso o in fase di aggiornamento a causa di una schedulazion
 \item \textbf{Postcondizione:} 
 \end{itemize}
 
-\subsubsection{UC 1.4.4.2: conferma eliminazione di una ricetta}
+\subsubsection{UC 1.4.4.2: conferma eliminazione di una Recipe}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente Amministratore
@@ -636,7 +630,7 @@ La sessione è scaduta. Non è quindi possibile eseguire questa operazione.
 \item \textbf{Postcondizione:} 
 \end{itemize}
 
-\subsubsection{UC 1.7.3: Creazione di un nuovo utente}
+\subsubsection{UC 1.7.3: Eliminazione di un utente}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
@@ -645,7 +639,7 @@ La sessione è scaduta. Non è quindi possibile eseguire questa operazione.
 \item \textbf{Postcondizione:} 
 \end{itemize}
 
-\subsubsection{UC 1.7.3.1: Apertura pannello nuovo utente}
+\subsubsection{UC 1.7.3.1: Selezione di un utente}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
@@ -654,7 +648,7 @@ La sessione è scaduta. Non è quindi possibile eseguire questa operazione.
 \item \textbf{Postcondizione:} 
 \end{itemize}
 
-\subsubsection{UC 1.7.3.2: Inserimento dei parametri}
+\subsubsection{UC 1.7.3.2: Pressione pulsante elimina}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
@@ -663,7 +657,7 @@ La sessione è scaduta. Non è quindi possibile eseguire questa operazione.
 \item \textbf{Postcondizione:} 
 \end{itemize}
 
-\subsubsection{UC 1.7.3.3: Conferma dei dati inseriti}
+\subsubsection{UC 1.7.3.3: Conferma eliminazione}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
@@ -672,45 +666,7 @@ La sessione è scaduta. Non è quindi possibile eseguire questa operazione.
 \item \textbf{Postcondizione:} 
 \end{itemize}
 
-\subsubsection{UC 1.7.4: Dati inseriti errati}
-( nome esistente, caratteri speciali )
-\subsubsection{UC 1.7.5: Eliminazione di un utente}
-
-\begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
-\end{itemize}
-
-\subsubsection{UC 1.7.5.1: Selezione di un utente}
-
-\begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
-\end{itemize}
-
-\subsubsection{UC 1.7.5.2: Pressione pulsante elimina}
-
-\begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
-\end{itemize}
-
-\subsubsection{UC 1.7.5.3: Conferma eliminazione}
-
-\begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
-\end{itemize}
-
-\subsubsection{UC 1.7.6: Errore nell’eliminazione dell'utente}
+\subsubsection{UC 1.7.4: Errore nell’eliminazione dell'utente}
 ( risorsa occupata, utente loggato, viste in aggiornamento )
 
 \begin{itemize}
@@ -720,7 +676,71 @@ La sessione è scaduta. Non è quindi possibile eseguire questa operazione.
 \item \textbf{Postcondizione:} 
 \end{itemize}
 
+\subsection{UC 1.8: Registrazione di un nuovo utente}
 
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} un utente deve poter creare un account per poter eseguire il login
+all’interno del sistema e usufruire delle funzionalità offerte.
+\item \textbf{Precondizione:} l'utente accede al sito web tramite un browser supportato
+dal sistema.
+\item \textbf{Postcondizione:} il sistema ha memorizzato i dati relativi all’account utente e
+ripresenta a questi la schermata iniziale.
+\item \textbf{Flusso principale degli eventi:}
 
+\begin{enumerate}
+\item inserimento username (UC 1.8.1);
+\item inserimento email (UC 1.8.2);
+\item inserimento password (UC 1.8.3);
+\item conferma registrazione (UC 1.8.4).
+\end{enumerate}
+
+\end{itemize}
+
+\subsubsection{UC 1.8.1: Inserimento username}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} l'utente deve inserire il proprio nome utente per essere riconoscibile univocamente all'interno del sistema e per poter gestire le proprie View.
+\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire l'username per il nuovo account.
+\item \textbf{Postcondizione:} l'utente ha inserito il proprio username.
+\end{itemize}
+
+\subsubsection{UC 1.8.2: Inserimento mail}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire la mail per il nuovo account.
+\item \textbf{Postcondizione:} l'utente ha inserito il proprio indirizzo mail.
+\end{itemize}
+
+\subsubsection{UC 1.8.3: Inserimento password}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} 
+\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire la password per il nuovo account.
+\item \textbf{Postcondizione:} l'utente ha inserito la password.
+\end{itemize}
+
+\subsubsection{UC 1.8.4: Conferma registrazione}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} l'utente deve poter confermare i dati inseriti durante la registrazione.
+\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile confermare i dati inseriti in precedenza per la creazione di un nuovo account.
+\item \textbf{Postcondizione:} l'utente ha confermato di voler creare un nuovo account all'interno
+del sistema.
+\end{itemize}
+
+\subsubsection{UC 1.8.4: Errore durante la registrazione}
+
+\begin{itemize}
+\item \textbf{Attori:} Utente
+\item \textbf{Descrizione:} se vengono inseriti dei dati non conformi ai vincoli di sistema indicati durante la registrazione viene visualizzata una schermata di errore. 
+\item \textbf{Precondizione:} i dati inseriti non rispettano uno o più vincoli di sistema.
+\item \textbf{Postcondizione:} l'utente ha visualizzato l'errore relativo ai dati inseriti.
+\end{itemize}
 
 
