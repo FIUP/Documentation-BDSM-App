@@ -21,30 +21,30 @@
 		\subsubsection{Attività}
 
 			\subparagraph{Documentazione}
-			Con il processo di documentazione, il gruppo \groupName intende riportare tutte le informazioni acquisite durante il ciclo di vita del software.
-			In particolare si andranno ad identificare gli standard per la creazione e stesura dei documenti, nonchè tutti i processi atti a redendere i documenti formalmente corretti.
+			Con il processo di documentazione, il gruppo \groupName{} intende riportare tutte le informazioni acquisite durante il ciclo di vita del software.
+			In particolare si andranno ad identificare gli standard per la creazione e stesura dei documenti, nonché tutti i processi atti a rendere i documenti formalmente corretti.
 
 		\subsubsection{Procedure}
 
 			\paragraph{Gestione dei documenti}
-			Per ogni documento che il \roleProjectManager ritiene utile essere steso dovrà essere generato con appositi tools messi a disposizione. Essi permettono di mantenere un certo ordine e rigore logico.  
+			Per ogni documento che il \roleProjectManager{} ritiene utile essere steso dovrà essere generato con appositi tools messi a disposizione. Essi permettono di mantenere un certo ordine e rigore logico.  
 
 				\subparagraph{Creazione di un nuovo documento}
 				Ogni qualvolta il \roleProjectManager voglia creare un nuovo documento dovrà eseguire i seguenti passi:
 				\begin{enumerate}
-				\item posizionarsi all'interno della cartella \emph{documenti} presente nel repository;
-				\item invocare il comando \emph{make nome\textunderscore del\textunderscore documento}.
+					\item posizionarsi all'interno della cartella \emph{documenti} presente nel repository;
+					\item invocare il comando \emph{make nome\textunderscore del\textunderscore documento}.
 				\end{enumerate}
-				Al termine dell'esceuzione dello script sarà presente una nuova cartella già rinominata correttamente con all'interno presenti tutti i file utili per l'inizio della stesura del nuovo documento.
+				Al termine dell'esecuzione dello script sarà presente una nuova cartella già rinominata correttamente con all'interno presenti tutti i file utili per l'inizio della stesura del nuovo documento.
 
 				\subparagraph{Avanzamento di un documento}
 				Alla fine di ogni avanzamento il documento dovrà essere sottoposto a molteplici procedure. Essi possono essere così definite:
 				\begin{enumerate}
-				\item il redattore dovrà effettuare l'upload del documento all'interno del branch predisposto presente nel repository;
-				\item il redattore segnerà come completato il tiket assegnatogli;
-				\item il \roleProjectManager riceverà automaticamente una mail con la conferma dell'avvenuta conclusione;
-				\item il \roleProjectManager assegnerà un tiket di verfica del documento ad un verificatore che non abbia già provveduto alla stesura del documento;
-				\item qualora il documento sia corretto si procederà alla chiusura del tiket, avvisando automaticamente il \roleProjectManager, che a sua volta provvedrà a contrassegnare il documento come approvato. Altrimenti il \roleVerifier assegnerà nuovi tiket al redattore. In seguito il redattore provvederà a rieseguire tutti i passi del seguente elenco;
+					\item il redattore dovrà effettuare l'upload del documento all'interno del branch predisposto presente nel repository;
+					\item il redattore segnerà come completato il ticket assegnatogli;
+					\item il \roleProjectManager{} riceverà automaticamente una mail con la conferma dell'avvenuta conclusione;
+					\item il \roleProjectManager{} assegnerà un ticket di verifica del documento ad un verificatore che non abbia già provveduto alla stesura del documento;
+					\item qualora il documento sia corretto si procederà alla chiusura del ticket, avvisando automaticamente il \roleProjectManager{}, che a sua volta provvederà a contrassegnare il documento come approvato. Altrimenti il \roleVerifier{} assegnerà nuovi ticket al redattore. In seguito il redattore provvederà a eseguire di nuovo tutti i passi del seguente elenco;
 				\end{enumerate}
 
 			\paragraph{Gestione del glossario} TO DO
@@ -54,24 +54,37 @@
 		\subsubsection{Norme}
 
 			\paragraph{Progettazione e sviluppo dei documenti}
-			Per ogni documento che si erige si dovrà rispettare un ben preciso layout di sviluppo. Si raccolgono di seguito le informazioni utili per la composizione delle prime pagine, le sezioni e le norme tipografiche da utilizzare in fase di scrittura.
+			Per ogni documento che si redige si dovrà rispettare un ben preciso layout di sviluppo. Si raccolgono di seguito le informazioni utili per la composizione delle prime pagine, le sezioni e le norme tipografiche da utilizzare in fase di scrittura.
 
-			\paragraph{Versionamento} TO DO
+			\paragraph{Versionamento} TO DO (forse non serve qua visto che è già inserito nei processi organizzativi)
 
 			\paragraph{Template}
-			Al fine di ottenere dei documenti formattati correttamente si è predisposto un template in Latex da seguire scrupolosamente. Esso deve essere utilizzato come linea guida per lo sviluppo dei documenti. Ogni tipologia di documento, prima pagina, indici, contenuti interni, lettere hanno uno stile definito in maniera univoca. Esso ne permette una gestione capillare ed omogenea.\\
-
-%%%%%%%%% INSERIRE TEMPLATE HEADER
+			Al fine di ottenere dei documenti formattati correttamente si è predisposto un template in \LaTeX{} da seguire scrupolosamente. Esso deve essere utilizzato come linea guida per lo sviluppo dei documenti. Ogni tipologia di documento, prima pagina, indici, contenuti interni, lettere hanno uno stile definito in maniera univoca. Esso ne permette una gestione capillare ed omogenea.\\
+			Verrà definita inoltre un intestazione per ogni file \emph{.tex} nel modo seguente:
+				\begin{verbatim}
+					% ==================================================================================
+					% File:			nome_del_documento.tex
+					% Description:	Definisce il capitolo relativo a ...
+					% Created:		aaaa-mm-gg
+					% Author:		Cognome Nome
+					% Email:		cognome.nome@mashup-unipd.it
+					% ===================================================================================
+					% Modification History:
+					% Version		Modifier Date		Change									Author
+					% 0.0.1 		aaaa-mm-gg 			Descrizione del cambiamento				Cognome Nome
+					
+				\end{verbatim}
+			\noindent
 
 			\paragraph{Struttura dei documenti}
 			Per facilitare la stesura e la gestione si è provvisto alla creazione di un cartella per ogni documento, essa è ha come titolo il nome del documento.\\
-			Nella root della cartella è presente il file che gestise il contenuto della prima pagina. Esso ha il compito di includere tutti gli stili e a linkare tutte le sezioni utili alla costruzione del documento.\\
+			Nella root della cartella è presente il file che gestisce il contenuto della prima pagina. Esso ha il compito di includere tutti gli stili e a linkare tutte le sezioni utili alla costruzione del documento.\\
 			All'interno della cartella \emph{content} sono presenti tutti i file, divisi per capitolo, contenti il testo dell'intero documento.\\
-			Le cartelle \emph{diagrams} e \emph{images} hanno il compito di contentere i releativi diagrammi ed immagini usati nei singoli documenti.\\
+			Le cartelle \emph{diagrams} e \emph{images} hanno il compito di contenere i relativi diagrammi ed immagini usati nei singoli documenti.\\
 			Nella cartella \emph{doc\textunderscore to\textunderscore modify} sono presenti due files, il primo \emph{content\textunderscore files.tex} raggruppa tutti i sottocapitoli e li ordina in base alle scelte dell'utente. Il secondo file \emph{history.tex} contiene la storia della creazione e modifica apportata al documento.
 
 				\subparagraph{Prima pagina}
-				La prima pagina contiene un elenco delle caratteristiche fodamentali del documento quali:
+				La prima pagina contiene un elenco delle caratteristiche fondamentali del documento quali:
 				\begin{itemize}
 					\item logo del progetto;
 					\item logo, nome ed email del gruppo; 
@@ -87,7 +100,7 @@
 				\end{itemize}
 			
 				\subparagraph{Diario delle revisioni}
-				Successivamente nella seconda pagina è presente l'elenco delle revisioni apportate al documento. Esso risulta utile per il tracciamento in fase di eleaborazione del documento. Permette di conoscere l'autore delle rispettive sezioni. L'elenco è formato da :
+				Successivamente nella seconda pagina è presente l'elenco delle revisioni apportate al documento. Esso risulta utile per il tracciamento in fase di elaborazione del documento. Permette di conoscere l'autore delle rispettive sezioni. L'elenco è formato da:
 				\begin{itemize}
 					\item descrizione della modifica apportata al documento;
 					\item cognome, nome e ruolo dell'autore della modifica;
@@ -97,82 +110,82 @@
 
 				\subparagraph{Indici}
 				Subito dopo il \emph{Diario delle revisioni} è presente l'indice generale del documento. Esso è reperibile in tutti i documenti ad esclusione del \docGlossary.\\
-				Nella parte iniziale l'indice fa rifermento ai capitoli e sottocapitoli.\\
+				Nella parte iniziale l'indice fa rifermento ai capitoli e sotto capitoli.\\
 				Se presenti immagini e/o tabelle, in automatico è possibile trovare anche il relativo indice associato.
 			
 				\subparagraph{Formattazione di una pagina}
 				Tutti i documenti descrittivi sono formati da una intestazione è da un piè di pagina ben definito.\\
-				Sono presente due bande di colore grigio chiaro agli estermi del documento.\\
+				Sono presente due bande di colore grigio chiaro agli estremi del documento.\\
 				Nella parte alta del documento a sinistra si trova il logo ed il nome del gruppo, mentre nella parte destra il titolo del capitolo principale.\\
 				Nella parte inferiore del documento partendo da sinistra è possibile trovare il nome del documento con la relativa versione.\\
-				Nella parte destra è presente il numero di pagina formato da "Pagina X di Y", dove con "X" si indica la pagina corrente e con "Y" il numero totale di pagine presenti ad esclusione della prima pagina, del diario delle revisioni e degli indici.
+				Nella parte destra è presente il numero di pagina formato da ``Pagina X di Y", dove con ``X" si indica la pagina corrente e con ``Y" il numero totale di pagine presenti ad esclusione della prima pagina, del diario delle revisioni e degli indici.
 
 			\paragraph{Suddivisione sezioni documenti}
 
-				\subparagraph{\docNameSdF} il documento raccoglie le motivazioni e le considerazioni che il gruppo ha elaborato per l'accettazione o meno del progetto da sviluppare. All'interno del documento può essere presente un'analisi che ha portato all'esclusione di altri capitolati.\\
+				\subparagraph{\docNameSdF} Il documento raccoglie le motivazioni e le considerazioni che il gruppo ha elaborato per l'accettazione o meno del progetto da sviluppare. All'interno del documento può essere presente un'analisi che ha portato all'esclusione di altri capitolati.\\
 				Il documento è di tipo interno.
 
-				\subparagraph{\docNameNdP} il documento raccoglie tutte le attività, norme, procedure e strumenti che il gruppo adotterà durante lo sviluppo del progetto se esso verrà concesso.\\
+				\subparagraph{\docNameNdP} Il documento raccoglie tutte le attività, norme, procedure e strumenti che il gruppo adotterà durante lo sviluppo del progetto se esso verrà concesso.\\
 				Il documento è di tipo interno.
 				
-				\subparagraph{\docNamePdP} il documento specifica la pianificazione impiegata per lo svolgimento del progetto. Sono contenute tutte le attività con le relative tempistiche e i relativi rischi. Sono inoltre presenti le specifiche di ogni risorsa impiegata;\\
+				\subparagraph{\docNamePdP} Il documento specifica la pianificazione impiegata per lo svolgimento del progetto. Sono contenute tutte le attività con le relative tempistiche e i relativi rischi. Sono inoltre presenti le specifiche di ogni risorsa impiegata;\\
 				Il documento è di tipo esterno.
 
-				\subparagraph{\docNamePdQ} il documento specifica le strategie applicate al capitolato per ottenere gli obiettivi di qualità. Sono inoltre presenti le attività di verifica e pianificazione con i relativi test che si andranno a sviluppare. \\
+				\subparagraph{\docNamePdQ} Il documento specifica le strategie applicate al capitolato per ottenere gli obiettivi di qualità. Sono inoltre presenti le attività di verifica e pianificazione con i relativi test che si andranno a sviluppare. \\
 				Il documento è di tipo esterno.
 
-				\subparagraph{\docNameAdR} il documento identifica e descrive i requisiti necessari all'implementazione del progetto. Saranno inoltre integrati i casi d'uso ed i requisiti utili allo sviluppo del progetto. Saranno altresì presenti i digrammi grafici di interazione tra utenti e sistema.\\
+				\subparagraph{\docNameAdR} Il documento identifica e descrive i requisiti necessari all'implementazione del progetto. Saranno inoltre integrati i casi d'uso ed i requisiti utili allo sviluppo del progetto. Saranno altresì presenti i digrammi grafici di interazione tra utenti e sistema.\\
 				Il documento è di tipo esterno.
 
-				\subparagraph{\docNameST} il documento identifica una prima progettazione ad altro livello del sistema che si andrà a sviluppare. Sarrano individuati e dettagliatamente specificati i design pattern utilizzati nel progetto.\\
+				\subparagraph{\docNameST} Il documento identifica una prima progettazione ad altro livello del sistema che si andrà a sviluppare. Saranno individuati e dettagliatamente specificati i design pattern utilizzati nel progetto.\\
 				Il documento è di tipo esterno.
 
-				\subparagraph{\docNameDdP} il documento identifica dettagliatamente il prodotto che si va a sviluppare. Tale documento sarà utilizzato dai programmatori per poter sviluppare il software.\\ 
+				\subparagraph{\docNameDdP} Il documento identifica dettagliatamente il prodotto che si va a sviluppare. Tale documento sarà utilizzato dai programmatori per poter sviluppare il software.\\ 
 				Il documento è di tipo esterno.
 
-				\subparagraph{\docNameGlo} il documento raccoglie tutti i termini usati nella documentazione e ne riporta una definizione più descrittiva.  
+				\subparagraph{\docNameGlo} Il documento raccoglie tutti i termini usati nella documentazione e ne riporta una definizione più descrittiva.  
 				Il documento è di tipo esterno.
 
 
 			\paragraph{Norme tipografiche}
-			Tutti i documenti devono rispettare le seguenti norme tipografiche, utili per mantenere i dcumenti omogenei tra loro.
+			Tutti i documenti devono rispettare le seguenti norme tipografiche, utili per mantenere i documenti omogenei tra loro.
 				
 				\subparagraph{Stili di testo}
-				Molti stili di testo sono già stati definiti ed inclusi in appositi file. \LaTeX permette così un forte controllo sulla tipografia, restringendone i campi d'applicazione solamente quando necessario.  
+				Molti stili di testo sono già stati definiti ed inclusi in appositi file. \LaTeX{} permette così un forte controllo sulla tipografia, restringendone i campi d'applicazione solamente quando necessario.  
 				\begin{itemize}
-				\item \textbf{Colorio:} il testo colorato è previsto solamente nei link. Essi sono di colore blu;
-				\item \textbf{Corsivo:} il testo corsivo deve essere utilizzato ogni qual volta si voglia dare enfasi ad una detrminata parola/frase;
-				\item \textbf{Grassetto:} il testo grassetto deve essere utilizzato nella stesura della prefazione degli elenchi non ordinati e ai soli titoli dei capitoli. Può essere utilizzato nel testo ma con moderazione solamente quanto si intende focalizzare un argomento;
-				\item \textbf{Maiuscolo:} l'uso del testo maiuscolo è riservato solamente agli acronimi;
-				\item \textbf{Sottolineato:} non è previsto l'uso del testo sottolineato.
+					\item \textbf{Colori:} il testo colorato è previsto solamente nei link. Essi sono di colore blu;
+					\item \textbf{Corsivo:} il testo corsivo deve essere utilizzato ogni qual volta si voglia dare enfasi ad una determinata parola/frase;
+					\item \textbf{Grassetto:} il testo grassetto deve essere utilizzato nella stesura della prefazione degli elenchi non ordinati e ai soli titoli dei capitoli. Può essere utilizzato nel testo ma con moderazione solamente quanto si intende focalizzare un argomento;
+					\item \textbf{Maiuscolo:} l'uso del testo maiuscolo è riservato solamente agli acronimi;
+					\item \textbf{Sottolineato:} non è previsto l'uso del testo sottolineato.
 				\end{itemize}
 
 				\subparagraph{Punteggiatura}
 				L'utilizzo della punteggiatura deve essere coerente per tutti i testi scritti in \LaTeX. Si impone così:
 				\begin{itemize}
-				\item \textbf{Maiuscole:} il primo carattere di testo maiuscolo è consentito solamente dopo il punto, punto di domanda, punto esclamativo o nell'intestazione di ogni elenco;
-				\item \textbf{Numeri:} i numeri dovranno rispettare lo standard SI/ISO 31-0 
-				\item \textbf{Parentesi:} nel testo è ammesso solamente l'uso di parentesi tonde. Il testo racchiuso tra parentesi non deve mai iniziare o finire con alcun carattere di spaziatura;
-				\item \textbf{Punteggiatura:} prima di ogni simbolo di punteggiatura \emph{non deve} essere presente alcun carattere di spaziatura. L'uso del punto servirà solamente per terminare una discussione;
-				\item \textbf{Spazi:} non dovranno mai essere presenti spazi doppi, o spazi per la tabulazione.
+					\item \textbf{Maiuscole:} il primo carattere di testo maiuscolo è consentito solamente dopo il punto, punto di domanda, punto esclamativo o nell'intestazione di ogni elenco;
+					\item \textbf{Numeri:} i numeri dovranno rispettare lo standard SI/ISO 31-0 
+					\item \textbf{Parentesi:} nel testo è ammesso solamente l'uso di parentesi tonde. Il testo racchiuso tra parentesi non deve mai iniziare o finire con alcun carattere di spaziatura;
+					\item \textbf{Punteggiatura:} prima di ogni simbolo di punteggiatura \emph{non deve} essere presente alcun carattere di spaziatura. L'uso del punto servirà solamente per terminare una discussione;
+					\item \textbf{Spazi:} non dovranno mai essere presenti spazi doppi, o spazi per la tabulazione.
 				\end{itemize}				
 				
 				\subparagraph{Composizione del testo} TO DO
 				
 				\subparagraph{Formati ricorrenti}
 				\begin{itemize}
-				\item \textbf{Nomi propri:} tutti nomi propri devono essere espressi nella forma "Cognome Nome";
-				\item \textbf{Date:} ogni data deve essere scritta come indicato dallo standard ISO 8601:\\
-					\begin{displaymath}
-					AAAA-MM-GG
-					\end{displaymath}
-					dove:
-					\begin{itemize}
-					\item \textbf{AAAA:} rappresenta l'anno scritto in numero ed in modalità estesa con tutti e quattro i caratteri;
-					\item \textbf{MM:} rappresenta il mese scritto in numero ed in modalità estesa con tutti e due i caratteri;
-					\item \textbf{GG:} rappresenta il giorno scritto in numero ed in modalità estesa con tutti e due i caratteri.
-					\end{itemize}
-				\item \textbf{Riferimenti ai documenti: ogni riferimento ai documenti deve presentare il nome del documento e la sua attuale revisione} ;
+					\item \textbf{Nomi propri:} tutti nomi propri devono essere espressi nella forma ``Cognome Nome";
+					\item \textbf{Date:} ogni data deve essere scritta come indicato dallo standard ISO 8601:\\
+						\begin{displaymath}
+							AAAA-MM-GG
+						\end{displaymath}
+						dove:
+						\begin{itemize}
+							\item \textbf{AAAA:} rappresenta l'anno scritto in numero ed in modalità estesa con tutti e quattro i caratteri;
+							\item \textbf{MM:} rappresenta il mese scritto in numero ed in modalità estesa con tutti e due i caratteri;
+							\item \textbf{GG:} rappresenta il giorno scritto in numero ed in modalità estesa con tutti e due i caratteri.
+						\end{itemize}
+						\item \textbf{Riferimenti ai documenti: ogni riferimento ai documenti deve presentare il nome del documento e la sua attuale revisione} ;
 				\end{itemize}
 
 			\paragraph{Componenti grafiche}
@@ -190,7 +203,21 @@
 				Il numero viene assegnato automaticamente dal software \LaTeX.
 				
 				\subparagraph{Tabelle} TO DO
-
+		
+		\subsubsection{Strumenti} % (fold)
+		\label{ssub:strumenti}
+		Per semplificare ed automatizzare il lavoro sono stati creati alcuni script che verranno lanciati o automaticamente durante una determinata azione sul repository o in maniera manuale dai membri del team quando necessario.
+			\paragraph{Script} % (fold)
+			\label{par:script_doc}
+				\begin{itemize}
+					\item \textbf{Generazione struttura documento}: TO DO;
+					\item \textbf{Compilazione documento}: TO DO;
+					\item \textbf{Calcolo indice di Gulpease}: TO DO;
+					\item \textbf{Controllo ortografico}: TO DO.
+				\end{itemize}
+			% paragraph script (end)
+			
+		% subsubsection strumenti (end)
 
 
 
@@ -200,31 +227,40 @@
 
 
 	\subsection{Processo di verifica}
-	Con il processo di verifica si vuole introdurre una approfonsita anlisi del rispetto dei requisiti fissati prima dell'inizio del progetto.\\
+	Con il processo di verifica si vuole introdurre una approfondita analisi del rispetto dei requisiti fissati prima dell'inizio del progetto.\\
 	Tale tecnica permette di aumentare il fattore efficienza/efficacia e di ridurre il tempo impiegato nell'analisi.\\
 	Il processo prevede una prima fase di pianificazione e successivamente di verifica.
 
-		%\subsubsection{Pianificazione}
+		\subsubsection{Attività}
+			\paragraph{Analisi statica} % (fold)
+			\label{par:analisi_statica}
+			TO DO
+			% paragraph analisi_statica (end)
+			
+			\paragraph{Analisi dinamica} % (fold)
+			\label{par:analisi_dinamica}
+			TO DO
+			% paragraph analisi_dinamica (end)
 
-			%\paragraph{Tecniche di analisi}
-
-				%\subparagraph{Analisi statica}
-
-				%\subparagraph{Analisi dinamica}
-
-		%\subsubsection{Verifica}
-
-			%\paragraph{Analisi statica del codice}
-
-			%\paragraph{Analisi dinamica del codice}
-
-			%\paragraph{Test di unità}
-
-			%\paragraph{Verifica dei diagrammi}
-
-			%\paragraph{Verifica della documentazione}
-
-			%\paragraph{Comunicazione e risoluzione di anomalie e discrepanze}
+			\paragraph{Tracciamento} % (fold)
+			\label{par:tracciamento}
+			TO DO
+			% paragraph tracciamento (end)
+			
+			
+			
+		\subsubsection{Strumenti} % (fold)
+		\label{ssub:strumenti}
+			\paragraph{Correzione ortografica} % (fold)
+			\label{par:correzione_ortografica}
+			TO DO
+			% paragraph correzione_ortografica (end)
+			
+			\paragraph{Calcolo indice Gulpease} % (fold)
+			\label{par:calcolo_indice_gulpease}
+			TO DO
+			% paragraph calcolo_indice_gulpease (end)
+		% subsubsection strumenti (end)	
 
 	%\subsection{Processo di garanzia della qualità}
 
