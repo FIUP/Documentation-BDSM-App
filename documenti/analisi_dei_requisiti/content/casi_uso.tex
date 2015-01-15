@@ -533,9 +533,9 @@ In caso di Recipe in uso o in fase di aggiornamento a causa di una schedulazione
 
 \begin{itemize}
 \item \textbf{Attori Coinvolti:} Utente, Utente amministratore
-\item {Pre Condizione:} L'utente risulta autenticato al servizio.
-\item \textbf{Descrizione:} L'utente può terminare la sessione di lavoro e liberare la postazione per un altro utente. Questa operazione può essere eseguita premendo il pulsante Logout nella Hom Screen.
-\item \textbf{Post Condizione:} La sessione di lavoro è terminata. Viene mostrata la schermata di Login.
+\item {Precondizione:} L'utente risulta autenticato al servizio.
+\item \textbf{Descrizione:} L'utente può terminare la sessione di lavoro e liberare la postazione per un altro utente. Questa operazione può essere eseguita premendo il pulsante Logout nella Home Screen.
+\item \textbf{Postcondizione:} La sessione di lavoro è terminata. Viene mostrata la schermata di Login.
 \item \textbf{Possibili Errori:} La sessione è scaduta. Non è quindi possibile eseguire questa operazione.
 \end{itemize}
 
@@ -543,18 +543,18 @@ In caso di Recipe in uso o in fase di aggiornamento a causa di una schedulazione
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Descrizione:} L'utente può effettuare il logout selezionando l'apposito pulsante nella sua Home Screen
+\item \textbf{Precondizione:} L'utente ha effettuato l'accesso al servizio e si trova nella Home Screen.
+\item \textbf{Postcondizione:} L'utente visualizza il pannello di conferma logout.
 \end{itemize}
 
 \subsubsection{UC 1.6.2: Conferma della volontà di fare logout}
 
 \begin{itemize}
 \item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Descrizione:} Prima di terminare la sessione di lavoro l'utente deve confermare la volontà di farlo selezionando il pulsante di conferma sul pannello di logout.
+\item \textbf{Precondizione:} L'utente ha selezionato il pulsante di logout nella Home Screen.
+\item \textbf{Postcondizione:} L'utente ha confermato la volontà di fare logout e la sessione è terminata. Viene visualizzata la schermata di login.
 \end{itemize}
 
 
@@ -562,110 +562,110 @@ In caso di Recipe in uso o in fase di aggiornamento a causa di una schedulazione
 \subsection{UC 1.7: Amministrazione degli utenti}
 
 \begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Attori:} Utente amministratore
+\item \textbf{Descrizione:} L'utente amministratore può promuovere o diminuire i permessi di accesso di un altro utente. Può anche eliminare definitivamente un utente e tutte le sue Views.
+\item \textbf{Precondizione:} L'utente amministratore ha effettuato l'accesso al sistema.
+\item \textbf{Postcondizione:} Il sistema ha eseguito le operazioni richieste.
 \end{itemize}
 
 \subsubsection{UC 1.7.1: Visualizzazione elenco utenti}
 
 \begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Attori:} Utente amministratore
+\item \textbf{Descrizione:} L'utente amministratore può visualizzare l'elenco di tutti gli utenti salvati nel sistema selezionando l'apposito pulsante nella sua Home Screen.
+\item \textbf{Precondizione:} L'utente amministratore ha effettuato l'accesso al sistema e si trova nella sua Home Screen.
+\item \textbf{Postcondizione:} L'utente amministratore ha visualizzato l'elenco degli utenti.
 \end{itemize}
 
 \subsubsection{UC 1.7.2: Modifica permessi utente}
 
 \begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Attori:} Utente amministratore
+\item \textbf{Descrizione:} L'utente amministratore può cambiare i permessi di accesso al sistema ad un utente diverso da se stesso.
+\item \textbf{Precondizione:} L'utente amministratore ha eseguito l'accesso.
+\item \textbf{Postcondizione:} L'utente amministratore ha modificato i permessi ad un utente.
 \end{itemize}
 
 \subsubsection{UC 1.7.2.1: Apertura elenco utenti}
 
 \begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Attori:} Utente amministratore
+\item \textbf{Descrizione:} L'utente amministratore può visualizzare l'elenco di tutti gli utenti salvati nel sistema selezionando l'apposito pulsante nella sua Home Screen.
+\item \textbf{Precondizione:} L'utente amministratore ha effettuato l'accesso al sistema e si trova nella sua Home Screen.
+\item \textbf{Postcondizione:} L'utente amministratore ha visualizzato l'elenco degli utenti.
 \end{itemize}
 
 \subsubsection{UC 1.7.2.2: Selezione modifica su un utente}
 
 \begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Attori:} Utente amministratore
+\item \textbf{Descrizione:} L'utente amministratore può cambiare i permessi di accesso ad un utente premendo l'apposito pulsante di fianco al suo username nell'elenco utenti.
+\item \textbf{Precondizione:} L'utente amministratore ha visualizzato l'elenco utenti.
+\item \textbf{Postcondizione:} L'utente amministratore ha selezionato il pulsante modifica permessi di un utente.
 \end{itemize}
 
 \subsubsection{UC 1.7.2.3: Selezione nuovo ruolo}
 
 \begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Attori:} Utente amministratore
+\item \textbf{Descrizione:} L'utente amministratore può selezionare un nuovo ruolo per l'utente selezionato.
+\item \textbf{Precondizione:} L'amministratore ha premuto il pulsante di modifica permessi utente.
+\item \textbf{Postcondizione:} L'utente amministratore ha selezionato un nuovo ruolo per l'utente.
 \end{itemize}
 
 \subsubsection{UC 1.7.2.4: Conferma delle modifiche}
 
 \begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Attori:} Utente amministratore
+\item \textbf{Descrizione:} L'utente amministratore ha confermato le modifiche ai permessi dell'utente.
+\item \textbf{Precondizione:} L'utente amministratore ha scelto un nuovo ruolo.
+\item \textbf{Postcondizione:} L'utente amministratore ha confermato le modifiche e sono ora attive nel sistema.
 \end{itemize}
 
 \subsubsection{UC 1.7.3: Eliminazione di un utente}
 
 \begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Attori:} Utente amministratore
+\item \textbf{Descrizione:} L'utente amministratore può eliminare un utente e tutte le sue View dal sistema.
+\item \textbf{Precondizione:} L'utente amministratore ha eseguito l'accesso.
+\item \textbf{Postcondizione:} L'utente amministratore ha cancellato un utente e tutte le View ad esso associate.
 \end{itemize}
 
-\subsubsection{UC 1.7.3.1: Selezione di un utente}
+\subsubsection{UC 1.7.3.1: Apertura elenco utenti}
 
 \begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Attori:} Utente amministratore
+\item \textbf{Descrizione:} L'utente amministratore può visualizzare l'elenco di tutti gli utenti salvati nel sistema selezionando l'apposito pulsante nella sua Home Screen.
+\item \textbf{Precondizione:} L'utente amministratore ha effettuato l'accesso al sistema e si trova nella sua Home Screen.
+\item \textbf{Postcondizione:} L'utente amministratore ha visualizzato l'elenco degli utenti.
 \end{itemize}
 
 \subsubsection{UC 1.7.3.2: Pressione pulsante elimina}
 
 \begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Attori:} Utente amministratore
+\item \textbf{Descrizione:} L'utente amministratore può avviare la procedura di eliminazione selezionando il pulsante elimina utente di fianco al suo username.
+\item \textbf{Precondizione:} L'utente amministratore ha visualizzato l'elenco degli utenti.
+\item \textbf{Postcondizione:} L'utente amministratore ha visualizzato il pannello di conferma eliminazione.
 \end{itemize}
 
 \subsubsection{UC 1.7.3.3: Conferma eliminazione}
 
 \begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Attori:} Utente amministratore
+\item \textbf{Descrizione:} L'utente amministratore deve confermare la volontà di eliminare l'utente.
+\item \textbf{Precondizione:} L'utente amministratore ha aperto il pannello di conferma eliminazione utente.
+\item \textbf{Postcondizione:} L'utente selezionato è stato cancellato dal sistema insieme a tutte le sue View.
 \end{itemize}
 
 \subsubsection{UC 1.7.4: Errore nell’eliminazione dell'utente}
 ( risorsa occupata, utente loggato, viste in aggiornamento )
 
 \begin{itemize}
-\item \textbf{Attori:} Utente
-\item \textbf{Descrizione:} 
-\item \textbf{Precondizione:} 
-\item \textbf{Postcondizione:} 
+\item \textbf{Attori:} Utente amministratore
+\item \textbf{Descrizione:} L'utente amministratore può visualizzare un messaggio di errore se l'utente che vuole eliminare è attualmente autenticato nel sistema e stà eseguendo delle operazioni.
+\item \textbf{Precondizione:} L'utente amministratore ha confermato l'eliminazione di un utente.
+\item \textbf{Postcondizione:} L'utente amministratore ha visualizzato il messaggio di errore. Nessun utente o dato è stato eliminato dal sistema.
 \end{itemize}
 
 \subsection{UC 1.8: Registrazione di un nuovo utente}
