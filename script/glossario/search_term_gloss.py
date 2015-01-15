@@ -1,6 +1,6 @@
 import re
 import os
-
+import sys
 
 gloss_files_path = "../documenti/glossario/content"
 gloss_maiusc_write_path = "glossario/glossario_maiusc.txt"
@@ -25,3 +25,9 @@ for files_name_path in gloss_files_list:
         for term_str in term_list:
             gloss_maiusc_write_file.write(term_str + "\n")
             gloss_min_write_file.write(term_str.lower() + "\n")
+
+
+gloss_read_file.close()
+gloss_min_write_file.close()
+gloss_maiusc_write_file.close()
+sys.exit(0)

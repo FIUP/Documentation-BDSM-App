@@ -48,3 +48,4 @@ if not check_title_bool or not check_desc_bool or not check_task_bool or not che
 print "OK. Formato messaggio di commit corretto."
 checkout_commit_msg_cmd = ["git", "checkout", "script/commit_msg"]
 subprocess.call(checkout_commit_msg_cmd)
+sys.exit(0)

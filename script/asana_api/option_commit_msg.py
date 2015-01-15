@@ -68,3 +68,4 @@ for commit_msg in list_commit_queue:
 
 checkout_asana_cmd = ["git", "checkout", "script/asana_api"]
 subprocess.call(checkout_asana_cmd)
+sys.exit(0)
