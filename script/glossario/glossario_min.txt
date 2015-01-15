@@ -1,0 +1,55 @@
+android
+angularjs
+api
+asana
+astah
+big data
+big query
+bug
+c++
+ciclo di deming
+cloud database
+commit
+committente
+css3
+database
+design pattern
+diagramma di gantt
+diagramma di pert
+driver
+express.js
+framework
+git
+github
+google app engine
+google cloud engine
+google cloud sql
+html5
+ide
+iec
+impress.js
+indice gulpease
+intellij idea
+iso
+java
+javascript
+json
+mysql
+node.js
+powerpoint
+proponente
+pdca
+package
+pert
+qt
+rest
+design responsive
+repository
+svg
+sdk
+socket.io
+spice
+twitter bootstrap
+uml
+validazione
+websocket

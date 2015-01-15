@@ -1,14 +1,14 @@
-import sys
-import subprocess
 import re
 import os
 
 
 gloss_files_path = "../documenti/glossario/content"
 gloss_maiusc_write_path = "glossario/glossario_maiusc.txt"
+gloss_min_write_path = "glossario/glossario_min.txt"
 
 gloss_read_file = ""
 gloss_maiusc_write_file = open(gloss_maiusc_write_path, "a")
+gloss_min_write_file = open(gloss_min_write_path, "a")
 
 gloss_re = re.compile(r"\\textbf{(.*):}")
 
@@ -23,4 +23,5 @@ for files_name_path in gloss_files_list:
         term_list = gloss_re.findall(line_str)
 
         for term_str in term_list:
-            gloss_maiusc_write_file.write(term_str)
+            gloss_maiusc_write_file.write(term_str + "\n")
+            gloss_min_write_file.write(term_str.lower() + "\n")

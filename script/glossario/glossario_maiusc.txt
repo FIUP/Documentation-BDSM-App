@@ -1,1 +1,55 @@
-AndroidAngularJSAPIBig dataBig queryC++Ciclo di DemingCloud DatabaseCommittenteCSS3DatabaseDesign patternDiagramma di GanttDiagramma di PERTExpress.jsFrameworkGoogle App EngineGoogle Cloud EngineGoogle Cloud SQLHTML5IDEIECImpress.jsIndice GulpeaseIntelliJ IDEAISOJavaJavaScriptJSONMySqlNode.jsPowerPointProponentePDCAPackagePERTQtRESTDesign responsiveRepositorySVGSDKSocket.ioSPICETwitter BootstrapUMLValidazioneWebSocket
+Android
+AngularJS
+API
+Asana
+Astah
+Big data
+Big query
+Bug
+C++
+Ciclo di Deming
+Cloud Database
+Commit
+Committente
+CSS3
+Database
+Design pattern
+Diagramma di Gantt
+Diagramma di PERT
+Driver
+Express.js
+Framework
+Git
+GitHub
+Google App Engine
+Google Cloud Engine
+Google Cloud SQL
+HTML5
+IDE
+IEC
+Impress.js
+Indice Gulpease
+IntelliJ IDEA
+ISO
+Java
+JavaScript
+JSON
+MySql
+Node.js
+PowerPoint
+Proponente
+PDCA
+Package
+PERT
+Qt
+REST
+Design responsive
+Repository
+SVG
+SDK
+Socket.io
+SPICE
+Twitter Bootstrap
+UML
+Validazione
+WebSocket

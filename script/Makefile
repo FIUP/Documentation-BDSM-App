@@ -9,4 +9,5 @@ hook:
 
 glossterm:
 	rm glossario/glossario_maiusc.txt
+	rm glossario/glossario_min.txt
 	@python glossario/search_term_gloss.py
