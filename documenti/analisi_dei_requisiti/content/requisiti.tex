@@ -49,16 +49,44 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 	\item \textbf{codice}: identificativo del requisito attribuito in modo gerarchico.
 \end{itemize}
 
-\subsection{Requisiti funzionali}
-\newdimen\dimDesc
-\setlength{\dimDesc}{7cm}
-\newdimen\dimFonti
-\setlength{\dimFonti}{2cm}
 
+\subsection{Requisiti funzionali}
+
+\begin{center}
+
+	\def\arraystretch{1.5}
+	\bgroup
+	\begin{longtable}{| p{2cm} | p{7cm} | p{2cm} |}
+
+		\hline
+		\textbf{Requisito} & \textbf{Descrizione} & \textbf{Fonti} \\
+		\hline
+
+		R0F1  & L'utente non autenticato può effettuare la registrazione al servizio  & Interno \newline UC1.8 \\
+		\hline
+		R0F1.1  & L'autenticazione richiede l'inserimento dello username  & Interno \newline UC1.8.1 \\
+		\hline
+		R0F1.1.1  & Lo username è univoco in tutto il sistema  & Interno \newline \\
+		\hline
+		R0F1.1.2  & Lo username è una striga contetente esclusivamente caratteri alfanumerici e underscores (\_)  & Interno \\
+		\hline
+		R0F1.1.3  & La lunghezza dello username è contenuta tra i 4 ed i 30 caratteri & Interno \\
+		\hline
+		R0F1.3  & L'autenticazione richiede l'inserimento della password  & Interno \newline UC1.8.3 \\
+		\hline
+		R0F1.3.1  & La password non può contenere lo username  & Interno \\
+		\hline
+		R0F1.3.2  & La password è una striga contetente esclusivamente caratteri alfanumerici e speciali ( ? ! \$ + - / . , \textless \textgreater $@$ \textasciitilde \^{} \_ )  & Interno \\
+		\hline
+		R0F1.3.3  & La lunghezza minima della password è di 6 caratteri  & Interno \\
+		\hline
+
+	\end{longtable}
+	\egroup
+\end{center}
 
 
 \subsection{Requisiti prestazionali}
-
 
 \subsection{Requisiti di qualità}
 
@@ -68,20 +96,21 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 
 	\def\arraystretch{1.5}
 	\bgroup
-	\begin{longtable}{| l | l | l |}
+	\begin{longtable}{| p{2cm} | p{7cm} | p{2cm} |}
+
 		\hline
 		\textbf{Requisito} & \textbf{Descrizione} & \textbf{Fonti} \\
 		\hline
 
-		R1V1   & \parbox[t]{\dimDesc}{Il sistema sfrutterà gli strumenti offerti da Google Cloud Platform}  & \parbox[t]{\dimFonti}{ Capitolato \\ Verbale 2015/01/14 \\} \\
+		R1V1  &  Il sistema sfrutterà gli strumenti offerti da Google Cloud Platform  &  Capitolato \newline Verbale 2015/01/14 \\
 		\hline
-		R1V1.1   & \parbox[t]{\dimDesc}{Il sistema sfrutterà Google App Engine}  & \parbox[t]{\dimFonti}{ Capitolato \\ Verbale 2015/01/14 \\} \\
+		R1V1.1  &  Il sistema sfrutterà Google App Engine  &  Capitolato \newline Verbale 2015/01/14 \\
 		\hline
-		R1V1.2   & \parbox[t]{\dimDesc}{Il sistema sfrutterà Google Cloud Datastore}  & \parbox[t]{\dimFonti}{ Capitolato \\ Verbale 2015/01/14 \\} \\
+		R1V1.2  &  Il sistema sfrutterà Google Cloud Datastore  &  Capitolato \newline Verbale 2015/01/14 \\
 		\hline
-		R1V1.3   & \parbox[t]{\dimDesc}{Il sistema sfrutterà gli strumenti offerti da Google Cloud Platform}  & \parbox[t]{\dimFonti}{ Capitolato \\ Verbale 2015/01/14 \\} \\
+		R1V1.3  &  Il sistema sfrutterà gli strumenti offerti da Google Cloud Platform  &  Capitolato \newline Verbale 2015/01/14 \\
 		\hline
-		R1V2   & \parbox[t]{\dimDesc}{Il linguaggio di programmazione principalmente usato sarà Python}  & \parbox[t]{\dimFonti}{ Capitolato \\ Verbale 2015/01/14 \\} \\
+		R1V2  &  Il linguaggio di programmazione principalmente usato sarà Python  &  Capitolato \newline Verbale 2015/01/14 \\
 		\hline
 
 	\end{longtable}
