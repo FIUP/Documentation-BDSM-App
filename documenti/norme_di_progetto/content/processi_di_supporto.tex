@@ -30,7 +30,7 @@
 			Per ogni documento che il \roleProjectManager{} ritiene utile essere steso dovrà essere generato con appositi tools messi a disposizione. Essi permettono di mantenere un certo ordine e rigore logico.  
 
 				\subparagraph{Creazione di un nuovo documento}
-				Ogni qualvolta il \roleProjectManager voglia creare un nuovo documento dovrà eseguire i seguenti passi:
+				Ogni qualvolta il \roleProjectManager{} voglia creare un nuovo documento dovrà eseguire i seguenti passi:
 				\begin{enumerate}
 					\item posizionarsi all'interno della cartella \emph{documenti} presente nel repository;
 					\item invocare il comando \emph{make nome\textunderscore del\textunderscore documento}.
@@ -47,16 +47,38 @@
 					\item qualora il documento sia corretto si procederà alla chiusura del ticket, avvisando automaticamente il \roleProjectManager{}, che a sua volta provvederà a contrassegnare il documento come approvato. Altrimenti il \roleVerifier{} assegnerà nuovi ticket al redattore. In seguito il redattore provvederà a eseguire di nuovo tutti i passi del seguente elenco;
 				\end{enumerate}
 
-			\paragraph{Gestione del glossario} TO DO
-				\subparagraph{Inserimento di un termine} TO DO
-				\subparagraph{Eliminazione di un termine} TO DO
+			\paragraph{Gestione del glossario}
+			Ogni membro, a seconda di chi il \roleProjectManager{} riterrà opportuna, potrà andare a redigere il glossario. \\
+				\subparagraph{Inserimento di un termine}
+				In un apposito documento creato su Google Drive, ogni componente che durante la stesura di un documento andrà ad imbattersi in parole che possono risultare ambigue al lettore dovrà inserire quel termine nel documento.
+				
+				\subparagraph{Eliminazione di un termine}
+				L'incaricato alla stesura del \docNameVersionGlo{} andrà a prendere i termini presenti nel documenti in Google Drive e ad inserirli in ordine alfabetico. Una volta inserito il vocabolo provvederà alla sua rimozione da Google Drive.
+				
+				\subparagraph{Inserimento termine nei documenti} % (fold)
+				\label{subp:inserimento_termine_nei_documenti}
+				Una volta terminata la stesura del \docNameVersionGlo{} l'\roleAdministrator{} provvederà ad eseguire gli script necessari all'inserimento dei termini ambigui seguendo la seguente procedura da terminale:
+					\begin{enumerate}
+						\item dalla root del repository entrare nella cartella script ed invocare il comando:
+							\begin{center}
+								make glossterm
+							\end{center}
+						\item ritornare alla root ed entrare nella cartella documenti. Invocare da li il comando:
+							\begin{center}
+								make gloss
+							\end{center}
+					\end{enumerate}
+				\noindent
+				Una volta terminata l'esecuzione dell'ultimo script i documenti finali saranno stati generati e l'\roleAdministrator{} avrà terminato il suo compito.
+				
+				% subparagraph inserimento_termine_nei_documenti (end)
 
 		\subsubsection{Norme}
 
 			\paragraph{Progettazione e sviluppo dei documenti}
 			Per ogni documento che si redige si dovrà rispettare un ben preciso layout di sviluppo. Si raccolgono di seguito le informazioni utili per la composizione delle prime pagine, le sezioni e le norme tipografiche da utilizzare in fase di scrittura.
 
-			\paragraph{Versionamento} TO DO (forse non serve qua visto che è già inserito nei processi organizzativi)
+			\paragraph{Versionamento} TO DO
 
 			\paragraph{Template}
 			Al fine di ottenere dei documenti formattati correttamente si è predisposto un template in \LaTeX{} da seguire scrupolosamente. Esso deve essere utilizzato come linea guida per lo sviluppo dei documenti. Ogni tipologia di documento, prima pagina, indici, contenuti interni, lettere hanno uno stile definito in maniera univoca. Esso ne permette una gestione capillare ed omogenea.\\
@@ -212,6 +234,7 @@
 				\begin{itemize}
 					\item \textbf{Generazione struttura documento}: TO DO;
 					\item \textbf{Compilazione documento}: TO DO;
+					\item \textbf{Inserimento termini glossario}: TO DO;
 					\item \textbf{Calcolo indice di Gulpease}: TO DO;
 					\item \textbf{Controllo ortografico}: TO DO.
 				\end{itemize}
