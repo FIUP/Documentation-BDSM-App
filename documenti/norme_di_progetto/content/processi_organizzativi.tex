@@ -31,7 +31,7 @@
 
 \section{Processi Organizzativi}
 
-	\subsection{Gestione dei Processi}
+	\subsection{Gestione dei processi}
 		\subsubsection{Attività}
 			\paragraph{Gestione delle Comunicazioni}
 					\subparagraph{Mail}
@@ -312,7 +312,19 @@
 			\label{par:formato_dei_task}
 			I task che si andranno ad aprire devono contenere le seguente informazioni:
 				\begin{itemize}
-					\item \textbf{Titolo}: una breve descrizione del compito da eseguire;
+					\item \textbf{Titolo}: una breve descrizione del compito da eseguire. In esso all'inizio andrà riportato uno dei seguenti valori:
+						\begin{itemize}
+							\item {[}doc{]}: se il task riguarda la stesura/modifica di un documento;
+							\item {[}tpl{]}: se il task riguarda la modifica/avanzamento sulla struttura del template usato per la documentazione o sulla struttura del documento stesso;
+							\item {[}repo{]}: se il task riguarda la modifica/inserimento/cancellazione di qualche elemento di utilità al repository;
+							\item {[}script{]}: se il task riguarda la modifica/inserimento/cancellazione di qualche script;
+							\item {[}img{]}: se il task riguarda la modifica/inserimento/cancellazione di immagini;
+							\item {[}dia{]}: se il task riguarda la modifica/inserimento/cancellazione di diagrammi/grafici;
+							\item {[}bug{]}: se il task riguarda la risoluzione di un bug riscontrato da un \roleVerifier.
+						\end{itemize}
+						\noindent
+						In seguito verranno inseriti i tag relativi alle commit riguardanti il codice sorgente;
+						
 					\item \textbf{Descrizione}: qualora non fosse abbastanza esaustivo il titolo del task, si deve fornire una descrizione più dettagliata dell'attività da svolgere;
 					\item \textbf{Data di scadenza}: la data entro la quale dovrà essere svolto il lavoro;
 					\item \textbf{Assegnatario}: il membro del team che dovrà eseguire il task indicato;
@@ -329,7 +341,6 @@
 				\end{figure}
 			
 			\paragraph{Formato delle change request} 
-			(NOTA: DA SPOSTARE NEL PROCESSO DI SUPPORTO -> Risoluzione di Problemi) \\
 			Le change request che si andranno ad aprire devono contenere le seguente informazioni:
 				\begin{itemize}
 					\item \textbf{Titolo}: una breve descrizione di cosa si vorrebbe cambiare;
@@ -376,7 +387,7 @@
 			Il sito dell'applicazione web è: \url{http://slides.com} e viene utilizzato attraverso la mail del gruppo descritta nella sezione \ref{sec:mail}.
 
 
-	\subsection{Gestione delle Infrastrutture}
+	\subsection{Gestione delle infrastrutture}
 	
 		\subsubsection{Attività}
 			\paragraph{Gestione del Repository}
@@ -506,7 +517,7 @@
 				\label{sec:messaggio_di_commit}
 				Il messaggio di commit dovrà essere conforme alla seguente notazione:
 					\begin{verbatim}
-						Title:
+						Title: [type]
 						Desc:
 						Task: Reported in #id_task
 						Option: [option][option]
@@ -539,7 +550,19 @@
 				% \end{testo}
 				
 					\begin{itemize}
-						\item \textbf{Title}: inserire una breve descrizione come titolo di quello che è stato fatto (massimo 43 caratteri);
+						\item \textbf{Title}: inserire una breve descrizione come titolo di quello che è stato fatto (massimo 43 caratteri). All'interno delle parentesi quadre inoltre andrà riportato il corrispondente valore presente nel titolo del ticket:
+							\begin{itemize}
+								\item {[}doc{]}: se la commit riguarda la stesura di un documento;
+								\item {[}tpl{]}: se la commit riguarda la modifica/avanzamento sulla struttura del template usato per la documentazione o sulla struttura del documento stesso;
+								\item {[}repo{]}: se la commit riguarda la modifica/inserimento/cancellazione di qualche elemento di utilità al repository;
+								\item {[}script{]}: se la commit riguarda la modifica/inserimento/cancellazione di qualche script;
+								\item {[}img{]}: se la commit riguarda la modifica/inserimento/cancellazione di immagini;
+								\item {[}dia{]}: se la commit riguarda la modifica/inserimento/cancellazione di diagrammi/grafici;
+								\item {[}bug{]}: se la commit riguarda la risoluzione di un bug riscontrato da un \roleVerifier.
+							\end{itemize}
+							\noindent
+							In seguito verranno inseriti i tag relativi alle commit riguardanti il codice sorgente;
+							
 						\item \textbf{Desc}: inserire una descrizione più esaustiva dell'attività svolta qualora non fosse sufficiente quella data nel titolo;
 						\item \textbf{Task}: al posto della dicitura ``id\_task'' inserire l'id del task effettivo reperibile su Asana secondo le modalità esposte nella sezione \ref{par:procedura_reperimento_id_task_asana};
 						\item \textbf{Option}: Le opzioni applicabili sono:
