@@ -15,41 +15,46 @@
 
 \section{Requisiti}
 
-A seguire sono riportati tutti i requisiti individuati dal gruppo. Essi sono stati ricavati dal capitolato proposto, dai casi d'uso, da necessità interne o in seguito agli incontri col proponente. Ogni requisito è identificato da un codice univoco a seconda dell'importanza, del tipo e della gerarchia a cui appartiene. 
+A seguire sono riportati tutti i requisiti individuati dal gruppo. Essi sono stati ricavati dal capitolato proposto, dai casi d'uso, da necessità interne o in seguito agli incontri col proponente. Ogni requisito è identificato da un codice univoco a seconda dell'importanza, del tipo e della gerarchia a cui appartiene.
 I requisiti saranno divisi in quattro tabelle distinte a seconda della tipologia, ognuna composta da tre colonne contententi i seguenti attributi:
 \begin{itemize}
-\item \textbf{requisito}: il nominativo identificativo del requisito espresso tramite il formalismo indicato a seguire.
-\item \textbf{descrizione}: breve descrizione del requisito.
-\item \textbf{fonti}: rappresentate da uno o più dei seguenti valori:
+	\item \textbf{requisito}: il nominativo identificativo del requisito espresso tramite il formalismo indicato a seguire.
+	\item \textbf{descrizione}: breve descrizione del requisito.
+	\item \textbf{fonti}: rappresentate da uno o più dei seguenti valori:
 	\begin{itemize}
-	\item \emph{Capitolato}: requisito ricavato direttamente del capitolato.
-	\item \emph{Casi d'uso}: requisito ricavato da uno o più casi d'uso. In questo caso sarà indicato il codice di quest'ultimo/i.
-	\item \emph{Interno}: requisito ricavato in seguito ad un'analisi o una necessità interna al gruppo.
+		\item \emph{Capitolato}: requisito ricavato direttamente del capitolato.
+		\item \emph{Casi d'uso}: requisito ricavato da uno o più casi d'uso. In questo caso sarà indicato il codice di quest'ultimo/i.
+		\item \emph{Interno}: requisito ricavato in seguito ad un'analisi o una necessità interna al gruppo.
 	\end{itemize}
 \end{itemize}
 
 La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
-\begin{center} 
-R[importanza][tipo][codice]
+\begin{center}
+	R[importanza][tipo][codice]
 \end{center}
 \begin{itemize}
-\item \textbf{importanza}: può assumere uno tra i seguenti valori:
+	\item \textbf{importanza}: può assumere uno tra i seguenti valori:
 	\begin{itemize}
-	\item \emph{0}: requisito obbligatorio;
-	\item \emph{1}: requisito desiderabile;
-	\item \emph{2}: requisito opzionale;
+		\item \emph{0}: requisito obbligatorio;
+		\item \emph{1}: requisito desiderabile;
+		\item \emph{2}: requisito opzionale;
 	\end{itemize}
-\item \textbf{tipo}: può assumere uno tra i seguenti valori:
+	\item \textbf{tipo}: può assumere uno tra i seguenti valori:
 	\begin{itemize}
-	\item \emph{F}: requisito funzionale;
-	\item \emph{Q}: requisito di qualità;
-	\item \emph{P}: requisito prestazionale;
-	\item \emph{V}: requisito vincolo;
+		\item \emph{F}: requisito funzionale;
+		\item \emph{Q}: requisito di qualità;
+		\item \emph{P}: requisito prestazionale;
+		\item \emph{V}: requisito vincolo;
 	\end{itemize}
-\item \textbf{codice}: identificativo del requisito attribuito in modo gerarchico.
+	\item \textbf{codice}: identificativo del requisito attribuito in modo gerarchico.
 \end{itemize}
 
 \subsection{Requisiti funzionali}
+\newdimen\dimDesc
+\setlength{\dimDesc}{7cm}
+\newdimen\dimFonti
+\setlength{\dimFonti}{2cm}
+
 
 
 \subsection{Requisiti prestazionali}
@@ -61,27 +66,26 @@ R[importanza][tipo][codice]
 
 \begin{center}
 
-\bgroup
-\def\arraystretch{1.5}
-\begin{longtable}{| l | p{7cm} | p{2cm} |}
+	\def\arraystretch{1.5}
+	\bgroup
+	\begin{longtable}{| l | l | l |}
+		\hline
+		\textbf{Requisito} & \textbf{Descrizione} & \textbf{Fonti} \\
+		\hline
 
-\hline
-\textbf{Requisito} & \textbf{Descrizione} & \textbf{Fonti} \\
-\hline
+		R1V1   & \parbox[t]{\dimDesc}{Il sistema sfrutterà gli strumenti offerti da Google Cloud Platform}  & \parbox[t]{\dimFonti}{ Capitolato \\ Verbale 2015/01/14 \\} \\
+		\hline
+		R1V1.1   & \parbox[t]{\dimDesc}{Il sistema sfrutterà Google App Engine}  & \parbox[t]{\dimFonti}{ Capitolato \\ Verbale 2015/01/14 \\} \\
+		\hline
+		R1V1.2   & \parbox[t]{\dimDesc}{Il sistema sfrutterà Google Cloud Datastore}  & \parbox[t]{\dimFonti}{ Capitolato \\ Verbale 2015/01/14 \\} \\
+		\hline
+		R1V1.3   & \parbox[t]{\dimDesc}{Il sistema sfrutterà gli strumenti offerti da Google Cloud Platform}  & \parbox[t]{\dimFonti}{ Capitolato \\ Verbale 2015/01/14 \\} \\
+		\hline
+		R1V2   & \parbox[t]{\dimDesc}{Il linguaggio di programmazione principalmente usato sarà Python}  & \parbox[t]{\dimFonti}{ Capitolato \\ Verbale 2015/01/14 \\} \\
+		\hline
 
-R1V1   &  Il sistema sfrutterà gli strumenti offerti da Google Cloud Platform  &  Capitolato \newline Verbale 2015/01/14 \\ 
-\hline
-R1V1.1   &  Il sistema sfrutterà Google App Engine  &  Capitolato \newline Verbale 2015/01/14 \\
-\hline
-R1V1.2   &  Il sistema sfrutterà Google Cloud Datastore}  &  Capitolato \newline Verbale 2015/01/14 \\
-\hline
-R1V1.3   &  sistema sfrutterà gli strumenti offerti da Google Cloud Platform  &  Capitolato \newline Verbale 2015/01/14 \\
-\hline
-R1V2   &  Il linguaggio di programmazione principalmente usato sarà Python  &  Capitolato \newline Verbale 2015/01/14 \\
-\hline
-
-
-\end{longtable}
+	\end{longtable}
+	\egroup
 \end{center}
 
 \subsection{Riepilogo}
