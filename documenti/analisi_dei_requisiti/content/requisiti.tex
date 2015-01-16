@@ -62,24 +62,50 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\textbf{Requisito} & \textbf{Descrizione} & \textbf{Fonti} \\
 		\hline
 
-		R0F1  & L'utente non autenticato può effettuare la registrazione al servizio  & Interno \newline UC1.8 \\
+		R0F1  &  L'utente non autenticato può effettuare la registrazione al servizio  &  Interno \newline UC 1.8 \\
 		\hline
-		R0F1.1  & L'autenticazione richiede l'inserimento dello username  & Interno \newline UC1.8.1 \\
+		R0F1.1  &  La registrazone richiede l'inserimento dello username  &  Interno \newline UC 1.8.1 \\
 		\hline
-		R0F1.1.1  & Lo username è univoco in tutto il sistema  & Interno \newline \\
+		R0F1.1.1  &  Lo username è univoco in tutto il sistema  &  Interno \newline \\
 		\hline
-		R0F1.1.2  & Lo username è una striga contetente esclusivamente caratteri alfanumerici e underscores (\_)  & Interno \\
+		R0F1.1.2  &  Lo username è una striga contetente esclusivamente caratteri alfanumerici e underscores (\_)  &  Interno \\
 		\hline
-		R0F1.1.3  & La lunghezza dello username è contenuta tra i 4 ed i 30 caratteri & Interno \\
+		R0F1.1.3  &  La lunghezza dello username è contenuta tra i 4 ed i 30 caratteri &  Interno \\
 		\hline
-		R0F1.3  & L'autenticazione richiede l'inserimento della password  & Interno \newline UC1.8.3 \\
+		R0F1.3  &  La registrazione richiede l'inserimento della password  &  Interno \newline UC 1.8.3 \\
 		\hline
-		R0F1.3.1  & La password non può contenere lo username  & Interno \\
+		R0F1.3.1  &  La password non può contenere lo username  &  Interno \\
 		\hline
-		R0F1.3.2  & La password è una striga contetente esclusivamente caratteri alfanumerici e speciali ( ? ! \$ + - / . , \textless \textgreater $@$ \textasciitilde \^{} \_ )  & Interno \\
+		R0F1.3.2  &  La password è una striga contetente esclusivamente caratteri alfanumerici e speciali ( ? ! \$ + - / . , \textless \textgreater $@$ \textasciitilde \^{} \_ )  & Interno \\
 		\hline
-		R0F1.3.3  & La lunghezza minima della password è di 6 caratteri  & Interno \\
+		R0F1.3.3  &  La lunghezza minima della password è di 6 caratteri  &  Interno \\
 		\hline
+		R0F1.4  &  La registrazione richiede la conferma della password & Interno \\
+		\hline
+		R0F1.4.1  &  La password di conferma deve coincidere con la password inserita precedentemente  &  Interno \\
+		\hline
+		R0F1.5  &  Il sistema avverte l'untente in fase di compilazione della form nel caso i dati inseriti in quel momento non risultino conformi alle norme del sistema  &  Interno \\
+		\hline
+		R0F1.6  &  L'utente non autenticato può confermare la registrazione tramite l'apposito pulsante & Interno \newline UC 1.8.4 \\
+		\hline
+		R0F1.7  &  Il sistema visualizza un messaggio di errore nel caso i dati inseriti risultino non conformi alle norme imposte dal sistema  &  UC 1.8.5 \\
+		\hline
+		R0F1.8  &  Nel caso la registrazione sia andata a buon fine, il sistema aggiunge i dati dell'utente nel rispettivo database  &  Interno \\
+		\hline
+		R0F2  &  L'utente non autenticato può effettuare il login tramite l'apposto form di autenticazione  &  Interno \newline UC 1.1 \\
+		\hline
+		R0F2.1  &  L'autenticazione richiede l'inserimento dello username  &  Interno \newline UC 1.1.1 \\
+		\hline
+		R0F2.2  &  L'autenticazione richiede l'inserimento della password  &  Interno \newline UC 1.1.2 \\
+		\hline
+		R0F2.3  &  L'utente può completare l'autenticazione tramite l'apposito pulsante di conferma  &  Interno \newline UC 1.1.3 \\
+		\hline
+		R0F2.4  &  Il sistema visualizza un messaggio di errore nel caso i dati inserito dall'untente risultio errati  &  Interno \newline UC 1.1.4 \\
+		\hline
+		R0F2.5  &  Il sistema aggiorna la pagina principale permettendo all'utente autenticato di accedere alle diverse aree del del servizio  &  Interno  \\
+		\hline
+
+
 
 	\end{longtable}
 	\egroup
