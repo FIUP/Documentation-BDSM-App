@@ -42,7 +42,9 @@ Il prodotto sarà diviso in due macro parti distinte:
 
 L'applicativo server-side sarà inoltre suddiviso in diverse parti funzionali distinte:
 \begin{itemize}
-\item  TODO
+\item \textbf{Miner:} Processo che interroga i social network tramite API dedicate;
+\item \textbf{Cron:} Processo che genera eventi di sincronizzazione dei dati per il Processor;
+\item \textbf{Processor:} Processo principale di elaborazione delle richieste utente, comunicazione tra basi di dati e interfaccia grafica e gestione del funzionamento del Miner.
 \end{itemize}
 
 \end{itemize}
