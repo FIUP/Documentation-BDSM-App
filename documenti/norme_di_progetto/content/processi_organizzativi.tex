@@ -114,8 +114,9 @@
 			Qualora la proposta fosse accettata il \roleProjectManager{} avrà il compito di pianificare le attività che serviranno ad apportare il cambiamento.
 			
 			\paragraph{Gestione della commit}
+			L'operazione di commit deve essere il più atomica possibile comprendendo il minore numero di file per volta. Oltre a dare una migliore visione di ciò che si sta facendo e di dove si sta lavorando garantisce anche la probabilità di avere meno conflitti all'interno del repository. \\
 			Per fornire al \roleProjectManager{} un più ampio quadro di come stanno procedendo i singoli compiti viene utilizzato un servizio web offerto da GitHub. \\
-			Questo permette di mostrare nei commenti dei task il messaggio inserito durante la commit una volta effettuata l'operazione di push sul server. \\
+			Questo permette di mostrare, nei commenti dei task di Asana, il messaggio inserito durante la commit una volta effettuata l'operazione di push sul server. \\
 			Fornisce quindi il tracciamento del lavoro che viene svolto per portare a compimento il task in questione.
 			Il servizio viene attivato sia in doc\_BDSM\_App sia in src\_BDSM\_App.
 				\subparagraph{Meccanismo di aggancio commit-task} % (fold)
