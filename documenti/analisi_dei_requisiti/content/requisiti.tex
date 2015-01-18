@@ -231,6 +231,8 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		R0F8.4.3  &  Una volta confermata l'eliminazione di una Recipe, il sistema provvede ad eliminare tutti i dati grezzi presenti nel database legati a tale Recipe  &  Interno \\
 		\hline
+		R2F8.5  &  Dal pannello di amministrazione è possibile visualizzare feedback e statistiche sugli utenti in relazione ai dati delle Recipes utilizzati  &  Interno \\
+		\hline
 		R1F9 & Nella pagina principale dell'utente amministratore è presente un pulsante per accedere all'elenco degli utenti  &  UC 1.7.1 \\
 		\hline
 		R1F9.1  &  Accanto al nome di ogni utente nella lista è presente un pulsante modifica  &  Interno \\
@@ -273,6 +275,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		R1P1.1  &  Il recupero dei dati dal Database deve impiegare al più 7 secondi  &  Interno \\
 		\hline
+		R2P2  &  L'interfaccia web utilizzerà un design di tipo responsive  &  Capitolato \\
 
 	\end{longtable}
 	\egroup
@@ -320,9 +323,13 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		R1V1.2  &  Il sistema sfrutterà Google Cloud Datastore  &  Capitolato \newline Verbale 2015/01/14 \\
 		\hline
+		R1V1.2.1  &  Il database sarà di tipo non relazione composto da documenti in stile JSON, stesso formato dei dati in entrata  &  Interno \newline Verbale 2015/01/14 \\
+		\hline
 		R1V1.3  &  Il sistema sfrutterà gli strumenti offerti da Google Cloud Platform  &  Capitolato \newline Verbale 2015/01/14 \\
 		\hline
 		R1V2  &  Il linguaggio di programmazione principalmente usato sarà Python  &  Capitolato \newline Verbale 2015/01/14 \\
+		\hline
+		R1V3  &  Il codice sorgente sarà soggetto a versionamento tramite il modello di branching descritto nelle \docNameVersionNdP  &  Capitolato \\
 		\hline
 
 	\end{longtable}
