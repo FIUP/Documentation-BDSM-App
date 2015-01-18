@@ -11,7 +11,10 @@
 # 4. all'interno del Makefile presente nella dir copiata, sostituisco tutte le occ di nome_del_documento con il nuovo nome
 # l'opzione -i '' di sed modifica sul posto il file in input facendo perdere la copia originale
 
+default:
+	@echo "ATTENZIONE! Nessun comando eseguito"
 doc:
+	@echo "Script: creazione struttura documento iniziata"
 	@echo "Enter a document name:"
 	@read DOC_NAME; \
 	if [ ! -d $$DOC_NAME ]; then \
@@ -20,7 +23,14 @@ doc:
 		mv nome_del_documento.tex $$DOC_NAME.tex; \
 		rm nome_del_documento.pdf; \
 		sed -i '' "s/nome_del_documento/$$DOC_NAME/g" Makefile; \
-		echo "Generazione struttura $$DOC_NAME completata"; \
+		echo "Script: generazione struttura $$DOC_NAME completata"; \
 	else \
 		echo "Cartella già presente. Non serve creare una nuova struttura!"; \
 	fi
+
+gloss:
+	@echo "Script: aggiunto comando per glossario iniziato"
+	@cd .. && rm -f -r documenti_glossario
+	@cd .. && cp -r documenti documenti_glossario
+	python ../script/glossario/insert_gloss_command.py
+	@echo "Script: aggiunto comando per glossario completato"

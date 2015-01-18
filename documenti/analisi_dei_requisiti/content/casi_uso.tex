@@ -24,6 +24,9 @@
 % Version		Modifier Date		Change											Author
 % 0.0.6 		2015/01/15 			Modifica UC dopo incontro				 		Roetta Marco
 % =================================================================================================
+% Version		Modifier Date		Change											Author
+% 0.1.0 		2015/01/15 			Completata sezione						 		Roetta Marco
+% =================================================================================================
 
 
 % CONTENUTO DEL CAPITOLO
@@ -54,7 +57,7 @@
     \item \textbf{Possibili Errori:}
     Viene visualizzato un messaggio di errore nel caso le informazioni di accesso inserite siano errate.
 
-    \item \textbf{Post-condizioni:}
+    \item \textbf{Postcondizione:}
     Il servizio ha erogato correttamente le funzionalità richieste dall'utente.
 
 \end{itemize}
@@ -71,11 +74,11 @@
 \begin{itemize}
     \item \textbf{Attori Coinvolti:}
     Utente: utente non autenticato che accede al servizio.
-    \item \textbf{Pre Condizione:}
+    \item \textbf{Precondizione:}
     L'utente che accede alla pagina di accesso è sconosciuto al sistema.
     \item \textbf{Descrizione:}
     L'utente può autenticarsi per poter accedere ai servizi offerti dalla piattaforma utilizzando la schermata di login.
-    \item \textbf{Post Condizione:}
+    \item \textbf{Postcondizione:}
     L'utente è riconosciuto dal sistema.
     \item \textbf{Possibili Errori:}
     Viene mostrato un messaggio di errore nel caso in cui i dati forniti siano errati.
@@ -134,20 +137,20 @@
     \caption{Use Case 1.2 - Visione informazioni e statistiche}
 \end{figure}
 
-\textbf{Attori Coinvolti:}
+	\textbf{Attori Coinvolti:}
 Utente autenticato: utente autenticato che ha acceduto al servizio
 Utente amministratore autenticato: utente autenticato in grado di accedere a tutte le aree del servizio
 
-\textbf{Pre Condizione:}
+	\textbf{Precondizione:}
 L'utente deve aver fatto l'accesso nell'apposita pagina.
 
-\textbf{Descrizione:}
+	\textbf{Descrizione:}
 Gli utenti autenticati possono vedere una serie di informazioni relative alla loro attività, come la data dell’ultimo accesso effettuato e il numero di ricette e viste attive.
 
-\textbf{Post Condizione:}
+	\textbf{Postcondizione:}
 Le informazioni richieste dall'utente sono state fornite
 
-\textbf{Possibili Errori:}
+	\textbf{Possibili Errori:}
 In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
 
 \subsubsection{UC 1.2.1: Apertura pannello informazioni}
@@ -199,14 +202,14 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 
 \begin{itemize}
     \item \textbf{Attori Coinvolti:} Utente, Utente amministratore
-    \item \textbf{Pre Condizione:} L’utente deve aver fatto l’accesso nell’apposita pagina.
+    \item \textbf{Precondizione:} L’utente deve aver fatto l’accesso nell’apposita pagina.
 
     \item \textbf{Descrizione:} Gli utenti autenticati possono vedere in questa pagina le Views e i dati ad esse associati.
     Si rende disponibile per ciascuna View un pannello per modificarne i parametri.
     Si può creare una nuova View.
     Si può eliminare una View esistente.
 
-    \item \textbf{Post Condizione:}
+    \item \textbf{Postcondizione:}
     Le informazioni richieste dall'utente sono state fornite
     Le impostazioni modificate sono state salvate nel sistema.
     Le informazioni aggiunte sono state salvate nel sistema.
@@ -240,6 +243,16 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Descrizione:} Dalla home screen l'utente può aggiungere una nuova View premendo sull'apposito pulsante, compilando i dati richiesti e confermando l'operazione.
     \item \textbf{Precondizione:} L'utente si è autenticato e si trova nella home screen.
     \item \textbf{Postcondizione:} L'utente ha creato una nuovo View.
+	\item \textbf{Possibili Errori:}
+    Viene mostrato un messaggio di errore nel caso in cui i dati forniti siano errati.
+    \item \textbf{Flusso principale degli eventi:}
+    
+    \begin{enumerate}
+        \item apertura pannello (UC 1.3.2.1);
+        \item inserimento parametri (UC 1.3.2.2);
+        \item conferma creazione View (UC 1.3.2.3).
+    \end{enumerate}
+
 \end{itemize}
 
 \subsubsection{UC 1.3.2.1: Apertura pannello inserimento nuova View}
@@ -286,6 +299,18 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Descrizione:} L'utente può modificare i parametri associati ad una specifica View.
     \item \textbf{Precondizione:} La View è stata creata ed è disponibile nell'elenco Views dell'utente.
     \item \textbf{Postcondizione:} I parametri relativi alla View sono stati modificati.
+
+	\item \textbf{Possibili Errori:}
+    Viene mostrato un messaggio di errore nel caso in cui i dati forniti siano errati.
+    \item \textbf{Flusso principale degli eventi:}
+
+    \begin{enumerate}
+        \item selezione di una View (UC 1.3.4.1);
+        \item selezione tasto modifica (UC 1.3.4.2);
+        \item inserimento nuovi parametri (UC 1.3.4.3);
+        \item conferma nuovi parametri (UC 1.3.4.4).
+    \end{enumerate}
+
 \end{itemize}
 
 \subsubsection{UC 1.3.4.1: Selezione di una View}
@@ -340,6 +365,14 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Descrizione:} L'utente può eliminare una View precedentemente creata.
     \item \textbf{Precondizione:} L'utente ha creato almeno una View e questa è visualizzata nell'elenco delle sue View.
     \item \textbf{Postcondizione:} L'utente ha cancellato una View dal suo profilo.
+    \item \textbf{Flusso principale degli eventi:}
+
+    \begin{enumerate}
+        \item selezione di una View (UC 1.3.6.1);
+        \item selezione pulsante elimina (UC 1.3.6.2);
+        \item conferma eliminazione (UC 1.3.6.3).
+    \end{enumerate}
+
 \end{itemize}
 
 \subsubsection{UC 1.3.6.1: Selezione di una View}
@@ -410,6 +443,17 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Descrizione:} L'utente amministratore può aggiungere una nuova Recipe al sistema.
     \item \textbf{Precondizione:} L'utente amministratore ha visualizzato l'elenco delle Recipes salvate nel sistema.
     \item \textbf{Postcondizione:} L'utente amministratore ha salvato una nuova Recipe nel sistema.
+	\item \textbf{Possibili Errori:}
+    Viene mostrato un messaggio di errore nel caso in cui i dati forniti siano errati.
+    \item \textbf{Flusso principale degli eventi:}
+
+    \begin{enumerate}
+        \item apertura elenco Recipes (UC 1.4.2.1);
+        \item apertura pannello inserimento (UC 1.4.2.2);
+        \item inserimento parametri (UC 1.4.2.3);
+        \item conferma parametri inseriti (UC 1.4.2.4).
+    \end{enumerate}
+
 \end{itemize}
 
 \subsubsection{UC 1.4.2.1: Apertura elenco Recipes}
@@ -470,13 +514,23 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     L'utente amministratore può eliminare una Recipe e tutti i dati ad essa associati.
     Si possono eliminare solo le Recipe non più utilizzate in una o più viste proprie o di un altro utente.
 
-    \item \textbf{Post Condizione:}
+    \item \textbf{Postcondizione:}
     Le informazioni richieste dall'utente sono state fornite.
     La Recipe desiderata e tutti i dati ad essa associati sono stati eliminati dal sistema.
 
     \item \textbf{Possibili Errori:}
     In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
     In caso di Recipe in uso o in fase di aggiornamento a causa di una schedulazione viene visualizzato un messaggio di errore e nessun dato viene alterato o cancellato.
+	\item \textbf{Possibili Errori:}
+    Viene mostrato un messaggio di errore nel caso in cui i dati forniti siano errati.
+    \item \textbf{Flusso principale degli eventi:}
+
+    \begin{enumerate}
+        \item apertura elenco Recipes (UC 1.4.4.1);
+        \item eleminazione di una Recipe (UC 1.4.4.2);
+        \item conferma eliminazione Recipe (UC 1.4.4.3).
+    \end{enumerate}
+
 \end{itemize}
 
 \subsubsection{UC 1.4.4.1: Apertura elenco Recipes}
@@ -517,9 +571,9 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 
 \begin{itemize}
     \item \textbf{Attori Coinvolti:} Utente
-    \item \textbf{Pre Condizione:} L'utente dispone di una password di accesso valida, risulta autenticato al servizio e si trova nella sua Home Screen.
+    \item \textbf{Precondizione:} L'utente dispone di una password di accesso valida, risulta autenticato al servizio e si trova nella sua Home Screen.
     \item \textbf{Descrizione:} L'utente può cambiare la password attualmente in uso selezionando il pulsante di cambio password sulla sua Home Screen.
-    \item \textbf{Post Condizione:} La nuova password per l'utente è attiva, la vecchia password non è più valida.
+    \item \textbf{Postcondizione:} La nuova password per l'utente è attiva, la vecchia password non è più valida.
     \item \textbf{Possibili Errori:} Messaggio di errore in caso di informazioni inserite errate oppure la nuova password non soddisfa i criteri di sistema indicati (UC 1.5.4).
 
     \begin{enumerate}
@@ -642,6 +696,17 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Descrizione:} L'utente amministratore può cambiare i permessi di accesso al sistema ad un utente diverso da se stesso.
     \item \textbf{Precondizione:} L'utente amministratore ha eseguito l'accesso.
     \item \textbf{Postcondizione:} L'utente amministratore ha modificato i permessi ad un utente.
+    \item \textbf{Possibili Errori:}
+    Viene mostrato un messaggio di errore nel caso in cui i dati forniti siano errati.
+    \item \textbf{Flusso principale degli eventi:}
+
+    \begin{enumerate}
+        \item apertura elenco utenti (UC 1.7.2.1);
+        \item apertura pannello modifica (UC 1.7.2.2);
+        \item inserimento dei nuovi parametri (UC 1.7.2.3);
+        \item conferma parametri inseriti (UC 1.7.2.4)
+    \end{enumerate}
+    
 \end{itemize}
 
 \subsubsection{UC 1.7.2.1: Apertura elenco utenti}
@@ -687,6 +752,16 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Descrizione:} L'utente amministratore può eliminare un utente e tutte le sue View dal sistema.
     \item \textbf{Precondizione:} L'utente amministratore ha eseguito l'accesso.
     \item \textbf{Postcondizione:} L'utente amministratore ha cancellato un utente e tutte le View ad esso associate.
+	\item \textbf{Possibili Errori:}
+    Viene mostrato un messaggio di errore nel caso in cui i dati forniti siano errati.
+    \item \textbf{Flusso principale degli eventi:}
+
+    \begin{enumerate}
+        \item apertura elenco utenti (UC 1.7.3.1);
+        \item selezione pulsante elimina (UC 1.7.3.2);
+        \item conferma eliminazione utente (UC 1.7.3.3).
+    \end{enumerate}
+
 \end{itemize}
 
 \subsubsection{UC 1.7.3.1: Apertura elenco utenti}

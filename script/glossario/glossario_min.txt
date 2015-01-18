@@ -5,12 +5,14 @@ asana
 astah
 big data
 big query
+bom
 bug
 c++
 ciclo di deming
 cloud database
 commit
 committente
+cron
 css3
 database
 design pattern
@@ -19,6 +21,7 @@ diagramma di pert
 driver
 express.js
 framework
+form
 git
 github
 google app engine
@@ -34,22 +37,33 @@ iso
 java
 javascript
 json
+\latex
+milestone
 mysql
+netsons
 node.js
-powerpoint
-proponente
-pdca
 package
+pdca
 pert
+powerpoint
+projectlibre
+proponente
 qt
-rest
-design responsive
 repository
-svg
+rest
+reveal.js
+design responsive
 sdk
 socket.io
 spice
+stub
+svg
+task
+template
+ticket
+ticketing
 twitter bootstrap
 uml
+utf
 validazione
 websocket
