@@ -19,7 +19,7 @@
 % 0.0.4 		2015/01/17 			requisiti tratti dagli UC 1.2, 1.5 e 1.6		Carnovalini Filippo
 % =================================================================================================
 % Version		Modifier Date		Change											Author
-% 0.0.5 		2015/01/18 			requisiti tratti dagli UC 1.3 					Carnovalini Filippo
+% 0.0.5 		2015/01/18 			requisiti tratti dagli UC 1.3 e 1.7				Carnovalini Filippo
 % =================================================================================================
 
 % CONTENUTO DEL CAPITOLO
@@ -231,7 +231,26 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		R0F8.4.3  &  Una volta confermata l'eliminazione di una Recipe, il sistema provvede ad eliminare tutti i dati grezzi presenti nel database legati a tale Recipe  &  Interno \\
 		\hline
-
+		R1F8  & Nella pagina principale dell'utente amministratore è presente un pulsante per accedere all'elenco degli utenti  &  UC 1.7.1 \\
+		\hline
+		R1F8.1  &  Accanto al nome di ogni utente nella lista è presente un pulsante modifica  &  Interno \\
+		\hline
+		R1F8.1.1  &  Cliccando sul pulsante modifica si viene reinderizzati alla pagina di modifica degli utenti  &  UC 1.7.2.2 \\
+		\hline
+		R2F8.2  &  Nella pagina di modifica di un utente l'amministratore può cambiare il ruolo di un utente da amministratore a utente e viceversa  &  UC 1.7.2.3 \\
+		\hline
+		R2F8.2.1  &  Premendo conferma il ruolo e i permessi dell'utente vengono modificati sul database  &  UC 1.7.2.4 \\
+		\hline
+		R1F8.3  &  Nella pagina di modifica di un utente è presente il pulsante elimina utente  & UC 1.7.3.2 \newline UC 1.7.3.2 \\
+		\hline
+		R1F8.3.1  &  Se viene premuto il pulsante di eliminazione di un utente appare un messaggio che chiede conferma dell'eliminazione  & UC 1.7.3.3\\
+		\hline
+		R1F8.3.1.1  &  Se viene confermata il sistema verifica se l'utente è loggato e in tal caso segnala l'errore e interrompe l'eliminazione  & Interno \\
+		\hline
+		R1F8.3.1.2  &  Se l'eliminazione ha successo appare un messaggio di conferma e si viene reinderizzati alla pagina principale  & UC 1.7.3.3\\
+		\hline
+		R1F8.3.1.3  &  Se c'è stato un errore appare un messaggio d'errore e si è riportati alla pagina di modifica di un utente  & UC 1.7.3.3\\
+		\hline
 
 	\end{longtable}
 	\egroup
