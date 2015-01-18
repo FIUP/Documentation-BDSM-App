@@ -16,7 +16,17 @@
 \section{Gestione amministrativa della revisione}
 
 	\subsection{Gestione delle anomalie e delle discrepanze}
-	La fase di verifica porta alla ricerca di eventuali difetti, i quali possono essere errori logici oppure anomalie presenti nel codice. Il \roleVerifier{} ha il compito di esaminare scrupolosamente il codice del prodotto e sottolineare le eventuali anomalie e problemi per essere risolti successivamente.
+	La fase di verifica porta alla ricerca di eventuali difetti, i quali possono essere errori logici oppure anomalie presenti nel codice. Il \roleVerifier{} ha il compito di esaminare scrupolosamente il codice del prodotto e sottolineare le eventuali anomalie e problemi per essere risolti successivamente.\\
+	Per anomalia si intende una deviazione del prodotto dalla sue aspettative, quindi, causa un malfunzionamento del sistema. Si possono dividere in:
+	\begin{itemize}
+		\item \textbf{Computational Error:} differenza tra un valore calcolato, osservato o misurato e il suo valore teoricamente corretto;
+		\item \textbf{Error:} azione umana che produce un risultato errato;
+		\item \textbf{Defect:} imperfezione o carenza all'interno di un prodotto, il quale non soddisfa le sue esigenze o specifiche prefissate e necessità di essere sistemato;
+		\item \textbf{Fault:} difetto all'interno del codice sorgente. Può essere inteso come la codifica di un errore umano nel codice sorgente;
+		\item \textbf{Failure:} evento nel quale un sistema, o un suo componente, non esegue una funzione richiesta entro limiti specificati. Si verifica quando, sotto specifiche condizioni, viene rilevato un \emph{Fault}.
+	\end{itemize}
+	La gestione di queste anomalie assume, quindi, un ruolo di primaria importanza all'interno del progetto e dovranno essere gestite in maniera più rapida possibile.\\
+	Per discrepanza invece, si intende una divergenza tra il prodotto sviluppato e quello atteso. La presenza di una discrepanza fa si che il prodotto funzioni senza che si verifichino \emph{Failure} ma, rende il prodotto realizzato errato rispetto alle attese. Una discrepanza sarà, quindi, trattata come un'anomalia di bassa priorità.
 	
 	\subsection{Procedure di controllo di qualità di processo}
 	Il PDCA, noto anche come ciclo di Deming, è un metodo di gestione iterativo a quattro fasi per il controllo e il miglioramento continuo dei processi.\\
