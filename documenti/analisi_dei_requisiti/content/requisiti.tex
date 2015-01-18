@@ -73,33 +73,33 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\textbf{Requisito} & \textbf{Descrizione} & \textbf{Fonti} \\
 		\hline
 
-		R0F1  &  L'utente non autenticato può effettuare la registrazione al servizio  & UC 1.8 \\
+		R0F1  &  L'utente non autenticato può effettuare la registrazione al servizio  &  UC 1.8 \\
 		\hline
-		R0F1.1  &  La registrazone richiede l'inserimento dello username  & UC 1.8.1 \\
+		R0F1.1  &  La registrazone richiede l'inserimento dello username  &  UC 1.8.1 \\
 		\hline
 		R0F1.1.1  &  Lo username è univoco in tutto il sistema  &  Interno \\
 		\hline
 		R0F1.1.2  &  Lo username è una striga contetente esclusivamente caratteri alfanumerici e underscores (\_)  &  Interno \\
 		\hline
-		R0F1.1.3  &  La lunghezza dello username è contenuta tra i 4 ed i 30 caratteri &  Interno \\
+		R0F1.1.3  &  La lunghezza dello username è contenuta tra i 4 ed i 30 caratteri  &  Interno \\
 		\hline
-		R0F1.2  &  La registrazione richiede l'inserimento di un indirizzo e-mail valido & UC 1.8.2 \\
+		R0F1.2  &  La registrazione richiede l'inserimento di un indirizzo e-mail valido &  UC 1.8.2 \\
 		\hline
-		R0F1.3  &  La registrazione richiede l'inserimento della password  & UC 1.8.3 \\
+		R0F1.3  &  La registrazione richiede l'inserimento della password  &  UC 1.8.3 \\
 		\hline
 		R0F1.3.1  &  La password non può contenere lo username  &  Interno \\
 		\hline
-		R0F1.3.2  &  La password è una striga contetente esclusivamente caratteri alfanumerici e speciali ( ? ! \$ + - / . , \textless \textgreater $@$ \textasciitilde \^{} \_ )  & Interno \\
+		R0F1.3.2  &  La password è una striga contetente esclusivamente caratteri alfanumerici e speciali ( ? ! \$ + - / . , \textless \textgreater $@$ \textasciitilde \^{} \_ )  &  Interno \\
 		\hline
 		R0F1.3.3  &  La lunghezza minima della password è di 6 caratteri  &  Interno \\
 		\hline
-		R0F1.4  &  La registrazione richiede la conferma della password & Interno \\
+		R0F1.4  &  La registrazione richiede la conferma della password  &  Interno \\
 		\hline
 		R0F1.4.1  &  La password di conferma deve coincidere con la password inserita precedentemente  &  Interno \\
 		\hline
 		R0F1.5  &  Il sistema avverte l'utente in fase di compilazione della form nel caso i dati inseriti in quel momento non risultino conformi alle norme del sistema  &  Interno \\
 		\hline
-		R0F1.6  &  L'utente non autenticato può confermare la registrazione tramite l'apposito pulsante & UC 1.8.4 \\
+		R0F1.6  &  L'utente non autenticato può confermare la registrazione tramite l'apposito pulsante  &  UC 1.8.4 \\
 		\hline
 		R0F1.7  &  Il sistema visualizza un messaggio di errore nel caso i dati inseriti risultino non conformi alle norme imposte dal sistema  &  UC 1.8.5 \\
 		\hline
@@ -119,9 +119,9 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		R0F2.5  &  Il sistema aggiorna la pagina principale permettendo all'utente autenticato di accedere alle diverse aree del del servizio  &  Interno  \\
 		\hline
-		R0F3  &  Nella pagina principale dell'utente autenticato è presente un pulsante per aprire il menù delle informazioni personali &  UC 1.2 \newline UC 1.5 \\
+		R0F3  &  Nella pagina principale dell'utente autenticato è presente un pulsante per aprire il menù delle informazioni personali  &  UC 1.2 \newline UC 1.5 \\
 		\hline
-		R0F3.1  &  Nel menù delle informazioni personali è presente un pulsante per visualizzare i propri dati &  UC 1.2.1 \newline UC 1.2.1.1 \\
+		R0F3.1  &  Nel menù delle informazioni personali è presente un pulsante per visualizzare i propri dati  &  UC 1.2.1 \newline UC 1.2.1.1 \\
 		\hline
 		R0F3.1.1  &  Se l'utente seleziona il pulsante di visualizzazione dei dati personali il sistema deve reperire il suo nome utente, il suo indirizzo e-mail e la data del suo ultimo accesso &  Interno \\
 		\hline
@@ -143,7 +143,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		R0F3.3.3  &  L'utente può cliccare il tasto di conferma se ha riempito il form  &  UC 1.5.4 \\
 		\hline
-		R0F3.3.3.1  &  Una volta premuto il tasto di conferma appare un messaggio di errore se la password non è conforme o non coincide con la conferma  & UC 1.5.5 \\
+		R0F3.3.3.1  &  Una volta premuto il tasto di conferma appare un messaggio di errore se la password non è conforme o non coincide con la conferma  &  UC 1.5.5 \\
 		\hline
 		R0F3.3.3.2  &  Una volta premuto il tasto di conferma appare un messaggio di conferma se la password è stata modificata  &  Interno \\
 		\hline
@@ -163,29 +163,29 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		R0F5.1  &  Il sistema ad ogni caricamento della pagina deve recuperare i dati relativi alle View dell'utente e generare i grafici relativi  &  Interno \\
 		\hline
-		R1F5.2  &  Nella pagina principale è disponibile un elenco delle View attive dell'utente &  UC 1.3.1.1 \\
+		R1F5.2  &  Nella pagina principale è disponibile un elenco delle View attive dell'utente  &  UC 1.3.1.1 \\
 		\hline
-		R1F5.2.1  &  Cliccando su una View dall'elenco di viene portati al grafico relativo &  Interno \\
+		R1F5.2.1  &  Cliccando su una View dall'elenco di viene portati al grafico relativo  &  Interno \\
 		\hline
-		R1F5.2.2  &  Accanto ad ogni entry dell'elenco è disponibile il tasto modifica &  UC 1.3.4.1 \newline UC 1.3.4.2 \\
+		R1F5.2.2  &  Accanto ad ogni entry dell'elenco è disponibile il tasto modifica  &  UC 1.3.4.1 \newline UC 1.3.4.2 \\
 		\hline
-		R1F5.2.2.1  &  Cliccando sul tasto modifica si viene reinderizzati alla pagina di modifica della View &  Interno \\
+		R1F5.2.2.1  &  Cliccando sul tasto modifica si viene reinderizzati alla pagina di modifica della View  &  Interno \\
 		\hline
-		R1F6  &  Nella pagina di modifica della View è presente il grafico relativo alla View selezionata e un form per modificare i dati &  Interno \\
+		R1F6  &  Nella pagina di modifica della View è presente il grafico relativo alla View selezionata e un form per modificare i dati  &  Interno \\
 		\hline
-		R1F6.1  &  Il sistema deve recuperare i dati relativi alla View selezionata e generare il grafico e riempire la form con i dati preesistenti &  Interno \\
+		R1F6.1  &  Il sistema deve recuperare i dati relativi alla View selezionata e generare il grafico e riempire la form con i dati preesistenti  &  Interno \\
 		\hline
-		R1F6.2  &  L'utente deve poter inserire nuovi dati oppure lasciare quelli preesistenti &  UC 1.3.4.3 \\
+		R1F6.2  &  L'utente deve poter inserire nuovi dati oppure lasciare quelli preesistenti  &  UC 1.3.4.3 \\
 		\hline
-		R1F6.2.1  &  Eventuali errori sui dati inseriti vengono segnalati dal sistema in fase di compilazione del form &  Interno \\
+		R1F6.2.1  &  Eventuali errori sui dati inseriti vengono segnalati dal sistema in fase di compilazione del form  &  Interno \\
 		\hline
-		R1F6.3  &  L'utente deve poter confermare i dati modificati premendo il tasto di conferma &  UC 1.3.4.4 \\
+		R1F6.3  &  L'utente deve poter confermare i dati modificati premendo il tasto di conferma  &  UC 1.3.4.4 \\
 		\hline
-		R1F6.3.1  &  Se la modifica è avvenuta con successo appare un messaggio di conferma e si viene reinderizzati alla pagina principale &  Interno \\
+		R1F6.3.1  &  Se la modifica è avvenuta con successo appare un messaggio di conferma e si viene reinderizzati alla pagina principale  &  Interno \\
 		\hline
-		R1F6.3.1.1  &  Se la modifica è avvenuta con successo il sistema memorizza i nuovi dati nel database sovrascrivendo i vecchi &  Interno \\
+		R1F6.3.1.1  &  Se la modifica è avvenuta con successo il sistema memorizza i nuovi dati nel database sovrascrivendo i vecchi  &  Interno \\
 		\hline
-		R1F6.3.2  &  Se c'è un errore sui dati o c'è un problema di connessione al server viene visualizzato un messaggio di errore e si viene riportati alla form di modifica &  UC 1.3.5 \\
+		R1F6.3.2  &  Se c'è un errore sui dati o c'è un problema di connessione al server viene visualizzato un messaggio di errore e si viene riportati alla form di modifica  &  UC 1.3.5 \\
 		\hline
 		R1F6.4  &  Nella pagina di modifica è presente un tasto per eliminare la View  &  UC 1.3.6 \newline UC 1.3.6.2 \\
 		\hline
@@ -196,18 +196,40 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		R1F6.4.3  &  Una volta eliminata una View si viene reindirizzati alla pagina principale  &  Interno \\
 		\hline
 		R0F7  &  Nella pagina principale è presente un tasto per creare una nuova View  &  UC 1.3.2 \newline UC 1.3.2.1 \\
-		\hline		
-		R0F7.1  &  Nella pagina di creazione della View è presente un form per inserire i dati della View da generare &  UC 1.3.2.2 \\
 		\hline
-		R0F7.1.1  &  Eventuali errori sui dati inseriti vengono segnalati dal sistema in fase di compilazione del form &  Interno \\
+		R0F7.1  &  Nella pagina di creazione della View è presente un form per inserire i dati della View da generare  &  UC 1.3.2.2 \\
 		\hline
-		R0F7.2  &  L'utente deve poter confermare i dati modificati premendo il tasto di conferma &  UC 1.3.2.3 \\
+		R0F7.1.1  &  Eventuali errori sui dati inseriti vengono segnalati dal sistema in fase di compilazione del form  &  Interno \\
 		\hline
-		R0F7.3  &  Se la modifica è avvenuta con successo appare un messaggio di conferma e si viene reinderizzati alla pagina principale &  Interno \\
+		R0F7.2  &  L'utente deve poter confermare i dati modificati premendo il tasto di conferma  &  UC 1.3.2.3 \\
+		\hline
+		R0F7.3  &  Se la modifica è avvenuta con successo appare un messaggio di conferma e si viene reinderizzati alla pagina principale  &  Interno \\
 		\hline
 		R0F7.3.1  &  Se la modifica è avvenuta con successo il sistema memorizza i nuovi dati nel database  &  Interno \\
 		\hline
-		R0F7.3.2  &  Se c'è un errore sui dati o c'è un problema di connessione al server viene visualizzato un messaggio di errore e si viene riportati alla form di inserimento &  UC 1.3.3 \\
+		R0F7.3.2  &  Se c'è un errore sui dati o c'è un problema di connessione al server viene visualizzato un messaggio di errore e si viene riportati alla form di inserimento  &  UC 1.3.3 \\
+		\hline
+		R0F8  &  Un utente che possiede i privilegi di amministratore può accedere all'area riservata del sistema una volta effettuata l'autenticazione tramite il form di login  &  UC 1.4 \newline UC 1.7 \\
+		\hline
+		R0F8.1  &  Un amministratore può visualizzare tutte le Recipes memorizzate nel sistema selezionando l'apposito pulsante  &  UC 1.4.1 \\
+		\hline
+		R0F8.2  &  Un amministratore può accedere al pannello per inserire una nuova Recipe  &  UC 1.4.2.1 \\
+		\hline
+		R0F8.2.1  &  Il sistema richiede l'inserimento di determinati parametri per individuare il contesto dei dati richiesti dalla Recepie  &  Interno \newline UC 1.4.2.3 \\
+		\hline
+		R0F8.2.2  &  Il sistema richiede la conferma dei dati inseriti prima di creare la nuova Recepie  &  UC 1.4.2.4 \\
+		\hline
+		R0F8.3  &  Il sistema visualizza un messaggo di errore contentente i parametri inseriti non corretti oppure il messaggio di una eccezione laciato in dase di creazione della Recipe  &  UC 1.4.3 \\
+		\hline
+		R0F8.3.1  &  Nel caso vengo confermata  una nuova Recipe corretta, il sistema salva i suoi parametri nel database  &  Interno \\
+		\hline
+		R0F8.4  &  L'utente amministratore può eliminare una Recipe memorizzata nel sistema tramite il relativo pulsante nella schermata di elenco delle ricette  &  UC 1.4.4.1 \newline UC 1.4.4.2 \\
+		\hline
+		R0F8.4.1  &  L'utente amministratore deve confermare l'eliminazione della Recipe una volta premuto l'apposito pulsate  &  UC 1.4.4.3 \\
+		\hline
+		R0F8.4.2  &  Una volta confermata l'eliminazione di una Recipe, il sistema provvede tutte le informazioni legate ad essa presenti nel database  &  Interno \\
+		\hline
+		R0F8.4.3  &  Una volta confermata l'eliminazione di una Recipe, il sistema provvede ad eliminare tutti i dati grezzi presenti nel database legati a tale Recipe  &  Interno \\
 		\hline
 
 
@@ -253,7 +275,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		R0Q1.1  &  Il manuale utente deve rispettare le norme e le metriche descritte nel \docNameVersionPdQ  &  Interno \\
 		\hline
-		R0Q2  &  Tutto il codice rispetta le norme e le metriche descritte nel \docNameVersionPdQ{} e nelle \docNameVersionNdP &  Interno \\
+		R0Q2  &  Tutto il codice rispetta le norme e le metriche descritte nel \docNameVersionPdQ{} e nelle \docNameVersionNdP  &  Interno \\
 		\hline
 
 
