@@ -25,13 +25,13 @@
 			\item I costi per ora non saranno un problema. Ad ogni registrazione effettuata su Google Cloud Platform viene dato un buono di \textdollar{} 300,00 da potere utilizzare durante i primi 60 giorni dall'attivazione. Si potrà quindi pensare di distribuire l'applicazione su più account per ripartire al meglio il carico delle spese. Nel caso si dovesse constatare che comunque l'utilizzo dei servizi generi dei costi il proponente si è reso disponibile a fornire degli account con dei crediti maggiori;
 			\item I dati che si andranno a salvare dovranno essere grezzi e cioè saranno esattamente quelli estrapolati tramite le API dei vari social;
 			\item Proprio perché i dati che si andranno ad immagazzinare nel database dell'applicazione non devono essere elaborati viene consigliato l'utilizzo di un struttura non relazione, di più facile gestione e somiglianza con ciò che le API restituiscono e cioè file in formato JSON;
-			\item Per il proponente è indifferente quale linguaggio di programmazione verrà scelto. Nonostante questo consigliano l'uso di Python in quanto la sua organizzazione lavora principalmente con quello. Se la scelta dovesse ricadere proprio su quest'ultimo viene consigliato l'utilizzo del framework Django; 
+			\item Per il proponente è indifferente quale linguaggio di programmazione verrà scelto. Nonostante questo consigliano l'uso di Python in quanto la sua organizzazione lavora principalmente con quello. Se la scelta dovesse ricadere proprio su quest'ultimo viene consigliato l'utilizzo del framework Django;
 			\item L'utente avrà la possibilità di ricercare qualsiasi cosa all'interno di un determinato settore, vincolato quest'ultimo dalle scelte effettuate dal team su quali dati andranno recuperati per quel dominio;
 			\item L'utente potrà dare un indice di gradimento della ricerca che ha effettuato;
 			\item L'amministratore avrà a disposizione una sezione privata nella quale potrà vedere i feedback degli utenti sulle ricette proposte e valutare il caso di aggiungerne di nuove o di rimuoverne se non fossero apprezzate. Questo non è per il momento un aspetto fondamentale dell'applicativo.
 		\end{itemize}
 	% subsection risposte_all_ordine_del_giorno (end)
-	
+
 	\subsection{Altre considerazioni} % (fold)
 	\label{sub:altre_considerazioni}
 	Durante l'incontro si è discusso molto con il proponente anche su altre questioni. \\
@@ -39,13 +39,13 @@
 	Le parti emerse sono:
 		\begin{itemize}
 			\item \textbf{Miner}: il componente che avrà il compito di interrogare le API dei diversi social;
-			\item \textbf{Processor}: il componente TO DO;
+			\item \textbf{Processor}: il componente principale che si occupa di eleborare le richieste dell'utente, gestire il funzionameto del Miner a seconda delle ricette presenti ed effetturare le operazioni nel database;
 			\item \textbf{Cron}: il componente che avrà il compito di gestire la schedulazione dei processi di recupero dei dati. Questa componente viene già offerta dalla Google Cloud Platform. Il team avrà il compito di impostarla opportunamente;
 			\item \textbf{Database}: il componente che avrà il compito di immagazzinare i dati recuperati dal Miner;
 			\item \textbf{Web GUI}: il componente che interagisce con l'utente finale e con l'amministratore mostrando i dati che vengono richiesti;
 		\end{itemize}
 	\noindent
 	Nelle attività di codifica viene consigliato di utilizzare, per i nomi delle varie componenti del sistema, una sola lingua, preferibilmente quella inglese. Per i commenti può andare bene anche l'italiano, l'importante è che siano il più chiari possibili e solo quando il codice non è già auto esplicativo. \\
-	
+
 	% subsection altre_considerazioni (end)
 % section riassunto_della_riunione (end)
