@@ -38,13 +38,13 @@
 				\end{enumerate}
 				Al termine dell'esecuzione dello script sarà presente una nuova cartella già rinominata correttamente con all'interno presenti tutti i file utili per l'inizio della stesura del nuovo documento.
 
-				\subparagraph{Avanzamento di un documento} TO DO (rivedere perché ripete cose già presenti durante l'assegnazione di un ticket)
+				\subparagraph{Avanzamento di un documento}
 				Alla fine di ogni avanzamento il documento dovrà essere sottoposto a molteplici procedure. Essi possono essere così definite:
 				\begin{enumerate}
-					\item il redattore dovrà effettuare l'upload del documento all'interno del branch predisposto presente nel repository;
-					\item il redattore segnerà come completato il ticket assegnatogli;
-					\item il \roleProjectManager{} riceverà automaticamente una mail con la conferma dell'avvenuta conclusione;
-					\item il \roleProjectManager{} assegnerà un ticket di verifica del documento ad un verificatore che non abbia già provveduto alla stesura del documento;
+					\item l'assegnatario dovrà effettuare l'upload del documento all'interno del branch predisposto presente nel repository;
+					\item l'assegnatario segnerà come completato il ticket assegnatogli;
+					\item il \emph{Verificatore} riceverà automaticamente una mail con la conferma dell'avvenuta conclusione;
+					\item il \roleVerifier{} assegnerà un ticket per la risoluzione de problema al redattore del documento;
 					\item qualora il documento sia corretto si procederà alla chiusura del ticket, avvisando automaticamente il \roleProjectManager{}, che a sua volta provvederà a contrassegnare il documento come approvato. Altrimenti il \roleVerifier{} assegnerà nuovi ticket al redattore. In seguito il redattore provvederà a eseguire di nuovo tutti i passi del seguente elenco;
 				\end{enumerate}
 
@@ -80,19 +80,30 @@
 			\paragraph{Progettazione e sviluppo dei documenti}
 			Per ogni documento che si redige si dovrà rispettare un ben preciso layout di sviluppo. Si raccolgono di seguito le informazioni utili per la composizione delle prime pagine, le sezioni e le norme tipografiche da utilizzare in fase di scrittura.
 
-			\paragraph{Versionamento} TO DO
+			\paragraph{Versionamento}
+			Per ogni documento sviluppato deve essere presente la versione di avanzamento prevista. La classificazione di versionamento deve rispettare le seguenti norme:
+			\begin{center}
+				X.Y.Z
+			\end{center}
+			dove:
+			\begin{itemize}
+				\item \textbf{X}: numero intero che identifica la versione di rilascio ogni qual volta si prepari il documento per una nuova revisione. Ogni incremento di una unità provoca l'azzeramento delle variabili Y e Z;
+				\item \textbf{Y}: numero intero che identifica la versione dopo aver passato la fase di verifica. Ogni incremento di una unità provoca l'azzeramento della variabile Z;
+				\item \textbf{Z}: numero intero che identifica la versione modificata del documento da parte del redattore. Ogni modifica effettuata provoca l'incremento di una unità.
+			\end{itemize}
+
 
 			\paragraph{Template}
 			Al fine di ottenere dei documenti formattati correttamente si è predisposto un template in \LaTeX{} da seguire scrupolosamente. Esso deve essere utilizzato come linea guida per lo sviluppo dei documenti. Ogni tipologia di documento, prima pagina, indici, contenuti interni, lettere hanno uno stile definito in maniera univoca. Esso ne permette una gestione capillare ed omogenea.\\
 			Verrà definita inoltre un intestazione per ogni file \emph{.tex} nel modo seguente:
 				\begin{verbatim}
-					% ==================================================================================
+					% ====================================================================
 					% File:			nome_del_documento.tex
 					% Description:	Definisce il capitolo relativo a ...
 					% Created:		aaaa-mm-gg
 					% Author:		Cognome Nome
 					% Email:		cognome.nome@mashup-unipd.it
-					% ===================================================================================
+					% ====================================================================
 					% Modification History:
 					% Version		Modifier Date		Change									Author
 					% 0.0.1 		aaaa-mm-gg 			Descrizione del cambiamento				Cognome Nome
@@ -177,25 +188,31 @@
 				\subparagraph{Stili di testo}
 				Molti stili di testo sono già stati definiti ed inclusi in appositi file. \LaTeX{} permette così un forte controllo sulla tipografia, restringendone i campi d'applicazione solamente quando necessario.  
 				\begin{itemize}
-					\item \textbf{Colori:} il testo colorato è previsto solamente nei link. Essi sono di colore blu;
-					\item \textbf{Corsivo:} il testo corsivo deve essere utilizzato ogni qual volta si voglia dare enfasi ad una determinata parola/frase;
-					\item \textbf{Grassetto:} il testo grassetto deve essere utilizzato nella stesura della prefazione degli elenchi non ordinati e ai soli titoli dei capitoli. Può essere utilizzato nel testo ma con moderazione solamente quanto si intende focalizzare un argomento;
-					\item \textbf{Maiuscolo:} l'uso del testo maiuscolo è riservato solamente agli acronimi;
-					\item \textbf{Sottolineato:} non è previsto l'uso del testo sottolineato.
+					\item \textbf{Colori}: il testo colorato è previsto solamente nei link. Essi sono di colore blu;
+					\item \textbf{Corsivo}: il testo corsivo deve essere utilizzato ogni qual volta si voglia dare enfasi ad una determinata parola/frase;
+					\item \textbf{Grassetto}: il testo grassetto deve essere utilizzato nella stesura della prefazione degli elenchi non ordinati e ai soli titoli dei capitoli. Può essere utilizzato nel testo ma con moderazione solamente quanto si intende focalizzare un argomento;
+					\item \textbf{Maiuscolo}: l'uso del testo maiuscolo è riservato solamente agli acronimi;
+					\item \textbf{Sottolineato}: non è previsto l'uso del testo sottolineato.
 				\end{itemize}
 
 				\subparagraph{Punteggiatura}
 				L'utilizzo della punteggiatura deve essere coerente per tutti i testi scritti in \LaTeX. Si impone così:
 				\begin{itemize}
-					\item \textbf{Maiuscole:} il primo carattere di testo maiuscolo è consentito solamente dopo il punto, punto di domanda, punto esclamativo o nell'intestazione di ogni elenco;
-					\item \textbf{Numeri:} i numeri dovranno rispettare lo standard SI/ISO 31-0 
-					\item \textbf{Parentesi:} nel testo è ammesso solamente l'uso di parentesi tonde. Il testo racchiuso tra parentesi non deve mai iniziare o finire con alcun carattere di spaziatura;
-					\item \textbf{Punteggiatura:} prima di ogni simbolo di punteggiatura \emph{non deve} essere presente alcun carattere di spaziatura. L'uso del punto servirà solamente per terminare una discussione;
-					\item \textbf{Spazi:} non dovranno mai essere presenti spazi doppi, o spazi per la tabulazione.
+					\item \textbf{Maiuscole}: il primo carattere di testo maiuscolo è consentito solamente dopo il punto, punto di domanda, punto esclamativo o nell'intestazione di ogni elenco;
+					\item \textbf{Numeri}: i numeri dovranno rispettare lo standard SI/ISO 31-0 
+					\item \textbf{Parentesi}: nel testo è ammesso solamente l'uso di parentesi tonde. Il testo racchiuso tra parentesi non deve mai iniziare o finire con alcun carattere di spaziatura;
+					\item \textbf{Punteggiatura}: prima di ogni simbolo di punteggiatura \emph{non deve} essere presente alcun carattere di spaziatura. L'uso del punto servirà solamente per terminare una discussione;
+					\item \textbf{Spazi}: non dovranno mai essere presenti spazi doppi, o spazi per la tabulazione.
 				\end{itemize}				
 				
-				\subparagraph{Composizione del testo} TO DO
-				
+				\subparagraph{Composizione del testo}
+				\begin{itemize}
+					\item \textbf{Elenchi non numerati}: ogni singolo elemnto deve iniziare con un testo scritto in grassetto e con la prima lettera maiuscola. Ogni singolo punto dell'elenco deve terminare con il punto e virgola. Solamente alla fine è obbligo l'uso del punto;
+					\item \textbf{Elenchi numerati}: ogni singolo elemento deve iniziare con il testo scritto in minuscolo. Ogni singolo punto dell'elenco deve terminare con il punto e virgola. Solamente alla fine è obbligo l'uso del punto;
+					\item \textbf{Note a piè di pagina}: ogni singola nota a piè di pagina deve iniziare con lettera maiuscola. Tutte le note a piè di pagina devono terminare obbligatoriamente con il punto e virgola;
+					\item \textbf{Pedice ``G''}: per tutti gli acronimi e/o termini particolari presenti nei documenti e riportati nel \docGlossary, deve essere presente la notazione tramite pedice ``G''.
+				\end{itemize}
+
 				\subparagraph{Formati ricorrenti}
 				\begin{itemize}
 					\item \textbf{Nomi propri:} tutti nomi propri devono essere espressi nella forma ``Cognome Nome";
@@ -205,9 +222,9 @@
 						\end{displaymath}
 						dove:
 						\begin{itemize}
-							\item \textbf{AAAA:} rappresenta l'anno scritto in numero ed in modalità estesa con tutti e quattro i caratteri;
-							\item \textbf{MM:} rappresenta il mese scritto in numero ed in modalità estesa con tutti e due i caratteri;
-							\item \textbf{GG:} rappresenta il giorno scritto in numero ed in modalità estesa con tutti e due i caratteri.
+							\item \textbf{AAAA}: rappresenta l'anno scritto in numero ed in modalità estesa con tutti e quattro i caratteri;
+							\item \textbf{MM}: rappresenta il mese scritto in numero ed in modalità estesa con tutti e due i caratteri;
+							\item \textbf{GG}: rappresenta il giorno scritto in numero ed in modalità estesa con tutti e due i caratteri.
 						\end{itemize}
 						\item \textbf{Riferimenti ai documenti: ogni riferimento ai documenti deve presentare il nome del documento e la sua attuale revisione} ;
 				\end{itemize}
@@ -234,21 +251,16 @@
 			\paragraph{Script} % (fold)
 			\label{par:script_doc}
 				\begin{itemize}
-					\item \textbf{Generazione struttura documento}: TO DO;
-					\item \textbf{Compilazione documento}: TO DO;
-					\item \textbf{Inserimento termini glossario}: TO DO;
-					\item \textbf{Calcolo indice di Gulpease}: TO DO;
-					\item \textbf{Controllo ortografico}: TO DO.
+					\item \textbf{Generazione struttura documento}: il makefile predisposto per la nuova generazione dei documenti ha il ruolo di effettuare una copia del template di documento ed assegnargli il nome;
+					\item \textbf{Compilazione documento}: per la compilazione dei documenti è stato sviluppato un makefile che procede alla compilazione completa del file \LaTeX{} e ne verifica tramite il software GNU Aspell la correttezza ortografica.\\
+					Alla fine della compilazione elimina tutti i file temporanei e procede all'apertura del file pdf;
+					\item \textbf{Inserimento notazioni termini di glossario}: lo script provvede alla duplicazione della cartella relativa ai documenti ed analizza documento per documento e ne inserisce la notazione  ``G'' in pedice per tutti i termini presenti nel glossario. Alla fine si crea automaticamente una nuova cartella contenente tutti i docuemnti compilati;
+					\item \textbf{Calcolo indice di Gulpease}: tramite lo script di parsing automatico avviato sul documento è possibile ottenere l'inidice di Gulpease;
+					\item \textbf{Controllo ortografico}: sul makefile per la compilazione dei file \LaTeX{} è presente l'ingrazione del software GNU Aspell per il controllo ortografico che blocca la compilazione e lancia una ecezzione specificando il termine da modificare.
 				\end{itemize}
 			% paragraph script (end)
 			
 		% subsubsection strumenti (end)
-
-
-
-
-
-
 
 
 	\subsection{Processo di verifica}
@@ -284,8 +296,8 @@
 			% paragraph analisi_dinamica (end)
 
 			\paragraph{Gestione anomalie}
-			Il \roleVerifier, durante le attività di controllo, nel caso riscontrasse anomalie o discordanze normative avrà il compito di notificarle all'assegnatario del task sul quale sta effettuando la verifica.\\
-			TO DO che cos'è l'attività di gestione delle anomalie
+			Il \roleVerifier, durante le attività di controllo, nel caso si riscontrassero anomalie o discordanze normative avrà il compito di notificarle all'assegnatario del task sul quale sta effettuando la verifica.\\
+			Nella sezione \ref{par:Procedure_assegnazione_delle_anomalie}. è indicata la procedura per l'apertura di una nuova anomalia.
 
 			\paragraph{Tracciamento} % (fold)
 			\label{par:tracciamento}
@@ -296,7 +308,9 @@
 		\subsubsection{Procedure}
 		\label{ssub:procedure}
 
-			\paragraph{Procedure d'assegnazione delle anomalie} L'assegnazione delle anomalie riscontrate da parte del \roleVerifier{} deve avvenire tramite l'uso della piattaforma Asana.\\
+			\paragraph{Procedure d'assegnazione delle anomalie}
+			\label{par:Procedure_assegnazione_delle_anomalie}
+			L'assegnazione delle anomalie riscontrate da parte del \roleVerifier{} deve avvenire tramite l'uso della piattaforma Asana.\\
 			Esistono due tipi di sezioni sulle quali effettuare la segnalazione:
 			\begin{itemize}
 				\item \textbf{Bug Tracking Document}: sezione dedicata alle anomalie riguardante la documentazione; 
@@ -335,8 +349,6 @@
 				\item \textbf{P2}: priorità normale, la risoluzione deve avvenire entro 7 giorni dalla notifica;
 				\item \textbf{P3}: priorità bassa, la risoluzione deve avvenire entro 2 settimane dalla notifica;
 			\end{itemize}
-
-
 		% subsubsection norme (end)
 
 
