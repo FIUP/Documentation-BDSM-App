@@ -24,6 +24,7 @@
 			Con il processo di documentazione, il gruppo \groupName{} intende riportare tutte le informazioni acquisite durante il ciclo di vita del software.
 			In particolare si andranno ad identificare gli standard per la creazione e stesura dei documenti, nonché tutti i processi atti a rendere i documenti formalmente corretti.
 
+
 		\subsubsection{Procedure}
 
 			\paragraph{Gestione dei documenti}
@@ -72,6 +73,7 @@
 				Una volta terminata l'esecuzione dell'ultimo script i documenti finali saranno stati generati e l'\roleAdministrator{} avrà terminato il suo compito.
 				
 				% subparagraph inserimento_termine_nei_documenti (end)
+
 
 		\subsubsection{Norme}
 
@@ -224,7 +226,7 @@
 				Assieme al digramma deve essere fornita una descrizione ed una parola chiave per poter riportare nel testo il diagramma di rifermento.\\
 				Il numero viene assegnato automaticamente dal software \LaTeX.
 				
-				\subparagraph{Tabelle} TO DO
+				%\subparagraph{Tabelle}
 		
 		\subsubsection{Strumenti} % (fold)
 		\label{ssub:strumenti}
@@ -255,6 +257,7 @@
 	Il processo prevede una prima fase di pianificazione e successivamente di verifica.
 
 		\subsubsection{Attività}
+
 			\paragraph{Analisi statica} % (fold)
 			\label{par:analisi_statica}
 			L'attività di analisi statica è una ben precisa tecnica di verifica, applicabile sia a documenti sia a codice sorgente. Essa viene applicata durante tutto il ciclo di sviluppo del progetto. Ha come obiettivo la ricerca delle anomalie. Un volta individuate possono essere così applicate:
@@ -280,17 +283,68 @@
 			\end{itemize}
 			% paragraph analisi_dinamica (end)
 
+			\paragraph{Gestione anomalie}
+			Il \roleVerifier, durante le attività di controllo, nel caso riscontrasse anomalie o discordanze normative avrà il compito di notificarle all'assegnatario del task sul quale sta effettuando la verifica.\\
+			TO DO che cos'è l'attività di gestione delle anomalie
+
 			\paragraph{Tracciamento} % (fold)
 			\label{par:tracciamento}
 			L'attività di tracciamento, eseguita dai \emph{Verificatori}, prevede il controllo della corrispondenza dei requisiti definiti nelle fasi precedenti.
 			% paragraph tracciamento (end)
 
+
+		\subsubsection{Procedure}
+		\label{ssub:procedure}
+
+			\paragraph{Procedure d'assegnazione delle anomalie} L'assegnazione delle anomalie riscontrate da parte del \roleVerifier{} deve avvenire tramite l'uso della piattaforma Asana.\\
+			Esistono due tipi di sezioni sulle quali effettuare la segnalazione:
+			\begin{itemize}
+				\item \textbf{Bug Tracking Document}: sezione dedicata alle anomalie riguardante la documentazione; 
+				\item \textbf{Bug Tracking Source}: sezione dedicata alle anomalie riguardante il codice sorgente del software.
+			\end{itemize}
+			\noindent
+			\`E necessario fare uso di uno dei due template messi a disposizione, presenti all'interno delle viste sopraelencate.\\
+			Per l'assegnazione si devono eseguire i seguenti punti, maggiormente schematizzati nella figura \ref{fig:procedura_assegnazione_anomalie}:
+			\begin{enumerate}
+				\item definizione del nuovo titolo, contenente nella parte iniziale la dicitura {[}bug{]};
+				\item descrizione esplicativa dell'errore riscontrato e punto del riscontro;
+				\item assegnazione al membro del gruppo che ha commesso l'errore;
+				\item inserimento data di scadenza per la correzione dell'anomalia;
+				\item assegnazione del tipo di priorità in base alle norme presenti nella sezione \ref{par:priorita_risoluzione_anomalie}.
+			\end{enumerate}
+			\noindent
+			Il sistema automaticamente provvederà alla notifica del nuovo task attraverso l'invio di una mail.
+			\begin{figure}[htbp]
+				\centering
+				\includegraphics[scale=0.4]{images/proc_assegnazione_anomalie.pdf}
+				\caption{Diagramma di attività - Procedura assegnazione anomalie}
+				\label{fig:procedura_assegnazione_anomalie}
+			\end{figure}
+		% subsubsection procedure (end)
+
+
+		\subsubsection{Norme}
+		\label{ssub:norme}
 			
+			\paragraph{Priorità risoluzione anomalie}
+			\label{par:priorita_risoluzione_anomalie}
+			Ogni anomalia riportata nel sistema deve avere una priorità di esecuzione. Di seguito vengono definite le possibili scelte:
+			\begin{itemize}
+				\item \textbf{P0}: priorità elevata, la risoluzione deve avvenire entro le 24 ore dalla notifica; 
+				\item \textbf{P1}: priorità media, la risoluzione deve avvenire entro 3 giorni dalla notifica;
+				\item \textbf{P2}: priorità normale, la risoluzione deve avvenire entro 7 giorni dalla notifica;
+				\item \textbf{P3}: priorità bassa, la risoluzione deve avvenire entro 2 settimane dalla notifica;
+			\end{itemize}
+
+
+		% subsubsection norme (end)
+
+
 		\subsubsection{Strumenti} % (fold)
 		\label{ssub:strumenti}
 			\paragraph{Correzione ortografica} % (fold)
 			\label{par:correzione_ortografica}
-			Per la parte di correzzione ortografica, si sono scelti di usare due strumenti di analisi. Il primo risiede all'interno dell'editor TexMaker, ovvero l'editor in questione fornisce le funionalità di correttore ortografico per i file \LaTeX{}. Esso ha dei limiti, in quanto usa un normale dizionario presente all'interno del sistema operativo e può essere utile per gli errori più grossolani di ortografia.\\
+			Per la parte di correzzione ortografica, si sono scelti di usare due strumenti di analisi. Il primo risiede all'interno dell'editor TexMaker, ovvero l'editor in questione fornisce le funionalità di correttore ortografico per i file \LaTeX. Esso ha dei limiti, in quanto usa un normale dizionario presente all'interno del sistema operativo e può essere utile per gli errori più grossolani di ortografia.\\
 			Per ovviare al problema, si è scelto di implementare ulteriormente un controllo più accurato tramite il software \emph{GNU Aspell}. Esso permette uan migliroe ingrazione con i file \LaTeX{} e permette l'aggiunta centralizzata dei termini di più difficile comprensione.
 			% paragraph correzione_ortografica (end)
 			
