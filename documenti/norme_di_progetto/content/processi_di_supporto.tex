@@ -257,26 +257,41 @@
 		\subsubsection{Attività}
 			\paragraph{Analisi statica} % (fold)
 			\label{par:analisi_statica}
-			TO DO
+			L'attività di analisi statica è una ben precisa tecnica di verifica, applicabile sia a documenti sia a codice sorgente. Essa viene applicata durante tutto il ciclo di sviluppo del progetto. Ha come obiettivo la ricerca delle anomalie. Un volta individuate possono essere così applicate:
+			\begin{itemize}
+				\item \textbf{Walkthrough}: il seguente metodo, ricerca all'interno del testo e del codice, tutte le possibili anomalie. L'analisi si basa sulla lettura di tutto il testo.\\
+				Dopo aver trovato le varie anomalie si portano in discussione con il redattore del documento e si cerca una risoluzione ottimale.\\
+				Tale tecnica può essere usata all'inizio del progetto, in quanto non si ha una visione generale del documento/codice che si stà implementando. Permette così ai verificatori di effetture una \emph{checklist} di controllo.\\
+				Come descritto inizialmente, tale tecnica risulta la più adeguata, solamente dopo aver stilato una \emph{lista di controllo}, si potrà passare ad una analisi più specifica, usando l'attività di analisi di tipo \emph{ispection};
+				\item \textbf{Ispection}: il segumente metodo si basa sulla lettura mirata del documento/codice per analizzarne i difetti. Sarà così possibile usare la lista di controllo per verificare la presenza di errori. Con l'acquisizione di nuove capacità si potrà così amplicare la lista di controllo in modo tale da rendere l'operazione più efficiente/efficacie.
+			\end{itemize}
 			% paragraph analisi_statica (end)
 			
 			\paragraph{Analisi dinamica} % (fold)
 			\label{par:analisi_dinamica}
-			TO DO
+			L'attività di analisi dinamica si può applicare solamente a livello software. Può essere applicata all'interno software o per semplicità anche ad una singola porzione di esso.\\
+			L'attività prevede l'esecuzioni di test automatici programmati precedentemente, essi servono a verificarne il corretto funzionamento. Essendo uno strumento automatico di verifica, in caso di anomalie il sistema invierà delle notifiche per identificare chiaramente il problema.\\
+			Tutti i test applicati si intendono ripetibili, ovvero devono poter essere applicati in qualsiasi momento e ripetuti per tutta la durata del software.\\
+			Ogni test deve avere delle caratteristiche ben precise da rispettare, ovvero:
+			\begin{itemize}
+				\item \textbf{Ambiente}: deve essere riportato necessarimanete l'ambiente sia software sia hardware in cui il sistema dovrà eseguire il test. Deve necessariamente essere specificato lo stato iniziale del sistema;
+				\item \textbf{Specifica}: devono essere riportati necessariamente i dati in input ed output. Questi serviranno per poter effettuare un test di congruenza;
+				\item \textbf{Procedure}: possono essere specificati ulteriori istruzioni per l'esecuzione dei test. Inoltre possono essere riportate istruzioni sulla corretta lettura dei risultati.
+			\end{itemize}
 			% paragraph analisi_dinamica (end)
 
 			\paragraph{Tracciamento} % (fold)
 			\label{par:tracciamento}
-			TO DO
+			L'attività di tracciamento, eseguita dai \emph{Verificatori}, prevede il controllo della corrispondenza dei requisiti definiti nelle fasi precedenti.
 			% paragraph tracciamento (end)
-			
-			
+
 			
 		\subsubsection{Strumenti} % (fold)
 		\label{ssub:strumenti}
 			\paragraph{Correzione ortografica} % (fold)
 			\label{par:correzione_ortografica}
-			TO DO
+			Per la parte di correzzione ortografica, si sono scelti di usare due strumenti di analisi. Il primo risiede all'interno dell'editor TexMaker, ovvero l'editor in questione fornisce le funionalità di correttore ortografico per i file \LaTeX{}. Esso ha dei limiti, in quanto usa un normale dizionario presente all'interno del sistema operativo e può essere utile per gli errori più grossolani di ortografia.\\
+			Per ovviare al problema, si è scelto di implementare ulteriormente un controllo più accurato tramite il software \emph{GNU Aspell}. Esso permette uan migliroe ingrazione con i file \LaTeX{} e permette l'aggiunta centralizzata dei termini di più difficile comprensione.
 			% paragraph correzione_ortografica (end)
 			
 			\paragraph{Calcolo indice Gulpease} % (fold)
