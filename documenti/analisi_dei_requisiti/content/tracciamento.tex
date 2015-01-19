@@ -15,6 +15,9 @@
 % Version		Modifier Date		Change											Author
 % 0.0.3 		2015/01/18 			riempite tabelle fino a requisiti.tex v0.0.6 	Carnovalini Filippo
 % =================================================================================================
+% Version		Modifier Date		Change											Author
+% 0.0.4 		2015/01/19 			stesura rimaneti voci tracciamento			 	Cusinato Giacomo
+% =================================================================================================
 %
 
 % CONTENUTO DEL CAPITOLO
@@ -33,6 +36,9 @@
 		\hline
 		\textbf{Requisito} & \textbf{Fonti} \\
 		\hline
+
+		% Requisiti funzionali
+
 		R0F1  & UC 1.8 \\
 		\hline
 		R0F1.1  &  UC 1.8.1 \\
@@ -212,10 +218,18 @@
 		R1F9.3.1.3  &  UC 1.7.3.3\\
 		\hline
 
+
+		% Requisiti prestazionali
+
 		R1P1  &  Interno \\
 		\hline
 		R1P1.1  &  Interno \\
 		\hline
+		R2P2  &  Capitolato \\
+		\hline
+
+
+		% Requisiti di qualità
 
 		R0Q1  &  Interno \\
 		\hline
@@ -225,15 +239,22 @@
 		\hline
 
 
+
+		% Requisiti di vincolo
+
 		R1V1 &  Capitolato \newline Verbale 2015/01/14 \\
 		\hline
 		R1V1.1  &  Capitolato \newline Verbale 2015/01/14 \\
 		\hline
 		R1V1.2  &  Capitolato \newline Verbale 2015/01/14 \\
 		\hline
+		R1V1.2.1  &  Interno \newline Verbale 2015/01/14 \\
+		\hline
 		R1V1.3  &  Capitolato \newline Verbale 2015/01/14 \\
 		\hline
 		R1V2  &  Capitolato \newline Verbale 2015/01/14 \\
+		\hline
+		R1V3  &  Capitolato \\
 		\hline
 
 	\end{longtable}
@@ -241,7 +262,7 @@
 	\end{center}
 
 	% subsubsection requisiti_fonti (end)
-	
+
 	\subsection{Fonti-Requisiti} % (fold)
 	\label{sub:fonti_requisiti}
 
@@ -255,53 +276,126 @@
 		\textbf{Fonte} & \textbf{Requisiti Derivati} \\
 		\hline
 
-		Capitolato  &  R1V1 \newline R1V1.1 \newline R1V1.2 \newline R1V1.3 \newline R1V2 \\
+		Capitolato  &  R2P2 \newline R1V1 \newline R1V1.1 \newline R1V1.2 \newline R1V1.3 \newline R1V2 \newline R1V3 \\
 		\hline
-		Verbale 2015/01/14  &  R1V1 \newline R1V1.1 \newline R1V1.2 \newline R1V1.3 \newline R1V2  \\
+		Interno  &  R0F1.1.1 \newline R0F1.1.2 \newline R0F1.1.3 \newline R0F1.3.1 \newline R0F1.3.2 \newline R0F1.3.3 \newline R0F1.4 \newline R0F1.4.1 \newline R0F1.5 \newline R0F1.8 \newline R1F1.9 \newline R0F2.5 \newline R0F3.1.1 \newline R0F3.2.1 \newline R0F3.3.2 \newline R0F3.3.2.1 \newline R0F3.3.3.2 \newline R0F3.3.3.3 \newline R0F4.1 \newline R0F4.1.2 \newline R0F5.1 \newline R1F5.2.1 \newline R1F5.2.2.1 \newline R1F6 \newline R1F6.1 \newline R1F6.2.1 \newline R1F6.3.1 \newline R1F6.3.1.1 \newline R1F6.4.2 \newline R1F6.4.3 \newline R0F7.1.1 \newline R0F7.3 \newline R0F7.3.1 \newline R0F8.2.1 \newline R0F8.3.1 \newline R0F8.4.2 \newline R0F8.4.3 \newline R1F9.1 \newline R1F9.3.1.1 \newline R1P1 \newline R1P1.1 \newline R0Q1 \newline R0Q1.1 \newline R0Q2 \newline R1V1.2.1 \\
 		\hline
-		Interno  &  R0F1.1.1 \newline R0F1.1.2 \newline R0F1.1.3 \newline R0F1.3.1 \newline R0F1.3.2 \newline R0F1.3.3 \newline R0F1.4 \newline R0F1.4.1 \newline R0F1.5 \newline R0F1.8 \newline R1F1.9 \newline R0F2.5 \newline R0F3.1.1 \newline R0F3.2.1 \newline R0F3.3.2 \newline R0F3.3.2.1 \newline R0F3.3.3.2 \newline R0F3.3.3.3 \newline R0F4.1 \newline R0F4.1.2 \newline R0F5.1 \newline R1F5.2.1 \newline R1F5.2.2.1 \newline R1F6 \newline R1F6.1 \newline R1F6.2.1 \newline R1F6.3.1 \newline R1F6.3.1.1  \newline R1F6.4.2  \newline R1F6.4.3 \newline R0F7.1.1 \newline R0F7.3 \newline R0F7.3.1 \newline R0F8.2.1 \newline R0F8.3.1 \newline R0F8.4.2 \newline R0F8.4.3 \newline R1F9.1 \newline R1F9.3.1.1 \newline R1P1 \newline R1P1.1 \newline R0Q1 \newline R0Q1.1 \newline R0Q2 \\
-		\hline
-		UC 1.1 & R0F2 \\
+		UC 1.1  &  R0F2 \\
 		\hline
 		UC 1.1.1  &  R0F2.1 \\
 		\hline
-		UC 1.1.2  &  R0F2.2\\
+		UC 1.1.2  &  R0F2.2 \\
 		\hline
 		UC 1.1.3  &  R0F2.3 \\
 		\hline
 		UC 1.1.4  &  R0F2.4 \\
 		\hline
-		UC 1.2   &  R0F3 \\
+		UC 1.2  &  R0F3 \\
 		\hline
 		UC 1.2.1  &  R0F3.1 \newline R0F3.2 \\
 		\hline
-		UC 1.2.1.1 &  R0F3.1 \newline R0F3.1.2 \\
+		UC 1.2.1.1  &  R0F3.1 \newline R0F3.1.2 \\
 		\hline
-		UC 1.2.1.2 &  R0F3.2 \newline R0F3.2.2 \\
+		UC 1.2.1.2  &  R0F3.2 \newline R0F3.2.2 \\
 		\hline
-
-		R0F5  &  UC 1.3 \\
+		UC 1.3  &  R0F5 \\
 		\hline
-		R0F8  &  UC 1.4 \\
+		UC 1.3.1  &  R0F5 \\
 		\hline
-		R0F3 R0F3.3 R0F3.3.1 &  UC 1.5 \\
+		UC 1.3.1.1  &  R1F5.2 \\
 		\hline
-		R0F4  &  UC 1.6 \\
+		UC 1.3.2  &  R0F7 \\
 		\hline
-		R0F8  &  UC 1.7 \\
+		UC 1.3.2.1  &  R0F7 \\
 		\hline
-		R0F1  & UC 1.8 \\
+		UC 1.3.2.2  &  R0F7.1 \\
 		\hline
+		UC 1.3.2.3  &  R0F7.2 \\
+		\hline
+		UC 1.3.3  &  R0F7.3.2 \\
+		\hline
+		UC 1.3.4.1  &  R1F5.2.2 \\
+		\hline
+		UC 1.3.4.2  &  R1F5.2.2 \\
+		\hline
+		UC 1.3.4.3  &  R1F6.2 \\
+		\hline
+		UC 1.3.4.4  &  R1F6.3 \\
+		\hline
+		UC 1.3.5  &  R1F6.3.2 \\
+		\hline
+		UC 1.3.6  &  R1F6.4 \\
+		\hline
+		UC 1.3.6.2  &  R1F6.4 \\
+		\hline
+		UC 1.3.6.3  &  R1F6.4.1 \\
+		\hline
+		UC 1.4  &  R0F8 \\
+		\hline
+		UC 1.4.1  &  R0F8.1 \\
+		\hline
+		UC 1.4.2.1  &  R0F8.2 \\
+		\hline
+		UC 1.4.2.3  &  R0F8.2.1 \\
+		\hline
+		UC 1.4.2.4  &  R0F8.2.2 \\
+		\hline
+		UC 1.4.3  &  R0F8.3 \\
+		\hline
+		UC 1.4.4.1  &  R0F8.4 \\
+		\hline
+		UC 1.4.4.2  &  R0F8.4 \\
+		\hline
+		UC 1.4.4.3  &  R0F8.4.1 \\
+		\hline
+		UC 1.5  &  R0F3 \newline R0F3.3 \newline R0F3.3.1 \\
+		\hline
+		UC 1.5.1  &  R0F3.3.1 \\
+		\hline
+		UC 1.5.2  &  R0F3.3.1 \\
+		\hline
+		UC 1.5.4  &  R0F3.3.3 \\
+		\hline
+		UC 1.5.5  &  R0F3.3.3.1 \\
+		\hline
+		UC 1.6  &  R0F4 \\
+		\hline
+		UC 1.6.1  &  R0F4.1.1 \\
+		\hline
+		UC 1.6.2  &  R0F4.1.1.1 \\
+		\hline
+		UC 1.7  &  R0F8 \\
+		\hline
+		UC 1.7.1  &  R1F9 \\
+		\hline
+		UC 1.7.2.2  &  R1F9.1.1 \\
+		\hline
+		UC 1.7.2.3  &  R2F9.2 \\
+		\hline
+		UC 1.7.2.4  &  R2F9.2.1 \\
+		\hline
+		UC 1.7.3.2  &  R1F9.3 \newline R1F9.3 \\
+		\hline
+		UC 1.7.3.3  &  R1F9.3.1 \newline R1F9.3.1.2 \newline R1F9.3.1.3 \\
+		\hline
+		UC 1.8.1  &  R0F1.1 \\
+		\hline
+		UC 1.8.2  &  R0F1.2 \\
+		\hline
+		UC 1.8.3  &  R0F1.3 \\
+		\hline
+		UC 1.8.4  &  R0F1.6 \\
+		\hline
+		UC 1.8.5  &  R0F1.7 \\
+		\hline
+		Verbale 2015/01/14  &  R1V1 \newline R1V1.1 \newline R1V1.2 \newline R1V1.2.1 \newline R1V1.3 \newline R1V2 \\
+		\hline
+		e 2015/01/14  &  R1V1 \newline R1V1.1 \newline R1V1.2 \newline R1V1.2.1 \newline R1V1.3 \newline R1V2 \newline \\
 
 	\end{longtable}
 	\egroup
 	\end{center}
 
 	% subsection fonti_requisiti (end)
-	
+
 % section tracciamento (end)
-
-
-
-
-
