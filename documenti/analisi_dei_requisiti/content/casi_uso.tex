@@ -52,9 +52,9 @@
     \item \textbf{Attori Coinvolti:}
     \begin{itemize}
 
-    	\item Utente sconosciuto: utente non autenticato che accede al servizio;
-    	\item Utente autenticato: utente autenticato che ha avuto accesso al servizio;
-    	\item Utente amministratore: utente autenticato che accesso al servizio e che dispone dei permessi per visualizzare tutte le aree;
+    	\item utente sconosciuto: utente non autenticato che accede al servizio;
+    	\item utente autenticato: utente autenticato che ha avuto accesso al servizio;
+    	\item utente amministratore: utente autenticato che accesso al servizio e che dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
     \item \textbf{Descrizione:}
     dopo l'accesso al servizio:
@@ -146,63 +146,57 @@
     \centerline{\includegraphics[scale=0.6]{./images/UC1_2.pdf}}
     \caption{Use Case 1.2 - Visione informazioni e statistiche}
 \end{figure}
+\textbf{Attori Coinvolti:}
+\begin{itemize}
+    	\item utente autenticato: utente autenticato che ha avuto accesso al servizio;
+    	\item utente amministratore: utente autenticato che accesso al servizio e che dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+	\textbf{Descrizione:} gli utenti autenticati possono vedere una serie di informazioni relative alla 	loro attività, come la data dell'ultimo accesso effettuato e il numero di ricette e viste attive;
 
-	\textbf{Attori Coinvolti:}
-Utente autenticato: utente autenticato che ha acceduto al servizio
-Utente amministratore autenticato: utente autenticato in grado di accedere a tutte le aree del servizio
+	\textbf{Precondizione:} l'utente deve essere autenticato;
+	
+	\textbf{Postcondizione:} le informazioni richieste dall'utente sono state fornite.
 
-	\textbf{Precondizione:}
-L'utente deve aver fatto l'accesso nell'apposita pagina.
-
-	\textbf{Descrizione:}
-Gli utenti autenticati possono vedere una serie di informazioni relative alla loro attività, come la data dell’ultimo accesso effettuato e il numero di Recipe e View attive.
-
-	\textbf{Postcondizione:}
-Le informazioni richieste dall'utente sono state fornite
-
-	\textbf{Possibili Errori:}
-In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
+	\textbf{Possibili Errori:} in caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
 
 \subsubsection{UC1.2.1: Apertura pannello informazioni}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} Dalla Home Screen dell'utente è possibile, tramite un apposito menu, accedere al pannello informazioni e al pannello statistiche attinenti all'utente attualmente connesso.
-    \item \textbf{Precondizione:} L'utente ha eseguito l'accesso al sistema.
-    \item \textbf{Postcondizione:} L'utente ha visualizzato il contenuto del menù.
+    \item \textbf{Attori:} utente;
+    \item \textbf{Descrizione:} dalla home screen dell'utente è possibile accedere al pannello informazioni e statistiche attinenti all'utente attualmente connesso;
+    \item \textbf{Precondizione:} l'utente ha eseguito l'accesso al sistema;
+    \item \textbf{Postcondizione:} l'utente ha visualizzato il contenuto del pannello.
 \end{itemize}
 
 \subsubsection{UC1.2.1.1: Visualizza informazioni utente}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} Selezionando il pulsante informazioni viene mostrata all'utente una pagina con il riepilogo dei sui dati, quali:
-    \begin{enumerate}
-        \item Il nome utente;
-        \item L'indirizzo mail associato;
-        \item La data dell'ultimo accesso effettuato;
-    \end{enumerate}
-    \item \textbf{Precondizione:} L'utente ha selezionato il pulsante di visualizzazione informazioni.
-    \item \textbf{Postcondizione:} L'utente ha ottenuto le informazioni richieste.
+    \item \textbf{Attori:} utente;
+    \item \textbf{Descrizione:} selezionando il pulsante informazioni viene mostrata all'utente una pagina con il riepilogo dei sui dati, quali:
+    \begin{itemize}
+        \item il nome utente;
+        \item l'indirizzo email associato;
+        \item la data dell'ultimo accesso effettuato;
+    \end{itemize}
+    \item \textbf{Precondizione:} l'utente ha selezionato il pulsante di visualizzazione informazioni;
+    \item \textbf{Postcondizione:} l'utente ha ottenuto le informazioni richieste.
 \end{itemize}
 
-\subsubsection{UC1.2.1.2: Visualizza Statistiche utente}
+\subsubsection{UC1.2.1.2: Visualizza statistiche utente}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} Selezionando il pulsante statistiche viene mostrata all'utente una pagina con il riepilogo delle sue statistiche, quali:
-    \begin{enumerate}
-        \item Numero di View attive;
-        \item Numero di Recipe disponibili;
-        \item Numero di accessi negli ultimi 30 giorni;
-    \end{enumerate}
-    \item \textbf{Precondizione:} L'utente ha selezionato il pulsante di visualizzazione statistiche.
-    \item \textbf{Postcondizione:} L'utente ha ottenuto le informazioni richieste.
+    \item \textbf{Attori:} utente;
+    \item \textbf{Descrizione:} selezionando il pulsante statistiche viene mostrata all'utente una pagina con il riepilogo delle sue statistiche, quali:
+    \begin{itemize}
+        \item numero di View attive;
+        \item numero di Recipe disponibili;
+        \item numero di accessi negli ultimi 30 giorni;
+    \end{itemize}
+    \item \textbf{Precondizione:} l'utente ha selezionato il pulsante di visualizzazione statistiche;
+    \item \textbf{Postcondizione:} l'utente ha ottenuto le informazioni richieste.
 \end{itemize}
 
-\clearpage
-
-
+\pagebreak
 \subsection{UC1.3: Gestione delle View}
 
 \begin{figure}[!htbp]
