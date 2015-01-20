@@ -39,7 +39,7 @@
 
 \section{Casi d'uso}
 
-\subsection{UC 1: Caso d'uso pubblico}
+\subsection{UC1: Caso d'uso pubblico}
 
 \begin{figure}[htbp]
     \centering
@@ -51,7 +51,7 @@
 
     \item \textbf{Attori Coinvolti:}
     \begin{itemize}
-    
+
     	\item Utente sconosciuto: utente non autenticato che accede al servizio;
     	\item Utente autenticato: utente autenticato che ha avuto accesso al servizio;
     	\item Utente amministratore: utente autenticato che accesso al servizio e che dispone dei permessi per visualizzare tutte le aree;
@@ -71,7 +71,7 @@
 
 \end{itemize}
 
-\subsection{UC 1.1: Login utente}
+\subsection{UC1.1: Login utente}
 
 \begin{figure}[htbp]
     \centering
@@ -94,14 +94,14 @@
     \item \textbf{Flusso principale degli eventi:}
 
     \begin{enumerate}
-        \item inserimento username (UC 1.1.1);
-        \item inserimento password (UC 1.1.2);
-        \item pressione tasto login (UC 1.1.3);
+        \item inserimento username (UC1.1.1);
+        \item inserimento password (UC1.1.2);
+        \item pressione tasto login (UC1.1.3);
     \end{enumerate}
 
 \end{itemize}
 
-\subsubsection{UC 1.1.1: Inserimento username}
+\subsubsection{UC1.1.1: Inserimento username}
 
 \begin{itemize}
     \item \textbf{Attori:} utente non autenticato;
@@ -110,7 +110,7 @@
     \item \textbf{Postcondizione:} il sistema ha l'informazione relativa all'username.
 \end{itemize}
 
-\subsubsection{UC 1.1.2: Inserimento password}
+\subsubsection{UC1.1.2: Inserimento password}
 
 \begin{itemize}
     \item \textbf{Attori:} utente non autenticato;
@@ -119,17 +119,17 @@
     \item \textbf{Postcondizione:} il sistema ha l'informazione relativa alla password inserita dall'utente.
 \end{itemize}
 
-\subsubsection{UC 1.1.3: Conferma login}
+\subsubsection{UC1.1.3: Conferma login}
 
 \begin{itemize}
     \item \textbf{Attori:} utente non autenticato;
     \item \textbf{Descrizione:} viene richiesto all'utente di confermare i dati inseriti con la pressione di un pulsante di conferma;
     \item \textbf{Precondizione:} il sistema fornisce un pulsante per confermare il login;
     \item \textbf{Postcondizione:} l'utente ha eseguito il login;
-    \item \textbf{Estensioni:} Login fallita [UC 1.1.4].
+    \item \textbf{Estensioni:} Login fallita [UC1.1.4].
 \end{itemize}
 
-\subsubsection{UC 1.1.4: Login fallita}
+\subsubsection{UC1.1.4: Login fallita}
 
 \begin{itemize}
     \item \textbf{Attori:} utente non autenticato;
@@ -140,7 +140,7 @@
 
 \pagebreak
 
-\subsection{UC 1.2: Visione informazioni e statistiche}
+\subsection{UC1.2: Visione informazioni e statistiche}
 
 \begin{figure}[htbp]
     \centering
@@ -164,7 +164,7 @@ Le informazioni richieste dall'utente sono state fornite
 	\textbf{Possibili Errori:}
 In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
 
-\subsubsection{UC 1.2.1: Apertura pannello informazioni}
+\subsubsection{UC1.2.1: Apertura pannello informazioni}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -173,7 +173,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente ha visualizzato il contenuto del menù.
 \end{itemize}
 
-\subsubsection{UC 1.2.1.1: Visualizza informazioni utente}
+\subsubsection{UC1.2.1.1: Visualizza informazioni utente}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -187,7 +187,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente ha ottenuto le informazioni richieste.
 \end{itemize}
 
-\subsubsection{UC 1.2.1.2: Visualizza Statistiche utente}
+\subsubsection{UC1.2.1.2: Visualizza Statistiche utente}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -204,7 +204,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 \clearpage
 
 
-\subsection{UC 1.3: Gestione delle View}
+\subsection{UC1.3: Gestione delle View}
 
 \begin{figure}[!htbp]
     \centering
@@ -216,7 +216,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Attori Coinvolti:} Utente, Utente amministratore
     \item \textbf{Precondizione:} L’utente deve aver fatto l’accesso nell’apposita pagina.
 
-    \item \textbf{Descrizione:} Gli utenti autenticati possono vedere in questa pagina le Views e i dati ad esse associati.
+    \item \textbf{Descrizione:} Gli utenti autenticati possono vedere in questa pagina le View e i dati ad esse associati.
     Si rende disponibile per ciascuna View un pannello per modificarne i parametri.
     Si può creare una nuova View.
     Si può eliminare una View esistente.
@@ -230,7 +230,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
 \end{itemize}
 
-\subsubsection{UC 1.3.1: Visualizza Views}
+\subsubsection{UC1.3.1: Visualizza View}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -239,16 +239,16 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente viene reindirizzato alla home screen e visualizza le informazioni richieste.
 \end{itemize}
 
-\subsubsection{UC 1.3.1.1: Apertura elenco Views}
+\subsubsection{UC1.3.1.1: Apertura elenco View}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} Premendo sull'apposito pulsante è possibile far comparire a video l'elenco di tutte le Views utente.
+    \item \textbf{Descrizione:} Premendo sull'apposito pulsante è possibile far comparire a video l'elenco di tutte le View utente.
     \item \textbf{Precondizione:} L'utente si trova nella home screen.
-    \item \textbf{Postcondizione:} L'utente ha ottenuto l'elenco di tutte le sue Views
+    \item \textbf{Postcondizione:} L'utente ha ottenuto l'elenco di tutte le sue View
 \end{itemize}
 
-\subsubsection{UC 1.3.2: Aggiungi una View}
+\subsubsection{UC1.3.2: Aggiungi una View}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -260,14 +260,14 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Flusso principale degli eventi:}
 
     \begin{enumerate}
-        \item apertura pannello (UC 1.3.2.1);
-        \item inserimento parametri (UC 1.3.2.2);
-        \item conferma creazione View (UC 1.3.2.3).
+        \item apertura pannello (UC1.3.2.1);
+        \item inserimento parametri (UC1.3.2.2);
+        \item conferma creazione View (UC1.3.2.3).
     \end{enumerate}
 
 \end{itemize}
 
-\subsubsection{UC 1.3.2.1: Apertura pannello inserimento nuova View}
+\subsubsection{UC1.3.2.1: Apertura pannello inserimento nuova View}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -276,7 +276,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente ha aperto il pannello di creazione di una nuova View.
 \end{itemize}
 
-\subsubsection{UC 1.3.2.2: Inserimento delle informazioni}
+\subsubsection{UC1.3.2.2: Inserimento delle informazioni}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -285,7 +285,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente ha inserito le informazioni richieste.
 \end{itemize}
 
-\subsubsection{UC 1.3.2.3: Conferma delle informazioni inserite}
+\subsubsection{UC1.3.2.3: Conferma delle informazioni inserite}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -295,7 +295,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Possibili Errori:} L'utente ha inserito delle informazioni errate o non ha rispettato i vincoli del sistema.
 \end{itemize}
 
-\subsubsection{UC 1.3.3: Errore nella Creazione di nuova View}
+\subsubsection{UC1.3.3: Errore nella Creazione di nuova View}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -304,12 +304,12 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} Nessuna modifica richiesta è stata salvata nel sistema.
 \end{itemize}
 
-\subsubsection{UC 1.3.4: Modifica una View}
+\subsubsection{UC1.3.4: Modifica una View}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
     \item \textbf{Descrizione:} L'utente può modificare i parametri associati ad una specifica View.
-    \item \textbf{Precondizione:} La View è stata creata ed è disponibile nell'elenco Views dell'utente.
+    \item \textbf{Precondizione:} La View è stata creata ed è disponibile nell'elenco View dell'utente.
     \item \textbf{Postcondizione:} I parametri relativi alla View sono stati modificati.
 
 	\item \textbf{Possibili Errori:}
@@ -317,15 +317,15 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Flusso principale degli eventi:}
 
     \begin{enumerate}
-        \item selezione di una View (UC 1.3.4.1);
-        \item selezione tasto modifica (UC 1.3.4.2);
-        \item inserimento nuovi parametri (UC 1.3.4.3);
-        \item conferma nuovi parametri (UC 1.3.4.4).
+        \item selezione di una View (UC1.3.4.1);
+        \item selezione tasto modifica (UC1.3.4.2);
+        \item inserimento nuovi parametri (UC1.3.4.3);
+        \item conferma nuovi parametri (UC1.3.4.4).
     \end{enumerate}
 
 \end{itemize}
 
-\subsubsection{UC 1.3.4.1: Selezione di una View}
+\subsubsection{UC1.3.4.1: Selezione di una View}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -334,7 +334,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente ha selezionato e visualizzato la View desiderata.
 \end{itemize}
 
-\subsubsection{UC 1.3.4.2: Apertura pannello modifica View}
+\subsubsection{UC1.3.4.2: Apertura pannello modifica View}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -343,7 +343,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente ha aperto il pannello modifica View.
 \end{itemize}
 
-\subsubsection{UC 1.3.4.3: Inserimento dei parametri}
+\subsubsection{UC1.3.4.3: Inserimento dei parametri}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -352,7 +352,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente ha inserito i nuovi parametri.
 \end{itemize}
 
-\subsubsection{UC 1.3.4.4: Conferma dei parametri inseriti}
+\subsubsection{UC1.3.4.4: Conferma dei parametri inseriti}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -361,7 +361,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} I nuovi parametri sono stati memorizzati nel sistema e sono ora attivi.
 \end{itemize}
 
-\subsubsection{UC 1.3.5: Errore nella modifica della View}
+\subsubsection{UC1.3.5: Errore nella modifica della View}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -370,7 +370,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente ha visualizzato il messaggio di errore e ha preso atto dei parametri inseriti non conformi ai vincoli di sistema.
 \end{itemize}
 
-\subsubsection{UC 1.3.6: Eliminazione di una View}
+\subsubsection{UC1.3.6: Eliminazione di una View}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -380,14 +380,14 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Flusso principale degli eventi:}
 
     \begin{enumerate}
-        \item selezione di una View (UC 1.3.6.1);
-        \item selezione pulsante elimina (UC 1.3.6.2);
-        \item conferma eliminazione (UC 1.3.6.3).
+        \item selezione di una View (UC1.3.6.1);
+        \item selezione pulsante elimina (UC1.3.6.2);
+        \item conferma eliminazione (UC1.3.6.3).
     \end{enumerate}
 
 \end{itemize}
 
-\subsubsection{UC 1.3.6.1: Selezione di una View}
+\subsubsection{UC1.3.6.1: Selezione di una View}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -396,7 +396,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente ha selezionato e visualizzato la View desiderata.
 \end{itemize}
 
-\subsubsection{UC 1.3.6.2: Eliminazione di una View}
+\subsubsection{UC1.3.6.2: Eliminazione di una View}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -405,7 +405,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente ha selezionato il pulsante Elimina View.
 \end{itemize}
 
-\subsubsection{UC 1.3.6.3: Conferma eliminazione di una View}
+\subsubsection{UC1.3.6.3: Conferma eliminazione di una View}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -417,7 +417,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 \clearpage
 
 
-\subsection{UC 1.4: Gestione delle Recipe}
+\subsection{UC1.4: Gestione delle Recipe}
 
 \begin{figure}[!ht]
     \centering
@@ -439,54 +439,54 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Possibili Errori:} In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
 \end{itemize}
 
-\subsubsection{UC 1.4.1: Visualizza Recipes}
+\subsubsection{UC1.4.1: Visualizza Recipe}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente Amministratore
     \item \textbf{Descrizione:} L'utente amministratore può visualizzare l'elenco di tutte le Recipe salvate nel sistema selezionando l'apposito pulsante nella sua home screen.
     \item \textbf{Precondizione:} L'utente amministratore ha effettutao l'accesso al sistema e si trova nella sua home screen.
-    \item \textbf{Postcondizione:} L'utente ha visualizzato correttamente l'elenco delle Recipes salvate nel sistema.
+    \item \textbf{Postcondizione:} L'utente ha visualizzato correttamente l'elenco delle Recipe salvate nel sistema.
 \end{itemize}
 
-\subsubsection{UC 1.4.2: Aggiungi una nuova Recipe}
+\subsubsection{UC1.4.2: Aggiungi una nuova Recipe}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente Amministratore
     \item \textbf{Descrizione:} L'utente amministratore può aggiungere una nuova Recipe al sistema.
-    \item \textbf{Precondizione:} L'utente amministratore ha visualizzato l'elenco delle Recipes salvate nel sistema.
+    \item \textbf{Precondizione:} L'utente amministratore ha visualizzato l'elenco delle Recipe salvate nel sistema.
     \item \textbf{Postcondizione:} L'utente amministratore ha salvato una nuova Recipe nel sistema.
 	\item \textbf{Possibili Errori:}
     Viene mostrato un messaggio di errore nel caso in cui i dati forniti siano errati.
     \item \textbf{Flusso principale degli eventi:}
 
     \begin{enumerate}
-        \item apertura elenco Recipes (UC 1.4.2.1);
-        \item apertura pannello inserimento (UC 1.4.2.2);
-        \item inserimento parametri (UC 1.4.2.3);
-        \item conferma parametri inseriti (UC 1.4.2.4).
+        \item apertura elenco Recipe (UC1.4.2.1);
+        \item apertura pannello inserimento (UC1.4.2.2);
+        \item inserimento parametri (UC1.4.2.3);
+        \item conferma parametri inseriti (UC1.4.2.4).
     \end{enumerate}
 
 \end{itemize}
 
-\subsubsection{UC 1.4.2.1: Apertura elenco Recipes}
+\subsubsection{UC1.4.2.1: Apertura elenco Recipe}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente Amministratore
-    \item \textbf{Descrizione:} L'utente amministratore può visualizzare l'elenco delle Recipes salvate nel sistema premendo l'apposito pulsante nella sua Home Screen.
+    \item \textbf{Descrizione:} L'utente amministratore può visualizzare l'elenco delle Recipe salvate nel sistema premendo l'apposito pulsante nella sua Home Screen.
     \item \textbf{Precondizione:} L'utente amministratore ha effettuato l'accesso al sistema.
-    \item \textbf{Postcondizione:} L'utente amministratore ha visualizzato correttamente l'elenco delle Recipes.
+    \item \textbf{Postcondizione:} L'utente amministratore ha visualizzato correttamente l'elenco delle Recipe.
 \end{itemize}
 
-\subsubsection{UC 1.4.2.2: Apertura pannello inserimento nuova Recipe}
+\subsubsection{UC1.4.2.2: Apertura pannello inserimento nuova Recipe}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente Amministratore
-    \item \textbf{Descrizione:} L'utente amministratore può selezionare il pulsante di inserimento di una nuova Recipe dall'elenco delle Recipes.
-    \item \textbf{Precondizione:} L'utente amministratore ha visualizzato l'elenco delle Recipes.
+    \item \textbf{Descrizione:} L'utente amministratore può selezionare il pulsante di inserimento di una nuova Recipe dall'elenco delle Recipe.
+    \item \textbf{Precondizione:} L'utente amministratore ha visualizzato l'elenco delle Recipe.
     \item \textbf{Postcondizione:} L'utente amministratore ha visualizzato il pannello di inserimento nuova Recipe.
 \end{itemize}
 
-\subsubsection{UC 1.4.2.3: Inserimento dei parametri}
+\subsubsection{UC1.4.2.3: Inserimento dei parametri}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente Amministratore
@@ -495,7 +495,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente ha inserito tutti i parametri richiesti dal sistema.
 \end{itemize}
 
-\subsubsection{UC 1.4.2.4: Conferma dei parametri inserite}
+\subsubsection{UC1.4.2.4: Conferma dei parametri inserite}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente Amministratore
@@ -504,7 +504,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente amministratore ha confermato i parametri inseriti.
 \end{itemize}
 
-\subsubsection{UC 1.4.3: Errore nell'inserimento di una nuova Recipe}
+\subsubsection{UC1.4.3: Errore nell'inserimento di una nuova Recipe}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente Amministratore
@@ -513,14 +513,14 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente amministratore ha visualizzato un messaggio di errore contenente l'elenco dei parametri inseriti non corretti oppure contenente l'eccezione sollevata dal sistema durante il salvataggio della nuova Recipe.
 \end{itemize}
 
-\subsubsection{UC 1.4.4: Eliminazione di una Recipe}
+\subsubsection{UC1.4.4: Eliminazione di una Recipe}
 
 \begin{itemize}
     \item \textbf{Attori Coinvolti:}
     Utente Amministratore
 
     \item \textbf{Precondizione:}
-    L'utente amministratore deve aver visualizzato la schermata di gestione delle Recipes.
+    L'utente amministratore deve aver visualizzato la schermata di gestione delle Recipe.
 
     \item \textbf{Descrizione}:
     L'utente amministratore può eliminare una Recipe e tutti i dati ad essa associati.
@@ -538,31 +538,31 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Flusso principale degli eventi:}
 
     \begin{enumerate}
-        \item apertura elenco Recipes (UC 1.4.4.1);
-        \item eleminazione di una Recipe (UC 1.4.4.2);
-        \item conferma eliminazione Recipe (UC 1.4.4.3).
+        \item apertura elenco Recipe (UC1.4.4.1);
+        \item eleminazione di una Recipe (UC1.4.4.2);
+        \item conferma eliminazione Recipe (UC1.4.4.3).
     \end{enumerate}
 
 \end{itemize}
 
-\subsubsection{UC 1.4.4.1: Apertura elenco Recipes}
+\subsubsection{UC1.4.4.1: Apertura elenco Recipe}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente Amministratore
-    \item \textbf{Descrizione:} L'utente amministratore può visualizzare l'elenco delle Recipes salvate nel sistema premendo l'apposito pulsante nella sua Home Screen.
+    \item \textbf{Descrizione:} L'utente amministratore può visualizzare l'elenco delle Recipe salvate nel sistema premendo l'apposito pulsante nella sua Home Screen.
     \item \textbf{Precondizione:} L'utente amministratore ha effettuato l'accesso al sistema.
-    \item \textbf{Postcondizione:} L'utente amministratore ha visualizzato correttamente l'elenco delle Recipes.
+    \item \textbf{Postcondizione:} L'utente amministratore ha visualizzato correttamente l'elenco delle Recipe.
 \end{itemize}
 
-\subsubsection{UC 1.4.4.2: Eliminazione di una Recipe}
+\subsubsection{UC1.4.4.2: Eliminazione di una Recipe}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente Amministratore
-    \item \textbf{Descrizione:} L'utente amministratore può selezionare il pulsante di eliminazione su una Recipe nell'elenco delle Recipes.
-    \item \textbf{Precondizione:} L'utente amministratore ha visualizzato l'elenco delle Recipes.
+    \item \textbf{Descrizione:} L'utente amministratore può selezionare il pulsante di eliminazione su una Recipe nell'elenco delle Recipe.
+    \item \textbf{Precondizione:} L'utente amministratore ha visualizzato l'elenco delle Recipe.
     \item \textbf{Postcondizione:} L'utente amministratore ha selezionato il pulsante di eliminazione di una Recipe.
 \end{itemize}
-\subsubsection{UC 1.4.4.3: Conferma eliminazione di una Recipe}
+\subsubsection{UC1.4.4.3: Conferma eliminazione di una Recipe}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente Amministratore
@@ -574,7 +574,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 \clearpage
 
 
-\subsection{UC 1.5: Modifica Password di accesso}
+\subsection{UC1.5: Modifica Password di accesso}
 
 \begin{figure}[!htbp]
     \centering
@@ -587,17 +587,17 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Precondizione:} L'utente dispone di una password di accesso valida, risulta autenticato al servizio e si trova nella sua Home Screen.
     \item \textbf{Descrizione:} L'utente può cambiare la password attualmente in uso selezionando il pulsante di cambio password sulla sua Home Screen.
     \item \textbf{Postcondizione:} La nuova password per l'utente è attiva, la vecchia password non è più valida.
-    \item \textbf{Possibili Errori:} Messaggio di errore in caso di informazioni inserite errate oppure la nuova password non soddisfa i criteri di sistema indicati (UC 1.5.4).
+    \item \textbf{Possibili Errori:} Messaggio di errore in caso di informazioni inserite errate oppure la nuova password non soddisfa i criteri di sistema indicati (UC1.5.4).
 
     \begin{enumerate}
-        \item inserimento nuova password (UC 1.5.1);
-        \item inserimento nuova password per conferma (UC 1.5.2);
-        \item conferma cmbio password (UC 1.5.3).
+        \item inserimento nuova password (UC1.5.1);
+        \item inserimento nuova password per conferma (UC1.5.2);
+        \item conferma cmbio password (UC1.5.3).
     \end{enumerate}
 
 \end{itemize}
 
-\subsubsection{UC 1.5.1: Inserimento di una nuova password}
+\subsubsection{UC1.5.1: Inserimento di una nuova password}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -606,7 +606,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente ha inserito la nuova password.
 \end{itemize}
 
-\subsubsection{UC 1.5.2: Conferma inserimento password }
+\subsubsection{UC1.5.2: Conferma inserimento password }
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -615,7 +615,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente ha inserito per la seconda volta la nuova password.
 \end{itemize}
 
-\subsubsection{UC 1.5.3: Inserimento vecchia password}
+\subsubsection{UC1.5.3: Inserimento vecchia password}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -624,7 +624,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente ha confermato l'operazione e la nuova password è ora attiva.
 \end{itemize}
 
-\subsubsection{UC 1.5.4: Conferma operazione}
+\subsubsection{UC1.5.4: Conferma operazione}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -633,7 +633,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente ha confermato l'operazione e la nuova password è ora attiva.
 \end{itemize}
 
-\subsubsection{UC 1.5.5: Password inserita non conforme alle regole}
+\subsubsection{UC1.5.5: Password inserita non conforme alle regole}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -645,7 +645,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 \clearpage
 
 
-\subsection{UC 1.6: Logout}
+\subsection{UC1.6: Logout}
 
 \begin{figure}[htbp]
     \centering
@@ -661,7 +661,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Possibili Errori:} La sessione è scaduta. Non è quindi possibile eseguire questa operazione.
 \end{itemize}
 
-\subsubsection{UC 1.6.1: Pressione tasto logout}
+\subsubsection{UC1.6.1: Pressione tasto logout}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -670,7 +670,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente visualizza il pannello di conferma logout.
 \end{itemize}
 
-\subsubsection{UC 1.6.2: Conferma della volontà di fare logout}
+\subsubsection{UC1.6.2: Conferma della volontà di fare logout}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -682,7 +682,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 \clearpage
 
 
-\subsection{UC 1.7: Amministrazione degli utenti}
+\subsection{UC1.7: Amministrazione degli utenti}
 
 \begin{figure}[!htbp]
     \centering
@@ -692,12 +692,12 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 
 \begin{itemize}
     \item \textbf{Attori:} Utente amministratore
-    \item \textbf{Descrizione:} L'utente amministratore può promuovere o diminuire i permessi di accesso di un altro utente. Può anche eliminare definitivamente un utente e tutte le sue Views.
+    \item \textbf{Descrizione:} L'utente amministratore può promuovere o diminuire i permessi di accesso di un altro utente. Può anche eliminare definitivamente un utente e tutte le sue View.
     \item \textbf{Precondizione:} L'utente amministratore ha effettuato l'accesso al sistema.
     \item \textbf{Postcondizione:} Il sistema ha eseguito le operazioni richieste.
 \end{itemize}
 
-\subsubsection{UC 1.7.1: Visualizzazione elenco utenti}
+\subsubsection{UC1.7.1: Visualizzazione elenco utenti}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente amministratore
@@ -706,7 +706,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente amministratore ha visualizzato l'elenco degli utenti.
 \end{itemize}
 
-\subsubsection{UC 1.7.2: Modifica permessi utente}
+\subsubsection{UC1.7.2: Modifica permessi utente}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente amministratore
@@ -718,15 +718,15 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Flusso principale degli eventi:}
 
     \begin{enumerate}
-        \item apertura elenco utenti (UC 1.7.2.1);
-        \item apertura pannello modifica (UC 1.7.2.2);
-        \item inserimento dei nuovi parametri (UC 1.7.2.3);
-        \item conferma parametri inseriti (UC 1.7.2.4)
+        \item apertura elenco utenti (UC1.7.2.1);
+        \item apertura pannello modifica (UC1.7.2.2);
+        \item inserimento dei nuovi parametri (UC1.7.2.3);
+        \item conferma parametri inseriti (UC1.7.2.4)
     \end{enumerate}
 
 \end{itemize}
 
-\subsubsection{UC 1.7.2.1: Apertura elenco utenti}
+\subsubsection{UC1.7.2.1: Apertura elenco utenti}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente amministratore
@@ -735,7 +735,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente amministratore ha visualizzato l'elenco degli utenti.
 \end{itemize}
 
-\subsubsection{UC 1.7.2.2: Selezione modifica su un utente}
+\subsubsection{UC1.7.2.2: Selezione modifica su un utente}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente amministratore
@@ -744,7 +744,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente amministratore ha selezionato il pulsante modifica permessi di un utente.
 \end{itemize}
 
-\subsubsection{UC 1.7.2.3: Selezione nuovo ruolo}
+\subsubsection{UC1.7.2.3: Selezione nuovo ruolo}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente amministratore
@@ -753,7 +753,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente amministratore ha selezionato un nuovo ruolo per l'utente.
 \end{itemize}
 
-\subsubsection{UC 1.7.2.4: Conferma delle modifiche}
+\subsubsection{UC1.7.2.4: Conferma delle modifiche}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente amministratore
@@ -762,7 +762,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente amministratore ha confermato le modifiche e sono ora attive nel sistema.
 \end{itemize}
 
-\subsubsection{UC 1.7.3: Eliminazione di un utente}
+\subsubsection{UC1.7.3: Eliminazione di un utente}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente amministratore
@@ -774,14 +774,14 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Flusso principale degli eventi:}
 
     \begin{enumerate}
-        \item apertura elenco utenti (UC 1.7.3.1);
-        \item selezione pulsante elimina (UC 1.7.3.2);
-        \item conferma eliminazione utente (UC 1.7.3.3).
+        \item apertura elenco utenti (UC1.7.3.1);
+        \item selezione pulsante elimina (UC1.7.3.2);
+        \item conferma eliminazione utente (UC1.7.3.3).
     \end{enumerate}
 
 \end{itemize}
 
-\subsubsection{UC 1.7.3.1: Apertura elenco utenti}
+\subsubsection{UC1.7.3.1: Apertura elenco utenti}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente amministratore
@@ -790,7 +790,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente amministratore ha visualizzato l'elenco degli utenti.
 \end{itemize}
 
-\subsubsection{UC 1.7.3.2: Pressione pulsante elimina}
+\subsubsection{UC1.7.3.2: Pressione pulsante elimina}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente amministratore
@@ -799,7 +799,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente amministratore ha visualizzato il pannello di conferma eliminazione.
 \end{itemize}
 
-\subsubsection{UC 1.7.3.3: Conferma eliminazione}
+\subsubsection{UC1.7.3.3: Conferma eliminazione}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente amministratore
@@ -808,7 +808,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} L'utente selezionato è stato cancellato dal sistema insieme a tutte le sue View.
 \end{itemize}
 
-\subsubsection{UC 1.7.4: Errore nell’eliminazione dell'utente}
+\subsubsection{UC1.7.4: Errore nell’eliminazione dell'utente}
 ( risorsa occupata, utente loggato, viste in aggiornamento )
 
 \begin{itemize}
@@ -821,7 +821,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
 \clearpage
 
 
-\subsection{UC 1.8: Registrazione di un nuovo utente}
+\subsection{UC1.8: Registrazione di un nuovo utente}
 
 \begin{figure}[!htbp]
     \centering
@@ -840,17 +840,17 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Flusso principale degli eventi:}
 
     \begin{enumerate}
-        \item inserimento username (UC 1.8.1);
-        \item inserimento email (UC 1.8.2);
-        \item inserimento password (UC 1.8.3);
-        \item conferma registrazione (UC 1.8.4).
-        \item errore durante la registrazione (UC 1.8.5)
+        \item inserimento username (UC1.8.1);
+        \item inserimento email (UC1.8.2);
+        \item inserimento password (UC1.8.3);
+        \item conferma registrazione (UC1.8.4).
+        \item errore durante la registrazione (UC1.8.5)
     \end{enumerate}
 
 \end{itemize}
 
 
-\subsubsection{UC 1.8.1: Inserimento username}
+\subsubsection{UC1.8.1: Inserimento username}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -859,7 +859,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} l'utente ha inserito il proprio username.
 \end{itemize}
 
-\subsubsection{UC 1.8.2: Inserimento mail}
+\subsubsection{UC1.8.2: Inserimento mail}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -868,7 +868,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} l'utente ha inserito il proprio indirizzo mail.
 \end{itemize}
 
-\subsubsection{UC 1.8.3: Inserimento password}
+\subsubsection{UC1.8.3: Inserimento password}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -877,7 +877,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     \item \textbf{Postcondizione:} l'utente ha inserito la password.
 \end{itemize}
 
-\subsubsection{UC 1.8.4: Conferma registrazione}
+\subsubsection{UC1.8.4: Conferma registrazione}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
@@ -887,7 +887,7 @@ In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di access
     del sistema.
 \end{itemize}
 
-\subsubsection{UC 1.8.5: Errore durante la registrazione}
+\subsubsection{UC1.8.5: Errore durante la registrazione}
 
 \begin{itemize}
     \item \textbf{Attori:} Utente
