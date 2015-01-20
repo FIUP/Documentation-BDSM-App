@@ -13,6 +13,8 @@
 % =================================================================================================
 % 0.0.3			2015-01-14			stesi grafici a torta							Tesser Paolo
 % =================================================================================================
+% 0.0.4			2015-01-20			correzione errori valori						Tesser Paolo
+% =================================================================================================
 %
 
 % CONTENUTO DEL CAPITOLO
@@ -38,7 +40,7 @@
 						\hline
 						Faccin Nicola & 0 & 5 & 0 & 0 & 0 & 5 & \textbf{10} \\
 						\hline
-						Roetta Marco & 0 & 5 & 0 & 0 & 0 & 5 & \textbf{10} \\
+						Roetta Marco & 0 & 5 & 0 & 5 & 0 & 0 & \textbf{10} \\
 						\hline
 						Santacatterina Luca & 0 & 0 & 0 & 10 & 0 & 0 & \textbf{10} \\
 						\hline
@@ -84,7 +86,7 @@
 					\addplot[giallo,fill=giallo] coordinates
 					{(0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6)};
 					\addplot[viola,fill=viola] coordinates
-					{(8,0) (10,1) (0,2) (0,3) (0,4) (0,5) (0,6)};
+					{(8,0) (10,1) (5,2) (0,3) (0,4) (0,5) (0,6)};
 					\addplot[verde,fill=verde] coordinates
 					{(0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6)};
 					\addplot[rame,fill=rame] coordinates
@@ -208,7 +210,7 @@
 						\hline
 						Roetta Marco & 0 & 17 & 0 & 10 & 0 & 0 & \textbf{27} \\
 						\hline
-						Santacatterina Luca & 0 & 0 & 0 & 0 & 15 & 10 & \textbf{25} \\
+						Santacatterina Luca & 0 & 0 & 0 & 15 & 0 & 10 & \textbf{25} \\
 						\hline
 						Tesser Paolo & 16 & 0 & 0 & 5 & 0 & 0 & \textbf{21} \\
 						\hline		
@@ -252,7 +254,7 @@
 					\addplot[giallo,fill=giallo] coordinates
 					{(0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6)};
 					\addplot[viola,fill=viola] coordinates
-					{(5,0) (10,1) (0,2) (0,3) (0,4) (0,5) (0,6)};
+					{(5,0) (10,1) (10,2) (0,3) (0,4) (0,5) (0,6)};
 					\addplot[verde,fill=verde] coordinates
 					{(0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6)};
 					\addplot[rame,fill=rame] coordinates
@@ -537,7 +539,7 @@
 						\hline
 						Faccin Nicola & 0 & 0 & 19 & 0 & 0 & 6 & \textbf{25} \\
 						\hline
-						Roetta Marco & 0 & 0 & 17 & 0 & 0 & 12 & \textbf{30} \\
+						Roetta Marco & 0 & 0 & 17 & 0 & 0 & 13 & \textbf{30} \\
 						\hline
 						Santacatterina Luca & 6 & 9 & 0 & 0 & 0 & 7 & \textbf{22} \\
 						\hline
@@ -587,7 +589,7 @@
 					\addplot[verde,fill=verde] coordinates
 					{(0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6)};
 					\addplot[rame,fill=rame] coordinates
-					{(0,0) (7,1) (12,2) (6,3) (8,4) (10,5) (0,6)};
+					{(0,0) (7,1) (13,2) (6,3) (8,4) (10,5) (0,6)};
 					
 					\legend{Responsabile,Analista,Progettista,Amministratore,Programmatore,Verificatore}
 					\end{axis}  
@@ -745,9 +747,9 @@
 					\addplot[blu,fill=blu] coordinates
 					{(5,0) (0,1) (0,2) (0,3) (5,4) (0,5) (0,6)};
 					\addplot[rosso,fill=rosso] coordinates
-					{(0,0) (0,1) (0,2) (10,3) (5,4) (6,5) (7,6)};
+					{(0,0) (0,1) (0,2) (10,3) (5,4) (6,5) (0,6)};
 					\addplot[giallo,fill=giallo] coordinates
-					{(0,0) (8,1) (12,2) (0,3) (7,4) (7,5) (0,6)};
+					{(0,0) (8,1) (12,2) (0,3) (7,4) (7,5) (7,6)};
 					\addplot[viola,fill=viola] coordinates
 					{(0,0) (0,1) (7,2) (0,3) (0,4) (0,5) (0,6)};
 					\addplot[verde,fill=verde] coordinates
@@ -916,7 +918,7 @@
 					\addplot[giallo,fill=giallo] coordinates
 					{(8,0) (8,1) (0,2) (9,3) (0,4) (10,5) (0,6)};
 					\addplot[viola,fill=viola] coordinates
-					{(0,0) (0,1) (7,2) (0,3) (0,4) (0,5) (0,6)};
+					{(0,0) (0,1) (0,2) (0,3) (7,4) (0,5) (0,6)};
 					\addplot[verde,fill=verde] coordinates
 					{(12,0) (8,1) (7,2) (5,3) (15,4) (0,5) (10,6)};
 					\addplot[rame,fill=rame] coordinates
@@ -1080,11 +1082,11 @@
 					\addplot[rosso,fill=rosso] coordinates
 					{(0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6)};
 					\addplot[giallo,fill=giallo] coordinates
-					{(0,0) (10,1) (0,2) (0,3) (5,4) (0,5) (7,6)};
+					{(5,0) (10,1) (0,2) (0,3) (5,4) (0,5) (7,6)};
 					\addplot[viola,fill=viola] coordinates
-					{(5,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6)};
+					{(0,0) (0,1) (0,2) (5,3) (0,4) (0,5) (0,6)};
 					\addplot[verde,fill=verde] coordinates
-					{(0,0) (10,1) (0,2) (5,3) (0,4) (10,5) (10,6)};
+					{(0,0) (10,1) (0,2) (0,3) (0,4) (10,5) (10,6)};
 					\addplot[rame,fill=rame] coordinates
 					{(9,0) (0,1) (7,2) (6,3) (14,4) (7,5) (0,6)};
 					
@@ -1366,7 +1368,7 @@
 							\hline
 							Carnovalini Filippo & 0 & 31 & 0 & 0 & 0 & 15 & \textbf{46} \\
 							\hline
-							Ceccon Lorenzo & 6 & 19 & 0 & 0 & 0 & 20 & \textbf{51} \\
+							Ceccon Lorenzo & 6 & 19 & 0 & 6 & 0 & 20 & \textbf{51} \\
 							\hline
 							Cusinato Giacomo & 2 & 25 & 0 & 0 & 0 & 15 & \textbf{42} \\
 							\hline
@@ -1412,13 +1414,13 @@
 						    enlarge y limits={abs=0.625},
 						]
 						\addplot[blu,fill=blu] coordinates
-						{(20,0) (0,1) (0,2) (0,3) (2,4) (6,5) (0,6)};
+						{(20,0) (2,1) (0,2) (0,3) (2,4) (6,5) (0,6)};
 						\addplot[rosso,fill=rosso] coordinates
 						{(11,0) (12,1) (32,2) (12,3) (25,4) (19,5) (31,6)};
 						\addplot[giallo,fill=giallo] coordinates
 						{(0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6)};
 						\addplot[viola,fill=viola] coordinates
-						{(13,0) (25,1) (15,2) (4,3) (0,4) (0,5) (0,6)};
+						{(13,0) (25,1) (15,2) (4,3) (0,4) (6,5) (0,6)};
 						\addplot[verde,fill=verde] coordinates
 						{(0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6)};
 						\addplot[rame,fill=rame] coordinates
