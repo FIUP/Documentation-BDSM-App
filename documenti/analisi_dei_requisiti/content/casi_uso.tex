@@ -49,12 +49,11 @@
 
 \begin{itemize}
 
-    \item \textbf{Attori Coinvolti:}
+    \item \textbf{Attori:}
     \begin{itemize}
-
     	\item utente sconosciuto: utente non autenticato che accede al servizio;
-    	\item utente autenticato: utente autenticato che ha avuto accesso al servizio;
-    	\item utente amministratore: utente autenticato che accesso al servizio e che dispone dei permessi per visualizzare tutte le aree;
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
     \item \textbf{Descrizione:}
     dopo l'accesso al servizio:
@@ -80,7 +79,7 @@
 
 
 \begin{itemize}
-    \item \textbf{Attori Coinvolti:}
+    \item \textbf{Attori:}
     	utente non autenticato;
     \item \textbf{Descrizione:}
     	l'utente può autenticarsi per poter accedere ai servizi offerti dalla piattaforma utilizzando la schermata di login;
@@ -90,11 +89,11 @@
     	l'utente è riconosciuto dal sistema.
     \item \textbf{Flusso principale degli eventi:}
 
-    \begin{itemize}
-        \item inserimento username (UC1.1.1);
-        \item inserimento password (UC1.1.2);
-        \item pressione tasto login (UC1.1.3);
-    \end{itemize}
+    \begin{enumerate}
+        \item Inserimento username (UC1.1.1);
+        \item Inserimento password (UC1.1.2);
+        \item Conferma login (UC1.1.3);
+    \end{enumerate}
 
 \end{itemize}
 
@@ -144,10 +143,10 @@
     \centerline{\includegraphics[scale=0.6]{./images/UC1_2.pdf}}
     \caption{UC1.2 - Visione informazioni e statistiche}
 \end{figure}
-\textbf{Attori Coinvolti:}
-\begin{itemize}
-    	\item utente autenticato: utente autenticato che ha avuto accesso al servizio;
-    	\item utente amministratore: utente autenticato che accesso al servizio e che dispone dei permessi per visualizzare tutte le aree;
+\textbf{Attori:}
+  \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
 	\textbf{Descrizione:} gli utenti autenticati possono vedere una serie di informazioni relative alla 	loro attività, come la data dell'ultimo accesso effettuato e il numero di ricette e viste attive;
 
@@ -200,118 +199,140 @@
 \begin{figure}[!htbp]
     \centering
     \centerline{\includegraphics[scale=0.45]{./images/UC1_3.pdf}}
-    \caption{Use Case 1.3 - Gestione delle View}
+    \caption{UC1.3 - Gestione delle View}
 \end{figure}
 
 \begin{itemize}
-    \item \textbf{Attori Coinvolti:} Utente, Utente amministratore
-    \item \textbf{Precondizione:} L’utente deve aver fatto l’accesso nell’apposita pagina.
+    \item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+	 \item \textbf{Descrizione:} gli utenti possono vedere in questa pagina le View e i dati ad esse associate. Per ciascuna View è disponibile un pannello per modificarne i parametri, in oltre si può creare una nuova View o eliminarne una esistente.
 
-    \item \textbf{Descrizione:} Gli utenti autenticati possono vedere in questa pagina le View e i dati ad esse associati.
-    Si rende disponibile per ciascuna View un pannello per modificarne i parametri.
-    Si può creare una nuova View.
-    Si può eliminare una View esistente.
+    \item \textbf{Precondizione:} l'utente deve aver fatto l'accesso nell'apposita pagina;
+    \item \textbf{Postcondizione:} le informazioni richieste dall'utente sono state fornite, le impostazioni modificate sono state salvate nel sistema e le informazioni aggiunte sono state salvate.
 
-    \item \textbf{Postcondizione:}
-    Le informazioni richieste dall'utente sono state fornite
-    Le impostazioni modificate sono state salvate nel sistema.
-    Le informazioni aggiunte sono state salvate nel sistema.
-
-    \item \textbf{Possibili Errori:}
-    In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
 \end{itemize}
 
 \subsubsection{UC1.3.1: Visualizza View}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} Questa è la home screen dell'utente attualmente connesso. Qui è possibile visualizzare tutti o parte delle sue View e accedere ai menu di configurazione.
-    \item \textbf{Precondizione:} L'utente ha effettuato il login oppure ha selezionato il pulsante per accedere a questa pagina.
-    \item \textbf{Postcondizione:} L'utente viene reindirizzato alla home screen e visualizza le informazioni richieste.
+    \item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+    \item \textbf{Descrizione:} questa è la home screen dell'utente attualmente connesso qui, potrà visualizzare tutte le sue View e accedere ai menu di configurazione;
+    \item \textbf{Precondizione:} l'utente ha effettuato il login e ha selezionato il pulsante per accedere a questa pagina;
+    \item \textbf{Postcondizione:} l'utente viene reindirizzato alla home screen e visualizza le informazioni richieste.
 \end{itemize}
 
 \subsubsection{UC1.3.1.1: Apertura elenco View}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} Premendo sull'apposito pulsante è possibile far comparire a video l'elenco di tutte le View utente.
-    \item \textbf{Precondizione:} L'utente si trova nella home screen.
-    \item \textbf{Postcondizione:} L'utente ha ottenuto l'elenco di tutte le sue View
+    \item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+    \item \textbf{Descrizione:} premendo sull'apposito pulsante è possibile far comparire a video l'elenco di tutte le View utente;
+    \item \textbf{Precondizione:} l'utente si trova nella home screen;
+    \item \textbf{Postcondizione:} l'utente ha ottenuto l'elenco di tutte le sue View.
 \end{itemize}
 
-\subsubsection{UC1.3.2: Aggiungi una View}
+\subsubsection{UC1.3.2: Aggiungi View}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} Dalla home screen l'utente può aggiungere una nuova View premendo sull'apposito pulsante, compilando i dati richiesti e confermando l'operazione.
-    \item \textbf{Precondizione:} L'utente si è autenticato e si trova nella home screen.
-    \item \textbf{Postcondizione:} L'utente ha creato una nuovo View.
-	\item \textbf{Possibili Errori:}
-    Viene mostrato un messaggio di errore nel caso in cui i dati forniti siano errati.
-    \item \textbf{Flusso principale degli eventi:}
+    \item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+    \item \textbf{Descrizione:} dalla home screen l'utente può aggiungere una nuova View premendo sull'apposito pulsante e compilando i dati richiesti;
+    \item \textbf{Precondizione:} l'utente si è autenticato e si trova nella home screen;
+    \item \textbf{Postcondizione:} l'utente ha creato una nuovo View;
+	\item \textbf{Flusso principale:}
 
     \begin{enumerate}
-        \item apertura pannello (UC1.3.2.1);
-        \item inserimento parametri (UC1.3.2.2);
-        \item conferma creazione View (UC1.3.2.3).
+        \item Apertura pannello (UC1.3.2.1);
+        \item Inserimento parametri (UC1.3.2.2);
+        \item Conferma creazione View (UC1.3.2.3).
     \end{enumerate}
 
 \end{itemize}
 
-\subsubsection{UC1.3.2.1: Apertura pannello inserimento nuova View}
+\subsubsection{UC1.3.2.1: Apertura pannello}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} L'utente ha a disposizione un pulsante per aprire il pannello in cui inserire e selezionare i dati per la creazione di una nuova View.
-    \item \textbf{Precondizione:} L'utente si trova nella home screen.
-    \item \textbf{Postcondizione:} L'utente ha aperto il pannello di creazione di una nuova View.
+    \item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+    \item \textbf{Descrizione:} l'utente ha a disposizione un pulsante per aprire il pannello in cui inserire e selezionare i dati per la creazione di una nuova View;
+    \item \textbf{Precondizione:} l'utente si trova nella home screen;
+    \item \textbf{Postcondizione:} l'utente ha aperto il pannello di creazione di una nuova View.
 \end{itemize}
 
-\subsubsection{UC1.3.2.2: Inserimento delle informazioni}
+\subsubsection{UC1.3.2.2: Inserimento parametri}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} L'utente può inserire il nome e i parametri obbligatori e facoltativi relativi ad una nuova View.
-    \item \textbf{Precondizione:} L'utente ha aperto il pannello di inserimento nuova View.
-    \item \textbf{Postcondizione:} L'utente ha inserito le informazioni richieste.
+    \item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+    \item \textbf{Descrizione:} l'utente può inserire il nome, i parametri obbligatori e facoltativi relativi ad una nuova View;
+    \item \textbf{Precondizione:} l'utente ha aperto il pannello di inserimento di una nuova View;
+    \item \textbf{Postcondizione:} l'utente ha inserito le informazioni richieste.
 \end{itemize}
 
-\subsubsection{UC1.3.2.3: Conferma delle informazioni inserite}
+\subsubsection{UC1.3.2.3: Conferma creazione View}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} L'utente è tenuto a confermare i parametri inseriti nel pannello di creazione di una nuova View prima di poter utilizzare il grafico associato.
-    \item \textbf{Precondizione:} L'utente ha inserito almeno tutti i parametri obbligatori richiesti.
-    \item \textbf{Postcondizione:} L'utente ha confermato i parametri inseriti e la View è stata salvata nel sistema.
-    \item \textbf{Possibili Errori:} L'utente ha inserito delle informazioni errate o non ha rispettato i vincoli del sistema.
+    \item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+    \item \textbf{Descrizione:} l'utente è tenuto a confermare i parametri inseriti nel pannello di creazione di una nuova View prima di poter utilizzare il grafico associato.
+    \item \textbf{Precondizione:} l'utente ha inserito almeno i parametri obbligatori;
+    \item \textbf{Postcondizione:} l'utente ha confermato i parametri inseriti e la View è stata salvata nel sistema;
 \end{itemize}
 
-\subsubsection{UC1.3.3: Errore nella Creazione di nuova View}
+\subsubsection{UC1.3.3: Creazione nuova View fallita}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} In caso i dati inseriti non rispettino i vincoli del sistema oppure se si verifica un errore lato server viene visualizzata questa pagina di errore con i dettagli dei vincoli non rispettati o una breve descrizione dell'errore rilevato.
-    \item \textbf{Precondizione:} L'utente ha inserito dei dati che non rispettano i vincoli dl sistema. Il server ha sollevato un'eccezione durante il salvataggio dei dati.
-    \item \textbf{Postcondizione:} Nessuna modifica richiesta è stata salvata nel sistema.
+   	\item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+    \item \textbf{Descrizione:} nel caso i dati inseriti non rispettino i vincoli del sistema oppure se si verifica un errore lato server, viene visualizzata questa pagina di errore con una breve descrizione dell'anomalia rilevata;
+    \item \textbf{Precondizione:} l'utente ha inserito dei dati che non rispettano i vincoli del sistema. Il server ha sollevato un'eccezione durante il salvataggio dei dati;
+    \item \textbf{Postcondizione:} nessuna modifica richiesta è stata salvata nel sistema.
 \end{itemize}
 
-\subsubsection{UC1.3.4: Modifica una View}
+\subsubsection{UC1.3.4: Modifica View}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} L'utente può modificare i parametri associati ad una specifica View.
-    \item \textbf{Precondizione:} La View è stata creata ed è disponibile nell'elenco View dell'utente.
-    \item \textbf{Postcondizione:} I parametri relativi alla View sono stati modificati.
+   	\item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+    \item \textbf{Descrizione:} l'utente può modificare i parametri di una View;
+    \item \textbf{Precondizione:} la View è stata creata ed è disponibile nell'elenco delle View dell'utente;
+    \item \textbf{Postcondizione:} i parametri della View selezionata sono stati modificati;
 
-	\item \textbf{Possibili Errori:}
-    Viene mostrato un messaggio di errore nel caso in cui i dati forniti siano errati.
-    \item \textbf{Flusso principale degli eventi:}
+	\item \textbf{Flusso principale:}
 
     \begin{enumerate}
-        \item selezione di una View (UC1.3.4.1);
-        \item selezione tasto modifica (UC1.3.4.2);
-        \item inserimento nuovi parametri (UC1.3.4.3);
-        \item conferma nuovi parametri (UC1.3.4.4).
+        \item Selezione di una View (UC1.3.4.1);
+        \item Selezione tasto modifica (UC1.3.4.2);
+        \item Inserimento nuovi parametri (UC1.3.4.3);
+        \item Conferma nuovi parametri (UC1.3.4.4).
     \end{enumerate}
 
 \end{itemize}
@@ -319,93 +340,129 @@
 \subsubsection{UC1.3.4.1: Selezione di una View}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} L'utente deve selezionare la View desiderata dall'elenco delle View per poterla visualizzare e modificare.
-    \item \textbf{Precondizione:} L'utente si trova nel suo elenco delle View.
-    \item \textbf{Postcondizione:} L'utente ha selezionato e visualizzato la View desiderata.
+    \item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+    \item \textbf{Descrizione:} l'utente deve selezionare la View desiderata dall'elenco delle View per poterla visualizzare e modificare;
+    \item \textbf{Precondizione:} l'utente si trova nel suo elenco delle View;
+    \item \textbf{Postcondizione:} l'utente ha selezionato e visualizzato la View desiderata.
 \end{itemize}
 
-\subsubsection{UC1.3.4.2: Apertura pannello modifica View}
+\subsubsection{UC1.3.4.2: Selezione tasto modifica}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} L'utente può selezionare il pulsante modifica dal pannello della View attualmente visualizzata per modificarne i parametri.
-    \item \textbf{Precondizione:} L'utente ha visualizzato correttamente una View.
-    \item \textbf{Postcondizione:} L'utente ha aperto il pannello modifica View.
+   	\item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+    \item \textbf{Descrizione:} l'utente può selezionare il pulsante modifica dal pannello della View attualmente visualizzata per modificarne i parametri;
+    \item \textbf{Precondizione:} l'utente ha visualizzato correttamente una View;
+    \item \textbf{Postcondizione:} l'utente ha aperto il pannello modifica View.
 \end{itemize}
 
-\subsubsection{UC1.3.4.3: Inserimento dei parametri}
+\subsubsection{UC1.3.4.3: Inserimento nuovi parametri}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} L'utente può inserire i nuovi parametri della View aggiungendoli a quelli esistenti oppure sovrascrivendoli.
-    \item \textbf{Precondizione:} L'utente ha visualizzato il pannello modifica View.
-    \item \textbf{Postcondizione:} L'utente ha inserito i nuovi parametri.
+    \item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+    \item \textbf{Descrizione:} l'utente può inserire i nuovi parametri della View aggiungendoli a quelli esistenti oppure sovrascrivendoli;
+    \item \textbf{Precondizione:} l'utente ha visualizzato il pannello modifica View;
+    \item \textbf{Postcondizione:} l'utente ha inserito i nuovi parametri.
 \end{itemize}
 
-\subsubsection{UC1.3.4.4: Conferma dei parametri inseriti}
+\subsubsection{UC1.3.4.4: Conferma nuovi parametri}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} L'utente deve confermare i parametri inseriti perima che questi siano attivi.
-    \item \textbf{Precondizione:} L'utente ha inserito i parametri desiderati nei campi del pannello di modifica View.
-    \item \textbf{Postcondizione:} I nuovi parametri sono stati memorizzati nel sistema e sono ora attivi.
+    \item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+    \item \textbf{Descrizione:} l'utente deve confermare i parametri inseriti prima che questi siano salvati;
+    \item \textbf{Precondizione:} l'utente ha inserito i parametri desiderati;
+    \item \textbf{Postcondizione:} i nuovi parametri sono stati memorizzati nel sistema e attivi.
 \end{itemize}
 
-\subsubsection{UC1.3.5: Errore nella modifica della View}
+\subsubsection{UC1.3.5: Errore nella modifica dei dati}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} L'utente visualizza una schermata di errore con i parametri che ha inserito non conformi ai vincoli di sistema.
-    \item \textbf{Precondizione:} L'utente ha inserito dei parametri non validi.
-    \item \textbf{Postcondizione:} L'utente ha visualizzato il messaggio di errore e ha preso atto dei parametri inseriti non conformi ai vincoli di sistema.
+    \item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+    \item \textbf{Descrizione:} l'utente visualizza una schermata di errore con i parametri che ha inserito non conformi ai vincoli di sistema;
+    \item \textbf{Precondizione:} l'utente ha inserito dei parametri non validi;
+    \item \textbf{Postcondizione:} l'utente ha visualizzato il messaggio di errore e ha preso atto dei parametri non conformi ai vincoli di sistema.
 \end{itemize}
 
-\subsubsection{UC1.3.6: Eliminazione di una View}
+\subsubsection{UC1.3.6: Eliminazione View}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} L'utente può eliminare una View precedentemente creata.
-    \item \textbf{Precondizione:} L'utente ha creato almeno una View e questa è visualizzata nell'elenco delle sue View.
-    \item \textbf{Postcondizione:} L'utente ha cancellato una View dal suo profilo.
-    \item \textbf{Flusso principale degli eventi:}
+    \item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+    \item \textbf{Descrizione:} l'utente può eliminare una View precedentemente creata;
+    \item \textbf{Precondizione:} l'utente ha creato almeno una View ed è visibile nel suo elenco;
+    \item \textbf{Postcondizione:} l'utente ha cancellato una View dal suo elenco;
+    \item \textbf{Flusso principale:}
 
     \begin{enumerate}
-        \item selezione di una View (UC1.3.6.1);
-        \item selezione pulsante elimina (UC1.3.6.2);
-        \item conferma eliminazione (UC1.3.6.3).
+        \item Selezione View (UC1.3.6.1);
+        \item Eliminazione View (UC1.3.6.2);
+        \item Conferma eliminazione View (UC1.3.6.3).
     \end{enumerate}
 
 \end{itemize}
 
-\subsubsection{UC1.3.6.1: Selezione di una View}
+\subsubsection{UC1.3.6.1: Selezione View}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} L'utente deve selezionare la View desiderata dall'elenco delle View per poterla visualizzare e modificare.
-    \item \textbf{Precondizione:} L'utente si trova nel suo elenco delle View.
-    \item \textbf{Postcondizione:} L'utente ha selezionato e visualizzato la View desiderata.
+ 	\item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+    \item \textbf{Descrizione:} l'utente deve selezionare la View desiderata dal suo elenco per poterla visualizzare e modificare;
+    \item \textbf{Precondizione:} l'utente si trova nel suo elenco delle View;
+    \item \textbf{Postcondizione:} l'utente ha selezionato e visualizzato la View desiderata.
 \end{itemize}
 
 \subsubsection{UC1.3.6.2: Eliminazione di una View}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} L'utente può selezionare il pulsante Elimina View dalla View correntemente visualizzata.
-    \item \textbf{Precondizione:} L'utente ha visualizzato correttamente una delle sue View.
-    \item \textbf{Postcondizione:} L'utente ha selezionato il pulsante Elimina View.
+   	\item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+    \item \textbf{Descrizione:} l'utente può selezionare il pulsante per eliminare la View visualizzata;
+    \item \textbf{Precondizione:} l'utente ha visualizzato correttamente una View;
+    \item \textbf{Postcondizione:} l'utente ha selezionato il pulsante per eliminare la View.
 \end{itemize}
 
-\subsubsection{UC1.3.6.3: Conferma eliminazione di una View}
+\subsubsection{UC1.3.6.3: Conferma eliminazione View}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} L'utente deve confermare l'eliminazione delle View selezionando il pulsante di conferma sul messaggio di conferma eliminazione View.
-    \item \textbf{Precondizione:} L'utente ha selezionato il pulsante di eliminazione di una View.
-    \item \textbf{Postcondizione:} L'utente ha confermato l'eliminazione e la View è stata eliminata dal sistema.
+   	\item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+    \item \textbf{Descrizione:} l'utente deve confermare l'eliminazione della View selezionando il pulsante di conferma;
+    \item \textbf{Precondizione:} l'utente ha selezionato il pulsante per eliminare una View;
+    \item \textbf{Postcondizione:} l'utente ha confermato l'eliminazione e la View è stata eliminata dal sistema.
 \end{itemize}
 
-\clearpage
+\pagebreak
 
 
 \subsection{UC1.4: Gestione delle Recipe}
@@ -417,7 +474,7 @@
 \end{figure}
 
 \begin{itemize}
-    \item \textbf{Attori Coinvolti:} Utente Amministratore
+    \item \textbf{Attori:} Utente Amministratore
 
     \item \textbf{Precondizione:} L'utente deve aver fatto l'accesso nell'apposita pagina.
 
@@ -507,7 +564,7 @@
 \subsubsection{UC1.4.4: Eliminazione di una Recipe}
 
 \begin{itemize}
-    \item \textbf{Attori Coinvolti:}
+    \item \textbf{Attori:}
     Utente Amministratore
 
     \item \textbf{Precondizione:}
@@ -574,7 +631,7 @@
 \end{figure}
 
 \begin{itemize}
-    \item \textbf{Attori Coinvolti:} Utente
+    \item \textbf{Attori:} Utente
     \item \textbf{Precondizione:} L'utente dispone di una password di accesso valida, risulta autenticato al servizio e si trova nella sua Home Screen.
     \item \textbf{Descrizione:} L'utente può cambiare la password attualmente in uso selezionando il pulsante di cambio password sulla sua Home Screen.
     \item \textbf{Postcondizione:} La nuova password per l'utente è attiva, la vecchia password non è più valida.
@@ -645,7 +702,7 @@
 \end{figure}
 
 \begin{itemize}
-    \item \textbf{Attori Coinvolti:} Utente, Utente amministratore
+    \item \textbf{Attori:} Utente, Utente amministratore
     \item {Precondizione:} L'utente risulta autenticato al servizio.
     \item \textbf{Descrizione:} L'utente può terminare la sessione di lavoro e liberare la postazione per un altro utente. Questa operazione può essere eseguita premendo il pulsante Logout nella Home Screen.
     \item \textbf{Postcondizione:} La sessione di lavoro è terminata. Viene mostrata la schermata di Login.
