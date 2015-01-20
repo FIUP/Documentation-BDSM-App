@@ -1,14 +1,17 @@
 % =================================================================================================
 % File:			processi_di_supporto.tex
 % Description:	Definisce il capitolo dei processi di supporto
-% Created:		2014/12/11
+% Created:		2014-12-11
 % Author:		Santacatterina Luca
 % Email:		santacatterina.luca@mashup-unipd.it
 % =================================================================================================
 % Modification History:
 % Version		Modifier Date		Change											Author
-% 0.0.2 		2015/01/13 			Prima stesura generale							Santacatterina Luca
-% 0.0.1 		2014/12/11 			Inizializzazione del file						Santacatterina Luca
+% 0.0.1 		2014-12-11 			Inizializzazione del file						Santacatterina Luca
+% =================================================================================================
+% 0.0.2 		2015-01-13 			Prima stesura generale							Santacatterina Luca
+% =================================================================================================
+% 0.0.3			2015-01-20			corretti errori ortografici						Tesser Paolo
 % =================================================================================================
 %
 
@@ -62,11 +65,11 @@
 					\begin{enumerate}
 						\item dalla root del repository entrare nella cartella script ed invocare il comando:
 							\begin{center}
-								make glossterm
+								\textbf{make glossterm}
 							\end{center}
 						\item ritornare alla root ed entrare nella cartella documenti. Invocare da li il comando:
 							\begin{center}
-								make gloss
+								\textbf{make gloss}
 							\end{center}
 					\end{enumerate}
 				\noindent
@@ -97,16 +100,16 @@
 			Al fine di ottenere dei documenti formattati correttamente si è predisposto un template in \LaTeX{} da seguire scrupolosamente. Esso deve essere utilizzato come linea guida per lo sviluppo dei documenti. Ogni tipologia di documento, prima pagina, indici, contenuti interni, lettere hanno uno stile definito in maniera univoca. Esso ne permette una gestione capillare ed omogenea.\\
 			Verrà definita inoltre un intestazione per ogni file \emph{.tex} nel modo seguente:
 				\begin{verbatim}
-					% ====================================================================
+					% ==============================================================
 					% File:			nome_del_documento.tex
 					% Description:	Definisce il capitolo relativo a ...
 					% Created:		aaaa-mm-gg
 					% Author:		Cognome Nome
 					% Email:		cognome.nome@mashup-unipd.it
-					% ====================================================================
+					% ==============================================================
 					% Modification History:
-					% Version		Modifier Date		Change									Author
-					% 0.0.1 		aaaa-mm-gg 			Descrizione del cambiamento				Cognome Nome
+					% Version	Modifier Date	Change							Author
+					% 0.0.1 	aaaa-mm-gg 		Descrizione del cambiamento		Cognome Nome
 					
 				\end{verbatim}
 			\noindent
@@ -116,7 +119,7 @@
 			Nella root della cartella è presente il file che gestisce il contenuto della prima pagina. Esso ha il compito di includere tutti gli stili e a linkare tutte le sezioni utili alla costruzione del documento.\\
 			All'interno della cartella \emph{content} sono presenti tutti i file, divisi per capitolo, contenti il testo dell'intero documento.\\
 			Le cartelle \emph{diagrams} e \emph{images} hanno il compito di contenere i relativi diagrammi ed immagini usati nei singoli documenti.\\
-			Nella cartella \emph{doc\textunderscore to\textunderscore modify} sono presenti due files, il primo \emph{content\textunderscore files.tex} raggruppa tutti i sottocapitoli e li ordina in base alle scelte dell'utente. Il secondo file \emph{history.tex} contiene la storia della creazione e modifica apportata al documento.
+			Nella cartella \emph{doc\textunderscore to\textunderscore modify} sono presenti due files, il primo \emph{content\textunderscore files.tex} raggruppa tutti i sotto capitoli e li ordina in base alle scelte dell'utente. Il secondo file \emph{history.tex} contiene la storia della creazione e modifica apportata al documento.
 
 				\subparagraph{Prima pagina}
 				La prima pagina contiene un elenco delle caratteristiche fondamentali del documento quali:
@@ -207,7 +210,7 @@
 				
 				\subparagraph{Composizione del testo}
 				\begin{itemize}
-					\item \textbf{Elenchi non numerati}: ogni singolo elemnto deve iniziare con un testo scritto in grassetto e con la prima lettera maiuscola. Ogni singolo punto dell'elenco deve terminare con il punto e virgola. Solamente alla fine è obbligo l'uso del punto;
+					\item \textbf{Elenchi non numerati}: ogni singolo elemento deve iniziare con un testo scritto in grassetto e con la prima lettera maiuscola. Ogni singolo punto dell'elenco deve terminare con il punto e virgola. Solamente alla fine è obbligo l'uso del punto;
 					\item \textbf{Elenchi numerati}: ogni singolo elemento deve iniziare con il testo scritto in minuscolo. Ogni singolo punto dell'elenco deve terminare con il punto e virgola. Solamente alla fine è obbligo l'uso del punto;
 					\item \textbf{Note a piè di pagina}: ogni singola nota a piè di pagina deve iniziare con lettera maiuscola. Tutte le note a piè di pagina devono terminare obbligatoriamente con il punto e virgola;
 					\item \textbf{Pedice ``G''}: per tutti gli acronimi e/o termini particolari presenti nei documenti e riportati nel \docGlossary, deve essere presente la notazione tramite pedice ``G''.
@@ -254,9 +257,10 @@
 					\item \textbf{Generazione struttura documento}: il makefile predisposto per la nuova generazione dei documenti ha il ruolo di effettuare una copia del template di documento ed assegnargli il nome;
 					\item \textbf{Compilazione documento}: per la compilazione dei documenti è stato sviluppato un makefile che procede alla compilazione completa del file \LaTeX{} e ne verifica tramite il software GNU Aspell la correttezza ortografica.\\
 					Alla fine della compilazione elimina tutti i file temporanei e procede all'apertura del file pdf;
-					\item \textbf{Inserimento notazioni termini di glossario}: lo script provvede alla duplicazione della cartella relativa ai documenti ed analizza documento per documento e ne inserisce la notazione  ``G'' in pedice per tutti i termini presenti nel glossario. Alla fine si crea automaticamente una nuova cartella contenente tutti i docuemnti compilati;
-					\item \textbf{Calcolo indice di Gulpease}: tramite lo script di parsing automatico avviato sul documento è possibile ottenere l'inidice di Gulpease;
-					\item \textbf{Controllo ortografico}: sul makefile per la compilazione dei file \LaTeX{} è presente l'ingrazione del software GNU Aspell per il controllo ortografico che blocca la compilazione e lancia una ecezzione specificando il termine da modificare.
+					\item \textbf{Inserimento notazioni termini di glossario}: lo script provvede alla duplicazione della cartella relativa ai documenti e analizza documento per documento, inserendo la notazione  ``G'' in pedice per tutti i termini presenti nel glossario. \\
+					Alla fine si crea automaticamente una nuova cartella contenente tutti i documenti compilati;
+					\item \textbf{Calcolo indice di Gulpease}: tramite lo script di parsing automatico avviato sul documento è possibile ottenere l'indice di Gulpease all'interno di un file di testo separato;
+					\item \textbf{Controllo ortografico}: sul makefile per la compilazione dei file \LaTeX{} è presente l'integrazione del software GNU Aspell per il controllo ortografico che blocca la compilazione e lancia una eccezione specificando il termine da modificare.
 				\end{itemize}
 			% paragraph script (end)
 			
@@ -275,10 +279,10 @@
 			L'attività di analisi statica è una ben precisa tecnica di verifica, applicabile sia a documenti sia a codice sorgente. Essa viene applicata durante tutto il ciclo di sviluppo del progetto. Ha come obiettivo la ricerca delle anomalie. Un volta individuate possono essere così applicate:
 			\begin{itemize}
 				\item \textbf{Walkthrough}: il seguente metodo, ricerca all'interno del testo e del codice, tutte le possibili anomalie. L'analisi si basa sulla lettura di tutto il testo.\\
-				Dopo aver trovato le varie anomalie si portano in discussione con il redattore del documento e si cerca una risoluzione ottimale.\\
-				Tale tecnica può essere usata all'inizio del progetto, in quanto non si ha una visione generale del documento/codice che si stà implementando. Permette così ai verificatori di effetture una \emph{checklist} di controllo.\\
-				Come descritto inizialmente, tale tecnica risulta la più adeguata, solamente dopo aver stilato una \emph{lista di controllo}, si potrà passare ad una analisi più specifica, usando l'attività di analisi di tipo \emph{ispection};
-				\item \textbf{Ispection}: il segumente metodo si basa sulla lettura mirata del documento/codice per analizzarne i difetti. Sarà così possibile usare la lista di controllo per verificare la presenza di errori. Con l'acquisizione di nuove capacità si potrà così amplicare la lista di controllo in modo tale da rendere l'operazione più efficiente/efficacie.
+				Dopo aver trovato le varie anomalie si portano in discussione con il redattore del documento e si cerca una risoluzione ottimale. \\
+				Tale tecnica può essere usata all'inizio del progetto, in quanto non si ha una visione generale del documento/codice che si sta sviluppando. Permette così ai verificatori di preparare una \emph{checklist}.\\
+				Come descritto inizialmente, tale tecnica risulta la più adeguata. Solamente dopo aver stilato una \emph{lista di controllo}, si potrà passare ad una analisi più specifica, usando l'attività di analisi di tipo \emph{inspection};
+				\item \textbf{Inspection}: il seguente metodo si basa sulla lettura mirata del documento/codice per analizzarne i difetti. Sarà così possibile usare la lista di controllo per verificare la presenza di errori. Con l'acquisizione di nuove capacità si potrà così ampliare la lista di controllo in modo tale da rendere l'operazione più efficiente/efficace.
 			\end{itemize}
 			% paragraph analisi_statica (end)
 			
@@ -289,7 +293,7 @@
 			Tutti i test applicati si intendono ripetibili, ovvero devono poter essere applicati in qualsiasi momento e ripetuti per tutta la durata del software.\\
 			Ogni test deve avere delle caratteristiche ben precise da rispettare, ovvero:
 			\begin{itemize}
-				\item \textbf{Ambiente}: deve essere riportato necessarimanete l'ambiente sia software sia hardware in cui il sistema dovrà eseguire il test. Deve necessariamente essere specificato lo stato iniziale del sistema;
+				\item \textbf{Ambiente}: deve essere riportato necessariamente l'ambiente sia software sia hardware in cui il sistema dovrà eseguire il test. Deve necessariamente essere specificato lo stato iniziale del sistema;
 				\item \textbf{Specifica}: devono essere riportati necessariamente i dati in input ed output. Questi serviranno per poter effettuare un test di congruenza;
 				\item \textbf{Procedure}: possono essere specificati ulteriori istruzioni per l'esecuzione dei test. Inoltre possono essere riportate istruzioni sulla corretta lettura dei risultati.
 			\end{itemize}
@@ -356,13 +360,13 @@
 		\label{ssub:strumenti}
 			\paragraph{Correzione ortografica} % (fold)
 			\label{par:correzione_ortografica}
-			Per la parte di correzzione ortografica, si sono scelti di usare due strumenti di analisi. Il primo risiede all'interno dell'editor TexMaker, ovvero l'editor in questione fornisce le funionalità di correttore ortografico per i file \LaTeX. Esso ha dei limiti, in quanto usa un normale dizionario presente all'interno del sistema operativo e può essere utile per gli errori più grossolani di ortografia.\\
-			Per ovviare al problema, si è scelto di implementare ulteriormente un controllo più accurato tramite il software \emph{GNU Aspell}. Esso permette uan migliroe ingrazione con i file \LaTeX{} e permette l'aggiunta centralizzata dei termini di più difficile comprensione.
+			Per la parte di correzione ortografica, si sono scelti di usare due strumenti di analisi. Il primo risiede all'interno dell'editor TexMaker, offrendo le funzionalità di correttore ortografico per i file \LaTeX. Esso ha dei limiti, in quanto usa un normale dizionario presente all'interno del sistema operativo e può essere utile per gli errori più grossolani di ortografia. \\
+			Per ovviare al problema, si è scelto di implementare ulteriormente un controllo più accurato tramite il software \emph{GNU Aspell}. Esso permette una migliore integrazione con i file \LaTeX{} e permette l'aggiunta centralizzata dei termini di più difficile comprensione.
 			% paragraph correzione_ortografica (end)
 			
 			\paragraph{Calcolo indice Gulpease} % (fold)
 			\label{par:calcolo_indice_gulpease}
-			TO DO
+			Attraverso i file di testo, generati in automatico per ogni documento dallo script elencato nella sezione \ref{par:script_doc}, l'\roleAdministrator{} potrà confrontarne la conformità con le metriche previste dal \docNameVersionPdQ.
 			% paragraph calcolo_indice_gulpease (end)
 		% subsubsection strumenti (end)	
 
