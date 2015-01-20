@@ -8,7 +8,7 @@
 \documentclass[10pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 % moderncv themes
 \moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
@@ -29,9 +29,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % personal data
+\input{lettera}
 \input{../template/source/commands}
 
-\name{\includegraphics[width=8cm]{../template/images/logo/logo_verticale.pdf}}{}
+\name{\includegraphics[width=8clm]{../template/images/logo/logo_verticale.pdf}}{}
 %\title{}{}                               % optional, remove / comment the line if not wanted
 %\address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 %\phone[mobile]{+1~(234)~567~890}                   % optional, remove / comment the line if not wanted
@@ -59,50 +60,58 @@
 %-----       letter       ---------------------------------------------------------
 % recipient data
 \recipient{Alla cortese attenzione del Committente:}{\textit{Prof. Tullio Vardanega \\ Prof. Riccardo Cardin\\ Università degli Studi di Padova \\ Dipartimento di Matematica Pura ed Applicata \\ Via Trieste 63 \\ 35121, Padova}}
-\date{\emph{???}}
+\date{\emph{2015-01-23}}
 \opening{Egregio Professore Vardanega,}
 %\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
 \makelettertitle
 
-Con la presente, il gruppo \groupName , intende comunicarle ufficialmente la partecipazione alla \textbf{Revisione di Accettazione}, per la realizzazione del prodotto da Lei commissionato, denominato \textit{BDMSApp}.
+Con la presente, il gruppo \groupName{}, intende comunicarle ufficialmente la partecipazione alla \textbf{Revisione di Accettazione}, per la realizzazione del prodotto da Lei commissionato, denominato \textit{BDMSApp} proposto dalla ditta Zing S.r.l.
 Il team è formato dai seguenti componenti: 
-\begin{center}
-\begin{tabularx}{0.8\linewidth}{|X |X |l|}
-\hline
-\hspace*{0.2cm} \textbf{Nome} & \hspace*{0.2cm} \textbf{Matricola} & \hspace*{0.2cm} \textbf{Email} \\ \hline
+	\begin{center}
+		\begin{tabularx}{0.8\linewidth}{|X |X |l|}
+		\hline
+		\hspace*{0.2cm} \textbf{Nome} & \hspace*{0.2cm} \textbf{Matricola} & \hspace*{0.2cm} \textbf{Email} \\ \hline
 
-\hspace*{0.2cm} Carnovalini Filippo & \hspace*{0.2cm}1048335 & \hspace*{0.2cm}\href{mailto:carnovalini.filippo@mashup-unipd.it}{carnovalini.filippo@mashup-unipd.it} \\ \hline
+		\hspace*{0.2cm} Carnovalini Filippo & \hspace*{0.2cm}1048335 & hspace*{0.2cm}\href{mailto:carnovalini.filippo@mashup-unipd.it}{carnovalini.filippo@mashup-unipd.it} \\ \hline
 
-\hspace*{0.2cm} Ceccon Lorenzo & \hspace*{0.2cm}1026118 & \hspace*{0.2cm}\href{mailto:ceccon.lorenzo@mashup-unipd.it}{ceccon.lorenzo@mashup-unipd.it} \\ \hline
+		\hspace*{0.2cm} Ceccon Lorenzo & \hspace*{0.2cm}1026118 & \hspace*{0.2cm}\href{mailto:ceccon.lorenzo@mashup-unipd.it}{ceccon.lorenzo@mashup-unipd.it} \\ \hline
 
- \hspace*{0.2cm} Cusinato Giacomo &\hspace*{0.2cm}1054137 & \hspace*{0.2cm}\href{mailto:cusinato.giacomo@mashup-unipd.it}{cusinato.giacomo@mashup-unipd.it} \\ \hline
+		\hspace*{0.2cm} Cusinato Giacomo &\hspace*{0.2cm}1054137 & \hspace*{0.2cm}\href{mailto:cusinato.giacomo@mashup-unipd.it}{cusinato.giacomo@mashup-unipd.it} \\ \hline
  
-\hspace*{0.2cm} Faccin Nicola &\hspace*{0.2cm}1005999  & \hspace*{0.2cm}\href{mailto:faccin.nicola@mashup-unipd.it}{faccin.nicola@mashup-unipd.it} \\ \hline
+		\hspace*{0.2cm} Faccin Nicola &\hspace*{0.2cm}1005999  & \hspace*{0.2cm}\href{mailto:faccin.nicola@mashup-unipd.it}{faccin.nicola@mashup-unipd.it} \\ \hline
 
-\hspace*{0.2cm} Roetta Marco & \hspace*{0.2cm}1001887 & \hspace*{0.2cm}\href{mailto:roetta.marco@mashup-unipd.it}{roetta.marco@mashup-unipd.it} \\ \hline
+		\hspace*{0.2cm} Roetta Marco & \hspace*{0.2cm}1001887 & \hspace*{0.2cm}\href{mailto:roetta.marco@mashup-unipd.it}{roetta.marco@mashup-unipd.it} \\ \hline
 
-\hspace*{0.2cm} Santacatterina Luca & \hspace*{0.2cm}619555 & \hspace*{0.2cm}\href{mailto:santacatterina.luca@mashup-unipd.it}{santacatterina.luca@mashup-unipd.it} \\ \hline
+		\hspace*{0.2cm} Santacatterina Luca & \hspace*{0.2cm}619555 & \hspace*{0.2cm}\href{mailto:santacatterina.luca@mashup-unipd.it}{santacatterina.luca@mashup-unipd.it} \\ \hline
 
-\hspace*{0.2cm} Tesser Paolo & \hspace*{0.2cm}1026527 & \hspace*{0.2cm}\href{mailto:tesser.paolo@mashup-unipd.it}{tesser.paolo@mashup-unipd.it} \\
-\hline
-\end{tabularx}
-\end{center}
+		\hspace*{0.2cm} Tesser Paolo & \hspace*{0.2cm}1026527 & \hspace*{0.2cm}\href{mailto:tesser.paolo@mashup-unipd.it}{tesser.paolo@mashup-unipd.it} \\
+		\hline
+		\end{tabularx}
+	\end{center}
 
 Si allegano alla presente lettera, i seguenti documenti:
-\begin{itemize}
-	\item \textit{Analisi dei Requisiti v4.0.0} ({\verb!Esterni/Analisi_dei_Requisiti-v4.0.0.pdf!});
-\end{itemize}
+	\begin{itemize}
+		\item \textit{Analisi dei Requisiti v1.0.0} ({\verb!esterni/analisi_dei_requisiti_v1.0.0.pdf!});
+		\item \textit{Piano di Progetto v1.0.0} ({\verb!esterni/piano_di_progetto_v1.0.0.pdf!});
+		\item \textit{Piano di Qualifica v1.0.0} ({\verb!esterni/piano_di_qualifica_v1.0.0.pdf!});
+		\item \textit{Glossario v1.0.0} ({\verb!esterni/glossario_v1.0.0.pdf!});
+		\item \textit{Verbale di incontro con il proponente del 2015-01-14} ({\verb!esterni/verbale_esterno_2015_01_14.pdf!});
+	
+		\item \textit{Norme di Progetto v1.0.0} ({\verb!interni/norme_di_progetto_v1.0.0.pdf!});
+		\item \textit{Studio di Fattibilità v1.0.0} ({\verb!interni/studio_di_fattibilita_v1.0.0.pdf!});
+		\item \textit{Verbale di incontro interno del 2014-11-26} ({\verb!interni/verbale_interno_2014-11-16.pdf!});
+		\item \textit{Verbale di incontro interno del 2014-12-02} ({\verb!interni/verbale_interno_2014-12-02.pdf!});
+	\end{itemize}
 
 I documenti allegati descrivono approfonditamente i dettagli di qualifica del prodotto, di pianificazione, i requisiti individuati e soddisfatti, la progettazione ad alto livello e la progettazione di dettaglio.
 
-Il costo stimato per la realizzazione del progetto non ha subito variazioni ed è rimasto di \textbf{\EUR{ ??}}.
+Il costo stimato per la realizzazione del progetto non ha subito variazioni ed è rimasto di \textbf{\euro{} 13731,00}.
 
 Rimango a Sua completa disposizione per ogni ulteriore chiarimento.
-\begin{flushright}
-\textit{Il responsabile,} 
-
-\textit{???}
-\end{flushright}
+	\begin{flushright}
+		\textit{Il responsabile,} 
+		\textit{Tesser Paolo}
+	\end{flushright}
 \end{document}
 
 
