@@ -63,9 +63,8 @@
     	\item un utente autenticato può vedere statistiche, modificare la propria password, visualizzare, creare e modificare le proprie View;
   		\item un utente amministratore può fare tutte le operazioni di un utente autenticato, più ha la possibilità di eliminare un utente e tutte le sue View e modificarne i privilegi;
 	\end{itemize}
-    \item \textbf{Possibili Errori:}
+    \item \textbf{Precondizione:} l'utente autenticato, l'utente non autenticato o l'amministratore hanno caricato la prima pagina del servizio;
     Viene visualizzato un messaggio di errore nel caso le informazioni di accesso inserite siano errate;
-
     \item \textbf{Postcondizione:}
     Il servizio ha erogato correttamente le funzionalità richieste dall'utente.
 
@@ -83,10 +82,10 @@
 \begin{itemize}
     \item \textbf{Attori Coinvolti:}
     	utente non autenticato;
-    \item \textbf{Precondizione:}
-    	l'utente che accede alla pagina di accesso è sconosciuto al sistema;
     \item \textbf{Descrizione:}
     	l'utente può autenticarsi per poter accedere ai servizi offerti dalla piattaforma utilizzando la schermata di login;
+    \item \textbf{Precondizione:}
+        l'utente che accede alla pagina di accesso è sconosciuto al sistema;
     \item \textbf{Postcondizione:}
     	l'utente è riconosciuto dal sistema.
     \item \textbf{Possibili Errori:}
