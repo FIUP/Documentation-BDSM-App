@@ -7,13 +7,13 @@
 % =================================================================================================
 % Modification History:
 % Version		Modifier Date		Change											Author
-% 0.0.1 		2014/12/30 			aggiunta sezione e iniziata stesura				Roetta Marco
+% 0.0.1 		2014/12/30 			aggiunta sezione e iniziata stesura			Roetta Marco
 % =================================================================================================
 % Version		Modifier Date		Change											Author
 % 0.0.2 		2015/01/12 			Aggiunto elenco Casi d'uso incompleto			Roetta Marco
 % =================================================================================================
 % Version		Modifier Date		Change											Author
-% 0.0.3 		2015/01/12 			Aggiunta descrizione ai casi principali			Roetta Marco
+% 0.0.3 		2015/01/12 			Aggiunta descrizione ai casi principali		Roetta Marco
 % =================================================================================================
 % Version		Modifier Date		Change											Author
 % 0.0.4 		2015/01/13 			Aggiunte altre descrizioni				 		Roetta Marco
@@ -29,6 +29,9 @@
 % =================================================================================================
 % Version		Modifier Date		Change											Author
 % 0.1.1 		2015/01/15 			Correzioni ortografiche					 		Roetta Marco
+% =================================================================================================
+% Version		Modifier Date		Change											Author
+% 1.0.0 		2015/01/20 			Inizio Verifica				 					Nicola Faccin
 % =================================================================================================
 %
 
@@ -47,15 +50,18 @@
 \begin{itemize}
 
     \item \textbf{Attori Coinvolti:}
-    Utente sconosciuto: utente non autenticato che accede al servizio.
-    Utente autenticato: utente autenticato che ha acceduto al servizio.
-    Utente amministratore: utente autenticato che ha acceduto al servizio e che dispone dei permessi per visualizzare tutte le aree.
-
+    \begin{itemize}
+    
+    	\item Utente sconosciuto: utente non autenticato che accede al servizio;
+    	\item Utente autenticato: utente autenticato che ha avuto accesso al servizio;
+    	\item Utente amministratore: utente autenticato che accesso al servizio e che dispone dei permessi per visualizzare tutte le aree.
+	\end{itemize}
     \item \textbf{Descrizione:}
-    Questa è la schermata che viene mostrata ad un utente che non si è ancora autenticato al sistema.
-    Un utente sconosciuto può autenticarsi oppure se è la prima volta che accede al servizio può registrarsi per ottenere delle credenziali di accesso valide.
-    Un utente autenticato può vedere le statistiche e modificare la propria password, può visualizzare, creare e modificare le proprie viste e le proprie ricette.
-    Un utente amministratore può fare tutte le operazioni di un utente autenticato, più ha la possibilità di eliminare un utente e tutte le sue viste e modificare i privilegi di un altro utente.
+    dopo l'accesso al servizio:
+    \begin{itemize}
+    	\item un utente sconosciuto può autenticarsi, o se è al primo accesso al servizio può registrarsi per ottenere delle credenziali valide;
+    	\item un utente autenticato può vedere statistiche, modificare la propria password, visualizzare, creare e modificare le proprie View;
+  		\item un utente amministratore può fare tutte le operazioni di un utente autenticato, più ha la possibilità di eliminare un utente e tutte le sue View e modificarne i privilegi;
 
     \item \textbf{Possibili Errori:}
     Viene visualizzato un messaggio di errore nel caso le informazioni di accesso inserite siano errate.
