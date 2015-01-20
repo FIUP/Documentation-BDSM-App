@@ -7,11 +7,16 @@
 % =================================================================================================
 % Modification History:
 % Version		Modifier Date		Change											Author
-% 0.0.1 		2014/12/10 			aggiunta sezione e iniziata stesura				Roetta Marco
+% 0.0.1 		2014/12/30 			aggiunta sezione e iniziata stesura				Roetta Marco
 % =================================================================================================
-% Modification History:
 % Version		Modifier Date		Change											Author
-% 0.0.2 		2015/01/12 			aggiunto contenuto								Roetta Marco
+% 0.0.2 		2015/01/12 			Aggiunto contenuto								Roetta Marco
+% =================================================================================================
+% Version		Modifier Date		Change											Author
+% 0.1.0			2015/01/15 			Completata sezione						 		Roetta Marco
+% =================================================================================================
+% Version		Modifier Date		Change											Author
+% 0.1.1			2015/01/15 			Correzioni ortografiche					 		Roetta Marco
 % =================================================================================================
 %
 
@@ -19,9 +24,10 @@
 
 \section{Descrizione generale}
 
-\subsection{Obiettivi del prodotto}
+\subsection{Contesto d'uso}
 L'obbiettivo primario che il prodotto si pone è la creazione di una infrastruttura che
-possa gestire diverse funzioni di monitoraggio, aggregazione e analisi statistica di parole chiave utilizzate nei social network precedentemente citati. Ogni utente che usa la piattaforma deve poter personalizzare e manipolare a piacimento le statistiche e la loro visualizzazione.
+possa gestire diverse funzioni di monitoraggio, aggregazione e analisi statistica di parole chiave utilizzate nei social network precedentemente citati. Ogni utente che usa la piattaforma può creare, modificare ed eliminare View relativi a Tag suddivisi in Recipes predefinite e fornite dal sistema.
+La gestione delle Recipes e degli utenti è disponibile solo per un sottoinsieme di utenti identificati come utenti amministratori.
 
 \subsection{Funzioni del prodotto}
 L'applicativo vuole fornire un'interfaccia web per poter consultare, manipolare e creare grafici che soddisfino gli obbietti sopra citati. L'utente a prodotto finito potrà:
@@ -32,7 +38,7 @@ L'applicativo vuole fornire un'interfaccia web per poter consultare, manipolare 
 \item Eliminare un grafico;
 \end{itemize}
 
-\subsection{Sezioni del prodotto}
+\subsubsection{Sezioni del prodotto}
 Il prodotto sarà diviso in due macro parti distinte:
 
 \begin{itemize}
@@ -49,14 +55,19 @@ L'applicativo server-side sarà inoltre suddiviso in diverse parti funzionali di
 \end{itemize}
 
 \subsection{Caratteristiche degli utenti}
-Il prodotto è rivolto a tutte le persone esterne all'azienda che desiderano utilizzare i servizi offerti. 
-Si rivolge inoltre anche ai dipendenti di Zing S.r.l. che assumono il ruolo di amministratori in grado di gestire il sistema.
-Questi utenti devono possedere conoscenze di tipo sistemistico per poter comprendere tutte le funzionalità offerte.
+Il prodotto è rivolto a due classi distinte di persone:
 
-\subsection{Piattaforme di esecuzione}
-Il prodotto finale è fruibile da qualsiasi piattaforma che disponga di un browser per la navigazione web, tuttavia sarà garantito il funzionamento corretto solo con alcuni browser.
-Il back-end del sistema verrà invece eseguito e gestito sulla piattaforma Google App Engine.
+\begin{itemize}
+\item persone esterne all'azienda che desiderano utilizzare i servizi offerti;
+\item dipendenti di Zing s.r.l. che assumono il ruolo di amministratori in grado di gestire il prodotto in tutte le sue parti.
+\end{itemize}
+
+Da questi ultimi sono richieste conoscenze di tipo sistemistico per poter comprendere tutte le funzionalità offerte.
 
 \subsection{Vincoli generali}
 Per usufruire delle funzionalità offerte dal prodotto si richiede all'utente di disporre
 di una connessione internet e delle credenziali di accesso fornite durante la registrazione al servizio nell'apposita pagina.
+
+\subsubsection{Piattaforme di esecuzione}
+Il prodotto finale è fruibile da qualsiasi piattaforma che disponga di un browser per la navigazione web, tuttavia sarà garantito il funzionamento corretto solo con alcuni browser: Chrome v. 39.0 e successive, Firefox v. 35.0 e successive, Safari v. 8.0 e successive.
+Il back-end del sistema verrà invece eseguito e gestito sulla piattaforma Google App Engine.
