@@ -26,16 +26,19 @@
 		\item \textbf{Failure:} evento nel quale un sistema, o un suo componente, non esegue una funzione richiesta entro limiti specificati. Si verifica quando, sotto specifiche condizioni, viene rilevato un \emph{Fault}.
 	\end{itemize}
 	La gestione di queste anomalie assume, quindi, un ruolo di primaria importanza all'interno del progetto e dovranno essere gestite in maniera più rapida possibile.\\
-	Per discrepanza invece, si intende una divergenza tra il prodotto sviluppato e quello atteso. La presenza di una discrepanza fa si che il prodotto funzioni senza che si verifichino \emph{Failure} ma, rende il prodotto realizzato errato rispetto alle attese. Una discrepanza sarà, quindi, trattata come un'anomalia di bassa priorità.
+	Per discrepanza invece, si intende una divergenza tra il prodotto sviluppato e quello atteso. La presenza di una discrepanza fa si che il prodotto funzioni senza che si verifichino \emph{Failure} ma, rende il prodotto realizzato errato rispetto alle attese. Una discrepanza sarà, quindi, trattata come un'anomalia di bassa priorità.\\
+	Ogni qualvolta il \roleVerifier{} incontrerà un'anomalia, dovrà seguire una procedura standard sia per quanto riguarda le anomalie che riguardano i documenti, sia quelle relative al software. Il \roleVerifier{} dovrà quindi aprire un ticket seguendo in ordine le regole riportate nel \docNameVersionNdP.\\
+	Il \roleProjectManager{} avrà il compito di approvare il ticket; se approvato, il membro a cui è stato assegnato tale ticket dovrà impegnarsi per risolvere entro i termini stabiliti.
 	
 	\subsection{Procedure di controllo di qualità di processo}
+	Il gruppo, per il controllo della qualità di processo, ha deciso di utilizzare il ciclo PDCA che ci consente di ottenere un miglioramento continuo dei processi.\\
 	Il PDCA, noto anche come ciclo di Deming, è un metodo di gestione iterativo a quattro fasi per il controllo e il miglioramento continuo dei processi.\\
 	Le quattro fasi che lo compongono sono:
 		\begin{itemize}
 			\item \textbf{Plan:} stabilisce gli obiettivi e i processi necessari per ottenere risultati uguali a quelli attesi;
 			\item \textbf{Do:} fase composta dall'attuazione del piano, dall'esecuzione del processo e dalla creazione del prodotto. Termina con una raccolta dei dati e creazione di grafici sul risultato di quanto ottenuto;
-			\item \textbf{Check:} si confrontano i risultati ottenuti dalla fase precedente con i risultati attesi per verificare la presenza di differenze;
-			\item \textbf{Act:} si effettuano correzioni laddove sono presenti differenze tra i risultati ottenuti e previsti. Si determinano le cause delle discrepanze e dove c'è bisogno di applicare le modifiche per ottenere un miglioramento del processo e del prodotto.
+			\item \textbf{Check:} si confrontano i risultati ottenuti dalla fase precedente con i risultati stabiliti durante la pianificazione per verificare la presenza di differenze;
+			\item \textbf{Act:} si effettuano correzioni laddove sono presenti differenze tra i risultati ottenuti e quelli previsti. Si determinano le cause delle discrepanze e dove c'è bisogno di applicare delle modifiche per ottenere un miglioramento del processo e di conseguenza del prodotto.
 		\end{itemize}
 		\begin{figure}[h]
 			\centering
