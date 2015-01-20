@@ -7,7 +7,9 @@ Questo repository ha lo scopo di gestire il versionamento della documentazione r
 
 Gestione del repository
 --------
-Il messaggio di commit conterrà la seguente classificazione all'inizio del titolo subito dopo la dicitura in accordo con il ticket per la quale quella operazione è fatta: "Title: ".
+Il messaggio di commit conterrà la seguente classificazione all'inizio del titolo subito dopo la dicitura in accordo con il ticket per la quale quella operazione è fatta: "Title: ":
+
+
 	* [doc]: se la commit riguarda la stesura di un documento;
 	* [tpl]: se la commit riguarda la modifica/avanzamento sulla struttura del template usato per la documentazione o sulla struttura del documento stesso;
 	* [repo]: se la commit riguarda la modifica/inserimento/cancellazione di qualche elemento di utilità al repository;
