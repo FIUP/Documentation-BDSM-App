@@ -470,125 +470,103 @@
 \begin{figure}[!ht]
     \centering
     \centerline{\includegraphics[scale=0.5]{./images/UC1_4.pdf}}
-    \caption{Use Case 1.4 - Gestione delle Recipe}
+    \caption{UC1.4 - Gestione delle Recipe}
 \end{figure}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente Amministratore
+    \item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 
-    \item \textbf{Precondizione:} L'utente deve aver fatto l'accesso nell'apposita pagina.
+    \item \textbf{Precondizione:} l'amministratore deve aver fatto il login nell'apposita pagina;
 
-    \item \textbf{Descrizione:} Gli utenti amministratori possono vedere in questa pagina le Recipe e i dati ad esse associati. Essi possono creare oppure eliminare una Recipe.
+    \item \textbf{Descrizione:} gli amministratori possono vedere le Recipe e i dati ad esse associate. Possono inoltre crearle o eliminarle;
 
-    \item \textbf{Postcondizione:} Le informazioni richieste dall'utente sono state fornite.
-    Le Recipe eliminate sono state cancellate dal sistema.
-    Le Recipe aggiunte sono state salvate nel sistema.
-
-    \item \textbf{Possibili Errori:} In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
+    \item \textbf{Postcondizione:} le informazioni richieste dall'amministratore sono state fornite, le Recipe eliminate, cancellate dal sistema e quelle aggiunte, salvate;
 \end{itemize}
 
 \subsubsection{UC1.4.1: Visualizza Recipe}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente Amministratore
-    \item \textbf{Descrizione:} L'utente amministratore può visualizzare l'elenco di tutte le Recipe salvate nel sistema selezionando l'apposito pulsante nella sua home screen.
-    \item \textbf{Precondizione:} L'utente amministratore ha effettutao l'accesso al sistema e si trova nella sua home screen.
-    \item \textbf{Postcondizione:} L'utente ha visualizzato correttamente l'elenco delle Recipe salvate nel sistema.
+    \item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \item \textbf{Descrizione:} l'amministratore può visualizzare l'elenco di tutte le Recipe salvate nel sistema selezionando l'apposito pulsante nella sua home screen;
+    \item \textbf{Precondizione:} l'amministratore ha effettutao l'accesso al sistema e si trova nella sua home screen;
+    \item \textbf{Postcondizione:} l'amministratore ha visualizzato correttamente l'elenco delle Recipe salvate nel sistema.
 \end{itemize}
 
-\subsubsection{UC1.4.2: Aggiungi una nuova Recipe}
-
+\subsubsection{UC1.4.2: Aggiungi nuova Recipe}
 \begin{itemize}
-    \item \textbf{Attori:} Utente Amministratore
-    \item \textbf{Descrizione:} L'utente amministratore può aggiungere una nuova Recipe al sistema.
-    \item \textbf{Precondizione:} L'utente amministratore ha visualizzato l'elenco delle Recipe salvate nel sistema.
-    \item \textbf{Postcondizione:} L'utente amministratore ha salvato una nuova Recipe nel sistema.
-	\item \textbf{Possibili Errori:}
-    Viene mostrato un messaggio di errore nel caso in cui i dati forniti siano errati.
-    \item \textbf{Flusso principale degli eventi:}
+    \item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \item \textbf{Descrizione:} l'amministratore può aggiungere una nuova Recipe al sistema;
+    \item \textbf{Precondizione:} l'amministratore ha visualizzato l'elenco delle Recipe salvate nel sistema;
+    \item \textbf{Postcondizione:} l'amministratore ha salvato una nuova Recipe nel sistema;
+	\item \textbf{Flusso principale:}
 
     \begin{enumerate}
-        \item apertura elenco Recipe (UC1.4.2.1);
-        \item apertura pannello inserimento (UC1.4.2.2);
-        \item inserimento parametri (UC1.4.2.3);
-        \item conferma parametri inseriti (UC1.4.2.4).
+        \item Apertura elenco Recipe (UC1.4.2.1);
+        \item Apertura pannello inserimento nuova Recipe(UC1.4.2.2);
+        \item Inserimento parametri (UC1.4.2.3);
+        \item Conferma parametri inseriti (UC1.4.2.4).
     \end{enumerate}
-
 \end{itemize}
 
 \subsubsection{UC1.4.2.1: Apertura elenco Recipe}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente Amministratore
-    \item \textbf{Descrizione:} L'utente amministratore può visualizzare l'elenco delle Recipe salvate nel sistema premendo l'apposito pulsante nella sua Home Screen.
-    \item \textbf{Precondizione:} L'utente amministratore ha effettuato l'accesso al sistema.
-    \item \textbf{Postcondizione:} L'utente amministratore ha visualizzato correttamente l'elenco delle Recipe.
+    \item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \item \textbf{Descrizione:} l'amministratore può visualizzare l'elenco delle Recipe salvate nel sistema premendo l'apposito pulsante nella sua Home Screen;
+    \item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema;
+    \item \textbf{Postcondizione:} l'amministratore ha visualizzato correttamente l'elenco delle Recipe.
 \end{itemize}
 
 \subsubsection{UC1.4.2.2: Apertura pannello inserimento nuova Recipe}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente Amministratore
-    \item \textbf{Descrizione:} L'utente amministratore può selezionare il pulsante di inserimento di una nuova Recipe dall'elenco delle Recipe.
-    \item \textbf{Precondizione:} L'utente amministratore ha visualizzato l'elenco delle Recipe.
-    \item \textbf{Postcondizione:} L'utente amministratore ha visualizzato il pannello di inserimento nuova Recipe.
+   	\item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \item \textbf{Descrizione:} l'amministratore può selezionare il pulsante di inserimento di una nuova Recipe dall'elenco delle Recipe;
+    \item \textbf{Precondizione:} l'amministratore ha visualizzato l'elenco delle Recipe;
+    \item \textbf{Postcondizione:} l'amministratore ha visualizzato il pannello di inserimento nuova Recipe.
 \end{itemize}
 
-\subsubsection{UC1.4.2.3: Inserimento dei parametri}
+\subsubsection{UC1.4.2.3: Inserimento parametri}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente Amministratore
-    \item \textbf{Descrizione:} L'utente amministratore può inserire il nome ed i parametri per la nuova Recipe nel pannello di inserimento nuova Recipe.
-    \item \textbf{Precondizione:} L'utente amministratore ha selezionato il pulsante per l'inseriemnto di una nuova Recipe.
-    \item \textbf{Postcondizione:} L'utente ha inserito tutti i parametri richiesti dal sistema.
+   	\item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \item \textbf{Descrizione:} l'amministratore può inserire il nome ed i parametri per la nuova Recipe nel pannello apposito;
+    \item \textbf{Precondizione:} l'amministratore ha selezionato il pulsante per l'inserimento di una nuova Recipe;
+    \item \textbf{Postcondizione:} l'amministratore ha inserito tutti i parametri richiesti dal sistema.
 \end{itemize}
 
-\subsubsection{UC1.4.2.4: Conferma dei parametri inserite}
+\subsubsection{UC1.4.2.4: Conferma parametri inseriti}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente Amministratore
-    \item \textbf{Descrizione:} L'utente amministratore deve confermare i parametri inseriti prima che questi siano attivi nel sistema.
-    \item \textbf{Precondizione:} L'utente ha inserito almeno tutti i parametri obbligatori richiesti dal sistema.
-    \item \textbf{Postcondizione:} L'utente amministratore ha confermato i parametri inseriti.
+  	\item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \item \textbf{Descrizione:} l'amministratore deve confermare i parametri inseriti prima che questi siano attivi nel sistema;
+    \item \textbf{Precondizione:} l'amministratore ha inserito almeno i parametri obbligatori;
+    \item \textbf{Postcondizione:} l'amministratore ha confermato i parametri inseriti.
 \end{itemize}
 
-\subsubsection{UC1.4.3: Errore nell'inserimento di una nuova Recipe}
+\subsubsection{UC1.4.3: Creazione Recipe fallita}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente Amministratore
-    \item \textbf{Descrizione:} L'utente amministratore ha inserito dei parmetri che non rispettano i vincoli di sistema durante l'inserimento di una nuova Recipe.
-    \item \textbf{Precondizione:} L'utente amministratore ha selezionato il pulsante di conferma per la creazione di una nuova Recipe.
-    \item \textbf{Postcondizione:} L'utente amministratore ha visualizzato un messaggio di errore contenente l'elenco dei parametri inseriti non corretti oppure contenente l'eccezione sollevata dal sistema durante il salvataggio della nuova Recipe.
+  	\item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \item \textbf{Descrizione:} l'amministratore durante l'inserimento di una nuova Recipe ha inserito dei parametri che non rispettano i vincoli di sistema;
+    \item \textbf{Precondizione:} l'amministratore ha selezionato il pulsante di conferma per la creazione di una nuova Recipe;
+    \item \textbf{Postcondizione:} l'amministratore ha visualizzato un messaggio di errore contenente l'elenco dei parametri inseriti non corretti o l'eccezione sollevata dal sistema durante il salvataggio della nuova Recipe.
 \end{itemize}
 
-\subsubsection{UC1.4.4: Eliminazione di una Recipe}
+\subsubsection{UC1.4.4: Eliminazione Recipe}
 
 \begin{itemize}
-    \item \textbf{Attori:}
-    Utente Amministratore
-
-    \item \textbf{Precondizione:}
-    L'utente amministratore deve aver visualizzato la schermata di gestione delle Recipe.
-
-    \item \textbf{Descrizione}:
-    L'utente amministratore può eliminare una Recipe e tutti i dati ad essa associati.
-    Si possono eliminare solo le Recipe non più utilizzate in una o più View proprie o di un altro utente.
-
-    \item \textbf{Postcondizione:}
-    Le informazioni richieste dall'utente sono state fornite.
-    La Recipe desiderata e tutti i dati ad essa associati sono stati eliminati dal sistema.
-
-    \item \textbf{Possibili Errori:}
-    In caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
-    In caso di Recipe in uso o in fase di aggiornamento a causa di una schedulazione viene visualizzato un messaggio di errore e nessun dato viene alterato o cancellato.
-	\item \textbf{Possibili Errori:}
-    Viene mostrato un messaggio di errore nel caso in cui i dati forniti siano errati.
-    \item \textbf{Flusso principale degli eventi:}
+  	\item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \item \textbf{Descrizione}: l'amministratore può eliminare una Recipe e tutti i dati ad essa associati.
+    Si possono eliminare solo le Recipe non più utilizzate in una o più View;
+    \item \textbf{Precondizione:} l'amministratore deve aver visualizzato la schermata di gestione delle Recipe;
+    \item \textbf{Postcondizione:} le informazioni richieste dall'utente sono state fornite e la Recipe desiderata, con tutti i dati ad essa associati sono stati eliminati dal sistema;
+    \item \textbf{Flusso principale:}
 
     \begin{enumerate}
-        \item apertura elenco Recipe (UC1.4.4.1);
-        \item eleminazione di una Recipe (UC1.4.4.2);
-        \item conferma eliminazione Recipe (UC1.4.4.3).
+        \item Apertura elenco Recipe (UC1.4.4.1);
+        \item Eliminazione Recipe (UC1.4.4.2);
+        \item Conferma eliminazione Recipe (UC1.4.4.3).
     \end{enumerate}
 
 \end{itemize}
@@ -596,30 +574,30 @@
 \subsubsection{UC1.4.4.1: Apertura elenco Recipe}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente Amministratore
-    \item \textbf{Descrizione:} L'utente amministratore può visualizzare l'elenco delle Recipe salvate nel sistema premendo l'apposito pulsante nella sua Home Screen.
-    \item \textbf{Precondizione:} L'utente amministratore ha effettuato l'accesso al sistema.
-    \item \textbf{Postcondizione:} L'utente amministratore ha visualizzato correttamente l'elenco delle Recipe.
+  	\item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \item \textbf{Descrizione:} l'amministratore può visualizzare l'elenco delle Recipe salvate nel sistema premendo l'apposito pulsante nella sua home screen;
+    \item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema;
+    \item \textbf{Postcondizione:} l'amministratore ha visualizzato correttamente l'elenco delle Recipe.
 \end{itemize}
 
-\subsubsection{UC1.4.4.2: Eliminazione di una Recipe}
+\subsubsection{UC1.4.4.2: Eliminazione Recipe}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente Amministratore
-    \item \textbf{Descrizione:} L'utente amministratore può selezionare il pulsante di eliminazione su una Recipe nell'elenco delle Recipe.
-    \item \textbf{Precondizione:} L'utente amministratore ha visualizzato l'elenco delle Recipe.
-    \item \textbf{Postcondizione:} L'utente amministratore ha selezionato il pulsante di eliminazione di una Recipe.
+  	\item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \item \textbf{Descrizione:} l'amministratore può selezionare il pulsante di eliminazione di una Recipe nell'elenco delle Recipe;
+    \item \textbf{Precondizione:} l'amministratore ha visualizzato l'elenco delle Recipe;
+    \item \textbf{Postcondizione:} l'amministratore ha selezionato il pulsante di eliminazione di una Recipe.
 \end{itemize}
-\subsubsection{UC1.4.4.3: Conferma eliminazione di una Recipe}
+\subsubsection{UC1.4.4.3: Conferma eliminazione Recipe}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente Amministratore
-    \item \textbf{Descrizione:} L'utente amministratore deve confermare la volontà di eliminare la Recipe selezionando il pulsante di conferma eliminazione.
-    \item \textbf{Precondizione:} L'utente amministratore ha selezionato il pusante elimina su una Recipe.
-    \item \textbf{Postcondizione:} L'utente amministratore ha confermat l'eliminazione della Recipe e questa è stata cancellata dal sistema insieme a tutti i dati ad essa associati.
+  	\item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \item \textbf{Descrizione:} l'amministratore deve confermare la volontà di eliminare la Recipe selezionando il pulsante di conferma eliminazione;
+    \item \textbf{Precondizione:} l'amministratore ha selezionato il pulsante elimina su una Recipe;
+    \item \textbf{Postcondizione:} l'amministratore ha confermato l'eliminazione della Recipe e questa è stata cancellata dal sistema con a tutti i dati associati.
 \end{itemize}
 
-\clearpage
+\pagebreak
 
 
 \subsection{UC1.5: Modifica Password di accesso}
