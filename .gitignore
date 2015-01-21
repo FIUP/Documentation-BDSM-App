@@ -13,6 +13,7 @@ Thumbs.db
 *.synctex.gz
 *.toc
 *.lof
+*.lot
 
 # rimuove il tracciamento dei file spazzatura temporanei che vengono generati da Astah
 *.asta.bak
