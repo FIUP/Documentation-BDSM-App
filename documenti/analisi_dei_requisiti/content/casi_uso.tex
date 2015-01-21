@@ -62,8 +62,21 @@
 	\end{itemize}
     \item \textbf{Precondizione:} l'utente autenticato, l'utente non autenticato o l'amministratore hanno caricato la prima pagina del servizio;
     Viene visualizzato un messaggio di errore nel caso le informazioni di accesso inserite siano errate;
-    \item \textbf{Postcondizione:} il servizio ha erogato correttamente le funzionalità richieste dall'utente.
+    \item \textbf{Postcondizione:} il servizio ha erogato correttamente le funzionalità richieste dall'utente;
+    \item \textbf{Flusso principale degli eventi:} 
+    	\begin{enumerate}
+    		\item Login utente (UC1.1);
+    		\item Visualizza informazione utente e statistiche (UC1.2);
+    		\item Gestione delle View (UC1.3);
+    		\item Gestione delle Recipe (UC1.4);
+    		\item Modifica password di accesso (UC1.5);
+    		\item Logout utente (UC1.6);
+    		\item Amministrazione utenti (UC1.7);
+    		\item Registrazione nuovo utente (UC1.8);
+    	\end{enumerate}
 \end{itemize}
+
+\pagebreak
 
 \subsection{UC1.1: Login utente}
 
@@ -83,11 +96,13 @@
     \item \textbf{Postcondizione:} l'utente è riconosciuto dal sistema;
     \item \textbf{Flusso principale degli eventi:}
     \begin{enumerate}
-        \item inserimento username (UC1.1.1);
-        \item inserimento password (UC1.1.2);
-        \item conferma login (UC1.1.3).
+        \item Inserimento username (UC1.1.1);
+        \item Inserimento password (UC1.1.2);
+        \item Conferma login (UC1.1.3);
     \end{enumerate}
+    \item \textbf{Estensioni:} Login fallita (UC1.1.4).
 \end{itemize}
+
 
 \subsubsection{UC1.1.1: Inserimento username}
 
@@ -122,8 +137,7 @@
     \end{itemize}
     \item \textbf{Descrizione:} viene richiesto all'utente di confermare i dati inseriti con la pressione di un pulsante di conferma;
     \item \textbf{Precondizione:} il sistema fornisce un pulsante per confermare il login;
-    \item \textbf{Postcondizione:} l'utente ha eseguito il login;
-    \item \textbf{Estensioni:} login fallita (UC1.1.4).
+    \item \textbf{Postcondizione:} l'utente ha eseguito il login.
 \end{itemize}
 
 \subsubsection{UC1.1.4: Login fallita}
@@ -159,9 +173,9 @@
     \item \textbf{Postcondizione:} le informazioni richieste dall'utente sono state fornite;
     \item \textbf{Flusso principale degli eventi:}
     \begin{enumerate}
-        \item apertura pannello informazioni (UC1.2.1);
-        \item visualizza informazioni utente (UC1.2.1.1);
-        \item visualizza statistiche utente (UC1.2.1.2).
+        \item Apertura pannello informazioni (UC1.2.1);
+        \item Visualizza informazioni utente (UC1.2.2);
+        \item Visualizza statistiche utente (UC1.2.3).
     \end{enumerate}
 \end{itemize}
 
@@ -178,7 +192,7 @@
     \item \textbf{Postcondizione:} l'utente ha visualizzato il contenuto del pannello.
 \end{itemize}
 
-\subsubsection{UC1.2.1.1: Visualizza informazioni utente}
+\subsubsection{UC1.2.2: Visualizza informazioni utente}
 
 \begin{itemize}
     \item \textbf{Attori:}
@@ -196,7 +210,7 @@
     \item \textbf{Postcondizione:} l'utente ha ottenuto le informazioni richieste.
 \end{itemize}
 
-\subsubsection{UC1.2.1.2: Visualizza statistiche utente}
+\subsubsection{UC1.2.3: Visualizza statistiche utente}
 
 \begin{itemize}
     \item \textbf{Attori:}
@@ -231,7 +245,19 @@
 	\end{itemize}
 	 \item \textbf{Descrizione:} gli utenti possono vedere in questa pagina le View e i dati ad esse associate. Per ciascuna View è disponibile un pannello per modificarne i parametri, in oltre si può creare una nuova View o eliminarne una esistente.
     \item \textbf{Precondizione:} l'utente deve aver fatto l'accesso nell'apposita pagina;
-    \item \textbf{Postcondizione:} le informazioni richieste dall'utente sono state fornite, le impostazioni modificate sono state salvate nel sistema e le informazioni aggiunte sono state salvate.
+    \item \textbf{Postcondizione:} le informazioni richieste dall'utente sono state fornite, le impostazioni modificate sono state salvate nel sistema e le informazioni aggiunte sono state salvate;
+    \item \textbf{Flusso principale degli eventi:}
+    	\begin{enumerate}
+    		\item Visualizza View (UC1.3.1);
+    		\item Aggiungi View (UC1.3.2);
+    		\item Modifica View (UC1.3.4);
+    		\item Eliminazione View (UC1.3.6);
+    	\end{enumerate}
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+    	\item Creazione nuova View fallita (UC1.3.3);
+    	\item Errore nella modifica dei dati (UC1.3.5).
+	\end{itemize}
 \end{itemize}
 
 \subsubsection{UC1.3.1: Visualizza View}
@@ -244,8 +270,12 @@
 	\end{itemize}
     \item \textbf{Descrizione:} questa è la home screen dell'utente attualmente connesso qui, potrà visualizzare tutte le sue View e accedere ai menu di configurazione;
     \item \textbf{Precondizione:} l'utente ha effettuato il login e ha selezionato il pulsante per accedere a questa pagina;
-    \item \textbf{Postcondizione:} l'utente viene reindirizzato alla home screen e visualizza le informazioni richieste.
+    \item \textbf{Postcondizione:} l'utente viene reindirizzato alla home screen e visualizza le informazioni richieste;
 \end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+		\begin{enumerate}
+			\item Apertura elenco View (UC1.3.1.1).
+		\end{enumerate}
 
 \subsubsection{UC1.3.1.1: Apertura elenco View}
 
@@ -273,9 +303,9 @@
     \item \textbf{Postcondizione:} l'utente ha creato una nuovo View;
 	\item \textbf{Flusso principale degli eventi:}
     \begin{enumerate}
-        \item apertura pannello (UC1.3.2.1);
-        \item inserimento parametri (UC1.3.2.2);
-        \item conferma creazione View (UC1.3.2.3).
+        \item Apertura pannello (UC1.3.2.1);
+        \item Inserimento parametri (UC1.3.2.2);
+        \item Conferma creazione View (UC1.3.2.3).
     \end{enumerate}
 \end{itemize}
 
@@ -344,10 +374,10 @@
     \item \textbf{Postcondizione:} i parametri della View selezionata sono stati modificati;
 	\item \textbf{Flusso principale degli eventi:}
     \begin{enumerate}
-        \item selezione di una View (UC1.3.4.1);
-        \item selezione tasto modifica (UC1.3.4.2);
-        \item inserimento nuovi parametri (UC1.3.4.3);
-        \item conferma nuovi parametri (UC1.3.4.4).
+        \item Selezione di una View (UC1.3.4.1);
+        \item Selezione tasto modifica (UC1.3.4.2);
+        \item Inserimento nuovi parametri (UC1.3.4.3);
+        \item Conferma nuovi parametri (UC1.3.4.4).
     \end{enumerate}
 \end{itemize}
 
@@ -429,9 +459,9 @@
     \item \textbf{Postcondizione:} l'utente ha cancellato una View dal suo elenco;
     \item \textbf{Flusso principale degli eventi:}
     \begin{enumerate}
-        \item selezione View (UC1.3.6.1);
-        \item eliminazione View (UC1.3.6.2);
-        \item conferma eliminazione View (UC1.3.6.3).
+        \item Selezione View (UC1.3.6.1);
+        \item Eliminazione View (UC1.3.6.2);
+        \item Conferma eliminazione View (UC1.3.6.3).
     \end{enumerate}
 \end{itemize}
 
@@ -448,7 +478,7 @@
     \item \textbf{Postcondizione:} l'utente ha selezionato e visualizzato la View desiderata.
 \end{itemize}
 
-\subsubsection{UC1.3.6.2: Eliminazione di una View}
+\subsubsection{UC1.3.6.2: Eliminazione View}
 
 \begin{itemize}
    	\item \textbf{Attori:}
@@ -492,11 +522,11 @@
     \item \textbf{Postcondizione:} le informazioni richieste dall'amministratore sono state fornite, le Recipe eliminate, cancellate dal sistema e quelle aggiunte, salvate;
     \item \textbf{Flusso principale degli eventi:}
     \begin{enumerate}
-        \item visualizza Recipe (UC1.4.1);
-        \item aggiungi nuova Recipe (UC1.4.2);
-        \item elimina Recipe (UC1.4.4);
+        \item Visualizza Recipe (UC1.4.1);
+        \item Aggiungi nuova Recipe (UC1.4.2);
+        \item Elimina Recipe (UC1.4.4);
     \end{enumerate}
-    \item \textbf{Estensioni:} creazione recipe fallita (UC1.4.3).
+    \item \textbf{Estensioni:} Creazione Recipe fallita (UC1.4.3).
 \end{itemize}
 
 \subsubsection{UC1.4.1: Visualizza Recipe}
@@ -504,7 +534,7 @@
 \begin{itemize}
     \item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
     \item \textbf{Descrizione:} l'amministratore può visualizzare l'elenco di tutte le Recipe salvate nel sistema selezionando l'apposito pulsante nella sua home screen;
-    \item \textbf{Precondizione:} l'amministratore ha effettutao l'accesso al sistema e si trova nella sua home screen;
+    \item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema e si trova nella sua home screen;
     \item \textbf{Postcondizione:} l'amministratore ha visualizzato correttamente l'elenco delle Recipe salvate nel sistema.
 \end{itemize}
 
@@ -516,14 +546,12 @@
     \item \textbf{Postcondizione:} l'amministratore ha salvato una nuova Recipe nel sistema;
 	\item \textbf{Flusso principale degli eventi:}
     \begin{enumerate}
-        \item apertura elenco Recipe (UC1.4.2.1);
-        \item apertura pannello inserimento nuova Recipe (UC1.4.2.2);
-        \item inserimento parametri (UC1.4.2.3);
-        \item conferma parametri inseriti (UC1.4.2.4).
+        \item Apertura elenco Recipe (UC1.4.2.1);
+        \item Apertura pannello inserimento nuova Recipe (UC1.4.2.2);
+        \item Inserimento parametri (UC1.4.2.3);
+        \item Conferma parametri inseriti (UC1.4.2.4).
     \end{enumerate}
-    \item \textbf{Estensioni:} creazione Recipe fallita (UC1.4.3)
 \end{itemize}
-
 \subsubsection{UC1.4.2.1: Apertura elenco Recipe}
 
 \begin{itemize}
@@ -579,9 +607,9 @@
     \item \textbf{Postcondizione:} le informazioni richieste dall'utente sono state fornite e la Recipe desiderata, con tutti i dati ad essa associati sono stati eliminati dal sistema;
     \item \textbf{Flusso principale degli eventi:}
     \begin{enumerate}
-        \item apertura elenco Recipe (UC1.4.4.1);
-        \item eliminazione Recipe (UC1.4.4.2);
-        \item conferma eliminazione Recipe (UC1.4.4.3).
+        \item Apertura elenco Recipe (UC1.4.4.1);
+        \item Eliminazione Recipe (UC1.4.4.2);
+        \item Conferma eliminazione Recipe (UC1.4.4.3).
     \end{enumerate}
 \end{itemize}
 
@@ -619,7 +647,7 @@
 \begin{figure}[!htbp]
     \centering
     \centerline{\includegraphics[scale=0.4]{./images/UC1_5.pdf}}
-    \caption{Use Case 1.5 - Modifica password di accesso}
+    \caption{UC1.5 - Modifica password di accesso}
 \end{figure}
 
 \begin{itemize}
@@ -633,12 +661,12 @@
     \item \textbf{Postcondizione:} la nuova password per l'utente è attiva, la vecchia password non è più valida;
 	\item \textbf{Flusso principale degli eventi:}
     \begin{enumerate}
-        \item inserimento nuova password (UC1.5.1);
-        \item conferma inserimento nuova password (UC1.5.2);
-        \item inserimento vecchia password (UC1.5.3);
-        \item conferma cambio password (UC1.5.4);
+        \item Inserimento nuova password (UC1.5.1);
+        \item Conferma inserimento nuova password (UC1.5.2);
+        \item Inserimento vecchia password (UC1.5.3);
+        \item Conferma cambio password (UC1.5.4);
     \end{enumerate}
-   	\item \textbf{Estensioni:} password non corretta (UC1.5.5).
+   	\item \textbf{Estensioni:} Password non corretta (UC1.5.5).
 
 \end{itemize}
 
@@ -729,8 +757,8 @@
     \item \textbf{Postcondizione:} la sessione di lavoro è terminata. Viene mostrata la schermata di login;
     \item \textbf{Flusso principale degli eventi:}
     \begin{enumerate}
-        \item pressione del tasto logout (UC1.6.1);
-        \item conferma del logout (UC1.6.2).
+        \item Pressione tasto logout (UC1.6.1);
+        \item Conferma del logout (UC1.6.2).
     \end{enumerate}
 \end{itemize}
 
@@ -778,11 +806,11 @@
     \item \textbf{Postcondizione:} il sistema ha eseguito le operazioni richieste;
     \item \textbf{Flusso principale degli eventi:}
     \begin{enumerate}
-        \item visualizza elenco utenti (UC1.7.1);
-        \item modifica permessi utenti (UC1.7.2);
-        \item elimina un utente (UC1.7.3);
+        \item Visualizzazione elenco utenti (UC1.7.1);
+        \item Modifica permessi utente (UC1.7.2);
+        \item Eliminazione utente (UC1.7.3);
     \end{enumerate}
-    \item \textbf{Estensioni:} errore nell'eliminazione di un utente (UC1.7.4).
+    \item \textbf{Estensioni:} Errore eliminazione utente (UC1.7.4).
 \end{itemize}
 
 \subsubsection{UC1.7.1: Visualizzazione elenco utenti}
@@ -803,10 +831,10 @@
     \item \textbf{Postcondizione:} l'amministratore ha modificato i permessi ad un utente;
     \item \textbf{Flusso principale degli eventi:}
     \begin{enumerate}
-        \item apertura elenco utenti (UC1.7.2.1);
-        \item apertura pannello modifica permessi(UC1.7.2.2);
-        \item selezione nuovi permessi (UC1.7.2.3);
-        \item conferma modifiche (UC1.7.2.4).
+        \item Apertura elenco utenti (UC1.7.2.1);
+        \item Apertura pannello modifica permessi(UC1.7.2.2);
+        \item Selezione nuovi permessi (UC1.7.2.3);
+        \item Conferma modifiche (UC1.7.2.4).
     \end{enumerate}
 \end{itemize}
 
@@ -855,9 +883,9 @@
     \item \textbf{Postcondizione:} l'amministratore ha cancellato un utente e le sue View;
     \item \textbf{Flusso principale degli eventi:}
     \begin{enumerate}
-        \item apertura elenco utenti (UC1.7.3.1);
-        \item selezione pulsante elimina (UC1.7.3.2);
-        \item conferma eliminazione (UC1.7.3.3).
+        \item Apertura elenco utenti (UC1.7.3.1);
+        \item Selezione pulsante elimina (UC1.7.3.2);
+        \item Conferma eliminazione (UC1.7.3.3).
     \end{enumerate}
 \end{itemize}
 
@@ -919,12 +947,12 @@
     ripresenta all'utente la schermata iniziale;
     \item \textbf{Flusso principale degli eventi:}
     \begin{enumerate}
-        \item inserimento username (UC1.8.1);
-        \item inserimento email (UC1.8.2);
-        \item inserimento password (UC1.8.3);
-        \item conferma registrazione (UC1.8.4);
+        \item Inserimento username (UC1.8.1);
+        \item Inserimento email (UC1.8.2);
+        \item Inserimento password (UC1.8.3);
+        \item Conferma registrazione (UC1.8.4);
     \end{enumerate}
-    \item \textbf{Estensioni:} errore durante la registrazione (UC1.8.5).
+    \item \textbf{Estensioni:} Errore durante la registrazione (UC1.8.5).
 \end{itemize}
 
 
