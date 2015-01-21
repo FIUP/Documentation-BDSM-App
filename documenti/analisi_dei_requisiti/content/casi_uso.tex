@@ -609,66 +609,91 @@
 \end{figure}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Precondizione:} L'utente dispone di una password di accesso valida, risulta autenticato al servizio e si trova nella sua Home Screen.
-    \item \textbf{Descrizione:} L'utente può cambiare la password attualmente in uso selezionando il pulsante di cambio password sulla sua Home Screen.
-    \item \textbf{Postcondizione:} La nuova password per l'utente è attiva, la vecchia password non è più valida.
-    \item \textbf{Possibili Errori:} Messaggio di errore in caso di informazioni inserite errate oppure la nuova password non soddisfa i criteri di sistema indicati (UC1.5.4).
-
+   	\item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+	  \item \textbf{Descrizione:} l'utente può cambiare la propria password selezionando il pulsante di cambio password nella sua home screen;
+    \item \textbf{Precondizione:} l'utente dispone di una password di accesso valida, risulta autenticato al servizio e si trova nella sua home screen;
+    \item \textbf{Postcondizione:} la nuova password per l'utente è attiva, la vecchia password non è più valida;
+	\item \textbf{Flusso principale:}    
     \begin{enumerate}
-        \item inserimento nuova password (UC1.5.1);
-        \item inserimento nuova password per conferma (UC1.5.2);
-        \item conferma cmbio password (UC1.5.3).
+        \item Inserimento nuova password (UC1.5.1);
+        \item Conferma inserimento nuova password (UC1.5.2);
+        \item Inserimento vecchia password (UC1.5.3);
+        \item Conferma cambio password (UC1.5.4);
     \end{enumerate}
+   	\item \textbf{Scenari alternativi:} Password non corretta (UC1.5.5).
 
 \end{itemize}
 
-\subsubsection{UC1.5.1: Inserimento di una nuova password}
+\subsubsection{UC1.5.1: Inserimento nuova password}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} L'utente può inserire la nuova password nel pannello di cambio password.
-    \item \textbf{Precondizione:} L'utente ha selezionato il pulsante di cambio password nella sua Home Screen.
-    \item \textbf{Postcondizione:} L'utente ha inserito la nuova password.
+   	\item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+    \item \textbf{Descrizione:} l'utente può inserire la nuova password nel pannello apposito;
+    \item \textbf{Precondizione:} l'utente ha selezionato il pulsante di cambio password nella sua home screen;
+    \item \textbf{Postcondizione:} l'utente ha inserito la nuova password.
 \end{itemize}
 
 \subsubsection{UC1.5.2: Conferma inserimento password }
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} L'utente deve inserire nuovamente la nuova password per verificare di non aver fatto errori di battitura.
-    \item \textbf{Precondizione:} L'utente ha inserito la nuova password.
-    \item \textbf{Postcondizione:} L'utente ha inserito per la seconda volta la nuova password.
+   	\item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+    \item \textbf{Descrizione:} l'utente deve inserire nuovamente la nuova password per verificare di non aver fatto errori di battitura;
+    \item \textbf{Precondizione:} l'utente ha inserito la nuova password;
+    \item \textbf{Postcondizione:} l'utente ha verificato la correttezza della nuova password.
 \end{itemize}
 
 \subsubsection{UC1.5.3: Inserimento vecchia password}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} L'utente deve inserire la vecchia password per completare il cambio password.
-    \item \textbf{Precondizione:} L'utente ha inserito la nuova password due volte negli appositi campi.
-    \item \textbf{Postcondizione:} L'utente ha confermato l'operazione e la nuova password è ora attiva.
+    	\item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+    \item \textbf{Descrizione:} l'utente deve inserire la vecchia password per completare il cambio password;
+    \item \textbf{Precondizione:} l'utente ha inserito la nuova password due volte negli appositi campi;
+    \item \textbf{Postcondizione:} l'utente ha inserito la vecchia password e può confermare la nuova.
 \end{itemize}
 
-\subsubsection{UC1.5.4: Conferma operazione}
+\subsubsection{UC1.5.4: Conferma cambio password}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} L'utente deve confermare la volontà di sostituire la password di accesso con quella nuova selezionando il pulsante di conferma.
-    \item \textbf{Precondizione:} L'utente ha inserito due volte la nuova password ed una la vecchia negli appositi campi.
-    \item \textbf{Postcondizione:} L'utente ha confermato l'operazione e la nuova password è ora attiva.
+   	\item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+    \item \textbf{Descrizione:} l'utente deve confermare di voler sostituire la vecchia password di accesso con quella nuova selezionando il pulsante di conferma;
+    \item \textbf{Precondizione:} l'utente ha inserito due volte la nuova password ed una la vecchia negli appositi campi;
+    \item \textbf{Postcondizione:} l'utente ha confermato l'operazione e la nuova password è ora attiva.
 \end{itemize}
 
-\subsubsection{UC1.5.5: Password inserita non conforme alle regole}
+\subsubsection{UC1.5.5: Password non corretta}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} L'utente può aver inserito una password che non soddisfa i vincoli di sistema indicati nel pannello di cambio password.
-    \item \textbf{Precondizione:} L'utente ha selezionato il pulsante di conferma del cambio password.
-    \item \textbf{Postcondizione:} L'utente ha visualizzato un messaggio di errore con i dettagli dei vincoli non soddisfatti.
+   	\item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+    \item \textbf{Descrizione:} l'utente può aver inserito una password che non soddisfa i vincoli di sistema specificati nel pannello di cambio password;
+    \item \textbf{Precondizione:} l'utente ha selezionato il pulsante di conferma del cambio password;
+    \item \textbf{Postcondizione:} l'utente ha visualizzato un messaggio di errore con i dettagli dei vincoli non soddisfatti.
 \end{itemize}
 
-\clearpage
+\pagebreak
 
 
 \subsection{UC1.6: Logout}
@@ -676,36 +701,47 @@
 \begin{figure}[htbp]
     \centering
     \centerline{\includegraphics[scale=0.5]{./images/UC1_6.pdf}}
-    \caption{Use Case 1.6 - Logout}
+    \caption{UC1.6 - Logout}
 \end{figure}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente, Utente amministratore
-    \item {Precondizione:} L'utente risulta autenticato al servizio.
-    \item \textbf{Descrizione:} L'utente può terminare la sessione di lavoro e liberare la postazione per un altro utente. Questa operazione può essere eseguita premendo il pulsante Logout nella Home Screen.
-    \item \textbf{Postcondizione:} La sessione di lavoro è terminata. Viene mostrata la schermata di Login.
-    \item \textbf{Possibili Errori:} La sessione è scaduta. Non è quindi possibile eseguire questa operazione.
+   	\item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+	\item \textbf{Descrizione:} l'utente può terminare la sessione di lavoro. Questa operazione può essere eseguita premendo il pulsante di logout nella home screen;
+    \item \textbf{Precondizione:} l'utente risulta autenticato al servizio;
+    \item \textbf{Postcondizione:} la sessione di lavoro è terminata. Viene mostrata la schermata di login;
 \end{itemize}
 
 \subsubsection{UC1.6.1: Pressione tasto logout}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} L'utente può effettuare il logout selezionando l'apposito pulsante nella sua Home Screen
-    \item \textbf{Precondizione:} L'utente ha effettuato l'accesso al servizio e si trova nella Home Screen.
-    \item \textbf{Postcondizione:} L'utente visualizza il pannello di conferma logout.
+   	\item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+    \item \textbf{Descrizione:} l'utente può effettuare il logout selezionando l'apposito pulsante nella sua home screen;
+    \item \textbf{Precondizione:} l'utente ha effettuato l'accesso al servizio e si trova nella home screen;
+    \item \textbf{Postcondizione:} l'utente visualizza il pannello di conferma logout.
 \end{itemize}
 
-\subsubsection{UC1.6.2: Conferma della volontà di fare logout}
+\subsubsection{UC1.6.2: Conferma del logout}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} Prima di terminare la sessione di lavoro l'utente deve confermare la volontà di farlo selezionando il pulsante di conferma sul pannello di logout.
-    \item \textbf{Precondizione:} L'utente ha selezionato il pulsante di logout nella Home Screen.
-    \item \textbf{Postcondizione:} L'utente ha confermato la volontà di fare logout e la sessione è terminata. Viene visualizzata la schermata di login.
+   	\item \textbf{Attori:}
+    \begin{itemize}
+    	\item utente autenticato: utente autenticato che ha accesso al servizio;
+    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+    \item \textbf{Descrizione:} prima di terminare la sessione di lavoro l'utente deve confermare la volontà di farlo selezionando il pulsante di conferma sul pannello di logout;
+    \item \textbf{Precondizione:} l'utente ha selezionato il pulsante di logout nella home screen;
+    \item \textbf{Postcondizione:} l'utente ha confermato il logout e la sessione è terminata. Viene visualizzata la schermata di login.
 \end{itemize}
 
-\clearpage
+\pagebreak
 
 
 \subsection{UC1.7: Amministrazione degli utenti}
@@ -713,41 +749,39 @@
 \begin{figure}[!htbp]
     \centering
     \centerline{\includegraphics[scale=0.45]{./images/UC1_7.pdf}}
-    \caption{Use Case 1.7 - Amministrazioni degli utenti}
+    \caption{UC1.7 - Amministrazioni degli utenti}
 \end{figure}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente amministratore
-    \item \textbf{Descrizione:} L'utente amministratore può promuovere o diminuire i permessi di accesso di un altro utente. Può anche eliminare definitivamente un utente e tutte le sue View.
-    \item \textbf{Precondizione:} L'utente amministratore ha effettuato l'accesso al sistema.
-    \item \textbf{Postcondizione:} Il sistema ha eseguito le operazioni richieste.
+    \item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \item \textbf{Descrizione:} l'amministratore può gestire i permessi di accesso di un altro utente. Può anche eliminare definitivamente un utente e tutte le sue View;
+    \item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema;
+    \item \textbf{Postcondizione:} il sistema ha eseguito le operazioni richieste.
 \end{itemize}
 
 \subsubsection{UC1.7.1: Visualizzazione elenco utenti}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente amministratore
-    \item \textbf{Descrizione:} L'utente amministratore può visualizzare l'elenco di tutti gli utenti salvati nel sistema selezionando l'apposito pulsante nella sua Home Screen.
-    \item \textbf{Precondizione:} L'utente amministratore ha effettuato l'accesso al sistema e si trova nella sua Home Screen.
-    \item \textbf{Postcondizione:} L'utente amministratore ha visualizzato l'elenco degli utenti.
+    \item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \item \textbf{Descrizione:} l'amministratore può visualizzare l'elenco di tutti gli utenti salvati nel sistema selezionando l'apposito pulsante nella sua home screen;
+    \item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema e si trova nella sua home screen;
+    \item \textbf{Postcondizione:} l'amministratore ha visualizzato l'elenco degli utenti.
 \end{itemize}
 
 \subsubsection{UC1.7.2: Modifica permessi utente}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente amministratore
-    \item \textbf{Descrizione:} L'utente amministratore può cambiare i permessi di accesso al sistema ad un utente diverso da se stesso.
-    \item \textbf{Precondizione:} L'utente amministratore ha eseguito l'accesso.
-    \item \textbf{Postcondizione:} L'utente amministratore ha modificato i permessi ad un utente.
-    \item \textbf{Possibili Errori:}
-    Viene mostrato un messaggio di errore nel caso in cui i dati forniti siano errati.
-    \item \textbf{Flusso principale degli eventi:}
+    \item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \item \textbf{Descrizione:} l'amministratore può cambiare i permessi di accesso al sistema ad un utente diverso da se stesso;
+    \item \textbf{Precondizione:} l'amministratore ha eseguito l'accesso;
+    \item \textbf{Postcondizione:} l'amministratore ha modificato i permessi ad un utente;
+    \item \textbf{Flusso principale:}
 
     \begin{enumerate}
-        \item apertura elenco utenti (UC1.7.2.1);
-        \item apertura pannello modifica (UC1.7.2.2);
-        \item inserimento dei nuovi parametri (UC1.7.2.3);
-        \item conferma parametri inseriti (UC1.7.2.4)
+        \item Apertura elenco utenti (UC1.7.2.1);
+        \item Apertura pannello modifica permessi(UC1.7.2.2);
+        \item Selezione nuovi permessi (UC1.7.2.3);
+        \item Conferma modifiche (UC1.7.2.4)
     \end{enumerate}
 
 \end{itemize}
@@ -755,54 +789,52 @@
 \subsubsection{UC1.7.2.1: Apertura elenco utenti}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente amministratore
-    \item \textbf{Descrizione:} L'utente amministratore può visualizzare l'elenco di tutti gli utenti salvati nel sistema selezionando l'apposito pulsante nella sua Home Screen.
-    \item \textbf{Precondizione:} L'utente amministratore ha effettuato l'accesso al sistema e si trova nella sua Home Screen.
-    \item \textbf{Postcondizione:} L'utente amministratore ha visualizzato l'elenco degli utenti.
+    \item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \item \textbf{Descrizione:} l'amministratore può visualizzare l'elenco degli utenti salvati nel sistema selezionando l'apposito pulsante nella sua home screen;
+    \item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema e si trova nella sua home screen;
+    \item \textbf{Postcondizione:} l'amministratore ha visualizzato l'elenco degli utenti.
 \end{itemize}
 
-\subsubsection{UC1.7.2.2: Selezione modifica su un utente}
+\subsubsection{UC1.7.2.2: Apertura pannello modifica permessi}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente amministratore
-    \item \textbf{Descrizione:} L'utente amministratore può cambiare i permessi di accesso ad un utente premendo l'apposito pulsante di fianco al suo username nell'elenco utenti.
-    \item \textbf{Precondizione:} L'utente amministratore ha visualizzato l'elenco utenti.
-    \item \textbf{Postcondizione:} L'utente amministratore ha selezionato il pulsante modifica permessi di un utente.
+    \item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \item \textbf{Descrizione:} l'amministratore può cambiare i permessi di accesso ad un utente premendo l'apposito pulsante nell'elenco utenti;
+    \item \textbf{Precondizione:} l'amministratore ha visualizzato l'elenco utenti;
+    \item \textbf{Postcondizione:} l'amministratore ha selezionato il pulsante di modifica permessi di un utente.
 \end{itemize}
 
-\subsubsection{UC1.7.2.3: Selezione nuovo ruolo}
+\subsubsection{UC1.7.2.3: Selezione nuovi permessi}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente amministratore
-    \item \textbf{Descrizione:} L'utente amministratore può selezionare un nuovo ruolo per l'utente selezionato.
-    \item \textbf{Precondizione:} L'amministratore ha premuto il pulsante di modifica permessi utente.
-    \item \textbf{Postcondizione:} L'utente amministratore ha selezionato un nuovo ruolo per l'utente.
+    \item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \item \textbf{Descrizione:} l'amministratore può cambiare i permessi per l'utente selezionato;
+    \item \textbf{Precondizione:} l'amministratore ha premuto il pulsante di modifica permessi utente;
+    \item \textbf{Postcondizione:} l'amministratore ha selezionato i nuovi permessi per l'utente.
 \end{itemize}
 
-\subsubsection{UC1.7.2.4: Conferma delle modifiche}
+\subsubsection{UC1.7.2.4: Conferma modifiche}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente amministratore
-    \item \textbf{Descrizione:} L'utente amministratore ha confermato le modifiche ai permessi dell'utente.
-    \item \textbf{Precondizione:} L'utente amministratore ha scelto un nuovo ruolo.
-    \item \textbf{Postcondizione:} L'utente amministratore ha confermato le modifiche e sono ora attive nel sistema.
+    \item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \item \textbf{Descrizione:} l'amministratore ha confermato le modifiche ai permessi dell'utente;
+    \item \textbf{Precondizione:} l'amministratore ha selezionato nuovi permessi per l'utente;
+    \item \textbf{Postcondizione:} l'amministratore ha confermato le modifiche e sono ora attive nel sistema.
 \end{itemize}
 
-\subsubsection{UC1.7.3: Eliminazione di un utente}
+\subsubsection{UC1.7.3: Eliminazione utente}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente amministratore
-    \item \textbf{Descrizione:} L'utente amministratore può eliminare un utente e tutte le sue View dal sistema.
-    \item \textbf{Precondizione:} L'utente amministratore ha eseguito l'accesso.
-    \item \textbf{Postcondizione:} L'utente amministratore ha cancellato un utente e tutte le View ad esso associate.
-	\item \textbf{Possibili Errori:}
-    Viene mostrato un messaggio di errore nel caso in cui i dati forniti siano errati.
-    \item \textbf{Flusso principale degli eventi:}
+    \item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \item \textbf{Descrizione:} l'amministratore può eliminare un utente e tutte le sue View dal sistema;
+    \item \textbf{Precondizione:} l'amministratore ha eseguito l'accesso;
+    \item \textbf{Postcondizione:} l'amministratore ha cancellato un utente e le sue View;
+    \item \textbf{Flusso principale:}
 
     \begin{enumerate}
-        \item apertura elenco utenti (UC1.7.3.1);
-        \item selezione pulsante elimina (UC1.7.3.2);
-        \item conferma eliminazione utente (UC1.7.3.3).
+        \item Apertura elenco utenti (UC1.7.3.1);
+        \item Selezione pulsante elimina (UC1.7.3.2);
+        \item Conferma eliminazione (UC1.7.3.3).
     \end{enumerate}
 
 \end{itemize}
@@ -810,67 +842,67 @@
 \subsubsection{UC1.7.3.1: Apertura elenco utenti}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente amministratore
-    \item \textbf{Descrizione:} L'utente amministratore può visualizzare l'elenco di tutti gli utenti salvati nel sistema selezionando l'apposito pulsante nella sua Home Screen.
-    \item \textbf{Precondizione:} L'utente amministratore ha effettuato l'accesso al sistema e si trova nella sua Home Screen.
-    \item \textbf{Postcondizione:} L'utente amministratore ha visualizzato l'elenco degli utenti.
+    \item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \item \textbf{Descrizione:} l'amministratore può visualizzare l'elenco di tutti gli utenti salvati nel sistema selezionando l'apposito pulsante nella sua home screen;
+    \item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema e si trova nella sua home screen;
+    \item \textbf{Postcondizione:} l'amministratore ha visualizzato l'elenco degli utenti.
 \end{itemize}
 
-\subsubsection{UC1.7.3.2: Pressione pulsante elimina}
+\subsubsection{UC1.7.3.2: Selezione pulsante elimina}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente amministratore
-    \item \textbf{Descrizione:} L'utente amministratore può avviare la procedura di eliminazione selezionando il pulsante elimina utente di fianco al suo username.
-    \item \textbf{Precondizione:} L'utente amministratore ha visualizzato l'elenco degli utenti.
-    \item \textbf{Postcondizione:} L'utente amministratore ha visualizzato il pannello di conferma eliminazione.
+    \item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \item \textbf{Descrizione:} l'amministratore può avviare la procedura di eliminazione selezionando il pulsante elimina utente;
+    \item \textbf{Precondizione:} l'amministratore ha visualizzato l'elenco degli utenti;
+    \item \textbf{Postcondizione:} l'amministratore ha visualizzato il pannello di conferma eliminazione.
 \end{itemize}
 
 \subsubsection{UC1.7.3.3: Conferma eliminazione}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente amministratore
-    \item \textbf{Descrizione:} L'utente amministratore deve confermare la volontà di eliminare l'utente.
-    \item \textbf{Precondizione:} L'utente amministratore ha aperto il pannello di conferma eliminazione utente.
-    \item \textbf{Postcondizione:} L'utente selezionato è stato cancellato dal sistema insieme a tutte le sue View.
+    \item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \item \textbf{Descrizione:} l'amministratore deve confermare l'eliminazione dell'utente;
+    \item \textbf{Precondizione:} l'amministratore ha aperto il pannello di conferma eliminazione utente;
+    \item \textbf{Postcondizione:} l'utente selezionato è stato cancellato dal sistema insieme a tutte le sue View.
 \end{itemize}
 
-\subsubsection{UC1.7.4: Errore nell’eliminazione dell'utente}
-( risorsa occupata, utente loggato, View in aggiornamento )
+\subsubsection{UC1.7.4: Errore eliminazione utente}
+
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente amministratore
-    \item \textbf{Descrizione:} L'utente amministratore può visualizzare un messaggio di errore se l'utente che vuole eliminare è attualmente autenticato nel sistema e stà eseguendo delle operazioni.
-    \item \textbf{Precondizione:} L'utente amministratore ha confermato l'eliminazione di un utente.
-    \item \textbf{Postcondizione:} L'utente amministratore ha visualizzato il messaggio di errore. Nessun utente o dato è stato eliminato dal sistema.
+    \item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \item \textbf{Descrizione:} l'amministratore può visualizzare un messaggio di errore se l'utente che vuole eliminare è attualmente autenticato nel sistema e sta eseguendo delle operazioni;
+    \item \textbf{Precondizione:} l'amministratore ha confermato l'eliminazione di un utente;
+    \item \textbf{Postcondizione:} l'amministratore ha visualizzato il messaggio di errore. Nessun utente o dato è stato eliminato dal sistema.
 \end{itemize}
 
-\clearpage
+\pagebreak
 
 
-\subsection{UC1.8: Registrazione di un nuovo utente}
+\subsection{UC1.8: Registrazione nuovo utente}
 
 \begin{figure}[!htbp]
     \centering
     \centerline{\includegraphics[scale=0.45]{./images/UC1_8.pdf}}
-    \caption{Use Case 1.8 - Registrazione di un nuovo utente}
+    \caption{UC1.8 - Registrazione nuovo utente}
 \end{figure}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
+   	\item \textbf{Attori:} utente sconosciuto: utente non autenticato che accede al servizio;
     \item \textbf{Descrizione:} un utente deve poter creare un account per poter eseguire il login
-    all’interno del sistema e usufruire delle funzionalità offerte.
+    all'interno del sistema e usufruire delle funzionalità offerte;
     \item \textbf{Precondizione:} l'utente accede al sito web tramite un browser supportato
-    dal sistema.
-    \item \textbf{Postcondizione:} il sistema ha memorizzato i dati relativi all’account utente e
-    ripresenta a questi la schermata iniziale.
-    \item \textbf{Flusso principale degli eventi:}
+    dal sistema;
+    \item \textbf{Postcondizione:} il sistema ha memorizzato i dati relativi al nuovo account e
+    ripresenta all'utente la schermata iniziale;
+    \item \textbf{Flusso principale:}
 
     \begin{enumerate}
-        \item inserimento username (UC1.8.1);
-        \item inserimento email (UC1.8.2);
-        \item inserimento password (UC1.8.3);
-        \item conferma registrazione (UC1.8.4).
-        \item errore durante la registrazione (UC1.8.5)
+        \item Inserimento username (UC1.8.1);
+        \item Inserimento email (UC1.8.2);
+        \item Inserimento password (UC1.8.3);
+        \item Conferma registrazione (UC1.8.4);
+        \item Errore durante la registrazione (UC1.8.5).
     \end{enumerate}
 
 \end{itemize}
@@ -879,36 +911,36 @@
 \subsubsection{UC1.8.1: Inserimento username}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} l'utente deve inserire il proprio nome utente per essere riconoscibile univocamente all'interno del sistema e per poter gestire le proprie View.
-    \item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire l'username per il nuovo account.
+   	\item \textbf{Attori:} utente sconosciuto: utente non autenticato che accede al servizio;
+    \item \textbf{Descrizione:} l'utente deve inserire il proprio nome utente per essere riconoscibile univocamente all'interno del sistema e per poter gestire le proprie View;
+    \item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire l'username per il nuovo account;
     \item \textbf{Postcondizione:} l'utente ha inserito il proprio username.
 \end{itemize}
 
 \subsubsection{UC1.8.2: Inserimento mail}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
+   	\item \textbf{Attori:} utente sconosciuto: utente non autenticato che accede al servizio;
     \item \textbf{Descrizione:}
-    \item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire la mail per il nuovo account.
+    \item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire la mail per il nuovo account;
     \item \textbf{Postcondizione:} l'utente ha inserito il proprio indirizzo mail.
 \end{itemize}
 
 \subsubsection{UC1.8.3: Inserimento password}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
+   	\item \textbf{Attori:} utente sconosciuto: utente non autenticato che accede al servizio;
     \item \textbf{Descrizione:}
-    \item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire la password per il nuovo account.
+    \item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire la password per il nuovo account;
     \item \textbf{Postcondizione:} l'utente ha inserito la password.
 \end{itemize}
 
 \subsubsection{UC1.8.4: Conferma registrazione}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} l'utente deve poter confermare i dati inseriti durante la registrazione.
-    \item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile confermare i dati inseriti in precedenza per la creazione di un nuovo account.
+   	\item \textbf{Attori:} utente sconosciuto: utente non autenticato che accede al servizio;
+    \item \textbf{Descrizione:} l'utente deve poter confermare i dati inseriti durante la registrazione;
+    \item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile confermare i dati inseriti in precedenza per la creazione di un nuovo account;
     \item \textbf{Postcondizione:} l'utente ha confermato di voler creare un nuovo account all'interno
     del sistema.
 \end{itemize}
@@ -916,8 +948,9 @@
 \subsubsection{UC1.8.5: Errore durante la registrazione}
 
 \begin{itemize}
-    \item \textbf{Attori:} Utente
-    \item \textbf{Descrizione:} se vengono inseriti dei dati non conformi ai vincoli di sistema indicati durante la registrazione viene visualizzata una schermata di errore.
-    \item \textbf{Precondizione:} i dati inseriti non rispettano uno o più vincoli di sistema.
+   	\item \textbf{Attori:} utente sconosciuto: utente non autenticato che accede al servizio;
+    \item \textbf{Descrizione:} se vengono inseriti dei dati non conformi ai vincoli di sistema indicati durante la registrazione viene visualizzata una schermata di errore;
+    \item \textbf{Precondizione:} i dati inseriti non rispettano uno o più vincoli di sistema;
     \item \textbf{Postcondizione:} l'utente ha visualizzato l'errore relativo ai dati inseriti.
 \end{itemize}
+\pagebreak
