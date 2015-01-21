@@ -17,7 +17,7 @@
 
 	\subsection{Organizzazione}
 	L'attività di verifica accompagnerà l'intero ciclo di vita del software e sarà effettuata su tutti i processi realizzati e sugli output prodotti da questi ultimi. La verifica sarà applicata solamente ai cambiamenti effettuati dall'ultima versione approvata del prodotto.\\
-	Il team ha scelto di adottare un modello di ciclo di vita di tipo incrementale suddiviso in diverse fasi e riportate dettagliatamente nel \docNameVersionPdP. Per ciascuna di questa fase verranno utilizzate specifiche attività di verifica.\\ Il processo di verifica sarà così composto:
+	Il team ha scelto di adottare un modello di ciclo di vita di tipo incrementale suddiviso in diverse fasi e riportate dettagliatamente nel \docNameVersionPdP. Per ciascuna di queste fasi verranno utilizzate specifiche attività di verifica.\\ Il processo di verifica sarà così composto:
 	\begin{itemize}
 		\item \textbf{Ricerca e implementazione degli strumenti:}  in questa fase l'attività di verifica consente di verificare che tutti gli script creati siano corretti e che l'output prodotto dagli stessi sia uguale alle aspettative;
 		\item \textbf{Analisi dei requisiti e di dettaglio:} in questa fase si verificherà che ogni requisito abbia corrispondenza in un caso d'uso e si effettueranno dei test sulla documentazione prodotta per verificare che rispetti le \docNameVersionNdP;
@@ -39,14 +39,14 @@
 		\begin{itemize}
   			\item \textbf{Risorse umane:} \textnormal{il \roleProjectManager{} controlla la qualità dei processi interni, l'\roleAdministrator{} definisce le norme e i piani per le attività di verifica, il \roleProgrammer{} esegue le prove di verifica e validazione del codice, il \roleVerifier{} esegue la verifica dei documenti e fornisce i risultati delle prove effettuate. Per una descrizione più dettagliata dei ruoli consultare il \docNameVersionPdP;}
   			\item \textbf{Risorse software:} \textnormal{sono necessari strumenti per il tracciamento dei requisiti, per la stesura dei documenti in \LaTeX, per la creazione di diagrammi UML, per lo sviluppo del prodotto e per il supporto e la verifica del codice;}
-  			\item \textbf{Risorse hardware:} \textnormal{sono necessari computer per scrivere documentazioni e creare il prodotto software e stabili in cui poter lavorare al progetto.}
+  			\item \textbf{Risorse hardware:} \textnormal{sono necessari computer per scrivere documenti e creare il prodotto software finale. \`E richiesto un ambiente di lavoro stabile in cui poter lavorare al progetto.}
 		\end{itemize}
 
 	\subsection{Tecniche}
 		\subsubsection{Analisi Statica}
 		Comprende due tipologie di analisi che verranno utilizzate durante tutto il ciclo di vita del software, queste sono applicabili sia alla documentazione che appunto al software:
 			\begin{itemize}
-				\item \textbf{Walkthrough:} tecnica necessaria nelle prime fasi del progetto, vista l'inesperienza da parte del gruppo nell'attuare un tipo di verifica più precisa e mirata. Questo tipo di analisi è molto dispendioso in quanto prevede una lettura critica del codice o del documento in analisi, senza avere idea del tipo di anomalia ricercata. Una volta trovata l'anomalia, nella fase di redazione dei documenti o nella fase di codifica che sia, verrà aggiunta alla lista di controllo così che in futuro si venga ad utilizzare sempre di più l'Inspection a discapito del Walkthrough;
+				\item \textbf{Walkthrough:} tecnica necessaria nelle prime fasi del progetto, vista l'inesperienza da parte del gruppo nell'attuare un tipo di verifica più precisa e mirata. Questo tipo di analisi è molto dispendiosa in quanto prevede una lettura critica del codice o del documento in analisi, senza avere idea del tipo di anomalia ricercata. Una volta trovata l'anomalia, nella fase di redazione dei documenti o nella fase di codifica che sia, verrà aggiunta alla lista di controllo così che in futuro si venga ad utilizzare sempre di più l'Inspection a discapito del Walkthrough;
 				\item \textbf{Inspection:} lettura mirata del codice e/o dei documenti, guidata da una
 lista di controllo definita gradualmente, sia grazie all'esperienza personale, sia attraverso l'arricchimento derivante dall'attività di Walkthrough. Ogni difetto riscontrato verrà corretto e documentato con dei rapporti sulle attività svolte. La lista di controllo inizialmente non sarà abbastanza ampia da garantire l'affidabilità dell'elemento analizzato, per questo almeno nelle prime fasi verrà affiancata al Walkthrough.
 			\end{itemize}
@@ -79,7 +79,7 @@ I processi saranno pianificati dettagliatamente rispetto ai requisiti e alle ris
 		\textbf{Indice Gulpease} :questo indice, tarato specificatamente per la lingua italiana, ha anche il vantaggio di utilizzare la lunghezza delle parole in lettere e non delle sillabe, semplificandone il calcolo.
 			\begin{center}
 				\begin{math}
-					89+\frac{300*(Numero\quad delle\quad frasi)-10*(Numero\quad delle\quad lettere)}{Numero\quad delle\quad parole}
+					89+\frac{300 * (Numero\ delle\ frasi) - 10 * (Numero\ delle\ lettere)}{Numero\ delle\ parole}
 				\end{math}
 			\end{center}
 		100 indica la leggibilità più alta mentre 0 quella più bassa, sono presenti dei range così da poter quantificare meglio la complessità del documento in analisi:
