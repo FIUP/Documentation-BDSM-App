@@ -51,7 +51,14 @@
 lista di controllo definita gradualmente, sia grazie all'esperienza personale, sia attraverso l'arricchimento derivante dall'attività di Walkthrough. Ogni difetto riscontrato verrà corretto e documentato con dei rapporti sulle attività svolte. La lista di controllo inizialmente non sarà abbastanza ampia da garantire l'affidabilità dell'elemento analizzato, per questo almeno nelle prime fasi verrà affiancata al Walkthrough.
 			\end{itemize}
 		\subsubsection{Analisi Dinamica}
-		Applicabile solamente al prodotto software e permette di verificarlo e validarlo attraverso l'esecuzione di test. Questi test per essere significativi devono essere ripetibili, ossia dato lo stesso input sul medesimo ambiente di esecuzione, forniscono lo stesso risultato. In questo modo è più facile riscontrare l'origine di eventuali anomalie.
+		La verifica e la validazione verrà applicata solamente al prodotto software in sviluppo tramite l'esecuzione di determinati test. Questi test dovranno essere automatici e ripetibili, in modo da poter essere eseguiti in qualsiasi momento e per tutta la durata dello sviluppo.\\
+		Per una corretta valutazione in base ai risultati di questi test è richiesto che siano rispettate le seguenti regole:
+		\begin{itemize}
+			\item \textbf{Ambiente:} specifica l'ambiente software e hardware in cui viene eseguito il test;
+			\item \textbf{Specifica:} devono essere specificati i dati in input ed output in modo da poter effettuare un test di congruenza;
+			\item \textbf{Procedure:} possono essere inserite ulteriori istruzioni per l'esecuzione dei test.
+		\end{itemize}
+		I test, dato lo stesso input sul medesimo ambiente di esecuzione, dovranno fornire gli stessi risultati. In questo modo sarà più facile riconoscere le anomalie.
 			\begin{itemize}
 				\item \textbf{Test di unità:} verifica ogni singola unità del prodotto software, avvalendosi di strumenti come driver e/o stub. In particolare si verifica che per ogni unità siano esplorati tutti i cammini di esecuzione possibili e che i requisiti per quella determinata unità siano soddisfatti;
 				\item \textbf{Test di integrazione:} verifica dei componenti costituiti dall'integrazione di più unità che hanno soddisfatto i test di unità; aiuta ad identificare errori residui nella realizzazione dei componenti, modifiche delle interfacce o cambiamenti nei requisiti. A questo scopo verranno utilizzate classi simulate per verificarne l'interazione, senza più la necessità di verificare il loro comportamento interno;
@@ -64,7 +71,7 @@ lista di controllo definita gradualmente, sia grazie all'esperienza personale, s
 	Descrizione delle metriche e delle misure per rendere quantificabili e conseguentemente qualificabili i processi, i documenti e il software prodotto.
 
 		\subsubsection{Metriche per i processi}
-		L'organizzazione interna dei processi si basa sul principio PDCA, che è in grado di garantire un miglioramento continuo della qualità di tutti i processi e conseguentemente dei prodotti derivanti dai processi.
+		L'organizzazione interna dei processi si basa sul principio PDCA, vedi Figura \ref{fig:pdca}, che è in grado di garantire un miglioramento continuo della qualità di tutti i processi e conseguentemente dei prodotti derivanti dai processi.
 I processi saranno pianificati dettagliatamente rispetto ai requisiti e alle risorse disponibili. Se durante il processo di verifica l'analisi evidenzia dei valori che si discostano, in modo peggiorativo, dai piani prefissati, questo denoterà la presenza di un problema che verrà risolto in modo correttivo sul processo o eventualmente sul piano iniziale dello stesso.\\
 		Le misurazioni sul processo consistono in:
 			\begin{itemize}
@@ -76,7 +83,7 @@ I processi saranno pianificati dettagliatamente rispetto ai requisiti e alle ris
 			\end{itemize}
 
 		\subsubsection{Metriche per i documenti}
-		\textbf{Indice Gulpease} :questo indice, tarato specificatamente per la lingua italiana, ha anche il vantaggio di utilizzare la lunghezza delle parole in lettere e non delle sillabe, semplificandone il calcolo.
+		\textbf{Indice Gulpease:} questo indice, tarato specificatamente per la lingua italiana, ha anche il vantaggio di utilizzare la lunghezza delle parole in lettere e non delle sillabe, semplificandone il calcolo.
 			\begin{center}
 				\begin{math}
 					89+\frac{300 * (Numero\ delle\ frasi) - 10 * (Numero\ delle\ lettere)}{Numero\ delle\ parole}
