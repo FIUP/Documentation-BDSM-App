@@ -16,6 +16,16 @@ compile:
 		Linux*) glossario.pdf;; \
 	esac
 
+compilenoopen:
+	$(latex) glossario.tex && $(latex) glossario.tex
+	rm -rf *.aux 
+	rm -rf *.log
+	rm -rf *.out
+	rm -rf *.toc 
+	rm -rf *.synctex.gz
+	rm -rf *.lof
+	rm -rf *.lot
+
 aspell:
 	# $(aspell) Studio_di_Fattibilita.tex
 	# cd Doc_to_Modify && $(aspell) History.tex
