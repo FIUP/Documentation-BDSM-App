@@ -27,7 +27,9 @@
 % Version		Modifier Date		Change											Author
 % 0.0.7 		2015/01/18 			aggiunti requsiti funzionali e di vincolo		Cusinato Giacomo
 % =================================================================================================
-
+% Version		Modifier Date		Change											Author
+% 1.0.0 		2015/01/21 			inizio verifica documento						Faccin Nicola
+% =================================================================================================
 % CONTENUTO DEL CAPITOLO
 
 \section{Requisiti}
@@ -81,11 +83,11 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 
 		R0F1  &  L'utente non autenticato può effettuare la registrazione al servizio  &  UC1.8 \\
 		\hline
-		R0F1.1  &  La registrazone richiede l'inserimento dello username  &  UC1.8.1 \\
+		R0F1.1  &  La registrazione richiede l'inserimento dello username  &  UC1.8.1 \\
 		\hline
 		R0F1.1.1  &  Lo username è univoco in tutto il sistema  &  Interno \\
 		\hline
-		R0F1.1.2  &  Lo username è una striga contetente esclusivamente caratteri alfanumerici e underscores (\_)  &  Interno \\
+		R0F1.1.2  &  Lo username è una stringa contetente esclusivamente caratteri alfanumerici e underscore (\_)  &  Interno \\
 		\hline
 		R0F1.1.3  &  La lunghezza dello username è contenuta tra i 4 ed i 30 caratteri  &  Interno \\
 		\hline
@@ -113,7 +115,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		R1F1.9  &  Nel caso la registrazione sia andata a buon fine, viene inviata una e-mail di conferma all'indirizzo inserito dall'utente  &  Interno \\
 		\hline
-		R0F2  &  L'utente non autenticato può effettuare il login tramite l'apposto form di Login  &  UC1.1 \\
+		R0F2  &  L'utente non autenticato può effettuare il login tramite l'apposto form di login  &  UC1.1 \\
 		\hline
 		R0F2.1  &  Il login richiede l'inserimento dello username  &  UC1.1.1 \\
 		\hline
@@ -127,17 +129,17 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		R0F3  &  Nella pagina principale dell'utente autenticato è presente un pulsante per aprire il menù delle informazioni personali  &  UC1.2 \newline UC1.5 \\
 		\hline
-		R0F3.1  &  Nel menù delle informazioni personali è presente un pulsante per visualizzare i propri dati  &  UC1.2.1 \newline UC1.2.1.1 \\
+		R0F3.1  &  Nel menù delle informazioni personali è presente un pulsante per visualizzare i propri dati  &  UC1.2.1 \newline UC1.2.2 \\
 		\hline
 		R0F3.1.1  &  Se l'utente seleziona il pulsante di visualizzazione dei dati personali il sistema deve reperire il suo nome utente, il suo indirizzo e-mail e la data del suo ultimo accesso &  Interno \\
 		\hline
-		R0F3.1.2  &  Se l'utente seleziona il pulsante di visualizzazione dei dati personali deve aprirsi una finestra che mostra il nome utente, l'indirizzo e-mail ad esso associata e la data del suo ultimo accesso &  UC1.2.1.1 \\
+		R0F3.1.2  &  Se l'utente seleziona il pulsante di visualizzazione dei dati personali deve aprirsi una finestra che mostra il nome utente, l'indirizzo e-mail ad esso associata e la data del suo ultimo accesso &  UC1.2.2 \\
 		\hline
-		R0F3.2  &  Nel menù delle informazioni personali è presente un pulsante per visualizzare le proprie statistiche &  UC1.2.1 \newline UC1.2.1.2 \\
+		R0F3.2  &  Nel menù delle informazioni personali è presente un pulsante per visualizzare le proprie statistiche &  UC1.2.1 \newline UC1.2.3 \\
 		\hline
 		R0F3.2.1  &  Se l'utente seleziona il pulsante di visualizzazione delle statistiche, il sistema deve reperire le informazioni necessarie  &  Interno \\
 		\hline
-		R0F3.2.2  &  Se l'utente seleziona il pulsante di visualizzazione delle statistiche deve aprirsi una finestra che mostra il numero di View attive, il numero di Recipe disponibili e il numero di accessi negli ultimi 30 giorni &  UC1.2.1.2 \\
+		R0F3.2.2  &  Se l'utente seleziona il pulsante di visualizzazione delle statistiche deve aprirsi una finestra che mostra il numero di View attive, il numero di Recipe disponibili e il numero di accessi negli ultimi 30 giorni &  UC1.2.3 \\
 		\hline
 		R0F3.3  &  Nel menù delle informazioni personali è presente un pulsante per modificare la propria password &  UC1.5 \\
 		\hline
@@ -149,13 +151,13 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		R0F3.3.3  &  L'utente può cliccare il tasto di conferma se ha riempito il form  &  UC1.5.4 \\
 		\hline
-		R0F3.3.3.1  &  Una volta premuto il tasto di conferma appare un messaggio di errore se la password non è conforme o non coincide con la conferma o la vecchia password inserita non è corretta.  &  UC1.5.5 \\
+		R0F3.3.3.1  &  Una volta premuto il tasto di conferma appare un messaggio di errore se la password non coincide con la conferma o se la vecchia password inserita non è corretta.  &  UC1.5.5 \\
 		\hline
 		R0F3.3.3.2  &  Una volta premuto il tasto di conferma appare un messaggio di conferma se la password è stata modificata  &  Interno \\
 		\hline
 		R0F3.3.3.3  &  Una volta premuto il tasto di conferma il sistema aggiorna la password nel Database  &  Interno \\
 		\hline
-		R0F4  &  Nella pagina principale è presente un pulsante di Logout  &  UC1.6 \\
+		R0F4  &  Nella pagina principale è presente un pulsante di logout  &  UC1.6 \\
 		\hline
 		R0F4.1  &  Una volta premuto il tasto di logout il sistema verifica se la sessione in corso è valida o scaduta  &  Interno \\
 		\hline
@@ -173,9 +175,9 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		R1F5.2.1  &  Cliccando su una View dall'elenco di viene portati al grafico relativo  &  Interno \\
 		\hline
-		R1F5.2.2  &  Accanto ad ogni entry dell'elenco è disponibile il tasto modifica  &  UC1.3.4 \newline UC1.3.4.1 \newline UC1.3.4.2 \newline UC1.3.6.1 \\
+		R1F5.2.2  &  Accanto ad ogni voce dell'elenco è disponibile il tasto modifica  &  UC1.3.4 \newline UC1.3.4.1 \newline UC1.3.4.2 \newline UC1.3.6.1 \\
 		\hline
-		R1F5.2.2.1  &  Cliccando sul tasto modifica si viene reinderizzati alla pagina di modifica della View  &  Interno \\
+		R1F5.2.2.1  &  Cliccando sul tasto modifica si viene reindirizzati alla pagina di modifica della View  &  Interno \\
 		\hline
 		R1F6  &  Nella pagina di modifica della View è presente il grafico relativo alla View selezionata e un form per modificare i dati  &  Interno \\
 		\hline
@@ -187,7 +189,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		R1F6.3  &  L'utente deve poter confermare i dati modificati premendo il tasto di conferma  &  UC1.3.4.4 \\
 		\hline
-		R1F6.3.1  &  Se la modifica è avvenuta con successo appare un messaggio di conferma e si viene reinderizzati alla pagina principale  &  Interno \\
+		R1F6.3.1  &  Se la modifica è avvenuta con successo appare un messaggio di conferma e si viene reindirizzati alla pagina principale  &  Interno \\
 		\hline
 		R1F6.3.1.1  &  Se la modifica è avvenuta con successo il sistema memorizza i nuovi dati nel database sovrascrivendo i vecchi  &  Interno \\
 		\hline
@@ -209,13 +211,13 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		R0F7.2  &  L'utente deve poter confermare i dati modificati premendo il tasto di conferma  &  UC1.3.2.3 \\
 		\hline
-		R0F7.3  &  Se la modifica è avvenuta con successo appare un messaggio di conferma e si viene reinderizzati alla pagina principale  &  Interno \\
+		R0F7.3  &  Se la modifica è avvenuta con successo appare un messaggio di conferma e si viene reindirizzati alla pagina principale  &  Interno \\
 		\hline
 		R0F7.3.1  &  Se la modifica è avvenuta con successo il sistema memorizza i nuovi dati nel database  &  Interno \\
 		\hline
 		R0F7.3.2  &  Se c'è un errore sui dati o c'è un problema di connessione al server viene visualizzato un messaggio di errore e si viene riportati alla form di inserimento  &  UC1.3.3 \\
 		\hline
-		R0F8  &  Un utente che possiede i privilegi di amministratore può accedere all'area riservata del sistema una volta effettuata l'autenticazione tramite il form di login  &  UC1.4 \newline UC1.7 \\
+		R0F8  &  Un utente che possiede i privilegi di amministratore può accedere all'area riservata del sistema una volta effettuata l'autenticazione tramite il login  &  UC1.4 \newline UC1.7 \\
 		\hline
 		R0F8.1  &  Un amministratore può visualizzare tutte le Recipe memorizzate nel sistema selezionando l'apposito pulsante  &  UC1.4.1 \\
 		\hline
@@ -225,15 +227,15 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		R0F8.2.2  &  Il sistema richiede la conferma dei dati inseriti prima di creare la nuova Recepie  &  UC1.4.2.4 \\
 		\hline
-		R0F8.3  &  Il sistema visualizza un messaggo di errore contentente i parametri inseriti non corretti oppure il messaggio di una eccezione laciato in dase di creazione della Recipe  &  UC1.4.3 \\
+		R0F8.3  &  Il sistema visualizza un messaggio di errore contenente i parametri inseriti non corretti oppure il messaggio di una eccezione lasciato in fase di creazione della Recipe  &  UC1.4.3 \\
 		\hline
-		R0F8.3.1  &  Nel caso vengo confermata  una nuova Recipe corretta, il sistema salva i suoi parametri nel database  e riporta l'amministratore all'elenco delle Recipe  &  Interno \\
+		R0F8.3.1  &  Nel caso venga confermata  una nuova Recipe corretta, il sistema salva i suoi parametri nel database  e riporta l'amministratore all'elenco delle Recipe  &  Interno \\
 		\hline
-		R0F8.4  &  L'utente amministratore può eliminare una Recipe memorizzata nel sistema tramite il relativo pulsante nella schermata di elenco delle Recipe  &  UC1.4.4 \newline 1.4.4.1 \newline UC1.4.4.2 \\
+		R0F8.4  &  L'utente amministratore può eliminare una Recipe memorizzata nel sistema tramite il relativo pulsante nella schermata di elenco delle Recipe  &  UC1.4.4 \newline UC1.4.4.1 \newline UC1.4.4.2 \\
 		\hline
 		R0F8.4.1  &  L'utente amministratore deve confermare l'eliminazione della Recipe una volta premuto l'apposito pulsate  &  UC1.4.4.3 \\
 		\hline
-		R0F8.4.2  &  Una volta confermata l'eliminazione di una Recipe, il sistema provvede tutte le informazioni legate ad essa presenti nel database  &  Interno \\
+		R0F8.4.2  &  Una volta confermata l'eliminazione di una Recipe, il sistema provvede all'eliminazione di tutte le informazioni legate ad essa presenti nel database  &  Interno \\
 		\hline
 		R0F8.4.3  &  Una volta confermata l'eliminazione di una Recipe, il sistema provvede ad eliminare tutti i dati grezzi presenti nel database legati a tale Recipe  &  Interno \\
 		\hline
@@ -243,9 +245,9 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		R1F9.1  &  Accanto al nome di ogni utente nella lista è presente un pulsante modifica  &  Interno \\
 		\hline
-		R1F9.1.1  &  Cliccando sul pulsante modifica si viene reinderizzati alla pagina di modifica degli utenti  &  UC1.7.2.2 \\
+		R1F9.1.1  &  Cliccando sul pulsante modifica si viene reindirizzati alla pagina di modifica degli utenti  &  UC1.7.2.2 \\
 		\hline
-		R2F9.2  &  Nella pagina di modifica di un utente l'amministratore può cambiare il ruolo di un utente da amministratore a utente e viceversa  &  UC1.7.2 \newline UC1.7.2.3 \\
+		R2F9.2  &  Nella pagina di modifica di un utente l'amministratore può cambiare i permessi di un utente  &  UC1.7.2 \newline UC1.7.2.3 \\
 		\hline
 		R2F9.2.1  &  Premendo conferma il ruolo e i permessi dell'utente vengono modificati sul database  &  UC1.7.2.4 \\
 		\hline
@@ -255,7 +257,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		R1F9.3.1.1  &  Se viene confermata il sistema verifica se l'utente è loggato e in tal caso segnala l'errore e interrompe l'eliminazione  & Interno \\
 		\hline
-		R1F9.3.1.2  &  Se l'eliminazione ha successo appare un messaggio di conferma e si viene reinderizzati alla pagina principale  & UC1.7.3.3\\
+		R1F9.3.1.2  &  Se l'eliminazione ha successo appare un messaggio di conferma e si viene reindirizzati alla pagina principale  & UC1.7.3.3\\
 		\hline
 		R1F9.3.1.3  &  Se c'è stato un errore appare un messaggio d'errore e si è riportati alla pagina di modifica di un utente  & UC1.7.4\\
 		\hline
@@ -277,9 +279,9 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\textbf{Requisito} & \textbf{Descrizione} & \textbf{Fonti} \\
 		\hline
 
-		R1P1  &  Una volta autenticato l'utente deve poter visualizzare i propri grafici entro 10 secondi salvo problemi di connesione &  Interno \\
+		R1P1  &  Una volta autenticato l'utente deve poter visualizzare le proprie View entro 10 secondi salvo problemi di connesione &  Interno \\
 		\hline
-		R1P1.1  &  Il recupero dei dati dal Database deve impiegare al più 7 secondi  &  Interno \\
+		R1P1.1  &  Il recupero dei dati dal database deve impiegare al più 7 secondi  &  Interno \\
 		\hline
 		R2P2  &  L'interfaccia web utilizzerà un design di tipo responsive  &  Capitolato \\
 		\hline
@@ -338,7 +340,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		R1V3  &  Il codice sorgente sarà soggetto a versionamento tramite il modello di branching descritto nelle \docNameVersionNdP  &  Capitolato \\
 		\hline
-		R1V4  &  L'interfaccia Web sarà di tipo single-page  &  Interno \\
+		R1V4  &  L'interfaccia web sarà di tipo single-page  &  Interno \\
 		\hline
 
 	\end{longtable}
