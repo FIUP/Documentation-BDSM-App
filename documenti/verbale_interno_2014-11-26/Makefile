@@ -16,6 +16,16 @@ compile:
 		Linux*) verbale_interno_2014-11-26.pdf;; \
 	esac
 
+compilenoopen:
+	$(latex) verbale_interno_2014-11-26.tex && $(latex) verbale_interno_2014-11-26.tex
+	rm -rf *.aux 
+	rm -rf *.log
+	rm -rf *.out
+	rm -rf *.toc 
+	rm -rf *.synctex.gz
+	rm -rf *.lof
+	rm -rf *.lot
+
 aspell:
 	# $(aspell) verbale_interno_2014-11-26.tex
 	# cd Doc_to_Modify && $(aspell) History.tex

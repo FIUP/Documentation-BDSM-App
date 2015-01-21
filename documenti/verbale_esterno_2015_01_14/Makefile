@@ -16,6 +16,16 @@ compile:
 		Linux*) verbale_esterno_2015_01_14.pdf;; \
 	esac
 
+compilenoopen:
+	$(latex) verbale_esterno_2015_01_14.tex && $(latex) verbale_esterno_2015_01_14.tex
+	rm -rf *.aux 
+	rm -rf *.log
+	rm -rf *.out
+	rm -rf *.toc 
+	rm -rf *.synctex.gz
+	rm -rf *.lof
+	rm -rf *.lot
+
 aspell:
 	# $(aspell) Studio_di_Fattibilita.tex
 	# cd Doc_to_Modify && $(aspell) History.tex
