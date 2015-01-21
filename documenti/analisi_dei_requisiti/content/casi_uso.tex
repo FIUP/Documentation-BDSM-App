@@ -143,18 +143,23 @@
     \centerline{\includegraphics[scale=0.6]{./images/UC1_2.pdf}}
     \caption{UC1.2 - Visione informazioni e statistiche}
 \end{figure}
-\textbf{Attori:}
-  \begin{itemize}
-    	\item utente autenticato: utente autenticato che ha accesso al servizio;
-    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
-	\end{itemize}
-	\textbf{Descrizione:} gli utenti autenticati possono vedere una serie di informazioni relative alla 	loro attività, come la data dell'ultimo accesso effettuato e il numero di ricette e viste attive;
 
-	\textbf{Precondizione:} l'utente deve essere autenticato;
+\begin{itemize}
+\item \textbf{Attori:}
+
+\begin{itemize}
+    \item utente autenticato: utente autenticato che ha accesso al servizio;
+    \item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+\end{itemize}
+
+	\item \textbf{Descrizione:} gli utenti autenticati possono vedere una serie di informazioni relative alla 	loro attività, come la data dell'ultimo accesso effettuato e il numero di ricette e viste attive;
+
+	\item \textbf{Precondizione:} l'utente deve essere autenticato;
 	
-	\textbf{Postcondizione:} le informazioni richieste dall'utente sono state fornite.
+	\item \textbf{Postcondizione:} le informazioni richieste dall'utente sono state fornite.
 
-	\textbf{Possibili Errori:} in caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
+	\item \textbf{Possibili Errori:} in caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
+\end{itemize}
 
 \subsubsection{UC1.2.1: Apertura pannello informazioni}
 
