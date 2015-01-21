@@ -16,6 +16,16 @@ compile:
 		Linux*) studio_di_fattibilita.pdf;; \
 	esac
 
+compilenoopen:
+	$(latex) studio_di_fattibilita.tex && $(latex) studio_di_fattibilita.tex
+	rm -rf *.aux 
+	rm -rf *.log
+	rm -rf *.out
+	rm -rf *.toc 
+	rm -rf *.synctex.gz
+	rm -rf *.lof
+	rm -rf *.lot
+
 aspell:
 	# $(aspell) Studio_di_Fattibilita.tex
 	# cd Doc_to_Modify && $(aspell) History.tex
