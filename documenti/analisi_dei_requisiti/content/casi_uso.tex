@@ -44,19 +44,17 @@
 \begin{figure}[htbp]
     \centering
     \centerline{\includegraphics[scale=0.5]{./images/UC1.pdf}}
-    \caption{UC1 - Generale}
+    \caption{UC1 - Caso d'uso pubblico}
 \end{figure}
 
 \begin{itemize}
-
     \item \textbf{Attori:}
     \begin{itemize}
     	\item utente sconosciuto: utente non autenticato che accede al servizio;
     	\item utente autenticato: utente autenticato che ha accesso al servizio;
     	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
-    \item \textbf{Descrizione:}
-    dopo l'accesso al servizio:
+    \item \textbf{Descrizione:} dopo l'accesso al servizio:
     \begin{itemize}
     	\item un utente sconosciuto può autenticarsi, o se è al primo accesso al servizio può registrarsi per ottenere delle credenziali valide;
     	\item un utente autenticato può vedere statistiche, modificare la propria password, visualizzare, creare e modificare le proprie View;
@@ -64,9 +62,7 @@
 	\end{itemize}
     \item \textbf{Precondizione:} l'utente autenticato, l'utente non autenticato o l'amministratore hanno caricato la prima pagina del servizio;
     Viene visualizzato un messaggio di errore nel caso le informazioni di accesso inserite siano errate;
-    \item \textbf{Postcondizione:}
-    il servizio ha erogato correttamente le funzionalità richieste dall'utente.
-
+    \item \textbf{Postcondizione:} il servizio ha erogato correttamente le funzionalità richieste dall'utente.
 \end{itemize}
 
 \subsection{UC1.1: Login utente}
@@ -77,30 +73,29 @@
     \caption{UC1.1 - Login utente}
 \end{figure}
 
-
 \begin{itemize}
     \item \textbf{Attori:}
-    	utente non autenticato;
-    \item \textbf{Descrizione:}
-    	l'utente può autenticarsi per poter accedere ai servizi offerti dalla piattaforma utilizzando la schermata di login;
-    \item \textbf{Precondizione:}
-        l'utente che accede alla pagina di accesso è sconosciuto al sistema;
-    \item \textbf{Postcondizione:}
-    	l'utente è riconosciuto dal sistema.
+    \begin{itemize}
+        \item utente sconosciuto: utente non autenticato che accede al servizio;
+    \end{itemize}
+    \item \textbf{Descrizione:} l'utente può autenticarsi per poter accedere ai servizi offerti dalla piattaforma utilizzando la schermata di login;
+    \item \textbf{Precondizione:} l'utente che accede alla pagina di accesso è sconosciuto al sistema;
+    \item \textbf{Postcondizione:} l'utente è riconosciuto dal sistema;
     \item \textbf{Flusso principale degli eventi:}
-
     \begin{enumerate}
-        \item Inserimento username (UC1.1.1);
-        \item Inserimento password (UC1.1.2);
-        \item Conferma login (UC1.1.3);
+        \item inserimento username (UC1.1.1);
+        \item inserimento password (UC1.1.2);
+        \item conferma login (UC1.1.3).
     \end{enumerate}
-
 \end{itemize}
 
 \subsubsection{UC1.1.1: Inserimento username}
 
 \begin{itemize}
-    \item \textbf{Attori:} utente non autenticato;
+    \item \textbf{Attori:}
+    \begin{itemize}
+        \item utente sconosciuto: utente non autenticato che accede al servizio;
+    \end{itemize}
     \item \textbf{Descrizione:} l'utente non autenticato inserisce l'username;
     \item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire l’username;
     \item \textbf{Postcondizione:} il sistema ha l'informazione relativa all'username.
@@ -109,7 +104,10 @@
 \subsubsection{UC1.1.2: Inserimento password}
 
 \begin{itemize}
-    \item \textbf{Attori:} utente non autenticato;
+    \item \textbf{Attori:}
+    \begin{itemize}
+        \item utente sconosciuto: utente non autenticato che accede al servizio;
+    \end{itemize}
     \item \textbf{Descrizione:} l'utente non autenticato inserisce la propria password personale;
     \item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire la password;
     \item \textbf{Postcondizione:} il sistema ha l'informazione relativa alla password inserita dall'utente.
@@ -118,17 +116,23 @@
 \subsubsection{UC1.1.3: Conferma login}
 
 \begin{itemize}
-    \item \textbf{Attori:} utente non autenticato;
+    \item \textbf{Attori:}
+    \begin{itemize}
+        \item utente sconosciuto: utente non autenticato che accede al servizio;
+    \end{itemize}
     \item \textbf{Descrizione:} viene richiesto all'utente di confermare i dati inseriti con la pressione di un pulsante di conferma;
     \item \textbf{Precondizione:} il sistema fornisce un pulsante per confermare il login;
     \item \textbf{Postcondizione:} l'utente ha eseguito il login;
-    \item \textbf{Estensioni:} Login fallita [UC1.1.4].
+    \item \textbf{Estensioni:} login fallita (UC1.1.4).
 \end{itemize}
 
 \subsubsection{UC1.1.4: Login fallita}
 
 \begin{itemize}
-    \item \textbf{Attori:} utente non autenticato;
+    \item \textbf{Attori:}
+    \begin{itemize}
+        \item utente sconosciuto: utente non autenticato che accede al servizio;
+    \end{itemize}
     \item \textbf{Descrizione:} viene mostrato all'utente un messaggio di errore che riporta l'incorrettezza dei dati inseriti. Viene visualizzato un pulsante per tornare alla schermata di login;
     \item \textbf{Precondizione:} il sistema ha ricevuto una richiesta di accesso con dati errati;
     \item \textbf{Postcondizione:} l'utente ha preso atto del messaggio di errore.
@@ -136,30 +140,39 @@
 
 \pagebreak
 
-\subsection{UC1.2: Visione informazioni e statistiche}
+\subsection{UC1.2: Visione informazioni utente e statistiche}
 
 \begin{figure}[htbp]
     \centering
     \centerline{\includegraphics[scale=0.6]{./images/UC1_2.pdf}}
-    \caption{UC1.2 - Visione informazioni e statistiche}
+    \caption{UC1.2 - Visione informazioni utente e statistiche}
 \end{figure}
-\textbf{Attori:}
-  \begin{itemize}
-    	\item utente autenticato: utente autenticato che ha accesso al servizio;
-    	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
-	\end{itemize}
-	\textbf{Descrizione:} gli utenti autenticati possono vedere una serie di informazioni relative alla 	loro attività, come la data dell'ultimo accesso effettuato e il numero di ricette e viste attive;
 
-	\textbf{Precondizione:} l'utente deve essere autenticato;
-	
-	\textbf{Postcondizione:} le informazioni richieste dall'utente sono state fornite.
-
-	\textbf{Possibili Errori:} in caso di autenticazione scaduta verrà mostrata nuovamente la pagina di accesso.
+\begin{itemize}
+    \item \textbf{Attori:}
+    \begin{itemize}
+        \item utente autenticato: utente autenticato che ha accesso al servizio;
+        \item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \end{itemize}
+    \item \textbf{Descrizione:} gli utenti autenticati possono vedere una serie di informazioni relative alla 	loro attività, come la data dell'ultimo accesso effettuato e il numero di ricette e viste attive;
+    \item \textbf{Precondizione:} l'utente deve essere autenticato;
+    \item \textbf{Postcondizione:} le informazioni richieste dall'utente sono state fornite;
+    \item \textbf{Flusso principale degli eventi:}
+    \begin{enumerate}
+        \item apertura pannello informazioni (UC1.2.1);
+        \item visualizza informazioni utente (UC1.2.1.1);
+        \item visualizza statistiche utente (UC1.2.1.2).
+    \end{enumerate}
+\end{itemize}
 
 \subsubsection{UC1.2.1: Apertura pannello informazioni}
 
 \begin{itemize}
-    \item \textbf{Attori:} utente;
+    \item \textbf{Attori:}
+    \begin{itemize}
+        \item utente autenticato: utente autenticato che ha accesso al servizio;
+        \item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \end{itemize}
     \item \textbf{Descrizione:} dalla home screen dell'utente è possibile accedere al pannello informazioni e statistiche attinenti all'utente attualmente connesso;
     \item \textbf{Precondizione:} l'utente ha eseguito l'accesso al sistema;
     \item \textbf{Postcondizione:} l'utente ha visualizzato il contenuto del pannello.
@@ -168,7 +181,11 @@
 \subsubsection{UC1.2.1.1: Visualizza informazioni utente}
 
 \begin{itemize}
-    \item \textbf{Attori:} utente;
+    \item \textbf{Attori:}
+    \begin{itemize}
+        \item utente autenticato: utente autenticato che ha accesso al servizio;
+        \item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \end{itemize}
     \item \textbf{Descrizione:} selezionando il pulsante informazioni viene mostrata all'utente una pagina con il riepilogo dei sui dati, quali:
     \begin{itemize}
         \item il nome utente;
@@ -182,7 +199,11 @@
 \subsubsection{UC1.2.1.2: Visualizza statistiche utente}
 
 \begin{itemize}
-    \item \textbf{Attori:} utente;
+    \item \textbf{Attori:}
+    \begin{itemize}
+        \item utente autenticato: utente autenticato che ha accesso al servizio;
+        \item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+    \end{itemize}
     \item \textbf{Descrizione:} selezionando il pulsante statistiche viene mostrata all'utente una pagina con il riepilogo delle sue statistiche, quali:
     \begin{itemize}
         \item numero di View attive;
@@ -209,10 +230,8 @@
     	\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
 	 \item \textbf{Descrizione:} gli utenti possono vedere in questa pagina le View e i dati ad esse associate. Per ciascuna View è disponibile un pannello per modificarne i parametri, in oltre si può creare una nuova View o eliminarne una esistente.
-
     \item \textbf{Precondizione:} l'utente deve aver fatto l'accesso nell'apposita pagina;
     \item \textbf{Postcondizione:} le informazioni richieste dall'utente sono state fornite, le impostazioni modificate sono state salvate nel sistema e le informazioni aggiunte sono state salvate.
-
 \end{itemize}
 
 \subsubsection{UC1.3.1: Visualizza View}
@@ -252,14 +271,12 @@
     \item \textbf{Descrizione:} dalla home screen l'utente può aggiungere una nuova View premendo sull'apposito pulsante e compilando i dati richiesti;
     \item \textbf{Precondizione:} l'utente si è autenticato e si trova nella home screen;
     \item \textbf{Postcondizione:} l'utente ha creato una nuovo View;
-	\item \textbf{Flusso principale:}
-
+	\item \textbf{Flusso principale degli eventi:}
     \begin{enumerate}
-        \item Apertura pannello (UC1.3.2.1);
-        \item Inserimento parametri (UC1.3.2.2);
-        \item Conferma creazione View (UC1.3.2.3).
+        \item apertura pannello (UC1.3.2.1);
+        \item inserimento parametri (UC1.3.2.2);
+        \item conferma creazione View (UC1.3.2.3).
     \end{enumerate}
-
 \end{itemize}
 
 \subsubsection{UC1.3.2.1: Apertura pannello}
@@ -325,16 +342,13 @@
     \item \textbf{Descrizione:} l'utente può modificare i parametri di una View;
     \item \textbf{Precondizione:} la View è stata creata ed è disponibile nell'elenco delle View dell'utente;
     \item \textbf{Postcondizione:} i parametri della View selezionata sono stati modificati;
-
-	\item \textbf{Flusso principale:}
-
+	\item \textbf{Flusso principale degli eventi:}
     \begin{enumerate}
-        \item Selezione di una View (UC1.3.4.1);
-        \item Selezione tasto modifica (UC1.3.4.2);
-        \item Inserimento nuovi parametri (UC1.3.4.3);
-        \item Conferma nuovi parametri (UC1.3.4.4).
+        \item selezione di una View (UC1.3.4.1);
+        \item selezione tasto modifica (UC1.3.4.2);
+        \item inserimento nuovi parametri (UC1.3.4.3);
+        \item conferma nuovi parametri (UC1.3.4.4).
     \end{enumerate}
-
 \end{itemize}
 
 \subsubsection{UC1.3.4.1: Selezione di una View}
@@ -413,14 +427,12 @@
     \item \textbf{Descrizione:} l'utente può eliminare una View precedentemente creata;
     \item \textbf{Precondizione:} l'utente ha creato almeno una View ed è visibile nel suo elenco;
     \item \textbf{Postcondizione:} l'utente ha cancellato una View dal suo elenco;
-    \item \textbf{Flusso principale:}
-
+    \item \textbf{Flusso principale degli eventi:}
     \begin{enumerate}
-        \item Selezione View (UC1.3.6.1);
-        \item Eliminazione View (UC1.3.6.2);
-        \item Conferma eliminazione View (UC1.3.6.3).
+        \item selezione View (UC1.3.6.1);
+        \item eliminazione View (UC1.3.6.2);
+        \item conferma eliminazione View (UC1.3.6.3).
     \end{enumerate}
-
 \end{itemize}
 
 \subsubsection{UC1.3.6.1: Selezione View}
@@ -475,12 +487,16 @@
 
 \begin{itemize}
     \item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
-
     \item \textbf{Precondizione:} l'amministratore deve aver fatto il login nell'apposita pagina;
-
     \item \textbf{Descrizione:} gli amministratori possono vedere le Recipe e i dati ad esse associate. Possono inoltre crearle o eliminarle;
-
     \item \textbf{Postcondizione:} le informazioni richieste dall'amministratore sono state fornite, le Recipe eliminate, cancellate dal sistema e quelle aggiunte, salvate;
+    \item \textbf{Flusso principale degli eventi:}
+    \begin{enumerate}
+        \item visualizza Recipe (UC1.4.1);
+        \item aggiungi nuova Recipe (UC1.4.2);
+        \item elimina Recipe (UC1.4.4);
+    \end{enumerate}
+    \item \textbf{Estensioni:} creazione recipe fallita (UC1.4.3).
 \end{itemize}
 
 \subsubsection{UC1.4.1: Visualizza Recipe}
@@ -498,14 +514,14 @@
     \item \textbf{Descrizione:} l'amministratore può aggiungere una nuova Recipe al sistema;
     \item \textbf{Precondizione:} l'amministratore ha visualizzato l'elenco delle Recipe salvate nel sistema;
     \item \textbf{Postcondizione:} l'amministratore ha salvato una nuova Recipe nel sistema;
-	\item \textbf{Flusso principale:}
-
+	\item \textbf{Flusso principale degli eventi:}
     \begin{enumerate}
-        \item Apertura elenco Recipe (UC1.4.2.1);
-        \item Apertura pannello inserimento nuova Recipe(UC1.4.2.2);
-        \item Inserimento parametri (UC1.4.2.3);
-        \item Conferma parametri inseriti (UC1.4.2.4).
+        \item apertura elenco Recipe (UC1.4.2.1);
+        \item apertura pannello inserimento nuova Recipe (UC1.4.2.2);
+        \item inserimento parametri (UC1.4.2.3);
+        \item conferma parametri inseriti (UC1.4.2.4).
     \end{enumerate}
+    \item \textbf{Estensioni:} creazione Recipe fallita (UC1.4.3)
 \end{itemize}
 
 \subsubsection{UC1.4.2.1: Apertura elenco Recipe}
@@ -561,14 +577,12 @@
     Si possono eliminare solo le Recipe non più utilizzate in una o più View;
     \item \textbf{Precondizione:} l'amministratore deve aver visualizzato la schermata di gestione delle Recipe;
     \item \textbf{Postcondizione:} le informazioni richieste dall'utente sono state fornite e la Recipe desiderata, con tutti i dati ad essa associati sono stati eliminati dal sistema;
-    \item \textbf{Flusso principale:}
-
+    \item \textbf{Flusso principale degli eventi:}
     \begin{enumerate}
-        \item Apertura elenco Recipe (UC1.4.4.1);
-        \item Eliminazione Recipe (UC1.4.4.2);
-        \item Conferma eliminazione Recipe (UC1.4.4.3).
+        \item apertura elenco Recipe (UC1.4.4.1);
+        \item eliminazione Recipe (UC1.4.4.2);
+        \item conferma eliminazione Recipe (UC1.4.4.3).
     \end{enumerate}
-
 \end{itemize}
 
 \subsubsection{UC1.4.4.1: Apertura elenco Recipe}
@@ -600,7 +614,7 @@
 \pagebreak
 
 
-\subsection{UC1.5: Modifica Password di accesso}
+\subsection{UC1.5: Modifica password di accesso}
 
 \begin{figure}[!htbp]
     \centering
@@ -617,14 +631,14 @@
 	  \item \textbf{Descrizione:} l'utente può cambiare la propria password selezionando il pulsante di cambio password nella sua home screen;
     \item \textbf{Precondizione:} l'utente dispone di una password di accesso valida, risulta autenticato al servizio e si trova nella sua home screen;
     \item \textbf{Postcondizione:} la nuova password per l'utente è attiva, la vecchia password non è più valida;
-	\item \textbf{Flusso principale:}    
+	\item \textbf{Flusso principale degli eventi:}
     \begin{enumerate}
-        \item Inserimento nuova password (UC1.5.1);
-        \item Conferma inserimento nuova password (UC1.5.2);
-        \item Inserimento vecchia password (UC1.5.3);
-        \item Conferma cambio password (UC1.5.4);
+        \item inserimento nuova password (UC1.5.1);
+        \item conferma inserimento nuova password (UC1.5.2);
+        \item inserimento vecchia password (UC1.5.3);
+        \item conferma cambio password (UC1.5.4);
     \end{enumerate}
-   	\item \textbf{Scenari alternativi:} Password non corretta (UC1.5.5).
+   	\item \textbf{Estensioni:} password non corretta (UC1.5.5).
 
 \end{itemize}
 
@@ -696,12 +710,12 @@
 \pagebreak
 
 
-\subsection{UC1.6: Logout}
+\subsection{UC1.6: Logout utente}
 
 \begin{figure}[htbp]
     \centering
     \centerline{\includegraphics[scale=0.5]{./images/UC1_6.pdf}}
-    \caption{UC1.6 - Logout}
+    \caption{UC1.6 - Logout utente}
 \end{figure}
 
 \begin{itemize}
@@ -713,6 +727,11 @@
 	\item \textbf{Descrizione:} l'utente può terminare la sessione di lavoro. Questa operazione può essere eseguita premendo il pulsante di logout nella home screen;
     \item \textbf{Precondizione:} l'utente risulta autenticato al servizio;
     \item \textbf{Postcondizione:} la sessione di lavoro è terminata. Viene mostrata la schermata di login;
+    \item \textbf{Flusso principale degli eventi:}
+    \begin{enumerate}
+        \item pressione del tasto logout (UC1.6.1);
+        \item conferma del logout (UC1.6.2).
+    \end{enumerate}
 \end{itemize}
 
 \subsubsection{UC1.6.1: Pressione tasto logout}
@@ -756,7 +775,14 @@
     \item \textbf{Attori:} utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
     \item \textbf{Descrizione:} l'amministratore può gestire i permessi di accesso di un altro utente. Può anche eliminare definitivamente un utente e tutte le sue View;
     \item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema;
-    \item \textbf{Postcondizione:} il sistema ha eseguito le operazioni richieste.
+    \item \textbf{Postcondizione:} il sistema ha eseguito le operazioni richieste;
+    \item \textbf{Flusso principale degli eventi:}
+    \begin{enumerate}
+        \item visualizza elenco utenti (UC1.7.1);
+        \item modifica permessi utenti (UC1.7.2);
+        \item elimina un utente (UC1.7.3);
+    \end{enumerate}
+    \item \textbf{Estensioni:} errore nell'eliminazione di un utente (UC1.7.4).
 \end{itemize}
 
 \subsubsection{UC1.7.1: Visualizzazione elenco utenti}
@@ -775,15 +801,13 @@
     \item \textbf{Descrizione:} l'amministratore può cambiare i permessi di accesso al sistema ad un utente diverso da se stesso;
     \item \textbf{Precondizione:} l'amministratore ha eseguito l'accesso;
     \item \textbf{Postcondizione:} l'amministratore ha modificato i permessi ad un utente;
-    \item \textbf{Flusso principale:}
-
+    \item \textbf{Flusso principale degli eventi:}
     \begin{enumerate}
-        \item Apertura elenco utenti (UC1.7.2.1);
-        \item Apertura pannello modifica permessi(UC1.7.2.2);
-        \item Selezione nuovi permessi (UC1.7.2.3);
-        \item Conferma modifiche (UC1.7.2.4)
+        \item apertura elenco utenti (UC1.7.2.1);
+        \item apertura pannello modifica permessi(UC1.7.2.2);
+        \item selezione nuovi permessi (UC1.7.2.3);
+        \item conferma modifiche (UC1.7.2.4).
     \end{enumerate}
-
 \end{itemize}
 
 \subsubsection{UC1.7.2.1: Apertura elenco utenti}
@@ -829,14 +853,12 @@
     \item \textbf{Descrizione:} l'amministratore può eliminare un utente e tutte le sue View dal sistema;
     \item \textbf{Precondizione:} l'amministratore ha eseguito l'accesso;
     \item \textbf{Postcondizione:} l'amministratore ha cancellato un utente e le sue View;
-    \item \textbf{Flusso principale:}
-
+    \item \textbf{Flusso principale degli eventi:}
     \begin{enumerate}
-        \item Apertura elenco utenti (UC1.7.3.1);
-        \item Selezione pulsante elimina (UC1.7.3.2);
-        \item Conferma eliminazione (UC1.7.3.3).
+        \item apertura elenco utenti (UC1.7.3.1);
+        \item selezione pulsante elimina (UC1.7.3.2);
+        \item conferma eliminazione (UC1.7.3.3).
     \end{enumerate}
-
 \end{itemize}
 
 \subsubsection{UC1.7.3.1: Apertura elenco utenti}
@@ -895,16 +917,14 @@
     dal sistema;
     \item \textbf{Postcondizione:} il sistema ha memorizzato i dati relativi al nuovo account e
     ripresenta all'utente la schermata iniziale;
-    \item \textbf{Flusso principale:}
-
+    \item \textbf{Flusso principale degli eventi:}
     \begin{enumerate}
-        \item Inserimento username (UC1.8.1);
-        \item Inserimento email (UC1.8.2);
-        \item Inserimento password (UC1.8.3);
-        \item Conferma registrazione (UC1.8.4);
-        \item Errore durante la registrazione (UC1.8.5).
+        \item inserimento username (UC1.8.1);
+        \item inserimento email (UC1.8.2);
+        \item inserimento password (UC1.8.3);
+        \item conferma registrazione (UC1.8.4);
     \end{enumerate}
-
+    \item \textbf{Estensioni:} errore durante la registrazione (UC1.8.5).
 \end{itemize}
 
 
@@ -921,7 +941,7 @@
 
 \begin{itemize}
    	\item \textbf{Attori:} utente sconosciuto: utente non autenticato che accede al servizio;
-    \item \textbf{Descrizione:}
+    \item \textbf{Descrizione:} l'utente deve inserire la mail che vuole associare alle username appena inserito;
     \item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire la mail per il nuovo account;
     \item \textbf{Postcondizione:} l'utente ha inserito il proprio indirizzo mail.
 \end{itemize}
@@ -930,7 +950,7 @@
 
 \begin{itemize}
    	\item \textbf{Attori:} utente sconosciuto: utente non autenticato che accede al servizio;
-    \item \textbf{Descrizione:}
+    \item \textbf{Descrizione:} l'utente deve inserire la password che vuole associare ai dati precedetemente inseriti;
     \item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire la password per il nuovo account;
     \item \textbf{Postcondizione:} l'utente ha inserito la password.
 \end{itemize}
@@ -953,4 +973,5 @@
     \item \textbf{Precondizione:} i dati inseriti non rispettano uno o più vincoli di sistema;
     \item \textbf{Postcondizione:} l'utente ha visualizzato l'errore relativo ai dati inseriti.
 \end{itemize}
+
 \pagebreak
