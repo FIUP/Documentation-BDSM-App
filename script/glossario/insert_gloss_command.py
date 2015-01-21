@@ -51,7 +51,7 @@ for doc_dir in docs_dir_list:
                                + "if !(m/\\\section/"
                                + " || m/\\\subsection/ || m/\\\subsubsection/ || m/\\\caption/ || m/\\\includegraphics/"
                                + " || m/\\\label/ || m/\\\hyperref/ || m/\\\url/ || m/\\\paragraph/"
-                               + "|| m/\\\subparagraph/ || m/\\\[r]ef/)", content_file_path]
+                               + "|| m/\\\subparagraph/ || m/\\\[r]ef/ || m/\\\[b]egin/)", content_file_path]
 
             subprocess.call(term_maiusc_cmd)
 
@@ -66,7 +66,7 @@ for doc_dir in docs_dir_list:
                             + "if !(m/\\\section/"
                             + " || m/\\\subsection/ || m/\\\subsubsection/ || m/\\\caption/ || m/\\\includegraphics/"
                             + " || m/\\\label/ || m/\\\hyperref/ || m/\\\url/ || m/\\\paragraph/"
-                            + " || m/\\\subparagraph/ || m/\\\[r]ef/)", content_file_path]
+                            + " || m/\\\subparagraph/ || m/\\\[r]ef/ || m/\\\[b]egin/)", content_file_path]
 
             subprocess.call(term_min_cmd)
 
