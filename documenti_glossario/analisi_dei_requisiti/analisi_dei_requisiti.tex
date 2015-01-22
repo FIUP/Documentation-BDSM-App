@@ -1,0 +1,53 @@
+% =================================================================================================
+% File:			analisi_dei_requisiti.tex
+% Description:	Definisce il modello generale per il documento di analisi dei requisiti
+% Created:		2014/12/10
+% Author:		Roetta Marco
+% Email:		roetta.marco@mashup-unipd.it
+% =================================================================================================
+% Modification History:
+% Version		Modifier Date		Change											Author
+% 0.0.1 		2014/12/10 			ridefinizione comandi base						Roetta Marco
+% =================================================================================================
+% Modification History:
+% Version		Modifier Date		Change											Author
+% 0.0.2 		2014/12/30 			definita struttura base e contenuti				Roetta Marco
+% =================================================================================================
+%
+% \pdfminorversion=4
+\input{../template/source/packages}
+\input{../template/source/commands}
+\input{../template/source/styles}
+
+\begin{document}
+	\renewcommand{\documentName}{\docNameAdR}
+	\renewcommand{\documentVersion}{\docVersionAdR}
+	\renewcommand{\documentDate}{2014-12-30}
+	\renewcommand{\documentEditors}{Carnovalini Filippo \\ Cusinato Giacomo \\ Roetta Marco}
+	\renewcommand{\documentVerifiers}{Faccin Nicola}
+	\renewcommand{\documentApprovers}{Tesser Paolo}
+	\renewcommand{\documentUsage}{Esterno}
+	\renewcommand{\documentSummary}{Questo documento traccia tutti i requisiti analizzati dal gruppo \groupName{} necessari al processo di sviluppo del progetto \projectName.}
+
+	% FRONTESPIZIO
+	\pagenumbering{gobble}
+	\pagestyle{styleFirstPage}
+	\input{../template/source/firstpage}
+	\pagebreak
+
+
+	% PAGINA REVISIONI & PAGINA INDICI
+	\setcounter{page}{1}
+	\pagestyle{styleIndexPage}
+	\input{doc_to_modify/history}\pagebreak
+	\tableofcontents \pagebreak
+	%\listoftables \pagebreak
+	\listoffigures \pagebreak
+
+
+	% PAGINE CONTENUTI
+	\setcounter{page}{1}
+	\pagestyle{styleDocPages}
+	\input{doc_to_modify/content_files}
+
+\end{document}

@@ -16,6 +16,7 @@ Cron
 CSS3
 Database
 Design pattern
+Design responsive
 Diagramma di Gantt
 Diagramma di PERT
 Driver
@@ -39,6 +40,7 @@ JavaScript
 JSON
 \LaTeX
 Milestone
+Miner
 MySql
 Netsons
 Node.js
@@ -46,13 +48,14 @@ Package
 PDCA
 PERT
 PowerPoint
+Processor
 ProjectLibre
 Proponente
 Qt
 Repository
+Recipe
 REST
 Reveal.js
-Design responsive
 SDK
 Socket.io
 SPICE
@@ -66,4 +69,5 @@ Twitter Bootstrap
 UML
 UTF
 Validazione
+View
 WebSocket
