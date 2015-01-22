@@ -35,3 +35,4 @@ for i in ${ESTERNI[@]}; do
 done
 
 # TO DO lettere di presentazione
+cp ${doc_to_copy}"lettera_di_presentazione/lettera_di_presentazione.pdf" "consegne/"${revisione}"/lettera_di_presentazione.pdf";
