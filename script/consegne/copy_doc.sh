@@ -21,7 +21,7 @@ if [ $1 == "RQ" ]; then
 fi
 
 if [ $1 == "RA" ]; then
-    revisione="revisione_dei_requisiti";
+    revisione="revisione_di_accettazione";
 fi
 
 # copio tutti i documenti interni del gruppo nell'apposita sezione
