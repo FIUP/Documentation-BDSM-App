@@ -1,0 +1,1692 @@
+% =================================================================================================
+% File:			preventivo.tex
+% Description:	Defiinisce la sezione relativa al preventivo dei costi
+% Created:		2014-12-30
+% Author:		Tesser Paolo
+% Email:		tesser.paolo@mashup-unipd.it
+% =================================================================================================
+% Modification History:
+% Version		Modifier Date		Change											Author
+% 0.0.1 		2014-12-29 			creata struttura preventivo						Tesser Paolo
+% =================================================================================================
+% 0.0.2			2015-01-08			scelta sezioni									Tesser Paolo
+% =================================================================================================
+% 0.0.3			2015-01-14			stesi grafici a torta							Tesser Paolo
+% =================================================================================================
+% 0.0.4			2015-01-20			correzione errori valori						Tesser Paolo
+% =================================================================================================
+%
+
+% CONTENUTO DEL CAPITOLO
+
+\section{Preventivo} % (fold)
+\label{sec:preventivo}
+	\subsection{Ricerca e implementazione degli strumenti} % (fold)
+	\label{sub:ricerca_e_implementazione_degli_strumenti}
+		\subsubsection{Suddivisione del lavoro} % (fold)
+		\label{ssub:suddivisione_del_lavoro}
+		Nella fase di \textbf{Ricerca e implementazione degli strumenti} ciascun componente rivestirà i seguenti ruoli: \\
+			\begin{table}[!ht]
+				\begin{center}
+					\begin{tabularx}{0.9\textwidth}{|l|l|l|l|l|l|l|X|}
+						\hline
+						\textbf{Nome membro} & \textbf{PM} & \textbf{An} & \textbf{Pt} & \textbf{Am} & \textbf{Pr} & \textbf{Ve} & \textbf{Ore totali} \\
+						\hline
+						Carnovalini Filippo & 0 & 7 & 0 & 0 & 0 & 0 & \textbf{7} \\
+						\hline
+						Ceccon Lorenzo & 0 & 5 & 0 & 0 & 0 & 5 & \textbf{10} \\
+						\hline
+						Cusinato Giacomo & 0 & 7 & 0 & 0 & 0 & 0 & \textbf{7} \\
+						\hline
+						Faccin Nicola & 0 & 5 & 0 & 0 & 0 & 5 & \textbf{10} \\
+						\hline
+						Roetta Marco & 0 & 5 & 0 & 5 & 0 & 0 & \textbf{10} \\
+						\hline
+						Santacatterina Luca & 0 & 0 & 0 & 10 & 0 & 0 & \textbf{10} \\
+						\hline
+						Tesser Paolo & 4 & 0 & 0 & 8 & 0 & 0 & \textbf{12} \\
+						\hline
+					\end{tabularx}
+				\end{center}
+			\caption{Ricerca e implementazione degli strumenti - Ore non rendicontate}
+			\end{table}
+			
+			\begin{figure}[htbp]
+			
+				\begin{tikzpicture}
+					\begin{axis}[
+					    xbar stacked,
+					    legend style={
+					    legend columns=6,
+					        at={(xticklabel cs:0.5)},
+					        anchor=north,
+					        draw=none
+					    },
+					    ytick=data,
+					    axis y line*=none,
+					    axis x line*=bottom,
+					    tick label style={font=\footnotesize},
+					    legend style={font=\footnotesize},
+					    label style={font=\footnotesize},
+					    xtick={0,5,10,15,20,25,30},
+					    width=.9\textwidth,
+					    bar width=4mm,
+					    xlabel={Time in ms},
+					    yticklabels={Tesser Paolo, Santacatterina Luca, Roetta Marco, Faccin Nicola, Cusinato Giacomo, Ceccon Lorenzo, Carnovalini Filippo},
+					    xmin=0,
+					    xmax=30,
+					    area legend,
+					    y=6mm,
+					    enlarge y limits={abs=0.625},
+					]
+					\addplot[blu,fill=blu] coordinates
+					{(4,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6)};
+					\addplot[rosso,fill=rosso] coordinates
+					{(0,0) (0,1) (5,2) (5,3) (7,4) (5,5) (7,6)};
+					\addplot[giallo,fill=giallo] coordinates
+					{(0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6)};
+					\addplot[viola,fill=viola] coordinates
+					{(8,0) (10,1) (5,2) (0,3) (0,4) (0,5) (0,6)};
+					\addplot[verde,fill=verde] coordinates
+					{(0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6)};
+					\addplot[rame,fill=rame] coordinates
+					{(0,0) (0,1) (0,2) (5,3) (0,4) (5,5) (0,6)};
+					
+					\legend{Responsabile,Analista,Progettista,Amministratore,Programmatore,Verificatore}
+					\end{axis}  
+				\end{tikzpicture}
+			\vspace{0.2cm}	
+			\caption{Ricerca e implementazione degli strumenti - Riepilogo}
+			\end{figure}
+		% subsubsection suddivisione_del_lavoro (end)
+		
+		\subsubsection{Prospetto economico} % (fold)
+		\label{ssub:prospetto_economico}
+		In questa fase il costo per ogni ruolo, non a carico del proponente\gloss{}, è il seguente: \\
+			\begin{table}[!htt]
+				\begin{center}
+					\begin{tabularx}{0.65\textwidth}{|l|l|X|}
+						\hline
+						\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo} \\
+						\hline
+						\roleProjectManager & 4 & \euro{} 120,00 \\
+						\hline
+						\roleAnalyst & 29 & \euro{} 725,00 \\
+						\hline
+						\roleDesigner & 0 & \euro{} 0,00 \\
+						\hline
+						\roleAdministrator & 23 & \euro{} 460,00 \\
+						\hline
+						\roleProgrammer & 0 & \euro{} 0,00 \\
+						\hline
+						\roleVerifier & 10 & \euro{} 150,00 \\
+						\hline
+						\textbf{Totale} & \textbf{66} & \textbf{\euro{} 1455,00} \\
+						\hline
+					\end{tabularx}
+				\end{center}
+			\caption{Ricerca e implementazione degli strumenti - Costo per ruolo}
+			\end{table}
+
+		\noindent
+		I valori delle ore sono riassunte nel seguente grafico a torta che espone l’incidenza delle ore per ruolo sul totale.
+		\begin{center}
+			\begin{figure}[htbp]
+				\begin{tikzpicture}
+				[
+				    pie chart,
+				    slice type={pm}{blu},
+				    slice type={an}{rosso},
+				    slice type={pt}{giallo},
+				    slice type={am}{viola},
+				    slice type={pr}{verde},
+					slice type={ve}{rame},
+				    pie values/.style={font={\normalsize}},
+				    scale=2.5
+				]
+
+				    \pie{Ore per ruolo sul totale}{6/pm,44/an,35/am,15/ve}
+
+				    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+				\end{tikzpicture}
+			\vspace{0.8cm}
+			\caption{Ricerca e implementazione strumenti - Ore per ruolo sul totale}
+			\end{figure}
+		\end{center}
+		
+		\noindent
+		I valori dei costi sono riassunti nel seguente grafico a torta che espone l’incidenza dei costi per ruolo sul totale.
+		\begin{center}
+			\begin{figure}[htbp]
+				\begin{tikzpicture}
+				[
+				    pie chart,
+				    slice type={pm}{blu},
+				    slice type={an}{rosso},
+				    slice type={pt}{giallo},
+				    slice type={am}{viola},
+				    slice type={pr}{verde},
+					slice type={ve}{rame},
+				    pie values/.style={font={\normalsize}},
+				    scale=2.5
+				]
+
+				    \pie{Costi per ruolo sul totale}{11/pm,42/an,19/am,28/ve}
+
+				    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+				\end{tikzpicture}
+			\vspace{0.8cm}
+			\caption{Ricerca e implementazione strumenti - Costi per ruolo sul totale}
+			\end{figure}
+		\end{center}			
+		
+		% subsubsection prospetto_economico (end)
+	
+	\noindent
+	\textbf{Note:} in questa fase le ore vengono abbastanza equamente suddivise tra i componenti. Solo per Carnovalini Filippo e Cusinato Giacomo ne sono state allocate meno in quanto il primo ha fatto presente alcuni impegni personali durante il periodo in questione, mentre il secondo aveva un appello straordinario di recupero in vista.	
+	% subsection ricerca_e_implementazione_degli_strumenti (end)
+	
+	\newpage
+	\subsection{Analisi dei requisiti} % (fold)
+	\label{sub:analisi_dei_requisiti}
+		\subsubsection{Suddivisione del lavoro} % (fold)
+		\label{ssub:suddivisione_del_lavoro}
+		Nella fase di \textbf{Analisi dei requisiti} ciascun componente rivestirà i seguenti ruoli: \\
+			\begin{table}[!htt]
+				\begin{center}
+					\begin{tabularx}{0.9\textwidth}{|l|l|l|l|l|l|l|X|}
+						\hline
+						\textbf{Nome membro} & \textbf{PM} & \textbf{An} & \textbf{Pt} & \textbf{Am} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+						\hline
+						Carnovalini Filippo & 0 & 17 & 0 & 0 & 0 & 5 & \textbf{22} \\
+						\hline
+						Ceccon Lorenzo & 0 & 7 & 0 & 0 & 0 & 15 & \textbf{22} \\
+						\hline
+						Cusinato Giacomo & 2 & 18 & 0 & 0 & 0 & 0 & \textbf{20} \\
+						\hline
+						Faccin Nicola & 0 & 7 & 0 & 0 & 0 & 15 & \textbf{22} \\
+						\hline
+						Roetta Marco & 0 & 17 & 0 & 10 & 0 & 0 & \textbf{27} \\
+						\hline
+						Santacatterina Luca & 0 & 0 & 0 & 15 & 0 & 10 & \textbf{25} \\
+						\hline
+						Tesser Paolo & 16 & 0 & 0 & 5 & 0 & 0 & \textbf{21} \\
+						\hline		
+					\end{tabularx}
+				\end{center}
+			\caption{Analisi dei requisiti - Ore non rendicontate}
+			\end{table}
+			
+			\begin{figure}[htbp]
+			
+				\begin{tikzpicture}
+					\begin{axis}[
+					    xbar stacked,
+					    legend style={
+					    legend columns=6,
+					        at={(xticklabel cs:0.5)},
+					        anchor=north,
+					        draw=none
+					    },
+					    ytick=data,
+					    axis y line*=none,
+					    axis x line*=bottom,
+					    tick label style={font=\footnotesize},
+					    legend style={font=\footnotesize},
+					    label style={font=\footnotesize},
+					    xtick={0,5,10,15,20,25,30},
+					    width=.9\textwidth,
+					    bar width=4mm,
+					    xlabel={Time in ms},
+					    yticklabels={Tesser Paolo, Santacatterina Luca, Roetta Marco, Faccin Nicola, Cusinato Giacomo, Ceccon Lorenzo, Carnovalini Filippo},
+					    xmin=0,
+					    xmax=40,
+					    area legend,
+					    y=6mm,
+					    enlarge y limits={abs=0.625},
+					]
+					\addplot[blu,fill=blu] coordinates
+					{(16,0) (0,1) (0,2) (0,3) (2,4) (0,5) (0,6)};
+					\addplot[rosso,fill=rosso] coordinates
+					{(0,0) (0,1) (17,2) (7,3) (18,4) (7,5) (17,6)};
+					\addplot[giallo,fill=giallo] coordinates
+					{(0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6)};
+					\addplot[viola,fill=viola] coordinates
+					{(5,0) (10,1) (10,2) (0,3) (0,4) (0,5) (0,6)};
+					\addplot[verde,fill=verde] coordinates
+					{(0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6)};
+					\addplot[rame,fill=rame] coordinates
+					{(0,0) (15,1) (0,2) (15,3) (0,4) (15,5) (5,6)};
+					
+					\legend{Responsabile,Analista,Progettista,Amministratore,Programmatore,Verificatore}
+					\end{axis}  
+				\end{tikzpicture}
+			\vspace{0.2cm}	
+			\caption{Analisi dei requisiti - Riepilogo}
+			\end{figure}
+		% subsubsection suddivisione_del_lavoro (end)
+		
+		\subsubsection{Prospetto economico} % (fold)
+		\label{ssub:prospetto_economico}
+		In questa fase il costo per ogni ruolo, non a carico del proponente\gloss{}, è il seguente: \\
+			\begin{table}[!ht]
+				\begin{center}
+					\begin{tabularx}{0.65\textwidth}{|l|l|X|}
+						\hline
+						\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo} \\
+						\hline
+						\roleProjectManager & 18 & \euro{} 540,00 \\
+						\hline
+						\roleAnalyst & 66 & \euro{} 1650,00 \\
+						\hline
+						\roleDesigner & 0 & \euro{} 0,00 \\
+						\hline
+						\roleAdministrator & 30 & \euro{} 600,00 \\
+						\hline
+						\roleProgrammer & 0 & \euro{} 0,00 \\
+						\hline
+						\roleVerifier & 45 & \euro{} 675,00 \\
+						\hline
+						\textbf{Totale} & \textbf{159} & \textbf{\euro{} 3465,00} \\
+						\hline
+					\end{tabularx}
+				\end{center}
+			\caption{Analisi dei requisiti - Costo per ruolo}
+			\end{table}
+			
+			\noindent
+			I valori delle ore sono riassunte nel seguente grafico a torta che espone l’incidenza delle ore per ruolo sul totale.
+			\begin{center}
+				\begin{figure}[htbp]
+					\begin{tikzpicture}
+					[
+					    pie chart,
+					    slice type={pm}{blu},
+					    slice type={an}{rosso},
+					    slice type={pt}{giallo},
+					    slice type={am}{viola},
+					    slice type={pr}{verde},
+						slice type={ve}{rame},
+					    pie values/.style={font={\normalsize}},
+					    scale=2.5
+					]
+
+					    \pie{Ore per ruolo sul totale}{11/pm,42/an,19/am,28/ve}
+
+					    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+					\end{tikzpicture}
+				\vspace{0.8cm}
+				\caption{Analisi dei requisiti - Ore per ruolo sul totale}
+				\end{figure}
+			\end{center}
+
+			\noindent
+			I valori dei costi sono riassunti nel seguente grafico a torta che espone l’incidenza dei costi per ruolo sul totale.
+			\begin{center}
+				\begin{figure}[htbp]
+					\begin{tikzpicture}
+					[
+					    pie chart,
+					    slice type={pm}{blu},
+					    slice type={an}{rosso},
+					    slice type={pt}{giallo},
+					    slice type={am}{viola},
+					    slice type={pr}{verde},
+						slice type={ve}{rame},
+					    pie values/.style={font={\normalsize}},
+					    scale=2.5
+					]
+
+					    \pie{Costi per ruolo sul totale}{16/pm,48/an,17/am,19/ve}
+
+					    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+					\end{tikzpicture}
+				\vspace{0.8cm}
+				\caption{Analisi dei requisiti - Costi per ruolo sul totale}
+				\end{figure}
+			\end{center}
+		% subsubsection prospetto_economico (end)
+		\noindent
+		\textbf{Note:} in questa fase le ore sono equamente suddivise. Solo per il componente Roetta Marco ne sono state allocate di più in quanto ha preferito averne in numero maggiore durante la pausa natalizia essendo a casa dal lavoro.
+	% subsection analisi_dei_requisiti (end)
+	\newpage
+	\subsection{Analisi di dettaglio} % (fold)
+	\label{sub:analisi_di_dettaglio}
+		\subsubsection{Suddivisione del lavoro} % (fold)
+		\label{ssub:suddivisione_del_lavoro}
+		Nella fase di \textbf{Analisi di dettaglio} ciascun componente rivestirà i seguenti ruoli: \\
+			\begin{table}[!ht]
+				\begin{center}
+					\begin{tabularx}{0.9\textwidth}{|l|l|l|l|l|l|l|X|}
+						\hline
+						\textbf{Nome membro} & \textbf{PM} & \textbf{An} & \textbf{Pt} & \textbf{Am} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+						\hline
+						Carnovalini Filippo & 0 & 7 & 0 & 0 & 0 & 10 & \textbf{17} \\
+						\hline
+						Ceccon Lorenzo & 6 & 7 & 0 & 6 & 0 & 0 & \textbf{19} \\
+						\hline
+						Cusinato Giacomo & 0 & 0 & 0 & 0 & 0 & 15 & \textbf{15} \\
+						\hline
+						Faccin Nicola & 0 & 0 & 0 & 4 & 0 & 10 & \textbf{14} \\
+						\hline
+						Roetta Marco & 0 & 10 & 0 & 0 & 0 & 7 & \textbf{17} \\
+						\hline
+						Santacatterina Luca & 2 & 12 & 0 & 0 & 0 & 0 & \textbf{14} \\
+						\hline
+						Tesser Paolo & 0 & 11 & 0 & 0 & 0 & 7 & \textbf{18} \\
+						\hline	
+					\end{tabularx}
+				\end{center}
+			\caption{Analisi di dettaglio - Ore non rendicontate}
+			\end{table}
+			
+			\begin{figure}[htbp]
+			
+				\begin{tikzpicture}
+					\begin{axis}[
+					    xbar stacked,
+					    legend style={
+					    legend columns=6,
+					        at={(xticklabel cs:0.5)},
+					        anchor=north,
+					        draw=none
+					    },
+					    ytick=data,
+					    axis y line*=none,
+					    axis x line*=bottom,
+					    tick label style={font=\footnotesize},
+					    legend style={font=\footnotesize},
+					    label style={font=\footnotesize},
+					    xtick={0,5,10,15,20,25,30},
+					    width=.9\textwidth,
+					    bar width=4mm,
+					    xlabel={Time in ms},
+					    yticklabels={Tesser Paolo, Santacatterina Luca, Roetta Marco, Faccin Nicola, Cusinato Giacomo, Ceccon Lorenzo, Carnovalini Filippo},
+					    xmin=0,
+					    xmax=35,
+					    area legend,
+					    y=6mm,
+					    enlarge y limits={abs=0.625},
+					]
+					\addplot[blu,fill=blu] coordinates
+					{(0,0) (2,1) (0,2) (0,3) (0,4) (6,5) (0,6)};
+					\addplot[rosso,fill=rosso] coordinates
+					{(11,0) (12,1) (10,2) (0,3) (0,4) (7,5) (7,6)};
+					\addplot[giallo,fill=giallo] coordinates
+					{(0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6)};
+					\addplot[viola,fill=viola] coordinates
+					{(0,0) (0,1) (0,2) (4,3) (0,4) (6,5) (0,6)};
+					\addplot[verde,fill=verde] coordinates
+					{(0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6)};
+					\addplot[rame,fill=rame] coordinates
+					{(7,0) (0,1) (7,2) (10,3) (15,4) (0,5) (10,6)};
+					
+					\legend{Responsabile,Analista,Progettista,Amministratore,Programmatore,Verificatore}
+					\end{axis}  
+				\end{tikzpicture}
+			\vspace{0.2cm}	
+			\caption{Analisi di dettaglio - Riepilogo}
+			\end{figure}
+		% subsubsection suddivisione_del_lavoro (end)
+		
+		\subsubsection{Prospetto economico} % (fold)
+		\label{ssub:prospetto_economico}
+		In questa fase il costo per ogni ruolo, non a carico del proponente\gloss{}, è il seguente: \\
+			\begin{table}[!ht]
+				\begin{center}
+					\begin{tabularx}{0.65\textwidth}{|l|l|X|}
+						\hline
+						\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo} \\
+						\hline
+						\roleProjectManager & 8 & \euro{} 240,00 \\
+						\hline
+						\roleAnalyst & 47 & \euro{} 1175,00 \\
+						\hline
+						\roleDesigner & 0 & \euro{} 0,00 \\
+						\hline
+						\roleAdministrator & 10 & \euro{} 200,00 \\
+						\hline
+						\roleProgrammer & 0 & \euro{} 0,00 \\
+						\hline
+						\roleVerifier & 49 & \euro{} 735,00 \\
+						\hline
+						\textbf{Totale} & \textbf{114} & \textbf{\euro{} 2350,00} \\
+						\hline
+					\end{tabularx}
+				\end{center}
+			\caption{Analisi di dettaglio - Costo per ruolo}
+			\end{table}
+
+			\noindent
+			I valori delle ore sono riassunte nel seguente grafico a torta che espone l’incidenza delle ore per ruolo sul totale.
+			\begin{center}
+				\begin{figure}[htbp]
+					\begin{tikzpicture}
+					[
+					    pie chart,
+					    slice type={pm}{blu},
+					    slice type={an}{rosso},
+					    slice type={pt}{giallo},
+					    slice type={am}{viola},
+					    slice type={pr}{verde},
+						slice type={ve}{rame},
+					    pie values/.style={font={\normalsize}},
+					    scale=2.5
+					]
+
+					    \pie{Ore per ruolo sul totale}{7/pm,41/an,9/am,43/ve}
+
+					    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+					\end{tikzpicture}
+				\vspace{0.8cm}
+				\caption{Analisi di dettaglio - Ore per ruolo sul totale}
+				\end{figure}
+			\end{center}
+
+			\noindent
+			I valori dei costi sono riassunti nel seguente grafico a torta che espone l’incidenza dei costi per ruolo sul totale.
+			\begin{center}
+				\begin{figure}[htbp]
+					\begin{tikzpicture}
+					[
+					    pie chart,
+					    slice type={pm}{blu},
+					    slice type={an}{rosso},
+					    slice type={pt}{giallo},
+					    slice type={am}{viola},
+					    slice type={pr}{verde},
+						slice type={ve}{rame},
+					    pie values/.style={font={\normalsize}},
+					    scale=2.5
+					]
+
+					    \pie{Costi per ruolo sul totale}{10/pm,50/an,9/am,31/ve}
+
+					    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+					\end{tikzpicture}
+				\vspace{0.8cm}
+				\caption{Analisi di dettaglio - Costi per ruolo sul totale}
+				\end{figure}
+			\end{center}
+		% subsubsection prospetto_economico (end)
+		\noindent
+		\textbf{Note:} in questa fase le ore vengono abbastanza equamente suddivise. Per alcuni dei membri che stanno svolgendo anche il progetto di Tecnologie Web c++\gloss{}'è stata una minore allocazione.
+	% subsection analisi_di_dettaglio (end)
+	
+	\newpage
+	\subsection{Progettazione architetturale} % (fold)
+	\label{sub:progettazione_architetturale}
+		\subsubsection{Suddivisione del lavoro} % (fold)
+		\label{ssub:suddivisione_del_lavoro}
+		Nella fase di \textbf{Progettazione architetturale} ciascun componente rivestirà i seguenti ruoli: \\
+			\begin{table}[!ht]
+				\begin{center}
+					\begin{tabularx}{0.9\textwidth}{|l|l|l|l|l|l|l|X|}
+						\hline
+						\textbf{Nome membro} & \textbf{PM} & \textbf{An} & \textbf{Pt} & \textbf{Am} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+						\hline
+						Carnovalini Filippo & 0 & 8 & 10 & 8 & 0 & 0 & \textbf{26} \\
+						\hline
+						Ceccon Lorenzo & 2 & 8 & 8 & 0 & 0 & 10 & \textbf{28} \\
+						\hline
+						Cusinato Giacomo & 0 & 5 & 12 & 0 & 0 & 8 & \textbf{25} \\
+						\hline
+						Faccin Nicola & 0 & 0 & 19 & 0 & 0 & 6 & \textbf{25} \\
+						\hline
+						Roetta Marco & 0 & 0 & 17 & 0 & 0 & 13 & \textbf{30} \\
+						\hline
+						Santacatterina Luca & 6 & 9 & 0 & 0 & 0 & 7 & \textbf{22} \\
+						\hline
+						Tesser Paolo & 0 & 8 & 17 & 0 & 0 & 0 & \textbf{25} \\
+						\hline	
+					\end{tabularx}
+				\end{center}
+			\caption{Progettazione architetturale - Ore rendicontate}
+			\end{table}
+			
+			\begin{figure}[htbp]
+			
+				\begin{tikzpicture}
+					\begin{axis}[
+					    xbar stacked,
+					    legend style={
+					    legend columns=6,
+					        at={(xticklabel cs:0.5)},
+					        anchor=north,
+					        draw=none
+					    },
+					    ytick=data,
+					    axis y line*=none,
+					    axis x line*=bottom,
+					    tick label style={font=\footnotesize},
+					    legend style={font=\footnotesize},
+					    label style={font=\footnotesize},
+					    xtick={0,5,10,15,20,25,30},
+					    width=.9\textwidth,
+					    bar width=4mm,
+					    xlabel={Time in ms},
+					    yticklabels={Tesser Paolo, Santacatterina Luca, Roetta Marco, Faccin Nicola, Cusinato Giacomo, Ceccon Lorenzo, Carnovalini Filippo},
+					    xmin=0,
+					    xmax=35,
+					    area legend,
+					    y=6mm,
+					    enlarge y limits={abs=0.625},
+					]
+					\addplot[blu,fill=blu] coordinates
+					{(0,0) (6,1) (0,2) (0,3) (0,4) (2,5) (0,6)};
+					\addplot[rosso,fill=rosso] coordinates
+					{(8,0) (9,1) (0,2) (0,3) (5,4) (8,5) (8,6)};
+					\addplot[giallo,fill=giallo] coordinates
+					{(17,0) (0,1) (17,2) (19,3) (12,4) (8,5) (10,6)};
+					\addplot[viola,fill=viola] coordinates
+					{(0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (8,6)};
+					\addplot[verde,fill=verde] coordinates
+					{(0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6)};
+					\addplot[rame,fill=rame] coordinates
+					{(0,0) (7,1) (13,2) (6,3) (8,4) (10,5) (0,6)};
+					
+					\legend{Responsabile,Analista,Progettista,Amministratore,Programmatore,Verificatore}
+					\end{axis}  
+				\end{tikzpicture}
+			\vspace{0.2cm}	
+			\caption{Progettazione architetturale - Riepilogo}
+			\end{figure}
+		% subsubsection suddivisione_del_lavoro (end)
+		
+		\subsubsection{Prospetto economico} % (fold)
+		\label{ssub:prospetto_economico}
+		In questa fase il costo per ogni ruolo è il seguente: \\
+			\begin{table}[!ht]
+				\begin{center}
+					\begin{tabularx}{0.65\textwidth}{|l|l|X|}
+						\hline
+						\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo} \\
+						\hline
+						\roleProjectManager & 8 & \euro{} 240,00 \\
+						\hline
+						\roleAnalyst & 38 & \euro{} 950,00 \\
+						\hline
+						\roleDesigner & 83 & \euro{} 1826,00 \\
+						\hline
+						\roleAdministrator & 8 & \euro{} 160,00 \\
+						\hline
+						\roleProgrammer & 0 & \euro{} 0,00 \\
+						\hline
+						\roleVerifier & 44 & \euro{} 660,00 \\
+						\hline
+						\textbf{Totale} & \textbf{181} & \textbf{\euro{} 3836,00} \\
+						\hline
+					\end{tabularx}
+				\end{center}
+			\caption{Progettazione architetturale - Costo per ruolo}
+			\end{table}
+			
+			\noindent
+			I valori delle ore sono riassunte nel seguente grafico a torta che espone l’incidenza delle ore per ruolo sul totale.
+			\begin{center}
+				\begin{figure}[htbp]
+					\begin{tikzpicture}
+					[
+					    pie chart,
+					    slice type={pm}{blu},
+					    slice type={an}{rosso},
+					    slice type={pt}{giallo},
+					    slice type={am}{viola},
+					    slice type={pr}{verde},
+						slice type={ve}{rame},
+					    pie values/.style={font={\normalsize}},
+					    scale=2.5
+					]
+
+					    \pie{Ore per ruolo sul totale}{4/pm,21/an,46/pt,5/am,24/ve}
+
+					    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+					\end{tikzpicture}
+				\vspace{0.8cm}
+				\caption{Progettazione architetturale - Ore per ruolo sul totale}
+				\end{figure}
+			\end{center}
+
+			\noindent
+			I valori dei costi sono riassunti nel seguente grafico a torta che espone l’incidenza dei costi per ruolo sul totale.
+			\begin{center}
+				\begin{figure}[htbp]
+					\begin{tikzpicture}
+					[
+					    pie chart,
+					    slice type={pm}{blu},
+					    slice type={an}{rosso},
+					    slice type={pt}{giallo},
+					    slice type={am}{viola},
+					    slice type={pr}{verde},
+						slice type={ve}{rame},
+					    pie values/.style={font={\normalsize}},
+					    scale=2.5
+					]
+
+					    \pie{Costi per ruolo sul totale}{6/pm,25/an,48/pt,4/am,17/ve}
+
+					    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+					\end{tikzpicture}
+				\vspace{0.8cm}
+				\caption{Progettazione architetturale - Costi per ruolo sul totale}
+				\end{figure}
+			\end{center}
+		% subsubsection prospetto_economico (end)
+		\noindent
+		\textbf{Note:} in questa fase le ore vengono equamente suddivise. Solo per il componente Santacatterina Luca ne vengono allocate meno in quanto ha fatto presente dei possibili impegni lavorativi personali durante questo periodo.
+	% subsection progettazione_architetturale (end)
+	
+	\newpage
+	\subsection{Progettazione di dettaglio e codifica dei requisiti obbligatori} % (fold)
+	\label{sub:progettazione_di_dettaglio_e_codifica_dei_requisiti_obbligatori}
+		\subsubsection{Suddivisione del lavoro} % (fold)
+		\label{ssub:suddivisione_del_lavoro}
+		Nella fase di \textbf{Progettazione di dettaglio e codifica dei requisiti obbligatori} ciascun componente rivestirà i seguenti ruoli: \\
+			\begin{table}[!ht]
+				\begin{center}
+					\begin{tabularx}{0.9\textwidth}{|l|l|l|l|l|l|l|X|}
+						\hline
+						\textbf{Nome membro} & \textbf{PM} & \textbf{An} & \textbf{Pt} & \textbf{Am} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+						\hline
+						Carnovalini Filippo & 0 & 0 & 7 & 0 & 0 & 17 & \textbf{24} \\
+						\hline
+						Ceccon Lorenzo & 0 & 6 & 7 & 0 & 10 & 0 & \textbf{23} \\
+						\hline
+						Cusinato Giacomo & 5 & 5 & 7 & 0 & 0 & 8 & \textbf{25} \\
+						\hline
+						Faccin Nicola & 0 & 10 & 0 & 0 & 17 & 0 & \textbf{27} \\
+						\hline
+						Roetta Marco & 0 & 0 & 12 & 7 & 12 & 0 & \textbf{31} \\
+						\hline
+						Santacatterina Luca & 0 & 0 & 8 & 0 & 15 & 12 & \textbf{35} \\
+						\hline
+						Tesser Paolo & 5 & 0 & 0 & 0 & 15 & 14 & \textbf{34} \\
+						\hline
+					\end{tabularx}
+				\end{center}
+			\caption{Progettazione di dettaglio e codifica dei requisiti obbligatori - Ore rendicontate}
+			\end{table}
+			
+			\begin{figure}[htbp]
+			
+				\begin{tikzpicture}
+					\begin{axis}[
+					    xbar stacked,
+					    legend style={
+					    legend columns=6,
+					        at={(xticklabel cs:0.5)},
+					        anchor=north,
+					        draw=none
+					    },
+					    ytick=data,
+					    axis y line*=none,
+					    axis x line*=bottom,
+					    tick label style={font=\footnotesize},
+					    legend style={font=\footnotesize},
+					    label style={font=\footnotesize},
+					    xtick={0,5,10,15,20,25,30},
+					    width=.9\textwidth,
+					    bar width=4mm,
+					    xlabel={Time in ms},
+					    yticklabels={Tesser Paolo, Santacatterina Luca, Roetta Marco, Faccin Nicola, Cusinato Giacomo, Ceccon Lorenzo, Carnovalini Filippo},
+					    xmin=0,
+					    xmax=35,
+					    area legend,
+					    y=6mm,
+					    enlarge y limits={abs=0.625},
+					]
+					\addplot[blu,fill=blu] coordinates
+					{(5,0) (0,1) (0,2) (0,3) (5,4) (0,5) (0,6)};
+					\addplot[rosso,fill=rosso] coordinates
+					{(0,0) (0,1) (0,2) (10,3) (5,4) (6,5) (0,6)};
+					\addplot[giallo,fill=giallo] coordinates
+					{(0,0) (8,1) (12,2) (0,3) (7,4) (7,5) (7,6)};
+					\addplot[viola,fill=viola] coordinates
+					{(0,0) (0,1) (7,2) (0,3) (0,4) (0,5) (0,6)};
+					\addplot[verde,fill=verde] coordinates
+					{(15,0) (15,1) (12,2) (17,3) (0,4) (10,5) (0,6)};
+					\addplot[rame,fill=rame] coordinates
+					{(14,0) (12,1) (0,2) (0,3) (8,4) (0,5) (17,6)};
+					
+					\legend{Responsabile,Analista,Progettista,Amministratore,Programmatore,Verificatore}
+					\end{axis}  
+				\end{tikzpicture}
+			\vspace{0.2cm}	
+			\caption{Progettazione di dettaglio e codifica dei requisiti obbligatori - Riepilogo}
+			\end{figure}
+		% subsubsection suddivisione_del_lavoro (end)
+		
+		\subsubsection{Prospetto economico} % (fold)
+		\label{ssub:prospetto_economico}
+		In questa fase il costo per ogni ruolo è il seguente: \\
+			\begin{table}[!ht]
+				\begin{center}
+					\begin{tabularx}{0.65\textwidth}{|l|l|X|}
+						\hline
+						\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo} \\
+						\hline
+						\roleProjectManager & 10 & \euro{} 300,00 \\
+						\hline
+						\roleAnalyst & 21 & \euro{} 525,00 \\
+						\hline
+						\roleDesigner & 41 & \euro{} 902,00 \\
+						\hline
+						\roleAdministrator & 7 & \euro{} 140,00 \\
+						\hline
+						\roleProgrammer & 69 & \euro{} 1035,00 \\
+						\hline
+						\roleVerifier & 51 & \euro{} 765,00 \\
+						\hline
+						\textbf{Totale} & \textbf{199} & \textbf{\euro{} 3667,00} \\
+						\hline
+					\end{tabularx}
+				\end{center}
+			\caption{Progettazione di dettaglio e codifica dei requisiti obbligatori - Costo per ruolo}
+			\end{table}
+		
+			\noindent
+			I valori delle ore sono riassunte nel seguente grafico a torta che espone l’incidenza delle ore per ruolo sul totale.
+			\begin{center}
+				\begin{figure}[htbp]
+					\begin{tikzpicture}
+					[
+					    pie chart,
+					    slice type={pm}{blu},
+					    slice type={an}{rosso},
+					    slice type={pt}{giallo},
+					    slice type={am}{viola},
+					    slice type={pr}{verde},
+						slice type={ve}{rame},
+					    pie values/.style={font={\normalsize}},
+					    scale=2.5
+					]
+
+					    \pie{Ore per ruolo sul totale}{5/pm,10/an,21/pt,4/am,34/pr,26/ve}
+
+					    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+					\end{tikzpicture}
+				\vspace{0.8cm}
+				\caption{Progettazione di dettaglio e codifica dei requisiti obbligatori - Ore per ruolo sul totale}
+				\end{figure}
+			\end{center}
+
+			\noindent
+			I valori dei costi sono riassunti nel seguente grafico a torta che espone l’incidenza dei costi per ruolo sul totale.
+			\begin{center}
+				\begin{figure}[htbp]
+					\begin{tikzpicture}
+					[
+					    pie chart,
+					    slice type={pm}{blu},
+					    slice type={an}{rosso},
+					    slice type={pt}{giallo},
+					    slice type={am}{viola},
+					    slice type={pr}{verde},
+						slice type={ve}{rame},
+					    pie values/.style={font={\normalsize}},
+					    scale=2.5
+					]
+
+					    \pie{Costi per ruolo sul totale}{8/pm,14/an,25/pt,4/am,28/pr,21/ve}
+
+					    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+					\end{tikzpicture}
+				\vspace{0.8cm}
+				\caption{Progettazione di dettaglio e codifica dei requisiti obbligatori - Costi per ruolo sul totale}
+				\end{figure}
+			\end{center}
+		% subsubsection prospetto_economico (end)
+		\noindent
+		\textbf{Note:} in questa fase le ore non sono equamente suddivise. Questo perché si è nel periodo centrale del secondo semestre e magari le lezioni possono risultare più pesanti. Si sono resi più disponibili i componenti Santacatterina Luca e Tesser Paolo, i quali hanno meno corsi o addirittura nessuno ad eccezione di Ingegneria del Software Modulo B. Lo stesso discorso vale per Ceccon Lorenzo che però ha già erogato un numero di ore maggiore rispetto ai precedenti citati. Si è deciso quindi di riservare questa risorsa per le future fasi questa sua disponibilità. \\
+		Questo considerazioni influenzeranno di fatto anche i periodi successivi in quanto da specifica del committente\gloss{} i componenti non potranno superare un certo numero massimo di ore, ne stare al di sotto di un altro, nella maniera più equa possibile nel complesso finale.
+	% subsection progettazione_di_dettaglio_e_codifica_dei_requisiti_obbligatori (end)
+	
+	\newpage
+	\subsection{Progettazione di dettaglio e codifica dei requisiti desiderabili} % (fold)
+	\label{sub:progettazione_di_dettaglio_e_codifica_dei_requisiti_desiderabili}
+		\subsubsection{Suddivisione del lavoro} % (fold)
+		\label{ssub:suddivisione_del_lavoro}
+		Nella fase di \textbf{Progettazione di dettaglio e codifica dei requisiti desiderabili} ciascun componente rivestirà i seguenti ruoli: \\
+			\begin{table}[!ht]
+				\begin{center}
+					\begin{tabularx}{0.9\textwidth}{|l|l|l|l|l|l|l|X|}
+						\hline
+						\textbf{Nome membro} & \textbf{PM} & \textbf{An} & \textbf{Pt} & \textbf{Am} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+						\hline
+						Carnovalini Filippo & 8 & 0 & 0 & 0 & 10 & 0 & \textbf{18} \\
+						\hline
+						Ceccon Lorenzo & 0 & 0 & 10 & 0 & 0 & 10 & \textbf{20} \\
+						\hline
+						Cusinato Giacomo & 0 & 0 & 0 & 7 & 15 & 0 & \textbf{22} \\
+						\hline
+						Faccin Nicola & 0 & 0 & 9 & 0 & 5 & 11 & \textbf{25} \\
+						\hline
+						Roetta Marco & 1 & 0 & 0 & 0 & 11 & 7 & \textbf{19} \\
+						\hline
+						Santacatterina Luca & 0 & 0 & 8 & 0 & 0 & 8 & \textbf{16} \\
+						\hline
+						Tesser Paolo & 0 & 0 & 8 & 0 & 0 & 12 & \textbf{20} \\
+						\hline	
+					\end{tabularx}
+				\end{center}
+			\caption{Progettazione di dettaglio e codifica dei requisiti desiderabili - Ore rendicontate}
+			\end{table}
+			
+			\begin{figure}[htbp]
+			
+				\begin{tikzpicture}
+					\begin{axis}[
+					    xbar stacked,
+					    legend style={
+					    legend columns=6,
+					        at={(xticklabel cs:0.5)},
+					        anchor=north,
+					        draw=none
+					    },
+					    ytick=data,
+					    axis y line*=none,
+					    axis x line*=bottom,
+					    tick label style={font=\footnotesize},
+					    legend style={font=\footnotesize},
+					    label style={font=\footnotesize},
+					    xtick={0,5,10,15,20,25,30},
+					    width=.9\textwidth,
+					    bar width=4mm,
+					    xlabel={Time in ms},
+					    yticklabels={Tesser Paolo, Santacatterina Luca, Roetta Marco, Faccin Nicola, Cusinato Giacomo, Ceccon Lorenzo, Carnovalini Filippo},
+					    xmin=0,
+					    xmax=35,
+					    area legend,
+					    y=6mm,
+					    enlarge y limits={abs=0.625},
+					]
+					\addplot[blu,fill=blu] coordinates
+					{(0,0) (0,1) (1,2) (0,3) (0,4) (0,5) (8,6)};
+					\addplot[rosso,fill=rosso] coordinates
+					{(0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6)};
+					\addplot[giallo,fill=giallo] coordinates
+					{(8,0) (8,1) (0,2) (9,3) (0,4) (10,5) (0,6)};
+					\addplot[viola,fill=viola] coordinates
+					{(0,0) (0,1) (0,2) (0,3) (7,4) (0,5) (0,6)};
+					\addplot[verde,fill=verde] coordinates
+					{(12,0) (8,1) (7,2) (5,3) (15,4) (0,5) (10,6)};
+					\addplot[rame,fill=rame] coordinates
+					{(0,0) (0,1) (11,2) (11,3) (0,4) (10,5) (0,6)};
+					
+					\legend{Responsabile,Analista,Progettista,Amministratore,Programmatore,Verificatore}
+					\end{axis}  
+				\end{tikzpicture}
+			\vspace{0.2cm}	
+			\caption{Progettazione di dettaglio e codifica dei requisiti desiderabili - Riepilogo}
+			\end{figure}
+		% subsubsection suddivisione_del_lavoro (end)
+		
+		\subsubsection{Prospetto economico} % (fold)
+		\label{ssub:prospetto_economico}
+		In questa fase il costo per ogni ruolo è il seguente: \\
+				\begin{table}[!ht]
+					\begin{center}
+						\begin{tabularx}{0.65\textwidth}{|l|l|X|}
+							\hline
+							\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo} \\
+							\hline
+							\roleProjectManager & 9 & \euro{} 270,00 \\
+							\hline
+							\roleAnalyst & 0 & \euro{} 0 \\
+							\hline
+							\roleDesigner & 35 & \euro{} 770,00 \\
+							\hline
+							\roleAdministrator & 7 & \euro{} 140,00 \\
+							\hline
+							\roleProgrammer & 41 & \euro{} 615,00 \\
+							\hline
+							\roleVerifier & 48 & \euro{} 720,00 \\
+							\hline
+							\textbf{Totale} & \textbf{139} & \textbf{\euro{} 2515,00} \\
+							\hline
+						\end{tabularx}
+					\end{center}
+				\caption{Progettazione di dettaglio e codifica dei requisiti desiderabili - Costo per ruolo}
+				\end{table}
+
+				\noindent
+				I valori delle ore sono riassunte nel seguente grafico a torta che espone l’incidenza delle ore per ruolo sul totale.
+				\begin{center}
+					\begin{figure}[htbp]
+						\begin{tikzpicture}
+						[
+						    pie chart,
+						    slice type={pm}{blu},
+						    slice type={an}{rosso},
+						    slice type={pt}{giallo},
+						    slice type={am}{viola},
+						    slice type={pr}{verde},
+							slice type={ve}{rame},
+						    pie values/.style={font={\normalsize}},
+						    scale=2.5
+						]
+
+						    \pie{Ore per ruolo sul totale}{6/pm,25/pt,5/am,29/pr,35/ve}
+
+						    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+						\end{tikzpicture}
+					\vspace{0.8cm}
+					\caption{Progettazione di dettaglio e codifica dei requisiti desiderabili - Ore per ruolo sul totale}
+					\end{figure}
+				\end{center}
+
+				\noindent
+				I valori dei costi sono riassunti nel seguente grafico a torta che espone l’incidenza dei costi per ruolo sul totale.
+				\begin{center}
+					\begin{figure}[htbp]
+						\begin{tikzpicture}
+						[
+						    pie chart,
+						    slice type={pm}{blu},
+						    slice type={an}{rosso},
+						    slice type={pt}{giallo},
+						    slice type={am}{viola},
+						    slice type={pr}{verde},
+							slice type={ve}{rame},
+						    pie values/.style={font={\normalsize}},
+						    scale=2.5
+						]
+
+						    \pie{Costi per ruolo sul totale}{11/pm,30/pt,6/am,24/pr,29/ve}
+
+						    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+						\end{tikzpicture}
+					\vspace{0.8cm}
+					\caption{Progettazione di dettaglio e codifica dei requisiti desiderabili - Costi per ruolo sul totale}
+					\end{figure}
+				\end{center}
+		% subsubsection prospetto_economico (end)
+		\noindent
+		\textbf{Note:} in questa fase le ore sono abbastanza equamente suddivise. Solamente per il componente Santacatterina Luca ne sono state allocate meno in quanto arriva da una fase più carica rispetto ad altri.
+	% subsection progettazione_di_dettaglio_e_codifica_dei_requisiti_desiderabili (end)
+	
+	\newpage
+	\subsection{Progettazione di dettaglio e codifica dei requisiti opzionali} % (fold)
+	\label{sub:progettazione_di_dettaglio_e_codifica_dei_requisiti_opzionali}
+		\subsubsection{Suddivisione del lavoro} % (fold)
+		\label{ssub:suddivisione_del_lavoro}
+		Nella fase di \textbf{Progettazione di dettaglio e codifica dei requisiti opzionali} ciascun componente rivestirà i seguenti ruoli: \\
+			\begin{table}[!ht]
+				\begin{center}
+					\begin{tabularx}{0.9\textwidth}{|l|l|l|l|l|l|l|X|}
+						\hline
+						\textbf{Nome membro} & \textbf{PM} & \textbf{An} & \textbf{Pt} & \textbf{Am} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+						\hline
+						Carnovalini Filippo & 0 & 0 & 7 & 0 & 10 & 0 & \textbf{17} \\
+						\hline
+						Ceccon Lorenzo & 0 & 0 & 0 & 0 & 10 & 7 & \textbf{17} \\
+						\hline
+						Cusinato Giacomo & 0 & 0 & 5 & 0 & 0 & 14 & \textbf{19} \\
+						\hline
+						Faccin Nicola & 1 & 0 & 0 & 0 & 5 & 6 & \textbf{12} \\
+						\hline
+						Roetta Marco & 7 & 0 & 0 & 0 & 0 & 7 & \textbf{14} \\
+						\hline
+						Santacatterina Luca & 0 & 0 & 10 & 0 & 10 & 0 & \textbf{20} \\
+						\hline
+						Tesser Paolo & 0 & 0 & 0 & 5 & 0 & 9 & \textbf{14} \\
+						\hline		
+					\end{tabularx}
+				\end{center}
+			\caption{Progettazione di dettaglio e codifica dei requisiti opzionali - Ore rendicontate}
+			\end{table}
+			
+			\begin{figure}[htbp]
+			
+				\begin{tikzpicture}
+					\begin{axis}[
+					    xbar stacked,
+					    legend style={
+					    legend columns=6,
+					        at={(xticklabel cs:0.5)},
+					        anchor=north,
+					        draw=none
+					    },
+					    ytick=data,
+					    axis y line*=none,
+					    axis x line*=bottom,
+					    tick label style={font=\footnotesize},
+					    legend style={font=\footnotesize},
+					    label style={font=\footnotesize},
+					    xtick={0,5,10,15,20,25,30},
+					    width=.9\textwidth,
+					    bar width=4mm,
+					    xlabel={Time in ms},
+					    yticklabels={Tesser Paolo, Santacatterina Luca, Roetta Marco, Faccin Nicola, Cusinato Giacomo, Ceccon Lorenzo, Carnovalini Filippo},
+					    xmin=0,
+					    xmax=35,
+					    area legend,
+					    y=6mm,
+					    enlarge y limits={abs=0.625},
+					]
+					\addplot[blu,fill=blu] coordinates
+					{(0,0) (0,1) (7,2) (1,3) (0,4) (0,5) (0,6)};
+					\addplot[rosso,fill=rosso] coordinates
+					{(0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6)};
+					\addplot[giallo,fill=giallo] coordinates
+					{(5,0) (10,1) (0,2) (0,3) (5,4) (0,5) (7,6)};
+					\addplot[viola,fill=viola] coordinates
+					{(0,0) (0,1) (0,2) (5,3) (0,4) (0,5) (0,6)};
+					\addplot[verde,fill=verde] coordinates
+					{(0,0) (10,1) (0,2) (0,3) (0,4) (10,5) (10,6)};
+					\addplot[rame,fill=rame] coordinates
+					{(9,0) (0,1) (7,2) (6,3) (14,4) (7,5) (0,6)};
+					
+					\legend{Responsabile,Analista,Progettista,Amministratore,Programmatore,Verificatore}
+					\end{axis}  
+				\end{tikzpicture}
+			\vspace{0.2cm}	
+			\caption{Progettazione di dettaglio e codifica dei requisiti opzionali - Riepilogo}
+			\end{figure}
+		% subsubsection suddivisione_del_lavoro (end)
+		
+		\subsubsection{Prospetto economico} % (fold)
+		\label{ssub:prospetto_economico}
+		In questa fase il costo per ogni ruolo è il seguente: \\
+				\begin{table}[!ht]
+					\begin{center}
+						\begin{tabularx}{0.65\textwidth}{|l|l|X|}
+							\hline
+							\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo} \\
+							\hline
+							\roleProjectManager & 8 & \euro{} 240,00 \\
+							\hline
+							\roleAnalyst & 0 & \euro{} 0,00 \\
+							\hline
+							\roleDesigner & 27 & \euro{} 594,00 \\
+							\hline
+							\roleAdministrator & 5 & \euro{} 100,00 \\
+							\hline
+							\roleProgrammer & 39 & \euro{} 585,00 \\
+							\hline
+							\roleVerifier & 34 & \euro{} 510,00 \\
+							\hline
+							\textbf{Totale} & \textbf{113} & \textbf{\euro{} 2029,00} \\
+							\hline
+						\end{tabularx}
+					\end{center}
+				\caption{Progettazione di dettaglio e codifica dei requisiti opzionali - Costo per ruolo}
+				\end{table}
+
+				\noindent
+				I valori delle ore sono riassunte nel seguente grafico a torta che espone l’incidenza delle ore per ruolo sul totale.
+				\begin{center}
+					\begin{figure}[htbp]
+						\begin{tikzpicture}
+						[
+						    pie chart,
+						    slice type={pm}{blu},
+						    slice type={an}{rosso},
+						    slice type={pt}{giallo},
+						    slice type={am}{viola},
+						    slice type={pr}{verde},
+							slice type={ve}{rame},
+						    pie values/.style={font={\normalsize}},
+						    scale=2.5
+						]
+
+						    \pie{Ore per ruolo sul totale}{7/pm,24/pt,4/am,35/pr,30/ve}
+
+						    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+						\end{tikzpicture}
+					\vspace{0.8cm}
+					\caption{Progettazione di dettaglio e codifica dei requisiti opzionali - Ore per ruolo sul totale}
+					\end{figure}
+				\end{center}
+
+				\noindent
+				I valori dei costi sono riassunti nel seguente grafico a torta che espone l’incidenza dei costi per ruolo sul totale.
+				\begin{center}
+					\begin{figure}[htbp]
+						\begin{tikzpicture}
+						[
+						    pie chart,
+						    slice type={pm}{blu},
+						    slice type={an}{rosso},
+						    slice type={pt}{giallo},
+						    slice type={am}{viola},
+						    slice type={pr}{verde},
+							slice type={ve}{rame},
+						    pie values/.style={font={\normalsize}},
+						    scale=2.5
+						]
+
+						    \pie{Costi per ruolo sul totale}{12/pm,29/pt,5/am,29/pr,25/ve}
+
+						    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+						\end{tikzpicture}
+					\vspace{0.8cm}
+					\caption{Progettazione di dettaglio e codifica dei requisiti opzionali - Costi per ruolo sul totale}
+					\end{figure}
+				\end{center}
+		% subsubsection prospetto_economico (end)
+		\noindent
+		\textbf{Note:} in questa fase le ore non sono equamente distribuite, ma questo è dovuto al fatto che i membri con più attività allocate sono quelli che devono recuperare dalle fasi precedenti. \\
+		Confrontandosi con loro il \roleProjectManager{} non ha riscontrato avversità in ciò.
+	% subsection progettazione_di_dettaglio_e_codifica_dei_requisiti_opzionali (end)
+	
+	\newpage
+	\subsection{Validazione} % (fold)
+	\label{sub:validazione}
+		\subsubsection{Suddivisione del lavoro} % (fold)
+		\label{ssub:suddivisione_del_lavoro}
+		Nella fase di \textbf{Validazione\gloss{}} ciascun componente rivestirà i seguenti ruoli: \\
+			\begin{table}[!ht]
+				\begin{center}
+					\begin{tabularx}{0.9\textwidth}{|l|l|l|l|l|l|l|X|}
+						\hline
+						\textbf{Nome membro} & \textbf{PM} & \textbf{An} & \textbf{Pt} & \textbf{Am} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+						\hline
+						Carnovalini Filippo & 0 & 0 & 5 & 0 & 5 & 9 & \textbf{19} \\
+						\hline
+						Ceccon Lorenzo & 1 & 0 & 0 & 5 & 11 & 0 & \textbf{17} \\
+						\hline
+						Cusinato Giacomo & 0 & 0 & 7 & 0 & 7 & 0 & \textbf{14} \\
+						\hline
+						Faccin Nicola & 5 & 0 & 0 & 0 & 0 & 10 & \textbf{15} \\
+						\hline
+						Roetta Marco & 0 & 0 & 0 & 0 & 0 & 10 & \textbf{10} \\
+						\hline
+						Santacatterina Luca & 0 & 0 & 0 & 0 & 0 & 12 & \textbf{12} \\
+						\hline
+						Tesser Paolo & 0 & 0 & 0 & 0 & 0 & 12 & \textbf{12} \\
+						\hline	
+					\end{tabularx}
+				\end{center}
+			\caption{Validazione - Ore rendicontate}
+			\end{table}
+			
+			\begin{figure}[htbp]
+			
+				\begin{tikzpicture}
+					\begin{axis}[
+					    xbar stacked,
+					    legend style={
+					    legend columns=6,
+					        at={(xticklabel cs:0.5)},
+					        anchor=north,
+					        draw=none
+					    },
+					    ytick=data,
+					    axis y line*=none,
+					    axis x line*=bottom,
+					    tick label style={font=\footnotesize},
+					    legend style={font=\footnotesize},
+					    label style={font=\footnotesize},
+					    xtick={0,5,10,15,20,25,30},
+					    width=.9\textwidth,
+					    bar width=4mm,
+					    xlabel={Time in ms},
+					    yticklabels={Tesser Paolo, Santacatterina Luca, Roetta Marco, Faccin Nicola, Cusinato Giacomo, Ceccon Lorenzo, Carnovalini Filippo},
+					    xmin=0,
+					    xmax=30,
+					    area legend,
+					    y=6mm,
+					    enlarge y limits={abs=0.625},
+					]
+					\addplot[blu,fill=blu] coordinates
+					{(0,0) (0,1) (0,2) (5,3) (0,4) (1,5) (0,6)};
+					\addplot[rosso,fill=rosso] coordinates
+					{(0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6)};
+					\addplot[giallo,fill=giallo] coordinates
+					{(0,0) (0,1) (0,2) (0,3) (7,4) (0,5) (5,6)};
+					\addplot[viola,fill=viola] coordinates
+					{(0,0) (0,1) (0,2) (0,3) (0,4) (5,5) (0,6)};
+					\addplot[verde,fill=verde] coordinates
+					{(0,0) (0,1) (0,2) (0,3) (7,4) (11,5) (5,6)};
+					\addplot[rame,fill=rame] coordinates
+					{(12,0) (12,1) (10,2) (10,3) (0,4) (0,5) (9,6)};
+					
+					\legend{Responsabile,Analista,Progettista,Amministratore,Programmatore,Verificatore}
+					\end{axis}  
+				\end{tikzpicture}
+			\vspace{0.2cm}	
+			\caption{Validazione - Riepilogo}
+			\end{figure}
+		% subsubsection suddivisione_del_lavoro (end)
+		
+		\subsubsection{Prospetto economico} % (fold)
+		\label{ssub:prospetto_economico}
+		In questa fase il costo per ogni ruolo è il seguente: \\
+				\begin{table}[!ht]
+					\begin{center}
+						\begin{tabularx}{0.65\textwidth}{|l|l|X|}
+							\hline
+							\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo} \\
+							\hline
+							\roleProjectManager & 6 & \euro{} 180,00 \\
+							\hline
+							\roleAnalyst & 0 & \euro{} 0,00 \\
+							\hline
+							\roleDesigner & 12 & \euro{} 264,00 \\
+							\hline
+							\roleAdministrator & 5 & \euro{} 100,00 \\
+							\hline
+							\roleProgrammer & 23 & \euro{} 345,00 \\
+							\hline
+							\roleVerifier & 53 & \euro{} 795,00 \\
+							\hline
+							\textbf{Totale} & \textbf{99} & \textbf{\euro{} 1684,00} \\
+							\hline
+						\end{tabularx}
+					\end{center}
+				\caption{Validazione - Costo per ruolo}
+				\end{table}
+
+				\noindent
+				I valori delle ore sono riassunte nel seguente grafico a torta che espone l’incidenza delle ore per ruolo sul totale.
+				\begin{center}
+					\begin{figure}[htbp]
+						\begin{tikzpicture}
+						[
+						    pie chart,
+						    slice type={pm}{blu},
+						    slice type={an}{rosso},
+						    slice type={pt}{giallo},
+						    slice type={am}{viola},
+						    slice type={pr}{verde},
+							slice type={ve}{rame},
+						    pie values/.style={font={\normalsize}},
+						    scale=2.5
+						]
+
+						    \pie{Ore per ruolo sul totale}{6/pm,12/pt,5/am,23/pr,54/ve}
+
+						    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+						\end{tikzpicture}
+					\vspace{0.8cm}
+					\caption{Validazione - Ore per ruolo sul totale}
+					\end{figure}
+				\end{center}
+
+				\noindent
+				I valori dei costi sono riassunti nel seguente grafico a torta che espone l’incidenza dei costi per ruolo sul totale.
+				\begin{center}
+					\begin{figure}[htbp]
+						\begin{tikzpicture}
+						[
+						    pie chart,
+						    slice type={pm}{blu},
+						    slice type={an}{rosso},
+						    slice type={pt}{giallo},
+						    slice type={am}{viola},
+						    slice type={pr}{verde},
+							slice type={ve}{rame},
+						    pie values/.style={font={\normalsize}},
+						    scale=2.5
+						]
+
+						    \pie{Costi per ruolo sul totale}{11/pm,16/pt,6/am,20/pr,47/ve}
+
+						    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+						\end{tikzpicture}
+					\vspace{0.8cm}
+					\caption{Validazione - Costi per ruolo sul totale}
+					\end{figure}
+				\end{center}
+		% subsubsection prospetto_economico (end)
+		\noindent
+		\textbf{Note:} in questa fase le ore sono abbastanza equamente suddivise. In particolare però per i membri Carnovalini Filippo e Cusinato Giacomo ne sono state un po' di più per compensare le ore mancanti a raggiungere una equa suddivisione con gli altri componenti nel complessivo del progetto. \\
+		Confrontandosi con loro il \roleProjectManager{} non ha riscontrato avversità in ciò.
+	% subsection validazione\gloss{} (end)
+	
+	\newpage
+	\subsection{Riepilogo ore e costi} % (fold)
+	\label{sub:riepilogo_ore_e_costi}
+			
+		\subsubsection{Ore totali non rendicontate} % (fold)
+		\label{ssub:ore_totali_non_rendicontate}
+			\paragraph{Suddivisione del lavoro} % (fold)
+			\label{par:suddivisione_del_lavoro}
+				\begin{table}[!ht]
+					\begin{center}
+						\begin{tabularx}{0.9\textwidth}{|l|l|l|l|l|l|l|X|}
+							\hline
+							\textbf{Nome membro} & \textbf{PM} & \textbf{An} & \textbf{Pt} & \textbf{Am} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+							\hline
+							Carnovalini Filippo & 0 & 31 & 0 & 0 & 0 & 15 & \textbf{46} \\
+							\hline
+							Ceccon Lorenzo & 6 & 19 & 0 & 6 & 0 & 20 & \textbf{51} \\
+							\hline
+							Cusinato Giacomo & 2 & 25 & 0 & 0 & 0 & 15 & \textbf{42} \\
+							\hline
+							Faccin Nicola & 0 & 12 & 0 & 4 & 0 & 30 & \textbf{46} \\
+							\hline
+							Roetta Marco & 0 & 32 & 0 & 15 & 0 & 7 & \textbf{54} \\
+							\hline
+							Santacatterina Luca & 2 & 12 & 0 & 25 & 0 & 10 & \textbf{49} \\
+							\hline
+							Tesser Paolo & 20 & 11 & 0 & 13 & 0 & 7 & \textbf{51} \\
+							\hline	
+						\end{tabularx}
+					\end{center}
+				\caption{Ore totali non rendicontate - Suddivisione delle ore di lavoro}
+				\end{table}
+				
+				\begin{figure}[htbp]
+
+					\begin{tikzpicture}
+						\begin{axis}[
+						    xbar stacked,
+						    legend style={
+						    legend columns=6,
+						        at={(xticklabel cs:0.5)},
+						        anchor=north,
+						        draw=none
+						    },
+						    ytick=data,
+						    axis y line*=none,
+						    axis x line*=bottom,
+						    tick label style={font=\footnotesize},
+						    legend style={font=\footnotesize},
+						    label style={font=\footnotesize},
+						    xtick={0,5,10,15,20,25,30},
+						    width=.9\textwidth,
+						    bar width=4mm,
+						    xlabel={Time in ms},
+						    yticklabels={Tesser Paolo, Santacatterina Luca, Roetta Marco, Faccin Nicola, Cusinato Giacomo, Ceccon Lorenzo, Carnovalini Filippo},
+						    xmin=0,
+						    xmax=50,
+						    area legend,
+						    y=6mm,
+						    enlarge y limits={abs=0.625},
+						]
+						\addplot[blu,fill=blu] coordinates
+						{(20,0) (2,1) (0,2) (0,3) (2,4) (6,5) (0,6)};
+						\addplot[rosso,fill=rosso] coordinates
+						{(11,0) (12,1) (32,2) (12,3) (25,4) (19,5) (31,6)};
+						\addplot[giallo,fill=giallo] coordinates
+						{(0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6)};
+						\addplot[viola,fill=viola] coordinates
+						{(13,0) (25,1) (15,2) (4,3) (0,4) (6,5) (0,6)};
+						\addplot[verde,fill=verde] coordinates
+						{(0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6)};
+						\addplot[rame,fill=rame] coordinates
+						{(7,0) (10,1) (7,2) (30,3) (15,4) (20,5) (15,6)};
+
+						\legend{Responsabile,Analista,Progettista,Amministratore,Programmatore,Verificatore}
+						\end{axis}  
+					\end{tikzpicture}
+				\vspace{0.2cm}	
+				\caption{Ore totali non rendicontate - Riepilogo}
+				\end{figure}
+
+			% paragraph suddivisione_del_lavoro (end)
+			
+			\paragraph{Prospetto economico} % (fold)
+			\label{par:prospetto_economico}
+				\begin{table}[!ht]
+					\begin{center}
+						\begin{tabularx}{0.65\textwidth}{|l|l|X|}
+							\hline
+							\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo} \\
+							\hline
+							\roleProjectManager & 30 & \euro{} 900,00 \\
+							\hline
+							\roleAnalyst & 142 & \euro{} 3550,00 \\
+							\hline
+							\roleDesigner & 0 & \euro{} 0,00 \\
+							\hline
+							\roleAdministrator & 63 & \euro{} 1260,00 \\
+							\hline
+							\roleProgrammer & 0 & \euro{} 0,00 \\
+							\hline
+							\roleVerifier & 104 & \euro{} 1560,00 \\
+							\hline
+							\textbf{Totale} & \textbf{339} & \textbf{\euro{} 7270,00} \\
+							\hline
+						\end{tabularx}
+					\end{center}
+				\caption{Ore totali non rendicontate - Costo per ruolo}
+				\end{table}
+				
+				\noindent
+				I valori delle ore sono riassunte nel seguente grafico a torta che espone l’incidenza delle ore per ruolo sul totale.
+				\begin{center}
+					\begin{figure}[htbp]
+						\begin{tikzpicture}
+						[
+						    pie chart,
+						    slice type={pm}{blu},
+						    slice type={an}{rosso},
+						    slice type={pt}{giallo},
+						    slice type={am}{viola},
+						    slice type={pr}{verde},
+							slice type={ve}{rame},
+						    pie values/.style={font={\normalsize}},
+						    scale=2.5
+						]
+
+						    \pie{Ore per ruolo sul totale}{9/pm,41/an,19/am,31/ve}
+
+						    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+						\end{tikzpicture}
+					\vspace{0.8cm}
+					\caption{Ore totali non rendicontate - Ore per ruolo sul totale}
+					\end{figure}
+				\end{center}
+
+				\noindent
+				I valori dei costi sono riassunti nel seguente grafico a torta che espone l’incidenza dei costi per ruolo sul totale.
+				\begin{center}
+					\begin{figure}[htbp]
+						\begin{tikzpicture}
+						[
+						    pie chart,
+						    slice type={pm}{blu},
+						    slice type={an}{rosso},
+						    slice type={pt}{giallo},
+						    slice type={am}{viola},
+						    slice type={pr}{verde},
+							slice type={ve}{rame},
+						    pie values/.style={font={\normalsize}},
+						    scale=2.5
+						]
+
+						    \pie{Costi per ruolo sul totale}{12/pm,49/an,17/am,22/ve}
+
+						    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+						\end{tikzpicture}
+					\vspace{0.8cm}
+					\caption{Ore totali non rendicontate - Costi per ruolo sul totale}
+					\end{figure}
+				\end{center}
+			% paragraph prospetto_economico (end)
+			
+		% subsubsection ore_totali_non_rendicontate (end)
+		
+		\subsubsection{Ore totali di investimento rendicontate} % (fold)
+		\label{ssub:ore_totali_di_investimento}
+			\paragraph{Suddivisione del lavoro} % (fold)
+			\label{par:suddivisione_del_lavoro}
+				\begin{table}[!ht]
+					\begin{center}
+						\begin{tabularx}{0.9\textwidth}{|l|l|l|l|l|l|l|X|}
+							\hline
+							\textbf{Nome membro} & \textbf{PM} & \textbf{An} & \textbf{Pt} & \textbf{Am} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+							\hline
+							Carnovalini Filippo & 8 & 8 & 29 & 8 & 25 & 26 & \textbf{104} \\
+							\hline
+							Ceccon Lorenzo & 3 & 14 & 25 & 5 & 31 & 27 & \textbf{105} \\
+							\hline
+							Cusinato Giacomo & 5 & 10 & 31 & 7 & 22 & 30 & \textbf{105} \\
+							\hline
+							Faccin Nicola & 6 & 10 & 28 & 5 & 22 & 33 & \textbf{104} \\
+							\hline
+							Roetta Marco & 8 & 0 & 29 & 7 & 23 & 37 & \textbf{104} \\
+							\hline
+							Santacatterina Luca & 6 & 9 & 26 & 0 & 25 & 39 & \textbf{105} \\
+							\hline
+							Tesser Paolo & 5 & 8 & 30 & 0 & 24 & 38 & \textbf{105} \\
+							\hline	
+						\end{tabularx}
+					\end{center}
+				\caption{Ore totali di investimento rendicontate - Suddivisione delle ore di lavoro}
+				\end{table}
+				
+				
+				\begin{figure}[htbp]
+
+					\begin{tikzpicture}
+						\begin{axis}[
+						    xbar stacked,
+						    legend style={
+						    legend columns=6,
+						        at={(xticklabel cs:0.5)},
+						        anchor=north,
+						        draw=none
+						    },
+						    ytick=data,
+						    axis y line*=none,
+						    axis x line*=bottom,
+						    tick label style={font=\footnotesize},
+						    legend style={font=\footnotesize},
+						    label style={font=\footnotesize},
+						    xtick={0,10,20,35,40,50,60,70,80,90,100,110},
+						    width=.9\textwidth,
+						    bar width=4mm,
+						    xlabel={Time in ms},
+						    yticklabels={Tesser Paolo, Santacatterina Luca, Roetta Marco, Faccin Nicola, Cusinato Giacomo, Ceccon Lorenzo, Carnovalini Filippo},
+						    xmin=0,
+						    xmax=110,
+						    area legend,
+						    y=6mm,
+						    enlarge y limits={abs=0.625},
+						]
+						\addplot[blu,fill=blu] coordinates
+						{(5,0) (6,1) (8,2) (6,3) (5,4) (3,5) (8,6)};
+						\addplot[rosso,fill=rosso] coordinates
+						{(8,0) (9,1) (0,2) (10,3) (10,4) (14,5) (8,6)};
+						\addplot[giallo,fill=giallo] coordinates
+						{(30,0) (26,1) (29,2) (28,3) (31,4) (25,5) (29,6)};
+						\addplot[viola,fill=viola] coordinates
+						{(0,0) (0,1) (7,2) (5,3) (7,4) (5,5) (8,6)};
+						\addplot[verde,fill=verde] coordinates
+						{(24,0) (25,1) (23,2) (22,3) (22,4) (31,5) (25,6)};
+						\addplot[rame,fill=rame] coordinates
+						{(38,0) (39,1) (37,2) (33,3) (30,4) (27,5) (26,6)};
+
+						\legend{Responsabile,Analista,Progettista,Amministratore,Programmatore,Verificatore}
+						\end{axis}  
+					\end{tikzpicture}
+				\vspace{0.2cm}	
+				\caption{Ore totali di investimento rendicontate - Riepilogo}
+				\end{figure}
+			% paragraph suddivisione_del_lavoro (end)
+			
+			\paragraph{Prospetto economico} % (fold)
+			\label{par:prospetto_economico}
+				\begin{table}[!ht]
+					\begin{center}
+						\begin{tabularx}{0.65\textwidth}{|l|l|X|}
+							\hline
+							\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo} \\
+							\hline
+							\roleProjectManager & 41 & \euro{} 1230,00 \\
+							\hline
+							\roleAnalyst & 59 & \euro{} 1475,00 \\
+							\hline
+							\roleDesigner & 198 & \euro{} 4356,00 \\
+							\hline
+							\roleAdministrator & 32 & \euro{} 640,00 \\
+							\hline
+							\roleProgrammer & 172 & \euro{} 2580,00 \\
+							\hline
+							\roleVerifier & 230 & \euro{} 3450,00 \\
+							\hline
+							\textbf{Totale} & \textbf{732} & \textbf{\euro{} 13731,00} \\
+							\hline
+						\end{tabularx}
+					\end{center}
+				\caption{Ore totali di investimento rendicontate - Costo per ruolo}
+				\end{table}
+				
+				\noindent
+				I valori delle ore sono riassunte nel seguente grafico a torta che espone l’incidenza delle ore per ruolo sul totale.
+				\begin{center}
+					\begin{figure}[htbp]
+						\begin{tikzpicture}
+						[
+						    pie chart,
+						    slice type={pm}{blu},
+						    slice type={an}{rosso},
+						    slice type={pt}{giallo},
+						    slice type={am}{viola},
+						    slice type={pr}{verde},
+							slice type={ve}{rame},
+						    pie values/.style={font={\normalsize}},
+						    scale=2.5
+						]
+
+						    \pie{Ore per ruolo sul totale}{6/pm,8/an,27/pt,4/am,23/pr,32/ve}
+
+						    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+						\end{tikzpicture}
+					\vspace{0.8cm}
+					\caption{Ore totali di investimento rendicontate - Ore per ruolo sul totale}
+					\end{figure}
+				\end{center}
+
+				\noindent
+				I valori dei costi sono riassunti nel seguente grafico a torta che espone l’incidenza dei costi per ruolo sul totale.
+				\begin{center}
+					\begin{figure}[htbp]
+						\begin{tikzpicture}
+						[
+						    pie chart,
+						    slice type={pm}{blu},
+						    slice type={an}{rosso},
+						    slice type={pt}{giallo},
+						    slice type={am}{viola},
+						    slice type={pr}{verde},
+							slice type={ve}{rame},
+						    pie values/.style={font={\normalsize}},
+						    scale=2.5
+						]
+
+						    \pie{Costi per ruolo sul totale}{9/pm,11/an,32/pt,5/am,19/pr,25/ve}
+
+						    \legend[shift={(2cm,1cm)}]{{Responsabile}/pm, {Analista}/an, {Progettista}/pt, {Amministratore}/am, {Programmatore}/pr, {Verificatore}/ve}
+
+						\end{tikzpicture}
+					\vspace{0.8cm}
+					\caption{Ore totali di investimento rendicontate - Costi per ruolo sul totale}
+					\end{figure}
+				\end{center}
+			% paragraph prospetto_economico (end)
+			
+		% subsubsection ore_totali_di_investimento (end)
+		
+		\subsubsection{Conclusioni} % (fold)
+		\label{ssub:conclusioni}
+		Il costo totale del progetto preventivato è di \euro{} 13731,00.
+		% subsubsection conclusioni (end)
+		
+	% subsection riepilogo_ore_e_costi (end)
+	
+% section preventivos (end)

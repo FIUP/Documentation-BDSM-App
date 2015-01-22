@@ -1,0 +1,349 @@
+% =================================================================================================
+% File:			requisiti.tex
+% Description:	Definisce il capitolo che contiene i requisiti in forma tabellare
+% Created:		2014/12/10
+% Author:		Roetta Marco
+% Email:		roetta.marco@mashup-unipd.it
+% =================================================================================================
+% Modification History:
+% Version		Modifier Date		Change											Author
+% 0.0.1 		2014/12/10 			aggiunta sezione e iniziata stesura				Roetta Marco
+% =================================================================================================
+% Version		Modifier Date		Change											Author
+% 0.0.2 		2015/01/12 			aggiunte tabelle								Carnovalini Filippo
+% =================================================================================================
+% Version		Modifier Date		Change											Author
+% 0.0.3 		2015/01/16 			requisiti prestazionali di qualità e di vincolo	Carnovalini Filippo
+% =================================================================================================
+% Version		Modifier Date		Change											Author
+% 0.0.4 		2015/01/16 			aggiunti requisiti funzionali, fixing generale 	Cusinato Giacomo
+% =================================================================================================
+% Version		Modifier Date		Change											Author
+% 0.0.5 		2015/01/17 			requisiti tratti dagli UC1.2, 1.5 e 1.6		Carnovalini Filippo
+% =================================================================================================
+% Version		Modifier Date		Change											Author
+% 0.0.6 		2015/01/18 			requisiti tratti dagli UC1.3 e 1.7				Carnovalini Filippo
+% =================================================================================================
+% Version		Modifier Date		Change											Author
+% 0.0.7 		2015/01/18 			aggiunti requsiti funzionali e di vincolo		Cusinato Giacomo
+% =================================================================================================
+% Version		Modifier Date		Change											Author
+% 1.0.0 		2015/01/21 			inizio verifica documento						Faccin Nicola
+% =================================================================================================
+% CONTENUTO DEL CAPITOLO
+
+\section{Requisiti}
+
+A seguire sono riportati tutti i requisiti individuati dal gruppo. Essi sono stati ricavati dal capitolato proposto, dai casi d'uso, da necessità interne o in seguito all' incontro col proponente. Ogni requisito è identificato da un codice univoco a seconda dell'importanza, del tipo e della gerarchia a cui appartiene.
+I requisiti saranno divisi in quattro tabelle distinte a seconda della tipologia, ognuna composta da tre colonne contenenti i seguenti attributi:
+\begin{itemize}
+	\item \textbf{Requisito}: il nominativo identificativo del requisito espresso tramite il formalismo indicato a seguire.
+	\item \textbf{Descrizione}: breve descrizione del requisito.
+	\item \textbf{Fonti}: rappresentate da uno o più dei seguenti valori:
+	\begin{itemize}
+		\item \emph{Capitolato}: requisito ricavato direttamente del capitolato.
+		\item \emph{Casi d'uso}: requisito ricavato da uno o più casi d'uso. In questo caso sarà indicato il codice di quest'ultimo/i.
+		\item \emph{Interno}: requisito ricavato in seguito ad un'analisi o una necessità interna al gruppo.
+	\end{itemize}
+\end{itemize}
+
+La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
+\begin{center}
+	R[importanza][tipo][codice]
+\end{center}
+\begin{itemize}
+	\item \emph{importanza}: può assumere uno tra i seguenti valori:
+	\begin{itemize}
+		\item \emph{0}: requisito obbligatorio;
+		\item \emph{1}: requisito desiderabile;
+		\item \emph{2}: requisito opzionale;
+	\end{itemize}
+	\item \emph{tipo}: può assumere uno tra i seguenti valori:
+	\begin{itemize}
+		\item \emph{F}: requisito funzionale;
+		\item \emph{Q}: requisito di qualità;
+		\item \emph{P}: requisito prestazionale;
+		\item \emph{V}: requisito vincolo;
+	\end{itemize}
+	\item \emph{codice}: identificativo del requisito attribuito in modo gerarchico.
+\end{itemize}
+
+
+\subsection{Requisiti funzionali}
+
+\begin{center}
+
+	\def\arraystretch{1.5}
+	\bgroup
+	\begin{longtable}{| p{2cm} | p{8cm} | p{2cm} |}
+
+		\hline
+		\textbf{Requisito} & \textbf{Descrizione} & \textbf{Fonti} \\
+		\hline
+
+		R0F1  &  L'utente non autenticato può effettuare la registrazione al servizio  &  UC1.8 \\
+		\hline
+		R0F1.1  &  La registrazione richiede l'inserimento dello username  &  UC1.8.1 \\
+		\hline
+		R0F1.1.1  &  Lo username è univoco in tutto il sistema  &  Interno \\
+		\hline
+		R0F1.1.2  &  Lo username è una stringa contetente esclusivamente caratteri alfanumerici e underscore (\_)  &  Interno \\
+		\hline
+		R0F1.1.3  &  La lunghezza dello username è contenuta tra i 4 ed i 30 caratteri  &  Interno \\
+		\hline
+		R0F1.2  &  La registrazione richiede l'inserimento di un indirizzo e-mail valido &  UC1.8.2 \\
+		\hline
+		R0F1.3  &  La registrazione richiede l'inserimento della password  &  UC1.8.3 \\
+		\hline
+		R0F1.3.1  &  La password non può contenere lo username  &  Interno \\
+		\hline
+		R0F1.3.2  &  La password è una striga contetente esclusivamente caratteri alfanumerici e speciali ( ? ! \$ + - / . , \textless \textgreater $@$ \textasciitilde \^{} \_ )  &  Interno \\
+		\hline
+		R0F1.3.3  &  La lunghezza minima della password è di 6 caratteri  &  Interno \\
+		\hline
+		R0F1.4  &  La registrazione richiede la conferma della password  &  Interno \\
+		\hline
+		R0F1.4.1  &  La password di conferma deve coincidere con la password inserita precedentemente  &  Interno \\
+		\hline
+		R0F1.5  &  Il sistema avverte l'utente in fase di compilazione della form nel caso i dati inseriti in quel momento non risultino conformi alle norme del sistema  &  Interno \\
+		\hline
+		R0F1.6  &  L'utente non autenticato può confermare la registrazione tramite l'apposito pulsante  &  UC1.8.4 \\
+		\hline
+		R0F1.7  &  Il sistema visualizza un messaggio di errore nel caso i dati inseriti risultino non conformi alle norme imposte dal sistema  &  UC1.8.5 \\
+		\hline
+		R0F1.8  &  Nel caso la registrazione sia andata a buon fine, il sistema aggiunge i dati dell'utente nel rispettivo database  &  Interno \\
+		\hline
+		R1F1.9  &  Nel caso la registrazione sia andata a buon fine, viene inviata una e-mail di conferma all'indirizzo inserito dall'utente  &  Interno \\
+		\hline
+		R0F2  &  L'utente non autenticato può effettuare il login tramite l'apposto form di login  &  UC1.1 \\
+		\hline
+		R0F2.1  &  Il login richiede l'inserimento dello username  &  UC1.1.1 \\
+		\hline
+		R0F2.2  &  Il login richiede l'inserimento della password  &  UC1.1.2 \\
+		\hline
+		R0F2.3  &  L'utente può completare il login tramite l'apposito pulsante di conferma  &  UC1.1.3 \\
+		\hline
+		R0F2.4  &  Il sistema visualizza un messaggio di errore nel caso i dati inserito dall'utente risultino errati  &  UC1.1.4 \\
+		\hline
+		R0F2.5  &  Il sistema aggiorna la home screen permettendo all'utente autenticato di accedere alle diverse aree del del servizio  &  Interno  \\
+		\hline
+		R0F3  &  Nella home screen dell'utente autenticato è presente un pulsante per aprire il menù delle informazioni personali  &  UC1.2 \newline UC1.5 \\
+		\hline
+		R0F3.1  &  Nel menù delle informazioni personali è presente un pulsante per visualizzare i propri dati  &  UC1.2.1 \newline UC1.2.2 \\
+		\hline
+		R0F3.1.1  &  Se l'utente seleziona il pulsante di visualizzazione dei dati personali il sistema deve reperire il suo nome utente, il suo indirizzo e-mail e la data del suo ultimo accesso &  Interno \\
+		\hline
+		R0F3.1.2  &  Se l'utente seleziona il pulsante di visualizzazione dei dati personali deve aprirsi una finestra che mostra il nome utente, l'indirizzo e-mail ad esso associata e la data del suo ultimo accesso &  UC1.2.2 \\
+		\hline
+		R0F3.2  &  Nel menù delle informazioni personali è presente un pulsante per visualizzare le proprie statistiche &  UC1.2.1 \newline UC1.2.3 \\
+		\hline
+		R0F3.2.1  &  Se l'utente seleziona il pulsante di visualizzazione delle statistiche, il sistema deve reperire le informazioni necessarie  &  Interno \\
+		\hline
+		R0F3.2.2  &  Se l'utente seleziona il pulsante di visualizzazione delle statistiche deve aprirsi una finestra che mostra il numero di View attive, il numero di Recipe disponibili e il numero di accessi negli ultimi 30 giorni &  UC1.2.3 \\
+		\hline
+		R0F3.3  &  Nel menù delle informazioni personali è presente un pulsante per modificare la propria password &  UC1.5 \\
+		\hline
+		R0F3.3.1  &  Se l'utente seleziona il pulsante di cambio della password, si deve aprire una finestra con il form per l'inserimento di una nuova password e della password di conferma. Viene richiesto anche l'inserimento della vecchia password. &  UC1.5 \newline UC1.5.1 \newline UC1.5.2 \newline UC1.5.3 \\
+		\hline
+		R0F3.3.2  &  La password e la password di conferma devono essere nella forma descritta nei requisiti R0F1.3.1, R0F1.3.2, R0F1.3.3 e R0F1.4.1  &  Interno \\
+		\hline
+		R0F3.3.2.1  &  Il sistema visualizza eventuali non conformità in fase di compilazione  &  Interno \\
+		\hline
+		R0F3.3.3  &  L'utente può cliccare il tasto di conferma se ha riempito il form  &  UC1.5.4 \\
+		\hline
+		R0F3.3.3.1  &  Una volta premuto il tasto di conferma appare un messaggio di errore se la password non coincide con la conferma o se la vecchia password inserita non è corretta.  &  UC1.5.5 \\
+		\hline
+		R0F3.3.3.2  &  Una volta premuto il tasto di conferma appare un messaggio di conferma se la password è stata modificata  &  Interno \\
+		\hline
+		R0F3.3.3.3  &  Una volta premuto il tasto di conferma il sistema aggiorna la password nel Database  &  Interno \\
+		\hline
+		R0F4  &  Nella home screen è presente un pulsante di logout  &  UC1.6 \\
+		\hline
+		R0F4.1  &  Una volta premuto il tasto di logout il sistema verifica se la sessione in corso è valida o scaduta  &  Interno \\
+		\hline
+		R0F4.1.1  &  Se la sessione è valida appare un messaggio che chiede conferma del logout  &  UC1.6.1 \\
+		\hline
+		R0F4.1.1.1  &  Se il logout viene confermato la sessione viene segnata come scaduta e il sistema aggiorna la pagina per mostrare la schermata di login  &  UC1.6.2 \\
+		\hline
+		R0F4.1.2  &  Se la sessione è scaduta appare un messaggio di errore e il sistema aggiorna la pagina per mostrare la schermata di login  &  Interno \\
+		\hline
+		R0F5  &  Nella home screen dell'utente autenticato sono mostrare tutte le View che l'utente ha creato aggiornate al momento del caricamento della pagina &  UC1.3 \newline UC1.3.1 \\
+		\hline
+		R0F5.1  &  Il sistema ad ogni caricamento della pagina deve recuperare i dati relativi alle View dell'utente e generare i grafici relativi  &  Interno \\
+		\hline
+		R1F5.2  &  Nella home screen è disponibile un elenco delle View attive dell'utente  &  UC1.3.1.1 \\
+		\hline
+		R1F5.2.1  &  Cliccando su una View dall'elenco di viene portati al grafico relativo  &  Interno \\
+		\hline
+		R1F5.2.2  &  Accanto ad ogni voce dell'elenco è disponibile il tasto modifica  &  UC1.3.4 \newline UC1.3.4.1 \newline UC1.3.4.2 \newline UC1.3.6.1 \\
+		\hline
+		R1F5.2.2.1  &  Cliccando sul tasto modifica si viene reindirizzati alla pagina di modifica della View  &  Interno \\
+		\hline
+		R1F6  &  Nella pagina di modifica della View è presente il grafico relativo alla View selezionata e un form per modificare i dati  &  Interno \\
+		\hline
+		R1F6.1  &  Il sistema deve recuperare i dati relativi alla View selezionata e generare il grafico e riempire la form con i dati preesistenti  &  Interno \\
+		\hline
+		R1F6.2  &  L'utente deve poter inserire nuovi dati oppure lasciare quelli preesistenti  &  UC1.3.4.3 \\
+		\hline
+		R1F6.2.1  &  Eventuali errori sui dati inseriti vengono segnalati dal sistema in fase di compilazione del form  &  Interno \\
+		\hline
+		R1F6.3  &  L'utente deve poter confermare i dati modificati premendo il tasto di conferma  &  UC1.3.4.4 \\
+		\hline
+		R1F6.3.1  &  Se la modifica è avvenuta con successo appare un messaggio di conferma e si viene reindirizzati alla home screen  &  Interno \\
+		\hline
+		R1F6.3.1.1  &  Se la modifica è avvenuta con successo il sistema memorizza i nuovi dati nel database sovrascrivendo i vecchi  &  Interno \\
+		\hline
+		R1F6.3.2  &  Se c'è un errore sui dati o c'è un problema di connessione al server viene visualizzato un messaggio di errore e si viene riportati alla form di modifica  &  UC1.3.5 \\
+		\hline
+		R1F6.4  &  Nella pagina di modifica è presente un tasto per eliminare la View  &  UC1.3.6 \newline UC1.3.6.2 \\
+		\hline
+		R1F6.4.1  &  Se l'utente preme il pulsante di eliminazione appare un messaggio che chiede conferma dell'eliminazione  &  UC1.3.6.3 \\
+		\hline
+		R1F6.4.2  &  Se l'eliminazione viene confermata la View e i relativi dati vengono eliminati dal database  &  Interno \\
+		\hline
+		R1F6.4.3  &  Una volta eliminata una View si viene reindirizzati alla home screen  &  Interno \\
+		\hline
+		R0F7  &  Nella home screen è presente un tasto per creare una nuova View  &  UC1.3.2 \newline UC1.3.2.1 \\
+		\hline
+		R0F7.1  &  Nella pagina di creazione della View è presente un form per inserire i dati della View da generare  &  UC1.3.2.2 \\
+		\hline
+		R0F7.1.1  &  Eventuali errori sui dati inseriti vengono segnalati dal sistema in fase di compilazione del form  &  Interno \\
+		\hline
+		R0F7.2  &  L'utente deve poter confermare i dati modificati premendo il tasto di conferma  &  UC1.3.2.3 \\
+		\hline
+		R0F7.3  &  Se la modifica è avvenuta con successo appare un messaggio di conferma e si viene reindirizzati alla home screen  &  Interno \\
+		\hline
+		R0F7.3.1  &  Se la modifica è avvenuta con successo il sistema memorizza i nuovi dati nel database  &  Interno \\
+		\hline
+		R0F7.3.2  &  Se c'è un errore sui dati o c'è un problema di connessione al server viene visualizzato un messaggio di errore e si viene riportati alla form di inserimento  &  UC1.3.3 \\
+		\hline
+		R0F8  &  Un utente che possiede i privilegi di amministratore può accedere all'area riservata del sistema una volta effettuata l'autenticazione tramite il login  &  UC1.4 \newline UC1.7 \\
+		\hline
+		R0F8.1  &  Un amministratore può visualizzare tutte le Recipe memorizzate nel sistema selezionando l'apposito pulsante  &  UC1.4.1 \\
+		\hline
+		R0F8.2  &  Un amministratore può accedere al pannello per inserire una nuova Recipe  &  UC1.4.2 \newline UC1.4.2.1 \newline UC1.4.2.2  \\
+		\hline
+		R0F8.2.1  &  Il sistema richiede l'inserimento di determinati parametri per individuare il contesto dei dati richiesti dalla Recipe  &  Interno \newline UC1.4.2.3 \\
+		\hline
+		R0F8.2.2  &  Il sistema richiede la conferma dei dati inseriti prima di creare la nuova Recepie  &  UC1.4.2.4 \\
+		\hline
+		R0F8.3  &  Il sistema visualizza un messaggio di errore contenente i parametri inseriti non corretti oppure il messaggio di una eccezione lasciato in fase di creazione della Recipe  &  UC1.4.3 \\
+		\hline
+		R0F8.3.1  &  Nel caso venga confermata  una nuova Recipe corretta, il sistema salva i suoi parametri nel database  e riporta l'amministratore all'elenco delle Recipe  &  Interno \\
+		\hline
+		R0F8.4  &  L'utente amministratore può eliminare una Recipe memorizzata nel sistema tramite il relativo pulsante nella schermata di elenco delle Recipe  &  UC1.4.4 \newline UC1.4.4.1 \newline UC1.4.4.2 \\
+		\hline
+		R0F8.4.1  &  L'utente amministratore deve confermare l'eliminazione della Recipe una volta premuto l'apposito pulsate  &  UC1.4.4.3 \\
+		\hline
+		R0F8.4.2  &  Una volta confermata l'eliminazione di una Recipe, il sistema provvede all'eliminazione di tutte le informazioni legate ad essa presenti nel database  &  Interno \\
+		\hline
+		R0F8.4.3  &  Una volta confermata l'eliminazione di una Recipe, il sistema provvede ad eliminare tutti i dati grezzi presenti nel database legati a tale Recipe  &  Interno \\
+		\hline
+		R2F8.5  &  Dal pannello di amministrazione è possibile visualizzare feedback e statistiche sugli utenti in relazione ai dati delle Recipe utilizzati  &  Interno \\
+		\hline
+		R1F9 & Nella home screen dell'utente amministratore è presente un pulsante per accedere all'elenco degli utenti  &  UC1.7.1 \newline UC1.7.2.1 \newline UC1.7.3.1 \\
+		\hline
+		R1F9.1  &  Accanto al nome di ogni utente nella lista è presente un pulsante modifica  &  Interno \\
+		\hline
+		R1F9.1.1  &  Cliccando sul pulsante modifica si viene reindirizzati alla pagina di modifica degli utenti  &  UC1.7.2.2 \\
+		\hline
+		R2F9.2  &  Nella pagina di modifica di un utente l'amministratore può cambiare i permessi di un utente  &  UC1.7.2 \newline UC1.7.2.3 \\
+		\hline
+		R2F9.2.1  &  Premendo conferma il ruolo e i permessi dell'utente vengono modificati sul database  &  UC1.7.2.4 \\
+		\hline
+		R1F9.3  &  Nella pagina di modifica di un utente è presente il pulsante elimina utente  &  UC1.7.3 \newline UC1.7.3.2 \\
+		\hline
+		R1F9.3.1  &  Se viene premuto il pulsante di eliminazione di un utente appare un messaggio che chiede conferma dell'eliminazione  & UC1.7.3.3\\
+		\hline
+		R1F9.3.1.1  &  Se viene confermata il sistema verifica se l'utente è loggato e in tal caso segnala l'errore e interrompe l'eliminazione  & Interno \\
+		\hline
+		R1F9.3.1.2  &  Se l'eliminazione ha successo appare un messaggio di conferma e si viene reindirizzati alla home screen  & UC1.7.3.3\\
+		\hline
+		R1F9.3.1.3  &  Se c'è stato un errore appare un messaggio d'errore e si è riportati alla pagina di modifica di un utente  & UC1.7.4\\
+		\hline
+
+	\end{longtable}
+	\egroup
+\end{center}
+
+
+\subsection{Requisiti prestazionali}
+
+\begin{center}
+
+	\def\arraystretch{1.5}
+	\bgroup
+	\begin{longtable}{| p{2cm} | p{8cm} | p{2cm} |}
+
+		\hline
+		\textbf{Requisito} & \textbf{Descrizione} & \textbf{Fonti} \\
+		\hline
+
+		R1P1  &  Una volta autenticato l'utente deve poter visualizzare le proprie View entro 10 secondi salvo problemi di connesione &  Interno \\
+		\hline
+		R1P1.1  &  Il recupero dei dati dal database deve impiegare al più 7 secondi  &  Interno \\
+		\hline
+		R2P2  &  L'interfaccia web utilizzerà un design di tipo responsive  &  Capitolato \\
+		\hline
+
+	\end{longtable}
+	\egroup
+\end{center}
+
+\subsection{Requisiti di qualità}
+
+\begin{center}
+
+	\def\arraystretch{1.5}
+	\bgroup
+	\begin{longtable}{| p{2cm} | p{8cm} | p{2cm} |}
+
+		\hline
+		\textbf{Requisito} & \textbf{Descrizione} & \textbf{Fonti} \\
+		\hline
+
+		R0Q1  &  Viene fornito un manuale per l'utente  &  Interno \\
+		\hline
+		R0Q1.1  &  Il manuale utente deve rispettare le norme e le metriche descritte nel \docNameVersionPdQ  &  Interno \\
+		\hline
+		R0Q2  &  Tutto il codice rispetta le norme e le metriche descritte nel \docNameVersionPdQ{} e nelle \docNameVersionNdP  &  Interno \\
+		\hline
+
+
+	\end{longtable}
+	\egroup
+\end{center}
+
+\subsection{Requisiti di vincolo}
+
+\begin{center}
+
+	\def\arraystretch{1.5}
+	\bgroup
+	\begin{longtable}{| p{2cm} | p{8cm} | p{2cm} |}
+
+		\hline
+		\textbf{Requisito} & \textbf{Descrizione} & \textbf{Fonti} \\
+		\hline
+
+		R1V1  &  Il sistema sfrutterà gli strumenti offerti da Google Cloud Platform  &  Capitolato \newline Verbale 2015/01/14 \\
+		\hline
+		R1V1.1  &  Il sistema sfrutterà Google App Engine  &  Capitolato \newline Verbale 2015/01/14 \\
+		\hline
+		R1V1.2  &  Il sistema sfrutterà Google Cloud Datastore  &  Capitolato \newline Verbale 2015/01/14 \\
+		\hline
+		R1V1.2.1  &  Il database sarà di tipo non relazione composto da documenti in stile JSON, stesso formato dei dati in entrata  &  Interno \newline Verbale 2015/01/14 \\
+		\hline
+		R1V1.3  &  Il sistema sfrutterà gli strumenti offerti da Google Cloud Platform  &  Capitolato \newline Verbale 2015/01/14 \\
+		\hline
+		R1V2  &  Il linguaggio di programmazione principalmente usato sarà Python  &  Capitolato \newline Verbale 2015/01/14 \\
+		\hline
+		R1V3  &  Il codice sorgente sarà soggetto a versionamento tramite il modello di branching descritto nelle \docNameVersionNdP  &  Capitolato \\
+		\hline
+		R1V4  &  L'interfaccia web sarà di tipo single-page  &  Interno \\
+		\hline
+
+	\end{longtable}
+	\egroup
+\end{center}
+

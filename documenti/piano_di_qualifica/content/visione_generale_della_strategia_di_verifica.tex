@@ -1,0 +1,116 @@
+% =================================================================================================
+% File:			visione_generale_della_strategia_di_verifica.tex
+% Description:	Definisce la sezione relativa alla sezione della strategia
+% Created:		2014/12/16
+% Author:		Ceccon Lorenzo / Faccin Nicola
+% Email:		ceccon.lorenzo@mashup.unipd.it / faccin.nicola@mashup.unipd.it
+% =================================================================================================
+% Modification History:
+% Version		Modifier Date		Change											Author
+% 0.0.1 		2014/12/05 			iniziata stesura documento sezione				Lorenzo C./Nicola F.
+% =================================================================================================
+%
+
+% CONTENUTO DEL CAPITOLO
+
+\section{Visione generale della strategia di verifica}
+
+	\subsection{Organizzazione}
+	L'attività di verifica accompagnerà l'intero ciclo di vita del software e sarà effettuata su tutti i processi realizzati e sugli output prodotti da questi ultimi. La verifica sarà applicata solamente ai cambiamenti effettuati dall'ultima versione approvata del prodotto.\\
+	Il team ha scelto di adottare un modello di ciclo di vita di tipo incrementale suddiviso in diverse fasi e riportate dettagliatamente nel \docNameVersionPdP. Per ciascuna di queste fasi verranno utilizzate specifiche attività di verifica.\\ Il processo di verifica sarà così composto:
+	\begin{itemize}
+		\item \textbf{Ricerca e implementazione degli strumenti:}  in questa fase l'attività di verifica consente di verificare che tutti gli script creati siano corretti e che l'output prodotto dagli stessi sia uguale alle aspettative;
+		\item \textbf{Analisi dei requisiti e di dettaglio:} in questa fase si verificherà che ogni requisito abbia corrispondenza in un caso d'uso e si effettueranno dei test sulla documentazione prodotta per verificare che rispetti le \docNameVersionNdP;
+		\item \textbf{Progettazione architetturale:} l'attività di verifica in questa fase consiste nell'analizzare che la soluzione generale ad alto livello soddisfi i requisiti richiesti oltre a verificare i processi utilizzati per ottenere questa soluzione;
+		\item \textbf{Progettazione di dettaglio e codifica dei requisiti obbligatori, desiderabili e opzionali:} si eseguiranno attività di verifica sui processi di progettazione e codifica del codice prodotto dai programmatori facendo uso di tecniche di analisi statica e dinamica;
+		\item \textbf{Validazione:} in quest'ultima fase verrà effettuato il collaudo del prodotto che garantirà il corretto funzionamento del prodotto realizzato.
+	\end{itemize}
+	
+	\subsection{Pianificazione strategica e temporale}
+	L'attività di verifica necessaria, per il miglioramento della qualità dei processi e del prodotto, deve essere sistematica ed organizzata. Ciò permetterà l'individuazione e la correzione degli errori il prima possibile evitando la propagazione di questi ultimi in larga scala.\\
+	Ciascuna attività che riguarda la documentazione o la codifica dovrà essere preceduta da uno studio preliminare che ci permetta di rendere chiaro la struttura degli stessi. Questo studio preventivo ci consentirà di ottenere un maggiore livello di qualità e una minore possibilità di fallimento. \\
+	Per quanto riguarda le tempistiche, l'obbiettivo primario è quello di rispettare le scadenze forniteci del committente e riportate nel \docNameVersionPdP.
+	
+	\subsection{Responsabilità}
+	Le responsabilità relative all'assegnazione degli incarichi appartengono al \roleProjectManager, mentre le responsabilità relative all'adeguamento dell'ambiente di lavoro per lo svolgimento di tutti i compiti necessari alla realizzazione del progetto appartengono all'\roleAdministrator.
+
+	\subsection{Risorse necessarie}
+	Le risorse necessarie alla verifica della qualità dei processi e del prodotto sono:
+		\begin{itemize}
+  			\item \textbf{Risorse umane:} \textnormal{il \roleProjectManager{} controlla la qualità dei processi interni, l'\roleAdministrator{} definisce le norme e i piani per le attività di verifica, il \roleProgrammer{} esegue le prove di verifica e validazione del codice, il \roleVerifier{} esegue la verifica dei documenti e fornisce i risultati delle prove effettuate. Per una descrizione più dettagliata dei ruoli consultare il \docNameVersionPdP;}
+  			\item \textbf{Risorse software:} \textnormal{sono necessari strumenti per il tracciamento dei requisiti, per la stesura dei documenti in \LaTeX, per la creazione di diagrammi UML, per lo sviluppo del prodotto e per il supporto e la verifica del codice;}
+  			\item \textbf{Risorse hardware:} \textnormal{sono necessari computer per scrivere documenti e creare il prodotto software finale. \`E richiesto un ambiente di lavoro stabile in cui poter lavorare al progetto.}
+		\end{itemize}
+
+	\subsection{Tecniche}
+		\subsubsection{Analisi Statica}
+		Comprende due tipologie di analisi che verranno utilizzate durante tutto il ciclo di vita del software, queste sono applicabili sia alla documentazione che appunto al software:
+			\begin{itemize}
+				\item \textbf{Walkthrough:} tecnica necessaria nelle prime fasi del progetto, vista l'inesperienza da parte del gruppo nell'attuare un tipo di verifica più precisa e mirata. Questo tipo di analisi è molto dispendiosa in quanto prevede una lettura critica del codice o del documento in analisi, senza avere idea del tipo di anomalia ricercata. Una volta trovata l'anomalia, nella fase di redazione dei documenti o nella fase di codifica che sia, verrà aggiunta alla lista di controllo così che in futuro si venga ad utilizzare sempre di più l'Inspection a discapito del Walkthrough;
+				\item \textbf{Inspection:} lettura mirata del codice e/o dei documenti, guidata da una
+lista di controllo definita gradualmente, sia grazie all'esperienza personale, sia attraverso l'arricchimento derivante dall'attività di Walkthrough. Ogni difetto riscontrato verrà corretto e documentato con dei rapporti sulle attività svolte. La lista di controllo inizialmente non sarà abbastanza ampia da garantire l'affidabilità dell'elemento analizzato, per questo almeno nelle prime fasi verrà affiancata al Walkthrough.
+			\end{itemize}
+		\subsubsection{Analisi Dinamica}
+		La verifica e la validazione verrà applicata solamente al prodotto software in sviluppo tramite l'esecuzione di determinati test. Questi test dovranno essere automatici e ripetibili, in modo da poter essere eseguiti in qualsiasi momento e per tutta la durata dello sviluppo.\\
+		Per una corretta valutazione in base ai risultati di questi test è richiesto che siano rispettate le seguenti regole:
+		\begin{itemize}
+			\item \textbf{Ambiente:} specifica l'ambiente software e hardware in cui viene eseguito il test;
+			\item \textbf{Specifica:} devono essere specificati i dati in input ed output in modo da poter effettuare un test di congruenza;
+			\item \textbf{Procedure:} possono essere inserite ulteriori istruzioni per l'esecuzione dei test.
+		\end{itemize}
+		I test, dato lo stesso input sul medesimo ambiente di esecuzione, dovranno fornire gli stessi risultati. In questo modo sarà più facile riconoscere le anomalie.
+			\begin{itemize}
+				\item \textbf{Test di unità:} verifica ogni singola unità del prodotto software, avvalendosi di strumenti come driver e/o stub. In particolare si verifica che per ogni unità siano esplorati tutti i cammini di esecuzione possibili e che i requisiti per quella determinata unità siano soddisfatti;
+				\item \textbf{Test di integrazione:} verifica dei componenti costituiti dall'integrazione di più unità che hanno soddisfatto i test di unità; aiuta ad identificare errori residui nella realizzazione dei componenti, modifiche delle interfacce o cambiamenti nei requisiti. A questo scopo verranno utilizzate classi simulate per verificarne l'interazione, senza più la necessità di verificare il loro comportamento interno;
+				\item \textbf{Test di sistema:} validazione del sistema attraverso la verifica della copertura di tutti i requisiti individuati nell'\docNameVersionAdR;
+				\item \textbf{Test di regressione:} ogni qualvolta che si applica una modifica ad una parte del codice precedentemente testato, devono essere svolti tutti i test di unità e integrazione ad essa relativa;
+				\item \textbf{Test di accettazione:} collaudo controllato dal committente, se quest'ultimo ha esito positivo, si procede al rilascio del prodotto.
+			\end{itemize}
+
+	\subsection{Misure e metriche}
+	Descrizione delle metriche e delle misure per rendere quantificabili e conseguentemente qualificabili i processi, i documenti e il software prodotto.
+
+		\subsubsection{Metriche per i processi}
+		L'organizzazione interna dei processi si basa sul principio PDCA, vedi Figura \ref{fig:pdca}, che è in grado di garantire un miglioramento continuo della qualità di tutti i processi e conseguentemente dei prodotti derivanti dai processi.
+I processi saranno pianificati dettagliatamente rispetto ai requisiti e alle risorse disponibili. Se durante il processo di verifica l'analisi evidenzia dei valori che si discostano, in modo peggiorativo, dai piani prefissati, questo denoterà la presenza di un problema che verrà risolto in modo correttivo sul processo o eventualmente sul piano iniziale dello stesso.\\
+		Le misurazioni sul processo consistono in:
+			\begin{itemize}
+				\item Tempo impiegato per essere completato;
+				\item Cicli iterativi interni al processo;
+				\item Risorse utilizzate e/o consumate durante il processo;
+				\item Attinenza ai piani stabiliti;
+				\item Soddisfazione dei requisiti richiesti.
+			\end{itemize}
+
+		\subsubsection{Metriche per i documenti}
+		\textbf{Indice Gulpease:} questo indice, tarato specificatamente per la lingua italiana, ha anche il vantaggio di utilizzare la lunghezza delle parole in lettere e non delle sillabe, semplificandone il calcolo.
+			\begin{center}
+				\begin{math}
+					89+\frac{300 * (Numero\ delle\ frasi) - 10 * (Numero\ delle\ lettere)}{Numero\ delle\ parole}
+				\end{math}
+			\end{center}
+		100 indica la leggibilità più alta mentre 0 quella più bassa, sono presenti dei range così da poter quantificare meglio la complessità del documento in analisi:
+			\begin{itemize}
+				\item inferiori a 80 sono difficili da leggere per chi ha la licenza elementare;
+				\item inferiori a 60 sono difficili da leggere per che ha la licenza media;
+				\item inferiori a 40 difficili da leggere per chi possiede un diploma superiore;
+			\end{itemize}
+		Range-ottimale[50-100], range-accettazione [40-100].
+
+		\subsubsection{Metriche per il software}
+			\begin{itemize}
+				\item \textbf{Complessità Ciclomatica:} è utilizzata per misurare la complessità di un metodo, attraverso il grafo di controllo di flusso che misura direttamente il numero di cammini linearmente indipendenti. I nodi di questo grafo rappresentano gruppi indivisibili di istruzioni e gli archi connettono due nodi solamente se le istruzioni di un nodo possono essere eseguite immediatamente dopo le istruzioni dell'altro nodo.\\
+				In questo progetto si cercherà di rispettare la raccomandazione di \textit{McCabe}, che sviluppò tale teoria, ossia quella di non superare una complessità di 10. Rispettando questo vincolo si aumentano le possibilità di riuso del codice, manutenibilità, coesione e correttezza di quest'ultimo. Il vincolo presentato sarà di tipo lasco, ossia potrà essere portato a valori maggiori nell'eventualità porti a notevoli benefici in termini di velocità di esecuzione.\\ \\
+				Valore-ottimale <10, valore-accettazione <15;
+				\item \textbf{Numero di metodi:} metrica utilizzata per calcolare una media delle occorrenze dei metodi per package; valori alti potrebbero indicare la necessità di scomporlo.\\ \\ 					
+				Range-ottimale [3-8], range-accettazione [3-10];
+				\item \textbf{Numero di parametri:} metrica utilizzata per calcolare il numero di parametri formali di un metodo. Un valore basso e indice di maggior manutenibilità e astrazione del codice.\\ \\
+				Range-ottimale [0-4], range-accettazione [0-8];
+				\item \textbf{Linee di codice per linee di commento:} metrica atta a migliorare la manutenibilità del codice attraverso il monitoraggio del rapporto tra questi valori.\\ \\
+				Valore-ottimale <0.20, valore-accettazione <0.35;
+				\item \textbf{Bugs for lines of code:} metrica per la misura dei bug trovati per un certo quantitativo di linee di codice. Questa metrica è utile in quanto all'aumentare dell'ampiezza del codice si aumenta la probabilità di nascondere degli errori. Presupponendo che nessuno del gruppo avrà conoscenze sufficienti dello stack tecnologico che si andrà ad utilizzare si partirà con un valore di accettazione alto per poi cercare di ridurlo in modo incrementale. L'obbiettivo fissato è quello di raggiungere valori compresi tra 0 e 20. Difficoltà particolari verranno gestite dal responsabile di progetto;
+				\item \textbf{Numero di livelli di annidamento:} metrica per misurare il livello di annidamento dei metodi. Un numero elevato comporta eccessiva complessità del codice e ne riduce il livello di astrazione.\\ \\
+				Range-ottimale [1-4], range-accettazione [1-6].
+			\end{itemize}
+
+	\pagebreak

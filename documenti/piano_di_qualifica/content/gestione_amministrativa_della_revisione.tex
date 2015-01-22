@@ -1,0 +1,58 @@
+% =================================================================================================
+% File:			gestione_amministrativa_della_revisione.tex
+% Description:	Definisce la sezione relativa alla gestione amminitrativa della revisione
+% Created:		2014/12/16
+% Author:		Ceccon Lorenzo
+% Email:		ceccon.lorenzo@mashup-unipd.it
+% =================================================================================================
+% Modification History:
+% Version		Modifier Date		Change											Author
+% 0.0.1 		2014/12/16 			iniziata stesura sezione gestione revisione	Lorenzo C.
+% =================================================================================================
+%
+
+% CONTENUTO DEL CAPITOLO
+
+\section{Gestione amministrativa della revisione}
+
+	\subsection{Gestione delle anomalie e delle discrepanze}
+	La fase di verifica porta alla ricerca di eventuali difetti, i quali possono essere errori logici oppure anomalie presenti nel codice. Il \roleVerifier{} ha il compito di esaminare scrupolosamente il codice del prodotto e sottolineare le eventuali anomalie e problemi per essere risolti successivamente.\\
+	Per anomalia si intende una deviazione del prodotto dalla sue aspettative, quindi, causa un malfunzionamento del sistema. Si possono dividere in:
+	\begin{itemize}
+		\item \textbf{Computational Error:} differenza tra un valore calcolato, osservato o misurato e il suo valore teoricamente corretto;
+		\item \textbf{Error:} azione umana che produce un risultato errato;
+		\item \textbf{Defect:} imperfezione o carenza all'interno di un prodotto, il quale non soddisfa le sue esigenze o specifiche prefissate e necessità di essere sistemato;
+		\item \textbf{Fault:} difetto all'interno del codice sorgente. Può essere inteso come la codifica di un errore umano nel codice sorgente;
+		\item \textbf{Failure:} evento nel quale un sistema, o un suo componente, non esegue una funzione richiesta entro limiti specificati. Si verifica quando, sotto specifiche condizioni, viene rilevato un \emph{Fault}.
+	\end{itemize}
+	La gestione di queste anomalie assume, quindi, un ruolo di primaria importanza all'interno del progetto e dovranno essere gestite in maniera più rapida possibile.\\
+	Per discrepanza invece, si intende una divergenza tra il prodotto sviluppato e quello atteso. La presenza di una discrepanza fa si che il prodotto funzioni senza che si verifichino \emph{Failure} ma, rende il prodotto realizzato errato rispetto alle attese. Una discrepanza sarà, quindi, trattata come un'anomalia di bassa priorità.\\
+	Ogni qualvolta il \roleVerifier{} incontrerà un'anomalia, dovrà seguire una procedura standard sia per quanto riguarda le anomalie che riguardano i documenti, sia quelle relative al software. Il \roleVerifier{} dovrà quindi aprire un ticket seguendo le regole riportate nel \docNameVersionNdP.\\
+	Il \roleProjectManager{} avrà il compito di approvare il ticket; se approvato, il membro a cui è stato assegnato tale ticket dovrà impegnarsi per risolvere entro i termini stabiliti.
+	
+	\subsection{Procedure di controllo di qualità di processo}
+	Il gruppo, per il controllo della qualità di processo, ha deciso di utilizzare il ciclo PDCA che ci consente di ottenere un miglioramento continuo dei processi.\\
+	Il PDCA, noto anche come ciclo di Deming, è un metodo di gestione iterativo a quattro fasi per il controllo e il miglioramento continuo dei processi.\\
+	Le quattro fasi che lo compongono sono:
+		\begin{itemize}
+			\item \textbf{Plan:} stabilisce gli obiettivi e i processi necessari per ottenere risultati uguali a quelli attesi;
+			\item \textbf{Do:} fase composta dall'attuazione del piano, dall'esecuzione del processo e dalla creazione del prodotto. Termina con una raccolta dei dati e creazione di grafici sul risultato di quanto ottenuto;
+			\item \textbf{Check:} si confrontano i risultati ottenuti dalla fase precedente con i risultati stabiliti durante la pianificazione per verificare la presenza di differenze;
+			\item \textbf{Act:} si effettuano correzioni laddove sono presenti differenze tra i risultati ottenuti e quelli previsti. Si determinano le cause delle discrepanze e dove c'è bisogno di applicare delle modifiche per ottenere un miglioramento del processo e di conseguenza del prodotto.
+		\end{itemize}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=90mm]{images/pdca.png}
+			\caption{Ciclo di miglioramento della qualità PDCA}
+			\label{fig:pdca}
+		\end{figure}
+	
+	\subsection{Procedure di controllo di qualità di prodotto}
+	Per garantire la qualità del prodotto software si fa affidamento a due modalità di controllo:
+		\begin{itemize}
+			\item \textbf{Software Quality Assurance (SQA):} è un insieme di attività che assicurano che il software sviluppato sia conforme alle specifiche di qualità standard o definite dal gruppo. L'SQA è un processo appartenente al ciclo di vita del software che controlla regolarmente e preventivamente il software sviluppato per assicurare il rispetto degli obbiettivi di qualità prefissati;
+			\item \textbf{Verifica e Validazione (V\&V):} è un processo che controlla che il sistema software soddisfi le specifiche e che raggiunga appieno il suo scopo.\\
+			Per verifica si intende il processo attuo a valutare che il software in una determinata fase di sviluppo soddisfi le condizioni imposte all'inizio di tale fase. Per validazione si intende il processo attuo a valutare se al termine del processo di sviluppo questo soddisfi i requisiti specificati. In altre parole, la verifica garantisce che il software è stato creato correttamente, mentre la validazione assicura che si è creato il giusto prodotto.
+		\end{itemize}
+	
+	\pagebreak

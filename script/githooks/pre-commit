@@ -1,0 +1,5 @@
+#!/bin/bash
+# script di test da riscrevere anche in python a seconda delle esigenze
+
+echo "*** Start: Test pre-commit script ***";
+echo "*** End: Test pre-commit script ***";

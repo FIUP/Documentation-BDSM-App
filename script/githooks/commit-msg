@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "*** Start: Test commit-msg script ***";
+
+
+echo "*** Esecuzione script option_commit_msg.py ***";
+exec python script/commit_msg/check_syntax_msg.py $1
+
+echo "*** End: Test commit-msg script ***";

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "*** Start: Test pre-push script ***";
+
+branch=$(git rev-parse --abbrev-ref HEAD)
+list_message=$(git log origin/${branch}..${branch})
+
+echo "*** Esecuzione script option_commit_msg.py ***";
+exec python script/asana_api/option_commit_msg.py ${branch} "${list_message}"
+
+echo "*** End: Test pre-push script ***";

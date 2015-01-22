@@ -1,0 +1,162 @@
+% =================================================================================================
+% File:			appendici.tex
+% Description:	Definisce le appendici riguardanti gli standard di qualità
+% Created:		2014/01/11
+% Author:		Ceccon Lorenzo
+% Email:		ceccon.lorenzo@mashup-unipd.it
+% =================================================================================================
+% Modification History:
+% Version		Modifier Date		Change											Author
+% 0.0.1 		2014/01/11 			iniziata stesura appendice					Lorenzo C.
+% =================================================================================================
+%
+
+% CONTENUTO DEL CAPITOLO
+
+\appendix 
+
+\section{Standard di qualità}
+  	\subsection{Standard ISO/IEC 9126}
+  	Lo standard ISO/IEC 9126 è uno standard creato per delineare delle normative utili a descrivere un modello di qualità del software. Lo standard propone un approccio in cui viene posta attenzione al miglioramento dell'organizzazione e dei processi di una società di software, in modo da migliorare di conseguenza la qualità del prodotto software.\\
+  	Lo standard ISO/IEC 9126 è suddiviso in quattro parti:
+		\begin{itemize}
+			\item \textbf{Modello di qualità: } la prima parte dello standard classifica il modello di qualità in sei caratteristiche generali e in varie sotto caratteristiche misurabili tramite l'utilizzo di metriche.\\
+			Le sei caratteristiche generali e le relative sotto caratteristiche sono:
+				\begin{itemize}
+					\item \textbf{Funzionalità:}
+						\begin{itemize}
+							\item \textbf{Appropriatezza;}
+							\item \textbf{Accuratezza;}
+							\item \textbf{Interoperabilità;}
+							\item \textbf{Conformità;}
+							\item \textbf{Sicurezza.}
+						\end{itemize}
+					\item \textbf{Affidabilità:}
+						\begin{itemize}
+							\item \textbf{Maturità;}
+							\item \textbf{Tolleranza agli errori;}
+							\item \textbf{Recuperabilità;}
+							\item \textbf{Aderenza.}
+						\end{itemize}
+					\item \textbf{Usabilità:}
+						\begin{itemize}
+							\item \textbf{Comprensibilità;}
+							\item \textbf{Apprendibilità;}
+							\item \textbf{Operabilità;}
+							\item \textbf{Attrattiva;}
+							\item \textbf{Conformità.}
+						\end{itemize}
+					\item \textbf{Efficienza:}
+						\begin{itemize}
+							\item \textbf{Comportamento rispetto al tempo;}
+							\item \textbf{Utilizzo delle risorse;}
+							\item \textbf{Conformità.}
+						\end{itemize}
+					\item \textbf{Manutenibilità:}
+						\begin{itemize}
+							\item \textbf{Analizzabilità;}
+							\item \textbf{Modificabilità;}
+							\item \textbf{Stabilità;}
+							\item \textbf{Testabilità.}
+						\end{itemize}
+					\item \textbf{Portabilità:}
+						\begin{itemize}
+							\item \textbf{Adattabilità;}
+							\item \textbf{Installabilità;}
+							\item \textbf{Conformità;}
+							\item \textbf{Sostituibilità.}
+						\end{itemize}
+				\end{itemize}
+			\item \textbf{Qualità esterne: } le metriche esterne applicabili al software, e quindi rilevabili tramite l'analisi dinamica, misurano i comportamento del prodotto sulla base dei test, dall'operatività e dall'osservazione durante la sua esecuzione;
+			\item \textbf{Qualità interne: } le metriche interne, misurabili attraverso l'analisi statica, sono utili per prevedere il livello della qualità esterna ed in uso, poiché i suoi attributi interni influiscono su quelli esterni ed in uso. Permettono così di individuare anomalie prima che queste ultime possano influenzare la qualità del prodotto finale;
+			\item \textbf{Qualità in uso: } la qualità in uso, raggiungibile solo dopo aver ottenuto la qualità interna ed esterna, fornisce metriche per misurare il grado di utilizzabilità del prodotto da parte dell'utente finale.
+		\end{itemize}
+		
+	\subsection{Standard ISO/IEC 15504}
+	Lo standard ISO/IEC 15504, conosciuto anche come SPICE, è un insieme di documenti tecnici per lo sviluppo di processi software, utili a valutare la dimensione dei processi tramite l'utilizzo di specifiche metriche. É derivato dallo standard ISO/IEC 12207 e da modelli di maturità quali Bootstrap, Trillium e il CMM.\\
+	Lo standard definisce la dimensione del processo e la suddivide nelle seguenti cinque categorie:
+		\begin{itemize}
+			\item \textbf{Custormer/Supplier;}
+			\item \textbf{Engineering;}
+			\item \textbf{Support;}
+			\item \textbf{Management;}
+			\item \textbf{Organization.}
+		\end{itemize}
+	Per ogni processo, viene definito un livello di capacità dei processi definito da una scala di sei livelli e da nove attributi suddivisi nei vari livelli:
+		\begin{itemize}
+			\item \textbf{Level 5. Optimizing process;}
+				\begin{itemize}
+					\item Process Innovation;
+					\item Process Optimization.
+				\end{itemize}
+			\item \textbf{Level 4. Predictable process;}
+				\begin{itemize}
+					\item Process Measurement;
+					\item Process Control.
+				\end{itemize}
+			\item \textbf{Level 3. Established process;}
+				\begin{itemize}
+					\item Process Definition;
+					\item Process Deployment.
+				\end{itemize}
+			\item \textbf{Level 2. Managed process;}
+				\begin{itemize}
+					\item Performance Management;
+					\item Work Product Management.
+				\end{itemize}			
+			\item \textbf{Level 1. Performed process;}
+				\begin{itemize}
+					\item Process Performance.
+				\end{itemize}
+			\item \textbf{Level 0. Incomplete process.}
+		\end{itemize}
+	Ogni attributo è misurabile tramite l'utilizzo di una scala di valutazione divisa in quattro punti:
+		\begin{itemize}
+			\item \textbf{Not achieved (0-15\%);}
+			\item \textbf{Partially achieved (15-50\%);}
+			\item \textbf{Largely achieved (50-85\%);}
+			\item \textbf{Fully achieved (85-100\%).}
+		\end{itemize}
+	Lo standard fornisce una guida per l'effettuazione di una valutazione formata da:
+		\begin{itemize}
+			\item Processo di valutazione;
+			\item Modello per la valutazione;
+			\item Strumenti per la valutazione.
+		\end{itemize}
+	Lo standard infine, stabilisce che per una corretta valutazione i verificatori debbano avere un buon livello di competenza e di esperienza.
+	
+\pagebreak
+
+\section{Resoconto delle attività di verifica}
+	\subsection{Dettaglio delle verifiche tramite analisi}
+		\subsubsection{Verifica della documentazione}
+		Sono qui sotto riportati i risultati dei test di leggibilità effettuati sulla documentazione tramite l'utilizzo dell'indice Gulpease.
+		\begin{table}[!ht]
+				\begin{center}
+					\begin{tabularx}{0.9\textwidth}{|l|l|X|}
+						\hline
+						\textbf{Nome documento} & \textbf{Valore indice} & \textbf{Esito}\\
+						\hline
+						\docNameVersionAdR & 56 & Superato\\
+						\hline
+						\docNameVersionGlo & 50 & Superato\\
+						\hline
+						\docNameVersionNdP & 54 & Superato\\
+						\hline
+						\docNameVersionPdP & 55 & Superato\\
+						\hline
+						\docNameVersionPdQ & 55 & Superato \\
+						\hline
+						\docNameVersionSdF & 48 & Superato\\
+						\hline
+					\end{tabularx}
+				\end{center}
+			\caption{Risultati indice Gulpease}
+			\end{table}
+			
+\pagebreak
+
+\section{Pianificazione ed esecuzione del collaudo}
+	Questa sezione sarà redatta quando il prodotto software sarà pronto per il collaudo.
+	
+	\pagebreak

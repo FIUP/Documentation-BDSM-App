@@ -1,0 +1,73 @@
+Android
+AngularJS
+API
+Asana
+Astah
+Big data
+Big query
+BOM
+Bug
+C++
+Ciclo di Deming
+Cloud Database
+Commit
+Committente
+Cron
+CSS3
+Database
+Design pattern
+Design responsive
+Diagramma di Gantt
+Diagramma di PERT
+Driver
+Express.js
+Framework
+Form
+Git
+GitHub
+Google App Engine
+Google Cloud Engine
+Google Cloud SQL
+HTML5
+IDE
+IEC
+Impress.js
+Indice Gulpease
+IntelliJ IDEA
+ISO
+Java
+JavaScript
+JSON
+\LaTeX
+Milestone
+Miner
+MySql
+Netsons
+Node.js
+Package
+PDCA
+PERT
+PowerPoint
+Processor
+ProjectLibre
+Proponente
+Qt
+Repository
+Recipe
+REST
+Reveal.js
+SDK
+Socket.io
+SPICE
+Stub
+SVG
+Task
+Template
+Ticket
+Ticketing
+Twitter Bootstrap
+UML
+UTF
+Validazione
+View
+WebSocket

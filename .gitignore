@@ -12,7 +12,23 @@ Thumbs.db
 *.aux
 *.synctex.gz
 *.toc
+*.lof
+*.lot
 
 # rimuove il tracciamento dei file spazzatura temporanei che vengono generati da Astah
 *.asta.bak
+*.asta.lock
+
+# rimuove i file .pdf generati dalla compilazione in LaTex che possono causare conflitti durante il pull
+
+documenti/analisi_dei_requisiti/analisi_dei_requisiti.pdf
+documenti/norme_di_progetto/norme_di_progetto.pdf
+documenti/glossario/glossario.pdf
+documenti/piano_di_progetto/piano_di_progetto.pdf
+documenti/piano_di_qualifica/piano_di_qualifica.pdf
+documenti/studio_di_fattibilita/studio_di_fattibilita.pdf
+documenti/lettera_di_presentazione/lettera_di_presentazione.pdf
+documenti/verbale_interno_2014-11-26.pdf/verbale_interno_2014-11-26.pdf
+documenti/verbale_interno_2014-12-02/verbale_interno_2014-12-02.pdf
+documenti/verbale_esterno_2015_01_14/verbale_esterno_2015_01_14.pdf
 

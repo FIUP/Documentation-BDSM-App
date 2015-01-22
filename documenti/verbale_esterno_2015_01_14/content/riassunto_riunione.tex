@@ -1,0 +1,51 @@
+% =================================================================================================
+% File:			riassunto_riunione.tex
+% Description:	Defiinisce la sezione relativa alle decisioni emerse durante la riunione
+% Created:		2015-01-17
+% Author:		Faccin Nicola
+% Email:		faccin.nicola@mashup-unipd.it
+% =================================================================================================
+% Modification History:
+% Version		Modifier Date		Change											Author
+% 0.0.1 		2015-01-17 			stesura informazioni incontro e ordine			Faccin Nicola
+% =================================================================================================
+%
+
+% CONTENUTO DEL CAPITOLO
+
+\section{Riassunto della riunione} % (fold)
+\label{sec:riassunto_della_riunione}
+	\subsection{Risposte all'ordine del giorno} % (fold)
+	\label{sub:risposte_all_ordine_del_giorno}
+	Le risposte di seguito fornite non sono la trascrizione esatta di quanto detto al momento, ma una elaborazione finale in accordo con il proponente.
+		\begin{itemize}
+			\item L'applicativo avrà un target molto ampio. Sarà infatti predisposto per qualsiasi persona voglia ricevere delle statistiche su un determinato settore, non verrà messo quindi nessun vincolo durante la registrazione;
+			\item Vengono definite come ``ricette'' (Recipes) le tipologie di dato che l'applicativo dovrà andare a recuperare periodicamente attraverso le opportune impostazioni date al Cron della Google Cloud Platform. Queste ricette saranno molto settoriali e riguarderanno i campi che il gruppo riterrà opportuno analizzare. Basterà individuarne 2/3 massimo;
+			\item Non viene consentita all'utente la libertà di creare delle ricette personalizzate. Le ricerche effettuate sulle ricette potranno essere però generiche;
+			\item I costi per ora non saranno un problema. Ad ogni registrazione effettuata su Google Cloud Platform viene dato un buono di \textdollar{} 300,00 da potere utilizzare durante i primi 60 giorni dall'attivazione. Si potrà quindi pensare di distribuire l'applicazione su più account per ripartire al meglio il carico delle spese. Nel caso si dovesse constatare che comunque l'utilizzo dei servizi generi dei costi il proponente si è reso disponibile a fornire degli account con dei crediti maggiori;
+			\item I dati che si andranno a salvare dovranno essere grezzi e cioè saranno esattamente quelli estrapolati tramite le API dei vari social;
+			\item Proprio perché i dati che si andranno ad immagazzinare nel database dell'applicazione non devono essere elaborati viene consigliato l'utilizzo di un struttura non relazione, di più facile gestione e somiglianza con ciò che le API restituiscono e cioè file in formato JSON;
+			\item Per il proponente è indifferente quale linguaggio di programmazione verrà scelto. Nonostante questo consigliano l'uso di Python in quanto la sua organizzazione lavora principalmente con quello. Se la scelta dovesse ricadere proprio su quest'ultimo viene consigliato l'utilizzo del framework Django;
+			\item L'utente avrà la possibilità di ricercare qualsiasi cosa all'interno di un determinato settore, vincolato quest'ultimo dalle scelte effettuate dal team su quali dati andranno recuperati per quel dominio;
+			\item L'utente potrà dare un indice di gradimento della ricerca che ha effettuato;
+			\item L'amministratore avrà a disposizione una sezione privata nella quale potrà vedere i feedback degli utenti sulle ricette proposte e valutare il caso di aggiungerne di nuove o di rimuoverne se non fossero apprezzate. Questo non è per il momento un aspetto fondamentale dell'applicativo.
+		\end{itemize}
+	% subsection risposte_all_ordine_del_giorno (end)
+
+	\subsection{Altre considerazioni} % (fold)
+	\label{sub:altre_considerazioni}
+	Durante l'incontro si è discusso molto con il proponente anche su altre questioni. \\
+	Si è iniziato a stendere una prima idea delle diversi componenti del sistema a partire da alcune idee del team e condivise tramite Google Drive con il proponente. \\
+	Le parti emerse sono:
+		\begin{itemize}
+			\item \textbf{Miner}: il componente che avrà il compito di interrogare le API dei diversi social;
+			\item \textbf{Processor}: il componente principale che si occupa di eleborare le richieste dell'utente, gestire il funzionameto del Miner a seconda delle ricette presenti ed effetturare le operazioni nel database;
+			\item \textbf{Cron}: il componente che avrà il compito di gestire la schedulazione dei processi di recupero dei dati. Questa componente viene già offerta dalla Google Cloud Platform. Il team avrà il compito di impostarla opportunamente;
+			\item \textbf{Database}: il componente che avrà il compito di immagazzinare i dati recuperati dal Miner;
+			\item \textbf{Web GUI}: il componente che interagisce con l'utente finale e con l'amministratore mostrando i dati che vengono richiesti;
+		\end{itemize}
+	\noindent
+	Nelle attività di codifica viene consigliato di utilizzare, per i nomi delle varie componenti del sistema, una sola lingua, preferibilmente quella inglese. Per i commenti può andare bene anche l'italiano, l'importante è che siano il più chiari possibili e solo quando il codice non è già auto esplicativo. \\
+
+	% subsection altre_considerazioni (end)
+% section riassunto_della_riunione (end)
