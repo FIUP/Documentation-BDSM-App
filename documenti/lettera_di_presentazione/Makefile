@@ -12,7 +12,7 @@ compile:
 	rm -rf *.lot
 	@echo "*** Apertura file PDF ***"
 	@case $(shell uname) in \
-		Darwin*) lettera_di_presentazione.pdf;; \
+		Darwin*) open lettera_di_presentazione.pdf;; \
 		Linux*) lettera_di_presentazione.pdf;; \
 	esac
 
