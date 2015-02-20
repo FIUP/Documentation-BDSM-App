@@ -355,7 +355,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} dalla home screen l'utente può aggiungere una nuova View premendo sull'apposito pulsante e compilando i dati richiesti;
 	\item \textbf{Precondizione:} l'utente si è autenticato e si trova nella home screen;
-	\item \textbf{Postcondizione:} l'utente ha creato una nuovo View;
+	\item \textbf{Postcondizione:} il sistema ha creato una nuova View come richiesto dall'utente;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Apertura pannello (UC1.3.2.1);
@@ -371,7 +371,7 @@
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'utente ha a disposizione un pulsante per aprire il pannello in cui inserire e selezionare i dati per la creazione di una nuova View;
+	\item \textbf{Descrizione:} premendo sull'apposito pulsante è possibile far comparire a video il pannello in cui inserire i dati per la creazione di una nuova View;
 	\item \textbf{Precondizione:} l'utente si trova nella home screen;
 	\item \textbf{Postcondizione:} l'utente ha aperto il pannello di creazione di una nuova View.
 \end{itemize}
@@ -383,7 +383,7 @@
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'utente può inserire il nome, i parametri obbligatori e facoltativi relativi ad una nuova View;
+	\item \textbf{Descrizione:} l'utente può inserire il nome della View, i parametri obbligatori quali le Recipe da utilizzare e i dati che desidera recuperare da esse e i parametri facoltativi quali una o più analisi da effettuare da un elenco fornito dall'applicazione;
 	\item \textbf{Precondizione:} l'utente ha aperto il pannello di inserimento di una nuova View;
 	\item \textbf{Postcondizione:} l'utente ha inserito le informazioni richieste.
 \end{itemize}
@@ -450,7 +450,7 @@
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'utente può selezionare il pulsante modifica dal pannello della View attualmente visualizzata per modificarne i parametri;
+	\item \textbf{Descrizione:} l'utente può selezionare il pulsante modifica dal pannello della View attualmente visualizzata per aprire il pannello di modifica della stessa;
 	\item \textbf{Precondizione:} l'utente ha visualizzato correttamente una View;
 	\item \textbf{Postcondizione:} l'utente ha aperto il pannello modifica View.
 \end{itemize}
@@ -462,7 +462,7 @@
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'utente può inserire i nuovi parametri della View aggiungendoli a quelli esistenti oppure sovrascrivendoli;
+	\item \textbf{Descrizione:} l'utente può inserire i nuovi parametri della View aggiungendoli a quelli esistenti oppure sovrascrivendoli. Può modificare le Recipe da cui prelevare i dati e quali dati utilizzare da ciascuna di essi;
 	\item \textbf{Precondizione:} l'utente ha visualizzato il pannello modifica View;
 	\item \textbf{Postcondizione:} l'utente ha inserito i nuovi parametri.
 \end{itemize}
@@ -503,22 +503,10 @@
 	\item \textbf{Postcondizione:} l'utente ha cancellato una View dal suo elenco;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
-		\item Selezione View (UC1.3.6.1);
+		\item Selezione View (UC1.3.4.1);
 		\item Eliminazione View (UC1.3.6.2);
 		\item Conferma eliminazione View (UC1.3.6.3).
 	\end{enumerate}
-\end{itemize}
-
-\subsubsection{UC1.3.6.1: Selezione View}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\begin{itemize}
-		\item utente autenticato: utente autenticato che ha accesso al servizio;
-	\end{itemize}
-	\item \textbf{Descrizione:} l'utente deve selezionare la View desiderata dal suo elenco per poterla visualizzare e modificare;
-	\item \textbf{Precondizione:} l'utente si trova nel suo elenco delle View;
-	\item \textbf{Postcondizione:} l'utente ha selezionato e visualizzato la View desiderata.
 \end{itemize}
 
 \subsubsection{UC1.3.6.2: Eliminazione View}
@@ -528,7 +516,7 @@
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'utente può selezionare il pulsante per eliminare la View visualizzata;
+	\item \textbf{Descrizione:} l'utente può selezionare il pulsante per eliminare la View visualizzata. Verrà richiesta la conferma dell'operazione;
 	\item \textbf{Precondizione:} l'utente ha visualizzato correttamente una View;
 	\item \textbf{Postcondizione:} l'utente ha selezionato il pulsante per eliminare la View.
 \end{itemize}
@@ -540,7 +528,7 @@
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'utente deve confermare l'eliminazione della View selezionando il pulsante di conferma;
+	\item \textbf{Descrizione:} l'utente può confermare l'eliminazione della View selezionando il pulsante di conferma oppure annullare l'operazione premendo il pulsante di annullamento;
 	\item \textbf{Precondizione:} l'utente ha selezionato il pulsante per eliminare una View;
 	\item \textbf{Postcondizione:} l'utente ha confermato l'eliminazione e la View è stata eliminata dal sistema.
 \end{itemize}
