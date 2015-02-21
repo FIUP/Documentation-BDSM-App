@@ -41,8 +41,9 @@
   			\item \textbf{Risorse software:} \textnormal{sono necessari strumenti per il tracciamento dei requisiti, per la stesura dei documenti in \LaTeX, per la creazione di diagrammi UML, per lo sviluppo del prodotto e per il supporto e la verifica del codice;}
   			\item \textbf{Risorse hardware:} \textnormal{sono necessari computer per scrivere documenti e creare il prodotto software finale. \`E richiesto un ambiente di lavoro stabile in cui poter lavorare al progetto.}
 		\end{itemize}
-
+\begin{comment}
 	\subsection{Tecniche}
+		
 		\subsubsection{Analisi Statica}
 		Comprende due tipologie di analisi che verranno utilizzate durante tutto il ciclo di vita del software, queste sono applicabili sia alla documentazione che appunto al software:
 			\begin{itemize}
@@ -66,11 +67,12 @@ lista di controllo definita gradualmente, sia grazie all'esperienza personale, s
 				\item \textbf{Test di regressione:} ogni qualvolta che si applica una modifica ad una parte del codice precedentemente testato, devono essere svolti tutti i test di unità e integrazione ad essa relativa;
 				\item \textbf{Test di accettazione:} collaudo controllato dal committente, se quest'ultimo ha esito positivo, si procede al rilascio del prodotto.
 			\end{itemize}
-
+	\end{comment}
 	\subsection{Misure e metriche}
 	Descrizione delle metriche e delle misure per rendere quantificabili e conseguentemente qualificabili i processi, i documenti e il software prodotto.
 
 		\subsubsection{Metriche per i processi}
+		\begin{comment}		
 		L'organizzazione interna dei processi si basa sul principio PDCA, vedi Figura \ref{fig:pdca}, che è in grado di garantire un miglioramento continuo della qualità di tutti i processi e conseguentemente dei prodotti derivanti dai processi.
 I processi saranno pianificati dettagliatamente rispetto ai requisiti e alle risorse disponibili. Se durante il processo di verifica l'analisi evidenzia dei valori che si discostano, in modo peggiorativo, dai piani prefissati, questo denoterà la presenza di un problema che verrà risolto in modo correttivo sul processo o eventualmente sul piano iniziale dello stesso.\\
 		Le misurazioni sul processo consistono in:
@@ -81,6 +83,14 @@ I processi saranno pianificati dettagliatamente rispetto ai requisiti e alle ris
 				\item Attinenza ai piani stabiliti;
 				\item Soddisfazione dei requisiti richiesti.
 			\end{itemize}
+		\end{comment}
+		\begin{itemize}
+		
+			\item \textbf{Schedule Variance:} L'avanzamento dei processi verrà valutato tramite la schedule variance. Questo indice di efficacia mette in relazione il lavoro pianificato con quello svolto. Se tale indice è maggiore di zero, allora si è svolto più lavoro rispetto a quello pianificato, viceversa se negativo. L'utilizzo di periodi di slack |g| aumenta la possibilità che la schedule variance assumi valori positivi.\\ \\
+Range-ottimale >= 0, range-accettazione >= (preventivo fase*5\%).
+			\item \textbf{Budget Variance:} L’avanzamento dei processi verrà valutato anche tramite la budget variance. Questo indice di efficienza che mette in relazione il preventivo pianificato con il consuntivo. Se tale indice è maggiore di zero, allora si è riusciti ad essere più efficienti di quello pianificato, viceversa se negativo.\\ \\
+Range-ottimale >= 0, range-accettazione >= (preventivo fase*10\%).
+		\end{itemize}
 
 		\subsubsection{Metriche per i documenti}
 		\textbf{Indice Gulpease:} questo indice, tarato specificatamente per la lingua italiana, ha anche il vantaggio di utilizzare la lunghezza delle parole in lettere e non delle sillabe, semplificandone il calcolo.
@@ -96,7 +106,22 @@ I processi saranno pianificati dettagliatamente rispetto ai requisiti e alle ris
 				\item inferiori a 40 difficili da leggere per chi possiede un diploma superiore;
 			\end{itemize}
 		Range-ottimale[50-100], range-accettazione [40-100].
-
+\textbf{Aggiunta da rivedere}
+		È stato considerato che tale indice non indica se il testo sia comprensibile o meno.
+Il contenuto delle frasi potrebbe essere totalmente non comprensibile e/o stravolto, ma
+avere lo stesso un ottimo indice Gulpease. Per lo scopo dei documenti e per la formalità
+richiesta da essi, capiterà spesso che vengano impiegati termini tecnici che non si possono
+sostituire. Anche interrompere la frase a favore di un indice più alto potrebbe spezzarne il
+ragionamento o, peggio, storpiarne il contenuto. Infine, usare frasi troppo dirette potrebbe
+risultare poco professionale ai fini del documento. Perciò, i documenti saranno valutati da
+un essere umano per stabilire se e come il testo potrebbe essere semplificato. I limiti imposti
+da tale indice saranno sufficientemente rilassati per accettare frasi un po’ più articolate.
+Per migliorare l’utilizzo di questo indice non verrà controllato solamente a livello
+di intero documento. Verrà controllato più finemente per ogni singola frase. Il motivo
+è sostenuto dal fatto che la lettura di un documento deve essere il più semplice e chiara
+possibile. Avere un documento con un buon indice potrebbe avere comunque, anche se in
+minoranza, delle frasi molto complesse che ne ostacolano la lettura. Verificare inoltre ogni
+singola frase garantisce che il documento avrà un indice nei limiti di accettazione.
 		\subsubsection{Metriche per il software}
 			\begin{itemize}
 				\item \textbf{Complessità Ciclomatica:} è utilizzata per misurare la complessità di un metodo, attraverso il grafo di controllo di flusso che misura direttamente il numero di cammini linearmente indipendenti. I nodi di questo grafo rappresentano gruppi indivisibili di istruzioni e gli archi connettono due nodi solamente se le istruzioni di un nodo possono essere eseguite immediatamente dopo le istruzioni dell'altro nodo.\\
