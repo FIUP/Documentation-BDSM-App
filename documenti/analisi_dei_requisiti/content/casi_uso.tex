@@ -549,9 +549,9 @@
 	\begin{itemize}
 		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
-	\item \textbf{Precondizione:} l'amministratore deve aver fatto il login nell'apposita pagina;
+	\item \textbf{Precondizione:} l'amministratore dopo essersi autenticato ha selezionato il pulsante di gestione recipe dal menu principale dell'applicazione;
 	\item \textbf{Descrizione:} gli amministratori possono vedere le Recipe e i dati ad esse associate. Possono inoltre crearle o eliminarle;
-	\item \textbf{Postcondizione:} le informazioni richieste dall'amministratore sono state fornite, le Recipe eliminate, cancellate dal sistema e quelle aggiunte, salvate;
+	\item \textbf{Postcondizione:} le informazioni richieste dall'amministratore sono state fornite, le Recipe eliminate, cancellate dal sistema e quelle aggiunte, salvate; Se durante la creazione sono stati inseriti valori che non rispettano i vincoli di sistema è stata visualizzata una schermata di errore;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Visualizza Recipe (UC1.4.1);
@@ -568,7 +568,7 @@
 	\begin{itemize}
 		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'amministratore può visualizzare l'elenco di tutte le Recipe salvate nel sistema selezionando l'apposito pulsante nella sua home screen;
+	\item \textbf{Descrizione:} l'amministratore può visualizzare l'elenco di tutte le Recipe salvate nel sistema selezionando l'apposito pulsante nella sua home screen; Per ogni Recipe viene fornito il nome, lo stato e la data dell'ultimo aggiornamento;
 	\item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema e si trova nella sua home screen;
 	\item \textbf{Postcondizione:} l'amministratore ha visualizzato correttamente l'elenco delle Recipe salvate nel sistema.
 \end{itemize}
@@ -579,7 +579,7 @@
 	\begin{itemize}
 		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'amministratore può aggiungere una nuova Recipe al sistema;
+	\item \textbf{Descrizione:} l'amministratore può aggiungere una nuova Recipe al sistema; Può scegliere il nome che la identificherà e un template per ogni social network ai quali si applica con i relativi parametri per ognuno di essi;
 	\item \textbf{Precondizione:} l'amministratore ha visualizzato l'elenco delle Recipe salvate nel sistema;
 	\item \textbf{Postcondizione:} l'amministratore ha salvato una nuova Recipe nel sistema;
 	\item \textbf{Flusso principale degli eventi:}
@@ -597,7 +597,7 @@
 	\begin{itemize}
 		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'amministratore può visualizzare l'elenco delle Recipe salvate nel sistema premendo l'apposito pulsante nella sua Home Screen;
+	\item \textbf{Descrizione:} l'amministratore può visualizzare l'elenco delle Recipe salvate nel sistema premendo l'apposito pulsante nella sua Home Screen; Questo è necessario affinché sia possibile visualizzare il pulsante per un nuovo inserimento;
 	\item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema;
 	\item \textbf{Postcondizione:} l'amministratore ha visualizzato correttamente l'elenco delle Recipe.
 \end{itemize}
@@ -645,7 +645,7 @@
 	\begin{itemize}
 		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'amministratore durante l'inserimento di una nuova Recipe ha inserito dei parametri che non rispettano i vincoli di sistema;
+	\item \textbf{Descrizione:} l'amministratore durante l'inserimento di una nuova Recipe ha inserito dei parametri che non rispettano i vincoli di sistema relativi al nome della Recipe non valido o un URL mal formattato nei parametri associati;
 	\item \textbf{Precondizione:} l'amministratore ha selezionato il pulsante di conferma per la creazione di una nuova Recipe;
 	\item \textbf{Postcondizione:} l'amministratore ha visualizzato un messaggio di errore contenente l'elenco dei parametri inseriti non corretti o l'eccezione sollevata dal sistema durante il salvataggio della nuova Recipe.
 \end{itemize}
