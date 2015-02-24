@@ -50,3 +50,25 @@ elaborazione finale in accordo con il proponente.
     \item \textbf{GTMetrix}: fornisce analisi sulla pesantezza e la velocità di una pagina web.
   \end{itemize}
 \end{itemize}
+
+\subsection{Specifica sui moduli individuati}
+
+\begin{figure}[htbp]
+    \centering
+    \centerline{\includegraphics[scale=0.8]{./images/moduli_bdsmapp.pdf}}
+    \caption{Moduli applicativo}
+\end{figure}
+
+La struttura dell'applicativo è stata aggiornata in modo tale da distribuire lo spazio riservato al database
+ed il carico di lavoro affidato al sistema. Ogni modulo responsabile di ricavare i dati da un determinato
+social network sarà infatti inserito in un'infrastruttura differente che richiederà la creazione di più accout
+nella piattaforma di Google. Ogni modulo, quindi, conterrà la struttura Miner, Cron e Processor stabilita in
+precedenza ed un database NoSQL che conterrà i dati grezzi. Il vantaggio di questa soluzione è data dal fatto
+che ogni modulo risulta indipendente dai restanti e potrà essere progettato in modo specifico per le funzionalità
+che dovrà fornire. Inoltre, sebbene la possibilità di superamento della soglia gratuita del servizio offerto da
+Google non dovrebbe causare problemi, la distribuzione del sistema su più account renderà tale problematica meno
+rilevante.
+Tutti i moduli saranno gestiti da un Processor centrale, il quale, interagirà con un database NoSQL principale che
+memorizzerà i dati di configurazione dell'applicativo ed i riferimenti ai dati dei database secodari di ogni modulo
+sopracitato. Il Processor centrale, inoltre, si occuperà di elaborare i dati grezzi ed esporli alla WebGUI
+tramite dei servizi di tipo REST.
