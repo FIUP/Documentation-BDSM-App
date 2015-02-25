@@ -15,6 +15,8 @@
 % =================================================================================================
 % 0.0.4			2015-01-08			stesura classificazione requisiti						Tesser Paolo
 % =================================================================================================
+% 1.0.1			2015-02-25			stesura norme e attività di codifica,progettazione		Faccin Nicola			
+% =================================================================================================
 %
 
 
@@ -66,7 +68,33 @@ Il \roleProjectManager{} dovrà eseguire una serie di compiti per delineare i la
 			\paragraph{Analisi dei requisiti}
 Dopo avere redatto lo \docNameSdF{}, agli \emph{Analisti} spetterà il compito di scrivere il documento \docNameVersionAdR{}. \\
 L'obiettivo sarà quello di cercare e produrre dei requisiti a partire dalle informazioni a disposizione del team. \\
-Le risorse che potranno essere utilizzate per questo scopo provengono dal capitolato d'appalto e dagli incontri con il proponente e con il committente. \\
+Le risorse che potranno essere utilizzate per questo scopo provengono dal capitolato d'appalto e dagli incontri con il proponente e con il committente. 
+			\paragraph{Progettazione}
+				\subparagraph{Specifica Tecnica}
+Compito dei \emph{Progettisti} sarà descrivere la progettazione ad alto livello dell'architettura dell'applicazione e dei singoli componenti nella \docNameVersionST. Devono inoltre progettare gli opportuni test di integrazione.\\ \\
+					\noindent
+					\textbf{Diagrammi UML}\\
+Si utilizzerà il linguaggio UML per definire:
+						\begin{itemize}
+							\item Diagrammi delle classi;
+							\item Diagrammi dei package;
+							\item Diagrammi delle attività;
+							\item Diagrammi di sequenza;
+						\end{itemize}
+Per la stesura, verranno seguite le seguenti convenzioni:
+						\begin{itemize}
+							\item \textbf{Standard:} standard UML 2.0;
+							\item \textbf{Lingua:} la lingua utilizzata è l'inglese.
+						\end{itemize}
+					\textbf{Design pattern}\\
+La descrizione dei design pattern sarà a carico dei \emph{Progettisti} che sceglieranno quelli più adatti al contesto dell'applicativo per migliorarne l'efficienza. Ogni uno di questi sarà accompagnato da una breve descrizione e da un diagramma che ne esemplificano il funzionamento e la struttura.\\ \\
+					\textbf{Test di integrazione}\\
+I \emph{Progettisti} dovranno definire delle classi di verifica, necessarie per verificare che i componenti del sistema funzionino correttamente.\\ 
+				\subparagraph{Definizione di prodotto}
+				
+La seguente sezione verrà redatta nelle fasi successive.					
+
+			\paragraph{Codifica}
 
 		\subsubsection{Norme}
 			\paragraph{Classificazione requisiti}
@@ -78,9 +106,9 @@ I requisiti prodotti dovranno essere classificati a seconda del tipo e dell'impo
 				\begin{itemize}
 					\item \textbf{Importanza}: i valori che può assumere sono:
 						\begin{itemize}
-							\item 0: requisito obbligatorio;
-							\item 1: requisito desiderabile;
-							\item 2: requisito opzionale.
+							\item O: requisito obbligatorio;
+							\item D: requisito desiderabile;
+							\item F: requisito facoltativo(opzionale).
 						\end{itemize}
 					\item \textbf{Tipo}: i valori che può assumere sono:
 						\begin{itemize}
@@ -138,8 +166,8 @@ I casi d'uso devono essere divisi in ordine gerarchico secondo il seguente schem
 			
 			\paragraph{Nomi e norme di codifica} % (fold)
 			\label{par:nomi_e_norme_di_codifica}
-			Questa sezione verrà redatta nel dettaglio durante le fasi successive. \\
-			Vengono però introdotte alcune norme che andranno applicate, indifferentemente dal linguaggio di programmazione che si adotterà per lo sviluppo del codice. \\
+			Il codice dovrà seguire le linee guida	presenti nella Google Python Style Guide \url{https://google-styleguide.googlecode.com/svn/trunk/pyguide.html}.	 \\
+			 
 				\begin{itemize}
 					\item ci dovrà essere un header su ciascun file che conterrà le seguente informazioni:
 						\begin{itemize}
@@ -149,6 +177,20 @@ I casi d'uso devono essere divisi in ordine gerarchico secondo il seguente schem
 							\item email dell'autore;
 							\item dovranno inoltre essere inserite per ogni modifica che verrà effettuata: la successiva versione generata dall'avanzamento, la data, una breve descrizione e l'autore.
 						\end{itemize}
+					\noindent
+Esempio relativo ai file in Python
+					\begin{verbatim}
+					# File: nome_del_file
+					# Author: Cognome Nome
+					# Email: cognome.nome@mashup-unipd.it
+					# Date: AAAA-MM-DD
+					# Modify:
+					# =============================================================
+					# Version       Date           Author              Description  
+					# =============================================================
+					# x.y.z         AAAA-MM-DD     Cognome Nome        Description
+					# -------------------------------------------------------------
+					\end{verbatim}
 					\item i nomi delle variabili dovranno essere in inglese;
 					\item i commenti dovranno essere in italiano
 				\end{itemize}
@@ -170,6 +212,10 @@ I casi d'uso devono essere divisi in ordine gerarchico secondo il seguente schem
 			
 			\paragraph{PhpStorm} % (fold)
 			\label{par:php_storm}
-			L'IDE JetBrain PhpStorm edizione professional, disponibile tramite licenza studentesca, viene utilizzato per scrivere il codice PHP relativo all'applicatvio descritto nella sezione \ref{par:requirements_tool}
+			L'IDE JetBrain PhpStorm edizione professional, disponibile tramite licenza studentesca, viene utilizzato per scrivere il codice PHP relativo all'applicativo descritto nella sezione \ref{par:requirements_tool}
+			\paragraph{PyCharm}
+			L'IDE JetBrain PyCharm edizione professional, disponibile tramite licenza studentesca, viene utilizzato sia per scrivere codice in Python relativo al back-end dell'applicativo, sia per il front-end, quindi per il codice in Javascript e HTML.
+			\paragraph{Google App Engine}
+			\'E una piattaforma cloud per lo sviluppo e l'hosting di applicazioni, sarà utilizzata principalmente per il back-end.
 			% paragraph php_storm (end)
 			 
