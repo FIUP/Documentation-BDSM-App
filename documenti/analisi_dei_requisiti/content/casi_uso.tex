@@ -1235,7 +1235,7 @@
 	\begin{itemize}
 		\item utente con Token di accesso: utente che ha ricevuto dal sistema le credenziali per accedere al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} un utente registrato al sistema può inviare richieste REST al sistema per ottenere i dati del sistema senza utilizzare l'interfaccia Web;
+	\item \textbf{Descrizione:} un utente registrato al sistema può inviare richieste REST al sistema per ottenere i dati di una view senza utilizzare l'interfaccia Web;
 	\item \textbf{Precondizione:} l'utente possiede un token di accesso valido;
 	\item \textbf{Postcondizione:} l'utente ha ricevuto i dati richiesti;
 	\item \textbf{Flusso principale degli eventi:}
@@ -1305,6 +1305,7 @@
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Invio richiesta di invalidamento token (UC2.3.1);
+		\item Ricezione conferma (UC2.3.3);
 	\end{enumerate}
 	\item \textbf{Estensioni:} Fallimento richiesta (UC2.3.2).
 \end{itemize}
@@ -1332,6 +1333,18 @@
 	\item \textbf{Descrizione:} il sistema avvisa che il token di cui era stata chiesta la disabilitazione era già non valido;
 	\item \textbf{Precondizione:} l'utente ha chiesto l'invalidamento di un token non valido;
 	\item \textbf{Postcondizione:} l'utente ha preso atto del fatto che il token era già stato invalidato.
+\end{itemize}
+
+\subsubsection{UC2.3.2: Fallimento richiesta}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente con Token di accesso: utente che ha ricevuto dal sistema le credenziali per accedere al servizio;
+	\end{itemize}
+	\item \textbf{Descrizione:} il sistema ritorna una conferma dell'avvenuta invalidazione del token;
+	\item \textbf{Precondizione:} l'utente ha chiesto l'invalidamento di un token valido;
+	\item \textbf{Postcondizione:} l'utente ha preso atto del fatto che il token è stato invalidato.
 \end{itemize}
 
 

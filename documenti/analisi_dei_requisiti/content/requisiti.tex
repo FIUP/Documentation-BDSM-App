@@ -281,6 +281,36 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		RDF9.3.1.3  &  Se c'è stato un errore appare un messaggio d'errore e si è riportati alla pagina di modifica di un utente  & UC1.7.4\\
 		\hline
+		RDF10  &  Il sistema fornisce una serie di servizi REST  & Capitolato \\
+		\hline
+		RDF10.1  &  Il sistema è un grado di gestire una richiesta contenente come parametri username e password restituendo un token di accesso  & UC2.1 \newline UC2.1.1 \\
+		\hline
+		RDF10.1.1  &  Il sistema restituisce un errore se l'username o la password inviati con la richiesta non sono validi & UC2.1.2 \\
+		\hline
+		RDF10.1.1.1  &  L'username è considerato non valido se non presente tra quelli registrati al sistema  & UC2.1.2 \\
+		\hline
+		RDF10.1.1.2  &  La password è considerata non valida se non corrisponde alla password associata allo username inviato  & UC2.1.2 \\
+		\hline
+		RDF10.1.2  &  Il sistema genera e restituisce un token di accesso se username e password sono validi  & UC2.1.3 \\
+		\hline
+		RDF10.2  &  I token di accesso sono stringhe alfanumeriche di 200 caratteri  & Interno \\
+		\hline
+		RDF10.3  &  I token sono considerati validi fino ad un'ora dalla loro creazione & Interno \\
+		\hline
+		RDF10.4  &  L'utente può richiedere che un token valido venga considerato non valido  & UC2.3 \\
+		\hline
+		RDF10.4.1  &  Il sistema è in grado di gestire una richiesta di chiusura sessione contenente un token di accesso valido rendendolo non valido & UC2.3 \newline UC2.3.1 \\
+		\hline
+		RDF10.4.2  &  Il sistema restituisce un errore se il token di cui è richiesta l'invalidazione è già non valido & UC2.3.2 \\
+		\hline
+		RDF10.4.3  &  Il sistema restituisce una conferma dell'avvenuta invalidazione del token & UC2.3.3 \\
+		\hline
+		RDF10.5  &  Il sistema è in grado di gestire una richiesta che richiede i dati di una view contenente un token di accesso  &  UC2.2 \newline UC2.2.1 \\
+		\hline
+		RDF10.5.1  &  Il sistema restituisce i dati richiesti se il token utilizzato è valido  &  UC2.2.3 \\
+		\hline
+		RDF10.5.1  &  Il sistema restituisce un errore se il token utilizzato è non valido  &  UC2.2.2 \\
+		\hline
 
 	\end{longtable}
 	\egroup
@@ -327,6 +357,10 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		ROQ1.1  &  Il manuale utente deve rispettare le norme e le metriche descritte nel \docNameVersionPdQ  &  Interno \\
 		\hline
 		ROQ2  &  Tutto il codice rispetta le norme e le metriche descritte nel \docNameVersionPdQ{} e nelle \docNameVersionNdP  &  Interno \\
+		\hline
+		RDQ1  &  Viene fornito un manuale per l'uso dei servizi REST offerti dal sistema  &  Interno \\
+		\hline
+		RDQ1.1  &  Il manuale dei servizi REST deve rispettare le norme e le metriche descritte nel \docNameVersionPdQ  &  Interno \\
 		\hline
 
 
