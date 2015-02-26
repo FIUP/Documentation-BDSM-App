@@ -7,13 +7,13 @@
 % =================================================================================================
 % Modification History:
 % Version		Modifier Date		Change											Author
-% 0.0.1 		2014/12/30 			aggiunta sezione e iniziata stesura			Roetta Marco
+% 0.0.1 		2014/12/30 			aggiunta sezione e iniziata stesura				Roetta Marco
 % =================================================================================================
 % Version		Modifier Date		Change											Author
 % 0.0.2 		2015/01/12 			Aggiunto elenco Casi d'uso incompleto			Roetta Marco
 % =================================================================================================
 % Version		Modifier Date		Change											Author
-% 0.0.3 		2015/01/12 			Aggiunta descrizione ai casi principali		Roetta Marco
+% 0.0.3 		2015/01/12 			Aggiunta descrizione ai casi principali			Roetta Marco
 % =================================================================================================
 % Version		Modifier Date		Change											Author
 % 0.0.4 		2015/01/13 			Aggiunte altre descrizioni				 		Roetta Marco
@@ -32,6 +32,9 @@
 % =================================================================================================
 % Version		Modifier Date		Change											Author
 % 1.0.0 		2015/01/20 			Inizio Verifica				 					Nicola Faccin
+% =================================================================================================
+% Version		Modifier Date		Change											Author
+% 1.0.1 		2015/02/26 			Aggiunti UC2 e figli		 					Carnovalini Filippo
 % =================================================================================================
 %
 
@@ -1111,5 +1114,225 @@
 	\item \textbf{Precondizione:} i dati inseriti non rispettano uno o più vincoli di sistema;
 	\item \textbf{Postcondizione:} l'utente ha visualizzato l'errore relativo ai dati inseriti.
 \end{itemize}
+
+\pagebreak
+
+%
+%
+%
+%
+%---------------------------------------INIZIO MODIFICHE ----------------------------------------
+%
+%
+%
+%
+
+\subsection{UC2: Servizi REST}
+
+%\begin{figure}[htbp]
+%	\centering
+%	\centerline{\includegraphics[scale=0.45]{./images/UC2.pdf}}
+%	\caption{UC2 - Servizi REST}
+%\end{figure}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente: utente che desidera accedere al servizio;
+		\item utente con Token di accesso: utente che ha ricevuto dal sistema le credenziali per accedere al servizio;
+	\end{itemize}
+	\item \textbf{Descrizione:} dopo l'accesso al servizio:
+	\begin{itemize}
+		\item un utente può richiedere un token di accesso usando il suo username e la sua password;
+		\item un utente con token di accesso può fare ciò che può fare l'utente, e in più può inviare una richiesta REST usando il suo token e richiedere che venga terminata la sua sessione aperta facendo scadere il token;
+	\end{itemize}
+	\item \textbf{Precondizione:} l'utente o l'utente con token di accesso dispongono di una connessione con il sistema; Dispongono inoltre di un username e una password riconosciute del sistema ottenute registrandosi tramite l'intefaccia Web.
+	\item \textbf{Postcondizione:} il servizio ha erogato correttamente le funzionalità richieste dall'utente;
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{enumerate}
+		\item Richiesta token di accesso (UC2.1);
+		\item Invio richiesta REST (UC2.2);
+		\item Chiusura della sessione (UC2.3);
+	\end{enumerate}
+\end{itemize}
+
+\pagebreak
+
+\subsection{UC2.1: Richiesta token di accesso}
+
+%\begin{figure}[htbp]
+%	\centering
+%	\centerline{\includegraphics[scale=0.45]{./images/UC2_1.pdf}}
+%	\caption{UC2.1 - Richiesta token di accesso}
+%\end{figure}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente: utente che desidera ottenere un token di accesso;
+	\end{itemize}
+	\item \textbf{Descrizione:} l'utente può ottenere un token di accesso per i servizi REST inviando l'apposita richiesta;
+	\item \textbf{Precondizione:} l'utente desidera avere un nuovo token di accesso;
+	\item \textbf{Postcondizione:} l'utente ha ottenuto un token di accesso;
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{enumerate}
+		\item Invio richiesta contenente username e password (UC2.1.1);
+		\item Ricezione token di accesso (UC2.1.3);
+	\end{enumerate}
+	\item \textbf{Estensioni:} Fallimento autenticazione (UC2.1.2).
+\end{itemize}
+
+
+\subsubsection{UC2.1.1: Invio richiesta contenente username e password}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente: utente che desidera ottenere un token di accesso;
+	\end{itemize}
+	\item \textbf{Descrizione:} l'utente invia la richiesta contenente il suo username e la sua password;
+	\item \textbf{Precondizione:} l'utente si è registrato presso il sistema tramite l'interfaccia Web e dispone di un username e di una password;
+	\item \textbf{Postcondizione:} il sistema riceve la richiesta inviata dall'utente.
+\end{itemize}
+
+\subsubsection{UC2.1.2: Fallimento autenticazione}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente: utente che desidera ottenere un token di accesso;
+	\end{itemize}
+	\item \textbf{Descrizione:} viene ritonato un errore che indica che l'autenticazione non è andata buon fine;
+	\item \textbf{Precondizione:} il sistema ha ricevuto una richiesta di token contenente uno username non riconosciuto dal sistema o una password non corrispondente a quella associata allo username inserito;
+	\item \textbf{Postcondizione:} l'utente ha preso atto del fallimento.
+\end{itemize}
+
+\subsubsection{UC2.1.3: Ricezione token di accesso}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente: utente che desidera ottenere un token di accesso;
+	\end{itemize}
+	\item \textbf{Descrizione:} Il sistema ritorna un token di accesso per l'utente che l'ha richiesto;
+	\item \textbf{Precondizione:} il sistema aveva ricevuto una richiesta da un utente registrato per fornire un token di accesso;
+	\item \textbf{Postcondizione:} l'utente ha ottenuto un token di accesso valido.
+\end{itemize}
+
+
+\pagebreak
+
+\subsection{UC2.2: Invio richiesta REST}
+
+%\begin{figure}[htbp]
+%	\centering
+%	\centerline{\includegraphics[scale=0.45]{./images/UC2_2.pdf}}
+%	\caption{UC2.2 - Invio richiesta REST}
+%\end{figure}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente con Token di accesso: utente che ha ricevuto dal sistema le credenziali per accedere al servizio;
+	\end{itemize}
+	\item \textbf{Descrizione:} un utente registrato al sistema può inviare richieste REST al sistema per ottenere i dati del sistema senza utilizzare l'interfaccia Web;
+	\item \textbf{Precondizione:} l'utente possiede un token di accesso valido;
+	\item \textbf{Postcondizione:} l'utente ha ricevuto i dati richiesti;
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{enumerate}
+		\item Invio richiesta contenente token (UC2.2.1);
+		\item Ricezione risultato (UC2.2.3);
+	\end{enumerate}
+	\item \textbf{Estensioni:} Fallimento richiesta (UC2.2.2).
+\end{itemize}
+
+
+\subsubsection{UC2.2.1: Invio richiesta contenente token}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente con Token di accesso: utente che ha ricevuto dal sistema le credenziali per accedere al servizio;
+	\end{itemize}
+	\item \textbf{Descrizione:} l'utente invia una richiesta avente come parametro il token di accesso;
+	\item \textbf{Precondizione:} l'utente possiedeun token di accesso valido;
+	\item \textbf{Postcondizione:} il sistema riceve la richiesta inviata.
+\end{itemize}
+
+\subsubsection{UC2.2.2: Fallimento richiesta}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente con Token di accesso: utente che ha ricevuto dal sistema le credenziali per accedere al servizio;
+	\end{itemize}
+	\item \textbf{Descrizione:} il sistema ritorna un errore riportando se il token è non valido o se è stato commesso un errore di sintassi;
+	\item \textbf{Precondizione:} l'utente ha inviato una richiesta usando un token non valido o con un errore di sintassi;
+	\item \textbf{Postcondizione:} l'utente ha preso atto del fallimento della richiesta.
+\end{itemize}
+
+\subsubsection{UC2.1.3: Ricezione risultato}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente con Token di accesso: utente che ha ricevuto dal sistema le credenziali per accedere al servizio;
+	\end{itemize}
+	\item \textbf{Descrizione:} vengono ritornati all'utente i dati che aveva richiesto;
+	\item \textbf{Precondizione:} l'utente aveva inviato una richiesta al sistema;
+	\item \textbf{Postcondizione:} l'utente ha ricevuto i dati richiesti.
+\end{itemize}
+
+
+\pagebreak
+
+\subsection{UC2.3: Chiusura della sessione}
+
+%\begin{figure}[htbp]
+%	\centering
+%	\centerline{\includegraphics[scale=0.45]{./images/UC2_3.pdf}}
+%	\caption{UC2.3 - Chiusura della sessione}
+%\end{figure}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente con Token di accesso: utente che ha ricevuto dal sistema le credenziali per accedere al servizio;
+	\end{itemize}
+	\item \textbf{Descrizione:} l'utente può richiedere che un token di accesso di cui dispone venga disabilitato e dunque non possa essere più usato per accedere ai servizi;
+	\item \textbf{Precondizione:} l'utente dispone di un token di accesso valido;
+	\item \textbf{Postcondizione:} il token di accesso non è più valido;
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{enumerate}
+		\item Invio richiesta di invalidamento token (UC2.3.1);
+	\end{enumerate}
+	\item \textbf{Estensioni:} Fallimento richiesta (UC2.3.2).
+\end{itemize}
+
+
+\subsubsection{UC2.3.1: Invio richiesta di invalidamento token}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente con Token di accesso: utente che ha ricevuto dal sistema le credenziali per accedere al servizio;
+	\end{itemize}
+	\item \textbf{Descrizione:} l'utente invia una apposita richiesta contenente il token che desidera venga disabilitato;
+	\item \textbf{Precondizione:} il token di cui viene richiesta la disabilitazione è valido;
+	\item \textbf{Postcondizione:} il token di accesso non è più valido.
+\end{itemize}
+
+\subsubsection{UC2.3.2: Fallimento richiesta}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente con Token di accesso: utente che ha ricevuto dal sistema le credenziali per accedere al servizio;
+	\end{itemize}
+	\item \textbf{Descrizione:} il sistema avvisa che il token di cui era stata chiesta la disabilitazione era già non valido;
+	\item \textbf{Precondizione:} l'utente ha chiesto l'invalidamento di un token non valido;
+	\item \textbf{Postcondizione:} l'utente ha preso atto del fatto che il token era già stato invalidato.
+\end{itemize}
+
 
 \pagebreak
