@@ -18,6 +18,12 @@
 \section{Modelli e standard di qualità}
   	\subsection{Standard ISO/IEC 9126}
   	Lo standard ISO/IEC 9126 è uno standard creato per delineare delle normative utili a descrivere un modello di qualità del software. Lo standard propone un approccio in cui viene posta attenzione al miglioramento dell'organizzazione e dei processi di una società di software, in modo da migliorare di conseguenza la qualità del prodotto software.\\
+  	\begin{figure}[h]
+		\centering
+		\includegraphics[width=140mm]{images/iso_9126.png}
+		\caption{Schema del modello di qualità ISO/IEC 9126}
+		\label{fig:iso9126}
+	\end{figure}
   	Lo standard ISO/IEC 9126 è suddiviso in quattro parti:
 		\begin{itemize}
 			\item \textbf{Modello di qualità: } la prima parte dello standard classifica il modello di qualità in sei caratteristiche generali e in varie sotto caratteristiche misurabili tramite l'utilizzo di metriche.\\
@@ -25,7 +31,7 @@
 				\begin{itemize}
 					\item \textbf{Funzionalità:} capacità di un prodotto software di fornire funzioni che soddisfano esigenze stabilite
 						\begin{itemize}
-							\item \textbf{Appropriatezza:} capacità del prodotto software di fornire un appropriato insieme di funzioni per gli specificati compiti ed obiettivi prefissati all'utente;
+							\item \textbf{Appropriatezza:} capacità del prodotto software di fornire un appropriato insieme di funzioni per i specifici compiti ed obiettivi prefissati all'utente;
 							\item \textbf{Accuratezza:} capacità del prodotto software di fornire i risultati richiesti;
 							\item \textbf{Interoperabilità:} capacità del prodotto software di interagire con i diversi sistemi specificati;
 							\item \textbf{Conformità:} capacità del prodotto software di aderire agli standard e alle convenzioni appartenenti al settore in cui vengono applicati;
@@ -84,31 +90,32 @@
 		\end{itemize}
 	Per ogni processo, viene definito un livello di capacità dei processi definito da una scala di sei livelli e da nove attributi suddivisi nei vari livelli:
 		\begin{itemize}
-			\item \textbf{Level 5. Optimizing process;}
+			\item \textbf{Level 5. Optimizing process:} il processo è predicibile ed in grado di adattarsi per raggiungere
+obiettivi specifici
 				\begin{itemize}
-					\item Process Innovation;
-					\item Process Optimization.
+					\item \textbf{Process Innovation:} le modifiche ad un processo sono identificate ed implementate al fine di ottenere il miglioramento continuo nel raggiungimento degli obiettivi;
+					\item \textbf{Process Optimization:} le modifiche alla definizione, gestione, attuazione di un processo sono controllate.
 				\end{itemize}
-			\item \textbf{Level 4. Predictable process;}
+			\item \textbf{Level 4. Predictable process:} il processo è stabilizzato ed è attuato all'interno di definiti limiti di controllo
 				\begin{itemize}
-					\item Process Measurement;
-					\item Process Control.
+					\item \textbf{Process Measurement:} i risultati raggiunti e le misure rilevate durante l'attuazione di un processo sono utilizzati per garantire il raggiungimento di specifici obiettivi;
+					\item \textbf{Process Control:} un processo è controllato attraverso le misure di prodotto e di processo rilevate, al fine di migliorare le modalità di attuazione del processo stesso.
 				\end{itemize}
-			\item \textbf{Level 3. Established process;}
+			\item \textbf{Level 3. Established process:} il processo è attuato, pianificato e controllato sulla base di procedure standard basate sui principi dell'ingegneria del software
 				\begin{itemize}
-					\item Process Definition;
-					\item Process Deployment.
+					\item \textbf{Process Definition:} l'attuazione di un processo, per raggiungere gli obiettivi, si basa sull'adozione di approcci standard;
+					\item \textbf{Process Deployment:} l'attuazione di un processo, per raggiungere gli obiettivi, fa uso di risorse umane e tecniche appropriate.
 				\end{itemize}
-			\item \textbf{Level 2. Managed process;}
+			\item \textbf{Level 2. Managed process:} il processo è attuato ma anche pianificato, tracciato, verificato ed aggiustato se necessario, sulla base di obiettivi ben definiti
 				\begin{itemize}
-					\item Performance Management;
-					\item Work Product Management.
+					\item \textbf{Performance Management:} l'implementazione di un processo è pianificato e controllato al fine di produrre risultati coerenti agli obiettivi attesi;
+					\item \textbf{Work Product Management:} l'implementazione di un processo è pianificato e controllato al fine di produrre risultati documentati, controllati e verificati in modo appropriato.
 				\end{itemize}			
-			\item \textbf{Level 1. Performed process;}
+			\item \textbf{Level 1. Performed process:} il processo viene messo in atto e raggiunge i suoi obiettivi. Il risultato potrebbe non essere stato pianificato e tracciato rigorosamente
 				\begin{itemize}
-					\item Process Performance.
+					\item \textbf{Process Performance:} capacità di un processo di raggiungere i suoi obiettivi trasformando input identificabili in output identificabili.
 				\end{itemize}
-			\item \textbf{Level 0. Incomplete process.}
+			\item \textbf{Level 0. Incomplete process:} il processo non è stato implementato oppure non raggiunge gli obiettivi.
 		\end{itemize}
 	Ogni attributo è misurabile tramite l'utilizzo di una scala di valutazione divisa in quattro punti:
 		\begin{itemize}
@@ -136,12 +143,14 @@
 			\end{itemize}
 			\begin{figure}[h]
 				\centering
-				\includegraphics[width=90mm]{images/pdca.png}
+				\includegraphics[width=120mm]{images/pdca.png}
 				\caption{Ciclo di miglioramento della qualità PDCA}
 				\label{fig:pdca}
 			\end{figure}
-		\pagebreak
+		
 
+
+\pagebreak
 \section{Resoconto delle attività di verifica}
 	\subsection{Dettaglio delle verifiche tramite analisi}
 		\subsubsection{Verifica della documentazione}
