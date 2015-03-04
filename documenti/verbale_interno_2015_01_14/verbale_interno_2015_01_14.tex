@@ -1,15 +1,15 @@
 % =================================================================================================
-% File:			verbale_esterno_2015_02_18.tex
-% Description:	Defiinisce la struttura del documento di Nome del documento 
-% Created:		2015-02-19
-% Author:		Cusinato Giacomo
-% Email:		cusinato.giacomo@mashup-unipd.it
+% File:			verbale_interno_2015_01_14.tex
+% Description:	Defiinisce la struttura del verbale relativo al primo incontro con il proponente
+% Created:		2015-01-17
+% Author:		Faccin Nicola
+% Email:		faccin.nicola@mashup-unipd.it
 % =================================================================================================
 % Modification History:
 % Version		Modifier Date		Change											Author
-% 0.0.1 		2015-02-19 			inizializzate variabili							Cusinato Giacomo
+% 0.0.1 		2015-01-17 			ridefinizione dei comandi						Faccin Nicola
 % =================================================================================================
-% 0.0.2			2015-02-19			rimossi table of contents						Cusinato Giacomo
+% 1.0.1			2015-02-04			aggiornamento a verbale interno da esterno		Tesser Paolo
 % =================================================================================================
 %
 
@@ -21,27 +21,20 @@
 
 \begin{document}
 	% COMANDI DA RIDEFINIRE
-	\renewcommand{\documentName}{\emph{Verbale del 2015-02-18}}
+	\renewcommand{\documentName}{\emph{Verbale del 2015-01-14}}
 	\renewcommand{\documentVersion}{\emph{1.0.0}}
-	\renewcommand{\documentDate}{2015-02-19}
-	\renewcommand{\documentEditors}{Cusinato Giacomo}
-	\renewcommand{\documentVerifiers}{Roetta Marco}
-	\renewcommand{\documentApprovers}{Santacatterina Luca}
-	\renewcommand{\documentUsage}{Esterno}
-	\renewcommand{\documentSummary}{Questo documento riassume il secondo incontro tra il proponente e il gruppo \groupName.}
+	\renewcommand{\documentDate}{2015-01-14}
+	\renewcommand{\documentEditors}{Faccin Nicola}
+	\renewcommand{\documentVerifiers}{Santacatterina Luca}
+	\renewcommand{\documentApprovers}{Tesser Paolo}
+	\renewcommand{\documentUsage}{Interno}
+	\renewcommand{\documentSummary}{Questo documento riassume il primo incontro tra il proponente e il gruppo \groupName.}
 
 	% FRONTESPIZIO
 	\pagenumbering{gobble}
 	\pagestyle{styleFirstPage}
 	\input{../template/source/firstpage}
 	\pagebreak
-
-
-	% PAGINA REVISIONI & PAGINA INDICI
-	\setcounter{page}{1}
-	\pagestyle{styleIndexPage}
-	\input{doc_to_modify/history}\pagebreak
-
 
 	% PAGINE CONTENUTI
 	\setcounter{page}{1}

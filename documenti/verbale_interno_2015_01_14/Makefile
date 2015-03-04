@@ -2,7 +2,7 @@ latex=pdflatex -synctex=1 -interaction=nonstopmode
 # aspell=sudo aspell --mode=tex --lang=it check
 
 compile: 
-	$(latex) verbale_esterno_2015_01_14.tex && $(latex) verbale_esterno_2015_01_14.tex
+	$(latex) verbale_interno_2015_01_14.tex && $(latex) verbale_interno_2015_01_14.tex
 	rm -rf *.aux 
 	rm -rf *.log
 	rm -rf *.out
@@ -12,12 +12,12 @@ compile:
 	rm -rf *.lot
 	@echo "*** Apertura file PDF ***"
 	@case $(shell uname) in \
-		Darwin*) open verbale_esterno_2015_01_14.pdf;; \
-		Linux*) verbale_esterno_2015_01_14.pdf;; \
+		Darwin*) open verbale_interno_2015_01_14.pdf;; \
+		Linux*) verbale_interno_2015_01_14.pdf;; \
 	esac
 
 compilenoopen:
-	$(latex) verbale_esterno_2015_01_14.tex && $(latex) verbale_esterno_2015_01_14.tex
+	$(latex) verbale_interno_2015_01_14.tex && $(latex) verbale_interno_2015_01_14.tex
 	rm -rf *.aux 
 	rm -rf *.log
 	rm -rf *.out
