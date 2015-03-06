@@ -21,6 +21,7 @@ Thumbs.db
 
 # rimuove i file .pdf generati dalla compilazione in LaTex che possono causare conflitti durante il pull
 
+documenti/specifica_tecnica/specifica_tecnica.pdf
 documenti/analisi_dei_requisiti/analisi_dei_requisiti.pdf
 documenti/norme_di_progetto/norme_di_progetto.pdf
 documenti/glossario/glossario.pdf
