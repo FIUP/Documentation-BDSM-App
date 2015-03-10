@@ -50,7 +50,8 @@ In questa sezione verranno descritte le tecnologie su cui si basa lo sviluppo de
 		Javascript è il linguaggio di scripting che verrà utilizzato lato client per la creazione e l'interazione con l'interfaccia utente. \newline
 		\textbf{Pro}:
 			\begin{itemize}
-				\item 
+				\item permette alle pagine di essere dinamiche, reagendo a eventi scaturiti dall'utente;
+				\item permette di validare in prima istanza i dati inseriti dagli utenti.
 			\end{itemize}
 		\noindent
 		\newline
@@ -63,7 +64,7 @@ In questa sezione verranno descritte le tecnologie su cui si basa lo sviluppo de
 
 		\subsubsection{JSON} % (fold)
 		\label{ssub:json}
-		TO DO \newline
+		JSON (Javascript Object Notation) è il formato di dati scelto per lo scambio di informazioni tra il client e il server. \newline
 		\textbf{Pro}:
 			\begin{itemize}
 				\item utilizzo semplice tramite Javascript;
@@ -74,34 +75,31 @@ In questa sezione verranno descritte le tecnologie su cui si basa lo sviluppo de
 
 		\subsubsection{Python} % (fold)
 		\label{sub:python}
-		TO DO \newline
+		Python è il linguaggio utilizzato per gestire il back-end dell'applicazione. \newline
 		\textbf{Pro}:
 			\begin{itemize}
-				\item 
+				\item presenza di una code convention molto forte;
+				\item permette una potente manipolazione dei dati;
 			\end{itemize}
 		\noindent
 		\newline
 		\textbf{Contro}:
 			\begin{itemize}
-				\item 
+				\item assenza di costrutti come lo switch;
+				\item assenza di tipizzazione statica, sarà compito del programmatore rendere esplicito il tipo delle variabili nel codice seguendo delle norme stabiliti nel \docNameVersionNdP.
 			\end{itemize}
 			\noindent
 		% subsubsection python (end)
 
 		\subsubsection{YAML} % (fold)
 		\label{ssub:yaml}
-		TO DO \newline
+		YAML (YAML Ain't a Markup Language) è il formato di fati per la serializzazione di dati utilizzabile da esseri umani. \newline
+		La sua scelta è stata vincolata all'utilizzo della Google App Engine con Python. \newline
 		\textbf{Pro}:
 			\begin{itemize}
-				\item 
+				\item formato di una facile comprensione per un umano.
 			\end{itemize}
 		\noindent
-		\newline
-		\textbf{Contro}:
-			\begin{itemize}
-				\item 
-			\end{itemize}
-			\noindent
 		% subsubsection yaml (end)
 
 	% subsection linguaggi (end)
@@ -110,21 +108,16 @@ In questa sezione verranno descritte le tecnologie su cui si basa lo sviluppo de
 	\label{sub:framework}
 		\subsubsection{AngularJS} % (fold)
 		\label{ssub:angularjs}
-		TO DO \newline
+		AngularJS è il framework javascript utilizzato per gestire il lato client dell'applicazione. \newline
 		\textbf{Pro}:
 			\begin{itemize}
-				\item 
+				\item presenza di una vasta comunità a supporto;
+				\item design pattern MVC e Dependency Injection già presente all'interno del framework.
 			\end{itemize}
 		\noindent
-		\newline
-		\textbf{Contro}:
-			\begin{itemize}
-				\item 
-			\end{itemize}
-			\noindent
 		% subsubsection angularjs (end)
 
-		\subsubsection{JINJA} % (fold)
+		\subsubsection{JINJA2} % (fold)
 		\label{ssub:jinja}
 		TO DO (da decidere)
 		% subsubsection jinja (end)
@@ -135,26 +128,27 @@ In questa sezione verranno descritte le tecnologie su cui si basa lo sviluppo de
 	\label{sub:librerie}
 		\subsubsection{Chart.js} % (fold)
 		\label{ssub:chartsjs}
-		TO DO \newline
+		Chart.js è la libreria di grafici in javascript utilizzata per la generazione della maggior parte dei grafici che l'utente andrà a vedere. La libreria è reperibile al seguente indirizzo: \url{http://www.chartjs.org/}. \newline
 		\textbf{Pro}:
 			\begin{itemize}
-				\item
+				\item permette ai grafici di essere responsive;
+				\item presenza di implementazioni per il framework AngularJS.
 			\end{itemize}
 		\noindent
 		\newline
 		\textbf{Contro}:
 			\begin{itemize}
-				\item
+				\item assenza di un map chart, che andrà cercato in un'altra libreria.
 			\end{itemize}
 			\noindent
 		% subsubsection chartsjs (end)
 		
 		\subsubsection{facebook-sdk} % (fold)
 		\label{ssub:facebook_sdk}
-		TO DO \newline
+		Facebook-sdk è la libreria scelta per effettuare in maniera più semplice e astratta le chiamate alle API di Facebook .La libreria è reperibile al seguente indirizzo: \url{https://facebook-sdk.readthedocs.org/en/latest/}. \newline
 		\textbf{Pro}:
 			\begin{itemize}
-				\item
+				\item è la libreria maggiormente consigliata dalla comunità di Python.
 			\end{itemize}
 		\noindent
 		\newline
@@ -167,18 +161,12 @@ In questa sezione verranno descritte le tecnologie su cui si basa lo sviluppo de
 
 		\subsubsection{Google Cloud Datastore} % (fold)
 		\label{ssub:datastore}
-		TO DO \newline
+		Google Cloud Datastore è il database NoSQL che viene utilizzato per l'immagazzinamento di tutti i dati. \'E quello fornito dalla Google App Engine. \newline
 		\textbf{Pro}:
 			\begin{itemize}
-				\item
+				\item permette un forte livello di astrazione che nasconde la complessità dei database schema-less;
+				\item presenza di un linguaggio (GQL) utilizzato per l'effettuazione di query con la stessa sintassi di MySQL.
 			\end{itemize}
-		\noindent
-		\newline
-		\textbf{Contro}:
-			\begin{itemize}
-				\item
-			\end{itemize}
-			\noindent
 		% subsubsection datastore (end)
 	% subsection database (end)
 
