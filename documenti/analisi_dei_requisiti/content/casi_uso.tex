@@ -312,7 +312,7 @@
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} questa è la Home Screen dell'utente attualmente connesso, qui potrà visualizzare tutte le View precedentemente create sotto forma di grafici e accedere al menu di configurazione: può da qui accedere all'elenco di tutte le sue View, può aggiungerne una nuova, modificarne o cancellarne una esistente;
+	\item \textbf{Descrizione:} questa è la Home Screen dell'utente attualmente connesso, qui potrà visualizzare tutte le View precedentemente selezionate sotto forma di grafici e accedere al menu di configurazione: può accedere all'elenco di tutte le sue View, può aggiungerne una nuova o rimuoverne una esistente dal suo elenco personale;
 	\item \textbf{Precondizione:} l'utente ha effettuato il login ed è stato reindirizzato a questa pagina oppure ha selezionato il pulsante Home Screen da una delle pagine della WebGUI;
 	\item \textbf{Postcondizione:} l'utente viene reindirizzato alla home screen e visualizza le informazioni richieste;
 	\item \textbf{Flusso principale degli eventi:}
@@ -320,6 +320,7 @@
 		\item Apertura elenco View (UC1.3.1.1).
 	\end{enumerate}
 \end{itemize}
+
 \subsubsection{UC1.3.1.1: Apertura elenco View}
 
 \begin{itemize}
@@ -327,9 +328,26 @@
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} premendo sull'apposito pulsante è possibile far comparire a video l'elenco di tutte le View utente;
+	\item \textbf{Descrizione:} premendo sull'apposito pulsante è possibile far comparire a video l'elenco di tutte le View utente divise per categoria;
 	\item \textbf{Precondizione:} l'utente si trova nella home screen;
 	\item \textbf{Postcondizione:} l'utente ha ottenuto l'elenco di tutte le sue View.
+\end{itemize}
+
+\subsubsection{UC1.3.2: Aggiungi una View a Home Screen}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente autenticato: utente autenticato che ha accesso al servizio;
+	\end{itemize}
+	\item \textbf{Descrizione:} 
+	
+	\item \textbf{Precondizione:} l'utente ha visualizzato l'elenco delle View;
+	\item \textbf{Postcondizione:} La View selezionata è stata aggiunta all'elenco delle View preferite dell'utente visualizzabili nella sua Home Screen;
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{enumerate}
+		\item Apertura elenco View (UC1.3.1.1).
+	\end{enumerate}
 \end{itemize}
 
 \pagebreak
