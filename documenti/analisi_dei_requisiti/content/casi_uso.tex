@@ -1,41 +1,38 @@
 % =================================================================================================
 % File:			capitolo_3.tex
 % Description:	Definisce il capitolo che descrive generalmente il prodotto per il commitente
-% Created:		2014/12/10
+% Created:		2014-12-10
 % Author:		Roetta Marco
 % Email:		roetta.marco@mashup-unipd.it
-% =================================================================================================
+% =============================================================================================================================
 % Modification History:
-% Version		Modifier Date		Change											Author
-% 0.0.1 		2014/12/30 			aggiunta sezione e iniziata stesura				Roetta Marco
-% =================================================================================================
-% Version		Modifier Date		Change											Author
-% 0.0.2 		2015/01/12 			Aggiunto elenco Casi d'uso incompleto			Roetta Marco
-% =================================================================================================
-% Version		Modifier Date		Change											Author
-% 0.0.3 		2015/01/12 			Aggiunta descrizione ai casi principali			Roetta Marco
-% =================================================================================================
-% Version		Modifier Date		Change											Author
-% 0.0.4 		2015/01/13 			Aggiunte altre descrizioni				 		Roetta Marco
-% =================================================================================================
-% Version		Modifier Date		Change											Author
-% 0.0.5 		2015/01/13 			Completato elenco UC					 		Roetta Marco
-% =================================================================================================
-% Version		Modifier Date		Change											Author
-% 0.0.6 		2015/01/15 			Modifica UC dopo incontro				 		Roetta Marco
-% =================================================================================================
-% Version		Modifier Date		Change											Author
-% 0.1.0 		2015/01/15 			Completata sezione						 		Roetta Marco
-% =================================================================================================
-% Version		Modifier Date		Change											Author
-% 0.1.1 		2015/01/15 			Correzioni ortografiche					 		Roetta Marco
-% =================================================================================================
-% Version		Modifier Date		Change											Author
-% 1.0.0 		2015/01/20 			Inizio Verifica				 					Nicola Faccin
-% =================================================================================================
-% Version		Modifier Date		Change											Author
-% 1.0.1 		2015/02/26 			Aggiunti UC2 e figli		 					Carnovalini Filippo
-% =================================================================================================
+% Version		Modifier Date		Change																			Author
+% 0.0.1 		2014-12-30 			aggiunta sezione e iniziata stesura												Roetta Marco
+% =============================================================================================================================
+% 0.0.2 		2015-01-12 			Aggiunto elenco Casi d'uso incompleto											Roetta Marco
+% =============================================================================================================================
+% 0.0.3 		2015-01-12 			Aggiunta descrizione ai casi principali											Roetta Marco
+% =============================================================================================================================
+% 0.0.4 		2015-01-13 			Aggiunte altre descrizioni				 										Roetta Marco
+% =============================================================================================================================
+% 0.0.5 		2015-01-13 			Completato elenco UC					 										Roetta Marco
+% =============================================================================================================================
+% 0.0.6 		2015-01-15 			Modifica UC dopo incontro				 										Roetta Marco
+% =============================================================================================================================
+% 0.1.0 		2015-01-15 			Completata sezione						 										Roetta Marco
+% =============================================================================================================================
+% 0.1.1 		2015-01-15 			Correzioni ortografiche					 										Roetta Marco
+% =============================================================================================================================
+% 1.0.0 		2015-01-20 			Inizio Verifica				 													Nicola Faccin
+% =============================================================================================================================
+% 1.0.1 		2015-02-26 			Aggiunti UC2 e figli		 													Carnovalini Filippo
+% =============================================================================================================================
+% 2.0.1			2015-03-11			modificata descrizione UC1.3													Tesser Paolo
+% =============================================================================================================================
+% 2.0.2			2015-03-11			rimossi UC non pertinenti con la nuova analisi, UC1.3.2/3/4/5 con deriviati		Tesser Paolo
+% =============================================================================================================================
+% 2.0.3			2015-03-11			modificati UC riguardanti i servizi REST										Tesser Paolo
+% =============================================================================================================================
 %
 
 % CONTENUTO DEL CAPITOLO
@@ -150,7 +147,7 @@
 	\begin{itemize}
 		\item utente non autenticato: utente non ancora noto al sistema che accede al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} viene mostrato all'utente un messaggio di errore che riporta l'incorrettezza dei dati inseriti. Viene visualizzato un pulsante per tornare alla schermata di login;
+	\item \textbf{Descrizione:} viene mostrato all'utente un messaggio di errore che riporta la non correttezza dei dati inseriti. Viene visualizzato un pulsante per tornare alla schermata di login;
 	\item \textbf{Precondizione:} il sistema ha ricevuto una richiesta di accesso da uno username errato o una password non associata allo username esistente indicato.
 	\item \textbf{Postcondizione:} l'utente ha preso atto del messaggio di errore.
 \end{itemize}
@@ -209,7 +206,7 @@
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} nella sezione delle informazioni personali l'utente puù visualizzare il suo username;
+	\item \textbf{Descrizione:} nella sezione delle informazioni personali l'utente può visualizzare il suo username;
 	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso alla pagina di dettaglio dei dati personali;
 	\item \textbf{Postcondizione:} l'utente ha visualizzato il suo username.
 \end{itemize}
@@ -221,7 +218,7 @@
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} nella sezione delle informazioni personali l'utente puù visualizzare il suo indirizzo email;
+	\item \textbf{Descrizione:} nella sezione delle informazioni personali l'utente può visualizzare il suo indirizzo email;
 	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso alla pagina di dettaglio dei dati personali;
 	\item \textbf{Postcondizione:} l'utente ha visualizzato il suo indirizzo email.
 \end{itemize}
@@ -233,7 +230,7 @@
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} nella sezione delle informazioni personali l'utente puù visualizzare data ed ora del suo ultimo accesso;
+	\item \textbf{Descrizione:} nella sezione delle informazioni personali l'utente può visualizzare data ed ora del suo ultimo accesso;
 	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso alla pagina di dettaglio dei dati personali;
 	\item \textbf{Postcondizione:} l'utente ha visualizzato i dettagli del suo ultimo accesso.
 \end{itemize}
@@ -247,9 +244,9 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} selezionando il pulsante dettagli utente viene mostrata all'utente una pagina con il riepilogo delle sue statistiche, quali:
 	\begin{itemize}
-		\item numero di View attive;
-		\item numero di Recipe disponibili;
-		\item numero di accessi negli ultimi 30 giorni;
+		\item numero di View presenti fornite dal sistema;
+		\item numero di Recipe fornite dal sistema;
+		\item ultimo accesso effettuato dall'utente.
 	\end{itemize}
   \item \textbf{Precondizione:} l'utente ha selezionato il pulsante per l'accesso ai dettagli utente
 	\item \textbf{Postcondizione:} l'utente ha ottenuto le informazioni richieste.
@@ -262,7 +259,7 @@
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} nella sezione delle statistiche personali l'utente puù visualizzare il numero di View attive;
+	\item \textbf{Descrizione:} nella sezione delle statistiche personali l'utente può visualizzare il numero di View attive;
 	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso alla pagina di dettaglio dei dati personali;
 	\item \textbf{Postcondizione:} l'utente ha visualizzato il numero di View attive.
 \end{itemize}
@@ -274,29 +271,18 @@
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} nella sezione delle statistiche personali l'utente puù visualizzare il numero di Recipe disponibili;
+	\item \textbf{Descrizione:} nella sezione delle statistiche personali l'utente può visualizzare il numero di Recipe disponibili;
 	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso alla pagina di dettaglio dei dati personali;
 	\item \textbf{Postcondizione:} l'utente ha visualizzato il numero di View attive.
 \end{itemize}
 
-\subsubsection{UC1.2.2.3: Visualizza numero di accessi negli ultimi 30 giorni}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\begin{itemize}
-		\item utente autenticato: utente autenticato che ha accesso al servizio;
-	\end{itemize}
-	\item \textbf{Descrizione:} nella sezione delle statistiche personali l'utente puù visualizzare il numero accessi effettuati negli ultimi 30 giorni;
-	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso alla pagina di dettaglio dei dati personali;
-	\item \textbf{Postcondizione:} l'utente ha visualizzato il numero accessi effettuati negli ultimi 30 giorni.
-\end{itemize}
 
 \pagebreak
 \subsection{UC1.3: Gestione delle View}
 
 \begin{figure}[!htbp]
 	\centering
-	\centerline{\includegraphics[scale=0.45]{./images/UC1_3.pdf}}
+	\centerline{\includegraphics[scale=0.45]{./images/UC1_3.pdf}} % TO CHANGE
 	\caption{UC1.3 - Gestione delle View}
 \end{figure}
 
@@ -305,32 +291,29 @@
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} gli utenti possono vedere in questa pagina le View e i dati ad esse associate. Per ciascuna View è disponibile un pannello per modificarne i parametri, in oltre si può creare una nuova View o eliminarne una esistente.
+	\item \textbf{Descrizione:} gli utenti possono vedere in questa pagina le View e i dati ad esse associate. Per ciascuna View si possono vedere dei grafici statistici associati a determinati valori.
 	\item \textbf{Precondizione:} l'utente deve aver fatto l'accesso nell'apposita pagina;
-	\item \textbf{Postcondizione:} le informazioni richieste dall'utente sono state fornite, le impostazioni modificate sono state salvate nel sistema e le informazioni aggiunte sono state salvate;
+	\item \textbf{Postcondizione:} le informazioni e i grafici richiesti a seconda della View scelta dall'utente sono stati forniti;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
-		\item Visualizza View (UC1.3.1);
-		\item Aggiungi View (UC1.3.2);
-		\item Modifica View (UC1.3.4);
-		\item Eliminazione View (UC1.3.6);
+		\item Visualizza elenco View (UC1.3.1);
+		\item TO DO (nuovi UC riguardanti i tipi di grafici con i dati che le generano)
 	\end{enumerate}
 	\item \textbf{Estensioni:}
 	\begin{itemize}
-		\item Creazione nuova View fallita (UC1.3.3);
-		\item Errore nella modifica dei dati (UC1.3.5).
+		\item TO DO (da capire se ci possono essere delle estensioni possibili, tipo il grafico non viene correttamente visualizzato perché i dati sono insufficienti)
 	\end{itemize}
 \end{itemize}
 
-\subsubsection{UC1.3.1: Visualizza View}
+\subsubsection{UC1.3.1: Visualizza elenco View}
 
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} questa è la Home Screen dell'utente attualmente connesso, qui potrà visualizzare tutte le View precedentemente create sotto forma di grafici e accedere al menu di configurazione: può da qui accedere all'elenco di tutte le sue view, può aggiungerne una nuova, modificarne o cancellarne una esistente;
-	\item \textbf{Precondizione:} l'utente ha effettuato il login ed è stato reindirizzato a questa pagina oppure ha selezionato il pulsante Home Screen da una delle pagine della WebGui;
+	\item \textbf{Descrizione:} questa è la Home Screen dell'utente attualmente connesso, qui potrà visualizzare tutte le View precedentemente create sotto forma di grafici e accedere al menu di configurazione: può da qui accedere all'elenco di tutte le sue View, può aggiungerne una nuova, modificarne o cancellarne una esistente;
+	\item \textbf{Precondizione:} l'utente ha effettuato il login ed è stato reindirizzato a questa pagina oppure ha selezionato il pulsante Home Screen da una delle pagine della WebGUI;
 	\item \textbf{Postcondizione:} l'utente viene reindirizzato alla home screen e visualizza le informazioni richieste;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
@@ -347,193 +330,6 @@
 	\item \textbf{Descrizione:} premendo sull'apposito pulsante è possibile far comparire a video l'elenco di tutte le View utente;
 	\item \textbf{Precondizione:} l'utente si trova nella home screen;
 	\item \textbf{Postcondizione:} l'utente ha ottenuto l'elenco di tutte le sue View.
-\end{itemize}
-
-\subsubsection{UC1.3.2: Aggiungi View}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\begin{itemize}
-		\item utente autenticato: utente autenticato che ha accesso al servizio;
-	\end{itemize}
-	\item \textbf{Descrizione:} dalla home screen l'utente può aggiungere una nuova View premendo sull'apposito pulsante e compilando i dati richiesti;
-	\item \textbf{Precondizione:} l'utente si è autenticato e si trova nella home screen;
-	\item \textbf{Postcondizione:} il sistema ha creato una nuova View come richiesto dall'utente;
-	\item \textbf{Flusso principale degli eventi:}
-	\begin{enumerate}
-		\item Apertura pannello (UC1.3.2.1);
-		\item Inserimento parametri (UC1.3.2.2);
-		\item Conferma creazione View (UC1.3.2.3).
-	\end{enumerate}
-\end{itemize}
-
-\subsubsection{UC1.3.2.1: Apertura pannello}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\begin{itemize}
-		\item utente autenticato: utente autenticato che ha accesso al servizio;
-	\end{itemize}
-	\item \textbf{Descrizione:} premendo sull'apposito pulsante è possibile far comparire a video il pannello in cui inserire i dati per la creazione di una nuova View;
-	\item \textbf{Precondizione:} l'utente si trova nella home screen;
-	\item \textbf{Postcondizione:} l'utente ha aperto il pannello di creazione di una nuova View.
-\end{itemize}
-
-\subsubsection{UC1.3.2.2: Inserimento parametri}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\begin{itemize}
-		\item utente autenticato: utente autenticato che ha accesso al servizio;
-	\end{itemize}
-	\item \textbf{Descrizione:} l'utente può inserire il nome della View, i parametri obbligatori quali le Recipe da utilizzare e i dati che desidera recuperare da esse e i parametri facoltativi quali una o più analisi da effettuare da un elenco fornito dall'applicazione;
-	\item \textbf{Precondizione:} l'utente ha aperto il pannello di inserimento di una nuova View;
-	\item \textbf{Postcondizione:} l'utente ha inserito le informazioni richieste.
-\end{itemize}
-
-\subsubsection{UC1.3.2.3: Conferma creazione View}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\begin{itemize}
-		\item utente autenticato: utente autenticato che ha accesso al servizio;
-	\end{itemize}
-	\item \textbf{Descrizione:} l'utente è tenuto a confermare i parametri inseriti nel pannello di creazione di una nuova View prima di poter utilizzare il grafico associato.
-	\item \textbf{Precondizione:} l'utente ha inserito almeno i parametri obbligatori;
-	\item \textbf{Postcondizione:} l'utente ha confermato i parametri inseriti e la View è stata salvata nel sistema;
-\end{itemize}
-
-\subsubsection{UC1.3.3: Creazione nuova View fallita}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\begin{itemize}
-		\item utente autenticato: utente autenticato che ha accesso al servizio;
-	\end{itemize}
-	\item \textbf{Descrizione:} nel caso i dati inseriti non rispettino i vincoli del sistema oppure se si verifica un errore lato server, viene visualizzata questa pagina di errore con una breve descrizione dell'anomalia rilevata;
-	\item \textbf{Precondizione:} l'utente ha inserito dei dati che non rispettano i vincoli del sistema. Il server ha sollevato un'eccezione durante il salvataggio dei dati;
-	\item \textbf{Postcondizione:} nessuna modifica richiesta è stata salvata nel sistema.
-\end{itemize}
-
-\subsubsection{UC1.3.4: Modifica View}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\begin{itemize}
-		\item utente autenticato: utente autenticato che ha accesso al servizio;
-	\end{itemize}
-	\item \textbf{Descrizione:} l'utente può modificare i parametri di una View;
-	\item \textbf{Precondizione:} la View è stata creata ed è disponibile nell'elenco delle View dell'utente;
-	\item \textbf{Postcondizione:} i parametri della View selezionata sono stati modificati;
-	\item \textbf{Flusso principale degli eventi:}
-	\begin{enumerate}
-		\item Selezione di una View (UC1.3.4.1);
-		\item Selezione tasto modifica (UC1.3.4.2);
-		\item Inserimento nuovi parametri (UC1.3.4.3);
-		\item Conferma nuovi parametri (UC1.3.4.4).
-	\end{enumerate}
-\end{itemize}
-
-\subsubsection{UC1.3.4.1: Selezione di una View}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\begin{itemize}
-		\item utente autenticato: utente autenticato che ha accesso al servizio;
-	\end{itemize}
-	\item \textbf{Descrizione:} l'utente deve selezionare la View desiderata dall'elenco delle View per poterla visualizzare e modificare;
-	\item \textbf{Precondizione:} l'utente si trova nel suo elenco delle View;
-	\item \textbf{Postcondizione:} l'utente ha selezionato e visualizzato la View desiderata.
-\end{itemize}
-
-\subsubsection{UC1.3.4.2: Selezione tasto modifica}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\begin{itemize}
-		\item utente autenticato: utente autenticato che ha accesso al servizio;
-	\end{itemize}
-	\item \textbf{Descrizione:} l'utente può selezionare il pulsante modifica dal pannello della View attualmente visualizzata per aprire il pannello di modifica della stessa;
-	\item \textbf{Precondizione:} l'utente ha visualizzato correttamente una View;
-	\item \textbf{Postcondizione:} l'utente ha aperto il pannello modifica View.
-\end{itemize}
-
-\subsubsection{UC1.3.4.3: Inserimento nuovi parametri}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\begin{itemize}
-		\item utente autenticato: utente autenticato che ha accesso al servizio;
-	\end{itemize}
-	\item \textbf{Descrizione:} l'utente può inserire i nuovi parametri della View aggiungendoli a quelli esistenti oppure sovrascrivendoli. Può modificare le Recipe da cui prelevare i dati e quali dati utilizzare da ciascuna di essi;
-	\item \textbf{Precondizione:} l'utente ha visualizzato il pannello modifica View;
-	\item \textbf{Postcondizione:} l'utente ha inserito i nuovi parametri.
-\end{itemize}
-
-\subsubsection{UC1.3.4.4: Conferma nuovi parametri}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\begin{itemize}
-		\item utente autenticato: utente autenticato che ha accesso al servizio;
-	\end{itemize}
-	\item \textbf{Descrizione:} l'utente deve confermare i parametri inseriti prima che questi siano salvati;
-	\item \textbf{Precondizione:} l'utente ha inserito i parametri desiderati;
-	\item \textbf{Postcondizione:} i nuovi parametri sono stati memorizzati nel sistema e attivi.
-\end{itemize}
-
-\subsubsection{UC1.3.5: Errore nella modifica dei dati}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\begin{itemize}
-		\item utente autenticato: utente autenticato che ha accesso al servizio;
-	\end{itemize}
-	\item \textbf{Descrizione:} l'utente visualizza una schermata di errore con i parametri che ha inserito non conformi ai vincoli di sistema;
-	\item \textbf{Precondizione:} l'utente ha inserito dei parametri non validi;
-	\item \textbf{Postcondizione:} l'utente ha visualizzato il messaggio di errore e ha preso atto dei parametri non conformi ai vincoli di sistema.
-\end{itemize}
-
-\subsubsection{UC1.3.6: Eliminazione View}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\begin{itemize}
-		\item utente autenticato: utente autenticato che ha accesso al servizio;
-	\end{itemize}
-	\item \textbf{Descrizione:} l'utente può eliminare una View precedentemente creata;
-	\item \textbf{Precondizione:} l'utente ha creato almeno una View ed è visibile nel suo elenco;
-	\item \textbf{Postcondizione:} l'utente ha cancellato una View dal suo elenco;
-	\item \textbf{Flusso principale degli eventi:}
-	\begin{enumerate}
-		\item Selezione View (UC1.3.4.1);
-		\item Eliminazione View (UC1.3.6.2);
-		\item Conferma eliminazione View (UC1.3.6.3).
-	\end{enumerate}
-\end{itemize}
-
-\subsubsection{UC1.3.6.2: Eliminazione View}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\begin{itemize}
-		\item utente autenticato: utente autenticato che ha accesso al servizio;
-	\end{itemize}
-	\item \textbf{Descrizione:} l'utente può selezionare il pulsante per eliminare la View visualizzata. Verrà richiesta la conferma dell'operazione;
-	\item \textbf{Precondizione:} l'utente ha visualizzato correttamente una View;
-	\item \textbf{Postcondizione:} l'utente ha selezionato il pulsante per eliminare la View.
-\end{itemize}
-
-\subsubsection{UC1.3.6.3: Conferma eliminazione View}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\begin{itemize}
-		\item utente autenticato: utente autenticato che ha accesso al servizio;
-	\end{itemize}
-	\item \textbf{Descrizione:} l'utente può confermare l'eliminazione della View selezionando il pulsante di conferma oppure annullare l'operazione premendo il pulsante di annullamento;
-	\item \textbf{Precondizione:} l'utente ha selezionato il pulsante per eliminare una View;
-	\item \textbf{Postcondizione:} l'utente ha confermato l'eliminazione e la View è stata eliminata dal sistema.
 \end{itemize}
 
 \pagebreak
@@ -1121,28 +917,28 @@
 
 \begin{figure}[htbp]
 	\centering
-	\centerline{\includegraphics{./images/UC2.pdf}}
+	\centerline{\includegraphics{./images/UC2.pdf}} % TO CHANGE
 	\caption{UC2 - Servizi REST}
 \end{figure}
 
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
-		\item utente: utente che desidera accedere al servizio;
-		\item utente con Token di accesso: utente che ha ricevuto dal sistema le credenziali per accedere al servizio;
+		\item utente autenticato: utente che ha effettuato l'accesso nell'applicazione;
+		\item utente autenticato con Token di accesso: utente che ha ricevuto dal sistema le credenziali (token) per utilizzare i servizi REST offerti;
 	\end{itemize}
-	\item \textbf{Descrizione:} dopo l'accesso al servizio:
+	\item \textbf{Descrizione:} dopo l'accesso all'applicativo:
 	\begin{itemize}
-		\item un utente può richiedere un token di accesso usando il suo username e la sua password;
-		\item un utente con token di accesso può fare ciò che può fare l'utente, e in più può inviare una richiesta REST usando il suo token e richiedere che venga terminata la sua sessione aperta facendo scadere il token;
+		\item un utente può richiedere un token di accesso premendo su un apposito pulsante;
+		\item un utente con token di accesso può fare ciò che può fare l'utente, e in più può inviare una richiesta REST usando il suo token. Può inoltre richiedere che venga rimosso quando non gli è più necessario o se ne desidera ottenere uno nuovo;
 	\end{itemize}
-	\item \textbf{Precondizione:} l'utente o l'utente con token di accesso dispongono di una connessione con il sistema; Dispongono inoltre di un username e una password riconosciute del sistema ottenute registrandosi tramite l'intefaccia Web.
+	\item \textbf{Precondizione:} l'utente o l'utente con token di accesso dispongono di una connessione con il sistema. Dispongono inoltre di un username e una password riconosciute del sistema ottenute registrandosi tramite l'interfaccia Web.
 	\item \textbf{Postcondizione:} il servizio ha erogato correttamente le funzionalità richieste dall'utente;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Richiesta token di accesso (UC2.1);
 		\item Invio richiesta REST (UC2.2);
-		\item Chiusura della sessione (UC2.3);
+		\item Rimozione del token di accesso (UC2.3);
 	\end{enumerate}
 \end{itemize}
 
@@ -1166,21 +962,21 @@
 	\item \textbf{Postcondizione:} l'utente ha ottenuto un token di accesso;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
-		\item Invio richiesta contenente username e password (UC2.1.1);
+		\item Invio richiesta premendo l'apposito bottone per la ricezione di un token (UC2.1.1);
 		\item Ricezione token di accesso (UC2.1.3);
 	\end{enumerate}
-	\item \textbf{Estensioni:} Fallimento autenticazione (UC2.1.2).
+	\item \textbf{Estensioni:} Fallimento ricezione token (UC2.1.2).
 \end{itemize}
 
 
-\subsubsection{UC2.1.1: Invio richiesta contenente username e password}
+\subsubsection{UC2.1.1: Invio richiesta premendo l'apposito bottone per la ricezione di un token}
 
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
 		\item utente: utente che desidera ottenere un token di accesso;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'utente invia la richiesta contenente il suo username e la sua password;
+	\item \textbf{Descrizione:} l'utente invia la richiesta premendo l'apposito bottone per la generazione di un token;
 	\item \textbf{Precondizione:} l'utente si è registrato presso il sistema tramite l'interfaccia Web e dispone di un username e di una password;
 	\item \textbf{Postcondizione:} il sistema riceve la richiesta inviata dall'utente.
 \end{itemize}
@@ -1192,7 +988,7 @@
 	\begin{itemize}
 		\item utente: utente che desidera ottenere un token di accesso;
 	\end{itemize}
-	\item \textbf{Descrizione:} viene ritonato un errore che indica che l'autenticazione non è andata buon fine;
+	\item \textbf{Descrizione:} viene ritornato un errore che indica che l'autenticazione non è andata buon fine;
 	\item \textbf{Precondizione:} il sistema ha ricevuto una richiesta di token contenente uno username non riconosciuto dal sistema o una password non corrispondente a quella associata allo username inserito;
 	\item \textbf{Postcondizione:} l'utente ha preso atto del fallimento.
 \end{itemize}
@@ -1245,7 +1041,7 @@
 		\item utente con Token di accesso: utente che ha ricevuto dal sistema le credenziali per accedere al servizio;
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente invia una richiesta avente come parametro il token di accesso;
-	\item \textbf{Precondizione:} l'utente possiedeun token di accesso valido;
+	\item \textbf{Precondizione:} l'utente possiede un token di accesso valido;
 	\item \textbf{Postcondizione:} il sistema riceve la richiesta inviata.
 \end{itemize}
 
@@ -1276,18 +1072,18 @@
 
 \pagebreak
 
-\subsection{UC2.3: Chiusura della sessione}
+\subsection{UC2.3: Fallimento ricezione token}
 
 \begin{figure}[htbp]
 	\centering
-	\centerline{\includegraphics {./images/UC2_3.pdf}}
-	\caption{UC2.3 - Chiusura della sessione}
+	\centerline{\includegraphics {./images/UC2_3.pdf}} % TO CHANGE
+	\caption{UC2.3 - Fallimento ricezione token}
 \end{figure}
 
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
-		\item utente con Token di accesso: utente che ha ricevuto dal sistema le credenziali per accedere al servizio;
+		\item utente con Token di accesso: utente che ha ricevuto dal sistema le credenziali per utilizzare i servizi REST offerti;
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente può richiedere che un token di accesso di cui dispone venga disabilitato e dunque non possa essere più usato per accedere ai servizi;
 	\item \textbf{Precondizione:} l'utente dispone di un token di accesso valido;
@@ -1306,9 +1102,9 @@
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
-		\item utente con Token di accesso: utente che ha ricevuto dal sistema le credenziali per accedere al servizio;
+		\item utente con Token di accesso: utente che ha ricevuto dal sistema le credenziali per utilizzare i servizi REST offerti;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'utente invia una apposita richiesta contenente il token che desidera venga disabilitato;
+	\item \textbf{Descrizione:} l'utente, premendo su un apposito bottone, invia una richiesta che desidera venga disabilitato il token associato al suo account;
 	\item \textbf{Precondizione:} il token di cui viene richiesta la disabilitazione è valido;
 	\item \textbf{Postcondizione:} il token di accesso non è più valido.
 \end{itemize}
@@ -1318,11 +1114,11 @@
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
-		\item utente con Token di accesso: utente che ha ricevuto dal sistema le credenziali per accedere al servizio;
+		\item utente con Token di accesso: utente che ha ricevuto dal sistema le credenziali per utilizzare i servizi REST offerti;
 	\end{itemize}
-	\item \textbf{Descrizione:} il sistema avvisa che il token di cui era stata chiesta la disabilitazione era già non valido;
-	\item \textbf{Precondizione:} l'utente ha chiesto l'invalidamento di un token non valido;
-	\item \textbf{Postcondizione:} l'utente ha preso atto del fatto che il token era già stato invalidato.
+	\item \textbf{Descrizione:} il sistema avvisa che qualcosa è andato storto durante la disabilitazione del token;
+	\item \textbf{Precondizione:} l'utente ha chiesto l'invalidamento di un token;
+	\item \textbf{Postcondizione:} l'utente ha preso atto del fatto che l'invalidamento del token non ha avuto successo.
 \end{itemize}
 
 \subsubsection{UC2.3.3: Ricezione conferma}
@@ -1330,7 +1126,7 @@
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
-		\item utente con Token di accesso: utente che ha ricevuto dal sistema le credenziali per accedere al servizio;
+		\item utente con Token di accesso: utente che ha ricevuto dal sistema le credenziali per utilizzare i servizi REST offerti;
 	\end{itemize}
 	\item \textbf{Descrizione:} il sistema ritorna una conferma dell'avvenuta invalidazione del token;
 	\item \textbf{Precondizione:} l'utente ha chiesto l'invalidamento di un token valido;
