@@ -88,7 +88,7 @@ In questa sezione verranno descritte le tecnologie su cui si basa lo sviluppo de
 				\item assenza di costrutti come lo switch;
 				\item assenza di tipizzazione statica, sarà compito del programmatore rendere esplicito il tipo delle variabili nel codice seguendo delle norme stabiliti nel \docNameVersionNdP.
 			\end{itemize}
-			\noindent
+		\noindent
 		% subsubsection python (end)
 
 		\subsubsection{YAML} % (fold)
@@ -145,7 +145,7 @@ In questa sezione verranno descritte le tecnologie su cui si basa lo sviluppo de
 		
 		\subsubsection{facebook-sdk} % (fold)
 		\label{ssub:facebook_sdk}
-		Facebook-sdk è la libreria scelta per effettuare in maniera più semplice e astratta le chiamate alle API di Facebook .La libreria è reperibile al seguente indirizzo: \url{https://facebook-sdk.readthedocs.org/en/latest/}. \newline
+		Facebook-sdk è la libreria scelta per effettuare in maniera più semplice e astratta le chiamate alle API di Facebook. La libreria è reperibile al seguente indirizzo: \url{https://facebook-sdk.readthedocs.org/en/latest/}. \newline
 		\textbf{Pro}:
 			\begin{itemize}
 				\item è la libreria maggiormente consigliata dalla comunità di Python.
@@ -154,6 +154,30 @@ In questa sezione verranno descritte le tecnologie su cui si basa lo sviluppo de
 		\newline
 		% subsubsection facebook_sdk (end)
 
+		\subsubsection{tweepy.api} % (fold)
+		\label{ssub:tweetpy}
+		Tweepy.api è la libreria scelta per effettuare in maniera più semplice e astratta le chiamate alle API di Twitter. La libreria è reperibile al seguente indirizzo: \url{http://www.tweepy.org/}. \newline
+		\textbf{Pro}:
+			\begin{itemize}
+				\item è la libreria maggiormente consigliata dalla comunità di Python.
+			\end{itemize}
+		\noindent
+		\textbf{Contro}:
+			\begin{itemize}
+				\item alcune librerie utilizzate dalla suddetta, hanno causato qualche problema. In particolare la libreria \textbf{requests} con la versione 2.5.3 ha avuto dei problemi con la Google Cloud Platform, per questo si è deciso di utilizzare la versione 2.3.0. Anche la libreria \textbf{six} ha riscontrato dei problemi, ma sono stati risolti posizionando il file six.py nella root della libreria tweepy.api.
+			\end{itemize}
+		\noindent
+		% subsubsection tweetpy (end)
+
+		\subsubsection{python-instagram} % (fold)
+		\label{ssub:python_instagram}
+		Python-instagram è la libreria scelta per effettuare in maniera più semplice e astratta le chiamate alle API di Instagram . La libreria è reperibile al seguente indirizzo: \url{https://github.com/Instagram/python-instagram}. \newline
+		\textbf{Pro}:
+			\begin{itemize}
+				\item è la libreria maggiormente consigliata dalla comunità di Python.
+			\end{itemize}
+		\noindent
+		% subsubsection python_instagram (end)
 	% subsection librerie (end)
 
 	\subsection{Database} % (fold)
