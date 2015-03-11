@@ -340,13 +340,13 @@
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} 
-	
+	\item \textbf{Descrizione:} Premendo sull'apposito pulsante è possibile marcare una View in modo che appaia nella propria Home Screen;	
 	\item \textbf{Precondizione:} l'utente ha visualizzato l'elenco delle View;
 	\item \textbf{Postcondizione:} La View selezionata è stata aggiunta all'elenco delle View preferite dell'utente visualizzabili nella sua Home Screen;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Apertura elenco View (UC1.3.1.1).
+		\item Selezione pulsante aggiungi View ad Home Screen.		
 	\end{enumerate}
 \end{itemize}
 
@@ -928,6 +928,78 @@
 	\item \textbf{Precondizione:} i dati inseriti non rispettano uno o più vincoli di sistema;
 	\item \textbf{Postcondizione:} l'utente ha visualizzato l'errore relativo ai dati inseriti.
 \end{itemize}
+
+
+
+\subsection{UC1.9: Richiesta aggiunta Recipe}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente autenticato: utente autenticato che ha accesso al servizio;
+	\end{itemize}
+	\item \textbf{Descrizione:} l'utente può richiedere agli amministratori di aggiungere una nuova Recipe e relative View al sistema utilizzando l'apposito form nella WebGUI;
+	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso al sistema;
+	\item \textbf{Postcondizione:} la richiesta è stata inoltrata agli amministratori;
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{enumerate}
+		\item Creazione richiesta (UC1.9.1);
+		\item Inserimento parametri richiesta (UC1.9.2);
+		\item Invio richiesta (UC1.9.3);
+	\end{enumerate}
+	\item \textbf{Estensioni:} Creazione richiesta fallita (UC1.9.4).
+\end{itemize}
+
+\subsubsection{UC1.9.1: Creazione richiesta}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente autenticato: utente che ha effettuato l'accesso nell'applicazione;
+	\end{itemize}
+	\item \textbf{Descrizione:} l'utente può accedere al pannello per la creazione di una richiesta di aggiunta Recipe dalla sua Home Screen premendo sull'apposito pulsante nella barra dei menù;
+	\item \textbf{Precondizione:} l'utente ha eseguito l'accesso al sistema;
+	\item \textbf{Postcondizione:} l'utente ha selezionato il pulsante di creazione nuova richiesta.
+	
+\end{itemize}
+
+\subsubsection{UC1.9.2: Inserimento parametri richiesta} TODO
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente autenticato: utente che ha effettuato l'accesso nell'applicazione;
+	\end{itemize}
+	\item \textbf{Descrizione:} 
+	\item \textbf{Precondizione:} 
+	\item \textbf{Postcondizione:} 
+\end{itemize}
+
+\subsubsection{UC1.9.3: Invio richiesta} TODO
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente autenticato: utente che ha effettuato l'accesso nell'applicazione;
+	\end{itemize}
+	\item \textbf{Descrizione:} 
+	\item \textbf{Precondizione:} 
+	\item \textbf{Postcondizione:} 
+\end{itemize}
+	
+\subsubsection{UC1.9.4: Creazione richiesta fallita} TODO
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente autenticato: utente che ha effettuato l'accesso nell'applicazione;
+	\end{itemize}
+	\item \textbf{Descrizione:} 
+	\item \textbf{Precondizione:} 
+	\item \textbf{Postcondizione:} 
+\end{itemize}
+
+
 
 \pagebreak
 
