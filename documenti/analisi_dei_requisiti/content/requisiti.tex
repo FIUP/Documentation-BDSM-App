@@ -6,30 +6,35 @@
 % Email:		roetta.marco@mashup-unipd.it
 % =================================================================================================
 % Modification History:
-% Version		Modifier Date		Change												Author
-% 0.0.1 		2014-12-10 			aggiunta sezione e iniziata stesura					Roetta Marco
+% Version		Modifier Date		Change													Author
+% 0.0.1 		2014-12-10 			aggiunta sezione e iniziata stesura						Roetta Marco
 % =================================================================================================
-% 0.0.2 		2015-01-12 			aggiunte tabelle									Carnovalini Filippo
+% 0.0.2 		2015-01-12 			aggiunte tabelle										Carnovalini Filippo
 % =================================================================================================
-% 0.0.3 		2015-01-16 			requisiti prestazionali di qualità e di vincolo		Carnovalini Filippo
+% 0.0.3 		2015-01-16 			requisiti prestazionali di qualità e di vincolo			Carnovalini Filippo
 % =================================================================================================
-% 0.0.4 		2015-01-16 			aggiunti requisiti funzionali, fixing generale 		Cusinato Giacomo
+% 0.0.4 		2015-01-16 			aggiunti requisiti funzionali, fixing generale 			Cusinato Giacomo
 % =================================================================================================
-% 0.0.5 		2015-01-17 			requisiti tratti dagli UC1.2, 1.5 e 1.6				Carnovalini Filippo
+% 0.0.5 		2015-01-17 			requisiti tratti dagli UC1.2, 1.5 e 1.6					Carnovalini Filippo
 % =================================================================================================
-% 0.0.6 		2015-01-18 			requisiti tratti dagli UC1.3 e 1.7					Carnovalini Filippo
+% 0.0.6 		2015-01-18 			requisiti tratti dagli UC1.3 e 1.7						Carnovalini Filippo
 % =================================================================================================
-% 0.0.7 		2015-01-18 			aggiunti requsiti funzionali e di vincolo			Cusinato Giacomo
+% 0.0.7 		2015-01-18 			aggiunti requsiti funzionali e di vincolo				Cusinato Giacomo
 % =================================================================================================
-% 1.0.0 		2015-01-21 			inizio verifica documento							Faccin Nicola
+% 1.0.0 		2015-01-21 			inizio verifica documento								Faccin Nicola
 % =================================================================================================
-% 1.1.0 		2015-02-20 			correzione in base all'esito RR	 					Carnovalini Filippo
+% 1.1.0 		2015-02-20 			correzione in base all'esito RR	 						Carnovalini Filippo
 % =================================================================================================
-% 2.0.1			2015-03-12			correzione piccoli errori ortografici				Tesser Paolo
+% 2.0.1			2015-03-12			correzione piccoli errori ortografici					Tesser Paolo
 % =================================================================================================
-% 2.0.2			2015-03-12			
+% 2.0.2			2015-03-12			rimossi requisiti: ROF3.2.2.3, RDF5.2.2, RDF5.2.2.1		Tesser Paolo
+% =================================================================================================
+% 2.0.3			2015-02-12			rimossi req: RDF6, ROF7 e derivati						Tesser Paolo
+% =================================================================================================
+% 2.0.4			2015-02-12			modificati req: RDF6, ROF7 e derivati					Tesser Paolo
 % =================================================================================================
 %
+
 % CONTENUTO DEL CAPITOLO
 
 \section{Requisiti}
@@ -155,8 +160,6 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		ROF3.2.2.1  &  Nella finestra delle statistiche viene mostrato il numero di View attive &  UC1.2.2.1 \\
 		\hline
 		ROF3.2.2.2  &  Nella finestra delle statistiche viene mostrato il numero di Recipe disponibili &  UC1.2.2.2 \\
-		\hline		
-		ROF3.2.2.3  &  Nella finestra delle statistiche viene mostrato il numero di accessi negli ultimi 30 giorni &  UC1.2.2.3 \\
 		\hline
 		ROF3.3  &  Nel menù delle informazioni personali è presente un pulsante per modificare la propria password &  UC1.5 \\
 		\hline
@@ -182,55 +185,13 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF4.1.2  &  Se la sessione è scaduta appare un messaggio di errore e il sistema aggiorna la pagina per mostrare la schermata di login  &  Interno \\
 		\hline
-		ROF5  &  Nella home screen dell'utente autenticato sono mostrare tutte le View che l'utente ha creato aggiornate al momento del caricamento della pagina &  UC1.3 \newline UC1.3.1 \\
+		ROF5  &  [TO CHANGE] Nella home screen dell'utente autenticato sono mostrare tutte le View che l'utente ha creato aggiornate al momento del caricamento della pagina &  UC1.3 \newline UC1.3.1 \\
 		\hline
-		ROF5.1  &  Il sistema ad ogni caricamento della pagina deve recuperare i dati relativi alle View dell'utente e generare i grafici relativi  &  Interno \\
+		ROF5.1  &  [TO CHANGE] Il sistema ad ogni caricamento della pagina deve recuperare i dati relativi alle View dell'utente e generare i grafici relativi  &  Interno \\
 		\hline
-		RDF5.2  &  Nella home screen è disponibile un elenco delle View attive dell'utente  &  UC1.3.1.1 \\
+		RDF5.2  &  [TO CHANGE] Nella home screen è disponibile un elenco delle View attive dell'utente  &  UC1.3.1.1 \\
 		\hline
-		RDF5.2.1  &  Cliccando su una View dall'elenco si viene portati al grafico relativo  &  Interno \\
-		\hline
-		RDF5.2.2  &  Accanto ad ogni voce dell'elenco è disponibile il tasto modifica  &  UC1.3.4 \newline UC1.3.4.1 \newline UC1.3.4.2 \newline UC1.3.6.1 \\
-		\hline
-		RDF5.2.2.1  &  Cliccando sul tasto modifica si viene reindirizzati alla pagina di modifica della View  &  Interno \\
-		\hline
-		RDF6  &  Nella pagina di modifica della View è presente il grafico relativo alla View selezionata e un form per modificare i dati  &  Interno \\
-		\hline
-		RDF6.1  &  Il sistema deve recuperare i dati relativi alla View selezionata e generare il grafico e riempire la form con i dati preesistenti  &  Interno \\
-		\hline
-		RDF6.2  &  L'utente deve poter inserire nuovi dati oppure lasciare quelli preesistenti  &  UC1.3.4.3 \\
-		\hline
-		RDF6.2.1  &  Eventuali errori sui dati inseriti vengono segnalati dal sistema in fase di compilazione del form  &  Interno \\
-		\hline
-		RDF6.3  &  L'utente deve poter confermare i dati modificati premendo il tasto di conferma  &  UC1.3.4.4 \\
-		\hline
-		RDF6.3.1  &  Se la modifica è avvenuta con successo appare un messaggio di conferma e si viene reindirizzati alla home screen  &  Interno \\
-		\hline
-		RDF6.3.1.1  &  Se la modifica è avvenuta con successo il sistema memorizza i nuovi dati nel database sovrascrivendo i vecchi  &  Interno \\
-		\hline
-		RDF6.3.2  &  Se c'è un errore sui dati o c'è un problema di connessione al server viene visualizzato un messaggio di errore e si viene riportati alla form di modifica  &  UC1.3.5 \\
-		\hline
-		RDF6.4  &  Nella pagina di modifica è presente un tasto per eliminare la View  &  UC1.3.6 \newline UC1.3.6.2 \\
-		\hline
-		RDF6.4.1  &  Se l'utente preme il pulsante di eliminazione appare un messaggio che chiede conferma dell'eliminazione  &  UC1.3.6.3 \\
-		\hline
-		RDF6.4.2  &  Se l'eliminazione viene confermata la View e i relativi dati vengono eliminati dal database  &  Interno \\
-		\hline
-		RDF6.4.3  &  Una volta eliminata una View si viene reindirizzati alla home screen  &  Interno \\
-		\hline
-		ROF7  &  Nella home screen è presente un tasto per creare una nuova View  &  UC1.3.2 \newline UC1.3.2.1 \\
-		\hline
-		ROF7.1  &  Nella pagina di creazione della View è presente un form per inserire i dati della View da generare  &  UC1.3.2.2 \\
-		\hline
-		ROF7.1.1  &  Eventuali errori sui dati inseriti vengono segnalati dal sistema in fase di compilazione del form  &  Interno \\
-		\hline
-		ROF7.2  &  L'utente deve poter confermare i dati modificati premendo il tasto di conferma  &  UC1.3.2.3 \\
-		\hline
-		ROF7.3  &  Se la modifica è avvenuta con successo appare un messaggio di conferma e si viene reindirizzati alla home screen  &  Interno \\
-		\hline
-		ROF7.3.1  &  Se la modifica è avvenuta con successo il sistema memorizza i nuovi dati nel database  &  Interno \\
-		\hline
-		ROF7.3.2  &  Se c'è un errore sui dati o c'è un problema di connessione al server viene visualizzato un messaggio di errore e si viene riportati alla form di inserimento  &  UC1.3.3 \\
+		RDF5.2.1  &  [TO CHANGE] Cliccando su una View dall'elenco si viene portati al grafico relativo  &  Interno \\
 		\hline
 		ROF8  &  Un utente che possiede i privilegi di amministratore può accedere all'area riservata del sistema una volta effettuata l'autenticazione tramite il login  &  UC1.4 \newline UC1.7 \\
 		\hline
@@ -278,33 +239,27 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		RDF10  &  Il sistema fornisce una serie di servizi REST  & Capitolato \\
 		\hline
-		RDF10.1  &  Il sistema è un grado di gestire una richiesta contenente come parametri username e password restituendo un token di accesso  & UC2.1 \newline UC2.1.1 \\
+		RDF10.1  &  Il sistema è un grado di gestire una richiesta di un token di accesso per utilizzare i servizi REST se l'utente è autenticato  & UC2.1 \newline UC2.1.1 \\
 		\hline
-		RDF10.1.1  &  Il sistema restituisce un errore se l'username o la password inviati con la richiesta non sono validi & UC2.1.2 \\
+		RDF10.1.1  &  [TO CHANGE] Il sistema restituisce un errore se il sistema ha avuto problemi nel generare il token & UC2.1.2 \\
 		\hline
-		RDF10.1.1.1  &  L'username è considerato non valido se non presente tra quelli registrati al sistema  & UC2.1.2 \\
-		\hline
-		RDF10.1.1.2  &  La password è considerata non valida se non corrisponde alla password associata allo username inviato  & UC2.1.2 \\
-		\hline
-		RDF10.1.2  &  Il sistema genera e restituisce un token di accesso se username e password sono validi  & UC2.1.3 \\
+		RDF10.1.2  &  Il sistema genera e restituisce un token di accesso se l'utente è autenticato  & UC2.1.3 \\
 		\hline
 		RDF10.2  &  I token di accesso sono stringhe alfanumeriche di 200 caratteri  & Interno \\
 		\hline
-		RDF10.3  &  I token sono considerati validi fino ad un'ora dalla loro creazione & Interno \\
+		RDF10.3  &  L'utente può richiedere che un token valido venga considerato non valido  & UC2.3 \\
 		\hline
-		RDF10.4  &  L'utente può richiedere che un token valido venga considerato non valido  & UC2.3 \\
+		RDF10.3.1  &  Il sistema è in grado di gestire una richiesta di chiusura sessione contenente un token di accesso valido rendendolo non valido & UC2.3 \newline UC2.3.1 \\
 		\hline
-		RDF10.4.1  &  Il sistema è in grado di gestire una richiesta di chiusura sessione contenente un token di accesso valido rendendolo non valido & UC2.3 \newline UC2.3.1 \\
+		RDF10.3.2  &  [TO CHANGE] Il sistema restituisce un errore se non è riuscito a invalidare il token & UC2.3.2 \\
 		\hline
-		RDF10.4.2  &  Il sistema restituisce un errore se il token di cui è richiesta l'invalidazione è già non valido & UC2.3.2 \\
+		RDF10.3.3  &  Il sistema restituisce una conferma dell'avvenuta invalidazione del token & UC2.3.3 \\
 		\hline
-		RDF10.4.3  &  Il sistema restituisce una conferma dell'avvenuta invalidazione del token & UC2.3.3 \\
+		RDF10.4  &  Il sistema è in grado di gestire una richiesta che richiede i dati di una View contenente un token di accesso  &  UC2.2 \newline UC2.2.1 \\
 		\hline
-		RDF10.5  &  Il sistema è in grado di gestire una richiesta che richiede i dati di una View contenente un token di accesso  &  UC2.2 \newline UC2.2.1 \\
+		RDF10.4.1  &  Il sistema restituisce i dati richiesti se il token utilizzato è valido  &  UC2.2.3 \\
 		\hline
-		RDF10.5.1  &  Il sistema restituisce i dati richiesti se il token utilizzato è valido  &  UC2.2.3 \\
-		\hline
-		RDF10.5.1  &  Il sistema restituisce un errore se il token utilizzato è non valido  &  UC2.2.2 \\
+		RDF10.4.1  &  Il sistema restituisce un errore se il token utilizzato è non valido  &  UC2.2.2 \\
 		\hline
 
 	\end{longtable}
