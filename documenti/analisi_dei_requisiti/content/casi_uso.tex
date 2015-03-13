@@ -35,6 +35,8 @@
 % =============================================================================================================================
 % 2.0.4			2015-03-12			modificato UC1.3 e aggiunti derivati UC1.3.1 e UC1.3.2							Tesser Paolo
 % =============================================================================================================================
+% 2.0.5			2015-03-12			aggiunto UC2.4 e sistemato UC2													Tesser Paolo
+% =============================================================================================================================
 %
 
 
@@ -298,7 +300,7 @@
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
 	\item \textbf{Descrizione:} gli utenti possono vedere in questa pagina le Recipe offerte dal sistema. Per ciascuna Recipe l'utente può decidere di visualizzare tutte le View associate o effettuare un confronto tra le View di quella Recipe.
-	\item \textbf{Precondizione:} l'utente deve aver fatto l'accesso nell'apposita pagina;
+	\item \textbf{Precondizione:} l'utente deve aver effettuato l'accesso nell'apposita pagina;
 	\item \textbf{Postcondizione:} è stato fornito un elenco delle Recipe disponibili.
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
@@ -318,26 +320,37 @@
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'utente visualizza un elenco di ; 
-	\item \textbf{Precondizione:} [TO DO];
-	\item \textbf{Postcondizione:} [TO DO];
+	\item \textbf{Descrizione:} l'utente visualizza un elenco di metriche che sono state scelte durante la creazione della Recipe (UC1.4.2). Ad ogni metrica sono associate le relative View offerte dal sistema. Le metriche vengono mostrate divise in base alla categoria di cui fanno parte. (es. Facebook, Twitter, Instagram, ...). Per ogni voce mostrata andrà fornito il nome, una descrizione e un pulsante per entrare nella visualizzazione delle View;
+	\item \textbf{Precondizione:} l'utente è entrato nella visualizzazione di tutte le metriche della Recipe selezionata;
+	\item \textbf{Postcondizione:} l'utente ha visualizzato tutte le metriche presenti nella Recipe a seconda della categoria scelta;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
-		\item Visualizza View della parte (UC1.3.1.1).
+		\item Visualizza View della metrica (UC1.3.1.1).
 	\end{enumerate}
 \end{itemize}
 
-\subsubsection{UC1.3.1.1: Apertura elenco View}
+\subsubsection{UC1.3.1.1: Visualizza View della metrica}
 
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} premendo sull'apposito pulsante è possibile far comparire a video l'elenco di tutte le View utente divise per categoria e raggruppate in base alla Recipe da cui dipendono;
-	\item \textbf{Precondizione:} l'utente si trova nella home screen;
+	\item \textbf{Descrizione:} premendo sull'apposito pulsante è possibile far comparire a video tutte le View associate alla metrica scelta;
+	\item \textbf{Precondizione:} l'utente ha premuto;
 	\item \textbf{Postcondizione:} l'utente ha ottenuto l'elenco di tutte le sue View.
 \end{itemize}
+
+
+
+
+
+
+
+
+
+
+
 
 \subsubsection{UC1.3.2: Confronta metriche delle Recipe}
 
@@ -347,16 +360,26 @@
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
 	\item \textbf{Descrizione:} [TO DO] ;
-	\item \textbf{Precondizione:} l'utente ha effettuato il login ed è stato reindirizzato a questa pagina oppure ha selezionato il pulsante Home Screen da una delle pagine della WebGUI;
-	\item \textbf{Postcondizione:} l'utente viene reindirizzato alla home screen e visualizza le informazioni richieste;
+	\item \textbf{Precondizione:} [TO DO];
+	\item \textbf{Postcondizione:} [TO DO];
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
-		\item Apertura elenco View (UC1.3.1.1).
+		\item Visualizza confronto View (UC1.3.2.1).
 	\end{enumerate}
 \end{itemize}
 
 
+\subsubsection{UC1.3.2.1: Visualizza confronto View}
 
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente autenticato: utente autenticato che ha accesso al servizio;
+	\end{itemize}
+	\item \textbf{Descrizione:} [TO DO] ;
+	\item \textbf{Precondizione:} [TO DO];
+	\item \textbf{Postcondizione:} [TO DO];
+\end{itemize}
 
 
 
@@ -1051,24 +1074,81 @@
 \pagebreak
 
 \subsection{UC1.11: Gestione dei preferiti}
-[TO DO]
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} gli utenti possono vedere in questa pagina tutte le View presenti nell'applicazione, suddivise per categoria e Recipe di appartenenza. Si possono selezionare diverse View per ottenere un grafico di confronto tra i dati disponibili. Questa funzione è possibile solo tra View dello stesso tipo.
-	\item \textbf{Precondizione:} l'utente deve aver fatto l'accesso nell'apposita pagina e selezionato la voce Confronto dal menù principale;
-	\item \textbf{Postcondizione:} le informazioni e i grafici richiesti a seconda delle View scelte dall'utente sono stati forniti;
+	\item \textbf{Descrizione:} gli utenti possono gestire le View che più gli piacciono, in modo da ritrovarle più facilmente e velocemente in caso volessero consultare frequentemente;
+	\item \textbf{Precondizione:} l'utente vuole visualizzare le View che ha tra quelle preferite o inserire/rimuovere di nuove/vecchie;
+	\item \textbf{Postcondizione:} l'utente ha visualizzato le View preferite o è andato a aggiungerne di nuove/rimuoverne alcune precedentemente marcate;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
-		\item Apertura pannello di confronto (UC1.11.1);
-		\item Visualizza confronto richiesto (UC1.11.2);
+		\item Visualizzazione View preferite (UC1.11.1);
+		\item Aggiunta View nelle preferite (UC1.11.2);
+		\item Rimozione View dalle preferite (UC1.11.4).
 	\end{enumerate}
 	\item \textbf{Estensioni:}
 	\begin{itemize}
-		\item [TO DO];
+		\item Fallimento aggiunta View nelle preferite (UC1.11.3);
+		\item Fallimento rimozione View dalle preferite (UC1.11.5).
 	\end{itemize}
+\end{itemize}
+
+\subsubsection{UC1.11.1: Visualizzazione View preferite}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente: utente che desidera ottenere un token di accesso;
+	\end{itemize}
+	\item \textbf{Descrizione:} TO DO;
+	\item \textbf{Precondizione:} TO DO;
+	\item \textbf{Postcondizione:} TO DO.
+\end{itemize}
+
+
+\subsubsection{UC1.11.2: Aggiunta View nelle preferite}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente: utente che desidera ottenere un token di accesso;
+	\end{itemize}
+	\item \textbf{Descrizione:} TO DO;
+	\item \textbf{Precondizione:} TO DO;
+	\item \textbf{Postcondizione:} TO DO.
+\end{itemize}
+
+\subsubsection{UC1.11.3: Fallimento aggiunta View nelle preferite}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente: utente che desidera ottenere un token di accesso;
+	\end{itemize}
+	\item \textbf{Descrizione:} TO DO;
+	\item \textbf{Precondizione:} TO DO;
+	\item \textbf{Postcondizione:} TO DO.
+\end{itemize}
+
+\subsubsection{UC1.11.4: Rimozione View dalle preferite}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente: utente che desidera ottenere un token di accesso;
+	\end{itemize}
+	\item \textbf{Descrizione:} TO DO;
+	\item \textbf{Precondizione:} TO DO;
+	\item \textbf{Postcondizione:} TO DO.
+\end{itemize}
+
+\subsubsection{UC1.11.5: Fallimento rimozione View dalle preferite}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente: utente che desidera ottenere un token di accesso;
+	\end{itemize}
+	\item \textbf{Descrizione:} TO DO;
+	\item \textbf{Precondizione:} TO DO;
+	\item \textbf{Postcondizione:} TO DO.
 \end{itemize}
 
 
@@ -1174,7 +1254,7 @@
 \pagebreak
 
 \subsection{UC2.2: Invio richiesta REST}
-
+[TO CHANGE DIA]
 \begin{figure}[htbp]
 	\centering
 	\centerline{\includegraphics{./images/UC2_2.pdf}}
@@ -1238,11 +1318,10 @@
 \pagebreak
 
 \subsection{UC2.3: Invalidamento del token di accesso}
-[TO CHANGE DIA]
 \begin{figure}[htbp]
 	\centering
 	\centerline{\includegraphics {./images/UC2_3.pdf}}
-	\caption{UC2.3 - C2.3: Invalidamento del token di accesso}
+	\caption{UC2.3 - Invalidamento del token di accesso}
 \end{figure}
 
 \begin{itemize}
