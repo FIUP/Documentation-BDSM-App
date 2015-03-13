@@ -17,12 +17,32 @@
 \label{sec:riassunto_della_riunione}
 
 \subsection{Risposte all'ordine del giorno}
-Le risposte di seguito fornite non sono la trascrizione esatta di quanto detto al momento, ma una elaborazione finale in accordo con il proponente. \newline
+Le risposte di seguito fornite non sono la trascrizione esatta di quanto detto al momento, ma una elaborazione
+finale in accordo con il proponente. \newline
 Esse saranno fonte di requisiti e di casi d'uso che verranno descritti in maniera più dettagliata nel documento di \docNameVersionAdR.
 \begin{itemize}
-  \item La struttura del sistema ha subito delle modifiche che rendono l'applicativo più efficiente per il suo funzionamento nella Google Cloud Platform. Si è deciso infatti che ogni modulo che interrogherà una certa API sarà inserito in una piattaforma web differente (Google App Engine differente). Questi moduli conterranno a sua volta un modulo Miner, un modulo Processor, un Cron e un Database NoSQL come in precedenza. In questo modo, oltre a distribuire il carico di lavoro che può causare il superamento della soglia gratuita del servizio, ogni modulo risulterà più estensibile essendo indipendente dagli altri;
-  \item Con l'aiuto del proponente sono state discusse le prime analisi effettuate sulla ricerca della tipologia di dati da ricavare tramite le API esposte dai vari social network. In particolare modo, sono state individuate le prime metriche che andranno a definire le funzionalità rese disponibili dalle View e che individueranno i dati grezzi necessari alle Recipe;
-  \item Il proponente ha fornito un elenco di servizi web che potrebbero facilitare l'analisi dei dati ricavati dai social network o, in alcuni casi, fornire funzionalità ed informazioni aggiuntive al risultato finale esposto dalle View, grazie alle API esposte da ognuno di essi. Tali servizi sono:
+  \item La struttura del sistema ha subito un raffinamento per il corretto funzionamento nella Google Cloud Platform.
+  Il lato back-end sarà interamente ospitato in Google App Engine e conterrà i moduli individuati in precedenza:
+  \begin{itemize}
+    \item \textbf{Processor}: gestisce il funzionamento dei moduli Miner ed interagisce con la base di dati a seconda
+    delle richieste effettuate dall'utente;
+    \item \textbf{Cron}: definisce la cadenza temporale di aggiornamento dei dati di cui si occupa il Miner;
+    \item \textbf{Miner}: modulo definito per ogni social network che interroga e raccogliere i dati tramite le
+    API del servizio stesso memorizzandole nella base di dati;
+  \end{itemize}
+  Il lato front-end, inoltre, sarà totalmente indipente del resto del sistema e comunicherà con il database attraverso
+  dei servizi REST esposti dal back-end. Tali servizi saranno resi disponibili tramite Google Endpoints, incluso nella
+  piattaforma, ed includeranno delle API pubbliche e private. Le prime saranno rese disponibili agli utenti autenticati che
+  ne faranno richiesta e si occuperanno di esporre i dati relativi alle View mentre le seconde saranno utilizzate per
+  le configurazioni relative all'utente ed alla parte amministrativa.
+
+  \item Con l'aiuto del proponente sono state discusse le prime analisi effettuate sulla ricerca della tipologia
+  di dati da ricavare tramite le API esposte dai vari social network. In particolare modo, sono state individuate
+  le prime metriche che andranno a definire le funzionalità rese disponibili dalle View e che individueranno i dati
+  grezzi necessari alle Recipe;
+  \item Il proponente ha fornito un elenco di servizi web che potrebbero facilitare l'analisi dei dati ricavati dai
+  social network o, in alcuni casi, fornire funzionalità ed informazioni aggiuntive al risultato finale esposto
+  dalle View, grazie alle API esposte da ognuno di essi. Tali servizi sono:
   \begin{itemize}
     \item \textbf{PageSpeed Insights}: servizio fornito da Google per l'analisi della velocità ed il rendimento di un sito web;
     \item \textbf{MozRank}: fornisce informazioni sull'importanza di un sito web a seconda della qualità pagine che contengono uno o più link a tale sito;
@@ -34,15 +54,3 @@ Esse saranno fonte di requisiti e di casi d'uso che verranno descritti in manier
     \item \textbf{GTMetrix}: fornisce analisi sulla pesantezza e la velocità di una pagina web.
   \end{itemize}
 \end{itemize}
-
-\subsection{Specifica sui moduli individuati}
-
-\begin{figure}[htbp]
-    \centering
-    \centerline{\includegraphics[scale=0.8]{./images/moduli_bdsmapp.pdf}}
-    \caption{Moduli applicativo}
-\end{figure}
-
-La struttura dell'applicativo è stata aggiornata in modo tale da distribuire lo spazio riservato al database ed il carico di lavoro affidato al sistema. Ogni modulo responsabile di ricavare i dati da un determinato social network sarà infatti inserito in un'infrastruttura differente che richiederà la creazione di più account nella piattaforma di Google. \newline 
-Ogni modulo, quindi, conterrà la struttura Miner, Cron e Processor stabilita in precedenza ed un database NoSQL che conterrà i dati grezzi. Il vantaggio di questa soluzione è data dal fatto che ogni modulo risulta indipendente dai restanti e potrà essere progettato in modo specifico per le funzionalità che dovrà fornire. Inoltre, sebbene la possibilità di superamento della soglia gratuita del servizio offerto da Google non dovrebbe causare problemi, la distribuzione del sistema su più account renderà tale problematica meno rilevante. \newline
-Tutti i moduli saranno gestiti da un Processor centrale, il quale, interagirà con un database NoSQL principale che memorizzerà i dati di configurazione dell'applicativo ed i riferimenti ai dati dei database secondari di ogni modulo sopracitato. Il Processor centrale, inoltre, si occuperà di elaborare i dati grezzi ed esporli alla WebGUI tramite dei servizi di tipo REST.
