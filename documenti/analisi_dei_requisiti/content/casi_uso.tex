@@ -83,8 +83,10 @@
 		\item Visione richieste utente (UC1.10).
 	\end{enumerate}
 \end{itemize}
+% FINE USE CASE %
 
 \pagebreak
+
 
 \subsection{UC1.1: Login utente}
 
@@ -110,10 +112,9 @@
 	\end{enumerate}
 	\item \textbf{Estensioni:} Login fallita (UC1.1.4).
 \end{itemize}
-
+% FINE USE CASE %
 
 \subsubsection{UC1.1.1: Inserimento username}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -123,9 +124,9 @@
 	\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire l’username;
 	\item \textbf{Postcondizione:} il sistema ha l'informazione relativa all'username.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.1.2: Inserimento password}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -135,9 +136,9 @@
 	\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire la password;
 	\item \textbf{Postcondizione:} il sistema ha l'informazione relativa alla password inserita dall'utente.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.1.3: Conferma login}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -149,7 +150,6 @@
 \end{itemize}
 
 \subsubsection{UC1.1.4: Login fallita}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -159,11 +159,12 @@
 	\item \textbf{Precondizione:} il sistema ha ricevuto una richiesta di accesso da uno username errato o una password non associata allo username esistente indicato.
 	\item \textbf{Postcondizione:} l'utente ha preso atto del messaggio di errore.
 \end{itemize}
+% FINE USE CASE %
 
 \pagebreak
 
-\subsection{UC1.2: Visione dettagli utente}
 
+\subsection{UC1.2: Visione dettagli utente}
 \begin{figure}[htbp]
 	\centering
 	\centerline{\includegraphics[scale=0.45]{./images/UC1_2.pdf}}
@@ -184,9 +185,9 @@
 		\item Visualizza statistiche utente (UC1.2.2).
 	\end{enumerate}
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.2.1: Visualizza informazioni utente}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -206,9 +207,9 @@
     \item Visualizza ultimo accesso (UC1.2.1.3).
   \end{enumerate}
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.2.1.1: Visualizza username}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -218,9 +219,9 @@
 	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso alla pagina di dettaglio dei dati personali;
 	\item \textbf{Postcondizione:} l'utente ha visualizzato il suo username.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.2.1.2: Visualizza indirizzo email}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -230,9 +231,9 @@
 	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso alla pagina di dettaglio dei dati personali;
 	\item \textbf{Postcondizione:} l'utente ha visualizzato il suo indirizzo email.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.2.1.3: Visualizza ultimo accesso}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -242,9 +243,9 @@
 	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso alla pagina di dettaglio dei dati personali;
 	\item \textbf{Postcondizione:} l'utente ha visualizzato i dettagli del suo ultimo accesso.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.2.2: Visualizza statistiche utente}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -259,9 +260,9 @@
   \item \textbf{Precondizione:} l'utente ha selezionato il pulsante per l'accesso ai dettagli utente
 	\item \textbf{Postcondizione:} l'utente ha ottenuto le informazioni richieste.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.2.2.1: Visualizza numero View attive}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -271,9 +272,9 @@
 	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso alla pagina di dettaglio dei dati personali;
 	\item \textbf{Postcondizione:} l'utente ha visualizzato il numero di View attive.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.2.2.2: Visualizza numero Recipe disponibili}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -283,7 +284,7 @@
 	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso alla pagina di dettaglio dei dati personali;
 	\item \textbf{Postcondizione:} l'utente ha visualizzato il numero di View attive.
 \end{itemize}
-
+% FINE USE CASE %
 
 \pagebreak
 \subsection{UC1.3: Visualizzazione delle Recipe}
@@ -304,17 +305,13 @@
 	\item \textbf{Postcondizione:} è stato fornito un elenco delle Recipe disponibili.
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
-		\item Visualizza metriche delle Recipe (UC1.3.1);
-		\item Confronta metriche delle Recipe (UC1.3.2).
+		\item Visualizza metriche della Recipe (UC1.3.1);
+		\item Confronta metriche della Recipe (UC1.3.2).
 	\end{enumerate}
-	\item \textbf{Estensioni:}
-	\begin{itemize}
-		\item [TO DO]
-	\end{itemize}
 \end{itemize}
+% FINE USE CASE %
 
-\subsubsection{UC1.3.1: Visualizza metriche delle Recipe}
-
+\subsubsection{UC1.3.1: Visualizza metriche della Recipe}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -328,49 +325,51 @@
 		\item Visualizza View della metrica (UC1.3.1.1).
 	\end{enumerate}
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.3.1.1: Visualizza View della metrica}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
 	\item \textbf{Descrizione:} premendo sull'apposito pulsante è possibile far comparire a video tutte le View associate alla metrica scelta;
-	\item \textbf{Precondizione:} l'utente ha premuto;
-	\item \textbf{Postcondizione:} l'utente ha ottenuto l'elenco di tutte le sue View.
+	\item \textbf{Precondizione:} l'utente ha premuto sul pulsante che manda alla visualizzazione;
+	\item \textbf{Postcondizione:} l'utente ha ottenuto l'elenco di tutte le View inerenti alla metrica selezionata.
 \end{itemize}
+% FINE USE CASE %
 
 
-
-
-
-
-
-
-
-
-
-
-\subsubsection{UC1.3.2: Confronta metriche delle Recipe}
-
+\subsubsection{UC1.3.2: Confronta metriche della Recipe}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} [TO DO] ;
-	\item \textbf{Precondizione:} [TO DO];
+	\item \textbf{Descrizione:} [TO DO];
+	\item \textbf{Precondizione:} l'utente è entrato nella sezione del confronto della Recipe selezionata;
 	\item \textbf{Postcondizione:} [TO DO];
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
-		\item Visualizza confronto View (UC1.3.2.1).
+		\item Genera confronto tra metriche per ottenere le View (UC1.3.2.1);
+		\item Visualizza confronto View (UC1.3.2.2).
 	\end{enumerate}
 \end{itemize}
+% FINE USE CASE %
 
+\subsubsection{UC1.3.2.1: Genera confronto tra metriche per ottenere le View}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente autenticato: utente autenticato che ha accesso al servizio;
+	\end{itemize}
+	\item \textbf{Descrizione:} [TO DO];
+	\item \textbf{Precondizione:} [TO DO];
+	\item \textbf{Postcondizione:} [TO DO];
+\end{itemize}
+% FINE USE CASE %
 
-\subsubsection{UC1.3.2.1: Visualizza confronto View}
-
+\subsubsection{UC1.3.2.2: Visualizza confronto View}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -380,7 +379,7 @@
 	\item \textbf{Precondizione:} [TO DO];
 	\item \textbf{Postcondizione:} [TO DO];
 \end{itemize}
-
+% FINE USE CASE %
 
 
 
@@ -395,9 +394,7 @@
 
 \pagebreak
 
-
 \subsection{UC1.4: Gestione delle Recipe}
-
 \begin{figure}[!ht]
 	\centering
 	\centerline{\includegraphics[scale=0.45]{./images/UC1_4.pdf}}
@@ -420,9 +417,9 @@
 	\end{enumerate}
 	\item \textbf{Estensioni:} Creazione Recipe fallita (UC1.4.3).
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.4.1: Visualizza Recipe}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -432,6 +429,7 @@
 	\item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema e si trova nella sua home screen;
 	\item \textbf{Postcondizione:} l'amministratore ha visualizzato correttamente l'elenco delle Recipe salvate nel sistema.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.4.2: Aggiungi nuova Recipe}
 \begin{itemize}
@@ -450,8 +448,9 @@
 		\item Conferma parametri inseriti (UC1.4.2.4).
 	\end{enumerate}
 \end{itemize}
-\subsubsection{UC1.4.2.1: Apertura elenco Recipe}
+% FINE USE CASE %
 
+\subsubsection{UC1.4.2.1: Apertura elenco Recipe}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -461,9 +460,9 @@
 	\item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema;
 	\item \textbf{Postcondizione:} l'amministratore ha visualizzato correttamente l'elenco delle Recipe.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.4.2.2: Apertura pannello inserimento nuova Recipe}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -473,9 +472,9 @@
 	\item \textbf{Precondizione:} l'amministratore ha visualizzato l'elenco delle Recipe;
 	\item \textbf{Postcondizione:} l'amministratore ha visualizzato il pannello di inserimento nuova Recipe.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.4.2.3: Inserimento parametri}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -485,9 +484,9 @@
 	\item \textbf{Precondizione:} l'amministratore ha selezionato il pulsante per l'inserimento di una nuova Recipe;
 	\item \textbf{Postcondizione:} l'amministratore ha inserito tutti i parametri richiesti dal sistema.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.4.2.4: Conferma parametri inseriti}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -497,9 +496,9 @@
 	\item \textbf{Precondizione:} l'amministratore ha inserito almeno i parametri obbligatori;
 	\item \textbf{Postcondizione:} l'amministratore ha confermato i parametri inseriti.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.4.3: Creazione Recipe fallita}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -509,9 +508,9 @@
 	\item \textbf{Precondizione:} l'amministratore ha selezionato il pulsante di conferma per la creazione di una nuova Recipe;
 	\item \textbf{Postcondizione:} l'amministratore ha visualizzato un messaggio di errore contenente l'elenco dei parametri inseriti non corretti o l'eccezione sollevata dal sistema durante il salvataggio della nuova Recipe.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.4.4: Eliminazione Recipe}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -528,9 +527,9 @@
 		\item Conferma eliminazione Recipe (UC1.4.4.3).
 	\end{enumerate}
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.4.4.1: Apertura elenco Recipe}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -540,9 +539,9 @@
 	\item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema;
 	\item \textbf{Postcondizione:} l'amministratore ha visualizzato correttamente l'elenco delle Recipe.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.4.4.2: Eliminazione Recipe}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -552,8 +551,9 @@
 	\item \textbf{Precondizione:} l'amministratore ha visualizzato l'elenco delle Recipe;
 	\item \textbf{Postcondizione:} l'amministratore ha selezionato il pulsante di eliminazione di una Recipe.
 \end{itemize}
-\subsubsection{UC1.4.4.3: Conferma eliminazione Recipe}
+% FINE USE CASE %
 
+\subsubsection{UC1.4.4.3: Conferma eliminazione Recipe}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -563,12 +563,12 @@
 	\item \textbf{Precondizione:} l'amministratore ha selezionato il pulsante elimina su una Recipe;
 	\item \textbf{Postcondizione:} l'amministratore ha confermato l'eliminazione della Recipe e questa è stata cancellata dal sistema con a tutti i dati associati.
 \end{itemize}
+% FINE USE CASE %
 
 \pagebreak
 
 
 \subsection{UC1.5: Modifica password di accesso}
-
 \begin{figure}[!htbp]
 	\centering
 	\centerline{\includegraphics[scale=0.45]{./images/UC1_5.pdf}}
@@ -593,9 +593,9 @@
 	\item \textbf{Estensioni:} Vecchia password inserita non valida (UC1.5.5).
 
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.5.1: Inserimento nuova password}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -607,7 +607,6 @@
 \end{itemize}
 
 \subsubsection{UC1.5.2: Conferma inserimento password }
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -617,9 +616,9 @@
 	\item \textbf{Precondizione:} l'utente ha inserito la nuova password;
 	\item \textbf{Postcondizione:} l'utente ha verificato la correttezza della nuova password.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.5.3: Inserimento vecchia password}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -629,9 +628,9 @@
 	\item \textbf{Precondizione:} l'utente ha inserito la nuova password due volte negli appositi campi;
 	\item \textbf{Postcondizione:} l'utente ha inserito la vecchia password e può confermare la nuova.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.5.4: Conferma cambio password}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -641,9 +640,9 @@
 	\item \textbf{Precondizione:} l'utente ha inserito due volte la nuova password ed una la vecchia negli appositi campi;
 	\item \textbf{Postcondizione:} l'utente ha confermato l'operazione e la nuova password è ora attiva.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.5.5: Password non corretta}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -653,12 +652,12 @@
 	\item \textbf{Precondizione:} l'utente ha selezionato il pulsante di conferma del cambio password;
 	\item \textbf{Postcondizione:} l'utente ha visualizzato un messaggio di errore con i dettagli dei vincoli non soddisfatti.
 \end{itemize}
+% FINE USE CASE %
 
 \pagebreak
 
 
 \subsection{UC1.6: Logout utente}
-
 \begin{figure}[htbp]
 	\centering
 	\centerline{\includegraphics[scale=0.45]{./images/UC1_6.pdf}}
@@ -679,9 +678,9 @@
 		\item Conferma del logout (UC1.6.2).
 	\end{enumerate}
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.6.1: Pressione tasto logout}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -691,9 +690,9 @@
 	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso al servizio e si trova nella home screen;
 	\item \textbf{Postcondizione:} l'utente visualizza il pannello di conferma logout.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.6.2: Conferma del logout}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -703,12 +702,12 @@
 	\item \textbf{Precondizione:} l'utente ha selezionato il pulsante di logout nella home screen;
 	\item \textbf{Postcondizione:} l'utente ha confermato il logout e la sessione è terminata. Viene visualizzata la schermata di login.
 \end{itemize}
+% FINE USE CASE %
 
 \pagebreak
 
 
 \subsection{UC1.7: Amministrazione degli utenti}
-
 \begin{figure}[!htbp]
 	\centering
 	\centerline{\includegraphics[scale=0.45]{./images/UC1_7.pdf}}
@@ -731,9 +730,9 @@
 	\end{enumerate}
 	\item \textbf{Estensioni:} Eliminazione utente fallita (UC1.7.4).
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.7.1: Visualizzazione elenco utenti}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -743,9 +742,9 @@
 	\item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema e si trova nella sua home screen;
 	\item \textbf{Postcondizione:} l'amministratore ha visualizzato l'elenco degli utenti.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.7.2: Modifica permessi utente}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -762,9 +761,9 @@
 		\item Conferma modifiche (UC1.7.2.4).
 	\end{enumerate}
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.7.2.1: Apertura elenco utenti}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -774,9 +773,9 @@
 	\item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema e si trova nella sua home screen;
 	\item \textbf{Postcondizione:} l'amministratore ha visualizzato l'elenco degli utenti.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.7.2.2: Apertura pannello modifica permessi}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -786,9 +785,9 @@
 	\item \textbf{Precondizione:} l'amministratore ha visualizzato l'elenco utenti;
 	\item \textbf{Postcondizione:} l'amministratore ha selezionato il pulsante di modifica permessi di un utente.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.7.2.3: Selezione nuovi permessi}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -798,9 +797,9 @@
 	\item \textbf{Precondizione:} l'amministratore ha premuto il pulsante di modifica permessi utente;
 	\item \textbf{Postcondizione:} l'amministratore ha selezionato i nuovi permessi per l'utente.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.7.2.4: Conferma modifiche}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -810,9 +809,9 @@
 	\item \textbf{Precondizione:} l'amministratore ha selezionato nuovi permessi per l'utente;
 	\item \textbf{Postcondizione:} l'amministratore ha confermato le modifiche e sono ora attive nel sistema.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.7.3: Eliminazione utente}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -828,9 +827,9 @@
 		\item Conferma eliminazione (UC1.7.3.3).
 	\end{enumerate}
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.7.3.1: Apertura elenco utenti}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -840,9 +839,9 @@
 	\item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema e si trova nella sua home screen;
 	\item \textbf{Postcondizione:} l'amministratore ha visualizzato l'elenco degli utenti.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.7.3.2: Selezione pulsante elimina}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -854,7 +853,6 @@
 \end{itemize}
 
 \subsubsection{UC1.7.3.3: Conferma eliminazione}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -864,10 +862,9 @@
 	\item \textbf{Precondizione:} l'amministratore ha aperto il pannello di conferma eliminazione utente;
 	\item \textbf{Postcondizione:} l'utente selezionato è stato cancellato dal sistema insieme a tutte le sue View.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.7.4: Errore eliminazione utente}
-
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -877,12 +874,12 @@
 	\item \textbf{Precondizione:} l'amministratore ha confermato l'eliminazione di un utente;
 	\item \textbf{Postcondizione:} l'amministratore ha visualizzato il messaggio di errore. Nessun utente o dato è stato eliminato dal sistema.
 \end{itemize}
+% FINE USE CASE %
 
 \pagebreak
 
 
 \subsection{UC1.8: Registrazione nuovo utente}
-
 \begin{figure}[!htbp]
 	\centering
 	\centerline{\includegraphics[scale=0.45]{./images/UC1_8.pdf}}
@@ -909,10 +906,9 @@
 	\end{enumerate}
 	\item \textbf{Estensioni:} Creazione utente fallita (UC1.8.5).
 \end{itemize}
-
+% FINE USE CASE %
 
 \subsubsection{UC1.8.1: Inserimento username}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -922,9 +918,9 @@
 	\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire l'username per il nuovo account;
 	\item \textbf{Postcondizione:} l'utente ha inserito il proprio username.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.8.2: Inserimento mail}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -934,9 +930,9 @@
 	\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire la mail per il nuovo account;
 	\item \textbf{Postcondizione:} l'utente ha inserito il proprio indirizzo mail.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.8.3: Inserimento password}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -946,9 +942,9 @@
 	\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire la password per il nuovo account;
 	\item \textbf{Postcondizione:} l'utente ha inserito la password.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.8.4: Conferma registrazione}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -959,9 +955,9 @@
 	\item \textbf{Postcondizione:} l'utente ha confermato di voler creare un nuovo account all'interno
 	del sistema.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.8.5: Errore durante la registrazione}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -971,11 +967,10 @@
 	\item \textbf{Precondizione:} i dati inseriti non rispettano uno o più vincoli di sistema;
 	\item \textbf{Postcondizione:} l'utente ha visualizzato l'errore relativo ai dati inseriti.
 \end{itemize}
-
+% FINE USE CASE %
 
 
 \subsection{UC1.9: Richiesta aggiunta Recipe}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -992,9 +987,9 @@
 	\end{enumerate}
 	\item \textbf{Estensioni:} Creazione richiesta fallita (UC1.9.4).
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.9.1: Creazione richiesta}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -1005,10 +1000,10 @@
 	\item \textbf{Postcondizione:} l'utente ha selezionato il pulsante di creazione nuova richiesta.
 	
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.9.2: Inserimento parametri richiesta}
 [TO DO]
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -1018,6 +1013,7 @@
 	\item \textbf{Precondizione:} TO DO;
 	\item \textbf{Postcondizione:} TO DO;
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.9.3: Invio richiesta}
 [TO DO]
@@ -1030,9 +1026,10 @@
 	\item \textbf{Precondizione:} TO DO;
 	\item \textbf{Postcondizione:} TO DO;
 \end{itemize}
-	
-\subsubsection{UC1.9.4: Creazione richiesta fallita} TODO
+% FINE USE CASE %
 
+\subsubsection{UC1.9.4: Creazione richiesta fallita}
+[TO DO]
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -1042,13 +1039,12 @@
 	\item \textbf{Precondizione:} TO DO;
 	\item \textbf{Postcondizione:} TO DO;
 \end{itemize}
-
-
+% FINE USE CASE %
 
 \pagebreak
 
-\subsection{UC1.10: Visione richieste utente}
 
+\subsection{UC1.10: Visione richieste utente}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -1063,15 +1059,18 @@
 		\item Chiudi Richiesta (UC1.10.2);
 	\end{enumerate}
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.10.1: Visualizza Richieste}
 [TO DO]
+% FINE USE CASE %
+
 \subsubsection{UC1.10.2: Chiudi Richiesta}
 [TO DO]
-
-
+% FINE USE CASE %
 
 \pagebreak
+
 
 \subsection{UC1.11: Gestione dei preferiti}
 [TO CHANGE DIA]
@@ -1101,6 +1100,7 @@
 		\item Fallimento rimozione View dalle preferite (UC1.11.5).
 	\end{itemize}
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.11.1: Visualizzazione View preferite}
 \begin{itemize}
@@ -1112,7 +1112,7 @@
 	\item \textbf{Precondizione:} l'utente deve avere già marcato come preferita qualche View;
 	\item \textbf{Postcondizione:} l'utente visualizza le View marcate come preferite.
 \end{itemize}
-
+% FINE USE CASE %
 
 \subsubsection{UC1.11.2: Aggiunta View nelle preferite}
 \begin{itemize}
@@ -1124,6 +1124,7 @@
 	\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per fare diventare la View una delle preferite;
 	\item \textbf{Postcondizione:} l'utente riceve conferma del fatto che la View è entrata a fare parte di quelle preferite.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.11.3: Fallimento aggiunta View nelle preferite}
 \begin{itemize}
@@ -1135,6 +1136,7 @@
 	\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per fare diventare la View una delle preferite;
 	\item \textbf{Postcondizione:} l'utente riceve una segnalazione che la View non è stata aggiunta tra quelle preferite.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.11.4: Rimozione View dalle preferite}
 \begin{itemize}
@@ -1146,6 +1148,7 @@
 	\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per fare rimuovere la View dalle preferite;
 	\item \textbf{Postcondizione:} l'utente riceve conferma del fatto che la View è stata rimossa da quelle preferite.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.11.5: Fallimento rimozione View dalle preferite}
 \begin{itemize}
@@ -1157,12 +1160,12 @@
 	\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per rimuovere la View da quelle preferite;
 	\item \textbf{Postcondizione:} l'utente riceve una segnalazione che la View non è stata rimossa da quelle preferite.
 \end{itemize}
-
+% FINE USE CASE %
 
 \pagebreak
 
-\subsection{UC2: Servizi REST}
 
+\subsection{UC2: Servizi REST}
 [TO CHANGE DIA]
 \begin{figure}[htbp]
 	\centering
@@ -1191,11 +1194,12 @@
 		\item Visualizzazione specifica servizi REST (UC2.4);
 	\end{enumerate}
 \end{itemize}
+% FINE USE CASE %
 
 \pagebreak
 
-\subsection{UC2.1: Richiesta token di accesso}
 
+\subsection{UC2.1: Richiesta token di accesso}
 \begin{figure}[htbp]
 	\centering
 	\centerline{\includegraphics{./images/UC2_1.pdf}}
@@ -1217,10 +1221,9 @@
 	\end{enumerate}
 	\item \textbf{Estensioni:} Fallimento ricezione token (UC2.1.2).
 \end{itemize}
-
+% FINE USE CASE %
 
 \subsubsection{UC2.1.1: Invio richiesta di un token}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -1230,9 +1233,9 @@
 	\item \textbf{Precondizione:} l'utente si è registrato presso il sistema e non ha ancora associato un token d'accesso;
 	\item \textbf{Postcondizione:} il sistema riceve la richiesta inviata dall'utente.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC2.1.2: Fallimento autenticazione}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -1242,9 +1245,9 @@
 	\item \textbf{Precondizione:} il sistema ha ricevuto una richiesta di token contenente uno username non riconosciuto dal sistema o una password non corrispondente a quella associata allo username inserito;
 	\item \textbf{Postcondizione:} l'utente ha preso atto del fallimento.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC2.1.3: Ricezione token di accesso}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -1254,9 +1257,10 @@
 	\item \textbf{Precondizione:} il sistema aveva ricevuto una richiesta da un utente registrato per fornire un token di accesso;
 	\item \textbf{Postcondizione:} l'utente ha ottenuto un token di accesso valido.
 \end{itemize}
-
+% FINE USE CASE %
 
 \pagebreak
+
 
 \subsection{UC2.2: Invio richiesta REST}
 [TO CHANGE DIA]
@@ -1281,10 +1285,9 @@
 	\end{enumerate}
 	\item \textbf{Estensioni:} Fallimento richiesta (UC2.2.2).
 \end{itemize}
-
+% FINE USE CASE %
 
 \subsubsection{UC2.2.1: Invio richiesta contenente token}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -1294,9 +1297,9 @@
 	\item \textbf{Precondizione:} l'utente possiede un token di accesso valido;
 	\item \textbf{Postcondizione:} il sistema riceve la richiesta inviata.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC2.2.2: Fallimento richiesta}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -1306,9 +1309,9 @@
 	\item \textbf{Precondizione:} l'utente ha inviato una richiesta usando un token non valido o con un errore di sintassi;
 	\item \textbf{Postcondizione:} l'utente ha preso atto del fallimento della richiesta.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC2.2.3: Ricezione risultato}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -1318,9 +1321,10 @@
 	\item \textbf{Precondizione:} l'utente aveva inviato una richiesta al sistema;
 	\item \textbf{Postcondizione:} l'utente ha ricevuto i dati richiesti.
 \end{itemize}
-
+% FINE USE CASE %
 
 \pagebreak
+
 
 \subsection{UC2.3: Invalidamento del token di accesso}
 \begin{figure}[htbp]
@@ -1344,7 +1348,7 @@
 	\end{enumerate}
 	\item \textbf{Estensioni:} Fallimento richiesta (UC2.3.2).
 \end{itemize}
-
+% FINE USE CASE %
 
 \subsubsection{UC2.3.1: Invio richiesta di invalidamento token}
 
@@ -1357,9 +1361,9 @@
 	\item \textbf{Precondizione:} il token di cui viene richiesta la disabilitazione è valido;
 	\item \textbf{Postcondizione:} il token di accesso non è più valido.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC2.3.2: Fallimento richiesta}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -1369,9 +1373,9 @@
 	\item \textbf{Precondizione:} l'utente ha chiesto l'invalidamento di un token;
 	\item \textbf{Postcondizione:} l'utente ha preso atto del fatto che l'invalidamento del token non ha avuto successo.
 \end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC2.3.3: Ricezione conferma}
-
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -1381,7 +1385,7 @@
 	\item \textbf{Precondizione:} l'utente ha chiesto l'invalidamento di un token valido;
 	\item \textbf{Postcondizione:} l'utente ha preso atto del fatto che il token è stato invalidato.
 \end{itemize}
-
+% FINE USE CASE %
 
 \subsection{UC2.4: Visualizzazione specifica servizi REST}
 \begin{itemize}
@@ -1392,7 +1396,8 @@
 	\item \textbf{Descrizione:} l'utente può visualizzare l'elenco dei vari servizi REST offerti dal sistema, in modo da poterli utilizzare a sua volta per scopi personali;
 	\item \textbf{Precondizione:} l'utente desidera visualizzare l'elenco dei servizi REST offerti;
 	\item \textbf{Postcondizione:} l'utente ha ottenuto l'elenco dei servizi REST;
-
 \end{itemize}
+% FINE USE CASE %
+
 
 \pagebreak
