@@ -33,14 +33,17 @@
 % =============================================================================================================================
 % 2.0.3			2015-03-11			modificati UC riguardanti i servizi REST										Tesser Paolo
 % =============================================================================================================================
+% 2.0.4			2015-03-12			modificato UC1.3 e aggiunti derivati UC1.3.1 e UC1.3.2							Tesser Paolo
+% =============================================================================================================================
 %
+
 
 % CONTENUTO DEL CAPITOLO
 
 \section{Casi d'uso}
 
 \subsection{UC1: Caso d'uso pubblico}
-
+[TO CHANGE/EXTEND DIA]
 \begin{figure}[htbp]
 	\centering
 	\centerline{\includegraphics[scale=0.45]{./images/UC1.pdf}}
@@ -67,12 +70,15 @@
 	\begin{enumerate}
 		\item Login utente (UC1.1);
 		\item Visualizza informazione utente e statistiche (UC1.2);
-		\item Gestione delle View (UC1.3);
+		\item Visualizzazione delle Recipe (UC1.3);
+		\item Richiesta aggiunta Recipe (UC1.9);
+		\item Gestione dei preferiti (UC1.11);
 		\item Gestione delle Recipe (UC1.4);
 		\item Modifica password di accesso (UC1.5);
 		\item Logout utente (UC1.6);
 		\item Amministrazione utenti (UC1.7);
 		\item Registrazione nuovo utente (UC1.8);
+		\item Visione richieste utente (UC1.10).
 	\end{enumerate}
 \end{itemize}
 
@@ -278,12 +284,12 @@
 
 
 \pagebreak
-\subsection{UC1.3: Gestione delle View}
-
+\subsection{UC1.3: Visualizzazione delle Recipe}
+[TO CHANGE DIA]
 \begin{figure}[!htbp]
 	\centering
-	\centerline{\includegraphics[scale=0.45]{./images/UC1_3.pdf}} % TO CHANGE
-	\caption{UC1.3 - Gestione delle View}
+	\centerline{\includegraphics[scale=0.45]{./images/UC1_3.pdf}}
+	\caption{UC1.3 - Visualizzazione delle Recipe}
 \end{figure}
 
 \begin{itemize}
@@ -291,33 +297,33 @@
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} gli utenti possono vedere in questa pagina le View e i dati ad esse associate. Per ciascuna View si possono vedere dei grafici statistici associati a determinati valori.
+	\item \textbf{Descrizione:} gli utenti possono vedere in questa pagina le Recipe offerte dal sistema. Per ciascuna Recipe l'utente può decidere di visualizzare tutte le View associate o effettuare un confronto tra le View di quella Recipe.
 	\item \textbf{Precondizione:} l'utente deve aver fatto l'accesso nell'apposita pagina;
-	\item \textbf{Postcondizione:} le informazioni e i grafici richiesti a seconda della View scelta dall'utente sono stati forniti;
+	\item \textbf{Postcondizione:} è stato fornito un elenco delle Recipe disponibili.
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
-		\item Visualizza elenco View (UC1.3.1);
-		\item TO DO (nuovi UC riguardanti i tipi di grafici con i dati che le generano)
+		\item Visualizza metriche delle Recipe (UC1.3.1);
+		\item Confronta metriche delle Recipe (UC1.3.2).
 	\end{enumerate}
 	\item \textbf{Estensioni:}
 	\begin{itemize}
-		\item TO DO (da capire se ci possono essere delle estensioni possibili, tipo il grafico non viene correttamente visualizzato perché i dati sono insufficienti)
+		\item [TO DO]
 	\end{itemize}
 \end{itemize}
 
-\subsubsection{UC1.3.1: Visualizza elenco View}
+\subsubsection{UC1.3.1: Visualizza metriche delle Recipe}
 
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} questa è la Home Screen dell'utente attualmente connesso, qui potrà visualizzare tutte le View precedentemente selezionate sotto forma di grafici e accedere al menu di configurazione: può accedere all'elenco di tutte le sue View, può aggiungerne una nuova o rimuoverne una esistente dal suo elenco personale;
-	\item \textbf{Precondizione:} l'utente ha effettuato il login ed è stato reindirizzato a questa pagina oppure ha selezionato il pulsante Home Screen da una delle pagine della WebGUI;
-	\item \textbf{Postcondizione:} l'utente viene reindirizzato alla home screen e visualizza le informazioni richieste;
+	\item \textbf{Descrizione:} l'utente visualizza un elenco di ; 
+	\item \textbf{Precondizione:} [TO DO];
+	\item \textbf{Postcondizione:} [TO DO];
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
-		\item Apertura elenco View (UC1.3.1.1).
+		\item Visualizza View della parte (UC1.3.1.1).
 	\end{enumerate}
 \end{itemize}
 
@@ -333,22 +339,36 @@
 	\item \textbf{Postcondizione:} l'utente ha ottenuto l'elenco di tutte le sue View.
 \end{itemize}
 
-\subsubsection{UC1.3.2: Aggiungi una View a Home Screen}
+\subsubsection{UC1.3.2: Confronta metriche delle Recipe}
 
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} Premendo sull'apposito pulsante è possibile marcare una View in modo che appaia nella propria Home Screen;	
-	\item \textbf{Precondizione:} l'utente ha visualizzato l'elenco delle View;
-	\item \textbf{Postcondizione:} La View selezionata è stata aggiunta all'elenco delle View preferite dell'utente visualizzabili nella sua Home Screen;
+	\item \textbf{Descrizione:} [TO DO] ;
+	\item \textbf{Precondizione:} l'utente ha effettuato il login ed è stato reindirizzato a questa pagina oppure ha selezionato il pulsante Home Screen da una delle pagine della WebGUI;
+	\item \textbf{Postcondizione:} l'utente viene reindirizzato alla home screen e visualizza le informazioni richieste;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Apertura elenco View (UC1.3.1.1).
-		\item Selezione pulsante aggiungi View ad Home Screen.		
 	\end{enumerate}
 \end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \pagebreak
 
@@ -899,7 +919,7 @@
 	\begin{itemize}
 		\item utente non autenticato: utente non ancora noto al sistema che accede al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'utente deve inserire la password che vuole associare ai dati precedetemente inseriti;
+	\item \textbf{Descrizione:} l'utente deve inserire la password che vuole associare ai dati precedentemente inseriti;
 	\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire la password per il nuovo account;
 	\item \textbf{Postcondizione:} l'utente ha inserito la password.
 \end{itemize}
@@ -963,7 +983,8 @@
 	
 \end{itemize}
 
-\subsubsection{UC1.9.2: Inserimento parametri richiesta} TODO
+\subsubsection{UC1.9.2: Inserimento parametri richiesta}
+[TO DO]
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -975,8 +996,8 @@
 	\item \textbf{Postcondizione:} 
 \end{itemize}
 
-\subsubsection{UC1.9.3: Invio richiesta} TODO
-
+\subsubsection{UC1.9.3: Invio richiesta}
+[TO DO]
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -1011,7 +1032,7 @@
 		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
 	\item \textbf{Precondizione:} l'amministratore dopo essersi autenticato ha selezionato il pulsante di gestione richieste utente dal menu principale dell'applicazione;
-	\item \textbf{Descrizione:} gli amministratori possono vedere tutte le richieste di aggiunta Recipe inviate correttamente dagli utenti in questa sezione della WebGUI; Possono inoltre marcare una richiesta come "chiusa" qualora sia stata accettata oppure rifiutata;
+	\item \textbf{Descrizione:} gli amministratori possono vedere tutte le richieste di aggiunta Recipe inviate correttamente dagli utenti in questa sezione della WebGUI; Possono inoltre marcare una richiesta come ```chiusa'' qualora sia stata accettata oppure rifiutata;
 	\item \textbf{Postcondizione:} le informazioni richieste dall'amministratore sono state fornite, le richiesta marcate come chiuse non sono più visibili nell'elenco; 
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
@@ -1020,15 +1041,17 @@
 	\end{enumerate}
 \end{itemize}
 
-\subsubsection{UC1.10.1: Visualizza Richieste}	TODO
-\subsubsection{UC1.10.2: Chiudi Richiesta}	TODO
+\subsubsection{UC1.10.1: Visualizza Richieste}
+[TO DO]
+\subsubsection{UC1.10.2: Chiudi Richiesta}
+[TO DO]
 
 
 
 \pagebreak
 
-\subsection{UC1.11: Confronto tra View}
-
+\subsection{UC1.11: Gestione dei preferiti}
+[TO DO]
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -1044,12 +1067,10 @@
 	\end{enumerate}
 	\item \textbf{Estensioni:}
 	\begin{itemize}
-		\item TO DO (da capire se ci possono essere delle estensioni possibili, tipo il grafico non viene correttamente visualizzato perché i dati sono insufficienti)
+		\item [TO DO];
 	\end{itemize}
 \end{itemize}
 
-\subsubsection{UC1.11.1:  Apertura pannello di confronto} TODO
-\subsubsection{UC1.11.2:  Visualizza confronto richiesto} TODO
 
 
 
@@ -1057,9 +1078,10 @@
 
 \subsection{UC2: Servizi REST}
 
+[TO CHANGE DIA]
 \begin{figure}[htbp]
 	\centering
-	\centerline{\includegraphics{./images/UC2.pdf}} % TO CHANGE
+	\centerline{\includegraphics{./images/UC2.pdf}}
 	\caption{UC2 - Servizi REST}
 \end{figure}
 
@@ -1080,7 +1102,8 @@
 	\begin{enumerate}
 		\item Richiesta token di accesso (UC2.1);
 		\item Invio richiesta REST (UC2.2);
-		\item Rimozione del token di accesso (UC2.3);
+		\item Invalidamento del token di accesso (UC2.3);
+		\item Visualizzazione specifica servizi REST (UC2.4);
 	\end{enumerate}
 \end{itemize}
 
@@ -1163,7 +1186,7 @@
 	\begin{itemize}
 		\item utente con Token di accesso: utente che ha ricevuto dal sistema le credenziali per accedere al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} un utente registrato al sistema può inviare richieste REST al sistema per ottenere i dati di una view senza utilizzare l'interfaccia Web;
+	\item \textbf{Descrizione:} un utente registrato al sistema può inviare richieste REST al sistema per ottenere i dati di una View senza utilizzare l'interfaccia Web;
 	\item \textbf{Precondizione:} l'utente possiede un token di accesso valido;
 	\item \textbf{Postcondizione:} l'utente ha ricevuto i dati richiesti;
 	\item \textbf{Flusso principale degli eventi:}
@@ -1199,7 +1222,7 @@
 	\item \textbf{Postcondizione:} l'utente ha preso atto del fallimento della richiesta.
 \end{itemize}
 
-\subsubsection{UC2.1.3: Ricezione risultato}
+\subsubsection{UC2.2.3: Ricezione risultato}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1214,12 +1237,12 @@
 
 \pagebreak
 
-\subsection{UC2.3: Fallimento ricezione token}
-
+\subsection{UC2.3: Invalidamento del token di accesso}
+[TO CHANGE DIA]
 \begin{figure}[htbp]
 	\centering
-	\centerline{\includegraphics {./images/UC2_3.pdf}} % TO CHANGE
-	\caption{UC2.3 - Fallimento ricezione token}
+	\centerline{\includegraphics {./images/UC2_3.pdf}}
+	\caption{UC2.3 - C2.3: Invalidamento del token di accesso}
 \end{figure}
 
 \begin{itemize}
@@ -1275,5 +1298,17 @@
 	\item \textbf{Postcondizione:} l'utente ha preso atto del fatto che il token è stato invalidato.
 \end{itemize}
 
+
+\subsection{UC2.4: Visualizzazione specifica servizi REST}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente: utente che desidera avere le informazione riguardanti i servizi REST pubblici offerti dal sistema;
+	\end{itemize}
+	\item \textbf{Descrizione:} l'utente può visualizzare l'elenco dei vari servizi REST offerti dal sistema, in modo da poterli utilizzare a sua volta per scopi personali;
+	\item \textbf{Precondizione:} l'utente desidera visualizzare l'elenco dei servizi REST offerti;
+	\item \textbf{Postcondizione:} l'utente ha ottenuto l'elenco dei servizi REST;
+
+\end{itemize}
 
 \pagebreak
