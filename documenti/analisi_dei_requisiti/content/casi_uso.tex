@@ -971,6 +971,13 @@
 
 
 \subsection{UC1.9: Richiesta aggiunta Recipe}
+[TO CHANGE DIA]
+\begin{figure}[!htbp]
+	\centering
+	\centerline{\includegraphics[scale=0.45]{./images/UC1_8.pdf}}
+	\caption{UC1.9 - Richiesta aggiunta Recipe}
+\end{figure}
+
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -1044,29 +1051,78 @@
 \pagebreak
 
 
-\subsection{UC1.10: Visione richieste utente}
+\subsection{UC1.10: Gestione richieste Recipe}
+[TO CHANGE DIA]
+\begin{figure}[htbp]
+	\centering
+	\centerline{\includegraphics{./images/UC2_1.pdf}}
+	\caption{UC1.10 - Gestione richieste Recipe}
+\end{figure}
+
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
 		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
+	\item \textbf{Descrizione:} gli amministratori possono vedere tutte le richieste di aggiunta Recipe inviate correttamente dagli utenti. Possono inoltre marcare una richiesta come ```chiusa'' qualora sia stata accettata oppure rifiutata;
 	\item \textbf{Precondizione:} l'amministratore dopo essersi autenticato ha selezionato il pulsante di gestione richieste utente dal menu principale dell'applicazione;
-	\item \textbf{Descrizione:} gli amministratori possono vedere tutte le richieste di aggiunta Recipe inviate correttamente dagli utenti in questa sezione della WebGUI; Possono inoltre marcare una richiesta come ```chiusa'' qualora sia stata accettata oppure rifiutata;
 	\item \textbf{Postcondizione:} le informazioni richieste dall'amministratore sono state fornite, le richiesta marcate come chiuse non sono più visibili nell'elenco; 
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
-		\item Visualizza Richieste (UC1.10.1);
-		\item Chiudi Richiesta (UC1.10.2);
+		\item Visualizza elenco richieste (UC1.10.1);
+		\item Visualizza dettagli richiesta (UC1.10.2);
+		\item Accettazione richiesta (UC1.10.3);
+		\item Respinta richiesta (UC1.10.4);
 	\end{enumerate}
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.10.1: Visualizza Richieste}
-[TO DO]
+\subsubsection{UC1.10.1: Visualizza elenco richieste}
+	\begin{itemize}
+		\item \textbf{Attori:}
+		\begin{itemize}
+			\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+		\end{itemize}
+		\item \textbf{Descrizione:} l'amministratore può visualizzare un elenco delle richieste per delle nuove Recipe che sono state inviate dagli utenti normali;
+		\item \textbf{Precondizione:} devono essere presenti delle richieste di nuove Recipe. L'amministratore desidera visualizzare le richieste ricevute;
+		\item \textbf{Postcondizione:} l'amministratore ha visualizzato l'elenco delle richieste di nuove Recipe;
+	\end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.10.2: Chiudi Richiesta}
-[TO DO]
+\subsubsection{UC1.10.2: Visualizza dettagli richiesta}
+	\begin{itemize}
+		\item \textbf{Attori:}
+		\begin{itemize}
+			\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+		\end{itemize}
+		\item \textbf{Descrizione:} l'amministratore può visualizzare la richiesta che ha selezionato per controllarne i parametri;
+		\item \textbf{Precondizione:} l'amministratore ha selezionato la visualizzazione completa dei dettagli di una richiesta;
+		\item \textbf{Postcondizione:} l'amministratore ha visualizzato i dettagli della richiesta;
+	\end{itemize}
+% FINE USE CASE %
+
+\subsubsection{UC1.10.3: Accettazione richiesta}
+	\begin{itemize}
+		\item \textbf{Attori:}
+		\begin{itemize}
+			\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+		\end{itemize}
+		\item \textbf{Descrizione:} l'amministratore una volta controllata la bontà della Recipe richiesta potrà accettarla in modo che venga inserita nel sistema;
+		\item \textbf{Precondizione:} l'amministratore decide di inserire la Recipe nel sistema;
+		\item \textbf{Postcondizione:} l'amministratore ha accettato la richiesta ed è stata inserita nel sistema;
+	\end{itemize}
+% FINE USE CASE %
+
+\subsubsection{UC1.10.4: Respinta richiesta}
+	\begin{itemize}
+		\item \textbf{Attori:}
+		\begin{itemize}
+			\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+		\end{itemize}
+		\item \textbf{Descrizione:} l'amministratore una volta controllata la richiesta per una nuova Recipe potrà decidere di rifiutarla qualora non ritenesse opportuno il suo inserimento nel sistema;
+		\item \textbf{Precondizione:} l'amministratore decide di rifiutare la Recipe la richiesta;
+		\item \textbf{Postcondizione:} l'amministratore ha rifiutato la richiesta;
+	\end{itemize}
 % FINE USE CASE %
 
 \pagebreak
@@ -1077,7 +1133,7 @@
 \begin{figure}[htbp]
 	\centering
 	\centerline{\includegraphics{./images/UC2_1.pdf}}
-	\caption{UC2.1 - Richiesta token di accesso}
+	\caption{UC1.11 - Gestione dei preferiti}
 \end{figure}
 
 \begin{itemize}
