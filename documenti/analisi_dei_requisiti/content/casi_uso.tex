@@ -327,7 +327,7 @@
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.3.1.1: Visualizza View della metrica}
+\subsubsection{UC1.3.1.X: Visualizza View della metrica}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -1002,49 +1002,46 @@
 	\begin{itemize}
 		\item utente autenticato: utente che ha effettuato l'accesso nell'applicazione;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'utente può accedere al pannello per la creazione di una richiesta di aggiunta Recipe dalla sua Home Screen premendo sull'apposito pulsante nella barra dei menù;
-	\item \textbf{Precondizione:} l'utente ha eseguito l'accesso al sistema;
-	\item \textbf{Postcondizione:} l'utente ha selezionato il pulsante di creazione nuova richiesta.
+	\item \textbf{Descrizione:} l'utente può accedere al pannello per la creazione di una richiesta di aggiunta Recipe da inviare agli amministratori, che valuteranno se accettarla o meno;
+	\item \textbf{Precondizione:} l'utente ha selezionato il pulsante di creazione nuova richiesta;
+	\item \textbf{Postcondizione:} l'utente ha visualizzato il pannello per effettuare una richiesta di inserimento di una nuova Recipe.
 	
 \end{itemize}
 % FINE USE CASE %
 
 \subsubsection{UC1.9.2: Inserimento parametri richiesta}
-[TO DO]
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
 		\item utente autenticato: utente che ha effettuato l'accesso nell'applicazione;
 	\end{itemize}
-	\item \textbf{Descrizione:} TO DO;
-	\item \textbf{Precondizione:} TO DO;
-	\item \textbf{Postcondizione:} TO DO;
+	\item \textbf{Descrizione:} l'utente, una volta entrato nell'apposito pannello, per andare poi ad inviare una richiesta per una nuova Recipe, deve compilare tutti i campi richiesti dal form;
+	\item \textbf{Precondizione:} l'utente ha visualizzato il pannello per l'inserimento dei dati richiesti;
+	\item \textbf{Postcondizione:} l'utente ha inserito tutti i parametri richiesti dal pannello;
 \end{itemize}
 % FINE USE CASE %
 
 \subsubsection{UC1.9.3: Invio richiesta}
-[TO DO]
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
 		\item utente autenticato: utente che ha effettuato l'accesso nell'applicazione;
 	\end{itemize}
-	\item \textbf{Descrizione:} TO DO;
-	\item \textbf{Precondizione:} TO DO;
-	\item \textbf{Postcondizione:} TO DO;
+	\item \textbf{Descrizione:} una volta che l'utente ha compilato tutti i campi richiesti dal pannello, può inviare la richiesta in maniera che venga valutata;
+	\item \textbf{Precondizione:} l'utente ha inserito tutti i parametri richiesti e ha premuto sull'apposito bottone per l'invio;
+	\item \textbf{Postcondizione:} l'utente visualizza la conferma dell'avvenuto invio della richiesta;
 \end{itemize}
 % FINE USE CASE %
 
 \subsubsection{UC1.9.4: Creazione richiesta fallita}
-[TO DO]
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
 		\item utente autenticato: utente che ha effettuato l'accesso nell'applicazione;
 	\end{itemize}
-	\item \textbf{Descrizione:} TO DO;
-	\item \textbf{Precondizione:} TO DO;
-	\item \textbf{Postcondizione:} TO DO;
+	\item \textbf{Descrizione:} la creazione di una richiesta può fallire qualora i dati richiesti da inserire non fossero conformi alle attese;
+	\item \textbf{Precondizione:} l'utente ha inserito tutti i parametri richiesti e ha premuto sull'apposito bottone per l'invio;
+	\item \textbf{Postcondizione:} l'utente ha visualizzato un errore che indica che indica quali parametri inseriti non sono corretti;
 \end{itemize}
 % FINE USE CASE %
 
@@ -1083,7 +1080,7 @@
 		\begin{itemize}
 			\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 		\end{itemize}
-		\item \textbf{Descrizione:} l'amministratore può visualizzare un elenco delle richieste per delle nuove Recipe che sono state inviate dagli utenti normali;
+		\item \textbf{Descrizione:} l'amministratore può visualizzare un elenco delle richieste per delle nuove Recipe che sono state inviate dagli utenti normali e non ancore ``chiuse'';
 		\item \textbf{Precondizione:} devono essere presenti delle richieste di nuove Recipe. L'amministratore desidera visualizzare le richieste ricevute;
 		\item \textbf{Postcondizione:} l'amministratore ha visualizzato l'elenco delle richieste di nuove Recipe;
 	\end{itemize}
