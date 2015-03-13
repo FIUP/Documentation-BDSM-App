@@ -1014,9 +1014,9 @@
 	\begin{itemize}
 		\item utente autenticato: utente che ha effettuato l'accesso nell'applicazione;
 	\end{itemize}
-	\item \textbf{Descrizione:} 
-	\item \textbf{Precondizione:} 
-	\item \textbf{Postcondizione:} 
+	\item \textbf{Descrizione:} TO DO;
+	\item \textbf{Precondizione:} TO DO;
+	\item \textbf{Postcondizione:} TO DO;
 \end{itemize}
 
 \subsubsection{UC1.9.3: Invio richiesta}
@@ -1026,9 +1026,9 @@
 	\begin{itemize}
 		\item utente autenticato: utente che ha effettuato l'accesso nell'applicazione;
 	\end{itemize}
-	\item \textbf{Descrizione:} 
-	\item \textbf{Precondizione:} 
-	\item \textbf{Postcondizione:} 
+	\item \textbf{Descrizione:} TO DO;
+	\item \textbf{Precondizione:} TO DO;
+	\item \textbf{Postcondizione:} TO DO;
 \end{itemize}
 	
 \subsubsection{UC1.9.4: Creazione richiesta fallita} TODO
@@ -1038,9 +1038,9 @@
 	\begin{itemize}
 		\item utente autenticato: utente che ha effettuato l'accesso nell'applicazione;
 	\end{itemize}
-	\item \textbf{Descrizione:} 
-	\item \textbf{Precondizione:} 
-	\item \textbf{Postcondizione:} 
+	\item \textbf{Descrizione:} TO DO;
+	\item \textbf{Precondizione:} TO DO;
+	\item \textbf{Postcondizione:} TO DO;
 \end{itemize}
 
 
@@ -1074,6 +1074,13 @@
 \pagebreak
 
 \subsection{UC1.11: Gestione dei preferiti}
+[TO CHANGE DIA]
+\begin{figure}[htbp]
+	\centering
+	\centerline{\includegraphics{./images/UC2_1.pdf}}
+	\caption{UC2.1 - Richiesta token di accesso}
+\end{figure}
+
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -1099,11 +1106,11 @@
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
-		\item utente: utente che desidera ottenere un token di accesso;
+		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} TO DO;
-	\item \textbf{Precondizione:} TO DO;
-	\item \textbf{Postcondizione:} TO DO.
+	\item \textbf{Descrizione:} l'utente vuole vedere e consultare tutte le View che ha già marcato come preferite;
+	\item \textbf{Precondizione:} l'utente deve avere già marcato come preferita qualche View;
+	\item \textbf{Postcondizione:} l'utente visualizza le View marcate come preferite.
 \end{itemize}
 
 
@@ -1111,47 +1118,45 @@
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
-		\item utente: utente che desidera ottenere un token di accesso;
+		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} TO DO;
-	\item \textbf{Precondizione:} TO DO;
-	\item \textbf{Postcondizione:} TO DO.
+	\item \textbf{Descrizione:} l'utente desidera marcare una View come preferita. Per farlo deve premere su un apposito pulsante vicino alla View in questione;
+	\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per fare diventare la View una delle preferite;
+	\item \textbf{Postcondizione:} l'utente riceve conferma del fatto che la View è entrata a fare parte di quelle preferite.
 \end{itemize}
 
 \subsubsection{UC1.11.3: Fallimento aggiunta View nelle preferite}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
-		\item utente: utente che desidera ottenere un token di accesso;
+		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} TO DO;
-	\item \textbf{Precondizione:} TO DO;
-	\item \textbf{Postcondizione:} TO DO.
+	\item \textbf{Descrizione:} l'utente non riesce a marcare una View come preferita in quanto il sistema ha avuto dei problemi;
+	\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per fare diventare la View una delle preferite;
+	\item \textbf{Postcondizione:} l'utente riceve una segnalazione che la View non è stata aggiunta tra quelle preferite.
 \end{itemize}
 
 \subsubsection{UC1.11.4: Rimozione View dalle preferite}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
-		\item utente: utente che desidera ottenere un token di accesso;
+		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} TO DO;
-	\item \textbf{Precondizione:} TO DO;
-	\item \textbf{Postcondizione:} TO DO.
+	\item \textbf{Descrizione:} l'utente desidera rimuovere una View dalle preferite. Per farlo deve premere su un apposito pulsante vicino alla View in questione;
+	\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per fare rimuovere la View dalle preferite;
+	\item \textbf{Postcondizione:} l'utente riceve conferma del fatto che la View è stata rimossa da quelle preferite.
 \end{itemize}
 
 \subsubsection{UC1.11.5: Fallimento rimozione View dalle preferite}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
-		\item utente: utente che desidera ottenere un token di accesso;
+		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} TO DO;
-	\item \textbf{Precondizione:} TO DO;
-	\item \textbf{Postcondizione:} TO DO.
+	\item \textbf{Descrizione:} l'utente non riesce a rimuovere una View dalle preferite in quanto il sistema ha avuto dei problemi;
+	\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per rimuovere la View da quelle preferite;
+	\item \textbf{Postcondizione:} l'utente riceve una segnalazione che la View non è stata rimossa da quelle preferite.
 \end{itemize}
-
-
 
 
 \pagebreak
@@ -1169,7 +1174,7 @@
 	\item \textbf{Attori:}
 	\begin{itemize}
 		\item utente autenticato: utente che ha effettuato l'accesso nell'applicazione;
-		\item utente autenticato con Token di accesso: utente che ha ricevuto dal sistema le credenziali (token) per utilizzare i servizi REST offerti;
+		\item utente autenticato con token di accesso: utente che ha ricevuto dal sistema le credenziali (token) per utilizzare i servizi REST offerti;
 	\end{itemize}
 	\item \textbf{Descrizione:} dopo l'accesso all'applicativo:
 	\begin{itemize}
@@ -1200,29 +1205,29 @@
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
-		\item utente: utente che desidera ottenere un token di accesso;
+		\item utente autenticato: utente che desidera ottenere un token di accesso;
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente può ottenere un token di accesso per i servizi REST inviando l'apposita richiesta;
 	\item \textbf{Precondizione:} l'utente desidera avere un nuovo token di accesso;
 	\item \textbf{Postcondizione:} l'utente ha ottenuto un token di accesso;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
-		\item Invio richiesta premendo l'apposito bottone per la ricezione di un token (UC2.1.1);
+		\item Invio richiesta di un token (UC2.1.1);
 		\item Ricezione token di accesso (UC2.1.3);
 	\end{enumerate}
 	\item \textbf{Estensioni:} Fallimento ricezione token (UC2.1.2).
 \end{itemize}
 
 
-\subsubsection{UC2.1.1: Invio richiesta premendo l'apposito bottone per la ricezione di un token}
+\subsubsection{UC2.1.1: Invio richiesta di un token}
 
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
-		\item utente: utente che desidera ottenere un token di accesso;
+		\item utente autenticato: utente che desidera ottenere un token di accesso;
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente invia la richiesta premendo l'apposito bottone per la generazione di un token;
-	\item \textbf{Precondizione:} l'utente si è registrato presso il sistema tramite l'interfaccia Web e dispone di un username e di una password;
+	\item \textbf{Precondizione:} l'utente si è registrato presso il sistema e non ha ancora associato un token d'accesso;
 	\item \textbf{Postcondizione:} il sistema riceve la richiesta inviata dall'utente.
 \end{itemize}
 
@@ -1231,7 +1236,7 @@
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
-		\item utente: utente che desidera ottenere un token di accesso;
+		\item utente autenticato: utente che desidera ottenere un token di accesso;
 	\end{itemize}
 	\item \textbf{Descrizione:} viene ritornato un errore che indica che l'autenticazione non è andata buon fine;
 	\item \textbf{Precondizione:} il sistema ha ricevuto una richiesta di token contenente uno username non riconosciuto dal sistema o una password non corrispondente a quella associata allo username inserito;
@@ -1243,7 +1248,7 @@
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
-		\item utente: utente che desidera ottenere un token di accesso;
+		\item utente autenticato: utente che desidera ottenere un token di accesso;
 	\end{itemize}
 	\item \textbf{Descrizione:} Il sistema ritorna un token di accesso per l'utente che l'ha richiesto;
 	\item \textbf{Precondizione:} il sistema aveva ricevuto una richiesta da un utente registrato per fornire un token di accesso;
@@ -1264,7 +1269,7 @@
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
-		\item utente con Token di accesso: utente che ha ricevuto dal sistema le credenziali per accedere al servizio;
+		\item utente con token di accesso: utente che ha ricevuto dal sistema le credenziali per accedere al servizio;
 	\end{itemize}
 	\item \textbf{Descrizione:} un utente registrato al sistema può inviare richieste REST al sistema per ottenere i dati di una View senza utilizzare l'interfaccia Web;
 	\item \textbf{Precondizione:} l'utente possiede un token di accesso valido;
