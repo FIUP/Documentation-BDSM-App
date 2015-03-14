@@ -396,11 +396,13 @@
 	\item \textbf{Precondizione:} l'utente è entrato nella sezione del confronto della Recipe selezionata;
 	\item \textbf{Postcondizione:} l'utente ha visualizzato le View relative alle metriche che ha deciso di confrontare;
 	\item \textbf{Flusso principale degli eventi:}
-	\begin{enumerate}
-		\item Seleziona parametri per il confronto tra metriche (UC1.3.2.1);
-		\item Genera confronto tra metriche per ottenere le View (UC1.3.2.2);
-		\item Visualizza confronto View (UC1.3.2.3).
-	\end{enumerate}
+		\begin{enumerate}
+			\item Seleziona parametri per il confronto tra metriche (UC1.3.2.1);
+			\item Genera confronto tra metriche per ottenere le View (UC1.3.2.2);
+			\item Visualizza confronto View (UC1.3.2.3).
+		\end{enumerate}
+	\item \textbf{Estensioni:} Nessuna View confronto visualizzata (UC1.3.2.4).
+	
 \end{itemize}
 % FINE USE CASE %
 
@@ -427,9 +429,9 @@
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} [TO DO];
-	\item \textbf{Precondizione:} [TO DO];
-	\item \textbf{Postcondizione:} [TO DO].
+	\item \textbf{Descrizione:} l'utente come primo passo deve selezionare la categoria tra le quali vuole cercare le metriche da confrontare. La categoria potrà essere scelta tra Facebook, Twitter, Instagram;
+	\item \textbf{Precondizione:} l'utente è appena entrato nel pannello di confronto delle View e non ha ancora selezionato niente;
+	\item \textbf{Postcondizione:} l'utente ha selezionato la categoria tra quelle proposte.
 \end{itemize}
 % FINE USE CASE %
 
@@ -439,9 +441,9 @@
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} [TO DO];
-	\item \textbf{Precondizione:} [TO DO];
-	\item \textbf{Postcondizione:} [TO DO].
+	\item \textbf{Descrizione:} l'utente, a seconda della categoria, avrà a disposizione delle tipologie di metriche tra le quali scegliere, in quanto per fare una View di confronto, ci vogliono dati equo comparabili;
+	\item \textbf{Precondizione:} l'utente ha selezionato la categoria tra quelle proposte;
+	\item \textbf{Postcondizione:} l'utente ha selezionato la tipologia di metrica tra quelle proposte.
 \end{itemize}
 % FINE USE CASE %
 
@@ -451,9 +453,9 @@
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} [TO DO];
-	\item \textbf{Precondizione:} [TO DO];
-	\item \textbf{Postcondizione:} [TO DO].
+	\item \textbf{Descrizione:} l'utente per generare le View relative al confronto deve almeno selezionare due metriche tra quelle proposte. Ne può selezionare anche un numero maggiore di due;
+	\item \textbf{Precondizione:} l'utente ha selezionato la tipologia di metrica tra quelle proposte;
+	\item \textbf{Postcondizione:} l'utente ha selezionato almeno due metriche tra quelle proposte.
 \end{itemize}
 % FINE USE CASE %
 
@@ -464,7 +466,7 @@
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} per generare le View di confronto l'utente deve selezionare i parametri;
+	\item \textbf{Descrizione:} per generare le View di confronto l'utente deve selezionare i parametri e premere sull'apposito pulsante;
 	\item \textbf{Precondizione:} l'utente ha selezionato tutti i parametri richiesti per generare un confronto;
 	\item \textbf{Postcondizione:} l'utente ha premuto sull'apposito pulsante per generare il confronto e creare le relative View.
 \end{itemize}
@@ -476,9 +478,21 @@
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} [TO DO];
-	\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per generare il confronto e creare i relativi grafici;
+	\item \textbf{Descrizione:} l'utente andrà a visualizzare le View relative al confronto selezionato. Le View potranno contenere dei grafici quali Line Chart e Bar Chart, altrimenti potranno contenere dei dati in forma tabellare;
+	\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per generare il confronto e creare le relative View;
 	\item \textbf{Postcondizione:} l'utente ha visualizzato le View che sono state generate dalla selezione
+\end{itemize}
+% FINE USE CASE %
+
+\subsubsection{UC1.3.2.4: Nessuna View confronto visualizzata}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente autenticato: utente autenticato che ha accesso al servizio;
+	\end{itemize}
+	\item \textbf{Descrizione:} l'utente desidera visualizzare le View di confronto generate, ma i dati per generarle potrebbero essere ancora assenti qualora le metriche ricavate dalle Recipe fossero state inserite da poco nel sistema da parte degli amministratori;
+	\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per generare il confronto e creare le relative View;
+	\item \textbf{Postcondizione:} l'utente ha visualizzato un messaggio che lo informa che i dati per generare le View di confronto non sono ancora stati raccolti dal sistema;
 \end{itemize}
 % FINE USE CASE %
 
@@ -571,23 +585,79 @@
 	\begin{itemize}
 		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'amministratore può inserire il nome ed i parametri per la nuova Recipe nel pannello apposito;
+	\item \textbf{Descrizione:} l'amministratore può inserire il titolo, una breve descrizione ed i parametri per la nuova Recipe nel pannello apposito;
 	\item \textbf{Precondizione:} l'amministratore ha selezionato il pulsante per l'inserimento di una nuova Recipe;
 	\item \textbf{Postcondizione:} l'amministratore ha inserito tutti i parametri richiesti dal sistema.
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
-		\item [TO DO];
-		\item [TO DO];
-		\item [TO DO];
-		\item [TO DO];
+		\item Inserimento titolo Recipe (UC1.4.2.3.1);
+		\item Inserimento descrizione Recipe (UC1.4.2.3.2);
+		\item Inserimento metrica Facebook (UC1.4.2.3.3);
+		\item Inserimento metrica Twitter (UC1.4.2.3.4);
+		\item Inserimento metrica Instagram (UC1.4.2.3.5);
 	\end{enumerate}
 \end{itemize}
 % FINE USE CASE %
 
+\subsubsection{UC1.4.2.3.1: Inserimento titolo Recipe}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+	\item \textbf{Descrizione:} [TO DO];
+	\item \textbf{Precondizione:} [TO DO];
+	\item \textbf{Postcondizione:} [TO DO].
+\end{itemize}
+% FINE USE CASE %
 
+\subsubsection{UC1.4.2.3.3: Inserimento descrizione Recipe}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+	\item \textbf{Descrizione:} [TO DO];
+	\item \textbf{Precondizione:} [TO DO];
+	\item \textbf{Postcondizione:} [TO DO].
+\end{itemize}
+% FINE USE CASE %
 
+\subsubsection{UC1.4.2.3.3: Inserimento metrica Facebook}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+	\item \textbf{Descrizione:} [TO DO];
+	\item \textbf{Precondizione:} [TO DO];
+	\item \textbf{Postcondizione:} [TO DO].
+\end{itemize}
+% FINE USE CASE %
 
+\subsubsection{UC1.4.2.3.4: Inserimento metrica Twitter}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+	\item \textbf{Descrizione:} [TO DO];
+	\item \textbf{Precondizione:} [TO DO];
+	\item \textbf{Postcondizione:} [TO DO].
+\end{itemize}
+% FINE USE CASE %
 
+\subsubsection{UC1.4.2.3.5: Inserimento metrica Instagram}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+	\item \textbf{Descrizione:} [TO DO];
+	\item \textbf{Precondizione:} [TO DO];
+	\item \textbf{Postcondizione:} [TO DO].
+\end{itemize}
+% FINE USE CASE %
 
 
 
@@ -609,7 +679,7 @@
 	\begin{itemize}
 		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'amministratore durante l'inserimento di una nuova Recipe ha inserito dei parametri che non rispettano i vincoli di sistema relativi al nome della Recipe non valido o un URL mal formattato nei parametri associati;
+	\item \textbf{Descrizione:} l'amministratore durante l'inserimento di una nuova Recipe ha inserito dei parametri non conformi alle specifiche presenti in UC1.4.2.3;
 	\item \textbf{Precondizione:} l'amministratore ha selezionato il pulsante di conferma per la creazione di una nuova Recipe;
 	\item \textbf{Postcondizione:} l'amministratore ha visualizzato un messaggio di errore contenente l'elenco dei parametri inseriti non corretti o l'eccezione sollevata dal sistema durante il salvataggio della nuova Recipe.
 \end{itemize}
