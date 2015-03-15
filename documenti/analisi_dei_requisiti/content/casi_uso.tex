@@ -542,7 +542,7 @@
 	\begin{itemize}
 		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'amministratore può aggiungere una nuova Recipe al sistema; Può scegliere il nome che la identificherà e un template per ogni social network ai quali si applica con i relativi parametri per ognuno di essi;
+	\item \textbf{Descrizione:} l'amministratore può aggiungere una nuova Recipe al sistema; Può scegliere il nome che la identificherà e ha a disposizione dei parametri per ogni social network che serviranno per fornire le indicazioni su che dati recuperare;
 	\item \textbf{Precondizione:} l'amministratore ha visualizzato l'elenco delle Recipe salvate nel sistema;
 	\item \textbf{Postcondizione:} l'amministratore ha salvato una nuova Recipe nel sistema;
 	\item \textbf{Flusso principale degli eventi:}
@@ -585,16 +585,14 @@
 	\begin{itemize}
 		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'amministratore può inserire il titolo, una breve descrizione ed i parametri per la nuova Recipe nel pannello apposito;
+	\item \textbf{Descrizione:} l'amministratore può inserire il titolo, una breve descrizione ed i parametri relativi alle metriche delle diverse categorie per poter portare a compimento la creazione di una nuova Recipe;
 	\item \textbf{Precondizione:} l'amministratore ha selezionato il pulsante per l'inserimento di una nuova Recipe;
 	\item \textbf{Postcondizione:} l'amministratore ha inserito tutti i parametri richiesti dal sistema.
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Inserimento titolo Recipe (UC1.4.2.3.1);
 		\item Inserimento descrizione Recipe (UC1.4.2.3.2);
-		\item Inserimento metrica Facebook (UC1.4.2.3.3);
-		\item Inserimento metrica Twitter (UC1.4.2.3.4);
-		\item Inserimento metrica Instagram (UC1.4.2.3.5);
+		\item Inserimento metrica (UC1.4.2.3.3);
 	\end{enumerate}
 \end{itemize}
 % FINE USE CASE %
@@ -605,9 +603,9 @@
 	\begin{itemize}
 		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
-	\item \textbf{Descrizione:} [TO DO];
-	\item \textbf{Precondizione:} [TO DO];
-	\item \textbf{Postcondizione:} [TO DO].
+	\item \textbf{Descrizione:} l'amministratore deve obbligatoriamente inserire il titolo che identifica la Recipe che sta per andare a inserire nel sistema;
+	\item \textbf{Precondizione:} l'amministratore non ha ancora inserito il titolo della Recipe;
+	\item \textbf{Postcondizione:} l'amministratore ha inserito il titolo della Recipe.
 \end{itemize}
 % FINE USE CASE %
 
@@ -617,45 +615,21 @@
 	\begin{itemize}
 		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
-	\item \textbf{Descrizione:} [TO DO];
-	\item \textbf{Precondizione:} [TO DO];
-	\item \textbf{Postcondizione:} [TO DO].
+	\item \textbf{Descrizione:} l'amministratore ha la possibilità di aggiungere una piccola descrizione alla Recipe che sta per inserire in modo da potere dare qualche nota che lo aiuti in futuro a capirne al meglio la natura. L'amministratore può decidere di lasciare il campo vuoto;
+	\item \textbf{Precondizione:} l'amministratore non ha ancora inserito la descrizione della Recipe;
+	\item \textbf{Postcondizione:} l'amministratore ha inserito una descrizione della Recipe o ha lasciato il campo vuoto.
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.4.2.3.3: Inserimento metrica Facebook}
+\subsubsection{UC1.4.2.3.3: Inserimento metrica}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
 		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
-	\item \textbf{Descrizione:} [TO DO];
-	\item \textbf{Precondizione:} [TO DO];
-	\item \textbf{Postcondizione:} [TO DO].
-\end{itemize}
-% FINE USE CASE %
-
-\subsubsection{UC1.4.2.3.4: Inserimento metrica Twitter}
-\begin{itemize}
-	\item \textbf{Attori:}
-	\begin{itemize}
-		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
-	\end{itemize}
-	\item \textbf{Descrizione:} [TO DO];
-	\item \textbf{Precondizione:} [TO DO];
-	\item \textbf{Postcondizione:} [TO DO].
-\end{itemize}
-% FINE USE CASE %
-
-\subsubsection{UC1.4.2.3.5: Inserimento metrica Instagram}
-\begin{itemize}
-	\item \textbf{Attori:}
-	\begin{itemize}
-		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
-	\end{itemize}
-	\item \textbf{Descrizione:} [TO DO];
-	\item \textbf{Precondizione:} [TO DO];
-	\item \textbf{Postcondizione:} [TO DO].
+	\item \textbf{Descrizione:} per generare una Recipe, l'amministratore deve inserire i parametri che consentono al sistema di andare a recuperare i dati necessari. Questa operazione deve essere effettuato almeno una volta;
+	\item \textbf{Precondizione:} l'amministratore non ha ancora inserito una metrica o ne ha già inserita una completamente e ora desidera inserirne un'altra;
+	\item \textbf{Postcondizione:} l'amministratore ha inserito tutti i valori richiesti o ha lasciato i campi vuoti.
 \end{itemize}
 % FINE USE CASE %
 
@@ -679,9 +653,9 @@
 	\begin{itemize}
 		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'amministratore durante l'inserimento di una nuova Recipe ha inserito dei parametri non conformi alle specifiche presenti in UC1.4.2.3;
+	\item \textbf{Descrizione:} l'amministratore durante l'inserimento di una nuova Recipe ha inserito dei parametri non conformi alle specifiche presenti in UC1.4.2.3 o non ha inserito almeno uno metrica (nel complessivo, non almeno una per categoria);
 	\item \textbf{Precondizione:} l'amministratore ha selezionato il pulsante di conferma per la creazione di una nuova Recipe;
-	\item \textbf{Postcondizione:} l'amministratore ha visualizzato un messaggio di errore contenente l'elenco dei parametri inseriti non corretti o l'eccezione sollevata dal sistema durante il salvataggio della nuova Recipe.
+	\item \textbf{Postcondizione:} l'amministratore ha visualizzato un messaggio di errore contenente l'elenco dei parametri inseriti non corretti o un messaggio che dice che manca da inserire almeno una metrica.
 \end{itemize}
 % FINE USE CASE %
 
