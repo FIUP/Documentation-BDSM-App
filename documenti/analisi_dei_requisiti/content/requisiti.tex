@@ -29,9 +29,11 @@
 % =================================================================================================
 % 2.0.2			2015-03-12			rimossi requisiti: ROF3.2.2.3, RDF5.2.2, RDF5.2.2.1		Tesser Paolo
 % =================================================================================================
-% 2.0.3			2015-02-12			rimossi req: RDF6, ROF7 e derivati						Tesser Paolo
+% 2.0.3			2015-03-12			rimossi req: RDF6, ROF7 e derivati						Tesser Paolo
 % =================================================================================================
-% 2.0.4			2015-02-12			modificati req: RDF6, ROF7 e derivati					Tesser Paolo
+% 2.0.4			2015-03-12			modificati req: RDF6, ROF7 e derivati					Tesser Paolo
+% =================================================================================================
+% 2.0.5			2015-03-15			modificate fonti conformi ai nuovi UC					Tesser Paolo
 % =================================================================================================
 %
 
@@ -184,14 +186,29 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		ROF4.1.1.1  &  Se il logout viene confermato la sessione viene segnata come scaduta e il sistema aggiorna la pagina per mostrare la schermata di login  &  UC1.6.2 \\
 		\hline
 		ROF4.1.2  &  Se la sessione è scaduta appare un messaggio di errore e il sistema aggiorna la pagina per mostrare la schermata di login  &  Interno \\
+
+
+
 		\hline
-		ROF5  &  [TO CHANGE] Nella home screen dell'utente autenticato sono mostrare tutte le View che l'utente ha creato aggiornate al momento del caricamento della pagina &  UC1.3 \newline UC1.3.1 \\
+		ROF5  &  Nella home screen dell'utente autenticato sono mostrare tutte le Recipe presenti nel sistema &  UC1.3 \\
 		\hline
-		ROF5.1  &  [TO CHANGE] Il sistema ad ogni caricamento della pagina deve recuperare i dati relativi alle View dell'utente e generare i grafici relativi  &  Interno \\
+		ROF5.1  & Il sistema ad ogni caricamento della pagina deve recuperare l'elenco delle Recipe  &  Interno \\
 		\hline
-		RDF5.2  &  [TO CHANGE] Nella home screen è disponibile un elenco delle View attive dell'utente  &  UC1.3.1.1 \\
+		ROF5.1.1  & Il sistema, per ogni Recipe dell'elenco, deve fornire il titolo e qualora presente la descrizione  &  Interno \\
 		\hline
-		RDF5.2.1  &  [TO CHANGE] Cliccando su una View dall'elenco si viene portati al grafico relativo  &  Interno \\
+		ROF5.1.2  & Il sistema, per ogni Recipe dell'elenco, deve fornire due pulsanti per scegliere se visualizzare le metriche della Recipe o effettuare un confronto tra le metriche &  UC1.3 \\
+
+
+		\hline
+		RDF5.2  &  L'utente deve potere visualizzare tutte le metriche di una Recipe una volta premuto l'apposito pulsante  &  UC1.3.1 \newline Interno \\
+		\hline
+		RDF5.2.1  &   &  Interno \\
+		\hline
+
+		[TO DO](ROF6) & [TO DO] (possibile ROF6 sulla gestione dei preferiti) & [TO DO] \\
+
+		[TO DO] & [TO DO] & [TO DO] \\
+
 		\hline
 		ROF8  &  Un utente che possiede i privilegi di amministratore può accedere all'area riservata del sistema una volta effettuata l'autenticazione tramite il login  &  UC1.4 \newline UC1.7 \\
 		\hline
