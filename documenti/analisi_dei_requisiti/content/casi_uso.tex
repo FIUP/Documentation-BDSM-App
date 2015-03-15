@@ -67,21 +67,8 @@
 	\end{itemize}
 	\item \textbf{Precondizione:} l'utente autenticato, l'utente non autenticato o l'amministratore hanno caricato la prima pagina del servizio;
 	Viene visualizzato un messaggio di errore nel caso le informazioni di accesso inserite siano errate;
+
 	\item \textbf{Postcondizione:} il servizio ha erogato correttamente le funzionalità richieste dall'utente;
-	\item \textbf{Flusso principale degli eventi:}
-	\begin{enumerate}
-		\item Login utente (UC1.1);
-		\item Visualizza informazione utente e statistiche (UC1.2);
-		\item Visualizzazione delle Recipe (UC1.3);
-		\item Richiesta aggiunta Recipe (UC1.9);
-		\item Gestione dei preferiti (UC1.11);
-		\item Gestione delle Recipe (UC1.4);
-		\item Modifica password di accesso (UC1.5);
-		\item Logout utente (UC1.6);
-		\item Amministrazione utenti (UC1.7);
-		\item Registrazione nuovo utente (UC1.8);
-		\item Visione richieste utente (UC1.10).
-	\end{enumerate}
 \end{itemize}
 % FINE USE CASE %
 
@@ -103,13 +90,13 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente può autenticarsi per poter accedere ai servizi offerti dalla piattaforma utilizzando la schermata di login;
 	\item \textbf{Precondizione:} l'utente che accede alla pagina di accesso è sconosciuto al sistema;
-	\item \textbf{Postcondizione:} l'utente è riconosciuto dal sistema;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Inserimento username (UC1.1.1);
 		\item Inserimento password (UC1.1.2);
 		\item Conferma login (UC1.1.3);
 	\end{enumerate}
+	\item \textbf{Postcondizione:} l'utente è riconosciuto dal sistema;
 	\item \textbf{Estensioni:} Login fallita (UC1.1.4).
 \end{itemize}
 % FINE USE CASE %
@@ -120,9 +107,11 @@
 	\begin{itemize}
 		\item utente non autenticato: utente non ancora noto al sistema che accede al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'utente non autenticato inserisce l'username;
+	\item \textbf{Descrizione:} l'utente non autenticato deve poter inserire l'username ai fini dell'autenticazione;
 	\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire l’username;
+	\item \textbf{Scenario principale:} l'utente non autenticato inserisce l'username nell'apposito campo.
 	\item \textbf{Postcondizione:} il sistema ha l'informazione relativa all'username.
+
 \end{itemize}
 % FINE USE CASE %
 
@@ -132,8 +121,9 @@
 	\begin{itemize}
 		\item utente non autenticato: utente non ancora noto al sistema che accede al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'utente non autenticato inserisce la propria password personale;
+	\item \textbf{Descrizione:} l'utente non autenticato deve poter inserire la propria password ai fini dell'autenticazione;
 	\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire la password;
+	\item \textbf{Scenario principale:} l'untente non autenticato inserisce la password nell'apposito campo;
 	\item \textbf{Postcondizione:} il sistema ha l'informazione relativa alla password inserita dall'utente.
 \end{itemize}
 % FINE USE CASE %
@@ -144,8 +134,9 @@
 	\begin{itemize}
 		\item utente non autenticato: utente non ancora noto al sistema che accede al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} viene richiesto all'utente di confermare i dati inseriti con la pressione di un pulsante di conferma;
+	\item \textbf{Descrizione:} viene richiesto all'utente di confermare i dati inseriti con la pressione di un pulsante di conferma in modo da avviare il processo di autenticazione;
 	\item \textbf{Precondizione:} il sistema fornisce un pulsante per confermare il login;
+	\item \textbf{Scenario principale:} l'utente non autenticato preme l'apposito pulsante per confermare i dati inseriti;
 	\item \textbf{Postcondizione:} l'utente ha eseguito il login.
 \end{itemize}
 
@@ -155,8 +146,9 @@
 	\begin{itemize}
 		\item utente non autenticato: utente non ancora noto al sistema che accede al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} viene mostrato all'utente un messaggio di errore che riporta la non correttezza dei dati inseriti. Viene visualizzato un pulsante per tornare alla schermata di login;
+	\item \textbf{Descrizione:} viene mostrato all'utente un messaggio di errore che riporta la non correttezza dei dati inseriti;
 	\item \textbf{Precondizione:} il sistema ha ricevuto una richiesta di accesso da uno username errato o una password non associata allo username esistente indicato.
+	\item \textbf{Scenario principale:} l'utente non autenticato visualizza il messaggio di errore;
 	\item \textbf{Postcondizione:} l'utente ha preso atto del messaggio di errore.
 \end{itemize}
 % FINE USE CASE %
@@ -178,12 +170,12 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} gli utenti autenticati possono vedere una serie di informazioni relative alla 	loro attività, come la data dell'ultimo accesso effettuato e il numero di ricette e viste attive;
 	\item \textbf{Precondizione:} l'utente deve essere autenticato;
-	\item \textbf{Postcondizione:} le informazioni richieste dall'utente sono state fornite;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Visualizza informazioni utente (UC1.2.1);
 		\item Visualizza statistiche utente (UC1.2.2).
 	\end{enumerate}
+	\item \textbf{Postcondizione:} le informazioni richieste dall'utente sono state fornite;
 \end{itemize}
 % FINE USE CASE %
 
@@ -200,12 +192,13 @@
 		\item la data dell'ultimo accesso effettuato;
 	\end{itemize}
 	\item \textbf{Precondizione:} l'utente ha selezionato il pulsante per l'accesso ai dettagli utente;
-	\item \textbf{Postcondizione:} l'utente ha ottenuto le informazioni richieste;
-  \begin{enumerate}
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{enumerate}
     \item Visualizza username (UC1.2.1.1);
     \item Visualizza email (UC1.2.1.2);
     \item Visualizza ultimo accesso (UC1.2.1.3).
   \end{enumerate}
+	\item \textbf{Postcondizione:} l'utente ha ottenuto le informazioni richieste;
 \end{itemize}
 % FINE USE CASE %
 
@@ -217,6 +210,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} nella sezione delle informazioni personali l'utente può visualizzare il suo username;
 	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso alla pagina di dettaglio dei dati personali;
+	\item \textbf{Scenario principale:} l'utente visualizza il proprio username;
 	\item \textbf{Postcondizione:} l'utente ha visualizzato il suo username.
 \end{itemize}
 % FINE USE CASE %
@@ -229,6 +223,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} nella sezione delle informazioni personali l'utente può visualizzare il suo indirizzo email;
 	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso alla pagina di dettaglio dei dati personali;
+	\item \textbf{Scenario principale:} l'utente visualizza il proprio indirizzo email;
 	\item \textbf{Postcondizione:} l'utente ha visualizzato il suo indirizzo email.
 \end{itemize}
 % FINE USE CASE %
@@ -241,6 +236,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} nella sezione delle informazioni personali l'utente può visualizzare data ed ora del suo ultimo accesso;
 	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso alla pagina di dettaglio dei dati personali;
+	\item \textbf{Scenario principale:} l'utente visualizza i dettagli del suo ultimo accesso;
 	\item \textbf{Postcondizione:} l'utente ha visualizzato i dettagli del suo ultimo accesso.
 \end{itemize}
 % FINE USE CASE %
@@ -255,9 +251,13 @@
 	\begin{itemize}
 		\item numero di View presenti fornite dal sistema;
 		\item numero di Recipe fornite dal sistema;
-		\item ultimo accesso effettuato dall'utente.
 	\end{itemize}
   \item \textbf{Precondizione:} l'utente ha selezionato il pulsante per l'accesso ai dettagli utente
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{enumerate}
+		\item Visualizza numero View attive (UC1.2.2.1)
+		\item Visualizza numero Recipe disponibili (UC1.2.2.2)
+	\end{enumerate}
 	\item \textbf{Postcondizione:} l'utente ha ottenuto le informazioni richieste.
 \end{itemize}
 % FINE USE CASE %
@@ -270,6 +270,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} nella sezione delle statistiche personali l'utente può visualizzare il numero di View attive;
 	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso alla pagina di dettaglio dei dati personali;
+	\item \textbf{Scenario principale:} l'utente visualizza il numero di View attive;
 	\item \textbf{Postcondizione:} l'utente ha visualizzato il numero di View attive.
 \end{itemize}
 % FINE USE CASE %
@@ -280,9 +281,10 @@
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} nella sezione delle statistiche personali l'utente può visualizzare il numero di Recipe disponibili;
+	\item \textbf{Descrizione:} nella sezione delle statistiche personali l'utente può visualizzare il numero di Recipe attualmente disponibili nel sistema;
 	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso alla pagina di dettaglio dei dati personali;
-	\item \textbf{Postcondizione:} l'utente ha visualizzato il numero di View attive.
+	\item \textbf{Scenario principale:} l'utente visualizza il numero di Recipe disponibili;
+	\item \textbf{Postcondizione:} l'utente ha visualizzato il numero di Recipe disponibili.
 \end{itemize}
 % FINE USE CASE %
 
@@ -302,12 +304,12 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} gli utenti possono vedere in questa pagina le Recipe offerte dal sistema. Per ciascuna Recipe l'utente può decidere di visualizzare tutte le View associate o effettuare un confronto tra le View di quella Recipe.
 	\item \textbf{Precondizione:} l'utente deve aver effettuato l'accesso nell'apposita pagina;
-	\item \textbf{Postcondizione:} è stato fornito un elenco delle Recipe disponibili.
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Visualizza metriche della Recipe (UC1.3.1);
 		\item Confronta metriche della Recipe (UC1.3.2).
 	\end{enumerate}
+	\item \textbf{Postcondizione:} è stato fornito un elenco delle Recipe disponibili.
 \end{itemize}
 % FINE USE CASE %
 
@@ -326,13 +328,13 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente visualizza un elenco di metriche che sono state scelte durante la creazione della Recipe (UC1.4.2). Ad ogni metrica sono associate le relative View offerte dal sistema. Le metriche vengono mostrate divise in base alla categoria di cui fanno parte. (es. Facebook, Twitter, Instagram, ...). Per ogni voce mostrata andrà fornito il nome, una descrizione e un pulsante per entrare nella visualizzazione delle View;
 	\item \textbf{Precondizione:} l'utente è entrato nella visualizzazione di tutte le metriche della Recipe selezionata;
-	\item \textbf{Postcondizione:} l'utente ha visualizzato tutte le metriche presenti nella Recipe a seconda della categoria scelta;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Visualizza View metrica della categoria: Facebook (UC1.3.1.1);
 		\item Visualizza View metrica della categoria: Twitter (UC1.3.1.2);
 		\item Visualizza View metrica della categoria: Instagram (UC1.3.1.3);
 	\end{enumerate}
+	\item \textbf{Postcondizione:} l'utente ha visualizzato tutte le metriche presenti nella Recipe a seconda della categoria scelta;
 	\item \textbf{Estensioni:} Nessuna View visualizzata per la metrica (UC1.3.1.4).
 \end{itemize}
 % FINE USE CASE %
@@ -345,7 +347,8 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} premendo sull'apposito pulsante è possibile far comparire a video tutte le View associate alla metrica scelta della categoria Facebook. Vengono offerti dei grafici relativi a dei dati. Essi possono essere dei Line Chart, Bar Chart, Pie Chart o Map Chart. A sua volta, alcuni tipi di grafici come i Line Chart o i Bar Chart, permettono di avere una visualizzazione dei dati su scala annuale, mensile o settimanale;
 	\item \textbf{Precondizione:} l'utente è entrato nella categoria riguardanti le metriche di Facebook e ha premuto sul pulsante che manda alla visualizzazione delle View della metrica selezionata;
-	\item \textbf{Postcondizione:} l'utente ha ottenuto tutti i grafici e i dati di tutte le View inerenti alla metrica scelta. selezionata.
+	\item \textbf{Scenario principale:} l'utente visualizza le View appartenenti alla metrica selezionata;
+	\item \textbf{Postcondizione:} l'utente ha ottenuto tutti i grafici e i dati di tutte le View inerenti alla metrica scelta.
 \end{itemize}
 % FINE USE CASE %
 
@@ -357,6 +360,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} premendo sull'apposito pulsante è possibile far comparire a video tutte le View associate alla metrica scelta della categoria Twitter. Vengono offerti dei grafici relativi a dei dati. Essi possono essere dei Line Chart, Bar Chart, Pie Chart o Map Chart. A sua volta, alcuni tipi di grafici come i Line Chart o i Bar Chart, permettono di avere una visualizzazione dei dati su scala annuale, mensile o settimanale;
 	\item \textbf{Precondizione:} l'utente è entrato nella categoria riguardanti le metriche di Twitter e ha premuto sul pulsante che manda alla visualizzazione delle View della metrica selezionata;
+	\item \textbf{Scenario principale:} l'utente visualizza le View appartenenti alla metrica selezionata;
 	\item \textbf{Postcondizione:} l'utente ha ottenuto tutti i grafici e i dati di tutte le View inerenti alla metrica scelta.
 \end{itemize}
 % FINE USE CASE %
@@ -368,7 +372,8 @@
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
 	\item \textbf{Descrizione:} premendo sull'apposito pulsante è possibile far comparire a video tutte le View associate alla metrica scelta della categoria Instagram. Vengono offerti dei grafici relativi a dei dati o dei dati sotto forma tabellare. Per quanto riguarda i grafici possono essere dei Line Chart, Bar Chart, Pie Chart o Map Chart. A sua volta, alcuni tipi come i Line Chart o i Bar Chart, permettono di avere una visualizzazione dei dati su scala annuale, mensile o settimanale;
-	\item \textbf{Precondizione:} l'utente è entrato nella categoria riguardanti le metriche di Instagram e ha premuto sul pulsante che manda alla visualizzazione delle View della metrica selezionata;;
+	\item \textbf{Precondizione:} l'utente è entrato nella categoria riguardanti le metriche di Instagram e ha premuto sul pulsante che manda alla visualizzazione delle View della metrica selezionata;
+	\item \textbf{Scenario principale:} l'utente visualizza le View appartenenti alla metrica selezionata;
 	\item \textbf{Postcondizione:} l'utente ha ottenuto tutti i grafici e i dati di tutte le View inerenti alla metrica scelta.
 \end{itemize}
 % FINE USE CASE %
@@ -381,7 +386,8 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente desidera visualizzare le View presenti in una determinata metrica di una Recipe, ma esse possono essere ancora assenti qualora la Recipe fosse stata inserita da poco nel sistema da parte degli amministratori. Questo vale per ogni categoria presente sia essa Facebook, Twitter o Instagram;
 	\item \textbf{Precondizione:} l'utente ha premuto sul pulsante che manda alla visualizzazione delle View della metrica selezionata;
-	\item \textbf{Postcondizione:} l'utente ha visualizzato un messaggio che lo informa che i dati per generare le View non sono ancora stati raccolti dal sistema;
+	\item \textbf{Scenario principale:} l'utente visualizza un messaggio che lo informa che i dati per generare le View non sono ancora stati raccolti dal sistema;
+	\item \textbf{Postcondizione:} l'utente ha preso atto dell'assenza di View per la metrica selezionata.
 \end{itemize}
 % FINE USE CASE %
 
@@ -394,15 +400,15 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} all'utente è stata fornita la possibilità di effettuare delle comparazioni tra le diverse metriche presenti in una Recipe. Questa comparazione potrà essere effettuata solo tra metriche equivalenti della stessa categoria (Facebook, Twitter, Instagram). Questo genererà delle View contenenti alcuni grafici e i relativi dati associati;
 	\item \textbf{Precondizione:} l'utente è entrato nella sezione del confronto della Recipe selezionata;
-	\item \textbf{Postcondizione:} l'utente ha visualizzato le View relative alle metriche che ha deciso di confrontare;
 	\item \textbf{Flusso principale degli eventi:}
 		\begin{enumerate}
 			\item Seleziona parametri per il confronto tra metriche (UC1.3.2.1);
 			\item Genera confronto tra metriche per ottenere le View (UC1.3.2.2);
 			\item Visualizza confronto View (UC1.3.2.3).
 		\end{enumerate}
+	\item \textbf{Postcondizione:} l'utente ha visualizzato le View relative alle metriche che ha deciso di confrontare;
 	\item \textbf{Estensioni:} Nessuna View confronto visualizzata (UC1.3.2.4).
-	
+
 \end{itemize}
 % FINE USE CASE %
 
@@ -414,12 +420,13 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} per generare le View di confronto l'utente deve selezionare i parametri tra quelli disponibili dal sistema secondo un determinato ordine.
 	\item \textbf{Precondizione:} l'utente è entrato nella sezione del confronto della Recipe selezionata;
-	\item \textbf{Postcondizione:} l'utente ha selezionato tutti i parametri richiesti per generare un confronto.
+	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Selezione categoria (UC1.3.2.1.1);
 		\item Selezione tipo di metrica (UC1.3.2.1.2);
 		\item Selezione metriche (UC1.3.2.1.3);
 	\end{enumerate}
+	\item \textbf{Postcondizione:} l'utente ha selezionato tutti i parametri richiesti per generare un confronto.
 \end{itemize}
 % FINE USE CASE %
 
@@ -431,6 +438,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente come primo passo deve selezionare la categoria tra le quali vuole cercare le metriche da confrontare. La categoria potrà essere scelta tra Facebook, Twitter, Instagram;
 	\item \textbf{Precondizione:} l'utente è appena entrato nel pannello di confronto delle View e non ha ancora selezionato niente;
+	\item \textbf{Scenario principale:} l'utente seleziona la categoria di metriche da confrontare;
 	\item \textbf{Postcondizione:} l'utente ha selezionato la categoria tra quelle proposte.
 \end{itemize}
 % FINE USE CASE %
@@ -443,6 +451,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente, a seconda della categoria, avrà a disposizione delle tipologie di metriche tra le quali scegliere, in quanto per fare una View di confronto, ci vogliono dati equo comparabili;
 	\item \textbf{Precondizione:} l'utente ha selezionato la categoria tra quelle proposte;
+	\item \textbf{Scenario principale:} l'utente seleziona la tipologia di metrica che desidera confrontare;
 	\item \textbf{Postcondizione:} l'utente ha selezionato la tipologia di metrica tra quelle proposte.
 \end{itemize}
 % FINE USE CASE %
@@ -455,6 +464,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente per generare le View relative al confronto deve almeno selezionare due metriche tra quelle proposte. Ne può selezionare anche un numero maggiore di due;
 	\item \textbf{Precondizione:} l'utente ha selezionato la tipologia di metrica tra quelle proposte;
+	\item \textbf{Scenario principale:} l'utente selezione le metriche che desidera confrontare;
 	\item \textbf{Postcondizione:} l'utente ha selezionato almeno due metriche tra quelle proposte.
 \end{itemize}
 % FINE USE CASE %
@@ -468,6 +478,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} per generare le View di confronto l'utente deve selezionare i parametri e premere sull'apposito pulsante;
 	\item \textbf{Precondizione:} l'utente ha selezionato tutti i parametri richiesti per generare un confronto;
+	\item \textbf{Scenario principale:} l'utente preme l'apposito pulsante per generare le View di confronto;
 	\item \textbf{Postcondizione:} l'utente ha premuto sull'apposito pulsante per generare il confronto e creare le relative View.
 \end{itemize}
 % FINE USE CASE %
@@ -480,7 +491,8 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente andrà a visualizzare le View relative al confronto selezionato. Le View potranno contenere dei grafici quali Line Chart e Bar Chart, altrimenti potranno contenere dei dati in forma tabellare;
 	\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per generare il confronto e creare le relative View;
-	\item \textbf{Postcondizione:} l'utente ha visualizzato le View che sono state generate dalla selezione
+	\item \textbf{Scenario principale:} l'utente visualizza le View di confronto appena generate;
+	\item \textbf{Postcondizione:} l'utente ha visualizzato le View che sono state generate dalla selezione.
 \end{itemize}
 % FINE USE CASE %
 
@@ -492,7 +504,8 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente desidera visualizzare le View di confronto generate, ma i dati per generarle potrebbero essere ancora assenti qualora le metriche ricavate dalle Recipe fossero state inserite da poco nel sistema da parte degli amministratori;
 	\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per generare il confronto e creare le relative View;
-	\item \textbf{Postcondizione:} l'utente ha visualizzato un messaggio che lo informa che i dati per generare le View di confronto non sono ancora stati raccolti dal sistema;
+	\item \textbf{Scenario principale:} l'utente visualizza un messaggio che lo informa che i dati per generare le View di confronto non sono ancora stati raccolti dal sistema;
+	\item \textbf{Postcondizione:} l'utente ha preso atto dell'assenza di View di confronto per le metriche selezionate.
 \end{itemize}
 % FINE USE CASE %
 
@@ -513,13 +526,13 @@
 	\end{itemize}
 	\item \textbf{Precondizione:} l'amministratore dopo essersi autenticato ha selezionato il pulsante di gestione recipe dal menu principale dell'applicazione;
 	\item \textbf{Descrizione:} gli amministratori possono vedere le Recipe e i dati ad esse associate. Possono inoltre crearle o eliminarle;
-	\item \textbf{Postcondizione:} le informazioni richieste dall'amministratore sono state fornite, le Recipe eliminate, cancellate dal sistema e quelle aggiunte, salvate; Se durante la creazione sono stati inseriti valori che non rispettano i vincoli di sistema è stata visualizzata una schermata di errore;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Visualizza Recipe (UC1.4.1);
 		\item Aggiungi nuova Recipe (UC1.4.2);
 		\item Elimina Recipe (UC1.4.4);
 	\end{enumerate}
+	\item \textbf{Postcondizione:} le informazioni richieste dall'amministratore sono state fornite, le Recipe eliminate, cancellate dal sistema e quelle aggiunte, salvate; Se durante la creazione sono stati inseriti valori che non rispettano i vincoli di sistema è stata visualizzata una schermata di errore;
 	\item \textbf{Estensioni:} Creazione Recipe fallita (UC1.4.3).
 \end{itemize}
 % FINE USE CASE %
@@ -532,6 +545,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'amministratore può visualizzare l'elenco di tutte le Recipe salvate nel sistema selezionando l'apposito pulsante nella sua home screen; Per ogni Recipe viene fornito il nome, lo stato e la data dell'ultimo aggiornamento;
 	\item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema e si trova nella sua home screen;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'amministratore ha visualizzato correttamente l'elenco delle Recipe salvate nel sistema.
 \end{itemize}
 % FINE USE CASE %
@@ -544,7 +558,6 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'amministratore può aggiungere una nuova Recipe al sistema; Può scegliere il nome che la identificherà e ha a disposizione dei parametri per ogni social network che serviranno per fornire le indicazioni su che dati recuperare;
 	\item \textbf{Precondizione:} l'amministratore ha visualizzato l'elenco delle Recipe salvate nel sistema;
-	\item \textbf{Postcondizione:} l'amministratore ha salvato una nuova Recipe nel sistema;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Apertura elenco Recipe (UC1.4.2.1);
@@ -552,6 +565,7 @@
 		\item Inserimento parametri (UC1.4.2.3);
 		\item Conferma parametri inseriti (UC1.4.2.4).
 	\end{enumerate}
+	\item \textbf{Postcondizione:} l'amministratore ha salvato una nuova Recipe nel sistema;
 \end{itemize}
 % FINE USE CASE %
 
@@ -563,6 +577,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'amministratore può visualizzare l'elenco delle Recipe salvate nel sistema premendo l'apposito pulsante nella sua Home Screen; Questo è necessario affinché sia possibile visualizzare il pulsante per un nuovo inserimento;
 	\item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'amministratore ha visualizzato correttamente l'elenco delle Recipe.
 \end{itemize}
 % FINE USE CASE %
@@ -575,6 +590,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'amministratore può selezionare il pulsante di inserimento di una nuova Recipe dall'elenco delle Recipe;
 	\item \textbf{Precondizione:} l'amministratore ha visualizzato l'elenco delle Recipe;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'amministratore ha visualizzato il pannello di inserimento nuova Recipe.
 \end{itemize}
 % FINE USE CASE %
@@ -587,13 +603,13 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'amministratore può inserire il titolo, una breve descrizione ed i parametri relativi alle metriche delle diverse categorie per poter portare a compimento la creazione di una nuova Recipe;
 	\item \textbf{Precondizione:} l'amministratore ha selezionato il pulsante per l'inserimento di una nuova Recipe;
-	\item \textbf{Postcondizione:} l'amministratore ha inserito tutti i parametri richiesti dal sistema.
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Inserimento titolo Recipe (UC1.4.2.3.1);
 		\item Inserimento descrizione Recipe (UC1.4.2.3.2);
 		\item Inserimento metrica (UC1.4.2.3.3);
 	\end{enumerate}
+	\item \textbf{Postcondizione:} l'amministratore ha inserito tutti i parametri richiesti dal sistema.
 \end{itemize}
 % FINE USE CASE %
 
@@ -605,6 +621,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'amministratore deve obbligatoriamente inserire il titolo che identifica la Recipe che sta per andare a inserire nel sistema;
 	\item \textbf{Precondizione:} l'amministratore non ha ancora inserito il titolo della Recipe;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'amministratore ha inserito il titolo della Recipe.
 \end{itemize}
 % FINE USE CASE %
@@ -617,6 +634,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'amministratore ha la possibilità di aggiungere una piccola descrizione alla Recipe che sta per inserire in modo da potere dare qualche nota che lo aiuti in futuro a capirne al meglio la natura. L'amministratore può decidere di lasciare il campo vuoto;
 	\item \textbf{Precondizione:} l'amministratore non ha ancora inserito la descrizione della Recipe;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'amministratore ha inserito una descrizione della Recipe o ha lasciato il campo vuoto.
 \end{itemize}
 % FINE USE CASE %
@@ -629,6 +647,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} per generare una Recipe, l'amministratore deve inserire i parametri che consentono al sistema di andare a recuperare i dati necessari. Questa operazione deve essere effettuato almeno una volta;
 	\item \textbf{Precondizione:} l'amministratore non ha ancora inserito una metrica o ne ha già inserita una completamente e ora desidera inserirne un'altra;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'amministratore ha inserito tutti i valori richiesti o ha lasciato i campi vuoti.
 \end{itemize}
 % FINE USE CASE %
@@ -643,6 +662,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'amministratore deve confermare i parametri inseriti prima che questi siano attivi nel sistema;
 	\item \textbf{Precondizione:} l'amministratore ha inserito almeno i parametri obbligatori;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'amministratore ha confermato i parametri inseriti.
 \end{itemize}
 % FINE USE CASE %
@@ -655,6 +675,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'amministratore durante l'inserimento di una nuova Recipe ha inserito dei parametri non conformi alle specifiche presenti in UC1.4.2.3 o non ha inserito almeno uno metrica (nel complessivo, non almeno una per categoria);
 	\item \textbf{Precondizione:} l'amministratore ha selezionato il pulsante di conferma per la creazione di una nuova Recipe;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'amministratore ha visualizzato un messaggio di errore contenente l'elenco dei parametri inseriti non corretti o un messaggio che dice che manca da inserire almeno una metrica.
 \end{itemize}
 % FINE USE CASE %
@@ -668,13 +689,13 @@
 	\item \textbf{Descrizione}: l'amministratore può eliminare una Recipe e tutti i dati ad essa associati.
 	Si possono eliminare solo le Recipe non più utilizzate in una o più View;
 	\item \textbf{Precondizione:} l'amministratore deve aver visualizzato la schermata di gestione delle Recipe;
-	\item \textbf{Postcondizione:} le informazioni richieste dall'utente sono state fornite e la Recipe desiderata, con tutti i dati ad essa associati sono stati eliminati dal sistema;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Apertura elenco Recipe (UC1.4.4.1);
 		\item Eliminazione Recipe (UC1.4.4.2);
 		\item Conferma eliminazione Recipe (UC1.4.4.3).
 	\end{enumerate}
+	\item \textbf{Postcondizione:} le informazioni richieste dall'utente sono state fornite e la Recipe desiderata, con tutti i dati ad essa associati sono stati eliminati dal sistema;
 \end{itemize}
 % FINE USE CASE %
 
@@ -686,6 +707,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'amministratore può visualizzare l'elenco delle Recipe salvate nel sistema premendo l'apposito pulsante nella sua home screen;
 	\item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'amministratore ha visualizzato correttamente l'elenco delle Recipe.
 \end{itemize}
 % FINE USE CASE %
@@ -698,6 +720,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'amministratore può selezionare il pulsante di eliminazione di una Recipe nell'elenco delle Recipe;
 	\item \textbf{Precondizione:} l'amministratore ha visualizzato l'elenco delle Recipe;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'amministratore ha selezionato il pulsante di eliminazione di una Recipe.
 \end{itemize}
 % FINE USE CASE %
@@ -710,6 +733,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'amministratore deve confermare la volontà di eliminare la Recipe selezionando il pulsante di conferma eliminazione;
 	\item \textbf{Precondizione:} l'amministratore ha selezionato il pulsante elimina su una Recipe;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'amministratore ha confermato l'eliminazione della Recipe e questa è stata cancellata dal sistema con a tutti i dati associati.
 \end{itemize}
 % FINE USE CASE %
@@ -731,7 +755,6 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente può cambiare la propria password selezionando il pulsante di cambio password nella sua home screen;
 	\item \textbf{Precondizione:} l'utente dispone di una password di accesso valida, risulta autenticato al servizio e si trova nella sua home screen;
-	\item \textbf{Postcondizione:} la nuova password per l'utente è attiva, la vecchia password non è più valida;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Inserimento nuova password (UC1.5.1);
@@ -739,6 +762,7 @@
 		\item Inserimento vecchia password (UC1.5.3);
 		\item Conferma cambio password (UC1.5.4);
 	\end{enumerate}
+	\item \textbf{Postcondizione:} la nuova password per l'utente è attiva, la vecchia password non è più valida;
 	\item \textbf{Estensioni:} Vecchia password inserita non valida (UC1.5.5).
 
 \end{itemize}
@@ -752,6 +776,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente può inserire la nuova password nel pannello apposito;
 	\item \textbf{Precondizione:} l'utente ha selezionato il pulsante di cambio password nella sua home screen;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente ha inserito la nuova password.
 \end{itemize}
 
@@ -763,6 +788,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente deve inserire nuovamente la nuova password per verificare di non aver fatto errori di battitura;
 	\item \textbf{Precondizione:} l'utente ha inserito la nuova password;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente ha verificato la correttezza della nuova password.
 \end{itemize}
 % FINE USE CASE %
@@ -775,6 +801,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente deve inserire la vecchia password per completare il cambio password;
 	\item \textbf{Precondizione:} l'utente ha inserito la nuova password due volte negli appositi campi;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente ha inserito la vecchia password e può confermare la nuova.
 \end{itemize}
 % FINE USE CASE %
@@ -787,6 +814,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente deve confermare di voler sostituire la vecchia password di accesso con quella nuova selezionando il pulsante di conferma;
 	\item \textbf{Precondizione:} l'utente ha inserito due volte la nuova password ed una la vecchia negli appositi campi;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente ha confermato l'operazione e la nuova password è ora attiva.
 \end{itemize}
 % FINE USE CASE %
@@ -799,6 +827,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente può aver inserito una password che non soddisfa i vincoli di sistema specificati nel pannello di cambio password;
 	\item \textbf{Precondizione:} l'utente ha selezionato il pulsante di conferma del cambio password;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente ha visualizzato un messaggio di errore con i dettagli dei vincoli non soddisfatti.
 \end{itemize}
 % FINE USE CASE %
@@ -820,12 +849,12 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente può terminare la sessione di lavoro. Questa operazione può essere eseguita premendo il pulsante di logout nella home screen;
 	\item \textbf{Precondizione:} l'utente risulta autenticato al servizio;
-	\item \textbf{Postcondizione:} la sessione di lavoro è terminata. Viene mostrata la schermata di login;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Pressione tasto logout (UC1.6.1);
 		\item Conferma del logout (UC1.6.2).
 	\end{enumerate}
+	\item \textbf{Postcondizione:} la sessione di lavoro è terminata. Viene mostrata la schermata di login;
 \end{itemize}
 % FINE USE CASE %
 
@@ -837,6 +866,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente può effettuare il logout selezionando l'apposito pulsante nella sua home screen;
 	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso al servizio e si trova nella home screen;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente visualizza il pannello di conferma logout.
 \end{itemize}
 % FINE USE CASE %
@@ -849,6 +879,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} prima di terminare la sessione di lavoro l'utente deve confermare la volontà di farlo selezionando il pulsante di conferma sul pannello di logout;
 	\item \textbf{Precondizione:} l'utente ha selezionato il pulsante di logout nella home screen;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente ha confermato il logout e la sessione è terminata. Viene visualizzata la schermata di login.
 \end{itemize}
 % FINE USE CASE %
@@ -870,13 +901,13 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'amministratore può gestire i permessi di accesso di un altro utente. Può anche eliminare definitivamente un utente e tutte le sue View;
 	\item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema;
-	\item \textbf{Postcondizione:} il sistema ha eseguito le operazioni richieste;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Visualizzazione elenco utenti (UC1.7.1);
 		\item Modifica permessi utente (UC1.7.2);
 		\item Eliminazione utente (UC1.7.3);
 	\end{enumerate}
+	\item \textbf{Postcondizione:} il sistema ha eseguito le operazioni richieste;
 	\item \textbf{Estensioni:} Eliminazione utente fallita (UC1.7.4).
 \end{itemize}
 % FINE USE CASE %
@@ -889,6 +920,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'amministratore può visualizzare l'elenco di tutti gli utenti salvati nel sistema selezionando l'apposito pulsante nella sua Home Screen; L'elenco fornisce per ciascun membro l'ID utente, nome, cognome, data ultimo accesso e un pulsante per modificare questi parametri;
 	\item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema e si trova nella sua home screen;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'amministratore ha visualizzato l'elenco degli utenti.
 \end{itemize}
 % FINE USE CASE %
@@ -901,7 +933,6 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'amministratore può cambiare i permessi di accesso al sistema ad un utente diverso da se stesso;
 	\item \textbf{Precondizione:} l'amministratore ha eseguito l'accesso;
-	\item \textbf{Postcondizione:} l'amministratore ha modificato i permessi ad un utente;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Apertura elenco utenti (UC1.7.2.1);
@@ -909,6 +940,7 @@
 		\item Selezione nuovi permessi (UC1.7.2.3);
 		\item Conferma modifiche (UC1.7.2.4).
 	\end{enumerate}
+	\item \textbf{Postcondizione:} l'amministratore ha modificato i permessi ad un utente;
 \end{itemize}
 % FINE USE CASE %
 
@@ -920,6 +952,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'amministratore può visualizzare l'elenco degli utenti salvati nel sistema selezionando l'apposito pulsante nella sua home screen;
 	\item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema e si trova nella sua home screen;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'amministratore ha visualizzato l'elenco degli utenti.
 \end{itemize}
 % FINE USE CASE %
@@ -932,6 +965,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'amministratore può cambiare i permessi di accesso ad un utente premendo l'apposito pulsante nell'elenco utenti;
 	\item \textbf{Precondizione:} l'amministratore ha visualizzato l'elenco utenti;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'amministratore ha selezionato il pulsante di modifica permessi di un utente.
 \end{itemize}
 % FINE USE CASE %
@@ -944,6 +978,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'amministratore può cambiare i permessi per l'utente selezionato;
 	\item \textbf{Precondizione:} l'amministratore ha premuto il pulsante di modifica permessi utente;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'amministratore ha selezionato i nuovi permessi per l'utente.
 \end{itemize}
 % FINE USE CASE %
@@ -956,6 +991,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'amministratore ha confermato le modifiche ai permessi dell'utente;
 	\item \textbf{Precondizione:} l'amministratore ha selezionato nuovi permessi per l'utente;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'amministratore ha confermato le modifiche e sono ora attive nel sistema.
 \end{itemize}
 % FINE USE CASE %
@@ -968,13 +1004,13 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'amministratore può eliminare un utente e tutte le sue View dal sistema;
 	\item \textbf{Precondizione:} l'amministratore ha eseguito l'accesso;
-	\item \textbf{Postcondizione:} l'amministratore ha cancellato un utente e le sue View;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Apertura elenco utenti (UC1.7.3.1);
 		\item Selezione pulsante elimina (UC1.7.3.2);
 		\item Conferma eliminazione (UC1.7.3.3).
 	\end{enumerate}
+	\item \textbf{Postcondizione:} l'amministratore ha cancellato un utente e le sue View;
 \end{itemize}
 % FINE USE CASE %
 
@@ -986,6 +1022,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'amministratore può visualizzare l'elenco di tutti gli utenti salvati nel sistema selezionando l'apposito pulsante nella sua home screen;
 	\item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema e si trova nella sua home screen;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'amministratore ha visualizzato l'elenco degli utenti.
 \end{itemize}
 % FINE USE CASE %
@@ -998,6 +1035,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'amministratore può avviare la procedura di eliminazione selezionando il pulsante elimina utente;
 	\item \textbf{Precondizione:} l'amministratore ha visualizzato l'elenco degli utenti;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'amministratore ha visualizzato il pannello di conferma eliminazione.
 \end{itemize}
 
@@ -1009,6 +1047,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'amministratore deve confermare l'eliminazione dell'utente;
 	\item \textbf{Precondizione:} l'amministratore ha aperto il pannello di conferma eliminazione utente;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente selezionato è stato cancellato dal sistema insieme a tutte le sue View.
 \end{itemize}
 % FINE USE CASE %
@@ -1021,6 +1060,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'amministratore può visualizzare un messaggio di errore se l'utente che vuole eliminare è attualmente autenticato nel sistema e sta eseguendo delle operazioni;
 	\item \textbf{Precondizione:} l'amministratore ha confermato l'eliminazione di un utente;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'amministratore ha visualizzato il messaggio di errore. Nessun utente o dato è stato eliminato dal sistema.
 \end{itemize}
 % FINE USE CASE %
@@ -1044,8 +1084,6 @@
 	all'interno del sistema e usufruire delle funzionalità offerte;
 	\item \textbf{Precondizione:} l'utente accede al sito web tramite un browser supportato
 	dal sistema;
-	\item \textbf{Postcondizione:} il sistema ha memorizzato i dati relativi al nuovo account e
-	ripresenta all'utente la schermata iniziale;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Inserimento username (UC1.8.1);
@@ -1053,6 +1091,8 @@
 		\item Inserimento password (UC1.8.3);
 		\item Conferma registrazione (UC1.8.4);
 	\end{enumerate}
+	\item \textbf{Postcondizione:} il sistema ha memorizzato i dati relativi al nuovo account e
+	ripresenta all'utente la schermata iniziale;
 	\item \textbf{Estensioni:} Creazione utente fallita (UC1.8.5).
 \end{itemize}
 % FINE USE CASE %
@@ -1065,6 +1105,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente deve inserire il proprio nome utente per essere riconoscibile univocamente all'interno del sistema e per poter gestire le proprie View;
 	\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire l'username per il nuovo account;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente ha inserito il proprio username.
 \end{itemize}
 % FINE USE CASE %
@@ -1077,6 +1118,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente deve inserire la mail che vuole associare alle username appena inserito;
 	\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire la mail per il nuovo account;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente ha inserito il proprio indirizzo mail.
 \end{itemize}
 % FINE USE CASE %
@@ -1089,6 +1131,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente deve inserire la password che vuole associare ai dati precedentemente inseriti;
 	\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire la password per il nuovo account;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente ha inserito la password.
 \end{itemize}
 % FINE USE CASE %
@@ -1101,6 +1144,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente deve poter confermare i dati inseriti durante la registrazione;
 	\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile confermare i dati inseriti in precedenza per la creazione di un nuovo account;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente ha confermato di voler creare un nuovo account all'interno
 	del sistema.
 \end{itemize}
@@ -1114,6 +1158,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} se vengono inseriti dei dati non conformi ai vincoli di sistema indicati durante la registrazione viene visualizzata una schermata di errore;
 	\item \textbf{Precondizione:} i dati inseriti non rispettano uno o più vincoli di sistema;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente ha visualizzato l'errore relativo ai dati inseriti.
 \end{itemize}
 % FINE USE CASE %
@@ -1134,13 +1179,13 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente può richiedere agli amministratori di aggiungere una nuova Recipe e relative View al sistema utilizzando l'apposito form nella WebGUI;
 	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso al sistema;
-	\item \textbf{Postcondizione:} la richiesta è stata inoltrata agli amministratori;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Creazione richiesta (UC1.9.1);
 		\item Inserimento parametri richiesta (UC1.9.2);
 		\item Invio richiesta (UC1.9.3);
 	\end{enumerate}
+	\item \textbf{Postcondizione:} la richiesta è stata inoltrata agli amministratori;
 	\item \textbf{Estensioni:} Creazione richiesta fallita (UC1.9.4).
 \end{itemize}
 % FINE USE CASE %
@@ -1153,8 +1198,9 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente può accedere al pannello per la creazione di una richiesta di aggiunta Recipe da inviare agli amministratori, che valuteranno se accettarla o meno;
 	\item \textbf{Precondizione:} l'utente ha selezionato il pulsante di creazione nuova richiesta;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente ha visualizzato il pannello per effettuare una richiesta di inserimento di una nuova Recipe.
-	
+
 \end{itemize}
 % FINE USE CASE %
 
@@ -1166,6 +1212,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente, una volta entrato nell'apposito pannello, per andare poi ad inviare una richiesta per una nuova Recipe, deve compilare tutti i campi richiesti dal form;
 	\item \textbf{Precondizione:} l'utente ha visualizzato il pannello per l'inserimento dei dati richiesti;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente ha inserito tutti i parametri richiesti dal pannello;
 \end{itemize}
 % FINE USE CASE %
@@ -1178,6 +1225,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} una volta che l'utente ha compilato tutti i campi richiesti dal pannello, può inviare la richiesta in maniera che venga valutata;
 	\item \textbf{Precondizione:} l'utente ha inserito tutti i parametri richiesti e ha premuto sull'apposito bottone per l'invio;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente visualizza la conferma dell'avvenuto invio della richiesta;
 \end{itemize}
 % FINE USE CASE %
@@ -1190,6 +1238,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} la creazione di una richiesta può fallire qualora i dati richiesti da inserire non fossero conformi alle attese;
 	\item \textbf{Precondizione:} l'utente ha inserito tutti i parametri richiesti e ha premuto sull'apposito bottone per l'invio;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente ha visualizzato un errore che indica che indica quali parametri inseriti non sono corretti;
 \end{itemize}
 % FINE USE CASE %
@@ -1212,7 +1261,6 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} gli amministratori possono vedere tutte le richieste di aggiunta Recipe inviate correttamente dagli utenti. Possono inoltre marcare una richiesta come ```chiusa'' qualora sia stata accettata oppure rifiutata;
 	\item \textbf{Precondizione:} l'amministratore dopo essersi autenticato ha selezionato il pulsante di gestione richieste utente dal menu principale dell'applicazione;
-	\item \textbf{Postcondizione:} le informazioni richieste dall'amministratore sono state fornite, le richiesta marcate come chiuse non sono più visibili nell'elenco; 
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Visualizza elenco richieste (UC1.10.1);
@@ -1220,6 +1268,7 @@
 		\item Accettazione richiesta (UC1.10.3);
 		\item Respinta richiesta (UC1.10.4);
 	\end{enumerate}
+	\item \textbf{Postcondizione:} le informazioni richieste dall'amministratore sono state fornite, le richiesta marcate come chiuse non sono più visibili nell'elenco;
 \end{itemize}
 % FINE USE CASE %
 
@@ -1231,6 +1280,7 @@
 		\end{itemize}
 		\item \textbf{Descrizione:} l'amministratore può visualizzare un elenco delle richieste per delle nuove Recipe che sono state inviate dagli utenti normali e non ancore ``chiuse'';
 		\item \textbf{Precondizione:} devono essere presenti delle richieste di nuove Recipe. L'amministratore desidera visualizzare le richieste ricevute;
+		\item \textbf{Scenario principale:} TO DO
 		\item \textbf{Postcondizione:} l'amministratore ha visualizzato l'elenco delle richieste di nuove Recipe;
 	\end{itemize}
 % FINE USE CASE %
@@ -1243,6 +1293,7 @@
 		\end{itemize}
 		\item \textbf{Descrizione:} l'amministratore può visualizzare la richiesta che ha selezionato per controllarne i parametri;
 		\item \textbf{Precondizione:} l'amministratore ha selezionato la visualizzazione completa dei dettagli di una richiesta;
+		\item \textbf{Scenario principale:} TO DO
 		\item \textbf{Postcondizione:} l'amministratore ha visualizzato i dettagli della richiesta;
 	\end{itemize}
 % FINE USE CASE %
@@ -1255,6 +1306,7 @@
 		\end{itemize}
 		\item \textbf{Descrizione:} l'amministratore una volta controllata la bontà della Recipe richiesta potrà accettarla in modo che venga inserita nel sistema;
 		\item \textbf{Precondizione:} l'amministratore decide di inserire la Recipe nel sistema;
+		\item \textbf{Scenario principale:} TO DO
 		\item \textbf{Postcondizione:} l'amministratore ha accettato la richiesta ed è stata inserita nel sistema;
 	\end{itemize}
 % FINE USE CASE %
@@ -1267,6 +1319,7 @@
 		\end{itemize}
 		\item \textbf{Descrizione:} l'amministratore una volta controllata la richiesta per una nuova Recipe potrà decidere di rifiutarla qualora non ritenesse opportuno il suo inserimento nel sistema;
 		\item \textbf{Precondizione:} l'amministratore decide di rifiutare la Recipe la richiesta;
+		\item \textbf{Scenario principale:} TO DO
 		\item \textbf{Postcondizione:} l'amministratore ha rifiutato la richiesta;
 	\end{itemize}
 % FINE USE CASE %
@@ -1289,13 +1342,13 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} gli utenti possono gestire le View che più gli piacciono, in modo da ritrovarle più facilmente e velocemente in caso volessero consultare frequentemente;
 	\item \textbf{Precondizione:} l'utente vuole visualizzare le View che ha tra quelle preferite o inserire/rimuovere di nuove/vecchie;
-	\item \textbf{Postcondizione:} l'utente ha visualizzato le View preferite o è andato a aggiungerne di nuove/rimuoverne alcune precedentemente marcate;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Visualizzazione View preferite (UC1.11.1);
 		\item Aggiunta View nelle preferite (UC1.11.2);
 		\item Rimozione View dalle preferite (UC1.11.4).
 	\end{enumerate}
+	\item \textbf{Postcondizione:} l'utente ha visualizzato le View preferite o è andato a aggiungerne di nuove/rimuoverne alcune precedentemente marcate;
 	\item \textbf{Estensioni:}
 	\begin{itemize}
 		\item Fallimento aggiunta View nelle preferite (UC1.11.3);
@@ -1312,6 +1365,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente vuole vedere e consultare tutte le View che ha già marcato come preferite;
 	\item \textbf{Precondizione:} l'utente deve avere già marcato come preferita qualche View;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente visualizza le View marcate come preferite.
 \end{itemize}
 % FINE USE CASE %
@@ -1324,6 +1378,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente desidera marcare una View come preferita. Per farlo deve premere su un apposito pulsante vicino alla View in questione;
 	\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per fare diventare la View una delle preferite;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente riceve conferma del fatto che la View è entrata a fare parte di quelle preferite.
 \end{itemize}
 % FINE USE CASE %
@@ -1336,6 +1391,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente non riesce a marcare una View come preferita in quanto il sistema ha avuto dei problemi;
 	\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per fare diventare la View una delle preferite;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente riceve una segnalazione che la View non è stata aggiunta tra quelle preferite.
 \end{itemize}
 % FINE USE CASE %
@@ -1348,6 +1404,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente desidera rimuovere una View dalle preferite. Per farlo deve premere su un apposito pulsante vicino alla View in questione;
 	\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per fare rimuovere la View dalle preferite;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente riceve conferma del fatto che la View è stata rimossa da quelle preferite.
 \end{itemize}
 % FINE USE CASE %
@@ -1360,6 +1417,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente non riesce a rimuovere una View dalle preferite in quanto il sistema ha avuto dei problemi;
 	\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per rimuovere la View da quelle preferite;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente riceve una segnalazione che la View non è stata rimossa da quelle preferite.
 \end{itemize}
 % FINE USE CASE %
@@ -1387,7 +1445,6 @@
 		\item un utente con token di accesso può fare ciò che può fare l'utente, e in più può inviare una richiesta REST usando il suo token. Può inoltre richiedere che venga rimosso quando non gli è più necessario o se ne desidera ottenere uno nuovo;
 	\end{itemize}
 	\item \textbf{Precondizione:} l'utente o l'utente con token di accesso dispongono di una connessione con il sistema. Dispongono inoltre di un username e una password riconosciute del sistema ottenute registrandosi tramite l'interfaccia Web.
-	\item \textbf{Postcondizione:} il servizio ha erogato correttamente le funzionalità richieste dall'utente;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Richiesta token di accesso (UC2.1);
@@ -1395,6 +1452,7 @@
 		\item Invalidamento del token di accesso (UC2.3);
 		\item Visualizzazione specifica servizi REST (UC2.4);
 	\end{enumerate}
+	\item \textbf{Postcondizione:} il servizio ha erogato correttamente le funzionalità richieste dall'utente;
 \end{itemize}
 % FINE USE CASE %
 
@@ -1416,12 +1474,12 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente può ottenere un token di accesso per i servizi REST inviando l'apposita richiesta;
 	\item \textbf{Precondizione:} l'utente desidera avere un nuovo token di accesso;
-	\item \textbf{Postcondizione:} l'utente ha ottenuto un token di accesso;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Invio richiesta di un token (UC2.1.1);
 		\item Ricezione token di accesso (UC2.1.3);
 	\end{enumerate}
+	\item \textbf{Postcondizione:} l'utente ha ottenuto un token di accesso;
 	\item \textbf{Estensioni:} Fallimento ricezione token (UC2.1.2).
 \end{itemize}
 % FINE USE CASE %
@@ -1434,6 +1492,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente invia la richiesta premendo l'apposito bottone per la generazione di un token;
 	\item \textbf{Precondizione:} l'utente si è registrato presso il sistema e non ha ancora associato un token d'accesso;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} il sistema riceve la richiesta inviata dall'utente.
 \end{itemize}
 % FINE USE CASE %
@@ -1446,6 +1505,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} viene ritornato un errore che indica che l'autenticazione non è andata buon fine;
 	\item \textbf{Precondizione:} il sistema ha ricevuto una richiesta di token contenente uno username non riconosciuto dal sistema o una password non corrispondente a quella associata allo username inserito;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente ha preso atto del fallimento.
 \end{itemize}
 % FINE USE CASE %
@@ -1458,6 +1518,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} Il sistema ritorna un token di accesso per l'utente che l'ha richiesto;
 	\item \textbf{Precondizione:} il sistema aveva ricevuto una richiesta da un utente registrato per fornire un token di accesso;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente ha ottenuto un token di accesso valido.
 \end{itemize}
 % FINE USE CASE %
@@ -1479,12 +1540,12 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} un utente registrato al sistema può inviare richieste REST al sistema per ottenere i dati di una View senza utilizzare l'interfaccia Web;
 	\item \textbf{Precondizione:} l'utente possiede un token di accesso valido;
-	\item \textbf{Postcondizione:} l'utente ha ricevuto i dati richiesti;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Invio richiesta contenente token (UC2.2.1);
 		\item Ricezione risultato (UC2.2.3);
 	\end{enumerate}
+	\item \textbf{Postcondizione:} l'utente ha ricevuto i dati richiesti;
 	\item \textbf{Estensioni:} Fallimento richiesta (UC2.2.2).
 \end{itemize}
 % FINE USE CASE %
@@ -1497,6 +1558,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente invia una richiesta avente come parametro il token di accesso;
 	\item \textbf{Precondizione:} l'utente possiede un token di accesso valido;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} il sistema riceve la richiesta inviata.
 \end{itemize}
 % FINE USE CASE %
@@ -1509,6 +1571,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} il sistema ritorna un errore riportando se il token è non valido o se è stato commesso un errore di sintassi;
 	\item \textbf{Precondizione:} l'utente ha inviato una richiesta usando un token non valido o con un errore di sintassi;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente ha preso atto del fallimento della richiesta.
 \end{itemize}
 % FINE USE CASE %
@@ -1521,6 +1584,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} vengono ritornati all'utente i dati che aveva richiesto;
 	\item \textbf{Precondizione:} l'utente aveva inviato una richiesta al sistema;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente ha ricevuto i dati richiesti.
 \end{itemize}
 % FINE USE CASE %
@@ -1542,12 +1606,12 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente può richiedere che un token di accesso di cui dispone venga disabilitato e dunque non possa essere più usato per accedere ai servizi;
 	\item \textbf{Precondizione:} l'utente dispone di un token di accesso valido;
-	\item \textbf{Postcondizione:} il token di accesso non è più valido;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Invio richiesta di invalidamento token (UC2.3.1);
 		\item Ricezione conferma (UC2.3.3);
 	\end{enumerate}
+	\item \textbf{Postcondizione:} il token di accesso non è più valido;
 	\item \textbf{Estensioni:} Fallimento richiesta (UC2.3.2).
 \end{itemize}
 % FINE USE CASE %
@@ -1561,6 +1625,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente, premendo su un apposito bottone, invia una richiesta che desidera venga disabilitato il token associato al suo account;
 	\item \textbf{Precondizione:} il token di cui viene richiesta la disabilitazione è valido;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} il token di accesso non è più valido.
 \end{itemize}
 % FINE USE CASE %
@@ -1573,6 +1638,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} il sistema avvisa che qualcosa è andato storto durante la disabilitazione del token;
 	\item \textbf{Precondizione:} l'utente ha chiesto l'invalidamento di un token;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente ha preso atto del fatto che l'invalidamento del token non ha avuto successo.
 \end{itemize}
 % FINE USE CASE %
@@ -1585,6 +1651,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} il sistema ritorna una conferma dell'avvenuta invalidazione del token;
 	\item \textbf{Precondizione:} l'utente ha chiesto l'invalidamento di un token valido;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente ha preso atto del fatto che il token è stato invalidato.
 \end{itemize}
 % FINE USE CASE %
@@ -1597,6 +1664,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente può visualizzare l'elenco dei vari servizi REST offerti dal sistema, in modo da poterli utilizzare a sua volta per scopi personali;
 	\item \textbf{Precondizione:} l'utente desidera visualizzare l'elenco dei servizi REST offerti;
+	\item \textbf{Scenario principale:} TO DO
 	\item \textbf{Postcondizione:} l'utente ha ottenuto l'elenco dei servizi REST;
 \end{itemize}
 % FINE USE CASE %
