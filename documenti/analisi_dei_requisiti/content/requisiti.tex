@@ -35,6 +35,8 @@
 % =================================================================================================
 % 2.0.5			2015-03-15			modificate fonti conformi ai nuovi UC					Tesser Paolo
 % =================================================================================================
+% 2.0.6			2015-03-15			inseriti req. ROF5 e derivati riguardanti View FB		Tesser Paolo
+% =================================================================================================
 %
 
 % CONTENUTO DEL CAPITOLO
@@ -214,18 +216,20 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF5.3.1  & Le View offerte per la categoria di Facebook possono mostrare grafici di diversi tipi: Line Chart, Bar Chart, Pie Chart e Map Chart &  UC1.3.1.1 \newline Interno \\
 		\hline
-		ROF5.3.1.1  & Tipo di View: viene visualizzato un Line Chart con due linee per vedere l'andamento & Interno \\
-		\hline	
-		ROF5.3.1.2  &  Tipo di View: [TO DO] & Interno \\
+		ROF5.3.1.1  & Tipo di View: viene visualizzato un Line Chart con due linee per vedere l'andamento dei ``likes'' rispetto ai ``talking about'' di una pagina. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale.  & Interno \\
 		\hline
-		ROF5.3.1.3  &  Tipo di View: [TO DO] & Interno \\
+		ROF5.3.1.2  &  Tipo di View: viene visualizzato un Pie Chart che prende tutti gli eventi creati da una pagina e mostra, la percentuale di persone che hanno messo partecipa, forse o rifiuta. I dati vengono forniti anche non in percentuale. & Interno \\
 		\hline
-		ROF5.3.1.4  &  Tipo di View: [TO DO] & Interno \\
+		ROF5.3.1.3  &  Tipo di View: viene visualizzato un Pie Chart che mostra la percentuale di commenti di terzi a tutti i post di una pagina rispetto la percentuale di commenti della pagina stessa. & Interno \\
 		\hline
-		ROF5.3.1.5  &  Tipo di View: [TO DO] & Interno \\
+		ROF5.3.1.4  &  Tipo di View: viene visualizzato un Pie Chart che mostra la percentuale di commenti della pagina e di terzi rispetto a tutti i post di terzi sulla pagina in questione. & Interno \\
 		\hline
-
-
+		ROF5.3.1.5  &  Tipo di View: viene visualizzato un Map Chart che illustra le zone nella quale si sono creati degli eventi di una pagina e mostra dei cerchi di diverse dimensioni a seconda della media di partecipanti agli eventi di quella zona. & Interno \\
+		\hline
+		ROF5.3.1.6  &  Tipo di View: viene visualizzato un Bar Chart che mostra la media di commenti delle pagina per ogni post effettuato dalla stessa. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
+		\hline
+		ROF5.3.1.7  &  Tipo di View: viene visualizzato un Line Chart che mostra l’andamento del numero di post giornalieri di una pagina [TO DO]. & Interno \\
+		\hline
 
 
 		ROF5.4  &  Premendo sul pulsante del RDF5.2.1.3, da dentro la categoria Twitter, vengono fornite tutte le View predisposte dal sistema per avere delle statistiche &  UC1.3.1.2 \newline Interno \\
@@ -435,6 +439,15 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		ROV5.2  &  Ogni funzionalità dell'interfaccia web descritta nei requisiti funzionali deve essere compatibile con il browser Firefox v. 35.0 e successive   &  Interno \\
 		\hline
 		ROV5.3  &  Ogni funzionalità dell'interfaccia web descritta nei requisiti funzionali deve essere compatibile con il browser Safari v. 8.0 e successive   &  Interno \\
+		\hline
+
+		ROV6  &  [TO DO] (sdk usate per chiamate API social)  &  Interno \\
+		\hline
+		ROV6.1  &  [TO DO] (sdk usate per chiamate API Facebook)  &  Interno \\
+		\hline
+		ROV6.2  &  [TO DO] (sdk usate per chiamate API Twitter)  &  Interno \\
+		\hline
+		ROV6.3  &  [TO DO] (sdk usate per chiamate API Instagram)  &  Interno \\
 		\hline
 
 	\end{longtable}
