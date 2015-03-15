@@ -122,6 +122,8 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		RDF1.8  &  Nel caso la registrazione sia andata a buon fine, viene inviata una e-mail di conferma all'indirizzo inserito dall'utente  &  Interno \\
 		\hline
+
+
 		ROF2  &  L'utente non autenticato può effettuare il login tramite l'apposto form di login  &  UC1.1 \\
 		\hline
 		ROF2.1  &  Il login richiede l'inserimento dello username  &  UC1.1.1 \\
@@ -138,11 +140,10 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF2.5  &  Il sistema aggiorna la home screen permettendo all'utente autenticato di accedere alle diverse aree del del servizio  &  Interno  \\
 		\hline
+
+
 		ROF3  &  Nella home screen dell'utente autenticato è presente un pulsante per aprire il menù delle informazioni personali  &  UC1.2 \newline UC1.5 \\
 		\hline
-
-
-
 		ROF3.1  &  Nel menù delle informazioni personali è presente un pulsante per visualizzare i propri dati  &  UC1.2.1 \\
 		\hline
 		ROF3.1.1  &  Se l'utente seleziona il pulsante di visualizzazione dei dati personali il sistema deve reperire il suo nome utente, il suo indirizzo e-mail e la data del suo ultimo accesso &  Interno \\
@@ -178,6 +179,8 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		ROF3.3.3.1  &  Una volta premuto il tasto di conferma appare un messaggio di errore se la password non coincide con la conferma o se la vecchia password inserita non è corretta.  &  UC1.5.5 \\
 		\hline
 		ROF3.3.3.2  &  Una volta premuto il tasto di conferma appare un messaggio di conferma se la password è stata modificata  &  Interno \\
+
+
 		\hline
 		ROF4  &  Nella home screen è presente un pulsante di logout  &  UC1.6 \\
 		\hline
@@ -272,11 +275,26 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 
 
-		[TO DO](ROF6) & [TO DO] (possibile ROF6 sulla gestione dei preferiti) & [TO DO] \\
+		ROF6  & L'utente ha la possibilità di gestire le View che più preferisce in maniera da averle a disposizione più velocemente. & UC1.11 \\
+		\hline
+		ROF6.1  & [TO DO]  & UC1.11.2 \newline Interno \\
+		\hline
+		ROF6.1 [TO DO] & [TO DO]  & UC1.11.2 \newline Interno \\
+		\hline
+		ROF6.1 [TO DO] & [TO DO]  & UC1.11.2 \newline Interno \\
+		\hline
+		ROF6.1 [TO DO] & [TO DO]  & UC1.11.2 \newline Interno \\
 		\hline
 
-		[TO DO] & [TO DO] & [TO DO] \\
+
+		ROF7  & L'utente ha la possibilità di richiedere l'inserimento di una nuova Recipe. & UC1.9 \\
 		\hline
+
+
+
+
+
+
 
 
 		ROF8  &  Un utente che possiede i privilegi di amministratore può accedere all'area riservata del sistema una volta effettuata l'autenticazione tramite il login  &  UC1.4 \newline UC1.7 \\
@@ -303,6 +321,8 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		RFF8.5  &  Dal pannello di amministrazione è possibile visualizzare feedback e statistiche sugli utenti in relazione ai dati delle Recipe utilizzati  &  Interno \\
 		\hline
+
+
 		RDF9 & Nella home screen dell'utente amministratore è presente un pulsante per accedere all'elenco degli utenti  &  UC1.7.1 \newline UC1.7.2.1 \newline UC1.7.3.1 \\
 		\hline
 		RDF9.1  &  Accanto al nome di ogni utente nella lista è presente un pulsante modifica  &  Interno \\
@@ -323,29 +343,37 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		RDF9.3.1.3  &  Se c'è stato un errore appare un messaggio d'errore e si è riportati alla pagina di modifica di un utente  & UC1.7.4\\
 		\hline
-		ROF10  &  Il sistema fornisce una serie di servizi REST  & Capitolato \\
+
+
+
+		ROF10 [TO DO] &  [TO DO] (requisiti sulla gestione delle richieste di nuove Recipe)  & UC1.10 \\
 		\hline
-		ROF10.1  &  Il sistema è un grado di gestire una richiesta di un token di accesso per utilizzare i servizi REST se l'utente è autenticato  & UC2.1 \newline UC2.1.1 \\
+
+
+
+		ROF11  &  Il sistema fornisce una serie di servizi REST  & Capitolato \\
 		\hline
-		ROF10.1.1  &  [TO CHANGE] Il sistema restituisce un errore se il sistema ha avuto problemi nel generare il token & UC2.1.2 \\
+		ROF11.1  &  Il sistema è un grado di gestire una richiesta di un token di accesso per utilizzare i servizi REST se l'utente è autenticato  & UC2.1 \newline UC2.1.1 \\
 		\hline
-		ROF10.1.2  &  Il sistema genera e restituisce un token di accesso se l'utente è autenticato  & UC2.1.3 \\
+		ROF11.1.1  &  [TO CHANGE] Il sistema restituisce un errore se il sistema ha avuto problemi nel generare il token & UC2.1.2 \\
 		\hline
-		ROF10.2  &  I token di accesso sono stringhe alfanumeriche di 200 caratteri  & Interno \\
+		ROF11.1.2  &  Il sistema genera e restituisce un token di accesso se l'utente è autenticato  & UC2.1.3 \\
 		\hline
-		ROF10.3  &  L'utente può richiedere che un token valido venga considerato non valido  & UC2.3 \\
+		ROF11.2  &  I token di accesso sono stringhe alfanumeriche di 200 caratteri  & Interno \\
 		\hline
-		ROF10.3.1  &  Il sistema è in grado di gestire una richiesta di chiusura sessione contenente un token di accesso valido rendendolo non valido & UC2.3 \newline UC2.3.1 \\
+		ROF11.3  &  L'utente può richiedere che un token valido venga considerato non valido  & UC2.3 \\
 		\hline
-		ROF10.3.2  &  [TO CHANGE] Il sistema restituisce un errore se non è riuscito a invalidare il token & UC2.3.2 \\
+		ROF11.3.1  &  Il sistema è in grado di gestire una richiesta di chiusura sessione contenente un token di accesso valido rendendolo non valido & UC2.3 \newline UC2.3.1 \\
 		\hline
-		ROF10.3.3  &  Il sistema restituisce una conferma dell'avvenuta invalidazione del token & UC2.3.3 \\
+		ROF11.3.2  &  [TO CHANGE] Il sistema restituisce un errore se non è riuscito a invalidare il token & UC2.3.2 \\
 		\hline
-		ROF10.4  &  Il sistema è in grado di gestire una richiesta che richiede i dati di una View contenente un token di accesso  &  UC2.2 \newline UC2.2.1 \\
+		ROF11.3.3  &  Il sistema restituisce una conferma dell'avvenuta invalidazione del token & UC2.3.3 \\
 		\hline
-		ROF10.4.1  &  Il sistema restituisce i dati richiesti se il token utilizzato è valido  &  UC2.2.3 \\
+		ROF11.4  &  Il sistema è in grado di gestire una richiesta che richiede i dati di una View contenente un token di accesso  &  UC2.2 \newline UC2.2.1 \\
 		\hline
-		ROF10.4.2  &  Il sistema restituisce un errore se il token utilizzato è non valido  &  UC2.2.2 \\
+		ROF11.4.1  &  Il sistema restituisce i dati richiesti se il token utilizzato è valido  &  UC2.2.3 \\
+		\hline
+		ROF11.4.2  &  Il sistema restituisce un errore se il token utilizzato è non valido  &  UC2.2.2 \\
 		\hline
 
 	\end{longtable}
