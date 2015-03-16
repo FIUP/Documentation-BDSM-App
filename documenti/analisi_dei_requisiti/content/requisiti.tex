@@ -37,6 +37,8 @@
 % =================================================================================================
 % 2.0.6			2015-03-15			inseriti req. ROF5 e derivati riguardanti View FB		Tesser Paolo
 % =================================================================================================
+% 2.0.7			2015-03-16			inseriti req. ROF6/7 con derivati						Tesser Paolo
+% =================================================================================================
 %
 
 % CONTENUTO DEL CAPITOLO
@@ -84,7 +86,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 
 	\def\arraystretch{1.5}
 	\bgroup
-	\begin{longtable}{| p{2cm} | p{8cm} | p{2cm} |}
+	\begin{longtable}{| p{2.5cm} | p{8cm} | p{2cm} |}
 
 		\hline
 		\textbf{Requisito} & \textbf{Descrizione} & \textbf{Fonti} \\
@@ -210,14 +212,14 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF5.2.1.1  &  Le categorie sono: Facebook, Twitter, Instagram &  UC1.3.1 \newline Capitolato \\		
 		\hline
-		ROF5.2.1.2  &  Il sistema, per ogni metrica dell'elenco, fornirà il nome, la descrizione se presente e la tipologia della metrica (vedi ROF [TO DO]). Verrà inoltre fornito &  UC1.3.1 \newline Interno \\
+		ROF5.2.1.2  &  Il sistema, per ogni metrica dell'elenco, fornirà il nome, la descrizione se presente e la tipologia della metrica (vedi ROF7.1.1.5, ROF7.1.1.6, ROF7.1.1.7). &  UC1.3.1 \newline Interno \\
 		\hline
-		ROF5.2.1.3  &  Il sistema, per ogni metrica dell'elenco, deve fornire il pulsante per accedere alle visualizzazioni delle View presenti per quella metrica &  UC1.3.1 \newline Interno \\
+		ROF5.2.1.3  &  Il sistema, per ogni metrica dell'elenco, deve fornire il pulsante per accedere alle visualizzazioni delle View presenti per quella metrica. &  UC1.3.1 \newline Interno \\
 		\hline
 
-		ROF5.3  & Premendo sul pulsante del ROF5.2.1.3, da dentro la categoria Facebook, vengono fornite tutte le View predisposte dal sistema per avere delle statistiche & UC1.3.1.1 \newline Interno \\
+		ROF5.3  & Premendo sul pulsante del ROF5.2.1.3, da dentro la categoria Facebook, vengono fornite tutte le View predisposte dal sistema per avere delle statistiche. & UC1.3.1.1 \newline Interno \\
 		\hline
-		ROF5.3.1  & Le View offerte per la categoria di Facebook possono mostrare grafici di diversi tipi: Line Chart, Bar Chart, Pie Chart e Map Chart &  UC1.3.1.1 \newline Interno \\
+		ROF5.3.1  & Le View offerte per la categoria di Facebook possono mostrare grafici di diversi tipi: Line Chart, Bar Chart, Pie Chart e Map Chart. &  UC1.3.1.1 \newline Interno \\
 		\hline
 		ROF5.3.1.1  & Tipo di View: viene visualizzato un Line Chart con due linee per vedere l'andamento dei ``likes'' rispetto ai ``talking about'' di una pagina. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale.  & Interno \\
 		\hline
@@ -255,39 +257,39 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF5.5.1  & Le View offerte per la categoria di Instagram possono mostrare grafici di diversi tipi: Line Chart, Bar Chart, Pie Chart e Map Chart  &  UC1.3.1.3 \newline Interno \\
 		\hline
-		ROF5.5.1.1  &  Tipo di View: Vengono visualizzati per ogni post di un utente il numero di like e il numero di commenti in un Bar Chart & Interno \\
+		ROF5.5.1.1  &  Tipo di View: vengono visualizzati per ogni post di un utente il numero di like e il numero di commenti in un Bar Chart & Interno \\
 		\hline	
-		ROF5.5.1.2  &  Tipo di View: Vengono visualizzati i nuovi followers di un utente per giorno, in un Line Chart. Nel grafico vengono anche segnati come linee verticali i momenti in cui l'utente ha pubblicato un post. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
+		ROF5.5.1.2  &  Tipo di View: vengono visualizzati i nuovi followers di un utente per giorno, in un Line Chart. Nel grafico vengono anche segnati come linee verticali i momenti in cui l'utente ha pubblicato un post. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
 		\hline
 		ROF5.5.1.2.1  &  Per questo tipo di View è possibile confrontare due utenti, che appariranno sul grafico con due colori diversi. & Interno \\
 		\hline
-		ROF5.5.1.3  &  Tipo di View: Vengono visualizzati i nuovi like e i nuovi commenti ricevuti da un utente per giorno, in un Line Chart. Nel grafico vengono anche segnati come linee verticali i momenti in cui l'utente ha pubblicato un post. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
+		ROF5.5.1.3  &  Tipo di View: vengono visualizzati i nuovi like e i nuovi commenti ricevuti da un utente per giorno, in un Line Chart. Nel grafico vengono anche segnati come linee verticali i momenti in cui l'utente ha pubblicato un post. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
 		\hline
 		ROF5.5.1.3.1  &  Per questo tipo di View è possibile confrontare due utenti, che appariranno sul grafico con due colori diversi. & Interno \\
 		\hline
-		ROF5.5.1.4  & Tipo di View: Viene visualizzato in un Line Chart l'andamento dei like e quello dei commenti ricevuti da un utente fratto il numero di followers che possiede. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
+		ROF5.5.1.4  & Tipo di View: viene visualizzato in un Line Chart l'andamento dei like e quello dei commenti ricevuti da un utente fratto il numero di followers che possiede. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
 		\hline
-		ROF5.5.1.5  &  Tipo di View: Viene visualizzato in un Line Chart il numero di like ricevuti al giorno da un utente fratto la frequenza di post dell'utente (ovvero il numero di post al giorno). Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
+		ROF5.5.1.5  &  Tipo di View: viene visualizzato in un Line Chart il numero di like ricevuti al giorno da un utente fratto la frequenza di post dell'utente (ovvero il numero di post al giorno). Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
 		\hline
 		ROF5.5.1.5.1  &  Per questo tipo di View è possibile confrontare due utenti, che appariranno sul grafico con due colori diversi. & Interno \\
 		\hline
-		ROF5.5.1.6  &  Tipo di View: Viene visualizzato in un Line Chart il numero di post e il numero utenti che hanno usato un dato hashtag. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
+		ROF5.5.1.6  &  Tipo di View: viene visualizzato in un Line Chart il numero di post e il numero utenti che hanno usato un dato hashtag. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
 		\hline
 		ROF5.5.1.6.1  &  Per questo tipo di View è possibile confrontare due hashtag, che appariranno sul grafico con due colori diversi. & Interno \\
 		\hline
 
-		ROF5.5.1.7  &  Tipo di View: Viene visualizzato in un Line Chart il numero di like e il numero di commenti ricevuti dai post che contengono un dato hashtag. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
+		ROF5.5.1.7  &  Tipo di View: viene visualizzato in un Line Chart il numero di like e il numero di commenti ricevuti dai post che contengono un dato hashtag. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
 		\hline
 		ROF5.5.1.7.1  &  Per questo tipo di View è possibile confrontare due hashtag, che appariranno sul grafico con due colori diversi. & Interno \\
 		\hline
-		ROF5.5.1.8  &  Tipo di View: Vengono visualizzate in un Map Chart le zone geografiche dove sono stati fatti i post contenenti un dato hashtag (di cui è nota la localizzazione), colorandole con una colorazione di intensità proporzionale al numero di post contenti l'hashtag nella zona. & Interno \\
+		ROF5.5.1.8  &  Tipo di View: vengono visualizzate in un Map Chart le zone geografiche dove sono stati fatti i post contenenti un dato hashtag (di cui è nota la localizzazione), colorandole con una colorazione di intensità proporzionale al numero di post contenti l'hashtag nella zona. & Interno \\
 		\hline
 		ROF5.5.1.8.1  &  Per questo tipo di View è possibile confrontare due hashtag, che appariranno sul grafico con due colori diversi. & Interno \\
 		\hline
-		ROF5.5.1.9  &  Tipo di View: Viene visualizzato un Pie Chart che mostra per un dato hashtag la percentuale di post fatti in un dato stato sul totale di post contenenti l'hashtag dei quali è noto lo stato in cui sono stati fatti. I dati vengono forniti anche non in percentuale.& Interno \\
+		ROF5.5.1.9  &  Tipo di View: viene visualizzato un Pie Chart che mostra per un dato hashtag la percentuale di post fatti in un dato stato sul totale di post contenenti l'hashtag dei quali è noto lo stato in cui sono stati fatti. I dati vengono forniti anche non in percentuale. & Interno \\
 		\hline
 
-		ROF5.5.2  & Le View offerte per la categoria di Instagram possono fornire dati in forma tabellare  &  UC1.3.1.2 \newline Interno \\
+		ROF5.5.2  & Le View offerte per la categoria di Instagram possono fornire dati in forma tabellare.  &  UC1.3.1.2 \newline Interno \\
 		\hline
 		ROF5.5.2.1  &  [TO DO] & Interno \\
 		\hline
@@ -310,7 +312,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF6.2.1  & Il sistema visualizza un messaggio se la View non è stata aggiunta correttamente tra quelle preferite.  & UC1.11.3 \newline Interno \\
 		\hline
-		ROF6.3  & L'utente ha la possibilità di rimuovere le View che ha aggiunto tra quelle preferite premendo sull'apposito pulsante vicino la View che desidera rimuovere.  & UC1.11.4 \newline Interno \\
+		ROF6.3  & L'utente ha la possibilità di rimuovere le View che ha aggiunto tra quelle preferite premendo sull'apposito pulsante vicino la View che desidera rimuovere.  &  UC1.11.4 \newline Interno \\
 		\hline
 		ROF6.3.1  & Il sistema visualizza un messaggio se la View non è stata rimossa correttamente tra quelle preferite.  & UC1.11.5 \newline Interno \\
 		\hline
@@ -319,25 +321,55 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 
 		ROF7  & L'utente ha la possibilità di richiedere l'inserimento di una nuova Recipe. & UC1.9 \\
 		\hline
-
-
-
-
-
-
-
-
-		ROF8  &  Un utente che possiede i privilegi di amministratore può accedere all'area riservata del sistema una volta effettuata l'autenticazione tramite il login  &  UC1.4 \newline UC1.7 \\
+		ROF7.1  & L'utente può generare una richiesta dall'apposito form presente in un'apposita sezione della Web GUI. & UC1.9 \newline UC1.9.1 \\
 		\hline
-		ROF8.1  &  Un amministratore può visualizzare tutte le Recipe memorizzate nel sistema selezionando l'apposito pulsante  &  UC1.4.1 \\
+		ROF7.1.1 & L'utente deve inserire i parametri richiesti dal form perché la richiesta sia considerata valida dal sistema. & UC1.9.2 \newline Interno \\
+		\hline
+		ROF7.1.1.1 & L'utente deve inserire il titolo della Recipe che desidera richiedere. Questo campo è obbligatorio. & Interno \\
+		\hline
+		ROF7.1.1.2 & L'utente può inserire una breve descrizione della Recipe che desidera richiedere. Questo campo è facoltativo. & Interno \\
+		\hline
+		ROF7.1.1.3 & L'utente deve inserire almeno una metrica nella richiesta della Recipe che desidera. & Interno \\
+		\hline
+		ROF7.1.1.4 & L'utente deve scegliere la categoria della metrica tra: Facebook, Twitter o Instagram. Questa selezione è obbligatoria e vincolata dal sistema. & Interno \\
+		\hline
+		ROF7.1.1.5 & L'utente deve scegliere la tipologia della metrica tra: Evento o Pagina, se ha scelto la categoria Facebook. Questa selezione è obbligatoria e vincolata dal sistema. & Interno \\
+		\hline
+		ROF7.1.1.6 & L'utente deve scegliere la tipologia della metrica tra: Pagina o Hashtag, se ha scelto la categoria Twitter. Questa selezione è obbligatoria e vincolata dal sistema. & Interno \\
+		\hline
+		ROF7.1.1.7 & L'utente deve scegliere la tipologia della metrica tra: Pagina o Hashtag, se ha scelto la categoria Instagram. Questa selezione è obbligatoria e vincolata dal sistema. & Interno \\
+		\hline
+		ROF7.1.1.8 & Se l'utente sceglie la categoria Facebook deve inserire il ``nome'' o ``l'identificativo'' della Pagina o dell'Evento del quale vuole raccogliere i dati. Questo campo è obbligatorio. & Interno \\
+		\hline
+		ROF7.1.1.9 & Se l'utente sceglie la categoria Twitter deve inserire il ``nome'' della Pagina o dell'Hashtag del quale vuole raccogliere i dati. Questo campo è obbligatorio. & Interno \\
+		\hline
+		ROF7.1.1.10 & Se l'utente sceglie la categoria Instagram deve inserire il ``nome'' della Pagina o dell'Hashtag del quale vuole raccogliere i dati. Questo campo è obbligatorio. & Interno \\
+		\hline
+		ROF7.1.1.11 & Il sistema avviserà l'utente in maniera istantanea se un campo è compilato correttamente. & Interno \\
+		\hline
+		ROF7.1.1.12 & Il sistema avviserà l'utente se è stato lasciato vuoto un campo obbligatorio. & Interno \\
+		\hline
+		ROF7.1.2 & L'utente deve premere sul pulsante di invio della richiesta per inviarla agli amministratori. & UC1.9.3 \newline Interno \\
+		\hline
+		ROF7.1.3 & La richiesta può fallire se i dati inseriti non sono corretti o ci sono dei campi obbligatori vuoti. & UC1.9.4 \newline Interno \\
+		\hline
+		ROF7.2  & Il sistema invierà una notifica agli amministratori che è stata inserita una nuova richiesta per l'inserimento di una Recipe. & Interno \\
+		\hline
+
+
+
+
+		ROF8  &  Un utente che possiede i privilegi di amministratore può accedere all'area riservata del sistema una volta effettuata l'autenticazione tramite il login.  &  UC1.4 \newline UC1.7 \\
+		\hline
+		ROF8.1  &  Un amministratore può visualizzare tutte le Recipe memorizzate nel sistema selezionando l'apposito pulsante.  &  UC1.4.1 \\
 		\hline
 		ROF8.2  &  Un amministratore può accedere al pannello per inserire una nuova Recipe  &  UC1.4.2 \newline UC1.4.2.1 \newline UC1.4.2.2  \\
 		\hline
-		ROF8.2.1  &  Il sistema richiede l'inserimento di determinati parametri per individuare il contesto dei dati richiesti dalla Recipe  &  Interno \newline UC1.4.2.3 \\
+		ROF8.2.1  &  Il sistema richiede l'inserimento di determinati parametri per individuare il contesto dei dati richiesti dalla Recipe.  &  Interno \newline UC1.4.2.3 \\
 		\hline
-		ROF8.2.2  &  Il sistema richiede la conferma dei dati inseriti prima di creare la nuova Recipe  &  UC1.4.2.4 \\
+		ROF8.2.2  &  Il sistema richiede la conferma dei dati inseriti prima di creare la nuova Recipe.  &  UC1.4.2.4 \\
 		\hline
-		ROF8.3  &  Il sistema visualizza un messaggio di errore contenente i parametri inseriti non corretti oppure il messaggio di una eccezione lasciato in fase di creazione della Recipe  &  UC1.4.3 \\
+		ROF8.3  &  Il sistema visualizza un messaggio di errore contenente i parametri inseriti non corretti oppure il messaggio di una eccezione lasciato in fase di creazione della Recipe.  &  UC1.4.3 \\
 		\hline
 		ROF8.3.1  &  Nel caso venga confermata  una nuova Recipe corretta, il sistema salva i suoi parametri nel database  e riporta l'amministratore all'elenco delle Recipe  &  Interno \\
 		\hline
@@ -417,7 +449,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 
 	\def\arraystretch{1.5}
 	\bgroup
-	\begin{longtable}{| p{2cm} | p{8cm} | p{2cm} |}
+	\begin{longtable}{| p{2.5cm} | p{8cm} | p{2cm} |}
 
 		\hline
 		\textbf{Requisito} & \textbf{Descrizione} & \textbf{Fonti} \\
@@ -440,7 +472,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 
 	\def\arraystretch{1.5}
 	\bgroup
-	\begin{longtable}{| p{2cm} | p{8cm} | p{2cm} |}
+	\begin{longtable}{| p{2.5cm} | p{8cm} | p{2cm} |}
 
 		\hline
 		\textbf{Requisito} & \textbf{Descrizione} & \textbf{Fonti} \\
@@ -468,7 +500,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 
 	\def\arraystretch{1.5}
 	\bgroup
-	\begin{longtable}{| p{2cm} | p{8cm} | p{2cm} |}
+	\begin{longtable}{| p{2.5cm} | p{8cm} | p{2cm} |}
 
 		\hline
 		\textbf{Requisito} & \textbf{Descrizione} & \textbf{Fonti} \\
