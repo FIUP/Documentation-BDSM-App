@@ -67,7 +67,7 @@
 	\item \textbf{Precondizione:} l'utente autenticato, l'utente non autenticato o l'amministratore hanno caricato la prima pagina del servizio;
 	Viene visualizzato un messaggio di errore nel caso le informazioni di accesso inserite siano errate;
 	\item \textbf{Flusso principale degli eventi:}
-	\begin{enumerate}		
+	\begin{enumerate}
 		\item Login utente (UC1.1);
 		\item Visualizza informazione utente e statistiche (UC1.2);
 		\item Visualizzazione delle Recipe (UC1.3);
@@ -879,9 +879,10 @@
 		\item Visualizzazione elenco utenti (UC1.7.1);
 		\item Modifica permessi utente (UC1.7.2);
 		\item Eliminazione utente (UC1.7.3);
+		\item Conferma modifiche (UC1.7.4).
 	\end{enumerate}
 	\item \textbf{Postcondizione:} il sistema ha eseguito le operazioni richieste;
-	\item \textbf{Estensioni:} Eliminazione utente fallita (UC1.7.4).
+	\item \textbf{Estensioni:} Errore nella gestione degli utenti (UC1.7.5).
 \end{itemize}
 % FINE USE CASE %
 
@@ -891,8 +892,8 @@
 	\begin{itemize}
 		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'amministratore può visualizzare l'elenco di tutti gli utenti salvati nel sistema selezionando l'apposito pulsante nella sua Home Screen. L'elenco fornisce per ciascun membro l'ID utente, nome, cognome, data ultimo accesso e un pulsante per modificare questi parametri;
-	\item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema e si trova nella sua home screen;
+	\item \textbf{Descrizione:}t l'amministratore può visualizzare l'elenco di tutti gli utenti salvati nel sistema selezionando l'apposito pulsante nella sua home screen;
+	\item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema e si trova nella home screen;
 	\item \textbf{Scenario principale:} l'amministratore seleziona l'apposito pulsate per visualizzare la lista degli utenti registrati al sistema;
 	\item \textbf{Postcondizione:} l'amministratore ha visualizzato l'elenco degli utenti.
 \end{itemize}
@@ -904,68 +905,10 @@
 	\begin{itemize}
 		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'amministratore può cambiare i permessi di accesso al sistema ad un utente diverso da se stesso;
-	\item \textbf{Precondizione:} l'amministratore ha eseguito l'accesso;
-	\item \textbf{Flusso principale degli eventi:}
-	\begin{enumerate}
-		\item Apertura elenco utenti (UC1.7.2.1);
-		\item Apertura pannello modifica permessi(UC1.7.2.2);
-		\item Selezione nuovi permessi (UC1.7.2.3);
-		\item Conferma modifiche (UC1.7.2.4).
-	\end{enumerate}
+	\item \textbf{Descrizione:} l'amministratore può abilitare o disabilitare i permessi di amministratore ad un utente diverso da se stesso;
+	\item \textbf{Precondizione:} l'amministratore ha eseguito l'accesso ed ha visualizzato l'elenco degli utenti;
+	\item \textbf{Scenario principale:} l'amministratore preme l'apposito pulsante per modificare i permessi di un utente;
 	\item \textbf{Postcondizione:} l'amministratore ha modificato i permessi ad un utente;
-\end{itemize}
-% FINE USE CASE %
-
-\subsubsection{UC1.7.2.1: Apertura elenco utenti}
-\begin{itemize}
-	\item \textbf{Attori:}
-	\begin{itemize}
-		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
-	\end{itemize}
-	\item \textbf{Descrizione:} l'amministratore può visualizzare l'elenco degli utenti salvati nel sistema selezionando l'apposito pulsante nella sua home screen;
-	\item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema e si trova nella sua home screen;
-	\item \textbf{Scenario principale:} TO DO
-	\item \textbf{Postcondizione:} l'amministratore ha visualizzato l'elenco degli utenti.
-\end{itemize}
-% FINE USE CASE %
-
-\subsubsection{UC1.7.2.2: Apertura pannello modifica permessi}
-\begin{itemize}
-	\item \textbf{Attori:}
-	\begin{itemize}
-		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
-	\end{itemize}
-	\item \textbf{Descrizione:} l'amministratore può cambiare i permessi di accesso ad un utente premendo l'apposito pulsante nell'elenco utenti;
-	\item \textbf{Precondizione:} l'amministratore ha visualizzato l'elenco utenti;
-	\item \textbf{Scenario principale:} TO DO
-	\item \textbf{Postcondizione:} l'amministratore ha selezionato il pulsante di modifica permessi di un utente.
-\end{itemize}
-% FINE USE CASE %
-
-\subsubsection{UC1.7.2.3: Selezione nuovi permessi}
-\begin{itemize}
-	\item \textbf{Attori:}
-	\begin{itemize}
-		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
-	\end{itemize}
-	\item \textbf{Descrizione:} l'amministratore può cambiare i permessi per l'utente selezionato;
-	\item \textbf{Precondizione:} l'amministratore ha premuto il pulsante di modifica permessi utente;
-	\item \textbf{Scenario principale:} TO DO
-	\item \textbf{Postcondizione:} l'amministratore ha selezionato i nuovi permessi per l'utente.
-\end{itemize}
-% FINE USE CASE %
-
-\subsubsection{UC1.7.2.4: Conferma modifiche}
-\begin{itemize}
-	\item \textbf{Attori:}
-	\begin{itemize}
-		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
-	\end{itemize}
-	\item \textbf{Descrizione:} l'amministratore ha confermato le modifiche ai permessi dell'utente;
-	\item \textbf{Precondizione:} l'amministratore ha selezionato nuovi permessi per l'utente;
-	\item \textbf{Scenario principale:} TO DO
-	\item \textbf{Postcondizione:} l'amministratore ha confermato le modifiche e sono ora attive nel sistema.
 \end{itemize}
 % FINE USE CASE %
 
@@ -975,66 +918,36 @@
 	\begin{itemize}
 		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'amministratore può eliminare un utente e tutte le sue View dal sistema;
-	\item \textbf{Precondizione:} l'amministratore ha eseguito l'accesso;
-	\item \textbf{Flusso principale degli eventi:}
-	\begin{enumerate}
-		\item Apertura elenco utenti (UC1.7.3.1);
-		\item Selezione pulsante elimina (UC1.7.3.2);
-		\item Conferma eliminazione (UC1.7.3.3).
-	\end{enumerate}
-	\item \textbf{Postcondizione:} l'amministratore ha cancellato un utente e le sue View;
+	\item \textbf{Descrizione:} l'amministratore può eliminare un utente da sistema;
+	\item \textbf{Precondizione:} l'amministratore ha eseguito l'accesso ed ha visualizzato l'elenco degli utenti;
+	\item \textbf{Scenario principale:} l'amministratore preme l'apposito pulsate per la rimozione di un utente;
+	\item \textbf{Postcondizione:} l'amministratore ha cancellato un utente dal sistema;
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.7.3.1: Apertura elenco utenti}
+\subsubsection{UC1.7.4: Conferma modifiche}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
 		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'amministratore può visualizzare l'elenco di tutti gli utenti salvati nel sistema selezionando l'apposito pulsante nella sua home screen;
-	\item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema e si trova nella sua home screen;
-	\item \textbf{Scenario principale:} TO DO
-	\item \textbf{Postcondizione:} l'amministratore ha visualizzato l'elenco degli utenti.
+	\item \textbf{Descrizione:} l'amministratore deve confermare le modifiche apportate agli utenti;
+	\item \textbf{Precondizione:} l'amministratore ha effettuate delle modiche nella pagina di elenco utenti;
+	\item \textbf{Scenario principale:} l'amministratore preme l'apposito pulsate per la conferma delle modifiche;
+	\item \textbf{Postcondizione:} l'amministratore ha confermato le modifiche e sono ora attive nel sistema.
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.7.3.2: Selezione pulsante elimina}
+\subsubsection{UC1.7.5: Errore nella gestione degli utenti}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
 		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'amministratore può avviare la procedura di eliminazione selezionando il pulsante elimina utente;
-	\item \textbf{Precondizione:} l'amministratore ha visualizzato l'elenco degli utenti;
-	\item \textbf{Scenario principale:} TO DO
-	\item \textbf{Postcondizione:} l'amministratore ha visualizzato il pannello di conferma eliminazione.
-\end{itemize}
-
-\subsubsection{UC1.7.3.3: Conferma eliminazione}
-\begin{itemize}
-	\item \textbf{Attori:}
-	\begin{itemize}
-		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
-	\end{itemize}
-	\item \textbf{Descrizione:} l'amministratore deve confermare l'eliminazione dell'utente;
-	\item \textbf{Precondizione:} l'amministratore ha aperto il pannello di conferma eliminazione utente;
-	\item \textbf{Scenario principale:} TO DO
-	\item \textbf{Postcondizione:} l'utente selezionato è stato cancellato dal sistema insieme a tutte le sue View.
-\end{itemize}
-% FINE USE CASE %
-
-\subsubsection{UC1.7.4: Errore eliminazione utente}
-\begin{itemize}
-	\item \textbf{Attori:}
-	\begin{itemize}
-		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
-	\end{itemize}
-	\item \textbf{Descrizione:} l'amministratore può visualizzare un messaggio di errore se l'utente che vuole eliminare è attualmente autenticato nel sistema e sta eseguendo delle operazioni;
-	\item \textbf{Precondizione:} l'amministratore ha confermato l'eliminazione di un utente;
-	\item \textbf{Scenario principale:} TO DO
-	\item \textbf{Postcondizione:} l'amministratore ha visualizzato il messaggio di errore. Nessun utente o dato è stato eliminato dal sistema.
+	\item \textbf{Descrizione:} l’amministratore può visualizzare un messaggio di errore se l’utente che vuole eliminare è attualmente autenticato al sistema e sta eseguendo delle operazioni o in caso stia cercado di modificare i permessi di sè stesso;
+	\item \textbf{Precondizione:} l'amministratore ha confermato le modifiche apportate;
+	\item \textbf{Scenario principale:} l'amministratore visualizza un messaggio contentente gli errori rilevati dal sistema;
+	\item \textbf{Postcondizione:} l'amministratore ha preso atto degli errori effettuati.
 \end{itemize}
 % FINE USE CASE %
 
@@ -1367,20 +1280,22 @@
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.11.3: Fallimento aggiunta View nelle preferite}
-\begin{itemize}
-	\item \textbf{Attori:}
+\begin{comment}
+	\subsubsection{UC1.11.3: Fallimento aggiunta View nelle preferite}
 	\begin{itemize}
-		\item utente autenticato: utente autenticato che ha accesso al servizio;
+		\item \textbf{Attori:}
+		\begin{itemize}
+			\item utente autenticato: utente autenticato che ha accesso al servizio;
+		\end{itemize}
+		\item \textbf{Descrizione:} l'utente non riesce a marcare una View come preferita in quanto il sistema ha avuto dei problemi;
+		\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per fare diventare la View una delle preferite;
+		\item \textbf{Scenario principale:} l'utente riceve una segnalazione che la View non è stata aggiunta tra quelle preferite;
+		\item \textbf{Postcondizione:} l'utente ha ricevuto le informazioni legate all'impossibilità di aggiungere tale View ai preferiti.
 	\end{itemize}
-	\item \textbf{Descrizione:} l'utente non riesce a marcare una View come preferita in quanto il sistema ha avuto dei problemi;
-	\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per fare diventare la View una delle preferite;
-	\item \textbf{Scenario principale:} l'utente riceve una segnalazione che la View non è stata aggiunta tra quelle preferite;
-	\item \textbf{Postcondizione:} l'utente ha ricevuto le informazioni legate all'impossibilità di aggiungere tale View ai preferiti.
-\end{itemize}
-% FINE USE CASE %
+	% FINE USE CASE %
+\end{comment}
 
-\subsubsection{UC1.11.4: Rimozione View dalle preferite}
+\subsubsection{UC1.11.3: Rimozione View dalle preferite}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -1393,18 +1308,33 @@
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.11.5: Fallimento rimozione View dalle preferite}
+\subsubsection{UC1.11.4: Elenco View preferite vuoto}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'utente non riesce a rimuovere una View dalle preferite in quanto il sistema ha avuto dei problemi;
-	\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per rimuovere la View da quelle preferite;
-	\item \textbf{Scenario principale:} l'utente riceve una segnalazione che la View non è stata rimossa da quelle preferite;
-	\item \textbf{Postcondizione:} l'utente ha ricevuto le informazioni legate all'impossibilità di rimuovere tale View dai preferiti.
+	\item \textbf{Descrizione:} l'utente visualizza carica la pagina dei preferiti ma nessuna View risulta marcata come preferita;
+	\item \textbf{Precondizione:} l'utente si trova nella pagina dei preferiti e non ha agginto nessuna View ai preferiti;
+	\item \textbf{Scenario principale:} l'utente visualizza un messaggio il quale avverte che nessuna View è stata aggiunta ai preferiti;
+	\item \textbf{Postcondizione:} l'utente riceve conferma del fatto che l'elenco delle View aggiunte ai preferiti è vuoto.
 \end{itemize}
 % FINE USE CASE %
+
+\begin{comment}
+	\subsubsection{UC1.11.5: Fallimento rimozione View dalle preferite}
+	\begin{itemize}
+		\item \textbf{Attori:}
+		\begin{itemize}
+			\item utente autenticato: utente autenticato che ha accesso al servizio;
+		\end{itemize}
+		\item \textbf{Descrizione:} l'utente non riesce a rimuovere una View dalle preferite in quanto il sistema ha avuto dei problemi;
+		\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per rimuovere la View da quelle preferite;
+		\item \textbf{Scenario principale:} l'utente riceve una segnalazione che la View non è stata rimossa da quelle preferite;
+		\item \textbf{Postcondizione:} l'utente ha ricevuto le informazioni legate all'impossibilità di rimuovere tale View dai preferiti.
+	\end{itemize}
+	% FINE USE CASE %
+\end{comment}
 
 \pagebreak
 
@@ -1457,11 +1387,11 @@
 		\item utente autenticato: utente che desidera ottenere un token di accesso;
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente può ottenere un token di accesso per i servizi REST inviando l'apposita richiesta;
-	\item \textbf{Precondizione:} l'utente desidera avere un nuovo token di accesso;
+	\item \textbf{Precondizione:} l'utente desidera avere un nuovo token di accessoDIA
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Invio richiesta di un token (UC2.1.1);
-		\item Ricezione token di accesso (UC2.1.3);
+		\item Ricezione token di accesso (UC2.1.2);
 	\end{enumerate}
 	\item \textbf{Postcondizione:} l'utente ha ottenuto un token di accesso;
 	\item \textbf{Estensioni:} Fallimento ricezione token (UC2.1.2).
@@ -1652,6 +1582,5 @@
 	\item \textbf{Postcondizione:} l'utente ha ottenuto l'elenco dei servizi REST offerti.
 \end{itemize}
 % FINE USE CASE %
-
 
 \pagebreak
