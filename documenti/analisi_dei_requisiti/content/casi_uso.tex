@@ -710,8 +710,8 @@
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'utente può cambiare la propria password selezionando il pulsante di cambio password nella sua home screen;
-	\item \textbf{Precondizione:} l'utente dispone di una password di accesso valida, risulta autenticato al servizio e si trova nella sua home screen;
+	\item \textbf{Descrizione:} l'utente può cambiare la propria password selezionando il pulsante di cambio password nel pannello utente;
+	\item \textbf{Precondizione:} l'utente dispone di una password di accesso valida, risulta autenticato al servizio e si trova nel pannello utente;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Inserimento nuova password (UC1.5.1);
@@ -721,7 +721,6 @@
 	\end{enumerate}
 	\item \textbf{Postcondizione:} la nuova password per l'utente è attiva, la vecchia password non è più valida;
 	\item \textbf{Estensioni:} Vecchia password inserita non valida (UC1.5.5).
-
 \end{itemize}
 % FINE USE CASE %
 
@@ -733,7 +732,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente può inserire la nuova password nel pannello apposito;
 	\item \textbf{Precondizione:} l'utente ha selezionato il pulsante di cambio password nella sua home screen;
-	\item \textbf{Scenario principale:} TO DO
+	\item \textbf{Scenario principale:} l'utente inserisce la nuova password nell'apposito campo;
 	\item \textbf{Postcondizione:} l'utente ha inserito la nuova password.
 \end{itemize}
 
@@ -745,7 +744,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente deve inserire nuovamente la nuova password per verificare di non aver fatto errori di battitura;
 	\item \textbf{Precondizione:} l'utente ha inserito la nuova password;
-	\item \textbf{Scenario principale:} TO DO
+	\item \textbf{Scenario principale:} l'utente inserisce la password di corferma nell'apposito campo;
 	\item \textbf{Postcondizione:} l'utente ha verificato la correttezza della nuova password.
 \end{itemize}
 % FINE USE CASE %
@@ -758,7 +757,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente deve inserire la vecchia password per completare il cambio password;
 	\item \textbf{Precondizione:} l'utente ha inserito la nuova password due volte negli appositi campi;
-	\item \textbf{Scenario principale:} TO DO
+	\item \textbf{Scenario principale:} l'utente insireisce la vecchia password nell'apposito campo;
 	\item \textbf{Postcondizione:} l'utente ha inserito la vecchia password e può confermare la nuova.
 \end{itemize}
 % FINE USE CASE %
@@ -771,7 +770,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente deve confermare di voler sostituire la vecchia password di accesso con quella nuova selezionando il pulsante di conferma;
 	\item \textbf{Precondizione:} l'utente ha inserito due volte la nuova password ed una la vecchia negli appositi campi;
-	\item \textbf{Scenario principale:} TO DO
+	\item \textbf{Scenario principale:} l'utente preme il pulsante di conferma cambio password;
 	\item \textbf{Postcondizione:} l'utente ha confermato l'operazione e la nuova password è ora attiva.
 \end{itemize}
 % FINE USE CASE %
@@ -784,8 +783,8 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente può aver inserito una password che non soddisfa i vincoli di sistema specificati nel pannello di cambio password;
 	\item \textbf{Precondizione:} l'utente ha selezionato il pulsante di conferma del cambio password;
-	\item \textbf{Scenario principale:} TO DO
-	\item \textbf{Postcondizione:} l'utente ha visualizzato un messaggio di errore con i dettagli dei vincoli non soddisfatti.
+	\item \textbf{Scenario principale:} l'utente visualizza un messaggio di errore con i dettagli dei vincoli non soddisfatti;
+	\item \textbf{Postcondizione:} l'utente ha preso atto che i dati inseriti non sono validi e per quali motivazioni.
 \end{itemize}
 % FINE USE CASE %
 
@@ -823,7 +822,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente può effettuare il logout selezionando l'apposito pulsante nella sua home screen;
 	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso al servizio e si trova nella home screen;
-	\item \textbf{Scenario principale:} TO DO
+	\item \textbf{Scenario principale:} l'utente preme l'apposito pulsante di logout;
 	\item \textbf{Postcondizione:} l'utente visualizza il pannello di conferma logout.
 \end{itemize}
 % FINE USE CASE %
@@ -836,8 +835,8 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} prima di terminare la sessione di lavoro l'utente deve confermare la volontà di farlo selezionando il pulsante di conferma sul pannello di logout;
 	\item \textbf{Precondizione:} l'utente ha selezionato il pulsante di logout nella home screen;
-	\item \textbf{Scenario principale:} TO DO
-	\item \textbf{Postcondizione:} l'utente ha confermato il logout e la sessione è terminata. Viene visualizzata la schermata di login.
+	\item \textbf{Scenario principale:} l'utente preme l'apposito pulsante per la conferma del logout;
+	\item \textbf{Postcondizione:} l'utente ha confermato il logout e la sessione è terminata.
 \end{itemize}
 % FINE USE CASE %
 
@@ -856,7 +855,7 @@
 	\begin{itemize}
 		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'amministratore può gestire i permessi di accesso di un altro utente. Può anche eliminare definitivamente un utente e tutte le sue View;
+	\item \textbf{Descrizione:} l'amministratore può gestire i permessi di accesso di un altro utente o eliminarlo definitivamente del sistema;
 	\item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
@@ -875,9 +874,9 @@
 	\begin{itemize}
 		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'amministratore può visualizzare l'elenco di tutti gli utenti salvati nel sistema selezionando l'apposito pulsante nella sua Home Screen; L'elenco fornisce per ciascun membro l'ID utente, nome, cognome, data ultimo accesso e un pulsante per modificare questi parametri;
+	\item \textbf{Descrizione:} l'amministratore può visualizzare l'elenco di tutti gli utenti salvati nel sistema selezionando l'apposito pulsante nella sua Home Screen. L'elenco fornisce per ciascun membro l'ID utente, nome, cognome, data ultimo accesso e un pulsante per modificare questi parametri;
 	\item \textbf{Precondizione:} l'amministratore ha effettuato l'accesso al sistema e si trova nella sua home screen;
-	\item \textbf{Scenario principale:} TO DO
+	\item \textbf{Scenario principale:} l'amministratore seleziona l'apposito pulsate per visualizzare la lista degli utenti registrati al sistema;
 	\item \textbf{Postcondizione:} l'amministratore ha visualizzato l'elenco degli utenti.
 \end{itemize}
 % FINE USE CASE %
@@ -1060,9 +1059,9 @@
 	\begin{itemize}
 		\item utente non autenticato: utente non ancora noto al sistema che accede al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'utente deve inserire il proprio nome utente per essere riconoscibile univocamente all'interno del sistema e per poter gestire le proprie View;
+	\item \textbf{Descrizione:} l'utente deve inserire il proprio nome utente in modo da essere riconoscibile univocamente all'interno del sistema e per poter gestire i relativi dati associati;
 	\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire l'username per il nuovo account;
-	\item \textbf{Scenario principale:} TO DO
+	\item \textbf{Scenario principale:} l'utente inserisce lo usename nell'apposito campo;
 	\item \textbf{Postcondizione:} l'utente ha inserito il proprio username.
 \end{itemize}
 % FINE USE CASE %
@@ -1075,7 +1074,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente deve inserire la mail che vuole associare alle username appena inserito;
 	\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire la mail per il nuovo account;
-	\item \textbf{Scenario principale:} TO DO
+	\item \textbf{Scenario principale:} l'utente inserisce il proprio indirizzo mail nell'apposito campo;
 	\item \textbf{Postcondizione:} l'utente ha inserito il proprio indirizzo mail.
 \end{itemize}
 % FINE USE CASE %
@@ -1088,8 +1087,21 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente deve inserire la password che vuole associare ai dati precedentemente inseriti;
 	\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire la password per il nuovo account;
-	\item \textbf{Scenario principale:} TO DO
+	\item \textbf{Scenario principale:} l'utente ha inserito la password nell'apposito campo;
 	\item \textbf{Postcondizione:} l'utente ha inserito la password.
+\end{itemize}
+% FINE USE CASE %
+
+\subsubsection{UC1.8.3: Inserimento password di conferma}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente non autenticato: utente non ancora noto al sistema che accede al servizio;
+	\end{itemize}
+	\item \textbf{Descrizione:} l'utente deve inserire la password di conferma uguale a quella inserita precedentamente;
+	\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire la password una seconda volta;
+	\item \textbf{Scenario principale:} l'utente ha inserito la password di conferma nell'apposito campo;
+	\item \textbf{Postcondizione:} l'utente ha inserito la password di conferma.
 \end{itemize}
 % FINE USE CASE %
 
@@ -1101,9 +1113,8 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente deve poter confermare i dati inseriti durante la registrazione;
 	\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile confermare i dati inseriti in precedenza per la creazione di un nuovo account;
-	\item \textbf{Scenario principale:} TO DO
-	\item \textbf{Postcondizione:} l'utente ha confermato di voler creare un nuovo account all'interno
-	del sistema.
+	\item \textbf{Scenario principale:} l'utente seleziona l'appostito pulsante di conferma dei dati inseriti;
+	\item \textbf{Postcondizione:} l'utente ha confermato di voler creare un nuovo account all'interno del sistema.
 \end{itemize}
 % FINE USE CASE %
 
@@ -1115,8 +1126,8 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} se vengono inseriti dei dati non conformi ai vincoli di sistema indicati durante la registrazione viene visualizzata una schermata di errore;
 	\item \textbf{Precondizione:} i dati inseriti non rispettano uno o più vincoli di sistema;
-	\item \textbf{Scenario principale:} TO DO
-	\item \textbf{Postcondizione:} l'utente ha visualizzato l'errore relativo ai dati inseriti.
+	\item \textbf{Scenario principale:} l'utente visualizza un messaggio di errore che indica gli errori riscontrati nei dati inseriti;
+	\item \textbf{Postcondizione:} l'utente ha preso atto degli errori effettuati.
 \end{itemize}
 % FINE USE CASE %
 
@@ -1154,8 +1165,8 @@
 		\item utente autenticato: utente che ha effettuato l'accesso nell'applicazione;
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente può accedere al pannello per la creazione di una richiesta di aggiunta Recipe da inviare agli amministratori, che valuteranno se accettarla o meno;
-	\item \textbf{Precondizione:} l'utente ha selezionato il pulsante di creazione nuova richiesta;
-	\item \textbf{Scenario principale:} TO DO
+	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso al sistema e si trova nella home screen;
+	\item \textbf{Scenario principale:} l'utente seleziona l'apposito pulsante di richiesta View;
 	\item \textbf{Postcondizione:} l'utente ha visualizzato il pannello per effettuare una richiesta di inserimento di una nuova Recipe.
 
 \end{itemize}
@@ -1167,10 +1178,10 @@
 	\begin{itemize}
 		\item utente autenticato: utente che ha effettuato l'accesso nell'applicazione;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'utente, una volta entrato nell'apposito pannello, per andare poi ad inviare una richiesta per una nuova Recipe, deve compilare tutti i campi richiesti dal form;
+	\item \textbf{Descrizione:} l'utente, una volta entrato nell'apposito pannello, per completare una richiesta per una nuova Recipe, deve compilare tutti i campi richiesti dal form;
 	\item \textbf{Precondizione:} l'utente ha visualizzato il pannello per l'inserimento dei dati richiesti;
-	\item \textbf{Scenario principale:} TO DO
-	\item \textbf{Postcondizione:} l'utente ha inserito tutti i parametri richiesti dal pannello;
+	\item \textbf{Scenario principale:} l'utente inserisce i dati necessari ad inviare la richiesta;
+	\item \textbf{Postcondizione:} l'utente ha inserito tutti i parametri richiesti dal pannello.
 \end{itemize}
 % FINE USE CASE %
 
@@ -1181,9 +1192,9 @@
 		\item utente autenticato: utente che ha effettuato l'accesso nell'applicazione;
 	\end{itemize}
 	\item \textbf{Descrizione:} una volta che l'utente ha compilato tutti i campi richiesti dal pannello, può inviare la richiesta in maniera che venga valutata;
-	\item \textbf{Precondizione:} l'utente ha inserito tutti i parametri richiesti e ha premuto sull'apposito bottone per l'invio;
-	\item \textbf{Scenario principale:} TO DO
-	\item \textbf{Postcondizione:} l'utente visualizza la conferma dell'avvenuto invio della richiesta;
+	\item \textbf{Precondizione:} l'utente ha inserito tutti i parametri richiesti;
+	\item \textbf{Scenario principale:} l'utente preme sull'apposito pulsante per inviare la richiesta;
+	\item \textbf{Postcondizione:} l'utente visualizza la conferma dell'avvenuto invio della richiesta.
 \end{itemize}
 % FINE USE CASE %
 
@@ -1195,8 +1206,8 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} la creazione di una richiesta può fallire qualora i dati richiesti da inserire non fossero conformi alle attese;
 	\item \textbf{Precondizione:} l'utente ha inserito tutti i parametri richiesti e ha premuto sull'apposito bottone per l'invio;
-	\item \textbf{Scenario principale:} TO DO
-	\item \textbf{Postcondizione:} l'utente ha visualizzato un errore che indica che indica quali parametri inseriti non sono corretti;
+	\item \textbf{Scenario principale:} l'utente visualizza un errore che indica che indica quali parametri inseriti non sono corretti;
+	\item \textbf{Postcondizione:} l'utente ha preso atto degli errori effettuati;
 \end{itemize}
 % FINE USE CASE %
 
@@ -1237,8 +1248,8 @@
 		\end{itemize}
 		\item \textbf{Descrizione:} l'amministratore può visualizzare un elenco delle richieste per delle nuove Recipe che sono state inviate dagli utenti normali e non ancore ``chiuse'';
 		\item \textbf{Precondizione:} devono essere presenti delle richieste di nuove Recipe. L'amministratore desidera visualizzare le richieste ricevute;
-		\item \textbf{Scenario principale:} TO DO
-		\item \textbf{Postcondizione:} l'amministratore ha visualizzato l'elenco delle richieste di nuove Recipe;
+		\item \textbf{Scenario principale:} l'amministratore selezione l'apposito pulsante per visualizzare le Recipe;
+		\item \textbf{Postcondizione:} l'amministratore ha visualizzato l'elenco delle richieste di nuove Recipe.
 	\end{itemize}
 % FINE USE CASE %
 
@@ -1249,9 +1260,9 @@
 			\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 		\end{itemize}
 		\item \textbf{Descrizione:} l'amministratore può visualizzare la richiesta che ha selezionato per controllarne i parametri;
-		\item \textbf{Precondizione:} l'amministratore ha selezionato la visualizzazione completa dei dettagli di una richiesta;
-		\item \textbf{Scenario principale:} TO DO
-		\item \textbf{Postcondizione:} l'amministratore ha visualizzato i dettagli della richiesta;
+		\item \textbf{Precondizione:} l'amministratore ha visualizzato l'elenco delle richieste;
+		\item \textbf{Scenario principale:} l'amministratore ha selezionato l'apposito pulsante per la visualizzazione dei dettagli della richiesta;
+		\item \textbf{Postcondizione:} l'amministratore ha visualizzato i dettagli della richiesta.
 	\end{itemize}
 % FINE USE CASE %
 
@@ -1262,9 +1273,9 @@
 			\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 		\end{itemize}
 		\item \textbf{Descrizione:} l'amministratore una volta controllata la bontà della Recipe richiesta potrà accettarla in modo che venga inserita nel sistema;
-		\item \textbf{Precondizione:} l'amministratore decide di inserire la Recipe nel sistema;
-		\item \textbf{Scenario principale:} TO DO
-		\item \textbf{Postcondizione:} l'amministratore ha accettato la richiesta ed è stata inserita nel sistema;
+		\item \textbf{Precondizione:} l'amministratore sta visualizzando in dettaglio la Recipe che decide di inserire nel sistema;
+		\item \textbf{Scenario principale:} l'amministratore preme l'apposito pulsante per confermare l'accettazione della Recipe;
+		\item \textbf{Postcondizione:} l'amministratore visualizza un messaggio di conferma inserimento e la Recipe è stata inserita nel sistema.
 	\end{itemize}
 % FINE USE CASE %
 
@@ -1275,9 +1286,8 @@
 			\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 		\end{itemize}
 		\item \textbf{Descrizione:} l'amministratore una volta controllata la richiesta per una nuova Recipe potrà decidere di rifiutarla qualora non ritenesse opportuno il suo inserimento nel sistema;
-		\item \textbf{Precondizione:} l'amministratore decide di rifiutare la Recipe la richiesta;
-		\item \textbf{Scenario principale:} TO DO
-		\item \textbf{Postcondizione:} l'amministratore ha rifiutato la richiesta;
+		\item \textbf{Precondizione:} l'amministratore seleziona l'apposito pulsante per respingere la richiesta di inserimento Recipe;
+		\item \textbf{Postcondizione:} l'amministratore visualizza un messaggio di conferma e ha può immettere una motivazione da inviare all'utente;
 	\end{itemize}
 % FINE USE CASE %
 
@@ -1322,7 +1332,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente vuole vedere e consultare tutte le View che ha già marcato come preferite;
 	\item \textbf{Precondizione:} l'utente deve avere già marcato come preferita qualche View;
-	\item \textbf{Scenario principale:} TO DO
+	\item \textbf{Scenario principale:} l'utente seleziona l'apposita voce del menù per accedere ai preferiti;
 	\item \textbf{Postcondizione:} l'utente visualizza le View marcate come preferite.
 \end{itemize}
 % FINE USE CASE %
@@ -1334,8 +1344,8 @@
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente desidera marcare una View come preferita. Per farlo deve premere su un apposito pulsante vicino alla View in questione;
-	\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per fare diventare la View una delle preferite;
-	\item \textbf{Scenario principale:} TO DO
+	\item \textbf{Precondizione:} l'utente sta visualizzando una o più View nella pagina dedicata;
+	\item \textbf{Scenario principale:} l'utente preme sull'apposito pulsante per fare diventare la View una delle preferite;
 	\item \textbf{Postcondizione:} l'utente riceve conferma del fatto che la View è entrata a fare parte di quelle preferite.
 \end{itemize}
 % FINE USE CASE %
@@ -1348,8 +1358,8 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente non riesce a marcare una View come preferita in quanto il sistema ha avuto dei problemi;
 	\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per fare diventare la View una delle preferite;
-	\item \textbf{Scenario principale:} TO DO
-	\item \textbf{Postcondizione:} l'utente riceve una segnalazione che la View non è stata aggiunta tra quelle preferite.
+	\item \textbf{Scenario principale:} l'utente riceve una segnalazione che la View non è stata aggiunta tra quelle preferite;
+	\item \textbf{Postcondizione:} l'utente ha ricevuto le informazioni legate all'impossibilità di aggiungere tale View ai preferiti.
 \end{itemize}
 % FINE USE CASE %
 
@@ -1360,8 +1370,8 @@
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente desidera rimuovere una View dalle preferite. Per farlo deve premere su un apposito pulsante vicino alla View in questione;
-	\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per fare rimuovere la View dalle preferite;
-	\item \textbf{Scenario principale:} TO DO
+	\item \textbf{Precondizione:} l'utente visualizza l'elenco delle View aggiunte ai preferiti;
+	\item \textbf{Scenario principale:} l'utente preme l'apposito pulsante per rimuovere una View dai preferiti;
 	\item \textbf{Postcondizione:} l'utente riceve conferma del fatto che la View è stata rimossa da quelle preferite.
 \end{itemize}
 % FINE USE CASE %
@@ -1374,8 +1384,8 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente non riesce a rimuovere una View dalle preferite in quanto il sistema ha avuto dei problemi;
 	\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per rimuovere la View da quelle preferite;
-	\item \textbf{Scenario principale:} TO DO
-	\item \textbf{Postcondizione:} l'utente riceve una segnalazione che la View non è stata rimossa da quelle preferite.
+	\item \textbf{Scenario principale:} l'utente riceve una segnalazione che la View non è stata rimossa da quelle preferite;
+	\item \textbf{Postcondizione:} l'utente ha ricevuto le informazioni legate all'impossibilità di rimuovere tale View dai preferiti.
 \end{itemize}
 % FINE USE CASE %
 
@@ -1448,8 +1458,8 @@
 		\item utente autenticato: utente che desidera ottenere un token di accesso;
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente invia la richiesta premendo l'apposito bottone per la generazione di un token;
-	\item \textbf{Precondizione:} l'utente si è registrato presso il sistema e non ha ancora associato un token d'accesso;
-	\item \textbf{Scenario principale:} TO DO
+	\item \textbf{Precondizione:} l'utente si è registrato presso il sistema e non ha ancora associato un token d'accesso oppure ne possiede un token invalidato;
+	\item \textbf{Scenario principale:} l'utente preme l'apposito pulsante per effettuare la richiesta di un token d'accesso;
 	\item \textbf{Postcondizione:} il sistema riceve la richiesta inviata dall'utente.
 \end{itemize}
 % FINE USE CASE %
@@ -1462,7 +1472,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} viene ritornato un errore che indica che l'autenticazione non è andata buon fine;
 	\item \textbf{Precondizione:} il sistema ha ricevuto una richiesta di token contenente uno username non riconosciuto dal sistema o una password non corrispondente a quella associata allo username inserito;
-	\item \textbf{Scenario principale:} TO DO
+	\item \textbf{Scenario principale:} l'utente visualizza un messaggio contenente gli errori riscontrati;
 	\item \textbf{Postcondizione:} l'utente ha preso atto del fallimento.
 \end{itemize}
 % FINE USE CASE %
@@ -1475,8 +1485,8 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} Il sistema ritorna un token di accesso per l'utente che l'ha richiesto;
 	\item \textbf{Precondizione:} il sistema aveva ricevuto una richiesta da un utente registrato per fornire un token di accesso;
-	\item \textbf{Scenario principale:} TO DO
-	\item \textbf{Postcondizione:} l'utente ha ottenuto un token di accesso valido.
+	\item \textbf{Scenario principale:} l'utente visualizza il token ricevuto;
+	\item \textbf{Postcondizione:} l'utente ha ottenuto un token di accesso valido e lo ha visualizzato.
 \end{itemize}
 % FINE USE CASE %
 
@@ -1515,7 +1525,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente invia una richiesta avente come parametro il token di accesso;
 	\item \textbf{Precondizione:} l'utente possiede un token di accesso valido;
-	\item \textbf{Scenario principale:} TO DO
+	\item \textbf{Scenario principale:} l'utente effettua la richiesta tramite il token ricevuto;
 	\item \textbf{Postcondizione:} il sistema riceve la richiesta inviata.
 \end{itemize}
 % FINE USE CASE %
@@ -1528,7 +1538,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} il sistema ritorna un errore riportando se il token è non valido o se è stato commesso un errore di sintassi;
 	\item \textbf{Precondizione:} l'utente ha inviato una richiesta usando un token non valido o con un errore di sintassi;
-	\item \textbf{Scenario principale:} TO DO
+	\item \textbf{Scenario principale:} l'utente visualizza un messaggio contenente gli errori riscontrati nella richiesta;
 	\item \textbf{Postcondizione:} l'utente ha preso atto del fallimento della richiesta.
 \end{itemize}
 % FINE USE CASE %
@@ -1540,8 +1550,8 @@
 		\item utente con Token di accesso: utente che ha ricevuto dal sistema le credenziali per accedere al servizio;
 	\end{itemize}
 	\item \textbf{Descrizione:} vengono ritornati all'utente i dati che aveva richiesto;
-	\item \textbf{Precondizione:} l'utente aveva inviato una richiesta al sistema;
-	\item \textbf{Scenario principale:} TO DO
+	\item \textbf{Precondizione:} l'utente aveva inviato una richiesta corretta al sistema;
+	\item \textbf{Scenario principale:} l'utente riceve i dati richiesti;
 	\item \textbf{Postcondizione:} l'utente ha ricevuto i dati richiesti.
 \end{itemize}
 % FINE USE CASE %
@@ -1582,7 +1592,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente, premendo su un apposito bottone, invia una richiesta che desidera venga disabilitato il token associato al suo account;
 	\item \textbf{Precondizione:} il token di cui viene richiesta la disabilitazione è valido;
-	\item \textbf{Scenario principale:} TO DO
+	\item \textbf{Scenario principale:} l'utente preme l'apposito pulsante per la richiesta di invalidamento del token;
 	\item \textbf{Postcondizione:} il token di accesso non è più valido.
 \end{itemize}
 % FINE USE CASE %
@@ -1595,7 +1605,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} il sistema avvisa che qualcosa è andato storto durante la disabilitazione del token;
 	\item \textbf{Precondizione:} l'utente ha chiesto l'invalidamento di un token;
-	\item \textbf{Scenario principale:} TO DO
+	\item \textbf{Scenario principale:} l'utente visualizza un messaggio che riporta l'errore riscontrato;
 	\item \textbf{Postcondizione:} l'utente ha preso atto del fatto che l'invalidamento del token non ha avuto successo.
 \end{itemize}
 % FINE USE CASE %
@@ -1608,7 +1618,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} il sistema ritorna una conferma dell'avvenuta invalidazione del token;
 	\item \textbf{Precondizione:} l'utente ha chiesto l'invalidamento di un token valido;
-	\item \textbf{Scenario principale:} TO DO
+	\item \textbf{Scenario principale:} l'utente visualiizza un messaggio che conferma l'invalidamento del token;
 	\item \textbf{Postcondizione:} l'utente ha preso atto del fatto che il token è stato invalidato.
 \end{itemize}
 % FINE USE CASE %
@@ -1620,9 +1630,9 @@
 		\item utente: utente che desidera avere le informazione riguardanti i servizi REST pubblici offerti dal sistema;
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente può visualizzare l'elenco dei vari servizi REST offerti dal sistema, in modo da poterli utilizzare a sua volta per scopi personali;
-	\item \textbf{Precondizione:} l'utente desidera visualizzare l'elenco dei servizi REST offerti;
-	\item \textbf{Scenario principale:} TO DO
-	\item \textbf{Postcondizione:} l'utente ha ottenuto l'elenco dei servizi REST;
+	\item \textbf{Precondizione:} l'utente è autenticato al sistema e si trova nella home page;
+	\item \textbf{Scenario principale:} l'utente ha selezionato l'apposita voce che porta alla pagina di visualizzazione dei servizi REST offerti;
+	\item \textbf{Postcondizione:} l'utente ha ottenuto l'elenco dei servizi REST offerti.
 \end{itemize}
 % FINE USE CASE %
 
