@@ -19,18 +19,69 @@
 \label{sec:descrizione_architettura}
 
 \subsection{Metodo e formalismo di specifica}
+La descrizione dell'architettura dell'applicazione viene fornita con un approccio di tipo top-down: si descrive l'architettura partendo dal generale e si analizzano via via in dettaglio tutti i moduli che le compongono. 
+Vengono forniti degli esempi d'utilizzo dei design pattern scelti.
+I diagrammi delle componenti, delle classi e i diagrammi di attività rispettano il formalismo di UML
+TODO
 
+Le classi i, framework usati dall'applicazione e le librerie utilizzate verranno marcate con colori diversi per facilitare la distinzione durante la consultazione.
+
+L’architettura generale non tratta l’intero insieme delle sottoclassi del sistema. Di
+conseguenza viene specificato lo scopo di una gerarchia e vengono individuate le relazioni con
+le varie componenti del sistema. 
 
 
 \subsection{Architettura generale}
+L’architettura dell'applicazione segue il design pattern Three-Tier. Viene quindi suddivisa
+in tre livelli:
+\begin{enumerate}
+\item Vlient Tier;
+\item Server Tier;
+\item DataBase Tier.
+\end{enumerate}
+
+Di seguito viene proposto un diagramma rappresentante le relazioni tra i vari livelli.
+Vengono individuate le componenti che permettono ai vari livelli di interagire senza dover
+esporre la struttura interna degli stessi.
+
+DIAGRAMMA TODO
+
+Come indicato nel diagramma, il livello del client interagisce con il server tramite 
+TODO
+Il client a sua volta può
+TODO
+Il database Tier fornisce supporto sia ai Miner per la memorizzazione di tutti i risultati recuperati dalle interrogazioni locali sia al Processor per memorizzare le configurazioni del programma e lo stato di lavoro dei Miner ad esso collegati.
+Il Processor ha piena facoltà di accedere a tutti i dati memorizzati dai Miner per poter rispondere alle richieste REST ricevute tramite gli EndPoints che espone.
 
 
+\subsubsection{Architettura Client Tier}
+Per il livello client è stato adottato il design pattern MVC. Questo livello implementa l'interfaccia grafica con cui utenti autenticati e amministratori possono interagire con il sistema in modo completo. Il Diagramma seguente illustra l'interazione delle varie parti:
 
-\subsubsection{Architettura Processor}
+DIAGRAMMA TODO
 
-\subsubsection{Architettura Miner}
 
-\subsubsection{Architettura WebGUI}
+Gli utenti invocheranno determinate azioni utilizzando i pulsanti forniti dall'interfaccia e il sistema risponderà fornendo pagine di configurazione interattive oppure visualizzando una serie di grafici che verranno aggiornanti costantemente utilizzando i servizi REST forniti dall'applicazione tramite il modulo Processor. In dettaglio:
+
+\begin{itemize}
+\item Model: TODO
+\item View: 
+\item Controller: 
+\end{itemize}
+
+\subsubsection{Architettura Server Tier}
+Il livello server è composto da un modello e da una parte di comunicazione rappresentata dagli Endpoints forniti dalla piattaforma Google CLound Engine.
+
+DIAGRAMMA TODO
+
+La rappresentazione evidenzia il passaggio di dati e richieste che possono avvenire tra questo livello e gli altri presenti nell'applicazione.
+Una volta che il server riceve una richiesta REST, si occuperà di analizzarla ed elaborarla.
+Viene di conseguenza individuato l’oggetto o gli oggetti ai quali si riferisce e vengono estrapolati i dati effettivi della richiesta con una chiamata al livello Database. Questo individua la giusta operazione da eseguire, la quale analizzerà i dati associati alla richiesta ed li comunicherà al livello server. Viene infine fornita una risposta che verrà ritrasmessa all'oggetto che ha generato la richiesta REST.
+
+\subsection{Protocollo di comunicazione Client-Server}
+TODO
+
+\subsubsection{Architettura Database Tier}
+Il livello database è gestito dal sistema DatatStore integrato nella Google Cloud Platform che fornisce la funzionalità di persistenza dei dati. Il livello server può generare richieste di accesso ai dati utilizzando il protocollo di comunicazione predefinito della piattaforma.
 
 
 % section descrizione_architettura (end)
