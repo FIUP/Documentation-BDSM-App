@@ -215,7 +215,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		ROF5.2.1.3  &  Il sistema, per ogni metrica dell'elenco, deve fornire il pulsante per accedere alle visualizzazioni delle View presenti per quella metrica &  UC1.3.1 \newline Interno \\
 		\hline
 
-		ROF5.3  & Premendo sul pulsante del RDF5.2.1.3, da dentro la categoria Facebook, vengono fornite tutte le View predisposte dal sistema per avere delle statistiche & UC1.3.1.1 \newline Interno \\
+		ROF5.3  & Premendo sul pulsante del ROF5.2.1.3, da dentro la categoria Facebook, vengono fornite tutte le View predisposte dal sistema per avere delle statistiche & UC1.3.1.1 \newline Interno \\
 		\hline
 		ROF5.3.1  & Le View offerte per la categoria di Facebook possono mostrare grafici di diversi tipi: Line Chart, Bar Chart, Pie Chart e Map Chart &  UC1.3.1.1 \newline Interno \\
 		\hline
@@ -235,7 +235,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 
 
-		ROF5.4  &  Premendo sul pulsante del RDF5.2.1.3, da dentro la categoria Twitter, vengono fornite tutte le View predisposte dal sistema per avere delle statistiche &  UC1.3.1.2 \newline Interno \\
+		ROF5.4  &  Premendo sul pulsante del ROF5.2.1.3, da dentro la categoria Twitter, vengono fornite tutte le View predisposte dal sistema per avere delle statistiche &  UC1.3.1.2 \newline Interno \\
 		\hline
 		ROF5.4.1  & Le View offerte per la categoria di Twitter possono mostrare grafici di diversi tipi: Line Chart, Bar Chart, Pie Chart e Map Chart  &  UC1.3.1.2 \newline Interno \\
 		\hline
@@ -251,25 +251,46 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 
 
-		ROF5.5  &  Premendo sul pulsante del RDF5.2.1.3, da dentro la categoria Instagram, vengono fornite tutte le View predisposte dal sistema per avere delle statistiche &  UC1.3.1.3 \newline Interno \\
+		ROF5.5  &  Premendo sul pulsante del ROF5.2.1.3, da dentro la categoria Instagram, vengono fornite tutte le View predisposte dal sistema per avere delle statistiche &  UC1.3.1.3 \newline Interno \\
 		\hline
-		ROF5.5.1  & Le View offerte per la categoria di Instagram possono mostrare grafici di diversi tipi: Line Chart, Bar Chart, Pie Chart e Map Chart  &  UC1.3.1.2 \newline Interno \\
+		ROF5.5.1  & Le View offerte per la categoria di Instagram possono mostrare grafici di diversi tipi: Line Chart, Bar Chart, Pie Chart e Map Chart  &  UC1.3.1.3 \newline Interno \\
 		\hline
-		ROF5.5.1.1  &  Tipo di View: [TO DO] & Interno \\
+		ROF5.5.1.1  &  Tipo di View: Vengono visualizzati per ogni post di un utente il numero di like e il numero di commenti in un Bar Chart & Interno \\
 		\hline	
-		ROF5.5.1.2  &  Tipo di View: [TO DO] & Interno \\
+		ROF5.5.1.2  &  Tipo di View: Vengono visualizzati i nuovi followers di un utente per giorno, in un Line Chart. Nel grafico vengono anche segnati come linee verticali i momenti in cui l'utente ha pubblicato un post. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annunale. & Interno \\
 		\hline
-		ROF5.5.1.3  &  Tipo di View: [TO DO] & Interno \\
+		ROF5.5.1.2.1  &  Per questo tipo di View è possibile confrontare due utenti, che appariranno sul grafico con due colori diversi. & Interno \\
 		\hline
-		ROF5.5.1.4  &  Tipo di View: [TO DO] & Interno \\
+		ROF5.5.1.3  &  Tipo di View: Vengono visualizzati i nuovi like e i nuovi commenti ricevuti da un utente per giorno, in un Line Chart. Nel grafico vengono anche segnati come linee verticali i momenti in cui l'utente ha pubblicato un post. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annunale. & Interno \\
 		\hline
-		ROF5.5.1.5  &  Tipo di View: [TO DO] & Interno \\
+		ROF5.5.1.3.1  &  Per questo tipo di View è possibile confrontare due utenti, che appariranno sul grafico con due colori diversi. & Interno \\
 		\hline
+		ROF5.5.1.4  & Tipo di View: Viene visualizzato in un Line Chart l'andamento dei like e quello dei commenti ricevuti da un utente fratto il numero di followers che possiede. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annunale. & Interno \\
+		\hline
+		ROF5.5.1.5  &  Tipo di View: Viene visualizzato in un Line Chart il numero di like ricevuti al giorno da un utente fratto la frequenza di post dell'utente (ovvero il numero di post al giorno). Per questo grafico viene fornita una visualizzazione settimanale, mensile e annunale. & Interno \\
+		\hline
+		ROF5.5.1.5.1  &  Per questo tipo di View è possibile confrontare due utenti, che appariranno sul grafico con due colori diversi. & Interno \\
+		\hline
+		ROF5.5.1.6  &  Tipo di View: Viene visualizzato in un Line Chart il numero di post e il numero utenti che hanno usato un dato ashtag. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annunale. & Interno \\
+		\hline
+		ROF5.5.1.6.1  &  Per questo tipo di View è possibile confrontare due ashtag, che appariranno sul grafico con due colori diversi. & Interno \\
+		\hline
+
+		ROF5.5.1.7  &  Tipo di View: Viene visualizzato in un Line Chart il numero di like e il numero di commenti ricevuti dai post che contengono un dato ashtag. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annunale. & Interno \\
+		\hline
+		ROF5.5.1.7.1  &  Per questo tipo di View è possibile confrontare due ashtag, che appariranno sul grafico con due colori diversi. & Interno \\
+		\hline
+		ROF5.5.1.8  &  Tipo di View: Vengono visualizzate in un Map Chart le zone geografiche dove sono stati fatti i post contenenti un dato ashtag (di cui è nota la localizzazione), colorandole con una colorazione di intensità proporzionale al numero di post contenti l'ashtag nella zona. & Interno \\
+		\hline
+		ROF5.5.1.8.1  &  Per questo tipo di View è possibile confrontare due ashtag, che appariranno sul grafico con due colori diversi. & Interno \\
+		\hline
+		ROF5.5.1.9  &  Tipo di View: Viene visualizzato un Pie Chart che mostra per un dato ashtag la percentuale di post fatti in un dato stato sul totale di post contententi l'ashtag dei quali è noto lo stato in cui sono stati fatti. I dati vengono forniti anche non in percentuale.& Interno \\
+		\hline
+
 		ROF5.5.2  & Le View offerte per la categoria di Instagram possono fornire dati in forma tabellare  &  UC1.3.1.2 \newline Interno \\
 		\hline
 		ROF5.5.2.1  &  [TO DO] & Interno \\
 		\hline
-
 
 		ROF5.6  &  [TO DO] (requisiti sul confronto) &  UC1.3.2 \newline Interno \\
 		\hline
