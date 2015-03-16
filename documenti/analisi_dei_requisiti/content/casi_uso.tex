@@ -122,7 +122,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente non autenticato deve poter inserire la propria password ai fini dell'autenticazione;
 	\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire la password;
-	\item \textbf{Scenario principale:} l'untente non autenticato inserisce la password nell'apposito campo;
+	\item \textbf{Scenario principale:} l'utente non autenticato inserisce la password nell'apposito campo;
 	\item \textbf{Postcondizione:} il sistema ha l'informazione relativa alla password inserita dall'utente.
 \end{itemize}
 % FINE USE CASE %
@@ -289,7 +289,6 @@
 
 \pagebreak
 \subsection{UC1.3: Visualizzazione delle Recipe}
-[TO CHANGE DIA]
 \begin{figure}[!htbp]
 	\centering
 	\centerline{\includegraphics[scale=0.45]{./images/UC1_3.pdf}}
@@ -313,10 +312,9 @@
 % FINE USE CASE %
 
 \subsubsection{UC1.3.1: Visualizza metriche della Recipe}
-[TO CHANGE DIA]
 \begin{figure}[!htbp]
 	\centering
-	\centerline{\includegraphics[scale=0.45]{./images/UC1_3.pdf}}
+	\centerline{\includegraphics[scale=0.45]{./images/UC1_3_1.pdf}}
 	\caption{UC1.3.1 - Visualizza metriche della Recipe}
 \end{figure}
 
@@ -392,6 +390,12 @@
 
 
 \subsubsection{UC1.3.2: Confronta metriche della Recipe}
+\begin{figure}[!htbp]
+	\centering
+	\centerline{\includegraphics[scale=0.45]{./images/UC1_3_2.pdf}}
+	\caption{UC1.3.1 - Confronta metriche della Recipe}
+\end{figure}
+
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -634,7 +638,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'amministratore deve confermare i parametri inseriti prima che questi siano attivi nel sistema;
 	\item \textbf{Precondizione:} l'amministratore ha inserito almeno i parametri obbligatori;
-	\item \textbf{Scenario principale:} l'amministrstore preme il pulsante di conferma creazone Recipe;
+	\item \textbf{Scenario principale:} l'amministratore preme il pulsante di conferma creazione Recipe;
 	\item \textbf{Postcondizione:} l'amministratore ha confermato i parametri inseriti.
 \end{itemize}
 % FINE USE CASE %
@@ -744,7 +748,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente deve inserire nuovamente la nuova password per verificare di non aver fatto errori di battitura;
 	\item \textbf{Precondizione:} l'utente ha inserito la nuova password;
-	\item \textbf{Scenario principale:} l'utente inserisce la password di corferma nell'apposito campo;
+	\item \textbf{Scenario principale:} l'utente inserisce la password di conferma nell'apposito campo;
 	\item \textbf{Postcondizione:} l'utente ha verificato la correttezza della nuova password.
 \end{itemize}
 % FINE USE CASE %
@@ -757,7 +761,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente deve inserire la vecchia password per completare il cambio password;
 	\item \textbf{Precondizione:} l'utente ha inserito la nuova password due volte negli appositi campi;
-	\item \textbf{Scenario principale:} l'utente insireisce la vecchia password nell'apposito campo;
+	\item \textbf{Scenario principale:} l'utente inserisce la vecchia password nell'apposito campo;
 	\item \textbf{Postcondizione:} l'utente ha inserito la vecchia password e può confermare la nuova.
 \end{itemize}
 % FINE USE CASE %
@@ -1061,7 +1065,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente deve inserire il proprio nome utente in modo da essere riconoscibile univocamente all'interno del sistema e per poter gestire i relativi dati associati;
 	\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire l'username per il nuovo account;
-	\item \textbf{Scenario principale:} l'utente inserisce lo usename nell'apposito campo;
+	\item \textbf{Scenario principale:} l'utente inserisce lo username nell'apposito campo;
 	\item \textbf{Postcondizione:} l'utente ha inserito il proprio username.
 \end{itemize}
 % FINE USE CASE %
@@ -1098,7 +1102,7 @@
 	\begin{itemize}
 		\item utente non autenticato: utente non ancora noto al sistema che accede al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'utente deve inserire la password di conferma uguale a quella inserita precedentamente;
+	\item \textbf{Descrizione:} l'utente deve inserire la password di conferma uguale a quella inserita precedentemente;
 	\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile inserire la password una seconda volta;
 	\item \textbf{Scenario principale:} l'utente ha inserito la password di conferma nell'apposito campo;
 	\item \textbf{Postcondizione:} l'utente ha inserito la password di conferma.
@@ -1113,7 +1117,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente deve poter confermare i dati inseriti durante la registrazione;
 	\item \textbf{Precondizione:} il sistema fornisce una schermata in cui è possibile confermare i dati inseriti in precedenza per la creazione di un nuovo account;
-	\item \textbf{Scenario principale:} l'utente seleziona l'appostito pulsante di conferma dei dati inseriti;
+	\item \textbf{Scenario principale:} l'utente seleziona l'apposito pulsante di conferma dei dati inseriti;
 	\item \textbf{Postcondizione:} l'utente ha confermato di voler creare un nuovo account all'interno del sistema.
 \end{itemize}
 % FINE USE CASE %
@@ -1131,12 +1135,12 @@
 \end{itemize}
 % FINE USE CASE %
 
+\pagebreak
 
 \subsection{UC1.9: Richiesta aggiunta Recipe}
-[TO CHANGE DIA]
 \begin{figure}[!htbp]
 	\centering
-	\centerline{\includegraphics[scale=0.45]{./images/UC1_8.pdf}}
+	\centerline{\includegraphics[scale=0.50]{./images/UC1_9.pdf}}
 	\caption{UC1.9 - Richiesta aggiunta Recipe}
 \end{figure}
 
