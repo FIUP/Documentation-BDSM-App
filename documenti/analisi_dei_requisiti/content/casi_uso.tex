@@ -1220,10 +1220,11 @@
 		\begin{itemize}
 			\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 		\end{itemize}
-		\item \textbf{Descrizione:} TO DO;
-		\item \textbf{Precondizione:} TO DO;
+		\item \textbf{Descrizione:} l'amministratore può decidere di modificare il titolo della Recipe richiesta per renderlo più comprensibile e utile;
+		\item \textbf{Precondizione:} l'amministratore controlla il titolo inserito dall'utente per la Recipe e riscontra qualche mancanza o poca chiarezza di comprensione;
 		\item \textbf{Scenario principale:} l'amministratore modifica il titolo della Recipe richiesta;
-		\item \textbf{Postcondizione:} TO DO.
+		\item [TO DO] (possibile scenario alternativo se l'amministratore non modifica nulla ?)
+		\item \textbf{Postcondizione:} l'amministratore ha modificato il titolo.
 	\end{itemize}
 % FINE USE CASE %
 
@@ -1233,10 +1234,11 @@
 		\begin{itemize}
 			\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 		\end{itemize}
-		\item \textbf{Descrizione:} TO DO;
-		\item \textbf{Precondizione:} TO DO;
+		\item \textbf{Descrizione:} l'amministratore può decidere di modificare la descrizione della Recipe richiesta per renderla più comprensibile e utile, o di inserirla qualora non fosse stata specificata dall'utente richiedente;
+		\item \textbf{Precondizione:} l'amministratore controlla la descrizione inserita dall'utente per la Recipe e riscontra qualche mancanza, poca chiarezza di comprensione o assenza del campo;
 		\item \textbf{Scenario principale:} l'amministratore modifica la descrizione della Recipe richiesta;
-		\item \textbf{Postcondizione:} TO DO.
+		\item [TO DO] (possibile scenario alternativo se l'amministratore non modifica nulla ?)
+		\item \textbf{Postcondizione:} l'amministratore ha modificato la descrizione.
 	\end{itemize}
 % FINE USE CASE %
 
@@ -1303,13 +1305,12 @@
 	\begin{enumerate}
 		\item Visualizzazione View preferite (UC1.11.1);
 		\item Aggiunta View nelle preferite (UC1.11.2);
-		\item Rimozione View dalle preferite (UC1.11.4).
+		\item Rimozione View dalle preferite (UC1.11.3).
 	\end{enumerate}
 	\item \textbf{Postcondizione:} l'utente ha visualizzato le View preferite o è andato a aggiungerne di nuove/rimuoverne alcune precedentemente marcate;
 	\item \textbf{Estensioni:}
 	\begin{itemize}
-		\item Fallimento aggiunta View nelle preferite (UC1.11.3);
-		\item Fallimento rimozione View dalle preferite (UC1.11.5).
+		\item Elenco View preferite vuoto (UC1.11.4);
 	\end{itemize}
 \end{itemize}
 % FINE USE CASE %
@@ -1340,20 +1341,6 @@
 \end{itemize}
 % FINE USE CASE %
 
-\begin{comment}
-	\subsubsection{UC1.11.3: Fallimento aggiunta View nelle preferite}
-	\begin{itemize}
-		\item \textbf{Attori:}
-		\begin{itemize}
-			\item utente autenticato: utente autenticato che ha accesso al servizio;
-		\end{itemize}
-		\item \textbf{Descrizione:} l'utente non riesce a marcare una View come preferita in quanto il sistema ha avuto dei problemi;
-		\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per fare diventare la View una delle preferite;
-		\item \textbf{Scenario principale:} l'utente riceve una segnalazione che la View non è stata aggiunta tra quelle preferite;
-		\item \textbf{Postcondizione:} l'utente ha ricevuto le informazioni legate all'impossibilità di aggiungere tale View ai preferiti.
-	\end{itemize}
-	% FINE USE CASE %
-\end{comment}
 
 \subsubsection{UC1.11.3: Rimozione View dalle preferite}
 \begin{itemize}
@@ -1381,22 +1368,8 @@
 \end{itemize}
 % FINE USE CASE %
 
-\begin{comment}
-	\subsubsection{UC1.11.5: Fallimento rimozione View dalle preferite}
-	\begin{itemize}
-		\item \textbf{Attori:}
-		\begin{itemize}
-			\item utente autenticato: utente autenticato che ha accesso al servizio;
-		\end{itemize}
-		\item \textbf{Descrizione:} l'utente non riesce a rimuovere una View dalle preferite in quanto il sistema ha avuto dei problemi;
-		\item \textbf{Precondizione:} l'utente ha premuto sull'apposito pulsante per rimuovere la View da quelle preferite;
-		\item \textbf{Scenario principale:} l'utente riceve una segnalazione che la View non è stata rimossa da quelle preferite;
-		\item \textbf{Postcondizione:} l'utente ha ricevuto le informazioni legate all'impossibilità di rimuovere tale View dai preferiti.
-	\end{itemize}
-	% FINE USE CASE %
-\end{comment}
-
 \pagebreak
+
 
 
 \subsection{UC2: Servizi REST}
