@@ -1098,7 +1098,6 @@
 	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso al sistema e si trova nella home screen;
 	\item \textbf{Scenario principale:} l'utente seleziona l'apposito pulsante di richiesta View;
 	\item \textbf{Postcondizione:} l'utente ha visualizzato il pannello per effettuare una richiesta di inserimento di una nuova Recipe.
-
 \end{itemize}
 % FINE USE CASE %
 
@@ -1110,12 +1109,54 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente, una volta entrato nell'apposito pannello, per completare una richiesta per una nuova Recipe, deve compilare tutti i campi richiesti dal form;
 	\item \textbf{Precondizione:} l'utente ha visualizzato il pannello per l'inserimento dei dati richiesti;
-	\item \textbf{Scenario principale:} l'utente inserisce i dati necessari ad inviare la richiesta;
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{enumerate}
+		\item Inserimento titolo Recipe (UC1.9.2.1)
+		\item Inserimento descrizione Recipe (UC1.9.2.2)
+		\item Inserimento metrica (UC1.9.2.3)
+	\end{enumerate}
 	\item \textbf{Postcondizione:} l'utente ha inserito tutti i parametri richiesti dal pannello.
 \end{itemize}
 % FINE USE CASE %
 
+\subsubsection{UC1.9.2.1: Inserimento titolo Recipe}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente autenticato: utente che ha effettuato l'accesso nell'applicazione;
+	\end{itemize}
+	\item \textbf{Descrizione:} l'utente deve inserire il titolo delle Recipe che vuole richiedere;
+	\item \textbf{Precondizione:} l'utente ha avvato il processo di creazione Recipe tramite l'apposito pulsante;
+	\item \textbf{Scenario principale:} l'utente inserisce il titolo della Recipe nell'apposito campo;
+	\item \textbf{Postcondizione:} il sistema ha ottenuto il titolo della Recipe.
+\end{itemize}
+% FINE USE CASE %
 
+\subsubsection{UC1.9.2.2: Inserimento descrizione Recipe}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente autenticato: utente che ha effettuato l'accesso nell'applicazione;
+	\end{itemize}
+	\item \textbf{Descrizione:} l'utente deve inserire descrizione delle Recipe che vuole richiedere;
+	\item \textbf{Precondizione:} l'utente ha avvato il processo di creazione richiesta Recipe tramite l'apposito pulsante;
+	\item \textbf{Scenario principale:} l'utente inserisce la descrizione della Recipe nell'apposito campo;
+	\item \textbf{Postcondizione:} il sistema ha ottenuto la descrizione della Recipe.
+\end{itemize}
+% FINE USE CASE %
+
+\subsubsection{UC1.9.2.3: Inserimento metrica}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente autenticato: utente che ha effettuato l'accesso nell'applicazione;
+	\end{itemize}
+	\item \textbf{Descrizione:} l'utente deve inserire i parametri necessari al sistema per recuperare i dati desiderati. Questa operazione deve essere effettuata almeno una volta;
+	\item \textbf{Precondizione:} l'utente ha avviato il processo di creazione richiesta Recipe tramite l'apposito pulsante;
+	\item \textbf{Scenario principale:} l'utente inserisce la metrica desiderata;
+	\item \textbf{Postcondizione:} il sistema ha ottenuto i valori inseriti dall'utente.
+\end{itemize}
+% FINE USE CASE %
 
 \subsubsection{UC1.9.3: Invio richiesta}
 \begin{itemize}
