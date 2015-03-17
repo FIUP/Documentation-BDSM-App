@@ -544,16 +544,16 @@
 	\item \textbf{Precondizione:} l'amministratore autenticato è posizionato nella home screen dell'applicazione;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
-		\item Visualizza Recipe (UC1.4.1);
-		\item Aggiungi nuova Recipe (UC1.4.2);
-		\item Elimina Recipe (UC1.4.4);
+		\item Aggiungi nuova Recipe (UC1.4.1);
+		\item Creazione Recipe fallita (UC1.4.2);
+		\item Elimina Recipe (UC1.4.3);
 	\end{enumerate}
 	\item \textbf{Postcondizione:} le informazioni richieste dall'amministratore sono state fornite, le Recipe eliminate, cancellate dal sistema e quelle aggiunte, salvate; Se durante la creazione sono stati inseriti valori che non rispettano i vincoli di sistema è stata visualizzata una schermata di errore;
 	\item \textbf{Estensioni:} Creazione Recipe fallita (UC1.4.3).
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.4.2: Aggiungi nuova Recipe}
+\subsubsection{UC1.4.1: Aggiungi nuova Recipe}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -571,7 +571,7 @@
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.4.2.1: Apertura pannello inserimento nuova Recipe}
+\subsubsection{UC1.4.1.1: Apertura pannello inserimento nuova Recipe}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -584,7 +584,7 @@
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.4.2.2: Inserimento parametri}
+\subsubsection{UC1.4.1.2: Inserimento parametri}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -602,7 +602,7 @@
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.4.2.2.1: Inserimento titolo Recipe}
+\subsubsection{UC1.4.1.2.1: Inserimento titolo Recipe}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -615,7 +615,7 @@
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.4.2.2.2: Inserimento descrizione Recipe}
+\subsubsection{UC1.4.1.2.2: Inserimento descrizione Recipe}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -628,7 +628,7 @@
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.4.2.2.3: Inserimento metrica}
+\subsubsection{UC1.4.1.2.3: Inserimento metrica}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -643,7 +643,7 @@
 
 
 
-\subsubsection{UC1.4.2.4: Conferma parametri inseriti}
+\subsubsection{UC1.4.1.4: Conferma parametri inseriti}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -656,7 +656,7 @@
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.4.3: Creazione Recipe fallita}
+\subsubsection{UC1.4.2: Creazione Recipe fallita}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -669,7 +669,7 @@
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.4.4: Eliminazione Recipe}
+\subsubsection{UC1.4.3: Eliminazione Recipe}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -686,7 +686,7 @@
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.4.4.1: Eliminazione Recipe}
+\subsubsection{UC1.4.3.1: Eliminazione Recipe}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -699,7 +699,7 @@
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.4.4.2: Conferma eliminazione Recipe}
+\subsubsection{UC1.4.3.2: Conferma eliminazione Recipe}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -1114,6 +1114,8 @@
 	\item \textbf{Postcondizione:} l'utente ha inserito tutti i parametri richiesti dal pannello.
 \end{itemize}
 % FINE USE CASE %
+
+
 
 \subsubsection{UC1.9.3: Invio richiesta}
 \begin{itemize}
