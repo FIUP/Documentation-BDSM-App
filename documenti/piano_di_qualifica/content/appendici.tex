@@ -158,6 +158,62 @@ Lo stato \textbf{N.I.} presente nelle tabelle sottostanti è da intendersi come 
 	\subsection{Test di sistema}
 		I test di sistema servono per verificare che il sistema software completamente integrato soddisfi tutti i requisiti software individuati e descritti nel documento \docNameVersionAdR.
 		\subsubsection{Descrizione dei test di sistema}
+			\begin{center}
+
+			\def\arraystretch{1.5}
+			\bgroup
+			\begin{longtable}{| p{2cm} | p{7.5cm} | p{1.5cm} | p{2cm} |}
+					\hline
+					\textbf{Test} & \textbf{Descrizione} & \textbf{Stato} & \textbf{Requisito}\\
+					\hline						
+					TSF1 & Viene verificato che il sistema permetta, all'utente non autenticato, la registrazione al servizio & N.I. & ROF1\\
+					\hline
+					TSF2 & Viene verificato che il sistema permetta all'utente di autenticarsi & N.I. & ROF2\\
+					\hline
+					TSF3 & Viene verificato che il sistema permetta, all'utente autenticato, di accedere al menù informazioni personali & N.I. & ROF3\\
+					\hline
+					TSF4 & Viene verificato che il sistema permetta, all'utente autenticato, di effettuare la deautenticazione & N.I. & ROF4\\
+					\hline
+					TSF5 & Viene verificato che il sistema permetta, all'utente autenticato, di visualizzare tutte le Recipe presenti nel sistema & N.I. & ROF5\\
+					\hline
+					TSF6 & Viene verificato che il sistema permetta all'utente di gestire le proprie View & N.I. & ROF6\\
+					\hline
+					TSF7 & Viene verificato che il sistema permetta di richiedere l'inserimento di una nuova Recipe & N.I. & ROF7\\
+					\hline
+					TSF8 & Viene verificato che il sistema permetta, all'utente amministratore autenticato, di accedere all'area riservata del sistema & N.I. & ROF8\\
+					\hline
+					TSF10 & Viene verificato che il sistema permetta, all'utente amministratore, di gestire la richiesta di nuove Recipe & N.I. & ROF10\\
+					\hline
+					TSF11 & Viene verificato che il sistema fornisca una serie di servizi REST & N.I. & ROF11\\
+					\hline
+					TSP1 & Viene verificato che l'utente visualizzi le proprie View entro 10 secondi & N.I. & RDP1\\
+					\hline
+					TSP2 & Viene verificato che l'interfaccia web utilizzi un design di tipo responsive & N.I. & RFP2\\
+					\hline
+					TSQ1 & Viene verificato che sia disponibile un manuale per l'utente & N.I. & ROQ1\\
+					\hline
+					TSQ2 & Viene verificato che tutto il codice rispetti le norme e le metriche descritte nel \docNameVersionPdQ{} e \docNameVersionNdP & N.I. & ROQ2\\
+					\hline
+					TSQ3 & Viene verificato che sia disponibile un manuale per l'uso dei servizi REST & N.I. & ROQ3\\
+					\hline
+					TSV1 & Viene verificato che il sistema utilizzi gli strumenti offerti da Google Cloud Platform & N.I. & RDV1\\
+					\hline
+					TSV2 & Viene verificato che il linguaggio di programmazione utilizzato per il server sia Python & N.I. & RDV2\\
+					\hline
+					TSV3 & Viene verificato che il codice soggetto sia soggetto a versionamento tramite il modello di branching descritto nelle \docNameVersionNdP & N.I. & RDV3\\
+					\hline
+					TSV4 & Viene verificato che l'interfaccia web sia di tipo single-page & N.I. & RDV4\\
+					\hline
+					TSV5 & Viene verificato che l'interfaccia web funzioni con i principali browser attualmente sul mercato& N.I. & ROV5\\
+					\hline
+					TSV6 & Viene verificato che il sistema utilizzi librerie esterne per effettuare le chiamate alle API dei diversi social network & N.I. & ROV6\\
+					\hline
+					TSV7 & Viene verificato che il sistema utilizzi librerie esterne per generare i grafici necessari alle View & N.I. & ROV7\\
+					\hline
+			\caption{Tracciamento test di sistema - requisiti}
+			\end{longtable}
+				\egroup
+\end{center}
 		
 	\subsection{Test di integrazione}
 		I test di integrazione vengono utilizzati per verificare che tutti i componenti del sistema siano integrati correttamente tra di loro e che il flusso dati all'interno del sistema sia corretto.\\
