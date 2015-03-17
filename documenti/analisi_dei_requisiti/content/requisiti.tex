@@ -298,10 +298,20 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		ROF5.5.2.1  &  [TO DO] & Interno \\
 		\hline
 
-		ROF5.6  &  [TO DO] (requisiti sul confronto) &  UC1.3.2 \newline Interno \\
+		ROF5.6  &  L'utente deve potere visualizzare tutte le metriche di una Recipe una volta premuto l'apposito pulsante  &  UC1.3.2 \newline Interno \\
 		\hline
-
-
+		ROF5.6.1  &  [TO DO]  &  TO DO \newline Interno \\
+		\hline
+		ROF5.6.1  &  [TO DO]  &  TO DO \newline Interno \\
+		\hline
+		ROF5.6.1  &  [TO DO]  &  TO DO \newline Interno \\
+		\hline
+		ROF5.6.1  &  [TO DO]  &  TO DO \newline Interno \\
+		\hline
+		ROF5.6.1  &  [TO DO]  &  TO DO \newline Interno \\
+		\hline
+		ROF5.6.1  &  [TO DO]  &  TO DO \newline Interno \\
+		\hline
 
 
 
@@ -310,15 +320,17 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF6.1  & L'utente visualizza tutte le View che sono state marcate da lui come preferite entrando dal menù nell'apposita pagina. & UC1.11.1 \newline Interno \\
 		\hline
-		ROF6.1.1  & Il sistema mostra un messaggio qualora non ci fossero View salvate come preferite. &  Interno \\
+		ROF6.1.1  & Il sistema mostra un messaggio qualora non ci fossero View salvate come preferite. &  Interno \newline UC1.11.4 \\
 		\hline
 		ROF6.2  & L'utente ha la possibilità di aggiungere ogni View tra quelle preferite premendo sull'apposito pulsante vicino la View che desidera marcare.  & UC1.11.2 \newline Interno \\
 		\hline
-		ROF6.2.1  & Il sistema visualizza un messaggio se la View non è stata aggiunta correttamente tra quelle preferite.  & UC1.11.3 \newline Interno \\
+		ROF6.2.1  & Il sistema visualizza un messaggio se la View non è stata aggiunta correttamente tra quelle preferite.  & Interno \\
 		\hline
 		ROF6.3  & L'utente ha la possibilità di rimuovere le View che ha aggiunto tra quelle preferite premendo sull'apposito pulsante vicino la View che desidera rimuovere.  &  UC1.11.4 \newline Interno \\
 		\hline
-		ROF6.3.1  & Il sistema visualizza un messaggio se la View non è stata rimossa correttamente tra quelle preferite.  & UC1.11.5 \newline Interno \\
+		ROF6.3.1  & Il sistema visualizza un messaggio se la View non è stata rimossa correttamente tra quelle preferite.  &  Interno \\
+		\hline
+		ROF6.4 & L'utente può marcare come preferite un numero illimitato di View. &  Interno \\
 		\hline
 
 
@@ -351,7 +363,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF7.1.1.11 & Il sistema avviserà l'utente in maniera istantanea se un campo è compilato correttamente. & Interno \\
 		\hline
-		ROF7.1.1.12 & Il sistema avviserà l'utente se è stato lasciato vuoto un campo obbligatorio. & Interno \\
+		ROF7.1.1.12 & Il sistema avviserà l'utente in maniera istantanea se è stato lasciato vuoto un campo obbligatorio. & Interno \\
 		\hline
 		ROF7.1.2 & L'utente deve premere sul pulsante di invio della richiesta per inviarla agli amministratori. & UC1.9.3 \newline Interno \\
 		\hline
@@ -414,22 +426,32 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 
 		ROF10  &  L'amministratore può gestire tutte le richieste di nuove Recipe, ricevute dagli utenti, da una apposita sezione.  & UC1.10 \\
 		\hline
-		ROF10.1  &  L'amministratore può vedere l'elenco delle richieste di nuove Recipe.  & UC1.10 \\
+		ROF10.1  &  L'amministratore può vedere l'elenco delle richieste di nuove Recipe.  & UC1.10.1 \\
 		\hline
-		ROF10.1.1  &  Per ogni voce dell'elenco deve essere fornito il titolo della Recipe richiesta e la sua descrizione qualora presente.  & Interno \\
+		ROF10.1.1  &  Per ogni voce dell'elenco deve essere fornito il titolo della Recipe richiesta, la sua descrizione qualora presente e lo username dell'utente che ha fatto richiesta.  & Interno \\
 		\hline
 		ROF10.1.2  &  Per ogni voce dell'elenco deve essere fornito un pulsante per potere accedere alla visualizzazione dei dettagli della richiesta.  & Interno \\
 		\hline
-		ROF10.1.3  &  Per ogni voce dell'elenco.  & UC1.10 \\
+		ROF10.2  &  Il sistema visualizza un messaggio qualora non fossero presenti richieste di nuove Recipe.  & UC1.10.6 \\
 		\hline
-		ROF10.X.X  &  [TO DO].  & UC1.10 \\
+		ROF10.3  &  Premendo sul pulsante della visualizzazione dettagli si accede a un pannello contenente il form per la creazione di una nuova Recipe già compilato con i dati richiesti.  &  UC1.10.2 \newline Interno \\
 		\hline
-		ROF10.X.X  &  [TO DO].  & UC1.10 \\
+		ROF10.3.1  &  L'amministratore può decidere se modificare il titolo e la descrizione generale della Recipe richiesta.  & UC1.10.3.1 \newline UC1.10.3.2 \\
 		\hline
-		ROF10.X.X  &  [TO DO].  & UC1.10 \\
+		ROF10.3.2  &  L'amministratore non può modificare altri campi della richiesta oltre a quelli descritti in ROF10.3.1.  & Interno \\
 		\hline
-		ROF10.X.X  &  [TO DO].  & UC1.10 \\
+		RDF10.3.2.1  &  I campi non modificabili saranno disabilitati.  & Interno \\
 		\hline
+		ROF10.4  &  L'amministratore premendo sul pulsante di accettazione andrà a inserire la Recipe richiesta nel sistema.  & UC1.10.4 \newline Interno \\
+		\hline
+		ROF10.5  &  L'amministratore, premendo sul pulsante di respinta andrà a rifiutare la Recipe richiesta.  & UC1.10.5 \\
+		\hline
+		RDF10.5.1  &  L'amministratore potrà fornire un messaggio di risposta che motivi il rifiuto della richiesta.  & Interno \\
+		\hline
+		RDF10.5.1.1  &  Il sistema invierà una mail all'utente per notificare il messaggio di rifiuto.  & Interno \\
+		\hline
+
+
 
 
 		ROF11  &  Il sistema fornisce una serie di servizi REST  & Capitolato \\
@@ -440,7 +462,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF11.1.2  &  Il sistema genera e restituisce un token di accesso se l'utente è autenticato  & UC2.1.3 \\
 		\hline
-		ROF11.2  &  I token di accesso sono stringhe alfanumeriche di 200 caratteri  & Interno \\
+		ROF11.2  &  I token di accesso sono stringhe alfanumeriche di [TO DO] caratteri  & Interno \\
 		\hline
 		ROF11.3  &  L'utente può richiedere che un token valido venga considerato non valido  & UC2.3 \\
 		\hline
