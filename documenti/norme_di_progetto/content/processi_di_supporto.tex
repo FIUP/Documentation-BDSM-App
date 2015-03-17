@@ -15,7 +15,8 @@
 % =================================================================================================
 % 1.0.1			2015-02-25			aggiornamento tracciamento						Faccin Nicola
 % =================================================================================================
-%
+% 1.0.2			2015-03-17			aggiunta parte test								Faccin Nicola
+% =================================================================================================
 
 % CONTENUTO DEL CAPITOLO
 
@@ -305,6 +306,31 @@
 			Il \roleVerifier, durante le attività di controllo, nel caso si riscontrassero anomalie o discordanze normative avrà il compito di notificarle all'assegnatario del task sul quale sta effettuando la verifica.\\
 			Nella sezione \ref{par:Procedure_assegnazione_delle_anomalie}. è indicata la procedura per l'apertura di una nuova anomalia.
 
+			\paragraph{Test} % (fold)
+			\label{par:test}
+				\subparagraph{Test di unità}
+				I test di unità verificano che ogni unità software funzioni a dovere. Attraverso questo si può verificare la correttezza di tutti i moduli base che andranno a comporre il software, limitando così gli errori di implementazione. Questo tipo di test vengono identificati con la sintassi seguente:\\
+				 \begin{center}
+				 TU[Codice test]
+				 \end{center}
+				 \subparagraph{Test di integrazione}
+				 I test di integrazione verificano che i moduli verificati singolarmente funzionino anche se integrati tra di loro. Questo aiuta anche a scoprire eventuali problemi non sottolineati nei test precedenti. L'integrazione in oltre non viene fatta solo con moduli interni ma anche con componenti esterne quali librerie e framework.\\
+				 Potranno inoltre essere utilizzate delle componenti create ad hoc che simulano i risultati dei moduli non ancora pronti, questo per poter analizzare il risultato di determinati test. Questo tipo di test vengono identificati con la sintassi seguente:\\
+				 \begin{center}
+				 	TI[Identificativo del componente]
+				 \end{center}
+				 \subparagraph{Test di sistema}
+				 I test di sistema consistono nella validazione del prodotti software. Questi saranno eseguiti solamente quando si ritiene che il prodotto è giunto ad una versione stabile. Si verifica dunque che il prodotto soddisfi tutti i requisiti. Questo tipo di test vengono identificati con la sintassi seguente: \\
+				\begin{center}				 
+				 TS[Tipo requisito][Codice requisito]
+				 \end{center}
+				 \subparagraph{Test di regressione}
+				 I test di regressione vengono eseguiti dopo che un componente è stato modificato. Si eseguono tutti i test fatti precedentemente per verificare che le modifiche fatte non causino problemi agli altri moduli. Grazie al tracciamento si possono ricavare dei test critici, ossia coloro che sono più a rischio in caso di modifica, e quindi da ripetere ogni volta.
+				 \subparagraph{Test di validazione}
+				 I test di validazione coincidono con il collaudo del prodotto con il proponente. Se tale test è positivo allora significa che il prodotto proposto è abbastanza maturo per essere rilasciato. Questo tipo di test vengono identificati con la seguente sintassi:\\
+				 \begin{center}				 
+				 TV[Tipo requisito][Codice requisito]
+				 \end{center}
 			\paragraph{Tracciamento} % (fold)
 			\label{par:tracciamento}
 			L'attività di tracciamento, eseguita dai \emph{Verificatori}, prevede il controllo della corrispondenza dei requisiti definiti nelle fasi precedenti. In oltre ogni requisito deve essere tracciato al componente che lo soddisfa, in modo da garantire che ogni requisito venga soddisfatto. Questo consente anche di misurare il progresso nell'attività di progettazione.
