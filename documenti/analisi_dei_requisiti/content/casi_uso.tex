@@ -1251,7 +1251,7 @@
 		\item \textbf{Descrizione:} l'amministratore una volta controllata la bontà della Recipe richiesta potrà accettarla in modo che venga inserita nel sistema;
 		\item \textbf{Precondizione:} l'amministratore sta visualizzando in dettaglio la Recipe che decide di inserire nel sistema;
 		\item \textbf{Scenario principale:} l'amministratore preme l'apposito pulsante per confermare l'accettazione della Recipe;
-		\item \textbf{Postcondizione:} l'amministratore visualizza un messaggio di conferma inserimento e la Recipe è stata inserita nel sistema.
+		\item \textbf{Postcondizione:} l'amministratore visualizza un messaggio di conferma inserimento, la Recipe è stata inserita nel sistema e l'utente notificato.
 	\end{itemize}
 % FINE USE CASE %
 
@@ -1261,28 +1261,56 @@
 		\begin{itemize}
 			\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 		\end{itemize}
-		\item \textbf{Descrizione:} l'amministratore una volta controllata la richiesta per una nuova Recipe potrà decidere di rifiutarla qualora non ritenesse opportuno il suo inserimento nel sistema;
-		\item \textbf{Precondizione:} l'amministratore seleziona l'apposito pulsante per respingere la richiesta di inserimento Recipe;
-		\item \textbf{Scenario principale:} l'amministratore preme l'apposito pulsante per respingere la richiesta della Recipe;
-		\item \textbf{Postcondizione:} l'amministratore visualizza un messaggio di conferma e ha può immettere una motivazione da inviare all'utente;
+		\item \textbf{Descrizione:} l'amministratore una volta controllata la richiesta per una nuova Recipe potrà decidere di rifiutarla qualora non ritenesse opportuno il suo inserimento nel sistema, inserendo un eventuale messaggio di giustificazione all'utente;
+		\item \textbf{Precondizione:} l'amministratore ha visualizzato in dettaglio una richiesta di aggiunta Recipe e ha deciso di respingerla;
+		\item \textbf{Flusso principale degli eventi:}
+		\begin{enumerate}
+			\item Selezione respinta Recipe (UC1.10.5.1)
+			\item Inserimento motivazione respinta Recipe (UC1.10.5.2)
+			\item Conferma respinta Recipe (UC1.10.5.3)
+		\end{enumerate}
+		\item \textbf{Postcondizione:} l'amministratore visualizza un messaggio di conferma, la richiesta viene eliminata ed il sistema notifica l'utente con un eventuale messaggio da parte dell'amministratore;
 	\end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.10.6: Nessuna richiesta presente}
+\subsubsection{UC1.10.5.1: Selezione respinta Recipe}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+	\item \textbf{Descrizione:} l'amministratore una volta controllato il contenuto di una richiesta, può decidere di respingerla;
+	\item \textbf{Precondizione:} l'amministratore sta visualizzando in dettaglio la Recipe;
+	\item \textbf{Scenario principale:} l'amministratore preme l'apposito pulsante per respingere l'accettazione della Recipe;
+	\item \textbf{Postcondizione:} l'amministratore visualizza il form per l'inserimento della motivazione per la respinta ed un pulsante per la conferma.
+\end{itemize}
+% FINE USE CASE %
+
+\subsubsection{UC1.10.5.2: Inserimento motivazione respinta Recipe}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+	\item \textbf{Descrizione:} l'amministratore, una volta selezionato il pulsante per la respinta della richiesta, può inserire un mesaggio di motivazione per l'utente;
+	\item \textbf{Precondizione:} l'amministratore ha selezionato il pulsante per respingere la richiesta di creazione della Recipe;
+	\item \textbf{Scenario principale:} l'amministratore inserice il messaggio nell'apposito form;
+	\item \textbf{Postcondizione:} il sistema ha ottenuto il contenuto del messaggio da inviare all'utente.
+\end{itemize}
+% FINE USE CASE %
+
+\subsubsection{UC1.10.5.3: Conferma respinta Recipe}
 	\begin{itemize}
 		\item \textbf{Attori:}
 		\begin{itemize}
 			\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 		\end{itemize}
-		\item \textbf{Descrizione:} non sono state effettuate richiesta di nuove Recipe da parte degli utenti;
-		\item \textbf{Precondizione:} l'amministratore seleziona l'apposito pulsante per visualizzare le richieste di inserimento Recipe;
-		\item \textbf{Scenario principale:} l'amministratore dopo avere premuto sul pulsante per visualizzare le richieste di Recipe, non ne trova neanche una presente;
-		\item \textbf{Postcondizione:} l'amministratore visualizza un messaggio che non sono presenti richieste di Recipe;
+		\item \textbf{Descrizione:} l'amministratore deve confermare la respinta della richiesta di creazione di una nuova Recipe;
+		\item \textbf{Precondizione:} l'amministratore ha selezionato il pulsante per la respinta della proposta di creazione Recipe;
+		\item \textbf{Scenario principale:} l'amministratore seleziona l'apposito pulsante per confermare la respinta della proposta;
+		\item \textbf{Postcondizione:} l'amministratore visualizza un messaggio di conferma, l'utente viene notificato con un eventuale messaggio e la richiesta viene rimossa dall'elenco.
 	\end{itemize}
 % FINE USE CASE %
-
-
-
 
 \pagebreak
 
