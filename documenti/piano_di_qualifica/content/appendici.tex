@@ -231,6 +231,49 @@ Lo stato \textbf{N.I.} presente nelle tabelle sottostanti è da intendersi come 
 		I test di validazione vengono utilizzati per accertarsi che il prodotto finale sviluppato sia conforme alle attese.\\
 		Per ogni test viene riportata una descrizione contenente i passi che l'utente deve seguire per verificare che i requisiti siano soddisfatti. Il tracciamento tra test di validazione e i requisiti correlati viene riportati nel documento \docNameVersionAdR.
 		
+		\subsubsection{TVF1}
+			L'utente vuole verificare che si possa registrare al sistema. All'utente è richiesto di:
+			\begin{itemize}
+				\item inserire un username;
+				\item inserire una email;
+				\item inserire una password;
+				\item inserire una password di conferma;
+				\item verificare che il sistema avverta l'utente in fase di compilazione se i dati inseriti non sono conformi alle norme del sistema;
+				\item confermare la registrazione;
+				\item verificare che il sistema avverta l'utente nel caso in cui i dati inseriti non siano conformi alle norme del sistema;
+				\item verificare che, nel caso la registrazione abbia avuto esito positivo, venga inviata un email di conferma.
+			\end{itemize}
+			
+		\subsubsection{TVF1.1}
+			L'utente vuole verificare che l'inserimento di un username avvenga correttamente. All'utente è richiesto di:
+			\begin{itemize}
+				\item inserire un username;
+				\item verificare che, se lo username è già presente nel database, venga visualizzato un errore;
+				\item verificare che, nel caso lo username non sia conforme alle norme del sistema, venga visualizzato alcun errore.
+			\end{itemize}
+			
+		\subsubsection{TVF1.2}
+			L'utente vuole verificare che l'inserimento di una email avvenga correttamente. All'utente è richiesto di:
+			\begin{itemize}
+				\item inserire una email;
+				\item verificare che, se la email è già presente nel database, venga visualizzato un errore;
+				\item verificare che, nel caso la email non sia conforme alle norme del sistema, venga visualizzato un errore.
+			\end{itemize}
+			
+		\subsubsection{TVF1.3}
+			L'utente vuole verificare che l'inserimento di una password avvenga correttamente. All'utente è richiesto di:
+			\begin{itemize}
+				\item inserire una password;
+				\item verificare che, nel caso la password non sia conforme alle norme del sistema, venga visualizzato un errore.
+			\end{itemize}
+			
+		\subsubsection{TVF1.4}
+			L'utente vuole verificare che l'inserimento della password di conferma avvenga correttamente. All'utente è richiesto di:
+			\begin{itemize}
+				\item inserire una password di conferma;
+				\item verificare che, nel caso in cui la password di conferma non sia uguale alla password precedentemente inserita, venga visualizzato un errore.
+			\end{itemize}
+			
 \pagebreak
 
 
