@@ -454,29 +454,38 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 
 
 
-		ROF11  &  Il sistema fornisce una serie di servizi REST  & Capitolato \\
+		ROF11  &  Il sistema fornisce una serie di servizi REST  & Capitolato \newline UC2 \\
 		\hline
-		ROF11.1  &  Il sistema è un grado di gestire una richiesta di un token di accesso per utilizzare i servizi REST se l'utente è autenticato  & UC2.1 \newline UC2.1.1 \\
+		ROF11.1  &  Il sistema è un grado di gestire una richiesta di un token di accesso per utilizzare i servizi REST se l'utente è autenticato.  & UC2.1 \newline UC2.1.1 \\
 		\hline
-		ROF11.1.1  &  [TO CHANGE] Il sistema restituisce un errore se il sistema ha avuto problemi nel generare il token & UC2.1.2 \\
+		ROF11.1.1  &  Il sistema genera e restituisce un token di accesso se l'utente è autenticato. & UC2.1.2 \\
 		\hline
-		ROF11.1.2  &  Il sistema genera e restituisce un token di accesso se l'utente è autenticato  & UC2.1.3 \\
+		ROF11.1.2  &  Il sistema restituisce un errore se il sistema ha avuto problemi nel generare il token. & Interno \\
 		\hline
-		ROF11.2  &  I token di accesso sono stringhe alfanumeriche di [TO DO] caratteri  & Interno \\
+		ROF11.2  &  L'utente premendo su un pulsante può richiedere che un token valido venga considerato non valido.  & UC2.3 \newline Interno \\
 		\hline
-		ROF11.3  &  L'utente può richiedere che un token valido venga considerato non valido  & UC2.3 \\
+		ROF11.2.1  &  Il sistema è in grado di gestire una richiesta di chiusura sessione contenente un token di accesso valido rendendolo non valido. & UC2.3 \newline UC2.3.1 \\
 		\hline
-		ROF11.3.1  &  Il sistema è in grado di gestire una richiesta di chiusura sessione contenente un token di accesso valido rendendolo non valido & UC2.3 \newline UC2.3.1 \\
+		ROF11.2.2  &  Il sistema restituisce un errore se non è riuscito a invalidare il token. & Interno \\
 		\hline
-		ROF11.3.2  &  [TO CHANGE] Il sistema restituisce un errore se non è riuscito a invalidare il token & UC2.3.2 \\
+		ROF11.2.3  &  Il sistema restituisce una conferma dell'avvenuta invalidazione del token & UC2.3.3 \\
 		\hline
-		ROF11.3.3  &  Il sistema restituisce una conferma dell'avvenuta invalidazione del token & UC2.3.3 \\
+		ROF11.3  &  Il sistema è in grado di gestire una richiesta che richiede i dati di una View contenente un token di accesso  &  UC2.2 \newline UC2.2.1 \\
 		\hline
-		ROF11.4  &  Il sistema è in grado di gestire una richiesta che richiede i dati di una View contenente un token di accesso  &  UC2.2 \newline UC2.2.1 \\
+		ROF11.3.1  &  Il sistema restituisce i dati richiesti se il token utilizzato è valido  &  UC2.2.3 \\
 		\hline
-		ROF11.4.1  &  Il sistema restituisce i dati richiesti se il token utilizzato è valido  &  UC2.2.3 \\
+		ROF11.3.1.1 & [TO DO] (requisito su API fornite) & Interno \\
 		\hline
-		ROF11.4.2  &  Il sistema restituisce un errore se il token utilizzato è non valido  &  UC2.2.2 \\
+		ROF11.3.1.X & [TO DO] (requisito su API fornite) & Interno \\
+		\hline
+		ROF11.3.1.X & [TO DO] (requisito su API fornite) & Interno \\
+		\hline
+		ROF11.3.1.X & [TO DO] (requisito su API fornite) & Interno \\
+		\hline
+		ROF11.3.1.X & [TO DO] (requisito su API fornite) & Interno \\
+		\hline
+
+		ROF11.3.2  &  Il sistema restituisce un errore se il token utilizzato è non valido  &  UC2.2.2 \\
 		\hline
 
 	\end{longtable}
@@ -555,9 +564,9 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		RDV1.2.1  &  Il database sarà di tipo non relazione composto da documenti in stile JSON, stesso formato dei dati in entrata  &  Interno \newline Verbale 2015/01/14 \\
 		\hline
-		RDV1.3  &  Il sistema sfrutterà gli strumenti offerti da Google Cloud Platform  &  Capitolato \newline Verbale 2015/01/14 \\
+		RDV1.3  &  Il sistema sfrutterà gli strumenti offerti da Google Cloud Platform.  &  Capitolato \newline Verbale 2015/01/14 \\
 		\hline
-		RDV2  &  Il linguaggio di programmazione principalmente usato per il server sarà Python  &  Capitolato \newline Verbale 2015/01/14 \\
+		RDV2  &  Il linguaggio di programmazione principalmente usato per il back-end sarà Python.  &  Capitolato \newline Verbale 2015/01/14 \\
 		\hline
 		RDV3  &  Il codice sorgente sarà soggetto a versionamento tramite il modello di branching descritto nelle \docNameVersionNdP  &  Capitolato \\
 		\hline
@@ -586,6 +595,15 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		ROV7.1  &  Il sistema utilizzerà Chart.js per generare i Line Chart, Bar Chart e Pie Chart.  &  Interno \\
 		\hline
 		ROV7.2  &  Il sistema utilizzerà [TO DO] per generare i Map Chart.  &  Interno \\
+		\hline
+
+		ROV8  &  Il linguaggio di programmazione principalmente usato per il front-end sarà Javascript.  &  Verbale 2015/01/28 \\
+		\hline
+		ROV8.1  &  Il sistema utilizzerà AngularJS come framework per il front-end.  &  Verbale 2015/01/28 \\
+		\hline
+
+
+		ROV9  &  Il token di accesso dovrà essere formato dalla combinazione seguente: ``id utente'' + ``data creazione token'' + ``valore random''.  &  Interno \\
 		\hline
 
 	\end{longtable}
