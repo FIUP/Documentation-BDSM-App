@@ -362,7 +362,123 @@ Lo stato \textbf{N.I.} presente nelle tabelle sottostanti è da intendersi come 
 		\subsubsection{TVF3.3.1}
 			TO DO
 			
+		\subsubsection{TVF4}
+			L'utente vuole verificare che si possa effettuare la deautenticazione dal siistema. All'utente è richiesto di:
+			\begin{itemize}
+				\item accedere alla home screen;
+				\item verificare che, alla pressione del pulsante di logout, la sessione termini.
+			\end{itemize}
 			
+		\subsubsection{TVF4.1}
+			L'utente vuole verificare che, alla pressione del pulsante di logout, la sessione termini. All'utente è richiesto di:
+			\begin{itemize}
+				\item verificare che il sistema chieda la conferma di logout se la sessione è valida;
+				\item verificare che il sistema stampi un messaggio d'errore se la sessione non è valida;
+				\item verificare che il sistema reindirizzi l'utente alla schermata di login.
+			\end{itemize}
+			
+		\subsubsection{TVF5}
+			L'utente vuole verificare che nella home screen dell'utente autenticato siano mostrate tutte le Recipe presenti nel sistema. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere alla home screen;
+				\item verificare che il sistema recuperi l'elenco delle Recipe dal database;
+				\item verificare che sia possibile visualizzare tutte le metriche di una Recipe.
+			\end{itemize}
+			
+		\subsubsection{TVF5.1}
+			L'utente vuole verificare che il sistema recuperi l'elenco delle Recipe dal database. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere alla home screen;
+				\item verificare che il sistema fornisca per ogni Recipe il titolo e, se presente, la descrizione;
+				\item verificare che il sistema fornisca per ogni Recipe due pulsanti per scegliere se visualizzare le metriche della Recipe o effettuare un confronto tra le metriche.
+			\end{itemize}
+			
+		\subsubsection{TVF5.2}
+			L'utente vuole verificare che sia possibile visualizzare tutte le metriche di una Recipe. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere alla home screen;
+				\item verificare che la visualizzazione delle metriche sia suddivisa per categoria;
+				\item verificare che il sistema, per ogni metrica, fornisca il nome, la descrizione se presente e la tipologia della metrica;
+				\item verificare che il sistema, per ogni metrica, fornisca il pulsante per accedere alle visualizzazione delle View presenti per quella metrica.				
+			\end{itemize}
+			
+		\subsubsection{TVF5.3}
+			L'utente vuole verificare che il sistema fornisca tutte le View, di una metrica della categoria Facebook, predisposte dal sistema. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere alla home screen;
+				\item premere il pulsante per la visualizzazione delle View di una metrica della categoria Facebook;
+				\item verificare che siano mostrati i grafici relativi a tale metrica.
+			\end{itemize}
+			
+		\subsubsection{TVF5.3.1}
+			L'utente vuole verificare che vengano mostrati i grafici relativi ad una metrica della categoria Facebook. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere alla home screen;
+				\item premere il pulsante per la visualizzazione delle View di una metrica della categoria Facebook;
+				\item verificare che sia visualizzato un Line Chart contenente l'andamento dei "likes" e dei "talking about" di una pagina;
+				\item verificare che sia visualizzato un Pie Chart che per tutti gli eventi di una pagina mostri le percentuali di persone che hanno messo partecipa, forse o rifiuta;
+				\item verificare che sia visualizzato un Pie Chart che mostri la percentuale di commenti di terzi a tutti i post di una pagina rispetto la percentuale di commenti della pagina stessa;
+				\item verificare che sia visualizzato un Pie Chart che mostri la percentuale di commenti della pagina e di terzi rispetto a tutti i post di terzi sulla pagina in questione;
+				\item verificare che sia visualizzato un Map Chart che illustri le zone nella quale si sono creati degli eventi di una pagina e mostra dei cerchi di diverse dimensioni a seconda della media di partecipanti agli eventi di quella zona;
+				\item verificare che sia visualizzato un Bar Chart che mostri la media di commenti delle pagina per ogni post effettuato dalla stessa;
+				\item verificare che sia visualizzato un Line Chart che mostri l'andamento del numero di post giornalieri di una pagina.
+			\end{itemize}
+			
+		\subsubsection{TVF5.4}
+			L'utente vuole verificare che il sistema fornisca tutte le View, di una metrica della categoria Twitter, predisposte dal sistema. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere alla home screen;
+				\item premere il pulsante per la visualizzazione delle View di una metrica della categoria Twitter;
+				\item verificare che siano mostrati i grafici relativi a tale metrica.
+			\end{itemize}
+			
+		\subsubsection{TVF5.4.1}
+			L'utente vuole verificare che vengano mostrati i grafici relativi ad una metrica della categoria Twitter. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere alla home screen;
+				\item premere il pulsante per la visualizzazione delle View di una metrica della categoria Twitter;
+				\item verificare che sia visualizzato un Bar Chart orizzontale che mostri un riepilogo istantaneo dei Tweet e dei Follower di un singolo utente;
+				\item verificare che sia visualizzato un Line Chart che indichi il numero di Tweet e il numero di Follower dell’utente;
+				\item verificare che sia visualizzato un Map Chart che illustra l'area geografica di appartenenza dei Tweet con un particolare hashtag;
+				\item verificare che sia visualizzato un Line Chart che mostri il numero di Tweet con un determinato hashtag;
+				\item verificare che sia visualizzato un Pie Chart che illustri quanti Tweet, quanti Preferiti e quanti Retweet ha un utente;
+				\item verificare che sia visualizzato un Radar Chart che illustri in che momento della giornata vengono fatti i Tweet;
+				\item verificare che sia visualizzato un Pie Chart che indichi su che tipo di piattaforma gli utenti hanno twittato;
+			\end{itemize}
+			
+		\subsubsection{TVF5.5}
+			L'utente vuole verificare che il sistema fornisca tutte le View, di una metrica della categoria Instagram, predisposte dal sistema. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere alla home screen;
+				\item premere il pulsante per la visualizzazione delle View di una metrica della categoria Instagram;
+				\item verificare che siano mostrati i grafici relativi a tale metrica.
+			\end{itemize}
+			
+		\subsubsection{TVF5.5.1}
+			L'utente vuole verificare che vengano mostrati i grafici relativi ad una metrica della categoria Instagram. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere alla home screen;
+				\item premere il pulsante per la visualizzazione delle View di una metrica della categoria Instagram;
+				\item verificare che sia visualizzato un Bar Chart che mostri il numero di like e il numero di commenti per ogni post di un utente;
+				\item verificare che sia visualizzato un Line Chart che mostri i nuovi follower di un utente per giorno e mostri i momenti in cui l'utente ha pubblicato un post tramite una linea verticale;
+				\item verificare che sia visualizzato un Line Chart che mostri il numero di like e i nuovi commenti ricevuti da ogni utente e mostri i momenti in cui l'utente ha pubblicato un post tramite una linea verticale;
+				\item verificare che sia visualizzato un Line Chart che illustri l'andamento dei like e quello dei commenti ricevuti da un utente fratto il numero di follower che possiede;
+				\item verificare che sia visualizzato un Line Chart che mostri il numero di like ricevuti al giorno da un utente fratto il numero di post giornalieri dello stesso utente;
+				\item verificare che sia visualizzato un Line Chart che mostri il numero di post e il numero di utenti che hanno utilizzato un determinato hashtag;
+				\item verificare che sia visualizzato un Line Chart che mostri il numero di like e il numero di commenti ricevuto dai post che contengono un determinato hashtag;
+				\item verificare che sia visualizzato un Map Chart che mostri le zone geografiche dove sono stati fatti i post contenenti un determinato hashtag;
+				\item ROF5.5.1.9 ??;
+				\item verificare che sia visualizzato un Radar Chart che illustri, per i vari momenti della giornata, la frequenza con cui un utente posta;
+			\end{itemize}
 			
 \pagebreak
 
