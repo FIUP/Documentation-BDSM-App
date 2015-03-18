@@ -281,7 +281,6 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF5.5.1.6.1  &  Per questo tipo di View è possibile confrontare due hashtag, che appariranno sul grafico con due colori diversi. & Interno \\
 		\hline
-
 		ROF5.5.1.7  &  Tipo di View: viene visualizzato in un Line Chart il numero di like e il numero di commenti ricevuti dai post che contengono un dato hashtag. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
 		\hline
 		ROF5.5.1.7.1  &  Per questo tipo di View è possibile confrontare due hashtag, che appariranno sul grafico con due colori diversi. & Interno \\
@@ -295,22 +294,28 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		ROF5.5.1.10  &  Tipo di View: viene visualizzato un Radar Chart che illustra per i vari momenti della giornata la frequenza con cui vengono fatti i post di un utente. & Interno \\
 		\hline
 
-		ROF5.6  &  L'utente deve potere visualizzare tutte le metriche di una Recipe una volta premuto l'apposito pulsante  &  UC1.3.2 \newline Interno \\
+		ROF5.6  &  Premendo il tasto di confronto l'utente deve visualizzare una schermata in cui selezionare i parametri per il confronto  &  UC1.3.2 \newline UC1.3.2.1 \\
 		\hline
-		ROF5.6.1  &  [TO DO]  &  TO DO \newline Interno \\
+		ROF5.6.1  &  L'utente deve poter selezionare la categoria tra Facebook, Twitter e Instagram  &  UC1.3.2.1.1 \\
 		\hline
-		ROF5.6.1  &  [TO DO]  &  TO DO \newline Interno \\
+		ROF5.6.2  &  L'utente deve poter selezionare un tipo di metrica tra quelle presenti nella categoria selezionata  &  UC1.3.2.1.2 \\
 		\hline
-		ROF5.6.1  &  [TO DO]  &  TO DO \newline Interno \\
+		ROF5.6.2.1  &  Per la categoria Facebook sono disponibili i tipi di metrica Evento o Pagina  &  Interno \\
 		\hline
-		ROF5.6.1  &  [TO DO]  &  TO DO \newline Interno \\
+		ROF5.6.2.2  &  Per la categoria Twitter sono disponibili i tipi di metrica Utente o Hashtag &  Interno \\
 		\hline
-		ROF5.6.1  &  [TO DO]  &  TO DO \newline Interno \\
+		ROF5.6.2.3  &  Per la categoria Instagram sono disponibili i tipi di metrica Utente e Hashtag   &  Interno \\
 		\hline
-		ROF5.6.1  &  [TO DO]  &  TO DO \newline Interno \\
+		ROF5.6.3  &  Una volta selezionata la categoria e il tipo di metrica l'utente deve visualizzare tutte le metriche di quel tipo e categoria presenti nella Recipe &  UC1.3.2.1.3 \\
 		\hline
-
-
+		ROF5.6.3.1  &  L'utente deve poter selezionare delle metriche tra quelle visualizzate &  UC1.3.2.1.3 \\
+		\hline
+		ROF5.6.4  &  Una volta selezionate almeno due metriche tra quelle visualizzate l'utente deve poter cliccare un pulsante per generare il confronto  &  UC1.3.2.2 \\
+		\hline
+		ROF5.6.4.1  &  Una volta cliccato il pulsante per generare il confronto l'utente deve poter vedere la View di confronto generata dal confornto selezionato  &  UC1.3.2.3 \\
+		\hline
+		ROF5.6.4.2  &  Se non fossero presenti nel database dati sufficienti per generare la View l'utente deve poter visualizzare un messaggio di avvertimento ed essere riportato alla selezione delle metriche  &  UC1.3.2.4 \\
+		\hline
 
 
 		ROF6  & L'utente ha la possibilità di gestire le View che più preferisce in maniera da averle a disposizione più velocemente. & UC1.11 \\
@@ -348,15 +353,15 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF7.1.1.5 & L'utente deve scegliere la tipologia della metrica tra: Evento o Pagina, se ha scelto la categoria Facebook. Questa selezione è obbligatoria e vincolata dal sistema. & Interno \\
 		\hline
-		ROF7.1.1.6 & L'utente deve scegliere la tipologia della metrica tra: Pagina o Hashtag, se ha scelto la categoria Twitter. Questa selezione è obbligatoria e vincolata dal sistema. & Interno \\
+		ROF7.1.1.6 & L'utente deve scegliere la tipologia della metrica tra: Utente o Hashtag, se ha scelto la categoria Twitter. Questa selezione è obbligatoria e vincolata dal sistema. & Interno \\
 		\hline
-		ROF7.1.1.7 & L'utente deve scegliere la tipologia della metrica tra: Pagina o Hashtag, se ha scelto la categoria Instagram. Questa selezione è obbligatoria e vincolata dal sistema. & Interno \\
+		ROF7.1.1.7 & L'utente deve scegliere la tipologia della metrica tra: Utente o Hashtag, se ha scelto la categoria Instagram. Questa selezione è obbligatoria e vincolata dal sistema. & Interno \\
 		\hline
 		ROF7.1.1.8 & Se l'utente sceglie la categoria Facebook deve inserire il ``nome'' o ``l'identificativo'' della Pagina o dell'Evento del quale vuole raccogliere i dati. Questo campo è obbligatorio. & Interno \\
 		\hline
-		ROF7.1.1.9 & Se l'utente sceglie la categoria Twitter deve inserire il ``nome'' della Pagina o dell'Hashtag del quale vuole raccogliere i dati. Questo campo è obbligatorio. & Interno \\
+		ROF7.1.1.9 & Se l'utente sceglie la categoria Twitter deve inserire il ``nome'' dell'Utente o dell'Hashtag del quale vuole raccogliere i dati. Questo campo è obbligatorio. & Interno \\
 		\hline
-		ROF7.1.1.10 & Se l'utente sceglie la categoria Instagram deve inserire il ``nome'' della Pagina o dell'Hashtag del quale vuole raccogliere i dati. Questo campo è obbligatorio. & Interno \\
+		ROF7.1.1.10 & Se l'utente sceglie la categoria Instagram deve inserire il ``nome'' dell'Utente o dell'Hashtag del quale vuole raccogliere i dati. Questo campo è obbligatorio. & Interno \\
 		\hline
 		ROF7.1.1.11 & Il sistema avviserà l'utente in maniera istantanea se un campo è compilato correttamente. & Interno \\
 		\hline
