@@ -265,33 +265,21 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF5.5.1.2  &  Tipo di View: vengono visualizzati i nuovi followers di un utente per giorno, in un Line Chart. Nel grafico vengono anche segnati come linee verticali i momenti in cui l'utente ha pubblicato un post. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
 		\hline
-		ROF5.5.1.2.1  &  Per questo tipo di View è possibile confrontare due utenti, che appariranno sul grafico con due colori diversi. & Interno \\
-		\hline
 		ROF5.5.1.3  &  Tipo di View: vengono visualizzati i nuovi like e i nuovi commenti ricevuti da un utente per giorno, in un Line Chart. Nel grafico vengono anche segnati come linee verticali i momenti in cui l'utente ha pubblicato un post. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
-		\hline
-		ROF5.5.1.3.1  &  Per questo tipo di View è possibile confrontare due utenti, che appariranno sul grafico con due colori diversi. & Interno \\
 		\hline
 		ROF5.5.1.4  & Tipo di View: viene visualizzato in un Line Chart l'andamento dei like e quello dei commenti ricevuti da un utente fratto il numero di followers che possiede. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
 		\hline
 		ROF5.5.1.5  &  Tipo di View: viene visualizzato in un Line Chart il numero di like ricevuti al giorno da un utente fratto la frequenza di post dell'utente (ovvero il numero di post al giorno). Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
 		\hline
-		ROF5.5.1.5.1  &  Per questo tipo di View è possibile confrontare due utenti, che appariranno sul grafico con due colori diversi. & Interno \\
+		ROF5.5.1.6  &  Tipo di View: viene visualizzato un Radar Chart che illustra per i vari momenti della giornata la frequenza con cui vengono fatti i post di un utente. & Interno \\
 		\hline
-		ROF5.5.1.6  &  Tipo di View: viene visualizzato in un Line Chart il numero di post e il numero utenti che hanno usato un dato hashtag. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
+		ROF5.5.1.7  &  Tipo di View: viene visualizzato in un Line Chart il numero di post e il numero utenti che hanno usato un dato hashtag. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
 		\hline
-		ROF5.5.1.6.1  &  Per questo tipo di View è possibile confrontare due hashtag, che appariranno sul grafico con due colori diversi. & Interno \\
+		ROF5.5.1.8  &  Tipo di View: viene visualizzato in un Line Chart il numero di like e il numero di commenti ricevuti dai post che contengono un dato hashtag. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
 		\hline
-		ROF5.5.1.7  &  Tipo di View: viene visualizzato in un Line Chart il numero di like e il numero di commenti ricevuti dai post che contengono un dato hashtag. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
+		ROF5.5.1.9  &  Tipo di View: vengono visualizzate in un Map Chart le zone geografiche dove sono stati fatti i post contenenti un dato hashtag (di cui è nota la localizzazione), colorandole con una colorazione di intensità proporzionale al numero di post contenti l'hashtag nella zona. & Interno \\
 		\hline
-		ROF5.5.1.7.1  &  Per questo tipo di View è possibile confrontare due hashtag, che appariranno sul grafico con due colori diversi. & Interno \\
-		\hline
-		ROF5.5.1.8  &  Tipo di View: vengono visualizzate in un Map Chart le zone geografiche dove sono stati fatti i post contenenti un dato hashtag (di cui è nota la localizzazione), colorandole con una colorazione di intensità proporzionale al numero di post contenti l'hashtag nella zona. & Interno \\
-		\hline
-		ROF5.5.1.8.1  &  Per questo tipo di View è possibile confrontare due hashtag, che appariranno sul grafico con due colori diversi. & Interno \\
-		\hline
-		ROF5.5.1.9  &  Tipo di View: viene visualizzato un Pie Chart che mostra per un dato hashtag la percentuale di post fatti in un dato stato sul totale di post contenenti l'hashtag dei quali è noto lo stato in cui sono stati fatti. I dati vengono forniti anche non in percentuale. & Interno \\
-		\hline
-		ROF5.5.1.10  &  Tipo di View: viene visualizzato un Radar Chart che illustra per i vari momenti della giornata la frequenza con cui vengono fatti i post di un utente. & Interno \\
+		ROF5.5.1.10  &  Tipo di View: viene visualizzato un Pie Chart che mostra per un dato hashtag la percentuale di post fatti in un dato stato sul totale di post contenenti l'hashtag dei quali è noto lo stato in cui sono stati fatti. I dati vengono forniti anche non in percentuale. & Interno \\
 		\hline
 
 		ROF5.6  &  Premendo il tasto di confronto l'utente deve visualizzare una schermata in cui selezionare i parametri per il confronto  &  UC1.3.2 \newline UC1.3.2.1 \\
@@ -312,9 +300,23 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF5.6.4  &  Una volta selezionate almeno due metriche tra quelle visualizzate l'utente deve poter cliccare un pulsante per generare il confronto  &  UC1.3.2.2 \\
 		\hline
-		ROF5.6.4.1  &  Una volta cliccato il pulsante per generare il confronto l'utente deve poter vedere la View di confronto generata dal confornto selezionato  &  UC1.3.2.3 \\
+		ROF5.6.4.1  &  Una volta cliccato il pulsante per generare il confronto l'utente deve poter vedere le View di confronto generate dal confronto selezionato  &  UC1.3.2.3 \\
 		\hline
-		ROF5.6.4.2  &  Se non fossero presenti nel database dati sufficienti per generare la View l'utente deve poter visualizzare un messaggio di avvertimento ed essere riportato alla selezione delle metriche  &  UC1.3.2.4 \\
+		ROF5.6.4.1.1  &  Per la categoria Facebook selezionando il tipo di metrica Evento le View di confronto generate sono quelle descritte nei requisiti [TO DO] &  Interno \\
+		\hline
+		ROF5.6.4.1.2  &  Per la categoria Facebook selezionando il tipo di metrica Pagina le View di confronto generate sono quelle descritte nei requisiti [TO DO] &  Interno \\
+		\hline
+		ROF5.6.4.1.3  &  Per la categoria Twitter selezionando il tipo di metrica Utente le View di confronto generate sono quelle descritte nei requisiti [TO DO] &  Interno \\
+		\hline
+		ROF5.6.4.1.4  &  Per la categoria Twitter selezionando il tipo di metrica Hashtag le View di confronto generate sono quelle descritte nei requisiti [TO DO] &  Interno \\
+		\hline
+		ROF5.6.4.1.5  &  Per la categoria Instagram selezionando il tipo di metrica Utente le View di confronto generate sono quelle descritte nei requisiti ROF5.5.1.2, ROF5.5.1.3 e ROF5.5.1.5 &  Interno \\
+		\hline
+		ROF5.6.4.1.6  &  Per la categoria Instagram selezionando il tipo di metrica Hashtag le View di confronto generate sono quelle descritte nei requisiti ROF5.5.1.7, ROF5.5.1.8 e ROF5.5.1.9  &  Interno \\
+		\hline
+		ROF5.6.4.2  &  I dati devono essere illustrati sul grafico con un colore diverso per ciascuna delle metriche selezionate  &  Interno \\
+		\hline
+		ROF5.6.4.3  &  Se non fossero presenti nel database dati sufficienti per generare la View l'utente deve poter visualizzare un messaggio di avvertimento ed essere riportato alla selezione delle metriche  &  UC1.3.2.4 \\
 		\hline
 
 
@@ -324,7 +326,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF6.1.1  & Il sistema mostra un messaggio qualora non ci fossero View salvate come preferite. &  Interno \newline UC1.11.4 \\
 		\hline
-		ROF6.2  & L'utente ha la possibilità di aggiungere ogni View tra quelle preferite premendo sull'apposito pulsante vicino la View che desidera marcare.  & UC1.11.2 \newline Interno \\
+		ROF6.2  & L'utente ha la possibilità di aggiungere qualsiasi View a quelle preferite premendo sull'apposito pulsante vicino alla View che desidera aggiunngere.  & UC1.11.2 \newline Interno \\
 		\hline
 		ROF6.2.1  & Il sistema visualizza un messaggio se la View non è stata aggiunta correttamente tra quelle preferite.  & Interno \\
 		\hline
