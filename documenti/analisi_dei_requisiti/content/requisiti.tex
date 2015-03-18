@@ -155,7 +155,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		ROF3.1.2.1  &  Nella finestra dei dati personali deve essere presente il nome utente dell'utente autenticato. l'indirizzo e-mail ad esso associata e la data del suo ultimo accesso &  UC1.2.1.1 \\
 		\hline
 		ROF3.1.2.2  &  Se nella finestra dei dati personali deve essere presente l'indirizzo e-mail associato all'account dell'utente autenticato &  UC1.2.1.2 \\
-		\hline		
+		\hline
 		ROF3.1.2.3  &  Nella finestra dei dati personali deve essere presente la data dell'ultimo accesso al sistema dell'utente autenticato precedente a quello in corso &  UC1.2.1.3 \\
 		\hline
 		ROF3.2  &  Nel menù delle informazioni personali è presente un pulsante per visualizzare le proprie statistiche &  UC1.2.2 \\
@@ -210,7 +210,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF5.2.1  &  La visualizzazione delle metriche sarà suddivisa per categoria  &  UC1.3.1 \newline Interno \\
 		\hline
-		ROF5.2.1.1  &  Le categorie sono: Facebook, Twitter, Instagram &  UC1.3.1 \newline Capitolato \\		
+		ROF5.2.1.1  &  Le categorie sono: Facebook, Twitter, Instagram &  UC1.3.1 \newline Capitolato \\
 		\hline
 		ROF5.2.1.2  &  Il sistema, per ogni metrica dell'elenco, fornirà il nome, la descrizione se presente e la tipologia della metrica (vedi ROF7.1.1.5, ROF7.1.1.6, ROF7.1.1.7). &  UC1.3.1 \newline Interno \\
 		\hline
@@ -242,7 +242,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		ROF5.4.1  & Le View offerte per la categoria di Twitter possono mostrare grafici di diversi tipi: Line Chart, Bar Chart, Pie Chart, Radar Chart e Map Chart.  &  UC1.3.1.2 \newline Interno \\
 		\hline
 		ROF5.4.1.1  &  Tipo di View: viene visualizzato un Bar Chart orizzontale che mostra un riepilogo istantaneo dei Tweet e dei Follower di un singolo utente. & Interno \\
-		\hline	
+		\hline
 		ROF5.4.1.2  &  Tipo di View: viene visualizzato un Line Chart che indica il numero di Tweet e il numero di Follower dell'utente, fornendo una visualizzazione settimanale, mensile ed annuale. & Interno \\
 		\hline
 		ROF5.4.1.3  &  Tipo di View: viene visualizzato un Map Chart che illustra l'area geografica di appartenenza dei Tweet con un particolare hash tag. & Interno \\
@@ -262,7 +262,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		ROF5.5.1  & Le View offerte per la categoria di Instagram possono mostrare grafici di diversi tipi: Line Chart, Bar Chart, Pie Chart e Map Chart  &  UC1.3.1.3 \newline Interno \\
 		\hline
 		ROF5.5.1.1  &  Tipo di View: vengono visualizzati per ogni post di un utente il numero di like e il numero di commenti in un Bar Chart & Interno \\
-		\hline	
+		\hline
 		ROF5.5.1.2  &  Tipo di View: vengono visualizzati i nuovi followers di un utente per giorno, in un Line Chart. Nel grafico vengono anche segnati come linee verticali i momenti in cui l'utente ha pubblicato un post. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
 		\hline
 		ROF5.5.1.2.1  &  Per questo tipo di View è possibile confrontare due utenti, che appariranno sul grafico con due colori diversi. & Interno \\
@@ -398,25 +398,21 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 
 
-		RDF9 [TO CHANGE] & [TO CHANGE] Nella home screen dell'utente amministratore è presente un pulsante per accedere all'elenco degli utenti  &  UC1.7.1 \newline UC1.7.2.1 \newline UC1.7.3.1 \\
+		ROF9  &  Nella home screen dell'utente amministratore è presente un pulsante per accedere all'elenco degli utenti  &  UC1.7.1 \\
 		\hline
-		RDF9.1  &  Accanto al nome di ogni utente nella lista è presente un pulsante modifica  &  Interno \\
+		ROF9.1  &  Accanto al nome di ogni utente nella lista è presente un pulsante che permette di modificare i permessi di un utente  &  UC1.7.2 \\
 		\hline
-		RDF9.1.1  &  Cliccando sul pulsante modifica si viene reindirizzati alla pagina di modifica degli utenti  &  UC1.7.2.2 \\
+		RFF9.1.1  &  Una volta premuto l'apposito pulsate per la modifica dei permessi utente, le modifiche effettuate vengono applicate localmente in attesa che le modifiche generali agli utenti vengano confermate  &  Interno \newline UC1.7.2 \\
 		\hline
-		RFF9.2  &  Nella pagina di modifica di un utente l'amministratore può cambiare i permessi di un utente  &  UC1.7.2 \newline UC1.7.2.3 \\
+		ROF9.2  &  Accanto al nome di ogni utente nella lista è presente un pulsante che permette di eliminare un utente dal sistema  &  UC1.7.3 \\
 		\hline
-		RFF9.2.1  &  Premendo conferma il ruolo e i permessi dell'utente vengono modificati sul database  &  UC1.7.2.4 \\
+		ROF9.2.1  &  Una volta premuto l'apposito pulsate per l'eliminazione di un utente, le modifiche effettuate vengono applicate localmente in attesa che le modifiche generali agli utenti vengano confermate  &  Interno \newline UC1.7.3 \\
 		\hline
-		RDF9.3  &  Nella pagina di modifica di un utente è presente il pulsante elimina utente  &  UC1.7.3 \newline UC1.7.3.2 \\
+		ROF9.3  &  Al termine dell'elenco degli utenti attulmente visualizzati è presente un pulsante per confermare le modifiche applicate  &  UC1.7.4 \\
 		\hline
-		RDF9.3.1  &  Se viene premuto il pulsante di eliminazione di un utente appare un messaggio che chiede conferma dell'eliminazione  & UC1.7.3.3\\
+		ROF9.3.1  &  Se la conferma delle modifiche ha successo, l'amministratore visualizza un messaggio di conferma  &  UC1.7.4 \\
 		\hline
-		RDF9.3.1.1  &  Se viene confermata il sistema verifica se l'utente è loggato e in tal caso segnala l'errore e interrompe l'eliminazione  & Interno \\
-		\hline
-		RDF9.3.1.2  &  Se l'eliminazione ha successo appare un messaggio di conferma e si viene reindirizzati alla home screen  & UC1.7.3.3\\
-		\hline
-		RDF9.3.1.3  &  Se c'è stato un errore appare un messaggio d'errore e si è riportati alla pagina di modifica di un utente  & UC1.7.4\\
+		ROF9.3.2  &  Se si è verificato un errore in fase di conferma delle modifiche (un utente sta cambiando i permessi a se stesso oppure un utente eliminato è attualmente loggato), il sistema produce un messaggio di errore e le modifiche vengono annullate &  UC1.7.5 \\
 		\hline
 
 
@@ -606,4 +602,3 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 	\end{longtable}
 	\egroup
 \end{center}
-
