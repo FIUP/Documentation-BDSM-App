@@ -92,6 +92,8 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\textbf{Requisito} & \textbf{Descrizione} & \textbf{Fonti} \\
 		\hline
 
+		% Registrazione utente
+
 		ROF1  &  L'utente non autenticato può effettuare la registrazione al servizio  &  UC1.8 \\
 		\hline
 		ROF1.1  &  La registrazione richiede l'inserimento dello username  &  UC1.8.1 \\
@@ -125,6 +127,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		RDF1.8  &  Nel caso la registrazione sia andata a buon fine, viene inviata una e-mail di conferma all'indirizzo inserito dall'utente  &  Interno \\
 		\hline
 
+		% Login Utente
 
 		ROF2  &  L'utente non autenticato può effettuare il login tramite l'apposto form di login  &  UC1.1 \\
 		\hline
@@ -143,6 +146,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		ROF2.5  &  Il sistema aggiorna la home screen permettendo all'utente autenticato di accedere alle diverse aree del del servizio  &  Interno  \\
 		\hline
 
+		% Info e Statistiche utente
 
 		ROF3  &  Nella home screen dell'utente autenticato è presente un pulsante per aprire il menù delle informazioni personali  &  UC1.2 \newline UC1.5 \\
 		\hline
@@ -182,6 +186,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF3.3.3.2  &  Una volta premuto il tasto di conferma appare un messaggio di conferma se la password è stata modificata  &  Interno \\
 
+		% Logout
 
 		\hline
 		ROF4  &  Nella home screen è presente un pulsante di logout  &  UC1.6 \\
@@ -194,7 +199,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF4.1.2  &  Se la sessione è scaduta appare un messaggio di errore e il sistema aggiorna la pagina per mostrare la schermata di login  &  Interno \\
 
-
+		% Recipes e Views
 
 		\hline
 		ROF5  &  Nella home screen dell'utente autenticato sono mostrare tutte le Recipe presenti nel sistema &  UC1.3 \\
@@ -204,7 +209,6 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		ROF5.1.1  & Il sistema, per ogni Recipe dell'elenco, deve fornire il titolo e qualora presente la descrizione  &  Interno \\
 		\hline
 		ROF5.1.2  & Il sistema, per ogni Recipe dell'elenco, deve fornire due pulsanti per scegliere se visualizzare le metriche della Recipe o effettuare un confronto tra le metriche &  UC1.3 \\
-
 		\hline
 		ROF5.2  &  L'utente deve potere visualizzare tutte le metriche di una Recipe una volta premuto l'apposito pulsante  &  UC1.3.1 \newline Interno \\
 		\hline
@@ -216,6 +220,8 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF5.2.1.3  &  Il sistema, per ogni metrica dell'elenco, deve fornire il pulsante per accedere alle visualizzazioni delle View presenti per quella metrica. &  UC1.3.1 \newline Interno \\
 		\hline
+
+ 			% Facebook
 
 		ROF5.3  & Premendo sul pulsante del ROF5.2.1.3, da dentro la categoria Facebook, vengono fornite tutte le View predisposte dal sistema per avere delle statistiche. & UC1.3.1.1 \newline Interno \\
 		\hline
@@ -236,6 +242,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		ROF5.3.1.7  &  Tipo di View: viene visualizzato un Line Chart che mostra l’andamento del numero di post giornalieri di una pagina [TO DO]. & Interno \\
 		\hline
 
+ 			% Twitter
 
 		ROF5.4  &  Premendo sul pulsante del ROF5.2.1.3, da dentro la categoria Twitter, vengono fornite tutte le View predisposte dal sistema per avere delle statistiche. &  UC1.3.1.2 \newline Interno \\
 		\hline
@@ -256,6 +263,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		ROF5.4.1.7  &  Tipo di View: viene visualizzato un Pie Chart che indica su che tipo di piattaforma gli utenti hanno twittato. & Interno \\
 		\hline
 
+ 			% Instagram
 
 		ROF5.5  &  Premendo sul pulsante del ROF5.2.1.3, da dentro la categoria Instagram, vengono fornite tutte le View predisposte dal sistema per avere delle statistiche &  UC1.3.1.3 \newline Interno \\
 		\hline
@@ -281,6 +289,8 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF5.5.1.10  &  Tipo di View: viene visualizzato un Pie Chart che mostra per un dato hashtag la percentuale di post fatti in un dato stato sul totale di post contenenti l'hashtag dei quali è noto lo stato in cui sono stati fatti. I dati vengono forniti anche non in percentuale. & Interno \\
 		\hline
+
+		% Confronto
 
 		ROF5.6  &  Premendo il tasto di confronto l'utente deve visualizzare una schermata in cui selezionare i parametri per il confronto  &  UC1.3.2 \newline UC1.3.2.1 \\
 		\hline
@@ -319,6 +329,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		ROF5.6.4.3  &  Se non fossero presenti nel database dati sufficienti per generare la View l'utente deve poter visualizzare un messaggio di avvertimento ed essere riportato alla selezione delle metriche  &  UC1.3.2.4 \\
 		\hline
 
+ 		% View Preferite
 
 		ROF6  & L'utente ha la possibilità di gestire le View che più preferisce in maniera da averle a disposizione più velocemente. & UC1.11 \\
 		\hline
@@ -337,7 +348,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		ROF6.4 & L'utente può marcare come preferite un numero illimitato di View. &  Interno \\
 		\hline
 
-
+ 		% Richiesta nuova recipe
 
 		ROF7  & L'utente ha la possibilità di richiedere l'inserimento di una nuova Recipe. & UC1.9 \\
 		\hline
@@ -376,34 +387,38 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		ROF7.2  & Il sistema invierà una notifica agli amministratori che è stata inserita una nuova richiesta per l'inserimento di una Recipe. & Interno \\
 		\hline
 
-
-
+ 		% Admin Area
 
 		ROF8  &  Un utente che possiede i privilegi di amministratore può accedere ad alcune aree riservate del sistema.  &  UC1.4 \newline UC1.7 \\
 		\hline
-		ROF8.1  &  Un amministratore può visualizzare tutte le Recipe memorizzate nel sistema selezionando l'apposito pulsante.  &  UC1.4.1 \\
+		ROF8.1  &  Un amministratore può accedere al pannello per inserire una nuova Recipe  &  UC1.4.1 \newline UC1.4.1.1 \\
 		\hline
-		ROF8.2  &  Un amministratore può accedere al pannello per inserire una nuova Recipe  &  UC1.4.2 \newline UC1.4.2.1 \newline UC1.4.2.2  \\
+		ROF8.1.1  &  Il sistema richiede l'inserimento di determinati parametri per individuare il contesto dei dati richiesti dalla Recipe.  &  UC1.4.1.2 \\
 		\hline
-		ROF8.2.1  &  Il sistema richiede l'inserimento di determinati parametri per individuare il contesto dei dati richiesti dalla Recipe.  &  Interno \newline UC1.4.2.3 \\
+		ROF8.1.1.1  &  Viene richiesto l'inserimento del titolo della Recipe.  &  UC1.4.1.2.1 \\
 		\hline
-		ROF8.2.2  &  Il sistema richiede la conferma dei dati inseriti prima di creare la nuova Recipe.  &  UC1.4.2.4 \\
+		ROF8.1.1.2  &  Viene richiesto l'inserimento di una descrizione della Recipe.  &  UC1.4.1.2.2 \\
 		\hline
-		ROF8.3  &  Il sistema visualizza un messaggio di errore contenente i parametri inseriti non corretti oppure il messaggio di una eccezione lasciato in fase di creazione della Recipe.  &  UC1.4.3 \\
+		ROF8.1.1.3  &  L'utente amministratore può aggiungere un numero qualsiasi di metriche alla Recipe.  &  UC1.4.1.2.3 \\
 		\hline
-		ROF8.3.1  &  Nel caso venga confermata  una nuova Recipe corretta, il sistema salva i suoi parametri nel database  e riporta l'amministratore all'elenco delle Recipe  &  Interno \\
+		ROF8.1.1.4  &  Per ogni metrica che l'utente amministratore desidera inserire deve specificare i dati descritti nei requisiti ROF7.1.1.4, ROF7.1.1.5, ROF7.1.1.6, ROF7.1.1.7, ROF7.1.1.8, ROF7.1.1.9, ROF7.1.1.10  &  Interno \\
 		\hline
-		ROF8.4  &  L'utente amministratore può eliminare una Recipe memorizzata nel sistema tramite il relativo pulsante nella schermata di elenco delle Recipe  &  UC1.4.4 \newline UC1.4.4.1 \newline UC1.4.4.2 \\
+		ROF8.2.1  &  Il sistema richiede la conferma dei dati inseriti prima di creare la nuova Recipe.  &  UC1.4.1.3 \\
 		\hline
-		ROF8.4.1  &  L'utente amministratore deve confermare l'eliminazione della Recipe una volta premuto l'apposito pulsate  &  UC1.4.4.3 \\
+		ROF8.2.2  &  Nel caso venga confermata una Recipe che non contiene almeno una metrica per categoria o l'utente non ha inserito dei parametri corrispondenti a quelli specificati nel requisito ROF8.1.1.4 il sistema visualizza un messaggio di errore contenente i parametri inseriti non corretti oppure il messaggio di una eccezione lanciato in fase di creazione della Recipe.  &  UC1.4.2 \\
 		\hline
-		ROF8.4.2  &  Una volta confermata l'eliminazione di una Recipe, il sistema provvede all'eliminazione di tutte le informazioni legate ad essa presenti nel database  &  Interno \\
+		ROF8.2.3  &  Nel caso venga confermata  una nuova Recipe corretta, il sistema salva i suoi parametri nel database e riporta l'amministratore all'elenco delle Recipe  &  Interno \\
 		\hline
-		ROF8.4.3  &  Una volta confermata l'eliminazione di una Recipe, il sistema provvede ad eliminare tutti i dati grezzi presenti nel database legati a tale Recipe  &  Interno \\
+		ROF8.3  &  L'utente amministratore può eliminare una Recipe memorizzata nel sistema tramite il relativo pulsante nella schermata di elenco delle Recipe  &  UC1.4.3 \newline UC1.4.3.1  \\
 		\hline
-		RFF8.5  &  Dal pannello di amministrazione è possibile visualizzare feedback e statistiche sugli utenti in relazione ai dati delle Recipe utilizzati  &  Interno \\
+		ROF8.3.1  &  L'utente amministratore deve confermare l'eliminazione della Recipe una volta premuto l'apposito pulsate  &  UC1.4.3.2 \\
+		\hline
+		ROF8.3.2  &  Una volta confermata l'eliminazione di una Recipe, il sistema provvede all'eliminazione di tutte le informazioni legate ad essa presenti nel database  &  Interno \\
+		\hline
+		ROF8.3.3  &  Una volta confermata l'eliminazione di una Recipe, il sistema provvede ad eliminare tutti i dati grezzi presenti nel database legati a tale Recipe  &  Interno \\
 		\hline
 
+ 		% Modifica permessi utenti
 
 		ROF9  &  Nella home screen dell'utente amministratore è presente un pulsante per accedere all'elenco degli utenti  &  UC1.7.1 \\
 		\hline
@@ -422,7 +437,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		ROF9.3.2  &  Se si è verificato un errore in fase di conferma delle modifiche (un utente sta cambiando i permessi a se stesso oppure un utente eliminato è attualmente loggato), il sistema produce un messaggio di errore e le modifiche vengono annullate &  UC1.7.5 \\
 		\hline
 
-
+ 		% Gestione richieste recipe
 
 		ROF10  &  L'amministratore può gestire tutte le richieste di nuove Recipe, ricevute dagli utenti, da una apposita sezione.  & UC1.10 \\
 		\hline
@@ -451,8 +466,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		RDF10.5.1.1  &  Il sistema invierà una mail all'utente per notificare il messaggio di rifiuto.  & UC1.10.5.3 \newline Interno \\
 		\hline
 
-
-
+ 		% REST
 
 		ROF11  &  Il sistema fornisce una serie di servizi REST  & Capitolato \newline UC2 \\
 		\hline
@@ -484,7 +498,6 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF11.3.1.X & [TO DO] (requisito su API fornite) & Interno \\
 		\hline
-
 		ROF11.3.2  &  Il sistema restituisce un errore se il token utilizzato è non valido  &  UC2.2.2 \\
 		\hline
 
