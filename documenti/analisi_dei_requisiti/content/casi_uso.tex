@@ -545,9 +545,9 @@
 	\item \textbf{Precondizione:} l'amministratore autenticato è posizionato nella home screen dell'applicazione;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
-		\item Visualizza Recipe (UC1.4.1);
-		\item Aggiungi nuova Recipe (UC1.4.2);
-		\item Elimina Recipe (UC1.4.4);
+		\item Aggiungi nuova Recipe (UC1.4.1);
+		\item Creazione Recipe fallita (UC1.4.2);
+		\item Elimina Recipe (UC1.4.3);
 	\end{enumerate}
 	\item \textbf{Postcondizione:} le informazioni richieste dall'amministratore sono state fornite, le Recipe eliminate, cancellate dal sistema e quelle aggiunte, salvate; Se durante la creazione sono stati inseriti valori che non rispettano i vincoli di sistema è stata visualizzata una schermata di errore;
 	\item \textbf{Estensioni:} Creazione Recipe fallita (UC1.4.3).
@@ -564,9 +564,9 @@
 	\item \textbf{Precondizione:} l'amministratore è nella home page ed ha visualizzato l'elenco delle Recipe salvate nel sistema;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
-		\item Apertura pannello inserimento nuova Recipe (UC1.4.1.1);
-		\item Inserimento parametri (UC1.4.1.2);
-		\item Conferma parametri inseriti (UC1.4.1.3).
+		\item Apertura pannello inserimento nuova Recipe (UC1.4.2.1);
+		\item Inserimento parametri (UC1.4.2.2);
+		\item Conferma parametri inseriti (UC1.4.2.3).
 	\end{enumerate}
 	\item \textbf{Postcondizione:} l'amministratore ha salvato una nuova Recipe nel sistema;
 \end{itemize}
@@ -595,9 +595,9 @@
 	\item \textbf{Precondizione:} l'amministratore ha selezionato il pulsante per l'inserimento di una nuova Recipe;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
-		\item Inserimento titolo Recipe (UC1.4.1.2.1);
-		\item Inserimento descrizione Recipe (UC1.4.1.2.2);
-		\item Inserimento metrica (UC1.4.1.2.3);
+		\item Inserimento titolo Recipe (UC1.4.2.3.1);
+		\item Inserimento descrizione Recipe (UC1.4.2.3.2);
+		\item Inserimento metrica (UC1.4.2.3.3);
 	\end{enumerate}
 	\item \textbf{Postcondizione:} l'amministratore ha inserito tutti i parametri richiesti dal sistema.
 \end{itemize}
@@ -644,7 +644,7 @@
 
 
 
-\subsubsection{UC1.4.1.3: Conferma parametri inseriti}
+\subsubsection{UC1.4.1.4: Conferma parametri inseriti}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -657,20 +657,20 @@
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.4.3: Creazione Recipe fallita}
+\subsubsection{UC1.4.2: Creazione Recipe fallita}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
 		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'amministratore durante l'inserimento di una nuova Recipe ha inserito dei parametri non conformi alle specifiche presenti in UC1.4.1.2.3 o non ha inserito almeno uno metrica (nel complessivo, non almeno una per categoria);
+	\item \textbf{Descrizione:} l'amministratore durante l'inserimento di una nuova Recipe ha inserito dei parametri non conformi alle specifiche presenti in UC1.4.2.3 o non ha inserito almeno uno metrica (nel complessivo, non almeno una per categoria);
 	\item \textbf{Precondizione:} l'amministratore ha selezionato il pulsante di conferma per la creazione di una nuova Recipe;
 	\item \textbf{Scenario principale:} l'amministratore ha visualizzato un messaggio di errore contenente l'elenco dei parametri inseriti non corretti o un messaggio che dice che manca da inserire almeno una metrica;
 	\item \textbf{Postcondizione:} l'amministratore ha preso atto che i dati inseriti non sono corretti o sufficienti per la creazione delle Recipe.
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.4.4: Eliminazione Recipe}
+\subsubsection{UC1.4.3: Eliminazione Recipe}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -687,7 +687,7 @@
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.4.4.1: Eliminazione Recipe}
+\subsubsection{UC1.4.3.1: Eliminazione Recipe}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -700,7 +700,7 @@
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.4.4.2: Conferma eliminazione Recipe}
+\subsubsection{UC1.4.3.2: Conferma eliminazione Recipe}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
