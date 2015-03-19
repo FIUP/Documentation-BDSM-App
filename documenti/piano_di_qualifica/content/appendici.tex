@@ -512,6 +512,81 @@ Lo stato \textbf{N.I.} presente nelle tabelle sottostanti è da intendersi come 
 				\item TO DO
 			\end{itemize}
 			
+		\subsubsection{TVF7}
+			L'utente vuole verificare che il sistema permetta all'utente di richiedere l'inserimento di una nuova Recipe. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere alla sezione per la richiesta di una nuova Recipe;
+				\item verificare che l'utente possa generare la richiesta dall'apposito form;
+				\item verificare che il sistema invii una notifica agli amministratori che è stata inserita  una nuova richiesta di Recipe.
+			\end{itemize}
+			
+		\subsubsection{TVF7.1}
+			L'utente vuole verificare che il sistema permetta all'utente di generare la richiesta dall'apposito form. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere alla sezione per la richiesta di una nuova Recipe;
+				\item inserire il titolo della Recipe;
+				\item inserire almeno una metrica nella richiesta della Recipe;
+				\item selezionare la categoria della metrica tra Facebook, Twitter e Instagram;
+				\item selezionare la tipologia di metrica in base alla categoria scelta;
+				\item compilare i campi in base alla tipologia e alla categoria di metrica scelta;
+				\item verificare che il sistema avvisi l'utente in modo istantaneo se un campo è stato compilato correttamente;
+				\item verificare che il sistema avvisi l'utente in modo istantaneo se un campo obbligatorio è stato lasciato vuoto;
+				\item cliccare il pulsante di invio della richiesta;
+				\item verificare che la richiesta fallisca se i dati inseriti sono errati o si sono lasciati campi vuoti.
+			\end{itemize}
+			
+		\subsubsection{TVF8}
+			L'utente vuole verificare che il sistema permetta ad un utente con privilegi di amministratore di accedere all'area riservata de sistema. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere all'area riservata;
+				\item verificare che un amministratore può accedere al pannello per inserire una nuova Recipe;
+				\item verificare che il sistema richieda la conferma dei dati inseriti prima di creare la nuova Recipe;
+				\item verificare che l'amministratore possa eliminare una Recipe memorizzata nel sistema dalla schermata di elenco delle Recipe.
+			\end{itemize}
+			
+		\subsubsection{TVF8.1}
+			L'utente vuole verificare che il sistema permetta ad un utente con privilegi di amministratore di accedere al pannello per inserire una nuova Recipe. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere all'area riservata;
+				\item verificare che sia richiesto l'inserimento di determinati parametri per individuare il contesto dei dati richiesti dalla Recipe.
+			\end{itemize}
+			
+		\subsubsection{TVF8.1.1}
+			L'utente vuole verificare che il sistema richieda l'inserimento di determinati parametri per individuare il contesto dei dati richiesti dalla Recipe. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere all'area riservata;
+				\item inserire il titolo della Recipe;
+				\item inserire almeno una metrica nella Recipe;
+				\item selezionare la categoria della metrica tra Facebook, Twitter e Instagram;
+				\item selezionare la tipologia di metrica in base alla categoria scelta;
+				\item compilare i campi in base alla tipologia e alla categoria di metrica scelta. 
+			\end{itemize}
+			
+		\subsubsection{TVF8.2}
+			L'utente vuole verificare che il sistema richieda la conferma dei dati inseriti prima di creare la nuova Recipe. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere all'area riservata;
+				\item verificare che sia visualizzato un messaggio d'errore nel caso in cui venga confermata una Recipe che non contiene almeno una metrica per categoria;
+				\item verificare che sia visualizzato un messaggio d'errore nel caso in cui venga confermata una Recipe in cui l'utente non ha inserito dei parametri specificati nel requisito ROF8.1.1.4;
+				\item verificare che nel caso venga confermata una nuova Recipe, il sistema salvi i suoi parametri nel database e reindirizzi l'amministratore all'elenco delle Recipe.
+			\end{itemize}
+			
+		\subsubsection{TVF8.3}
+			L'utente vuole verificare che l'amministratore possa eliminare una Recipe memorizzata nel sistema dalla schermata di elenco delle Recipe. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere all'area riservata;
+				\item cliccare il pulsante di eliminazione di una Recipe;
+				\item verificare che il sistema provvedi all'eliminazione di tutte le informazioni legate alla Recipe che si desidera eliminare;
+				\item verificare che il sistema provvedi ad eliminare tutti i dati grezzi dal database legati alla Recipe.
+			\end{itemize}
+			
 \pagebreak
 
 
