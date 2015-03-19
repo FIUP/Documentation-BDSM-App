@@ -395,19 +395,23 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF8.1.1  &  Il sistema richiede l'inserimento di determinati parametri per individuare il contesto dei dati richiesti dalla Recipe.  &  UC1.4.1.2 \\
 		\hline
-		ROF8.1.1.1  &  Viene richiesto l'inserimento del titolo della Recipe.  &  UC1.4.1.2.1 \\
+		ROF8.1.1.1  &  Viene richiesto obbligatoriamente l'inserimento del titolo della Recipe.  &  UC1.4.1.2.1 \\
 		\hline
-		ROF8.1.1.2  &  Viene richiesto l'inserimento di una descrizione della Recipe.  &  UC1.4.1.2.2 \\
+		ROF8.1.1.2  &  Viene richiesto opzionalmente l'inserimento di una descrizione della Recipe.  &  UC1.4.1.2.2 \\
 		\hline
-		ROF8.1.1.3  &  L'utente amministratore può aggiungere un numero qualsiasi di metriche alla Recipe.  &  UC1.4.1.2.3 \\
+		ROF8.1.1.3  &  L'utente amministratore può aggiungere un numero qualsiasi di metriche alla Recipe. È però obbligatorio che siano almeno una per categoria  &  UC1.4.1.2.3 \\
 		\hline
 		ROF8.1.1.4  &  Per ogni metrica che l'utente amministratore desidera inserire deve specificare i dati descritti nei requisiti ROF7.1.1.4, ROF7.1.1.5, ROF7.1.1.6, ROF7.1.1.7, ROF7.1.1.8, ROF7.1.1.9, ROF7.1.1.10  &  Interno \\
 		\hline
 		ROF8.2  &  Il sistema richiede la conferma dei dati inseriti prima di creare la nuova Recipe.  &  UC1.4.1.3 \\
 		\hline
-		ROF8.2.2  &  Nel caso venga confermata una Recipe che non contiene almeno una metrica per categoria o l'utente non ha inserito dei parametri corrispondenti a quelli specificati nel requisito ROF8.1.1.4 il sistema visualizza un messaggio di errore contenente i parametri inseriti non corretti oppure il messaggio di una eccezione lanciato in fase di creazione della Recipe.  &  UC1.4.2 \\
+		ROF8.2.1  &  Nel caso venga confermata una Recipe incorretta o incompleta, il sistema visualizza un messaggio di errore che illustra i parametri non inseriti o non corretti. &  UC1.4.2 \\
 		\hline
-		ROF8.2.3  &  Nel caso venga confermata  una nuova Recipe corretta, il sistema salva i suoi parametri nel database e riporta l'amministratore all'elenco delle Recipe  &  Interno \\
+		ROF8.2.1.1  &  Una Recipe è incompleta se non è stato specificato il titolo o non contiene almeno una metrica per categoria. &  Interno \\
+		\hline
+		ROF8.2.1.2  &  Una Recipe è incorretta se l'utente non ha inserito correttamente i parametri citati nel requisito ROF8.1.1.4 &  nterno \\
+		\hline
+		ROF8.2.2  &  Nel caso venga confermata  una nuova Recipe corretta, il sistema salva i suoi parametri nel database e riporta l'amministratore all'elenco delle Recipe  &  Interno \\
 		\hline
 		ROF8.3  &  L'utente amministratore può eliminare una Recipe memorizzata nel sistema tramite il relativo pulsante nella schermata di elenco delle Recipe  &  UC1.4.3 \newline UC1.4.3.1  \\
 		\hline
