@@ -660,6 +660,36 @@ Lo stato \textbf{N.I.} presente nelle tabelle sottostanti è da intendersi come 
 				\item verificare che il sistema non permetta di modificare altri campi della richiesta della Recipe al di fuori del titolo e della descrizione.
 			\end{itemize}
 			
+		\subsubsection{TVF11}
+			L'utente vuole verificare che il sistema fornisca una serie di servizi REST. All'utente è richiesto di:
+			\begin{itemize}
+				\item verificare che il sistema fornisca la possibilità di richiedere un token di accesso per utilizzare i servizi REST;
+				\item verificare che il sistema permetta all'utente di richiedere l'annullamento di un token;
+				\item verificare che il sistema gestisca la richiesta dei dati di una View contenente un token di accesso.
+			\end{itemize}
+			
+		\subsubsection{TVF11.1}
+			L'utente vuole verificare che il sistema fornisca la possibilità di richiedere un token di accesso per utilizzare i servizi REST. All'utente è richiesto di:
+			\begin{itemize}
+				\item verificare che il sistema restituisca un errore se il sistema ha avuto problemi nel generare il token;
+				\item verificare che il sistemi generi e restituisca un token di accesso se l'utente è autenticato.
+			\end{itemize}
+			
+		\subsubsection{TVF11.2}
+			L'utente vuole verificare che il sistema permetta all'utente di richiedere l'annullamento di un token. All'utente è richiesto di:
+			\begin{itemize}
+				\item verificare che il sistema gestisca una richiesta di chiusura sessione contenente un token di accesso valido rendendolo non valido;
+				\item verificare che il sistema restituisca un errore se non si è riuscito ad invalidare il token;
+				\item verificare che il sistema restituisca una conferma dell'avvenuta invalidazione del token.
+			\end{itemize}
+			
+		\subsubsection{TVF11.3}
+			L'utente vuole verificare che il sistema gestisca la richiesta dei dati di una View contenente un token di accesso. All'utente è richiesto di:
+			\begin{itemize}
+				\item verificare che il sistema restituisca i dati richiesti se il token utilizzato è valido;
+				\item verificare che il sistema restituisca un errore se il token utilizzato non è valido.
+			\end{itemize}
+			
 \pagebreak
 
 
