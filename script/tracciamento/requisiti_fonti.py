@@ -10,14 +10,12 @@
 # =======================================================================
 # 0.0.1     2015-03-17  Tesser Paolo    codifica script
 # -----------------------------------------------------------------------
-#
+# 0.0.2     2015-03-18  Tesser Paolo    terminato script con scrittura tracciamento su documento requisiti-fonti.tex
 # -----------------------------------------------------------------------
 #
 #
 __author__ = 'ptesser'
 import re
-import os
-import sys
 
 
 class RequisitiFonti():
@@ -29,9 +27,12 @@ class RequisitiFonti():
     __write_doc_file = ""
 
     __req_file_line = []
+    # array di soli requisiti per poterli scorrere dal primo all'ultimo nell'ordine di inserimento
     __req_fonti_array = []
 
+    # dizionario per fare il tracciamento inverso fonti-requisiti
     __fonti_req_dict = {}
+    # dizionario per ricavarmi le fonti sapendo il requisito come chiave
     __req_fonti_dict = {}
 
     def __init__(self):
@@ -51,11 +52,23 @@ class RequisitiFonti():
                 req = re.search(r"^R(.*?)\s", line)
                 if req:
                     fonti_for_req_array = line.split('&')[2].strip()
+                    fonti_single_array = fonti_for_req_array[:-2].strip().split("\\newline")
+                    # aggiorno il dizionario con il nuovo valore del requisito e le sue fonti
                     self.__req_fonti_dict.update({req.group(): fonti_for_req_array})
+                    # aggiorno l'array solo dei requisiti
                     self.__req_fonti_array.append(req.group())
+
+                    for fonte in fonti_single_array:
+                        if fonte.strip() in self.__fonti_req_dict:
+                            self.__fonti_req_dict[fonte.strip()].append(req.group().strip())
+                        else:
+                            self.__fonti_req_dict[fonte.strip()] = [req.group().strip()]
 
     def get_list_req(self):
         return self.__req_fonti_dict
+
+    def get_list_fonti(self):
+        return self.__fonti_req_dict
 
     def write_req_fonti(self):
         self.__write_doc_path_str = "requisiti-fonti.tex"
@@ -83,8 +96,8 @@ class RequisitiFonti():
 
 if __name__ == '__main__':
     print "*** Start: script tracciamento requisiti-fonti ***"
-    f = RequisitiFonti()
-    f.open_doc_req()
-    f.take_req()
-    f.write_req_fonti()
+    r = RequisitiFonti()
+    r.open_doc_req()
+    r.take_req()
+    r.write_req_fonti()
     print "*** End: script tracciamento requisiti-fonti ***"
