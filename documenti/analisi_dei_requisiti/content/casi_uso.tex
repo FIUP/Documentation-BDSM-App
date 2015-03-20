@@ -1454,15 +1454,17 @@
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
-		\item utente autenticato: utente che ha effettuato l'accesso nell'applicazione;
+		\item utente non autenticato: utente non ancora noto al sistema che accede al servizio;
+		\item utente autenticato: utente autenticato che ha accesso al servizio;
 		\item utente autenticato con token di accesso: utente che ha ricevuto dal sistema le credenziali (token) per utilizzare i servizi REST offerti;
 	\end{itemize}
-	\item \textbf{Descrizione:} dopo l'accesso all'applicativo:
+	\item \textbf{Descrizione:}
 	\begin{itemize}
-		\item un utente può richiedere un token di accesso premendo su un apposito pulsante;
-		\item un utente con token di accesso può fare ciò che può fare l'utente, e in più può inviare una richiesta REST usando il suo token. Può inoltre richiedere che venga rimosso quando non gli è più necessario o se ne desidera ottenere uno nuovo;
+		\item un utente sconosciuto può consultare i servizi REST offerti tramite l'apposita sezione;
+		\item un utente autenticato può richiedere un token di accesso per utilizzare i servizi REST offerti e consultare quelli disponibili tramite l'apposita sezione;
+		\item un utente con token di accesso ha le stesse feature dell'utente autenticato e può utilizzare i servizi REST tramite il suo token. Può inoltre richiedere che venga rimosso quando non gli è più necessario e, se ne desidera, ottenerne uno nuovo;
 	\end{itemize}
-	\item \textbf{Precondizione:} l'utente o l'utente con token di accesso dispongono di una connessione con il sistema. Dispongono inoltre di un username e una password riconosciute del sistema ottenute registrandosi tramite l'interfaccia Web.
+	\item \textbf{Precondizione:} gli utenti che dispongono di username e password hanno effettuato l'accesso al sistema mentre l'utente sconosciuto ha caricato la home page dell'applicazione;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Richiesta token di accesso (UC2.1);
@@ -1663,10 +1665,11 @@
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
-		\item utente: utente che desidera avere le informazione riguardanti i servizi REST pubblici offerti dal sistema;
+		\item utente non autenticato: utente non ancora noto al sistema che accede al servizio;
+		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'utente può visualizzare l'elenco dei vari servizi REST offerti dal sistema, in modo da poterli utilizzare a sua volta per scopi personali;
-	\item \textbf{Precondizione:} l'utente è autenticato al sistema e si trova nella home page;
+	\item \textbf{Descrizione:} qualsiasi utente può visualizzare l'elenco dei vari servizi REST offerti dal sistema, in modo da poterli utilizzare una volta ottenuto il token di accesso;
+	\item \textbf{Precondizione:} l'utente si trova nella home page dell'applicazione;
 	\item \textbf{Scenario principale:} l'utente ha selezionato l'apposita voce che porta alla pagina di visualizzazione dei servizi REST offerti;
 	\item \textbf{Postcondizione:} l'utente ha ottenuto l'elenco dei servizi REST offerti.
 \end{itemize}
