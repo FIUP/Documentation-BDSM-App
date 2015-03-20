@@ -716,93 +716,149 @@
 \pagebreak
 
 
-\subsection{UC1.5: Modifica password di accesso}
-\begin{figure}[!htbp]
-	\centering
-	\centerline{\includegraphics[scale=0.45]{./images/UC1_5.pdf}}
-	\caption{UC1.5 - Modifica password di accesso}
-\end{figure}
-
+\subsection{UC1.5: Modifica dettagli utente}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'utente può cambiare la propria password selezionando il pulsante di cambio password nel pannello utente;
-	\item \textbf{Precondizione:} l'utente dispone di una password di accesso valida, risulta autenticato al servizio e si trova nel pannello utente;
+	\item \textbf{Descrizione:} l'utente può modificare le proprie informazioni personali, quali username, email e password;
+	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso al sistema e si trova nella pagina di dettaglio utente;
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
-		\item Inserimento nuova password (UC1.5.1);
-		\item Conferma inserimento nuova password (UC1.5.2);
-		\item Inserimento vecchia password (UC1.5.3);
-		\item Conferma cambio password (UC1.5.4);
+		\item Visualizza pagina modifica dettagli utente (UC1.5.1);
+		\item Modifica username (UC1.5.2);
+		\item Modifica indirizzo email (UC1.5.3);
+		\item Modifica password (UC1.5.4);
+		\item Conferma modifiche (UC1.5.5)
 	\end{enumerate}
 	\item \textbf{Postcondizione:} la nuova password per l'utente è attiva, la vecchia password non è più valida;
-	\item \textbf{Estensioni:} Vecchia password inserita non valida (UC1.5.5).
+	\item \textbf{Estensioni:} Errore nell'inserimento dei dati (UC1.5.6).
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.5.1: Inserimento nuova password}
+\subsection{UC1.5.1: Visualizza pagina modifica dettagli utente}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'utente può inserire la nuova password nel pannello apposito;
-	\item \textbf{Precondizione:} l'utente ha selezionato il pulsante di cambio password nella sua home screen;
-	\item \textbf{Scenario principale:} l'utente inserisce la nuova password nell'apposito campo;
-	\item \textbf{Postcondizione:} l'utente ha inserito la nuova password.
-\end{itemize}
-
-\subsubsection{UC1.5.2: Conferma inserimento password }
-\begin{itemize}
-	\item \textbf{Attori:}
-	\begin{itemize}
-		\item utente autenticato: utente autenticato che ha accesso al servizio;
-	\end{itemize}
-	\item \textbf{Descrizione:} l'utente deve inserire nuovamente la nuova password per verificare di non aver fatto errori di battitura;
-	\item \textbf{Precondizione:} l'utente ha inserito la nuova password;
-	\item \textbf{Scenario principale:} l'utente inserisce la password di conferma nell'apposito campo;
-	\item \textbf{Postcondizione:} l'utente ha verificato la correttezza della nuova password.
+	\item \textbf{Descrizione:} l'utente può accedere alla pagina di modifica dettagli utente tramite l'apposito pulsante nella pagina di dettaglio utente;
+	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso al sistema e si trova nella pagina di dettaglio utente;
+	\item \textbf{Scenario principale:} l'utente preme l'apposito pulsante per accedere alla pagina di modifica dettagli utente;
+	\item \textbf{Postcondizione:} l'utente ha visualizzato la pagina di modifica dettagli utente.
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.5.3: Inserimento vecchia password}
+\subsection{UC1.5.2: Modifica username}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'utente deve inserire la vecchia password per completare il cambio password;
-	\item \textbf{Precondizione:} l'utente ha inserito la nuova password due volte negli appositi campi;
-	\item \textbf{Scenario principale:} l'utente inserisce la vecchia password nell'apposito campo;
-	\item \textbf{Postcondizione:} l'utente ha inserito la vecchia password e può confermare la nuova.
+	\item \textbf{Descrizione:} l'utente può modificare il proprio username che lo identifica univocamente nel sistema;
+	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso al sistema e si trova nella pagina di modifica dettagli utente;
+	\item \textbf{Scenario principale:} l'utente inserice il nuovo username nell'apposito campo;
+	\item \textbf{Postcondizione:} il sistema ha ottenuto il nuovo username.
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.5.4: Conferma cambio password}
+\subsection{UC1.5.3: Modifica indirizzo email}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'utente deve confermare di voler sostituire la vecchia password di accesso con quella nuova selezionando il pulsante di conferma;
-	\item \textbf{Precondizione:} l'utente ha inserito due volte la nuova password ed una la vecchia negli appositi campi;
-	\item \textbf{Scenario principale:} l'utente preme il pulsante di conferma cambio password;
-	\item \textbf{Postcondizione:} l'utente ha confermato l'operazione e la nuova password è ora attiva.
+	\item \textbf{Descrizione:} l'utente può il proprio indirizzo email associato al servizio tramite lapposita sezione;
+	\item \textbf{Precondizione:} l'utente è autenticato al sistema e si trova nella pagina di modifica dettagli utente;
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{enumerate}
+		\item Inserimento indirizzo email (UC1.5.3.1)
+		\item Conferma indirizzo email (UC1.5.3.2)
+	\end{enumerate}
+	\item \textbf{Postcondizione:} il sistema ha ottenuto il nuovo indirizzo email dell'utente.
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.5.5: Password non corretta}
+\subsection{UC1.5.3.1: Inserimento indirizzo email}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
 		\item utente autenticato: utente autenticato che ha accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'utente può aver inserito una password che non soddisfa i vincoli di sistema specificati nel pannello di cambio password;
-	\item \textbf{Precondizione:} l'utente ha selezionato il pulsante di conferma del cambio password;
-	\item \textbf{Scenario principale:} l'utente visualizza un messaggio di errore con i dettagli dei vincoli non soddisfatti;
-	\item \textbf{Postcondizione:} l'utente ha preso atto che i dati inseriti non sono validi e per quali motivazioni.
+	\item \textbf{Descrizione:} l'utente può inserire il nuovo indirizzo email tramite l'apposito campo nella pagina di modifica dettagli utente;
+	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso al sistema e si trova nella pagina di modifica dettagli utente;
+	\item \textbf{Scenario principale:} l'utente inserice il nuovo indirizzo email nell'apposito campo;
+	\item \textbf{Postcondizione:} il sistema ha ottenuto il nuovo indirizzo email.
+\end{itemize}
+% FINE USE CASE %
+
+\subsection{UC1.5.3.2: Conferma indirizzo email}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente autenticato: utente autenticato che ha accesso al servizio;
+	\end{itemize}
+	\item \textbf{Descrizione:} l'utente deve confermare l'indirizzo email inserendo una sua copia nell'apposito campo;
+	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso al sistema e si trova nella pagina di modifica dettagli utente;
+	\item \textbf{Scenario principale:} l'utente inserice  l'indirizzo email di confemra nell'apposito campo;
+	\item \textbf{Postcondizione:} il sistema ottiene l'indirizzo email di conferma e controlla in tempo reale se i due indirizzi inseriri sono identici;
+\end{itemize}
+% FINE USE CASE %
+
+\subsection{UC1.5.4: Modifica password} TO DO
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente autenticato: utente autenticato che ha accesso al servizio;
+	\end{itemize}
+	\item \textbf{Descrizione:} l'utente può il proprio indirizzo email associato al servizio tramite lapposita sezione;
+	\item \textbf{Precondizione:} l'utente è autenticato al sistema e si trova nella pagina di modifica dettagli utente;
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{enumerate}
+		\item Inserimento indirizzo email (UC1.5.3.1)
+		\item Conferma indirizzo email (UC1.5.3.2)
+	\end{enumerate}
+	\item \textbf{Postcondizione:} il sistema ha ottenuto il nuovo indirizzo email dell'utente.
+\end{itemize}
+% FINE USE CASE %
+
+\subsection{UC1.5.4.1: Inserimento vecchia password} TO DO
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente autenticato: utente autenticato che ha accesso al servizio;
+	\end{itemize}
+	\item \textbf{Descrizione:} l'utente può inserire il nuovo indirizzo email tramite l'apposito campo nella pagina di modifica dettagli utente;
+	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso al sistema e si trova nella pagina di modifica dettagli utente;
+	\item \textbf{Scenario principale:} l'utente inserice il nuovo indirizzo email nell'apposito campo;
+	\item \textbf{Postcondizione:} il sistema ha ottenuto il nuovo indirizzo email.
+\end{itemize}
+% FINE USE CASE %
+
+\subsection{UC1.5.4.2: Inserimento nuova password} TO DO
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente autenticato: utente autenticato che ha accesso al servizio;
+	\end{itemize}
+	\item \textbf{Descrizione:} l'utente deve confermare l'indirizzo email inserendo una sua copia nell'apposito campo;
+	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso al sistema e si trova nella pagina di modifica dettagli utente;
+	\item \textbf{Scenario principale:} l'utente inserice  l'indirizzo email di confemra nell'apposito campo;
+	\item \textbf{Postcondizione:} il sistema ottiene l'indirizzo email di conferma e controlla in tempo reale se i due indirizzi inseriri sono identici;
+\end{itemize}
+% FINE USE CASE %
+
+\subsection{UC1.5.4.3: Conferma nuova password} TO DO
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente autenticato: utente autenticato che ha accesso al servizio;
+	\end{itemize}
+	\item \textbf{Descrizione:} l'utente deve confermare l'indirizzo email inserendo una sua copia nell'apposito campo;
+	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso al sistema e si trova nella pagina di modifica dettagli utente;
+	\item \textbf{Scenario principale:} l'utente inserice  l'indirizzo email di confemra nell'apposito campo;
+	\item \textbf{Postcondizione:} il sistema ottiene l'indirizzo email di conferma e controlla in tempo reale se i due indirizzi inseriri sono identici;
 \end{itemize}
 % FINE USE CASE %
 
