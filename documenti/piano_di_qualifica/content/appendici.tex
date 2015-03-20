@@ -588,7 +588,7 @@ Lo stato \textbf{N.I.} presente nelle tabelle sottostanti è da intendersi come 
 			\end{itemize}
 			
 		\subsubsection{TVF9}
-			L'utente vuole verificare che l'amministratore possa gestire gli utenti dalla propria home screen. All'utente è richiesto di:
+			L'utente vuole verificare che l'amministratore possa gestire gli utenti. All'utente è richiesto di:
 			\begin{itemize}
 				\item effettuare l'autenticazione;
 				\item accedere alla home screen;
@@ -625,6 +625,39 @@ Lo stato \textbf{N.I.} presente nelle tabelle sottostanti è da intendersi come 
 				\item verificare che il sistema mostri un errore e le modifiche vengano annullate nel caso in cui un utente cambi i permessi a se stesso;
 				\item verificare che il sistema mostri un errore e le modifiche vengano annullate nel caso in cui si provi ad eliminare un utente attualmente autenticato;
 				\item verificare che il sistema mostri un messaggio di conferma nel caso le modifiche abbiano avuto esito positivo.
+			\end{itemize}
+			
+		\subsubsection{TVF10}
+			L'utente vuole verificare che l'amministratore possa gestire le richieste di nuove Recipe ricevute dagli utenti. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere alla home screen;
+				\item accedere all'elenco delle richieste di nuove Recipe;
+				\item verificare che l'utente amministratore possa vedere l'elenco delle nuove Recipe;
+				\item verificare che il sistema mostri un messaggio nel caso non siano presenti richieste di nuove Recipe;
+				\item verificare che, cliccando sulla visualizzazione dei dettagli di una Recipe, si acceda ad un pannello contenente il form per la creazione di una nuova Recipe precompilata con i dati richiesti;
+				\item verificare che, cliccando sul pulsante di accettazione, venga inserita la Recipe richiesta nel sistema;
+				\item verificare che, cliccando sul pulsante di rifiuto, venga rifiutato l'inserimento della Recipe richiesta.
+			\end{itemize}
+			
+		\subsubsection{TVF10.1}
+			L'utente vuole verificare che l'utente amministratore possa vedere l'elenco delle nuove Recipe. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere alla home screen;
+				\item accedere all'elenco degli utenti;
+				\item verificare che, per ogni voce dell'elenco, sia fornito il titolo della Recipe richiesta, lo username dell'utente che l'ha richiesta e la descrizione nel caso sia presente;
+				\item verificare che, per ogni voce dell'elenco, sia presente un pulsante per accedere alla visualizzazione dei dettagli della richiesta.
+			\end{itemize}
+			
+		\subsubsection{TVF10.3}
+			L'utente vuole verificare che, cliccando sulla visualizzazione dei dettagli di una Recipe, si acceda ad un pannello contenente il form per la creazione di una nuova Recipe precompilata con i dati richiesti. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere alla home screen;
+				\item accedere all'elenco degli utenti;
+				\item verificare che il sistema permetta all'utente amministratore di kodificare il titolo e la descrizione della Recipe richiesta;
+				\item verificare che il sistema non permetta di modificare altri campi della richiesta della Recipe al di fuori del titolo e della descrizione.
 			\end{itemize}
 			
 \pagebreak
