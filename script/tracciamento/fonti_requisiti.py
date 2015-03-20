@@ -16,8 +16,6 @@
 #
 __author__ = 'ptesser'
 import re
-import os
-import sys
 
 
 class FontiRequisiti():
@@ -56,13 +54,58 @@ class FontiRequisiti():
         # scrittura delle fonti interne
         fonti_interno = self.__fonti_req_dict["Interno"]
         self.__write_doc_file.write("Interno & ")
+        counter = 0
         for fonte_interno in fonti_interno:
-            self.__write_doc_file.write(fonte_interno + " \\newline ")
+            self.__write_doc_file.write(fonte_interno + " ")
+            counter += 1
+            if counter > 45:
+                self.__write_doc_file.write("\\\\\n")
+                self.__write_doc_file.write("\hline\n")
+                self.__write_doc_file.write("Interno & ")
+                counter = 0
+            else:
+                self.__write_doc_file.write("\\newline ")
 
         self.__write_doc_file.write("\\\\\n")
+        self.__write_doc_file.write("\hline\n")
+
         # scrittura delle fonti degli Use Case
-        
+
+        for use_case in self.__casi_uso_array:
+
+            if use_case in self.__fonti_req_dict:
+                req_for_use_case = self.__fonti_req_dict[use_case]
+                self.__write_doc_file.write(use_case + " & ")
+                length = len(req_for_use_case)
+                counter = 0
+                for r in req_for_use_case:
+                    self.__write_doc_file.write(r + " ")
+                    counter += 1
+                    if counter != length:
+                        self.__write_doc_file.write("\\newline ")
+            else:
+                self.__write_doc_file.write(use_case + " & TO DO: Use Case non tracciato! ")
+
+            self.__write_doc_file.write("\\\\\n")
+            self.__write_doc_file.write("\hline\n")
+
         # scrittura delle fonti dei Verbali
+        fonti_verbale = [(key, value) for key, value in self.__fonti_req_dict.iteritems() if key.startswith("Verbale")]
+        for fonte_verbale in fonti_verbale:
+            self.__write_doc_file.write(fonte_verbale[0] + " & ")
+            length = len(fonte_verbale[1])
+            counter = 0
+
+            for req in fonte_verbale[1]:
+                self.__write_doc_file.write(req + " ")
+                counter += 1
+                if counter != length:
+                    self.__write_doc_file.write("\\newline ")
+
+            self.__write_doc_file.write("\\\\\n")
+            self.__write_doc_file.write("\hline\n")
+
+        # chiusura struttura documento
         self.__write_doc_file.write("\end{longtable}\n")
         self.__write_doc_file.write("\egroup\n")
         self.__write_doc_file.write("\end{center}\n")

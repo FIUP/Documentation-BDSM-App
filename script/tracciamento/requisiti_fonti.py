@@ -92,12 +92,3 @@ class RequisitiFonti():
         self.__write_doc_file.write("\egroup\n")
         self.__write_doc_file.write("\end{center}\n")
         self.__write_doc_file.write("% subsubsection requisiti_fonti (end)\n")
-
-
-if __name__ == '__main__':
-    print "*** Start: script tracciamento requisiti-fonti ***"
-    r = RequisitiFonti()
-    r.open_doc_req()
-    r.take_req()
-    r.write_req_fonti()
-    print "*** End: script tracciamento requisiti-fonti ***"
