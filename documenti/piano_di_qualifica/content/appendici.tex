@@ -587,6 +587,46 @@ Lo stato \textbf{N.I.} presente nelle tabelle sottostanti è da intendersi come 
 				\item verificare che il sistema provvedi ad eliminare tutti i dati grezzi dal database legati alla Recipe.
 			\end{itemize}
 			
+		\subsubsection{TVF9}
+			L'utente vuole verificare che l'amministratore possa gestire gli utenti dalla propria home screen. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere alla home screen;
+				\item accedere all'elenco degli utenti;
+				\item verificare che il sistema permetta all'utente amministratore di modificare i permessi di un utente;
+				\item verificare che il sistema permetta all'utente amministratore di eliminare un utente dal sistema;
+				\item verificare che il sistema permetta all'utente amministratore di confermare le modifiche applicate.
+			\end{itemize}
+			
+		\subsubsection{TVF9.1}
+			L'utente vuole verificare che il sistema permetta all'utente amministratore di modificare i permessi di un utente. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere alla home screen;
+				\item accedere all'elenco degli utenti;
+				\item verificare che, alla pressione del tasto di modifica dei permessi, le modifiche vengano applicate solo localmente in attesa che vengano confermate.
+			\end{itemize}
+			
+		\subsubsection{TVF9.2}
+			L'utente vuole verificare che il sistema permetta all'utente amministratore di eliminare un utente dal sistema. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere alla home screen;
+				\item accedere all'elenco degli utenti;
+				\item verificare che, alla pressione del tasto di modifica dei permessi, le modifiche vengano applicate solo localmente in attesa che vengano confermate.
+			\end{itemize}
+			
+		\subsubsection{TVF9.3}
+			L'utente vuole verificare che il sistema permetta all'utente amministratore di confermare le modifiche applicate. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere alla home screen;
+				\item accedere all'elenco degli utenti;
+				\item verificare che il sistema mostri un errore e le modifiche vengano annullate nel caso in cui un utente cambi i permessi a se stesso;
+				\item verificare che il sistema mostri un errore e le modifiche vengano annullate nel caso in cui si provi ad eliminare un utente attualmente autenticato;
+				\item verificare che il sistema mostri un messaggio di conferma nel caso le modifiche abbiano avuto esito positivo.
+			\end{itemize}
+			
 \pagebreak
 
 
