@@ -29,7 +29,7 @@
 % =================================================================================================
 % 1.0.2			2015-02-19			aggiunta parte sugli incontri di formazione			Faccin Nicola
 % =================================================================================================
-% 1.0.3			2015-02-25			aggiunta parte Slack							Faccin Nicola
+% 1.0.3			2015-02-25			aggiunta parte Slack								Faccin Nicola
 % =================================================================================================
 %
 
@@ -109,34 +109,43 @@
 			\label{sec:gestione_dei_task}
 			Il \roleProjectManager{} deve pianificare e assegnare i compiti che i singoli membri dovranno andare a eseguire. Per farlo viene usato l'applicazione web Asana che consente di creare facilmente i task. \newline
 			Permette inoltre un buon monitoraggio dell'andamento globale del progetto, offrendo grafici che illustrano il rapporto tra i ticket completati e quelli ancora da terminare in relazione anche alle milestone fissate dal team.
-			
+
 			\paragraph{Gestione dello svolgimento dei task} % (fold)
 			\label{par:gestione_dello_svolgimento_dei_task}
 			Ogni membro del team è tenuto ad accettare tutti i task che il \roleProjectManager{} pianificherà di assegnarli. \newline
 			Se per dei motivi eccezionali l'assegnatario non potesse svolgere il compito indicato dovrà renderlo noto nei modi previsti nella sezione \ref{sec:comunicazioni_interne} al \roleProjectManager, il quale, una volta valutate le motivazione, dovrà provvedere a trovare un nuovo destinatario del task. \newline
 			Qualora il \roleProjectManager{} non ricevesse alcuna notifica entro le prime 24 ore riterrà automaticamente accettato il task dall'assegnatario.
 			% paragraph gestione_dello_svolgimento_dei_task (end)
-			
+
 			\paragraph{Gestione delle change request}
 			Ogni membro del team può proporre dei cambiamenti o degli avanzamenti da apportare. Il suggerimento dovrà essere motivato adeguatamente in modo che il \roleProjectManager{} non debba preoccuparsi di ricercare le fonti che forniscono l'effettiva validità di questo mutamento. \newline
 			Una volta verificata o meno la necessità dell'idea, il \roleProjectManager{} approverà o respingerà la proposta fatta. \newline
 			Qualora la proposta fosse accettata il \roleProjectManager{} avrà il compito di pianificare le attività che serviranno ad apportare il cambiamento.
-			
+
 			\paragraph{Gestione della commit}
 			L'operazione di commit deve essere il più atomica possibile comprendendo il minore numero di file per volta. Oltre a dare una migliore visione di ciò che si sta facendo e di dove si sta lavorando garantisce anche la probabilità di avere meno conflitti all'interno del repository. \newline
 			Per fornire al \roleProjectManager{} un più ampio quadro di come stanno procedendo i singoli compiti viene utilizzato un servizio web offerto da GitHub. \newline
 			Questo permette di mostrare, nei commenti dei task di Asana, il messaggio inserito durante la commit una volta effettuata l'operazione di push sul server. \newline
 			Fornisce quindi il tracciamento del lavoro che viene svolto per portare a compimento il task in questione.
 			Il servizio viene attivato sia in doc\_BDSM\_App sia in src\_BDSM\_App.
+
 				\subparagraph{Meccanismo di aggancio commit-task} % (fold)
 				\label{subp:meccanismo_di_aggancio_commit_task}
 				\'E stato creato un account generale su Asana con user name ``MainMashUp'' che fornisce l'API\_Key necessaria a configurare il servizio senza che esso dipenda dall'account di un membro in particolare. \newline
 				Per permettere il tracciamento bisogna usare l'identificato del task di cui vogliamo tracciare i messaggi di commit.\newline
-				L'id si può reperire nel modalità illustrate dalla figura \ref{fig:select_id_task_asana} e va inserito all'interno del messaggio nelle modalità indicate nella sezione \ref{sec:messaggio_di_commit}
-					
+				L'id si può reperire nel modalità illustrate dalla figura \ref{fig:select_id_task_asana} e va inserito all'interno del messaggio nelle modalità indicate nella sezione \ref{sec:messaggio_di_commit}.
+
 				% subparagraph meccanismo_di_aggancio_commit_task (end)
 
-			
+			\paragraph{Gestione della rotazione dei ruoli} % (fold)
+			\label{par:gestione_della_rotazione_dei_ruoli}
+			Lo sviluppo di un progetto necessita della collaborazione di diverse persone che andranno a ricoprire incarichi che rappresentano delle figure aziendali. Queste figure sono presenti nella sezione \ref{par:ruoli_di_progetto}. \newline
+			Viene garantito che ogni componente del gruppo \groupName{} dovrà ricoprire, almeno una volta, tutti i ruoli. Questa rotazione potrebbe generare dei problemi dovuti a conflitti d'interesse in quanto lo stesso soggetto che svolge un compito potrebbe ritrovarsi a verificare l'operato svolto in precedenza. \newline
+			Un'attenta pianificazione da parte del \roleProjectManager{} dovrà preoccuparsi di non fare avvenire queste situazioni. \newline
+			Il compito di garantire che non siano stati fatti errori spetta al \roleVerifier, il quale, una volta riscontrata una incongruenza, dovrà notificarla al \roleProjectManager{} che avrà il compito di risolverla. \newline \newline
+			Il ruoli verranno ruotati in base a quanto stabilito nel \docNameVersionPdP{} a seconda della fase di avanzamento in cui si trova il team. In base a quelle indicazioni il \roleProjectManager{} deciderà a chi fare svolgere i diversi compiti. Ad ogni membro, siccome durante ciascuna fase può ricoprire più ruoli, potranno essere assegnati task che riguardano campi diversi. Deve essere però garantito che i ticket, nell'arco di 3 giorni, riguardino lo stesso ruolo per garantire una migliore linearità e coerenza nel lavoro. Quest'ultima norma non è vincolante in caso ci sia l'esigenza immediata di svolgere un lavoro che nessun altro membro riesca ad eseguire.
+			% paragraph gestione_della_rotazione_dei_ruoli (end)
+
 		\subsubsection{Procedure}
 			\paragraph{Procedura di generazione di una milestone} % (fold)
 			\label{par:procedura_di_generazione_di_una_milestone}
@@ -150,7 +159,7 @@
 			\noindent
 			I task che serviranno per soddisfare gli obiettivi prefissati dovranno essere collocati sotto la milestone creata.
 			% paragraph procedura_di_generazione_di_una_milestone (end)
-		
+
 			\paragraph{Procedura d'assegnazione dei task}
 			\label{par:procedura_assegnazione_task}
 			Il \roleProjectManager{} dovrà eseguire i seguenti passi, riassunti in seguito nella figura \ref{fig:procedura_assegnazione_task}. \newline
@@ -170,7 +179,7 @@
 					\caption{Diagramma di attività - procedura d'assegnazione di un task}
 					\label{fig:procedura_assegnazione_task}
 				\end{figure}
-				
+
 			\paragraph{Procedura per il reperimento dell'id del task}
 			\label{par:procedura_reperimento_id_task_asana}
 			Ogni membro che vorrà recuperare l'identificativo del task su cui sta lavorando dovrà:
@@ -179,14 +188,14 @@
 					\item posizionarsi sul task che si sta lavorando dalla sezione ``MyTasks'';
 					\item posizionarsi sull'url e copiare tutte le cifre dopo l'ultimo slash ``/''. Quello è l'id che si sta cercando.
 				\end{enumerate}
-				
+
 				\begin{figure}[htbp]
 					\centering
 					\includegraphics[width=14cm]{images/select_id_task_asana.pdf}
 					\caption{Reperimento dell'id del task}
-					\label{fig:select_id_task_asana}				
+					\label{fig:select_id_task_asana}
 				\end{figure}
-			
+
 			\paragraph{Procedura di svolgimento dei task assegnati}
 			Il membro assegnatario del task, una volta ricevuta la notifica e non avendo nessuna motivazione per rifiutarlo, dovrà:
 				\begin{enumerate}
@@ -204,17 +213,17 @@
 					Nei primi due casi la responsabilità è imputabile al \roleProjectManager, mentre negli ultimi due la responsabilità è del membro che devo svolgere il task;
 					\item al completamento del task, dovrà chiudere il task, spuntandolo direttamente dal sistema Asana o tramite i modi espressi nella sezione \ref{sec:messaggio_di_commit};
 					\item l'operazione illustrata al passo precedente genera in automatico una notifica verso il \roleVerifier{} e il \roleProjectManager;
-					\item ritornare al primo punto con i task rimanenti. 
+					\item ritornare al primo punto con i task rimanenti.
 
 				\end{enumerate}
-				
+
 				\begin{figure}[htbp]
 					\centering
 					\includegraphics[width=14cm]{images/proc_svolgimento_task.pdf}
 					\caption{Diagramma di attività - procedura di svolgimento dei task assegnati}
-					\label{fig:procedura_svolgimento_task}				
+					\label{fig:procedura_svolgimento_task}
 				\end{figure}
-				
+
 			\paragraph{Procedura di svolgimento di una change request} % (fold)
 			\label{par:procedura_di_svolgimento_di_una_change_request}
 			Ogni membro del gruppo, che intenda proporre dei cambiamenti o introdurre degli avanzamenti, è tenuto a seguire questa procedura. \newline
@@ -232,16 +241,16 @@
 					\item notificare la decisione presa al proponente;
 					\item se la proposta è stata accettata, pianificare le attività che serviranno per apportarla.
 			 	\end{enumerate}
-			
+
 				\begin{figure}[htbp]
 					\centering
 					\includegraphics[width=14cm]{images/proc_change_request.pdf}
 					\caption{Diagramma di attività - procedura di svolgimento di una change request}
-					\label{fig:procedura_generazione_change_request}		
+					\label{fig:procedura_generazione_change_request}
 				\end{figure}
-				
+
 			% paragraph procedura_di_svolgimento_di_una_change_request (end)
-					
+
 			\paragraph{Procedura di rilevazione dei rischi}
 			Il \roleProjectManager{} ha il compito di individuare i rischi trovati nel \docNameVersionPdP. \newline
 			Questa attività è iterativa durante tutto il progetto e necessita di un continuo monitoraggio dei rischi rilevati nel periodo iniziale. Proprio per la sua natura non finita, si può andare in contro a problemi non previsti inizialmente. \newline
@@ -252,15 +261,11 @@
 					\item aggiornamento delle metodologie per fare fronte alla nuova pianificazione attuata;
 					\item monitoraggio dei nuovi rischi riscontrati durante lo sviluppo del progetto.
 				\end{enumerate}
-				
+
 		\subsubsection{Norme}
 			\paragraph{Ruoli di Progetto}
-			Lo sviluppo di un progetto necessita della collaborazione di diverse persone che andranno a ricoprire incarichi che rappresentano delle figure aziendali. \newline
-			Viene garantito che ogni componente del gruppo \groupName{} dovrà ricoprire, almeno una volta, tutti i ruoli. \newline
-			Questa rotazione potrebbe generare dei problemi dovuti a conflitti d'interesse in quanto lo stesso soggetto che svolge un compito potrebbe ritrovarsi a verificare l'operato svolto in precedenza. \newline
-			Un'attenta pianificazione da parte del \roleProjectManager{} dovrà preoccuparsi di non fare avvenire queste situazioni. \newline
-			Il compito di garantire che non siano stati fatti errori spetta al \roleVerifier, il quale, una volta riscontrata una incongruenza, dovrà notificarla al \roleProjectManager{} che avrà il compito di risolverla. \newline 
-			Vengono ora presentati i diversi ruoli, delineandone le mansioni e le responsabilità.
+			\label{par:ruoli_di_progetto}
+			Vengono presentati i diversi ruoli, delineandone le mansioni e le responsabilità.
 				\subparagraph{Responsabile di Progetto}
 				Il \roleProjectManager{} rappresenta il team e il progetto verso il committente e il proponente. \newline
 				Ha quindi le seguenti responsabilità e compiti:
@@ -273,7 +278,7 @@
 						\item garantire che non ci siano conflitti di interesse. A tal proposito, se il \roleProjectManager{} dovesse prendere parte alla stesura di qualche documento, dovrà nominare un \roleProjectManager{} delegato che avrà il compito di sostituirlo nell'approvazione di quei documenti;
 						\item redigere il \docNameVersionPdP.
 					\end{itemize}
-					
+
 				\subparagraph{Amministratore}
 				L'\roleAdministrator{} è il responsabile dell'ambiente di lavoro. \newline
 				Ha quindi il compito di:
@@ -317,7 +322,7 @@
 						\item garantire che le attività svolte siano conformi alle norme stabilite;
 						\item redige il \docNameVersionPdQ{} per la parte che illustra l'esito e la completezza delle verifiche effettuate.
 					\end{itemize}
-		
+
 			\paragraph{Formato dei task}
 			\label{par:formato_dei_task}
 			I task che si andranno ad aprire devono contenere le seguente informazioni:
@@ -334,7 +339,7 @@
 						\end{itemize}
 						\noindent
 						In seguito verranno inseriti i tag relativi alle commit riguardanti il codice sorgente;
-						
+
 					\item \textbf{Descrizione}: qualora non fosse abbastanza esaustivo il titolo del task, si deve fornire una descrizione più dettagliata dell'attività da svolgere;
 					\item \textbf{Data di scadenza}: la data entro la quale dovrà essere svolto il lavoro;
 					\item \textbf{Assegnatario}: il membro del team che dovrà eseguire il task indicato;
@@ -349,7 +354,7 @@
 					\caption{Template Task su Asana}
 					\label{fig:template_task_asana}
 				\end{figure}
-			
+
 			\paragraph{Formato delle change request} 
 			Le change request che si andranno ad aprire devono contenere le seguente informazioni:
 				\begin{itemize}
@@ -366,7 +371,7 @@
 					\caption{Template Change Request su Asana}
 					\label{fig:template_change_request_asana}
 				\end{figure}
-	
+
 		\subsubsection{Strumenti}
 			\paragraph{Asana}
 			\label{sec:asana}
@@ -400,7 +405,7 @@
 
 
 	\subsection{Gestione delle infrastrutture}
-	
+
 		\subsubsection{Attività}
 			\paragraph{Gestione del Repository}
 			Il gruppo ha deciso di utilizzare due repository che servono a svolgere funzioni diverse, ma necessarie, allo sviluppo del sistema finale. \newline
@@ -419,7 +424,7 @@
 					\item ogni volta che un membro clona il repository in locale nella sua macchina;
 					\item ogni volta che l'\roleAdministrator{} effettua un aggiornamento degli script.
 				\end{itemize}
-				
+
 			\paragraph{Gestione del template del messaggio di commit}
 			L'\roleAdministrator{} ha il compito di mantenere il meno ambiguo possibile l'ambiente di lavoro. \'E per questo che si è deciso di utilizzare un template standard per andare a scrivere il messaggio della commit.
 			Questo strumento per sua natura ha dei limiti, in quanto deve essere installato localmente in ogni macchina da parte dei singoli membri. \newline
@@ -429,8 +434,7 @@
 					\item la prima volta che un membro entra a fare parte del team di lavoro;
 					\item ogni volta che l'\roleAdministrator{} effettua un aggiornamento degli script.
 				\end{itemize}
-				
-				
+
 		\subsubsection{Procedure}
 			\paragraph{Installazione e manutenzione Git Hooks}
 			\label{sec:installazione_git_hooks}
@@ -443,14 +447,14 @@
 							make hook
 						\end{center}
 				\end{enumerate}
-						
+
 			\begin{figure}[htbp]
 				\centering
 				\includegraphics[width=11cm]{images/inst_git_hook.pdf}
 				\caption{Diagramma di attività - installazione/aggiornamento dei Git Hooks}
 				\label{fig:installazione_git_hook}
 			\end{figure}
-			
+
 			\paragraph{Installazione e manutenzione messaggio di commit}
 			\label{sec:installazione_msg_commit}
 			I membri del team dovranno eseguire questa procedura una volta ricevuta la notifica da parte dell'\roleAdministrator. \newline
@@ -466,14 +470,14 @@
 					\item entrare nella directory principale dell'utente (esempio: /Users/nomeutente);
 					\item copiare il file allegato in questa cartella rinominandolo in modo da renderlo nascosto inserendo un punto davanti al nome (esempio: .gitmessage.txt).
 				\end{enumerate}
-				
+
 			\begin{figure}[htbp]
 				\centering
 				\includegraphics[width=14cm]{images/inst_tpl_commit_msg.pdf}
 				\caption{Diagramma di attività - installazione/aggiornamento del template del messaggio per la commit}
 				\label{fig:installazione_msg_commit}
 			\end{figure}
-			
+
 		\subsubsection{Norme}
 			\paragraph{Repository}
 				\subparagraph{Nomi dei file in doc\_BDSM\_App}
@@ -502,14 +506,14 @@
 								\item \textbf{interni}: contenente i documenti necessari al gruppo per la sua organizzazione;
 								\item \textbf{esterni}: contenente i documenti necessari alla pianificazione e all'avanzamento dello sviluppo.
 							\end{itemize}
-							
+
 						\item \textbf{documenti}:
 							\begin{itemize}
 								\item \textbf{template}: contenente i file che servono per gestire in maniera univoca la redazione di un documento;
 								\item \textbf{template\_document}: contenente i file di esempio che dovranno essere utilizzati per ogni documento reale;
 								\item una cartella per ogni documento che avrà come nome quello del documento in questione (esempio: norme\_di\_progetto).
 							\end{itemize}
-							
+
 						\item \textbf{script}: contenente tutti gli script necessari ad automatizzare il lavoro e il controllo della documentazione;
 						\item \textbf{presentazioni}: contenente le presentazioni create per le diverse revisioni esportate dall'applicativo web utilizzato per esse. Viene fatto ciò per sicurezza qualora il sito non fosse raggiungibile a causa di diversi problemi. All'interno di essa c'è un ulteriore suddivisione rispetto alle singole revisioni nello stesso modo in cui è suddivisa la cartella ``consegne''.
 					\end{itemize}
@@ -561,7 +565,7 @@
 				%	Option: [option][option]
 				%	END
 				% \end{testo}
-				
+
 					\begin{itemize}
 						\item \textbf{Title}: inserire una breve descrizione come titolo di quello che è stato fatto (massimo 43 caratteri). All'interno delle parentesi quadre inoltre andrà riportato il corrispondente valore presente nel titolo del ticket:
 							\begin{itemize}
@@ -575,7 +579,7 @@
 							\end{itemize}
 							\noindent
 							In seguito verranno inseriti i tag relativi alle commit riguardanti il codice sorgente;
-							
+
 						\item \textbf{Desc}: inserire una descrizione più esaustiva dell'attività svolta qualora non fosse sufficiente quella data nel titolo;
 						\item \textbf{Task}: al posto della dicitura ``id\_task'' inserire l'id del task effettivo reperibile su Asana secondo le modalità esposte nella sezione \ref{par:procedura_reperimento_id_task_asana};
 						\item \textbf{Option}: Le opzioni applicabili sono:
@@ -588,8 +592,10 @@
 		\subsubsection{Strumenti}
 			\paragraph{Git}
 			Git è il sistema di controllo di versione utilizzato per entrambi i repository del team.
+
 			\paragraph{GitHub}
 			GitHub è il servizio web di hosting adottato per tenere una copia del repository del progetto.
+
 			\paragraph{Git Hooks}
 			I Git Hooks sono degli script personalizzabili che vengono eseguiti in corrispondenza di un determinato evento avvenuto nel repository. \newline
 			Vengono utilizzati per controllare il rispetto delle norme in maniera automatizzata non permettendo a tutto ciò che non è conforme di entrare nel sistema. \newline
@@ -598,10 +604,12 @@
 				\begin{center}
 					.git/hooks
 				\end{center}
+
 			\paragraph{Google Drive}
 			\label{sec:google_drive}
 			Google Drive è lo strumento che si è scelto di utilizzare per gestire file che non necessitano di essere sottoposti a controllo di versione. \newline
 			In particolare verrà impiegato per condividere manuali di utilità alla formazione dei membri del gruppo o per la stesura di idee veloci che andranno poi riviste e documentate ufficialmente nell'apposito repository.
+
 			\paragraph{Sistema Operativo}
 			I membri del gruppo operano su due sistemi operativi diversi. \newline
 			Una parte utilizza sistemi basati su Ubuntu e l'altra utilizza Mac OS X con versione 10.10 Yosemite.
