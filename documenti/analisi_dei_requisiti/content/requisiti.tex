@@ -434,7 +434,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF9.2.1  &  Una volta premuto l'apposito pulsate per l'eliminazione di un utente, le modifiche effettuate vengono applicate localmente in attesa che le modifiche generali agli utenti vengano confermate  &  Interno \newline UC1.7.3 \\
 		\hline
-		ROF9.3  &  Al termine dell'elenco degli utenti attulmente visualizzati è presente un pulsante per confermare le modifiche applicate  &  UC1.7.4 \\
+		ROF9.3  &  Al termine dell'elenco degli utenti attualmente visualizzati è presente un pulsante per confermare le modifiche applicate  &  UC1.7.4 \\
 		\hline
 		ROF9.3.1  &  Se la conferma delle modifiche ha successo, l'amministratore visualizza un messaggio di conferma  &  UC1.7.4 \\
 		\hline
@@ -573,29 +573,34 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\textbf{Requisito} & \textbf{Descrizione} & \textbf{Fonti} \\
 		\hline
 
-		RDV1  &  Il sistema sfrutterà gli strumenti offerti da Google Cloud Platform  &  Capitolato \newline Verbale 2015/01/14 \\
+		RDV1  &  Il sistema sfrutterà gli strumenti offerti da Google Cloud Platform.  &  Capitolato \newline Verbale 2015/01/14 \\
 		\hline
-		RDV1.1  &  Il sistema sfrutterà Google App Engine  &  Capitolato \newline Verbale 2015/01/14 \\
+		RDV1.1  &  Il sistema sfrutterà Google App Engine.  &  Capitolato \newline Verbale 2015/01/14 \\
 		\hline
-		RDV1.2  &  Il sistema sfrutterà Google Cloud Datastore  &  Capitolato \newline Verbale 2015/01/14 \\
+		RDV1.2  &  Il sistema sfrutterà Google Cloud Datastore.  &  Capitolato \newline Verbale 2015/01/14 \\
 		\hline
-		RDV1.2.1  &  Il database sarà di tipo non relazione composto da documenti in stile JSON, stesso formato dei dati in entrata  &  Interno \newline Verbale 2015/01/14 \\
+		RDV1.2.1  &  Il database sarà di tipo non relazione composto da documenti in stile JSON, stesso formato dei dati in entrata.  &  Interno \newline Verbale 2015/01/14 \\
 		\hline
 		RDV1.3  &  Il sistema sfrutterà gli strumenti offerti da Google Cloud Platform.  &  Capitolato \newline Verbale 2015/01/14 \\
 		\hline
-		RDV2  &  Il linguaggio di programmazione principalmente usato per il back-end sarà Python.  &  Capitolato \newline Verbale 2015/01/14 \\
+
+		RDV2  &  Il linguaggio di programmazione principalmente usato per il back-end sarà Python.  &  Capitolato \newline Verbale 2015/01/28 \\
 		\hline
+		ROV2.1 & Il codice e la documentazione relativi al linguaggio Python dovranno seguire la Google Python Style Guide. & Verbale 2015/01/28 \\
+		\hline
+
 		RDV3  &  Il codice sorgente sarà soggetto a versionamento tramite il modello di branching descritto nelle \docNameVersionNdP  &  Capitolato \\
 		\hline
-		RDV4  &  L'interfaccia web sarà di tipo single-page  &  Interno \\
+		RDV4  &  L'interfaccia web sarà di tipo single-page.  &  Interno \\
 		\hline
-		ROV5  &  Il corretto funzionamento dell'interfaccia web deve essere garantito per l'utilizzo con i principali browser attualmente sul mercato   &  Interno \\
+
+		ROV5  &  Il corretto funzionamento dell'interfaccia web deve essere garantito per l'utilizzo con i principali browser attualmente sul mercato.   &  Interno \\
 		\hline
-		ROV5.1  &  Ogni funzionalità dell'interfaccia web descritta nei requisiti funzionali deve essere compatibile con il browser Google Chrome v. 39.0 e successive   &  Interno \\
+		ROV5.1  &  Ogni funzionalità dell'interfaccia web descritta nei requisiti funzionali deve essere compatibile con il browser Google Chrome v. 39.0 e successive.   &  Interno \\
 		\hline
-		ROV5.2  &  Ogni funzionalità dell'interfaccia web descritta nei requisiti funzionali deve essere compatibile con il browser Firefox v. 35.0 e successive   &  Interno \\
+		ROV5.2  &  Ogni funzionalità dell'interfaccia web descritta nei requisiti funzionali deve essere compatibile con il browser Firefox v. 35.0 e successive.   &  Interno \\
 		\hline
-		ROV5.3  &  Ogni funzionalità dell'interfaccia web descritta nei requisiti funzionali deve essere compatibile con il browser Safari v. 8.0 e successive   &  Interno \\
+		ROV5.3  &  Ogni funzionalità dell'interfaccia web descritta nei requisiti funzionali deve essere compatibile con il browser Safari v. 8.0 e successive.   &  Interno \\
 		\hline
 
 		ROV6  &  Il sistema utilizzerà delle librerie esterne per effettuare le chiamate alle API dei diversi social.  &  Interno \\
@@ -616,9 +621,11 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 
 		ROV8  &  Il linguaggio di programmazione principalmente usato per il front-end sarà Javascript.  &  Verbale 2015/01/28 \\
 		\hline
-		ROV8.1  &  Il sistema utilizzerà AngularJS come framework per il front-end.  &  Verbale 2015/01/28 \\
+		ROV8.1 & Il codice e la documentazione relativi al linguaggio Javascript dovranno seguire la Google JavaScript Style Guide. & Verbale 2015/01/28 \\
 		\hline
-
+		ROV8.2  &  Il sistema utilizzerà AngularJS come framework per il front-end.  &  Verbale 2015/01/28 \\
+		\hline
+		ROV8.2.1 & Il codice e la documentazione relativi ad AngularJS dovranno seguire l'AngularJS Style Guide di Google. & Verbale 2015/01/28 \\
 
 		ROV9  &  Il token di accesso dovrà essere formato dalla combinazione seguente: ``id utente'' + ``data creazione token'' + ``valore random''.  &  Interno \\
 		\hline
