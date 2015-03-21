@@ -18,6 +18,8 @@ Thumbs.db
 # rimuove il tracciamento dei file spazzatura temporanei che vengono generati da Astah
 *.asta.bak
 *.asta.lock
+*.svg.bak
+
 
 # rimuove i file .pdf generati dalla compilazione in LaTex che possono causare conflitti durante il pull
 
