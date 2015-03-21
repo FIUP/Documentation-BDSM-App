@@ -1,7 +1,16 @@
 #!/bin/bash
 
-INTERNI=("norme_di_progetto" "studio_di_fattibilita" "verbale_interno_2014-11-26" "verbale_interno_2014-12-02");
-ESTERNI=("analisi_dei_requisiti" "piano_di_progetto" "piano_di_qualifica" "glossario" "verbale_esterno_2015_01_14")
+# Documenti per RR
+# INTERNI=("norme_di_progetto" "studio_di_fattibilita" "verbale_interno_2014-11-26" "verbale_interno_2014-12-02");
+# ESTERNI=("analisi_dei_requisiti" "piano_di_progetto" "piano_di_qualifica" "glossario" "verbale_esterno_2015_01_14")
+
+# Documenti per RP
+INTERNI=("norme_di_progetto" "verbale_interno_2015_01_28" "verbale_interno_2015_02_18")
+ESTERNI=("analisi_dei_requisiti" "piano_di_progetto" "piano_di_qualifica" "glossario" "specifica_tecnica")
+
+# Documenti per RQ
+
+# Documenti per RA
 
 doc_to_copy="documenti_glossario/"
 tpl=${doc_to_copy}"/template"
