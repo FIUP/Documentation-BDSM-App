@@ -148,43 +148,63 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 
 		% Info e Statistiche utente
 
-		ROF3  &  Nella home screen dell'utente autenticato è presente un pulsante per aprire il menù delle informazioni personali  &  UC1.2 \newline UC1.5 \\
+		ROF3  &  Nella home screen dell'utente autenticato è presente un pulsante per aprire il menù delle informazioni personali e le statistiche del sistema  &  UC1.2 \\
 		\hline
-		ROF3.1  &  Nel menù delle informazioni personali è presente un pulsante per visualizzare i propri dati  &  UC1.2.1 \\
+		ROF3.1  &  Il sistema offre un pannello per la visualizzazione dei dettagli utente &  UC1.2.1 \\
 		\hline
 		ROF3.1.1  &  Se l'utente seleziona il pulsante di visualizzazione dei dati personali il sistema deve reperire il suo nome utente, il suo indirizzo e-mail e la data del suo ultimo accesso &  Interno \\
 		\hline
-		ROF3.1.2  &  Se l'utente seleziona il pulsante di visualizzazione dei dati personali deve aprirsi una finestra che mostra i suoi dati &  UC1.2.1 \\
+		ROF3.1.2  &  Nel pannello dei dati personali l'utente può visualizzare il proprio username  &  UC1.2.1.1 \\
 		\hline
-		ROF3.1.2.1  &  Nella finestra dei dati personali deve essere presente il nome utente dell'utente autenticato. l'indirizzo e-mail ad esso associata e la data del suo ultimo accesso &  UC1.2.1.1 \\
+		ROF3.1.3  &  Nel pannello dei dati personali l'utente può visualizzare il proprio indirizzo email  &  UC1.2.1.2 \\
 		\hline
-		ROF3.1.2.2  &  Se nella finestra dei dati personali deve essere presente l'indirizzo e-mail associato all'account dell'utente autenticato &  UC1.2.1.2 \\
+		ROF3.1.4  &  Nel pannello dei dati personali l'utente può visualizzare l'ultimo accesso effettuato  &  UC1.2.1.3 \\
 		\hline
-		ROF3.1.2.3  &  Nella finestra dei dati personali deve essere presente la data dell'ultimo accesso al sistema dell'utente autenticato precedente a quello in corso &  UC1.2.1.3 \\
-		\hline
-		ROF3.2  &  Nel menù delle informazioni personali è presente un pulsante per visualizzare le proprie statistiche &  UC1.2.2 \\
+		ROF3.2  &  Il sistema offre un pannello per la visualizzazione delle statistiche utente e di sistema  &  UC1.2.2 \\
 		\hline
 		ROF3.2.1  &  Se l'utente seleziona il pulsante di visualizzazione delle statistiche, il sistema deve reperire le informazioni necessarie  &  Interno \\
 		\hline
-		ROF3.2.2  & Se l'utente seleziona il pulsante di visualizzazione delle statistiche, si deve aprire una finestra che mostra le statistiche &  UC1.2.2 \\
+		ROF3.2.2 &  Nel pannello delle statistiche viene mostrato il numero di View attive &  UC1.2.2.1 \\
 		\hline
-		ROF3.2.2.1  &  Nella finestra delle statistiche viene mostrato il numero di View attive &  UC1.2.2.1 \\
+		ROF3.2.3  &  Nel pannello delle statistiche viene mostrato il numero di Recipe disponibili &  UC1.2.2.2 \\
 		\hline
-		ROF3.2.2.2  &  Nella finestra delle statistiche viene mostrato il numero di Recipe disponibili &  UC1.2.2.2 \\
+		ROF3.3  &  Nel menù delle informazioni personali è presente un pulsante per modificare i propri dettagli personali &  UC1.5 \\
 		\hline
-		ROF3.3  &  Nel menù delle informazioni personali è presente un pulsante per modificare la propria password &  UC1.5 \\
+		ROF3.3.1  &  Se l'utente seleziona il pulsante di modifica dettagli personali, il sistema visulizza una pagina tramite cui è possibile modificare il proprio username, indirizzo email e password &  UC1.5 \newline UC1.5.1 \newline UC1.5.2 \newline UC1.5.3 \newline UC1.5.4 \\
 		\hline
-		ROF3.3.1  &  Se l'utente seleziona il pulsante di cambio della password, si deve aprire una finestra con il form per l'inserimento di una nuova password e della password di conferma. Viene richiesto anche l'inserimento della vecchia password. &  UC1.5 \newline UC1.5.1 \newline UC1.5.2 \newline UC1.5.3 \\
+		ROF3.3.2  &  L'utente può inserire il nuovo username nell'apposito form  &  UC1.5.2 \\
 		\hline
-		ROF3.3.2  &  La password e la password di conferma devono essere nella forma descritta nei requisiti ROF1.3.1, ROF1.3.2, ROF1.3.3 e ROF1.4.1  &  Interno \\
+		ROF3.3.2.1  &  Il nuovo username non può essere uguale a quello attualmente utilizzato  &  Interno \\
 		\hline
-		ROF3.3.2.1  &  Il sistema visualizza eventuali non conformità in fase di compilazione  &  Interno \\
+		ROF3.3.2.2  &  Il nuovo username deve essere conforme ai vincoli indicati nei requisiti ROF1.1.1, ROF1.1.2,  e ROF1.1.3  &  Interno \\
 		\hline
-		ROF3.3.3  &  L'utente può cliccare il tasto di conferma se ha riempito il form  &  UC1.5.4 \\
+		ROF3.3.3  &  L'utente può inserire il nuovo indirizzo email nell'apposito form  &  UC1.5.3 \\
 		\hline
-		ROF3.3.3.1  &  Una volta premuto il tasto di conferma appare un messaggio di errore se la password non coincide con la conferma o se la vecchia password inserita non è corretta.  &  UC1.5.5 \\
+		ROF3.3.3.1  &  Il nuovo indirizzo email inserito deve essere diverso da quello attualmente in uso  &  Interno \\
 		\hline
-		ROF3.3.3.2  &  Una volta premuto il tasto di conferma appare un messaggio di conferma se la password è stata modificata  &  Interno \\
+		ROF3.3.3.2  &  Il nuovo indirizzo email deve essere un indirizzo valido  &  Interno \\
+		\hline
+		ROF3.3.4  &  Per effettuare il cambio password, l'utente deve digitare la password attualmente in uso, la password nuova ed una copia di quest'ultima  &  UC1.5.4 \\
+		\hline
+		ROF3.3.4.1  &  L'utente può inserire la password attualmente in uso nell'apposito form  &  UC1.5.4.1 \\
+		\hline
+		ROF3.3.4.2  &  L'utente può inserire la nuova password nell'apposito form  &  UC1.5.4.2 \\
+		\hline
+		ROF3.3.4.2.1  &  La nuova password deve essere nella forma descritta nei requisiti ROF1.3.1, ROF1.3.2, ROF1.3.3 e ROF1.4.1  &  Interno \\
+		\hline
+		ROF3.3.4.3  &  L'utente può inserire la password di conferma nell'apposito form  &  UC1.5.4.2 \\
+		\hline
+		ROF3.3.4.3.1  &  La password di conferma deve essere uguale alla nuova password digitata in precedenza  &  Interno \\
+		\hline
+		ROF3.3.5  &  Il sistema visualizza eventuali non conformità in fase di compilazione  &  Interno \\
+		\hline
+		ROF3.3.6  &  L'utente può cliccare il tasto di conferma se ha riempito il form  &  UC1.5.5 \\
+		\hline
+		ROF3.3.6.1  &  Una volta premuto il tasto di conferma, il sistema analizza la conformità dei dati rispetto ai vincoli indicati nei requisiti ROF3.3.2.1, ROF3.3.2.2, ROF3.3.3.1, ROF3.3.3.2, ROF3.3.4.2.1, ROF3.3.4.3.1  &  Interno \\
+		\hline
+		ROF3.3.6.2  &  Se i dati inseriti non rispettano i vincoli di sistema, viene visualizzato un avviso contenente gli errori effettuati  &  UC1.5.6 \\
+		\hline
+		ROF3.3.6.3  &  Se i dati inseriti sono corretti viene visualizzato un mesaggio che indica il salvataggio dei cambiamenti  &  UC1.5.5 \\
 
 		% Logout
 
@@ -430,15 +450,19 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		RFF9.1.1  &  Una volta premuto l'apposito pulsate per la modifica dei permessi utente, le modifiche effettuate vengono applicate localmente in attesa che le modifiche generali agli utenti vengano confermate  &  Interno \newline UC1.7.2 \\
 		\hline
+		R0F9.1.2  &  All'amministratore non è offerta la possibilità di modificare i permessi a se stesso  &  Interno \\
+		\hline
 		ROF9.2  &  Accanto al nome di ogni utente nella lista è presente un pulsante che permette di eliminare un utente dal sistema  &  UC1.7.3 \\
 		\hline
-		ROF9.2.1  &  Una volta premuto l'apposito pulsate per l'eliminazione di un utente, le modifiche effettuate vengono applicate localmente in attesa che le modifiche generali agli utenti vengano confermate  &  Interno \newline UC1.7.3 \\
+		RFF9.2.1  &  Una volta premuto l'apposito pulsate per l'eliminazione di un utente, le modifiche effettuate vengono applicate localmente in attesa che le modifiche generali agli utenti vengano confermate  &  Interno \newline UC1.7.3 \\
+		\hline
+		R0F9.2.2  &  Un utente non può essere eliminato se questo è attulmente loggato al sistema  &  Interno \\
 		\hline
 		ROF9.3  &  Al termine dell'elenco degli utenti attualmente visualizzati è presente un pulsante per confermare le modifiche applicate  &  UC1.7.4 \\
 		\hline
 		ROF9.3.1  &  Se la conferma delle modifiche ha successo, l'amministratore visualizza un messaggio di conferma  &  UC1.7.4 \\
 		\hline
-		ROF9.3.2  &  Se si è verificato un errore in fase di conferma delle modifiche (un utente sta cambiando i permessi a se stesso oppure un utente eliminato è attualmente loggato), il sistema produce un messaggio di errore e le modifiche vengono annullate &  UC1.7.5 \\
+		ROF9.3.2  &  Nel caso le modifiche non rispettano i vincoli indicati nei requisiti R0F9.1.2 e R0F9.2.2, il sistema produce un messaggio di errore e le modifiche vengono annullate  &  UC1.7.5 \\
 		\hline
 
  		% Gestione richieste recipe
