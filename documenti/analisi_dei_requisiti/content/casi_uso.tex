@@ -318,7 +318,8 @@
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Visualizza metriche della Recipe (UC1.3.1);
-		\item Confronta metriche della Recipe (UC1.3.2).
+		\item Confronta metriche della Recipe (UC1.3.2);
+		\item Valutazione Recipe (UC1.3.3).
 	\end{enumerate}
 	\item \textbf{Postcondizione:} è stato fornito un elenco delle Recipe disponibili.
 \end{itemize}
@@ -526,6 +527,19 @@
 \end{itemize}
 % FINE USE CASE %
 
+\subsubsection{UC1.3.3: Valutazione Recipe}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente autenticato: utente che ha effettuato l'accesso al servizio;
+	\end{itemize}
+	\item \textbf{Descrizione:} l'utente ha l'opportunità di dare una valutazione alle Recipe presenti nel sistema, in modo che l'amministratore possa avere una classifica di quelle più gradite o meno dagli utenti;
+	\item \textbf{Precondizione:} l'utente ha visualizzato l'elenco delle Recipe;
+	\item \textbf{Scenario principale:} l'utente da un voto da 1 a 5 alla Recipe che desidera giudicare. Questa operazione può essere effettuata per ogni Recipe dell'elenco;
+	\item \textbf{Postcondizione:} l'utente ha dato una valutazione a una o più Recipe.
+\end{itemize}
+% FINE USE CASE %
+
 \pagebreak
 
 
@@ -546,11 +560,15 @@
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
 		\item Aggiungi nuova Recipe (UC1.4.1);
-		\item Creazione Recipe fallita (UC1.4.2);
-		\item Elimina Recipe (UC1.4.3);
+		\item Eliminazione Recipe (UC1.4.3);
+		\item Visualizzazione classifica delle Recipe (UC1.4.4).
 	\end{enumerate}
 	\item \textbf{Postcondizione:} le informazioni richieste dall'amministratore sono state fornite, le Recipe eliminate, cancellate dal sistema e quelle aggiunte, salvate; Se durante la creazione sono stati inseriti valori che non rispettano i vincoli di sistema è stata visualizzata una schermata di errore;
-	\item \textbf{Estensioni:} Creazione Recipe fallita (UC1.4.3).
+	\item \textbf{Estensioni:}
+		\begin{enumerate}
+			\item Creazione Recipe fallita (UC1.4.2);
+			\item Nessuna Recipe in classifica (UC1.4.5).
+		\end{enumerate}
 \end{itemize}
 % FINE USE CASE %
 
@@ -713,6 +731,32 @@
 \end{itemize}
 % FINE USE CASE %
 
+\subsubsection{UC1.4.4: Visualizzazione classifica delle Recipe}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+	\item \textbf{Descrizione:} l'amministratore può vedere la classifica delle Recipe in ordine dalla più apprezzata alla meno;
+	\item \textbf{Precondizione:} l'amministratore ha premuto sulla visualizzazione della classifica delle Recipe;
+	\item \textbf{Scenario principale:} l'amministratore visualizza la classifica delle Recipe;
+	\item \textbf{Postcondizione:} l'amministratore ha visualizzato la classifica.
+\end{itemize}
+% FINE USE CASE %
+
+\subsubsection{UC1.4.5: Nessuna Recipe in classifica}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
+	\end{itemize}
+	\item \textbf{Descrizione:} nessun utente è andato a dare un giudizio sulle Recipe presenti nel sistema e quindi la classifica sarà vuota;
+	\item \textbf{Precondizione:} l'amministratore ha premuto sulla visualizzazione della classifica delle Recipe;
+	\item \textbf{Scenario principale:} l'amministratore visualizza un messaggio che lo avvisa che nessun utente ha dato un giudizio alle Recipe;
+	\item \textbf{Postcondizione:} l'amministratore ha visualizzato il messaggio che nessuna Recipe è stata votata dagli utenti.
+\end{itemize}
+% FINE USE CASE %
+
 \pagebreak
 
 
@@ -743,7 +787,7 @@
 \end{itemize}
 % FINE USE CASE %
 
-\subsection{UC1.5.1: Visualizza pagina modifica dettagli utente}
+\subsubsection{UC1.5.1: Visualizza pagina modifica dettagli utente}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -756,7 +800,7 @@
 \end{itemize}
 % FINE USE CASE %
 
-\subsection{UC1.5.2: Modifica username}
+\subsubsection{UC1.5.2: Modifica username}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -764,12 +808,12 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente può modificare il proprio username che lo identifica univocamente nel sistema;
 	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso al sistema e si trova nella pagina di modifica dettagli utente;
-	\item \textbf{Scenario principale:} l'utente inserice il nuovo username nell'apposito campo;
+	\item \textbf{Scenario principale:} l'utente inserisce il nuovo username nell'apposito campo;
 	\item \textbf{Postcondizione:} il sistema ha ottenuto il nuovo username.
 \end{itemize}
 % FINE USE CASE %
 
-\subsection{UC1.5.3: Modifica indirizzo email}
+\subsubsection{UC1.5.3: Modifica indirizzo email}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -786,7 +830,7 @@
 \end{itemize}
 % FINE USE CASE %
 
-\subsection{UC1.5.3.1: Inserimento indirizzo email}
+\subsubsection{UC1.5.3.1: Inserimento indirizzo email}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -794,12 +838,12 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente può inserire il nuovo indirizzo email tramite l'apposito campo nella pagina di modifica dettagli utente;
 	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso al sistema e si trova nella pagina di modifica dettagli utente;
-	\item \textbf{Scenario principale:} l'utente inserice il nuovo indirizzo email nell'apposito campo;
+	\item \textbf{Scenario principale:} l'utente inserisce il nuovo indirizzo email nell'apposito campo;
 	\item \textbf{Postcondizione:} il sistema ha ottenuto il nuovo indirizzo email.
 \end{itemize}
 % FINE USE CASE %
 
-\subsection{UC1.5.3.2: Conferma indirizzo email}
+\subsubsection{UC1.5.3.2: Conferma indirizzo email}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -807,12 +851,12 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente deve confermare l'indirizzo email inserendo una sua copia nell'apposito campo;
 	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso al sistema e si trova nella pagina di modifica dettagli utente;
-	\item \textbf{Scenario principale:} l'utente inserice l'indirizzo email di conferma nell'apposito campo;
+	\item \textbf{Scenario principale:} l'utente inserisce l'indirizzo email di conferma nell'apposito campo;
 	\item \textbf{Postcondizione:} il sistema ottiene l'indirizzo email di conferma e controlla in tempo reale se corrisponde a quello inserito precedentemente.
 \end{itemize}
 % FINE USE CASE %
 
-\subsection{UC1.5.4: Modifica password}
+\subsubsection{UC1.5.4: Modifica password}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -830,7 +874,7 @@
 \end{itemize}
 % FINE USE CASE %
 
-\subsection{UC1.5.4.1: Inserimento password attuale}
+\subsubsection{UC1.5.4.1: Inserimento password attuale}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -838,12 +882,12 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} per il cambio password è necessario che l'utente inserisca la sua password attuale;
 	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso al sistema e si trova nella pagina di modifica dettagli utente;
-	\item \textbf{Scenario principale:} l'utente inserice la propria password attuale nell'apposito campo;
+	\item \textbf{Scenario principale:} l'utente inserisce la propria password attuale nell'apposito campo;
 	\item \textbf{Postcondizione:} il sistema ha ottenuto la password attuale dell'utente.
 \end{itemize}
 % FINE USE CASE %
 
-\subsection{UC1.5.4.2: Inserimento nuova password}
+\subsubsection{UC1.5.4.2: Inserimento nuova password}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -851,12 +895,12 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente può inserire una nuova password nell'apposito campo in modo da poter effettuare la modifica della stessa;
 	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso al sistema e si trova nella pagina di modifica dettagli utente;
-	\item \textbf{Scenario principale:} l'utente inserice la nuova password nell'apposito campo;
+	\item \textbf{Scenario principale:} l'utente inserisce la nuova password nell'apposito campo;
 	\item \textbf{Postcondizione:} il sistema ha ottenuto la nuova password.
 \end{itemize}
 % FINE USE CASE %
 
-\subsection{UC1.5.4.3: Conferma nuova password}
+\subsubsection{UC1.5.4.3: Conferma nuova password}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -869,7 +913,7 @@
 \end{itemize}
 % FINE USE CASE %
 
-\subsection{UC1.5.5:  Conferma modifiche}
+\subsubsection{UC1.5.5:  Conferma modifiche}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -882,16 +926,16 @@
 \end{itemize}
 % FINE USE CASE %
 
-\subsection{UC1.5.6:  Errore nell'inserimento dei dati}
+\subsubsection{UC1.5.6:  Errore nell'inserimento dei dati}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
 		\item utente autenticato: utente che ha effettuato l'accesso al servizio;
 	\end{itemize}
-	\item \textbf{Descrizione:} le modifiche apportate ai dettagli pesonali contengono dei dati non conformi ai vincoli di sistema: le modifiche non vengono applicate e l'utente visualizza un messaggio di errore;
+	\item \textbf{Descrizione:} le modifiche apportate ai dettagli personali contengono dei dati non conformi ai vincoli di sistema: le modifiche non vengono applicate e l'utente visualizza un messaggio di errore;
 	\item \textbf{Precondizione:} l'utente ha selezionato il pulsate relativo alla conferma della modifica dei dettagli personali dopo aver inserito dei dati non conformi ai vincoli di sistema;
 	\item \textbf{Scenario principale:} l'utente visualizza un messaggio di errore che indica gli errori effettuati dall'utente;
-	\item \textbf{Postcondizione:} il sistema annulla le modfiche e l'utente ha preso atto degli errori effettuati.
+	\item \textbf{Postcondizione:} il sistema annulla le modifiche e l'utente ha preso atto degli errori effettuati.
 \end{itemize}
 % FINE USE CASE %
 
@@ -1217,7 +1261,7 @@
 		\item utente autenticato: utente che ha effettuato l'accesso nell'applicazione;
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente deve inserire il titolo delle Recipe che vuole richiedere;
-	\item \textbf{Precondizione:} l'utente ha avvato il processo di creazione Recipe tramite l'apposito pulsante;
+	\item \textbf{Precondizione:} l'utente ha avviato il processo di creazione Recipe tramite l'apposito pulsante;
 	\item \textbf{Scenario principale:} l'utente inserisce il titolo della Recipe nell'apposito campo;
 	\item \textbf{Postcondizione:} il sistema ha ottenuto il titolo della Recipe.
 \end{itemize}
@@ -1230,7 +1274,7 @@
 		\item utente autenticato: utente che ha effettuato l'accesso nell'applicazione;
 	\end{itemize}
 	\item \textbf{Descrizione:} l'utente deve inserire descrizione delle Recipe che vuole richiedere;
-	\item \textbf{Precondizione:} l'utente ha avvato il processo di creazione richiesta Recipe tramite l'apposito pulsante;
+	\item \textbf{Precondizione:} l'utente ha avviato il processo di creazione richiesta Recipe tramite l'apposito pulsante;
 	\item \textbf{Scenario principale:} l'utente inserisce la descrizione della Recipe nell'apposito campo;
 	\item \textbf{Postcondizione:} il sistema ha ottenuto la descrizione della Recipe.
 \end{itemize}
