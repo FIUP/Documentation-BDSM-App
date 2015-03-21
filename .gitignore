@@ -15,6 +15,9 @@ Thumbs.db
 *.lof
 *.lot
 
+# rimuove il tracciamento del byte code di Python
+*.pyc
+
 # rimuove il tracciamento dei file spazzatura temporanei che vengono generati da Astah
 *.asta.bak
 *.asta.lock
