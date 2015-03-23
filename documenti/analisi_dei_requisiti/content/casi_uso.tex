@@ -913,7 +913,50 @@
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.5.5:  Conferma modifiche}
+\subsubsection{UC1.5.5: Eliminazione account utente}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente autenticato: utente che ha effettuato l'accesso al servizio;
+	\end{itemize}
+	\item \textbf{Descrizione:} l'utente ha la possibilità di rimuovere il suo account tramite la pagina di modifica dettagli personali;
+	\item \textbf{Precondizione:} l'utente è autenticato al sistema e si trova nella pagina di modifica dettagli utente;
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{enumerate}
+		\item Selezione eliminazione account (UC1.5.5.1);
+		\item Conferma eliminazione account (UC1.5.5.2).
+	\end{enumerate}
+	\item \textbf{Postcondizione:} il sistema ha rimosso l'utente dal sistema cancellando i relativi dati.
+\end{itemize}
+% FINE USE CASE %
+
+\subsubsection{UC1.5.5.1: Selezione eliminazione account}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente autenticato: utente che ha effettuato l'accesso al servizio;
+	\end{itemize}
+	\item \textbf{Descrizione:} l'utente può eliminare il suo account tramite l'apposito pulsante nella pagina di modifica dettagli personali;
+	\item \textbf{Precondizione:} l'utente ha effettuato l'accesso al sistema e si trova nella pagina di modifica dettagli utente;
+	\item \textbf{Scenario principale:} l'utente preme l'apposito pulsante per effettuare l'eliminazione del suo account;
+	\item \textbf{Postcondizione:} l'utente ha selezionato il pulsante e deve ora confermare l'eliminazione del suo account.
+\end{itemize}
+% FINE USE CASE %
+
+\subsubsection{UC1.5.5.2: Conferma eliminazione account}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\begin{itemize}
+		\item utente autenticato: utente che ha effettuato l'accesso al servizio;
+	\end{itemize}
+	\item \textbf{Descrizione:} l'utente deve confermare l'eliminazione del suo account prima che il sistema cancelli i relativi dati;
+	\item \textbf{Precondizione:} l'utente ha selezionato il pulsante per effettuare l'eliminazione del proprio account:
+	\item \textbf{Scenario principale:} l'utente preme l'apposito pulsante per confermare l'eliminazione;
+	\item \textbf{Postcondizione:} l'utente ha confermato l'eliminazione del proprio account ed il sistema ha rimosso tutti i relativi dati associati.
+\end{itemize}
+% FINE USE CASE %
+
+\subsubsection{UC1.5.6:  Conferma modifiche}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
@@ -926,7 +969,7 @@
 \end{itemize}
 % FINE USE CASE %
 
-\subsubsection{UC1.5.6:  Errore nell'inserimento dei dati}
+\subsubsection{UC1.5.7:  Errore nell'inserimento dei dati}
 \begin{itemize}
 	\item \textbf{Attori:}
 	\begin{itemize}
