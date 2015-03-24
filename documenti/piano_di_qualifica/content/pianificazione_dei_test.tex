@@ -288,17 +288,23 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 			\end{itemize}
 			
 		\subsubsection{TVF4}
-			L'utente vuole verificare che si possa effettuare la deautenticazione dal siistema. All'utente è richiesto di:
+			L'utente vuole verificare che si possa effettuare la deautenticazione dal sistema. All'utente è richiesto di:
 			\begin{itemize}
+				\item effettuare l'autenticazione nel caso non si fosse attualmente autenticati;
 				\item accedere alla home screen;
-				\item verificare che, alla pressione del pulsante di logout, la sessione termini.
+				\item premere il pulsante di deautenticazione;
+				\item verificare che, alla pressione del pulsante di deautenticazione, la sessione termini.
 			\end{itemize}
 			
 		\subsubsection{TVF4.1}
-			L'utente vuole verificare che, alla pressione del pulsante di logout, la sessione termini. All'utente è richiesto di:
+			L'utente vuole verificare che, alla pressione del pulsante di deautenticazione, la sessione termini. All'utente è richiesto di:
 			\begin{itemize}
+				\item effettuare l'autenticazione nel caso non si fosse attualmente autenticati;
+				\item accedere alla home screen;
+				\item premere il pulsante di deautenticazione;
 				\item verificare che il sistema chieda la conferma di logout se la sessione è valida;
-				\item verificare che il sistema stampi un messaggio d'errore se la sessione non è valida;
+				\item verificare che, se non si conferma il logout, il sistema non effettui la deautenticazione;
+				\item verificare che, se si conferma il logout, il sistema stampi un messaggio d'errore se la sessione è scaduta;
 				\item verificare che il sistema reindirizzi l'utente alla schermata di login.
 			\end{itemize}
 			
