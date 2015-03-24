@@ -40,9 +40,10 @@ Dove [Codice] è un valore gerarchico.
 			\caption{D1 - Diagramma delle attività principali dell'utente non autenticato}
 		\end{figure}
 		\noindent
-		[TO DO] (descrizione generale e elenco delle attività principali)
+		L'utente che entra nell'applicazione web ha la possibilità di registrarsi o di effettuare il login qualora fosse già registrato al sistema. Li viene inoltre offerta la possibilità di vedere la documentazione dei servizi REST che vengono offerti. Esso però potrà utilizzarli solo dopo essersi registrato ed avare fatto richiesta del token di accesso.
 
 		% subsubsection attività_principali_dell_utente_non_autenticato (end)
+
 
 		\subsubsection{D1.1: Registrazione al sistema} % (fold)
 		\label{ssub:registrazione_al_sistema}
@@ -52,8 +53,10 @@ Dove [Codice] è un valore gerarchico.
 			\caption{D1.1 - Diagramma della registrazione al sistema}
 		\end{figure}
 		\noindent
-		[TO DO] (descrizione generale)
+		Per registrarsi, l'utente dovrà inserire uno username, non già presente nel sistema, la mail e la password. Qualora tutti i dati inseriti fossero corretti, potrà confermare la registrazione e utilizzare i dati in seguito per accedere all'applicativo.
 		% subsubsection registrazione_al_sistema (end)
+
+		\pagebreak
 
 		\subsubsection{D1.2: Accesso al sistema} % (fold)
 		\label{ssub:accesso_al_sistema}
@@ -63,9 +66,11 @@ Dove [Codice] è un valore gerarchico.
 			\caption{D1.2 - Diagramma dell'accesso al sistema}
 		\end{figure}
 		\noindent
-		[TO DO] (descrizione generale) \newline
+		Per effettuare il login, l'utente dovrà inserire o lo username o l'email e inseguito la password d'accesso. Qualora tutti i dati inseriti fossero corretti, potrà accedere all'applicativo, altrimenti dovrà correggere gli errori segnalati. \newline
 
 		% subsubsection accesso_al_sistema (end)
+
+		\pagebreak
 
 		\subsubsection{D1.3: Visualizzazione documentazione servizi REST} % (fold)
 		\label{ssub:visualizzazione_documentazione_servizi_rest}
@@ -75,13 +80,13 @@ Dove [Codice] è un valore gerarchico.
 			\caption{D1.3 - Diagramma della visualizzazione documentazione servizi REST}
 		\end{figure}
 		\noindent
-		[TO DO] (descrizione generale)
+		Anche all'utente non autenticato viene fornita l'opportunità di visualizzare la documentazione dei servizi REST che l'applicativo offre. Entrando su un particolare servizio potrà vedere nel dettaglio la specifica. Potrà utilizzarli solo però registrandosi all'applicativo.
 		% subsubsection visualizzazione_documentazione_servizi_rest (end)
 
 	% subsection utente_non_autenticato (end)
 
 	\pagebreak
-\clearpage \newpage
+	\clearpage \newpage
 
 	\subsection{Utente autenticato} % (fold)
 	\label{sub:utente_autenticato}
@@ -94,7 +99,19 @@ Dove [Codice] è un valore gerarchico.
 			\caption{D2 - Diagramma delle attività principali dell'utente autenticato}
 		\end{figure}
 		\noindent
-		[TO DO] (descrizione generale e elenco delle attività principali)
+		Una volta effettuato l'accesso al sistema, l'utente ha la possibilità di compiere diverse azioni:
+			\begin{itemize}
+				\item Visualizzare l'elenco delle Recipe presenti nel sistema;
+				\item Visualizzare le metriche di una Recipe particolare;
+				\item Confrontare più metriche tra di loro;
+				\item Valutare una Recipe;
+				\item Visualizzare le View preferite;
+				\item Richiedere l'inserimento di una nuova Recipe agli amministratori;
+				\item Gestire il token d'accesso per utilizzare i servizi REST;
+				\item Visualizzare e modificare i suoi dati personali.
+			\end{itemize}
+			\noindent
+		Una volta conclusa l'operazione scelta, potrà eseguirne un'altra o effettuare il logout dal sistema.
 		% subsubsection attività_principali_dell_utente_autenticato (end)
 
 
@@ -107,7 +124,7 @@ Dove [Codice] è un valore gerarchico.
 			\caption{D2.1 - Diagramma della visualizzazione metriche di una Recipe}
 		\end{figure}
 		\noindent
-		[TO DO] (descrizione generale)
+		Dopo avere selezionato la Recipe, della quale si vuole vedere la lista delle metriche associate a essa, l'utente deve scegliere la categoria di appartenenza di queste metriche. Dovrà scegliere tra Facebook, Twitter o Instagram. Una volta deciso, comparirà una lista di tutte le metriche per quella categoria. Se l'utente desidera visualizzare le View generate da una metrica in particolare dovrà accedere a essa, altrimenti potrà cambiare categoria o concludere questa operazione.
 		% subsubsection visualizzazione_metriche_di_una_recipe (end)
 
 
@@ -117,9 +134,10 @@ Dove [Codice] è un valore gerarchico.
 			\centering
 			\centerline{\includegraphics[scale=0.45]{./images/D2_2.pdf}}
 			\caption{D2.2 - Diagramma del confronto tra metriche di una Recipe}
+			\label{fig:d2_2}
 		\end{figure}
 		\noindent
-		[TO DO] (descrizione generale)
+		Dopo avere selezionato la Recipe, della quale si vuole utilizzare le metriche per generare dei confronti. L'utente deve seguire passo passo le scelte descritte nel diagramma \ref{fig:d2_2}. Questo comporterà alla visualizzazione delle View relative al confronto tra i valori scelti.
 		% subsubsection confronto_tra_metriche_di_una_recipe (end)
 
 
