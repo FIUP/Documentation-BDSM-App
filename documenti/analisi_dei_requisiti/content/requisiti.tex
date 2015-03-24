@@ -94,7 +94,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 
 		% Registrazione utente
 
-		ROF1  &  L'utente non autenticato può effettuare la registrazione al servizio  &  UC1.8 \\
+		ROF1  &  L'utente non autenticato può effettuare la registrazione al servizio  & UC1 \newline UC1.8 \\
 		\hline
 		ROF1.1  &  La registrazione richiede l'inserimento dello username  &  UC1.8.1 \\
 		\hline
@@ -129,7 +129,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 
 		% Login Utente
 
-		ROF2  &  L'utente non autenticato può effettuare il login tramite l'apposto form di login  &  UC1.1 \\
+		ROF2  &  L'utente non autenticato può effettuare il login tramite l'apposto form di login  &  UC1 \newline UC1.1 \\
 		\hline
 		ROF2.1  &  Il login richiede l'inserimento dello username  &  UC1.1.1 \\
 		\hline
@@ -148,7 +148,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 
 		% Info e Statistiche utente
 
-		ROF3  &  Nella home screen dell'utente autenticato è presente un pulsante per aprire il menù delle informazioni personali e le statistiche del sistema  &  UC1.2 \\
+		ROF3  &  Nella home screen dell'utente autenticato è presente un pulsante per aprire il menù delle informazioni personali e le statistiche del sistema  & UC1 \newline UC1.2 \\
 		\hline
 		ROF3.1  &  Il sistema offre un pannello per la visualizzazione dei dettagli utente &  UC1.2.1 \\
 		\hline
@@ -168,7 +168,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF3.2.3  &  Nel pannello delle statistiche viene mostrato il numero di Recipe disponibili &  UC1.2.2.2 \\
 		\hline
-		ROF3.3  &  Nel menù delle informazioni personali è presente un pulsante per modificare i propri dettagli personali &  UC1.5 \\
+		ROF3.3  &  Nel menù delle informazioni personali è presente un pulsante per modificare i propri dettagli personali & UC1 \newline UC1.5 \\
 		\hline
 		ROF3.3.1  &  Se l'utente seleziona il pulsante di modifica dettagli personali, il sistema visulizza una pagina tramite cui è possibile modificare il proprio username, indirizzo email e password &  UC1.5 \newline UC1.5.1 \newline UC1.5.2 \newline UC1.5.3 \newline UC1.5.4 \\
 		\hline
@@ -178,11 +178,13 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF3.3.2.2  &  Il nuovo username deve essere conforme ai vincoli indicati nei requisiti ROF1.1.1, ROF1.1.2,  e ROF1.1.3  &  Interno \\
 		\hline
-		ROF3.3.3  &  L'utente può inserire il nuovo indirizzo email nell'apposito form  &  UC1.5.3 \\
+		ROF3.3.3  &  L'utente può cambiare indirizzo email inserendolo nell'apposito form  &  UC1.5.3 & UC1.5.3.1  \\
 		\hline
-		ROF3.3.3.1  &  Il nuovo indirizzo email inserito deve essere diverso da quello attualmente in uso  &  Interno \\
+		ROF3.3.3.1  &  L'utente deve ridigitare l'indirizzo inserito in un form apposito per conferma  &  UC1.5.3 & UC1.5.3.2  \\
 		\hline
-		ROF3.3.3.2  &  Il nuovo indirizzo email deve essere un indirizzo valido  &  Interno \\
+		ROF3.3.3.2  &  Il nuovo indirizzo email inserito deve essere diverso da quello attualmente in uso  &  Interno \\
+		\hline
+		ROF3.3.3.3  &  Il nuovo indirizzo email deve essere un indirizzo valido  &  Interno \\
 		\hline
 		ROF3.3.4  &  Per effettuare il cambio password, l'utente deve digitare la password attualmente in uso, la password nuova ed una copia di quest'ultima  &  UC1.5.4 \\
 		\hline
@@ -192,7 +194,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF3.3.4.2.1  &  La nuova password deve essere nella forma descritta nei requisiti ROF1.3.1, ROF1.3.2, ROF1.3.3 e ROF1.4.1  &  Interno \\
 		\hline
-		ROF3.3.4.3  &  L'utente può inserire la password di conferma nell'apposito form  &  UC1.5.4.2 \\
+		ROF3.3.4.3  &  L'utente deve ridigitare la password per conferma nell'apposito form  &  UC1.5.4.3 \\
 		\hline
 		ROF3.3.4.3.1  &  La password di conferma deve essere uguale alla nuova password digitata in precedenza  &  Interno \\
 		\hline
@@ -219,7 +221,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		% Logout
 
 		\hline
-		ROF4  &  Nella home screen è presente un pulsante di logout  &  UC1.6 \\
+		ROF4  &  Nella home screen è presente un pulsante di logout  &  UC1 \newline UC1.6 \\
 		\hline
 		ROF4.1  &  Una volta premuto il tasto di logout il sistema verifica se la sessione in corso è valida o scaduta  &  Interno \\
 		\hline
@@ -232,7 +234,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		% Recipes e Views
 
 		\hline
-		ROF5  &  Nella home screen dell'utente autenticato sono mostrare tutte le Recipe presenti nel sistema &  UC1.3 \\
+		ROF5  &  Nella home screen dell'utente autenticato sono mostrare tutte le Recipe presenti nel sistema & UC1 \newline UC1.3 \\
 		\hline
 		ROF5.1  & Il sistema ad ogni caricamento della pagina deve recuperare l'elenco delle Recipe  &  Interno \\
 		\hline
@@ -256,7 +258,8 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF5.2.1.3  &  Il sistema, per ogni metrica dell'elenco, deve fornire il pulsante per accedere alle visualizzazioni delle View presenti per quella metrica. &  UC1.3.1 \\
 		\hline
-
+		ROF5.2.2 & Se viene selezionata una metrica di una categoria per la quale il sistema non ha ancora raccolto dati suffcicienti a generare una View, viene visualizzato un messaggio che avverte l'impossibilità a generare alcuna View &  UC1.3.1.4  \\
+		\hline
 
 
 
@@ -370,9 +373,10 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 
 
+
  		% View Preferite
 
-		ROF6  & L'utente ha la possibilità di gestire le View che più preferisce in maniera da averle a disposizione più velocemente. & UC1.11 \\
+		ROF6  & L'utente ha la possibilità di gestire le View che più preferisce in maniera da averle a disposizione più velocemente. &  UC1 \newline & UC1.11 \\
 		\hline
 		ROF6.1  & L'utente visualizza tutte le View che sono state marcate da lui come preferite entrando dal menù nell'apposita pagina. & UC1.11.1 \\
 		\hline
@@ -391,7 +395,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 
  		% Richiesta nuova recipe
 
-		ROF7  & L'utente ha la possibilità di richiedere l'inserimento di una nuova Recipe. & UC1.9 \\
+		ROF7  & L'utente ha la possibilità di richiedere l'inserimento di una nuova Recipe. & UC1 \newline UC1.9 \\
 		\hline
 		ROF7.1  & L'utente può generare una richiesta dall'apposito form presente in un'apposita sezione della Web GUI. & UC1.9 \newline UC1.9.1 \\
 		\hline
@@ -401,7 +405,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF7.1.1.2 & L'utente può inserire una breve descrizione della Recipe che desidera richiedere. Questo campo è facoltativo. & UC1.9.2.2 \\
 		\hline
-		ROF7.1.1.3 & L'utente deve inserire almeno una metrica nella richiesta della Recipe che desidera. & UC1.9.2.2 \\
+		ROF7.1.1.3 & L'utente deve inserire almeno una metrica nella richiesta della Recipe che desidera. & UC1.9.2.3 \\
 		\hline
 		ROF7.1.1.4 & L'utente deve scegliere la categoria della metrica tra: Facebook, Twitter o Instagram. Questa selezione è obbligatoria e vincolata dal sistema. & Interno \\
 		\hline
@@ -430,9 +434,9 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 
  		% Admin Area
 
-		ROF8  &  Un utente che possiede i privilegi di amministratore può accedere ad alcune aree riservate del sistema.  &  UC1.4 \newline UC1.7 \\
+		ROF8  &  Un utente che possiede i privilegi di amministratore può accedere ad alcune aree riservate del sistema.  &  UC1 \newline UC1.4 \newline UC1.7 \\
 		\hline
-		ROF8.1  &  Un amministratore può accedere al pannello per inserire una nuova Recipe  &  UC1.4.1 \newline UC1.4.1.1 \\
+		ROF8.1  &  Un amministratore può accedere al pannello per inserire una nuova Recipe  & UC1 \newline UC1.4.1 \newline UC1.4.1.1 \\
 		\hline
 		ROF8.1.1  &  Il sistema richiede l'inserimento di determinati parametri per individuare il contesto dei dati richiesti dalla Recipe.  &  UC1.4.1.2 \\
 		\hline
@@ -499,7 +503,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 
  		% Gestione richieste recipe
 
-		ROF10  &  L'amministratore può gestire tutte le richieste di nuove Recipe, ricevute dagli utenti, da una apposita sezione.  & UC1.10 \\
+		ROF10  &  L'amministratore può gestire tutte le richieste di nuove Recipe, ricevute dagli utenti, da una apposita sezione.  & UC1 \newline UC1.10 \\
 		\hline
 		ROF10.1  &  L'amministratore può vedere l'elenco delle richieste di nuove Recipe.  & UC1.10.1 \\
 		\hline
@@ -511,7 +515,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF10.3  &  Premendo sul pulsante della visualizzazione dettagli si accede a un pannello contenente il form per la creazione di una nuova Recipe già compilato con i dati richiesti.  &  UC1.10.2 \newline Interno \\
 		\hline
-		ROF10.3.1  &  L'amministratore può decidere se modificare il titolo e la descrizione generale della Recipe richiesta.  & UC1.10.3.1 \newline UC1.10.3.2 \\
+		ROF10.3.1  &  L'amministratore può decidere se modificare il titolo e la descrizione generale della Recipe richiesta.  & UC1.10.3 \newline UC1.10.3.1 \newline UC1.10.3.2 \\
 		\hline
 		ROF10.3.2  &  L'amministratore non può modificare altri campi della richiesta oltre a quelli descritti in ROF10.3.1.  & Interno \\
 		\hline
@@ -540,7 +544,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF11.2.1  &  Il sistema è in grado di gestire una richiesta di chiusura sessione contenente un token di accesso valido rendendolo non valido. & UC2.3 \newline UC2.3.1 \\
 		\hline
-		ROF11.2.2  &  Il sistema restituisce un errore se non è riuscito a invalidare il token. & Interno \\
+		ROF11.2.2  &  Il sistema restituisce un errore se non è riuscito a invalidare il token. & UC2.3.2 \\
 		\hline
 		ROF11.2.3  &  Il sistema restituisce una conferma dell'avvenuta invalidazione del token & UC2.3.3 \\
 		\hline
@@ -561,10 +565,18 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		ROF11.3.2  &  Il sistema restituisce un errore se il token utilizzato è non valido  &  UC2.2.2 \\
 		\hline
 
-
-
-
-
+		ROF12 & È presente un tasto nella home page che permette di visualizzare la specifica dei servizi REST offerti &  UC2.4  \\
+		\hline
+		ROF12.1 & Nella specifica sono elencati tutti i servizi offerti &  UC2.4  \\
+		\hline
+		ROF12.1.1 & Per ogni servizio viene data una breve descrizione dell'effetto di una chiamata di quel servizio & Interno \\
+		\hline
+		ROF12.1.2 & Per ogni servizio viene descritta la sintassi che deve rispettare la richiesta & Interno \\
+		\hline						
+		ROF12.1.3 & Per ogni servizio viene fornito un semplice esempio d'uso & Interno \\
+		\hline
+		ROF12.2 & È presente nella pagina della specifica un link al manuale completo del requisito ROQ3 & Interno \\
+		\hline
 
 	\end{longtable}
 	\egroup

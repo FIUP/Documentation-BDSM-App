@@ -61,8 +61,8 @@
 	\item \textbf{Descrizione:} dopo l'accesso al servizio:
 	\begin{itemize}
 		\item un utente sconosciuto può autenticarsi, o se è al primo accesso al servizio può registrarsi per ottenere delle credenziali valide;
-		\item un utente autenticato può vedere statistiche, modificare la propria password, visualizzare, creare e modificare le proprie View;
-		\item un utente amministratore può fare tutte le operazioni di un utente autenticato, più ha la possibilità di eliminare un utente e tutte le sue View e modificarne i privilegi;
+		\item un utente autenticato può vedere statistiche, modificare la propria password, visualizzare le Recipe presenti nel sistema e richiederne di nuove, visualizzare e gestire le proprie View preferite, modificare la propria password di accesso ed effettuare il logout;
+		\item un utente amministratore può fare tutte le operazioni di un utente autenticato, più ha la possibilità di creare ed eliminare Recipe, viusalizzare le richieste di nuove Recipe ed eliminare un utente e tutte le sue View preferite o modificarne i privilegi;
 	\end{itemize}
 	\item \textbf{Precondizione:} l'utente autenticato, l'utente non autenticato o l'amministratore hanno caricato la prima pagina del servizio;
 	Viene visualizzato un messaggio di errore nel caso le informazioni di accesso inserite siano errate;
@@ -261,13 +261,13 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} selezionando il pulsante dettagli utente viene mostrata all'utente una pagina con il riepilogo delle sue statistiche, quali:
 	\begin{itemize}
-		\item numero di View presenti fornite dal sistema;
+		\item numero di View marcate come preferite;
 		\item numero di Recipe fornite dal sistema;
 	\end{itemize}
   \item \textbf{Precondizione:} l'utente ha selezionato il pulsante per l'accesso ai dettagli utente
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{enumerate}
-		\item Visualizza numero View attive (UC1.2.2.1)
+		\item Visualizza numero View aggiunte ai preferiti (UC1.2.2.1)
 		\item Visualizza numero Recipe disponibili (UC1.2.2.2)
 	\end{enumerate}
 	\item \textbf{Postcondizione:} l'utente ha ottenuto le informazioni richieste.
