@@ -127,7 +127,7 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 			\begin{itemize}
 				\item inserire un username;
 				\item verificare che, se lo username è già presente nel database, venga visualizzato un errore;
-				\item verificare che, nel caso lo username non sia conforme alle norme del sistema, venga visualizzato alcun errore;
+				\item verificare che, nel caso lo username non sia conforme alle norme del sistema, venga visualizzato un errore;
 				\item verificare che, nel caso in cui lo username sia conforme con le norme di sistema, non vengano visualizzati errori.
 			\end{itemize}
 			
@@ -146,7 +146,7 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 				\item inserire una password;
 				\item verificare che, nel caso la password contenga lo username al suo interno, venga visualizzato un errore;
 				\item verificare che, nel caso la password non sia conforme alle norme del sistema, venga visualizzato un errore;
-				\item verificare che, nel caso la password sia conforme alle norme del sistema, non venga visualizzati errori.
+				\item verificare che, nel caso la password sia conforme alle norme del sistema, non vengano visualizzati errori.
 			\end{itemize}
 			
 		\subsubsection{TVF1.4}
@@ -171,10 +171,18 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 				\item inserire un username;
 				\item inserire una password;
 				\item confermare l'autenticazione;
-				\item verificare che il sistema avverta l'utente nel caso in cui il username inserito non sia presente nel sistema;
-				\item verificare che il sistema avverta l'utente nel caso in cui la password inserita non corrisponda a quella relativa allo username inserito;
+				\item verificare che il sistema avverta l'utente nel caso in cui i dati inserirti dall'utente risultino errati;
+				\item verificare che il sistema, nel caso in cui la form sia compilata correttamente, non mostri errori;
 				\item verificare che il sistema, in caso di autenticazione avvenuta con successo, aggiorni la home screen dell'utente autenticato.
 			\end{itemize}
+			
+		\subsubsection{TVF2.4}
+			L'utente vuole verificare che il sistema avverta l'utente nel caso in cui i dati inseriri dall'utente risultino errati. All'utente è richiesto di:
+			\begin{itemize}
+				\item confermare l'autenticazione;
+				\item verificare che il sistema avverta l'utente nel caso in cui il username inserito non sia presente nel sistema;
+				\item verificare che il sistema avverta l'utente nel caso in cui la password inserita non corrisponda a quella relativa allo username inserito.
+			\end{itemize}erificare che, nel caso la nuova password sia conforme alle norme del sistema, non venga visualizzati errori.
 			
 		\subsubsection{TVF3}
 			L'utente vuole verificare che si possa visualizzare le proprie informazioni personali. All'utente è richiesto di:
@@ -183,7 +191,7 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 				\item aprire il menù delle informazioni personali;
 				\item verificare che sia possibile visualizzare i propri dati;
 				\item verificare che sia possibile visualizzare le proprie statistiche;
-				\item verificare che sia possibile modificare la propria password.
+				\item verificare che sia possibile modificare i propri dettagli personali.
 			\end{itemize}
 			
 		\subsubsection{TVF3.1}
@@ -191,20 +199,12 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 			\begin{itemize}
 				\item effettuare l'autenticazione;
 				\item aprire il menù delle informazioni personali;
-				\item selezionare il pulsante di visualizzazione dei dati personali;
+				\item verificare che l'utente non visualizzi i propri dati personali prima di aver premuto l'apposito pulsante; 
+				\item premere il pulsante di visualizzazione dei dati personali;
 				\item verificare che il sistema reperisca i dati personali dell'utente;
-				\item verificare che si apra una finestra contenente i dati personali dell'utente.
-			\end{itemize}
-			
-		\subsubsection{TVF3.1.2}
-			L'utente vuole verificare che si apra una finestra contenente i dati personali dell'utente. All'utente è richiesto di:
-			\begin{itemize}
-				\item effettuare l'autenticazione;
-				\item aprire il menù delle informazioni personali;
-				\item selezionare il pulsante di visualizzazione dei dati personali;
-				\item verificare che si visualizzi il username dell'utente autenticato;
-				\item verificare che si visualizzi l'indirizzo email dell'utente autenticato;
-				\item verificare che si visualizzi la data dell'ultimo accesso dell'utente autenticato.
+				\item verificare che l'utente visualizzi il proprio username;
+				\item verificare che l'utente visualizzi la propria email;
+				\item verificare che l'utente visualizzi l'ultimo accesso effettuato.
 			\end{itemize}
 			
 		\subsubsection{TVF3.2}
@@ -212,32 +212,80 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 			\begin{itemize}
 				\item effettuare l'autenticazione;
 				\item aprire il menù delle informazioni personali;
-				\item selezionare il pulsante di visualizzazione delle statistiche;
+				\item verificare che l'utente non visualizzi le proprie statistiche prima di aver premuto l'apposito pulsante; 
+				\item premere il pulsante di visualizzazione delle statistiche;
 				\item verificare che il sistema reperisca le informazioni dell'utente;
-				\item verificare che si apra una finestra contenente le statistiche.
-			\end{itemize}
-			
-		\subsubsection{TVF3.2.2}
-			L'utente vuole verificare che si apra una finestra contenente le statistiche dell'utente. All'utente è richiesto di:
-			\begin{itemize}
-				\item effettuare l'autenticazione;
-				\item aprire il menù delle informazioni personali;
-				\item selezionare il pulsante di visualizzazione delle statistiche;
 				\item verificare che si visualizzi il numero di View attive;
 				\item verificare che si visualizzi il numero di Recipe disponibili.
 			\end{itemize}
 			
 		\subsubsection{TVF3.3}
-			L'utente vuole verificare che si possa cambiare la propria password. All'utente è richiesto di:
+			L'utente vuole verificare che si possa modificare i propri dettagli personali. All'utente è richiesto di:
 			\begin{itemize}
 				\item effettuare l'autenticazione;
 				\item aprire il menù delle informazioni personali;
-				\item selezionare il pulsante di modifica della passsword;
-				\item verificare che si apra una finestra contenente la form per modificare la password.
+				\item selezionare il pulsante di modifica dei dati personali;
+				\item verificare che si apra una finestra contenente la form per modificare i propri dati personali;
+				\item verificare che l'utente possa inserire un nuovo username;
+				\item verificare che l'utente possa inserire un nuovo indirizzo email;
+				\item verificare che l'utente possa cambiare la propria password;
+				\item verificare che il sistema avverta l'utente in fase di compilazione nel caso in cui i dati inseriti non siano conformi alle norme del sistema;
+				\item premere il pulsante di conferma delle modifiche;
+				\item verificare che, alla pressione del pulsante di conferma delle modifiche, il sistema analizzi le conformità dei dati inseriti;
+				\item verificare che l'utente possa eliminare il proprio account.
 			\end{itemize}
 		
-		\subsubsection{TVF3.3.1}
-			TO DO
+		\subsubsection{TVF3.3.2}
+			L'utente vuole verificare che si possa modificare il proprio username. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item aprire il menù delle informazioni personali;
+				\item selezionare il pulsante di modifica dei dati personali;
+				\item inserire un nuovo username nell'apposito campo;
+				\item verificare che, nel caso il nuovo username coincidi con quello vecchio, venga visualizzato un errore;
+				\item verificare che, se lo username è già presente nel database, venga visualizzato un errore;
+				\item verificare che, nel caso lo username non sia conforme alle norme del sistema, venga visualizzato un errore;
+				\item verificare che, nel caso in cui lo username sia conforme con le norme di sistema, non vengano visualizzati errori.
+			\end{itemize}
+			
+		\subsubsection{TVF3.3.3}
+			L'utente vuole verificare che si possa modificare la propria email. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item aprire il menù delle informazioni personali;
+				\item selezionare il pulsante di modifica dei dati personali;
+				\item inserire una nuova email nell'apposito campo;
+				\item verificare che, nel caso la nuova email coincidi con quella vecchia, venga visualizzato un errore;
+				\item verificare che, se la email è già presente nel database, venga visualizzato un errore;
+				\item verificare che, nel caso la email non sia conforme alle norme del sistema, venga visualizzato un errore;
+				\item verificare che, nel caso la email sia conforme con le norme di sistema, non vengano visualizzati errori.
+			\end{itemize}
+			
+		\subsubsection{TVF3.3.4}
+			L'utente vuole verificare che si possa modificare la propria password. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item aprire il menù delle informazioni personali;
+				\item selezionare il pulsante di modifica dei dati personali;
+				\item inserire la password corrente nell'apposito campo;
+				\item inserire la nuova password nell'apposito campo;
+				\item inserire la password di conferma nell'apposito campo;
+				\item verificare che, nel caso la nuova password contenga lo username al suo interno, venga visualizzato un errore;
+				\item verificare che, nel caso la nuova password non sia conforme alle norme del sistema, venga visualizzato un errore;
+				\item verificare che, nel caso la nuova password non coincida con quella di conferma, venga visualizzato un errore;
+				\item verificare che, nel caso la nuova password sia conforme alle norme del sistema e la vecchia password sia stata inserita correttamente, non vengano visualizzati errori.
+			\end{itemize}
+			
+		\subsubsection{TVF3.3.7}
+			L'utente vuole verificare che l'utente possa eliminare il proprio account. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item aprire il menù delle informazioni personali;
+				\item premere il pulsante di eliminazione dell'account;
+				\item premere il pulsante di conferma dell'eliminazione dell'account;
+				\item verificare che, alla conferma dell'eliminazione dell'account, il sistema rimuova tutti i dati associati a quell'utente;
+				\item verificare che il sistema, una volta confermata l'eliminazione dell'account, riporti l'utente alla home page di default del sistema per gli utenti non registrati.
+			\end{itemize}
 			
 		\subsubsection{TVF4}
 			L'utente vuole verificare che si possa effettuare la deautenticazione dal siistema. All'utente è richiesto di:
