@@ -116,7 +116,7 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 				\item inserire una email;
 				\item inserire una password;
 				\item inserire una password di conferma;
-				\item verificare che il sistema avverta l'utente in fase di compilazione se i dati inseriti non sono conformi alle norme del sistema;
+				\item verificare che il sistema avverta l'utente in fase di compilazione nel caso in cui i dati inseriti non siano conformi alle norme del sistema;
 				\item confermare la registrazione;
 				\item verificare che il sistema avverta l'utente nel caso in cui i dati inseriti non siano conformi alle norme del sistema;
 				\item verificare che, nel caso la registrazione abbia avuto esito positivo, venga inviata un email di conferma.
@@ -127,7 +127,8 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 			\begin{itemize}
 				\item inserire un username;
 				\item verificare che, se lo username è già presente nel database, venga visualizzato un errore;
-				\item verificare che, nel caso lo username non sia conforme alle norme del sistema, venga visualizzato alcun errore.
+				\item verificare che, nel caso lo username non sia conforme alle norme del sistema, venga visualizzato alcun errore;
+				\item verificare che, nel caso in cui lo username sia conforme con le norme di sistema, non vengano visualizzati errori.
 			\end{itemize}
 			
 		\subsubsection{TVF1.2}
@@ -135,21 +136,33 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 			\begin{itemize}
 				\item inserire una email;
 				\item verificare che, se la email è già presente nel database, venga visualizzato un errore;
-				\item verificare che, nel caso la email non sia conforme alle norme del sistema, venga visualizzato un errore.
+				\item verificare che, nel caso la email non sia conforme alle norme del sistema, venga visualizzato un errore;
+				\item verificare che, nel caso la email sia conforme con le norme di sistema, non vengano visualizzati errori.
 			\end{itemize}
 			
 		\subsubsection{TVF1.3}
 			L'utente vuole verificare che l'inserimento di una password avvenga correttamente. All'utente è richiesto di:
 			\begin{itemize}
 				\item inserire una password;
-				\item verificare che, nel caso la password non sia conforme alle norme del sistema, venga visualizzato un errore.
+				\item verificare che, nel caso la password contenga lo username al suo interno, venga visualizzato un errore;
+				\item verificare che, nel caso la password non sia conforme alle norme del sistema, venga visualizzato un errore;
+				\item verificare che, nel caso la password sia conforme alle norme del sistema, non venga visualizzati errori.
 			\end{itemize}
 			
 		\subsubsection{TVF1.4}
 			L'utente vuole verificare che l'inserimento della password di conferma avvenga correttamente. All'utente è richiesto di:
 			\begin{itemize}
 				\item inserire una password di conferma;
-				\item verificare che, nel caso in cui la password di conferma non sia uguale alla password precedentemente inserita, venga visualizzato un errore.
+				\item verificare che, nel caso in cui la password di conferma non sia uguale alla password precedentemente inserita, venga visualizzato un errore;
+				\item verificare che, nel caso in cui la password di conferma coincida con la password precedentemente inserita, non vengano visualizzati errori.
+			\end{itemize}
+			
+		\subsubsection{TVF1.8}
+			L'utente vuole verificare che, nel caso la registrazione abbia avuto esito positivo, venga inviata un email di conferma. All'utente è richiesto di:
+			\begin{itemize}
+				\item completare la registrazione;
+				\item accedere alla propria casella email;
+				\item verificare che sia arrivata l'email di conferma dal sistema.
 			\end{itemize}
 			
 		\subsubsection{TVF2}
