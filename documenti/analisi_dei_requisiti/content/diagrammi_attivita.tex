@@ -14,7 +14,9 @@
 % 0.0.3			2015-03-19			stese le note principali per ogni diagramma		Tesser Paolo
 % =================================================================================================
 % 0.0.4			2015-03-22			inclusi diagrammi								Tesser Paolo
-%
+% =================================================================================================
+% 0.0.5			2015-03-26			scritte descrizioni generali dei diagrammi		Tesser Paolo
+% =================================================================================================
 %
 
 % CONTENUTO DEL CAPITOLO
@@ -149,7 +151,7 @@ Dove [Codice] è un valore gerarchico.
 			\caption{D2.3 - Diagramma della richiesta di una nuova Recipe}
 		\end{figure}
 		\noindent
-		[TO DO] (descrizione generale)
+		L'utente ha l'opportunità di fare delle richieste di inserimento di nuove Recipe nel sistema. Esso dovrà completare un form molto vincolato dal sistema, in modo che tutte le richieste seguano un determinato stile. Una volta completato, l'utente procederà all'invio della richiesta, la quale passerà agli amministratore che la valuteranno per approvarla o meno.
 		% subsubsection richiesta_di_una_nuova_recipe (end)
 
 		\subsubsection{D2.4: Gestione token di accesso} % (fold)
@@ -160,7 +162,7 @@ Dove [Codice] è un valore gerarchico.
 			\caption{D2.4 - Diagramma della gestione del token di accesso}
 		\end{figure}
 		\noindent
-		[TO DO] (descrizione generale)
+		L'utente che si è registrato, al sistema, qualora fosse uno sviluppatore, potrà utilizzare i servizi REST che il sistema offre per utilizzare i dati nella maniera più utile al suo scopo. Per farlo dovrà richiedere un token di accesso che gli sarà fornito premendo su un apposito pulsante.
 		% subsubsection gestione_token_di_accesso (end)
 
 		\subsubsection{D2.5: Visualizzazione dettagli utente} % (fold)
@@ -171,7 +173,7 @@ Dove [Codice] è un valore gerarchico.
 			\caption{D2.5 - Diagramma della visualizzazione dettagli utente}
 		\end{figure}
 		\noindent
-		[TO DO] (descrizione generale)
+		L'utente potrà visualizzare in parallelo una serie di informazioni riguardanti il suo profilo.
 		% subsubsection visualizzazione_dettagli_utente (end)
 
 		\subsubsection{D2.6: Modifica dei dati utente} % (fold)
@@ -182,14 +184,14 @@ Dove [Codice] è un valore gerarchico.
 			\caption{D2.6 - Diagramma della modifica dei dati utente}
 		\end{figure}
 		\noindent
-		[TO DO] (descrizione generale)
+		Oltre a visualizzare i dati associati al suo profilo, l'utente ne potrà modificare alcuni come lo username, l'email o la password. Potrà anche decidere di cancellarsi dall'applicazione andando ad eliminare l'account.
 		% subsubsection modifica_dei_dati_utente (end)
 
 
 	% subsection utente_autenticato (end)
 
 	\pagebreak
-
+	\clearpage \newpage
 
 
 	\subsection{Utente amministratore} % (fold)
@@ -203,7 +205,15 @@ Dove [Codice] è un valore gerarchico.
 			\caption{D3 - Diagramma delle attività principali dell'utente amministratore}
 		\end{figure}
 		\noindent
-		[TO DO] (descrizione generale e elenco delle attività principali)
+		Una volta effettuato l'accesso al sistema, l'amministratore ha la possibilità di compiere diverse azioni:
+			\begin{itemize}
+				\item Inserire nuova Recipe nel sistema;
+				\item Gestire le richieste di nuove Recipe da parte degli utenti;
+				\item Amministrare gli utenti;
+				\item Visualizzare la classifica delle Recipe più apprezzate.
+			\end{itemize}
+			\noindent
+		Una volta conclusa l'operazione scelta, potrà eseguirne un'altra o effettuare il logout dal sistema.
 
 		% subsubsection attività_principali_dell_utente_amministratore (end)
 
@@ -216,9 +226,11 @@ Dove [Codice] è un valore gerarchico.
 			\caption{D3.1 - Diagramma dell'inserimento di una nuova Recipe}
 		\end{figure}
 		\noindent
-		[TO DO] (descrizione generale)
+		L'utente amministratore può decidere di inserire nuove Recipe nel sistema. Qualora volesse farlo, dovrà inserire una serie di dati richiesti da una form. Una volta completati i campi e verificata la correttezza da parte del sistema di essi, la Recipe verrà inserita nel sistema.
 		% subsubsection inserimento_nuova_recipe (end)
 
+		\pagebreak
+		% \clearpage \newpage
 
 		\subsubsection{D3.2: Gestione richieste Recipe} % (fold)
 		\label{ssub:gestione_richieste_recipe}
@@ -228,8 +240,11 @@ Dove [Codice] è un valore gerarchico.
 			\caption{D3.2 - Diagramma della gestione delle richieste Recipe}
 		\end{figure}
 		\noindent
-		[TO DO] (descrizione generale)
+		L'amministratore ha il compito di valutare le richieste di nuove Recipe che gli vengono inviate dagli utenti. Visualizzerà quindi una form già riempita dei campi necessari ad generare la Recipe. I campi, saranno già corretti. All'amministratore è fornita solo la possibilità di modificare il titolo e la descrizione della Recipe, in modo da renderle più precise e significative anche per altri utenti, qualora la richiesta fosse accettata. \newline
+		Se, però l'amministratore, si rende conto che la richiesta è troppo vaga e su argomenti scorrelati, potrò rifiutarla inviando un messaggio motivato al richiedente.
 		% subsubsection gestione_richieste_recipe (end)
+
+		\pagebreak
 
 		\subsubsection{D3.3: Amministrazione degli utenti} % (fold)
 		\label{ssub:amministrazione_degli_utenti}
@@ -239,15 +254,12 @@ Dove [Codice] è un valore gerarchico.
 			\caption{D3.3 - Diagramma dell'amministrazione degli utenti}
 		\end{figure}
 		\noindent
-		[TO DO] (descrizione generale)
+		All'amministratore è fornita anche la possibilità di modificare i permessi di un utente o di rimuoverlo dal sistema. L'eliminazione non potrà avvenire finché l'utente è dentro al sistema.
 		% subsubsection amministrazione_degli_utenti (end)
 
 
 
-
 	% subsection utente_amministratore (end)
-
-
 
 
 % section diagrammi_delle_attività (end)
