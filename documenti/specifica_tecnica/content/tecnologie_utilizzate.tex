@@ -13,6 +13,8 @@
 % =================================================================================================
 % 0.0.3			2015-03-09			aggiunta librerie e sistemata formattazione		Tesser Paolo
 % =================================================================================================
+% 0.0.4			2015-03-27			rimozione di JINJA e inseriti contro Datastore	Tesser Paolo
+% =================================================================================================
 %
 
 % CONTENUTO DEL CAPITOLO
@@ -117,10 +119,6 @@ In questa sezione verranno descritte le tecnologie su cui si basa lo sviluppo de
 		\noindent
 		% subsubsection angularjs (end)
 
-		\subsubsection{JINJA2} % (fold)
-		\label{ssub:jinja}
-		TO DO (da decidere)
-		% subsubsection jinja (end)
 
 	% subsection framework (end)
 
@@ -191,6 +189,12 @@ In questa sezione verranno descritte le tecnologie su cui si basa lo sviluppo de
 				\item permette un forte livello di astrazione che nasconde la complessità dei database schema-less;
 				\item presenza di un linguaggio (GQL) utilizzato per l'effettuazione di query con la stessa sintassi di MySQL.
 			\end{itemize}
+			\noindent
+			\textbf{Contro}:
+				\begin{itemize}
+					\item forte accoppiamento tra le classi che modellano i dati e la comunicazione con il DBMS stesso.
+				\end{itemize}
+			\noindent
 		% subsubsection datastore (end)
 	% subsection database (end)
 

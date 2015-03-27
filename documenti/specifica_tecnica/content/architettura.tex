@@ -66,16 +66,10 @@ L’architettura generale non tratta l’intero insieme delle sottoclassi del si
 
 		\subsubsection{Protocollo di comunicazione Client-Server}
 		La comunicazione tra il livello Client e quello Server avviene tramite i Google Cloud Endpoints. Questi permettono di creare delle API da un'applicazione generata tramite la Google App Engine. Gli Endpoints garantiscono un modo semplice di sviluppare un back-end condiviso, riducendo di molto il lavoro che sarebbe necessario per implementare una simile infrastruttura. 
-		\begin{comment}
-		\begin{figure}[!htbp]
-			\centering
-			\centerline{\includegraphics[scale=0.45]{./images/endpoints.png}}
-			\caption{Modello generale di comunicazione Client-Server}
-		\end{figure}
-		\end{comment}
+
 
 		\subsubsection{Protocollo di comunicazione Server-Database}
-		La comunicazione tra il livello Server e quello del Database avviene tramite apposite funzionalità messe a disposizione dal servizio Datastore della piattaforma. Per poterle utilizzare il Server dovrà utilizzare il modulo: \textbf{google.appengine.ext.db}.
+		La comunicazione tra il livello Server e quello del DBMS avviene tramite apposite funzionalità messe a disposizione dal servizio Datastore della piattaforma. Per poterle utilizzare il Server dovrà utilizzare il modulo: \textbf{google.appengine.ext.db}.
 
 
 % section descrizione_architettura (end)
