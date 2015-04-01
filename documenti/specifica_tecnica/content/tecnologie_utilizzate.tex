@@ -66,13 +66,19 @@ In questa sezione verranno descritte le tecnologie su cui si basa lo sviluppo de
 
 		\subsubsection{JSON} % (fold)
 		\label{ssub:json}
-		JSON (Javascript Object Notation) è il formato di dati scelto per lo scambio di informazioni tra il client e il server. \newline
+		JSON (Javascript Object Notation) è il formato di dati scelto per lo scambio di informazioni tra il client e il server dell'applicazione. \newline
 		\textbf{Pro}:
 			\begin{itemize}
 				\item utilizzo semplice tramite Javascript;
-				\item formato utilizzato anche dai Google Endpoints che si andranno a sviluppare. (TO DO - da rivedere)
+				\item formato utilizzato dai Google Endpoints che si andranno a sviluppare per i servizi REST resi disponibili dall'applicazione. 
 			\end{itemize}
 			\noindent
+			\textbf{Contro}:
+			\begin{itemize}
+				\item supporta meno tipi di dati nativi rispetto a JavaScript;
+				\item non permette di specificare il tipo dei campi numerici salvati al suo interno;
+			\end{itemize}
+		\noindent
 		% subsubsection json (end)
 
 		\subsubsection{Python} % (fold)
