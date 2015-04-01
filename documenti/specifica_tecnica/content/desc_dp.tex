@@ -14,26 +14,26 @@
 %
 
 % CONTENUTO DEL CAPITOLO
-\appendix
 
 
-\section{Mockup} % (fold)
-\label{sec:desc_dp}
-	\subsection{Pagina} % (fold)
-	\label{sub:pagina}
+
+\section{Descrizione Design Pattern} % (fold)
+\label{sec:descdp}
+	\subsection{Design Pattern MVC} % (fold)
+	\label{sub:Descrizione}
 		\subsubsection{Descrizione generale} % (fold)
-		\label{ssub:descrizione_generale}
-		[TO DO]
+		Il pattern è basato sulla separazione dei compiti fra i componenti software che interpretano tre ruoli principali:
+		\begin{itemize}
+		\item \textbf{Model} che fornisce i metodi per accedere ai dati utili all'applicazione;
+		\item \textbf{View} che visualizza i dati contenuti nel model e si occupa dell'interazione con utenti e agenti;
+		\item \textbf{Controller} che riceve i comandi dell'utente (in genere attraverso il view) e li attua modificando lo stato degli altri due componenti.
+		\end{itemize}
+		Questo schema implica anche la tradizionale separazione fra la logica applicativa (in questo contesto spesso chiamata "logica di business"), a carico del controller e del model, e l'interfaccia utente a carico del view.
+		I dettagli delle interazioni fra questi tre oggetti software dipendono molto dalle tecnologie usate (linguaggio di programmazione, eventuali librerie, middleware e via dicendo) e dal tipo di applicazione (per esempio se si tratta di un'applicazione web, o di un'applicazione desktop). Quasi sempre la relazione fra view e model è descrivibile anche come istanza del pattern Observer. A volte, quando è necessario cambiare il comportamento standard dell'applicazione a seconda delle circostanze, il controller implementa anche il pattern Strategy.
+		
+		\subsubsection{Schema Grafico} % (fold)
+		\includegraphics[scale=0.75]{./images/mvc.png} 
 		% subsubsection descrizione_generale (end)
 
-		\subsubsection{Vista desktop} % (fold)
-		\label{ssub:vista_desktop}
-		[TO DO] (inserire immagine)
-		% subsubsection vista_desktop (end)
-
-		\subsubsection{Vista mobile} % (fold)
-		\label{ssub:vista_mobile}
-		[TO DO] (inserire immagine)
-		% subsubsection vista_mobile (end)
 	% subsection pagina (end)
 % section mockup (end)
