@@ -35,6 +35,7 @@ L’architettura generale non tratta l’intero insieme delle sottoclassi del si
 		Di seguito viene proposto un diagramma rappresentante le relazioni tra i vari livelli. Vengono individuate le componenti che permettono ai vari livelli di interagire senza dover esporre la struttura interna degli stessi. \newline \newline
 
 		[TO DO] (Diagramma con i tre livelli mostrati come package con all'interno annidati al package che si occupano della comunicazione tra i livelli) \newline \newline
+		
 		Come indicato nel diagramma, il livello del client interagisce con il server tramite gli EndPoints forniti dal Server. Esso riceverà e analizzerà la richiesta mediante [TO DO]. Una volta pronta, la risposta verrà fornita al Client.\newline
 		Il client si occuperà di analizzarla per determinare se la richiesta ha avuto un esito positivo o negativo. Nel primo caso la gestione verrà delegata alla componente [TO DO]. \newline
 
@@ -48,9 +49,9 @@ L’architettura generale non tratta l’intero insieme delle sottoclassi del si
 		Gli utenti invocheranno determinate azioni utilizzando i pulsanti forniti dall'interfaccia e il sistema risponderà fornendo pagine di configurazione interattive oppure visualizzando una serie di grafici che verranno aggiornanti costantemente utilizzando i servizi REST forniti dall'applicazione tramite il modulo Processor [TO REVIEW]. In dettaglio:
 
 		\begin{itemize}
-			\item Model: TO DO;
-			\item View: TO DO;
-			\item Controller: TO DO.
+			\item Model: Contiene il modello dei dati e la \textit{business logic}, che comprende le definizioni delle chiamate che può fare l'applicazione e i servizi che offrono. Inserire la logica dell'applicazione nel modello anziché nel \textit{controller} permette di ridurre la duplicazione del codice;
+			\item View: Contiene tutte le viste utente come astrazione del modello dei dati;
+			\item Controller: Questo modulo, in AngularJS, espone tutti i metodi forniti dalla logica dell'applicazione e permette l'associazione a due vie dei dati tra il livello astratto nelle viste e il livello concreto del modello.
 		\end{itemize}
 
 		\subsubsection{Architettura Server Tier}
