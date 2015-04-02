@@ -39,6 +39,8 @@
 % =================================================================================================
 % 2.0.7			2015-03-16			inseriti req. ROF6/7 con derivati						Tesser Paolo
 % =================================================================================================
+% 2.0.8			2015-04-02			inseriti requisiti per API offerte						Tesser Paolo
+% =================================================================================================
 %
 
 % CONTENUTO DEL CAPITOLO
@@ -212,7 +214,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		R0F3.3.7.1  &  L'utente può selezionare l'apposito pulsante per procedere alla rimozione del proprio account dalla pagina di modifica dettagli utente  &  UC1.5.5.1 \\
 		\hline
-		R0F3.3.7.2  &  L'utente deve confermare la rimozione del proprio account una volta selzionato l'avvio dell'eliminazione dello stesso  &  UC1.5.5.2 \\
+		R0F3.3.7.2  &  L'utente deve confermare la rimozione del proprio account una volta selezionato l'avvio dell'eliminazione dello stesso  &  UC1.5.5.2 \\
 		\hline
 		R0F3.3.7.2.1  &  Una volta confermata l'eliminazione dell'account personale il sistema provvede a rimuovere tutti i dati associati all'utente in questione  &  Interno \\
 		\hline
@@ -258,7 +260,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF5.2.1.3  &  Il sistema, per ogni metrica dell'elenco, deve fornire il pulsante per accedere alle visualizzazioni delle View presenti per quella metrica. &  UC1.3.1 \\
 		\hline
-		ROF5.2.2 & Se viene selezionata una metrica di una categoria per la quale il sistema non ha ancora raccolto dati suffcicienti a generare una View, viene visualizzato un messaggio che avverte l'impossibilità a generare alcuna View &  UC1.3.1.4  \\
+		ROF5.2.2 & Se viene selezionata una metrica di una categoria per la quale il sistema non ha ancora raccolto dati sufficienti a generare una View, viene visualizzato un messaggio che avverte l'impossibilità a generare alcuna View &  UC1.3.1.4  \\
 		\hline
 
 
@@ -281,8 +283,6 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		ROF5.3.1.5  &  Tipo di View: viene visualizzato un Map Chart che illustra le zone nella quale si sono creati degli eventi di una pagina e mostra dei cerchi di diverse dimensioni a seconda della media di partecipanti agli eventi di quella zona. & Interno \\
 		\hline
 		ROF5.3.1.6  &  Tipo di View: viene visualizzato un Bar Chart che mostra la media di commenti delle pagina per ogni post effettuato dalla stessa. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
-		\hline
-		ROF5.3.1.7  &  Tipo di View: viene visualizzato un Line Chart che mostra l’andamento del numero di post giornalieri di una pagina [TO DO]. & Interno \\
 		\hline
 
  			% Twitter
@@ -351,7 +351,7 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 		\hline
 		ROF5.6.3.1  &  L'utente deve poter selezionare delle metriche tra quelle visualizzate &  UC1.3.2.1.3 \\
 		\hline
-		ROF5.6.4  &  Una volta selezionate almeno due metriche tra quelle visualizzate l'utente deve poter cliccare un pulsante per generare il confronto  &  UC1.3.2.2 \\
+		ROF5.6.4  &  Una volta selezionate almeno due metriche e massimo tre tra quelle visualizzate l'utente deve poter cliccare un pulsante per generare il confronto  &  UC1.3.2.2 \\
 		\hline
 		ROF5.6.4.1  &  Una volta cliccato il pulsante per generare il confronto l'utente deve poter vedere le View di confronto generate dal confronto selezionato  &  UC1.3.2.3 \\
 		\hline
