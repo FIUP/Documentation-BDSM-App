@@ -35,11 +35,12 @@ Nonostante questo l'applicativo \projectName{} e la documentazione fornita con e
 
 			\paragraph{Accettazione}
 				\subparagraph{Discussione e scelta del capitolato}
-Il \roleProjectManager{} ha il compito di organizzare	gli incontri iniziali per permettere ai componenti del gruppo di discutere e esaminare i capitolati selezionati dal committente. \\
-Dalle riunioni emergerà la scelta effettuata dal team. \\
-Le valutazioni che hanno portato a prendere questa decisione verranno documentate in dei verbali.
+				Il \roleProjectManager{} ha il compito di organizzare	gli incontri iniziali per permettere ai componenti del gruppo di discutere e esaminare i capitolati selezionati dal committente. \\
+				Dalle riunioni emergerà la scelta effettuata dal team. \\
+				Le valutazioni che hanno portato a prendere questa decisione verranno documentate in dei verbali.
+
 				\subparagraph{Studio di Fattibilità}
-Agli \emph{Analisti} spetta il compito di redigere lo \docNameVersionSdF{}, basandosi sui verbali citati in precedenza.
+				Agli \emph{Analisti} spetta il compito di redigere lo \docNameVersionSdF{}, basandosi sui verbali citati in precedenza.
 Per realizzare il documento dovranno essere presi in considerazione i seguenti punti per ogni capitolato, con maggiore dettaglio per quello preso in carico.
 					\begin{itemize}
 						\item \textbf{dominio tecnologico e applicativo:} si valutano le conoscenze attuali del team riguardo le tecnologie richieste;
@@ -61,22 +62,22 @@ Per realizzare il documento dovranno essere presi in considerazione i seguenti p
 
 			\paragraph{Pianificazione}
 				\subparagraph{Scelta del modello di ciclo di vita}
-Il \roleProjectManager{} avrà il compito di scegliere, se non indicato dal proponente, il modello di ciclo di vita adatto per lo sviluppo del prodotto richiesto.
+				Il \roleProjectManager{} avrà il compito di scegliere, se non indicato dal proponente, il modello di ciclo di vita adatto per lo sviluppo del prodotto richiesto.
 				\subparagraph{Sviluppo e documentazione del Piano di Progetto}
 Il \roleProjectManager{} dovrà eseguire una serie di compiti per delineare i lavori che i membri del team dovranno andare ad eseguire, calcolandone i costi e le tempistiche. Il tutto verrà documento nel \docNameVersionPdP{}.
 
 	\subsection{Processo di sviluppo}
 		\subsubsection{Attività}
 			\paragraph{Analisi dei requisiti}
-Dopo avere redatto lo \docNameSdF{}, agli \emph{Analisti} spetterà il compito di scrivere il documento \docNameVersionAdR{}. \\
-L'obiettivo sarà quello di cercare e produrre dei requisiti a partire dalle informazioni a disposizione del team. \\
-Le risorse che potranno essere utilizzate per questo scopo provengono dal capitolato d'appalto e dagli incontri con il proponente e con il committente. 
+			Dopo avere redatto lo \docNameSdF{}, agli \emph{Analisti} spetterà il compito di scrivere il documento \docNameVersionAdR{}. \\
+			L'obiettivo sarà quello di cercare e produrre dei requisiti a partire dalle informazioni a disposizione del team. \\
+			Le risorse che potranno essere utilizzate per questo scopo provengono dal capitolato d'appalto e dagli incontri con il proponente e con il committente. 
 			\paragraph{Progettazione}
 				\subparagraph{Specifica Tecnica}
-Compito dei \emph{Progettisti} sarà descrivere la progettazione ad alto livello dell'architettura dell'applicazione e dei singoli componenti nella \docNameVersionST. Devono inoltre progettare gli opportuni test di integrazione.\\ \\
+				Compito dei \emph{Progettisti} sarà descrivere la progettazione ad alto livello dell'architettura dell'applicazione e dei singoli componenti nella \docNameVersionST. Devono inoltre progettare gli opportuni test di integrazione.\\ \\
 					\noindent
 					\textbf{Diagrammi UML}\\
-Si utilizzerà il linguaggio UML per definire:
+					Si utilizzerà il linguaggio UML per definire:
 						\begin{itemize}
 							\item Diagrammi delle classi;
 							\item Diagrammi dei package;
@@ -94,11 +95,12 @@ La descrizione dei design pattern sarà a carico dei \emph{Progettisti} che sceg
 					I \emph{Progettisti} dovranno definire delle classi di verifica, necessarie per verificare che i componenti del sistema funzionino correttamente.\\ 
 
 				\subparagraph{Definizione di prodotto}
-				La seguente sezione verrà redatta nelle fasi successive.
+				La seguente sezione verrà redatta nelle fasi successive di Progettazione di dettaglio e codifica.
 
 			\paragraph{Codifica}
+			La seguente sezione verrà redatta nelle fasi successive di Progettazione di dettaglio e codifica.
 
-La seguente sezione verrà redatta nelle fasi successive.
+
 		\subsubsection{Procedure}
 
 			\paragraph{Inserimento requisiti nella base di dati}
@@ -210,7 +212,12 @@ I casi d'uso devono essere divisi in ordine gerarchico secondo il seguente schem
 
 			\paragraph{Nomi e norme di codifica} % (fold)
 			\label{par:nomi_e_norme_di_codifica}
-			Il codice dovrà seguire le linee guida	presenti nella Google Python Style Guide \url{https://google-styleguide.googlecode.com/svn/trunk/pyguide.html}.	 \\
+			Il codice dovrà seguire determinate linee guida a seconda del linguaggio.
+				\begin{itemize}
+					\item \textbf{Python}: Google Python Style Guide \url{https://google-styleguide.googlecode.com/svn/trunk/pyguide.html};
+					\item \textbf{Javascript}: Google JavaScript Style Guide \url{http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml?showone=Method_and_property_definitions#Method_and_property_definitions};
+					\item \textbf{AngularJS}: Google AngularJS Style Guide \url{https://google-styleguide.googlecode.com/svn/trunk/angularjs-google-style.html}.
+				\end{itemize}
 
 				\begin{itemize}
 					\item ci dovrà essere un header su ciascun file che conterrà le seguente informazioni:
@@ -222,7 +229,7 @@ I casi d'uso devono essere divisi in ordine gerarchico secondo il seguente schem
 							\item dovranno inoltre essere inserite per ogni modifica che verrà effettuata: la successiva versione generata dall'avanzamento, la data, una breve descrizione e l'autore.
 						\end{itemize}
 					\noindent
-Esempio relativo ai file in Python
+					Esempio relativo ai file in Python, ma che dovrà essere simile anche per i file javascript:
 					\begin{verbatim}
 					# File: nome_del_file
 					# Author: Cognome Nome
@@ -235,6 +242,7 @@ Esempio relativo ai file in Python
 					# x.y.z         AAAA-MM-DD     Cognome Nome        Description
 					# -------------------------------------------------------------
 					\end{verbatim}
+
 					\item i nomi delle variabili dovranno essere in inglese;
 					\item i commenti dovranno essere in italiano
 				\end{itemize}
@@ -266,4 +274,4 @@ Esempio relativo ai file in Python
 			\paragraph{Yeoman}
 			\label{par:yeoman}
 			Al fine di creare la struttura di base per l'applicativo web front-end verrà usato il software di scaffolding Yeoman, con il generatore generator-angular. \newline
-			Verranno selezionate tra le opzioni proposte di non utilizzare Sass, di includere Bootstrap e tutti i moduli presenti di angular.js.
+			Verranno selezionate tra le opzioni proposte di non utilizzare Sass, di includere Bootstrap e tutti i moduli presenti di AngularJS.
