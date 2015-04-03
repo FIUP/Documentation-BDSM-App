@@ -24,7 +24,7 @@ Nel descrivere le componenti si parlerà di classi, che però saranno da intende
 	[TO DO] (diagramma) \newline \newline
 	
 	\begin{itemize}
-		\item \textbf{Descrizione}: [TO DO];
+		\item \textbf{Descrizione}: è il package che racchiude tutte le parti del front-end. \'E quindi l'insieme dei componenti che viene eseguito nel browser degli utenti normali e degli amministratori, fornendo loro un'interfaccia grafica per interagire con il sistema;
 		\item \textbf{Package contenuti}:
 			\begin{itemize}
 				\item model;
@@ -34,6 +34,8 @@ Nel descrivere le componenti si parlerà di classi, che però saranno da intende
 		\item \textbf{Interazione con altri componenti}: interagisce con il server definito nella sezione [TO DO] effettuando delle chiamate ai servizi REST offerti;
 	\end{itemize}
 	% subsubsection bdsm_app_client (end)
+
+	% PACKAGE MODEL
 
 	\subsubsection{bdsm\_app::client::model} % (fold)
 	\label{ssub:bdsm_app_client_model}
@@ -47,32 +49,6 @@ Nel descrivere le componenti si parlerà di classi, che però saranno da intende
 	\end{itemize}
 	% subsubsection bdsm_app_client_model (end)
 
-	\subsubsection{bdsm\_app::client::view} % (fold)
-	\label{ssub:bdsm_app_client_view}
-	[TO DO] (diagramma) \newline \newline
-
-	\begin{itemize}
-		\item \textbf{Descrizione}: [TO DO];
-		\item \textbf{Padre}: [TO DO] (qualora presente);
-		\item \textbf{Package contenuti}: [TO DO] (qualora presente);
-		\item \textbf{Interazione con altri componenti}: [TO DO];
-	\end{itemize}
-	% subsubsection bdsm_app_client_view (end)
-
-	\subsubsection{bdsm\_app::client::controller} % (fold)
-	\label{ssub:bdsm_app_client_controller}
-	[TO DO] (diagramma) \newline \newline
-
-	\begin{itemize}
-		\item \textbf{Descrizione}: [TO DO];
-		\item \textbf{Padre}: [TO DO] (qualora presente);
-		\item \textbf{Package contenuti}: [TO DO] (qualora presente);
-		\item \textbf{Interazione con altri componenti}: [TO DO];
-	\end{itemize}
-	% subsubsection bdsm_app_client_controller (end)
-
-
-	% PACKAGE MODEL
 
 	\subsubsection{bdsm\_app::client::model::data} % (fold)
 	\label{ssub:bdsm_app_client_model_data}
@@ -151,7 +127,6 @@ Nel descrivere le componenti si parlerà di classi, che però saranno da intende
 					\item \textbf{Relazioni con altre classi}: [TO DO].
 				\end{itemize}	
 	% subsubsection bdsm_app_client_model_data_admin (end)
-
 
 
 	\subsubsection{bdsm\_app::client::model::services} % (fold)
@@ -238,12 +213,23 @@ Nel descrivere le componenti si parlerà di classi, che però saranno da intende
 
 
 
-
-
 	% END PACKAGE MODEL
 
 
 	% PACKAGE DELLA VIEW
+
+	\subsubsection{bdsm\_app::client::view} % (fold)
+	\label{ssub:bdsm_app_client_view}
+	[TO DO] (diagramma) \newline \newline
+
+	\begin{itemize}
+		\item \textbf{Descrizione}: [TO DO];
+		\item \textbf{Padre}: [TO DO] (qualora presente);
+		\item \textbf{Package contenuti}: [TO DO] (qualora presente);
+		\item \textbf{Interazione con altri componenti}: [TO DO];
+	\end{itemize}
+	% subsubsection bdsm_app_client_view (end)
+
 	\subsubsection{bdsm\_app::client::view::public} % (fold)
 	\label{ssub:bdsm_app_client_view_public}
 	[TO DO] (diagramma) \newline \newline
@@ -294,9 +280,22 @@ Nel descrivere le componenti si parlerà di classi, che però saranno da intende
 	
 	% subsubsection bdsm_app_client_view_admin (end)
 
-	% END PACKAGE CONTROLLER
+	% END PACKAGE VIEW
 
-	% PACKAGE VIEW
+	% PACKAGE CONTROLLER
+
+	\subsubsection{bdsm\_app::client::controller} % (fold)
+	\label{ssub:bdsm_app_client_controller}
+	[TO DO] (diagramma) \newline \newline
+
+	\begin{itemize}
+		\item \textbf{Descrizione}: [TO DO];
+		\item \textbf{Padre}: [TO DO] (qualora presente);
+		\item \textbf{Package contenuti}: [TO DO] (qualora presente);
+		\item \textbf{Interazione con altri componenti}: [TO DO];
+	\end{itemize}
+	% subsubsection bdsm_app_client_controller (end)
+
 
 	\subsubsection{bdsm\_app::client::controller::public} % (fold)
 	\label{ssub:bdsm_app_client_controller_public}
@@ -366,7 +365,7 @@ Nel descrivere le componenti si parlerà di classi, che però saranno da intende
 				\end{itemize}
 	% subsubsection bdsm_app_client_controller_admin (end)
 
-	% END PACKAGE VIEW
+	% END PACKAGE CONTROLLER
 
 
 
