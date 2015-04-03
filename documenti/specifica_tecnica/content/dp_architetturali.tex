@@ -50,7 +50,7 @@
 			\begin{itemize}
 				\item \textbf{Scope dell'utilizzo}: questo pattern è utilizzato per gestire il modo con il quale le diverse parti comunicano tra loro per scambiare i dati e per gestire le operazioni che l'utente richiede attraverso l'interazione con la View;
 
-				\item \textbf{Contesto dell'utilizzo}: viene utilizzato nel livello client per gestire lo scambio dei dati e le interazioni che fanno cambiare lo stato dell View e del Model, attraverso principalmente un sistema di two-way data binding. Il Model però [TO DO]
+				\item \textbf{Contesto dell'utilizzo}: viene utilizzato nel livello client per gestire lo scambio dei dati e le interazioni che fanno cambiare le View e lo stato del Model, attraverso principalmente un sistema di two-way data binding e di eventi. Il Model però non interagisce direttamente con le View, ma passa attraverso un controller che fa da collante tra la View e il Model (ViewModel) attraverso l'oggetto \$scope.
 			\end{itemize}
 		% paragraph mvvm (end)
 	% subsubsection mvw (end)
@@ -61,7 +61,7 @@
 
 		\begin{itemize}
 			\item \textbf{Scope dell'utilizzo}: è un Design Pattern che viene utilizzato per favorire la separazione delle responsabilità tra i componenti dalla risoluzione delle dipendenze. Questo permette di avere una migliore modularità del codice, di avere un minor accoppiamento tra le diverse parti e garantisce una più facile fase di testing;
-			\item \textbf{Contesto dell'utilizzo}: viene utilizzato direttamente da AngularJS per [TO DO];
+			\item \textbf{Contesto dell'utilizzo}: viene utilizzato direttamente da AngularJS per iniettare le diverse dipendenze nei moduli che le richiedono. In particolare vengono iniettati nei controller tutti i servizi e i modelli dei dati necessari all'interazione dell'utente con le viste.
 		\end{itemize}
 	% subsubsection dependency_injection (end)
 
