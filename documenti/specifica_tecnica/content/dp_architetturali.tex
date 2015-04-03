@@ -9,7 +9,7 @@
 % Version		Modifier Date		Change											Author
 % 0.0.1 		2015-03-26 			aggiunto sezioni								Tesser Paolo
 % =================================================================================================
-%
+% 0.0.2			2015-04-03			descritto pattern MVC, MVW e DI					Tesser Paolo
 % =================================================================================================
 %
 
@@ -17,7 +17,6 @@
 
 \subsection{Design pattern architetturali} % (fold)
 \label{sub:design_pattern_architetturali}
-[TO DO]
 	\subsubsection{Three-Tier} % (fold)
 	\label{ssub:three_tier}
 	[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
@@ -31,8 +30,8 @@
 	\label{ssub:mvc}
 	[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
 		\begin{itemize}
-			\item \textbf{Scope dell'utilizzo}: [TO DO];
-			\item \textbf{Contesto dell'utilizzo}: [TO DO];
+			\item \textbf{Scope dell'utilizzo}: questo pattern è utilizzato per separare le responsabilità dell’applicazione a diversi componenti e permettere di fare una chiara divisione tra presentazione, struttura dei dati e operazioni su di essi;
+			\item \textbf{Contesto dell'utilizzo}: viene utilizzato nel livello client per separare i componenti a seconda delle loro responsabilità e secondo una connotazione semantica. Di fatto però quello che verrà effettivamente impiegato sarà il Design Pattern MVW esposto alla sezione \ref{ssub:mvw}.
 		\end{itemize}
 	% subsubsection mvc (end)
 
@@ -40,8 +39,8 @@
 	\label{ssub:mvw}
 	[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
 		\begin{itemize}
-			\item \textbf{Scope dell'utilizzo}: [TO DO];
-			\item \textbf{Contesto dell'utilizzo}: [TO DO];
+			\item \textbf{Scope dell'utilizzo}: è un Design Pattern simile a MVC, che permette di avere una corrispondenza più diretta e automatica tra la \emph{view}e il \emph{model}. L'acronimo MVW sta infatti per Model-View-Whatever, dove \emph{Whatever} indica \emph{``whatever works for you''};
+			\item \textbf{Contesto dell'utilizzo}: viene utilizzato per gestire il lato client dell'applicazione. Questo ci viene fornito direttamente dal framework AngularJS;
 		\end{itemize}
 	% subsubsection mvw (end)
 
