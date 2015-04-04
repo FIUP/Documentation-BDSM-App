@@ -62,7 +62,7 @@
 	\begin{itemize}
 		\item un utente sconosciuto può autenticarsi, o se è al primo accesso al servizio può registrarsi per ottenere delle credenziali valide;
 		\item un utente autenticato può vedere statistiche, modificare la propria password, visualizzare le Recipe presenti nel sistema e richiederne di nuove, visualizzare e gestire le proprie View preferite, modificare la propria password di accesso ed effettuare il logout;
-		\item un utente amministratore può fare tutte le operazioni di un utente autenticato, più ha la possibilità di creare ed eliminare Recipe, viusalizzare le richieste di nuove Recipe ed eliminare un utente e tutte le sue View preferite o modificarne i privilegi;
+		\item un utente amministratore può fare tutte le operazioni di un utente autenticato, più ha la possibilità di creare ed eliminare Recipe, visualizzare le richieste di nuove Recipe ed eliminare un utente e tutte le sue View preferite o modificarne i privilegi;
 	\end{itemize}
 	\item \textbf{Precondizione:} l'utente autenticato, l'utente non autenticato o l'amministratore hanno caricato la prima pagina del servizio;
 	Viene visualizzato un messaggio di errore nel caso le informazioni di accesso inserite siano errate;
@@ -1122,9 +1122,9 @@
 	\begin{itemize}
 		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
-	\item \textbf{Descrizione:} l’amministratore può visualizzare un messaggio di errore se l’utente che vuole eliminare è attualmente autenticato al sistema e sta eseguendo delle operazioni o in caso stia cercando di modificare i permessi di sè stesso;
+	\item \textbf{Descrizione:} l’amministratore può visualizzare un messaggio di errore se l’utente che vuole eliminare è attualmente autenticato al sistema e sta eseguendo delle operazioni o in caso stia cercando di modificare i permessi di se stesso;
 	\item \textbf{Precondizione:} l'amministratore ha confermato le modifiche apportate;
-	\item \textbf{Scenario principale:} l'amministratore visualizza un messaggio contentente gli errori rilevati dal sistema;
+	\item \textbf{Scenario principale:} l'amministratore visualizza un messaggio contenente gli errori rilevati dal sistema;
 	\item \textbf{Postcondizione:} l'amministratore ha preso atto degli errori effettuati.
 \end{itemize}
 % FINE USE CASE %
@@ -1513,9 +1513,9 @@
 	\begin{itemize}
 		\item utente amministratore: utente autenticato che ha accesso al servizio e dispone dei permessi per visualizzare tutte le aree;
 	\end{itemize}
-	\item \textbf{Descrizione:} l'amministratore, una volta selezionato il pulsante per la respinta della richiesta, può inserire un mesaggio di motivazione per l'utente;
+	\item \textbf{Descrizione:} l'amministratore, una volta selezionato il pulsante per la respinta della richiesta, può inserire un messaggio di motivazione per l'utente;
 	\item \textbf{Precondizione:} l'amministratore ha selezionato il pulsante per respingere la richiesta di creazione della Recipe;
-	\item \textbf{Scenario principale:} l'amministratore inserice il messaggio nell'apposito form;
+	\item \textbf{Scenario principale:} l'amministratore inserisce il messaggio nell'apposito form;
 	\item \textbf{Postcondizione:} il sistema ha ottenuto il contenuto del messaggio da inviare all'utente.
 \end{itemize}
 % FINE USE CASE %
@@ -1833,7 +1833,7 @@
 	\end{itemize}
 	\item \textbf{Descrizione:} il sistema ritorna una conferma dell'avvenuta invalidazione del token;
 	\item \textbf{Precondizione:} l'utente ha chiesto l'invalidamento di un token valido;
-	\item \textbf{Scenario principale:} l'utente visualiizza un messaggio che conferma l'invalidamento del token;
+	\item \textbf{Scenario principale:} l'utente visualizza un messaggio che conferma l'invalidamento del token;
 	\item \textbf{Postcondizione:} l'utente ha preso atto del fatto che il token è stato invalidato.
 \end{itemize}
 % FINE USE CASE %
