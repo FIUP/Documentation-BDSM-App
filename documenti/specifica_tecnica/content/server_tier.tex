@@ -17,5 +17,101 @@
 
 \subsection{Server (Back-end)} % (fold)
 \label{sub:server}
+  \subsubsection{bdsm\_app::server::db} % (fold)
+  \label{ssub:bdsm_app_server_db}
+  [TO DO] (diagramma) \newline \newline
+
+  \begin{itemize}
+    \item \textbf{Descrizione}: [TO DO];
+    \item \textbf{Package contenuti}:
+      \begin{itemize}
+        \item bdsm\_app::server::raw\_model;
+        \item bdsm\_app::server::app\_model.
+      \end{itemize}
+    \item \textbf{Interazione con altri componenti}: [TO DO];
+  \end{itemize}
+  % subsubsection bdsm_app_server_db (end)
+
+
+  % PACKAGE DB
+
+  \subsubsection{bdsm\_app::server::db::raw\_model} % (fold)
+  \label{ssub:bdsm_app_server_raw_model}
+  [TO DO] (diagramma) \newline \newline
+
+  \begin{itemize}
+    \item \textbf{Descrizione}: Package che definisce il modello del database in cui vengono salvati i dati grezzi ricavati dai vari social network;
+    \item \textbf{Padre}: server::db;
+    \item \textbf{Interazione con altri componenti}: interagisce con il miner definito nella sezione [TO DO] il quale salva i dati secondo questo modello, interagisce con l'endpoints definito nella sezione [TO DO] il quale interroga la base di dati;
+  \end{itemize}
+  		
+  		\paragraph{Classi} % (fold)
+			\subparagraph{bdsm\_app::server::db::raw\_model::AbsRawData} % (fold)
+			\label{subp:bdsm_app_server_raw_model_AbsRawData}
+				\begin{itemize}
+					\item \textbf{Descrizione}: classe astratta che definisce il modello di un dato grezzo;
+					\item \textbf{Utilizzo}: [TO DO];
+					\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item AbsFbRawData;
+						\item RawFbPageTrend;
+						\item RawFbEventTrend;
+						\item AbsTwRawData;
+						\item RawTwUserTrend;
+						\item RawTwHashtagTrend;	
+						\item AbsIgRawData;
+						\item RawIgUserTrend;
+						\item RawIgHashtagTrend;				
+					\end{itemize}
+				\end{itemize}
+  % subsubsection bdsm_app_server_raw_model (end)
+
+  \subsubsection{bdsm\_app::server::db::app\_model} % (fold)
+  \label{ssub:bdsm_app_server_app_model}
+  [TO DO] (diagramma) \newline \newline
+
+  \begin{itemize}
+    \item \textbf{Descrizione}: [TO DO];
+    \item \textbf{Padre}: [TO DO] (qualora presente);
+    \item \textbf{Package contenuti}: [TO DO] (qualora presente);
+    \item \textbf{Interazione con altri componenti}: [TO DO];
+  \end{itemize}
+  % subsubsection bdsm_app_server_app_model (end)
+  
+	  \subsubsection{bdsm\_app::server::miner} % (fold)
+  \label{ssub:bdsm_app_server_miner}
+  [TO DO] (diagramma) \newline \newline
+
+  \begin{itemize}
+    \item \textbf{Descrizione}: [TO DO];
+    \item \textbf{Padre}: [TO DO] (qualora presente);
+    \item \textbf{Package contenuti}: [TO DO] (qualora presente);
+    \item \textbf{Interazione con altri componenti}: [TO DO];
+  \end{itemize}
+  % subsubsection 
+  
+  	  \subsubsection{bdsm\_app::server::processor} % (fold)
+  \label{ssub:bdsm_app_server_processor}
+  [TO DO] (diagramma) \newline \newline
+
+  \begin{itemize}
+    \item \textbf{Descrizione}: [TO DO];
+    \item \textbf{Padre}: [TO DO] (qualora presente);
+    \item \textbf{Package contenuti}: [TO DO] (qualora presente);
+    \item \textbf{Interazione con altri componenti}: [TO DO];
+  \end{itemize}
+  % subsubsection
+
+	  	  \subsubsection{bdsm\_app::server::endpoints} % (fold)
+  \label{ssub:bdsm_app_server_endpoints}
+  [TO DO] (diagramma) \newline \newline
+
+  \begin{itemize}
+    \item \textbf{Descrizione}: [TO DO];
+    \item \textbf{Padre}: [TO DO] (qualora presente);
+    \item \textbf{Package contenuti}: [TO DO] (qualora presente);
+    \item \textbf{Interazione con altri componenti}: [TO DO];
+  \end{itemize}
+  % subsubsection
 [TO DO]
 % subsection server (end)
