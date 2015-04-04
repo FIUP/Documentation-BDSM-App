@@ -11,6 +11,8 @@
 % =================================================================================================
 % 0.0.2			2015-03-28			inserito scheletro del package					Tesser Paolo
 % =================================================================================================
+% 0.0.3			2015-04-04			inseriti padri dei package e pack contenuti		Tesser Paolo
+% =================================================================================================
 %
 
 % CONTENUTO DEL CAPITOLO
@@ -21,20 +23,25 @@ Nel descrivere le componenti si parlerà di classi, che però saranno da intende
 
 	\subsubsection{bdsm\_app::client} % (fold)
 	\label{ssub:bdsm_app_client}
-	[TO DO] (diagramma) \newline \newline
+	\begin{figure}[htbp]
+		\centering
+		\centerline{\includegraphics[scale=0.4]{./images/client.pdf}}
+		\caption{Package - client}
+	\end{figure}
 	
 	\begin{itemize}
 		\item \textbf{Descrizione}: è il package che racchiude tutte le parti del front-end. \'E quindi l'insieme dei componenti che viene eseguito nel browser degli utenti normali e degli amministratori, fornendo loro un'interfaccia grafica per interagire con il sistema;
 		\item \textbf{Package contenuti}:
 			\begin{itemize}
-				\item model;
-				\item view;
-				\item controller.
+				\item *::client::model;
+				\item *::client::view;
+				\item *::client::controller.
 			\end{itemize}
 		\item \textbf{Interazione con altri componenti}: interagisce con il server definito nella sezione [TO DO] effettuando delle chiamate ai servizi REST offerti;
 	\end{itemize}
 	% subsubsection bdsm_app_client (end)
 
+	\pagebreak
 	% PACKAGE MODEL
 
 	\subsubsection{bdsm\_app::client::model} % (fold)
@@ -43,8 +50,12 @@ Nel descrivere le componenti si parlerà di classi, che però saranno da intende
 
 	\begin{itemize}
 		\item \textbf{Descrizione}: [TO DO];
-		\item \textbf{Padre}: [TO DO] (qualora presente);
-		\item \textbf{Package contenuti}: [TO DO] (qualora presente);
+		\item \textbf{Padre}: client;
+		\item \textbf{Package contenuti}:
+			\begin{itemize}
+				\item client::model::data;
+				\item client::model::services.
+			\end{itemize}
 		\item \textbf{Interazione con altri componenti}: [TO DO];
 	\end{itemize}
 	% subsubsection bdsm_app_client_model (end)
@@ -56,8 +67,13 @@ Nel descrivere le componenti si parlerà di classi, che però saranno da intende
 
 	\begin{itemize}
 		\item \textbf{Descrizione}: [TO DO];
-		\item \textbf{Padre}: [TO DO] (qualora presente);
-		\item \textbf{Package contenuti}: [TO DO] (qualora presente);
+		\item \textbf{Padre}: client::model;
+		\item \textbf{Package contenuti}:
+			\begin{itemize}
+				\item client::model::data::public;
+				\item client::model::data::user;
+				\item client::model::data::admin.
+			\end{itemize}
 		\item \textbf{Interazione con altri componenti}: [TO DO];
 	\end{itemize}
 	% subsubsection bdsm_app_client_model_data (end)
@@ -68,8 +84,7 @@ Nel descrivere le componenti si parlerà di classi, che però saranno da intende
 
 	\begin{itemize}
 		\item \textbf{Descrizione}: [TO DO];
-		\item \textbf{Padre}: [TO DO] (qualora presente);
-		\item \textbf{Package contenuti}: [TO DO] (qualora presente);
+		\item \textbf{Padre}: client::model::data;
 		\item \textbf{Interazione con altri componenti}: [TO DO];
 	\end{itemize}
 
@@ -90,8 +105,7 @@ Nel descrivere le componenti si parlerà di classi, che però saranno da intende
 
 	\begin{itemize}
 		\item \textbf{Descrizione}: [TO DO];
-		\item \textbf{Padre}: [TO DO] (qualora presente);
-		\item \textbf{Package contenuti}: [TO DO] (qualora presente);
+		\item \textbf{Padre}: client::model::data;
 		\item \textbf{Interazione con altri componenti}: [TO DO];
 	\end{itemize}
 
@@ -112,8 +126,7 @@ Nel descrivere le componenti si parlerà di classi, che però saranno da intende
 
 	\begin{itemize}
 		\item \textbf{Descrizione}: [TO DO];
-		\item \textbf{Padre}: [TO DO] (qualora presente);
-		\item \textbf{Package contenuti}: [TO DO] (qualora presente);
+		\item \textbf{Padre}: client::model::data;
 		\item \textbf{Interazione con altri componenti}: [TO DO];
 	\end{itemize}
 
@@ -135,8 +148,13 @@ Nel descrivere le componenti si parlerà di classi, che però saranno da intende
 
 	\begin{itemize}
 		\item \textbf{Descrizione}: [TO DO];
-		\item \textbf{Padre}: [TO DO] (qualora presente);
-		\item \textbf{Package contenuti}: [TO DO] (qualora presente);
+		\item \textbf{Padre}: client::model;
+		\item \textbf{Package contenuti}:
+			\begin{itemize}
+				\item client::model::services::public;
+				\item client::model::services::user;
+				\item client::model::services::admin.
+			\end{itemize}
 		\item \textbf{Interazione con altri componenti}: [TO DO];
 	\end{itemize}
 	% subsubsection bdsm_app_client_model_services (end)
@@ -147,8 +165,7 @@ Nel descrivere le componenti si parlerà di classi, che però saranno da intende
 
 	\begin{itemize}
 		\item \textbf{Descrizione}: [TO DO];
-		\item \textbf{Padre}: [TO DO] (qualora presente);
-		\item \textbf{Package contenuti}: [TO DO] (qualora presente);
+		\item \textbf{Padre}: client::model::services;
 		\item \textbf{Interazione con altri componenti}: [TO DO];
 	\end{itemize}
 
@@ -169,8 +186,7 @@ Nel descrivere le componenti si parlerà di classi, che però saranno da intende
 
 	\begin{itemize}
 		\item \textbf{Descrizione}: [TO DO];
-		\item \textbf{Padre}: [TO DO] (qualora presente);
-		\item \textbf{Package contenuti}: [TO DO] (qualora presente);
+		\item \textbf{Padre}: client::model::services;
 		\item \textbf{Interazione con altri componenti}: [TO DO];
 	\end{itemize}
 
@@ -191,8 +207,7 @@ Nel descrivere le componenti si parlerà di classi, che però saranno da intende
 
 	\begin{itemize}
 		\item \textbf{Descrizione}: [TO DO];
-		\item \textbf{Padre}: [TO DO] (qualora presente);
-		\item \textbf{Package contenuti}: [TO DO] (qualora presente);
+		\item \textbf{Padre}: client::model::services;
 		\item \textbf{Interazione con altri componenti}: [TO DO];
 	\end{itemize}
 
@@ -212,32 +227,42 @@ Nel descrivere le componenti si parlerà di classi, che però saranno da intende
 
 
 
-
 	% END PACKAGE MODEL
-
-
+	\pagebreak
 	% PACKAGE DELLA VIEW
 
 	\subsubsection{bdsm\_app::client::view} % (fold)
 	\label{ssub:bdsm_app_client_view}
-	[TO DO] (diagramma) \newline \newline
+	\begin{figure}[htbp]
+		\centering
+		\centerline{\includegraphics[scale=0.45]{./images/client_view.pdf}}
+		\caption{Package - client::view}
+	\end{figure}
 
 	\begin{itemize}
 		\item \textbf{Descrizione}: [TO DO];
-		\item \textbf{Padre}: [TO DO] (qualora presente);
-		\item \textbf{Package contenuti}: [TO DO] (qualora presente);
+		\item \textbf{Padre}: client;
+		\item \textbf{Package contenuti}:
+			\begin{itemize}
+				\item client::view::public;
+				\item client::view::user;
+				\item client::view::admin.
+			\end{itemize}
 		\item \textbf{Interazione con altri componenti}: [TO DO];
 	\end{itemize}
 	% subsubsection bdsm_app_client_view (end)
 
 	\subsubsection{bdsm\_app::client::view::public} % (fold)
 	\label{ssub:bdsm_app_client_view_public}
-	[TO DO] (diagramma) \newline \newline
+	\begin{figure}[htbp]
+		\centering
+		\centerline{\includegraphics[scale=0.6]{./images/client_view_public.pdf}}
+		\caption{Package - client::view::public}
+	\end{figure}
 
 	\begin{itemize}
 		\item \textbf{Descrizione}: [TO DO];
-		\item \textbf{Padre}: [TO DO] (qualora presente);
-		\item \textbf{Package contenuti}: [TO DO] (qualora presente);
+		\item \textbf{Padre}: client::view;
 		\item \textbf{Interazione con altri componenti}: [TO DO];
 	\end{itemize}
 
@@ -255,12 +280,15 @@ Nel descrivere le componenti si parlerà di classi, che però saranno da intende
 
 	\subsubsection{bdsm\_app::client::view::user} % (fold)
 	\label{ssub:bdsm_app_client_view_user}
-	[TO DO] (diagramma) \newline \newline
+	\begin{figure}[htbp]
+		\centering
+		\centerline{\includegraphics[scale=0.45]{./images/client_view_user.pdf}}
+		\caption{Package - client::view::user}
+	\end{figure}
 
 	\begin{itemize}
 		\item \textbf{Descrizione}: [TO DO];
-		\item \textbf{Padre}: [TO DO] (qualora presente);
-		\item \textbf{Package contenuti}: [TO DO] (qualora presente);
+		\item \textbf{Padre}: client::view;
 		\item \textbf{Interazione con altri componenti}: [TO DO];
 	\end{itemize}
 
@@ -277,11 +305,31 @@ Nel descrivere le componenti si parlerà di classi, che però saranno da intende
 
 	\subsubsection{bdsm\_app::client::view::admin} % (fold)
 	\label{ssub:bdsm_app_client_view_admin}
-	
+	\begin{figure}[htbp]
+		\centering
+		\centerline{\includegraphics[scale=0.5]{./images/client_view_admin.pdf}}
+		\caption{Package - client::view::admin}
+	\end{figure}
+
+	\begin{itemize}
+		\item \textbf{Descrizione}: [TO DO];
+		\item \textbf{Padre}: client::view;
+		\item \textbf{Interazione con altri componenti}: [TO DO];
+	\end{itemize}
+
+		\paragraph{Classi} % (fold)
+			\subparagraph{Nome package::Nome classe} % (fold)
+			\label{subp:subparagraph_name}
+				\begin{itemize}
+					\item \textbf{Descrizione}: [TO DO];
+					\item \textbf{Utilizzo}: [TO DO];
+					\item \textbf{Classi ereditate}: [TO DO];
+					\item \textbf{Relazioni con altre classi}: [TO DO].
+				\end{itemize}
 	% subsubsection bdsm_app_client_view_admin (end)
 
 	% END PACKAGE VIEW
-
+	\pagebreak
 	% PACKAGE CONTROLLER
 
 	\subsubsection{bdsm\_app::client::controller} % (fold)
@@ -290,8 +338,13 @@ Nel descrivere le componenti si parlerà di classi, che però saranno da intende
 
 	\begin{itemize}
 		\item \textbf{Descrizione}: [TO DO];
-		\item \textbf{Padre}: [TO DO] (qualora presente);
-		\item \textbf{Package contenuti}: [TO DO] (qualora presente);
+		\item \textbf{Padre}: client;
+		\item \textbf{Package contenuti}:
+			\begin{itemize}
+				\item client::controller::public;
+				\item client::controller::user;
+				\item client::controller::admin.
+			\end{itemize}
 		\item \textbf{Interazione con altri componenti}: [TO DO];
 	\end{itemize}
 	% subsubsection bdsm_app_client_controller (end)
@@ -303,8 +356,7 @@ Nel descrivere le componenti si parlerà di classi, che però saranno da intende
 
 	\begin{itemize}
 		\item \textbf{Descrizione}: [TO DO];
-		\item \textbf{Padre}: [TO DO] (qualora presente);
-		\item \textbf{Package contenuti}: [TO DO] (qualora presente);
+		\item \textbf{Padre}: client::controller;
 		\item \textbf{Interazione con altri componenti}: [TO DO];
 	\end{itemize}
 
@@ -327,8 +379,7 @@ Nel descrivere le componenti si parlerà di classi, che però saranno da intende
 
 	\begin{itemize}
 		\item \textbf{Descrizione}: [TO DO];
-		\item \textbf{Padre}: [TO DO] (qualora presente);
-		\item \textbf{Package contenuti}: [TO DO] (qualora presente);
+		\item \textbf{Padre}: client::controller;
 		\item \textbf{Interazione con altri componenti}: [TO DO];
 	\end{itemize}
 
@@ -349,8 +400,7 @@ Nel descrivere le componenti si parlerà di classi, che però saranno da intende
 
 	\begin{itemize}
 		\item \textbf{Descrizione}: [TO DO];
-		\item \textbf{Padre}: [TO DO] (qualora presente);
-		\item \textbf{Package contenuti}: [TO DO] (qualora presente);
+		\item \textbf{Padre}: client::controller;
 		\item \textbf{Interazione con altri componenti}: [TO DO];
 	\end{itemize}
 
