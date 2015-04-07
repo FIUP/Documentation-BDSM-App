@@ -19,7 +19,7 @@
 In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termine classe e pagina HTML, saranno sinonimi.
 \begin{figure}[htbp]
 	\centering
-	\centerline{\includegraphics[scale=0.45]{./images/client_view.pdf}}
+	\centerline{\includegraphics[scale=1.10]{./images/client_view.pdf}}
 	\caption{Package - client::view}
 \end{figure}
 
@@ -42,7 +42,7 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 \label{ssub:bdsm_app_client_view_public}
 \begin{figure}[htbp]
 	\centering
-	\centerline{\includegraphics[scale=0.6]{./images/client_view_public.pdf}}
+	\centerline{\includegraphics[scale=1.05]{./images/client_view_public.pdf}}
 	\caption{Package - client::view::public}
 \end{figure}
 
@@ -59,40 +59,48 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 		\subparagraph{bdsm\_app::client::view::public::Login} % (fold)
 		\label{subp:bdsm_app_client_view_public_login}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Descrizione}: La classe rappresenta un template HTML per la visualizzazione dell'interfaccia di autenticazione;
+				\item \textbf{Utilizzo}: Viene utilizzata per generare la pagina HTML di autenticazione;
+				\item \textbf{Relazioni con altre classi}: 		
+					\begin{itemize}
+						\item client::controller::public::Login
+					\end{itemize}.
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_public_login (end)
 
 		\subparagraph{bdsm\_app::client::view::public::About} % (fold)
 		\label{subp:bdsm_app_client_view_public_about}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Descrizione}: La classe rappresenta un template HTML per la visualizzazione della pagina di informazioni sull'applicazione;
+				\item \textbf{Utilizzo}: Viene usata per generare la pagina HTML di About;
+				\item \textbf{Relazioni con altre classi}: 		
+					\begin{itemize}
+						\item client::controller::public::About
+					\end{itemize}.
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_public_about (end)
 
 		\subparagraph{bdsm\_app::client::view::public::Register} % (fold)
 		\label{subp:bdsm_app_client_view_public_register}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Descrizione}: La classe rappresenta un template HTML per la visualizzazione dell'interfaccia di registrazione al servizio;
+				\item \textbf{Utilizzo}: Viene utilizzata per generare la pagina HTML di registrazione;
+				\item \textbf{Relazioni con altre classi}: 		
+					\begin{itemize}
+						\item client::controller::public::Register
+					\end{itemize}.
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_public_register (end)
 
 		\subparagraph{bdsm\_app::client::view::public::ApiDocs} % (fold)
 		\label{subp:bdsm_app_client_view_public_apidocs}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Descrizione}: La classe rappresenta un template HTML per la visualizzazione della pagina contenente la documentazione dei servizi REST offerti;
+				\item \textbf{Utilizzo}: Viene utilizzata per generare la pagina HTML contenente la documentazione dei servizi offerti;
+				\item \textbf{Relazioni con altre classi}: 		
+					\begin{itemize}
+						\item client::controller::public::ApiDocs
+					\end{itemize}.
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_public_apidocs (end)
 
@@ -103,13 +111,13 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 \label{ssub:bdsm_app_client_view_user}
 \begin{figure}[htbp]
 	\centering
-	\centerline{\includegraphics[scale=0.45]{./images/client_view_user.pdf}}
+	\centerline{\includegraphics[scale=1.05]{./images/client_view_user.pdf}}
 	\caption{Package - client::view::user}
 \end{figure}
 
 \begin{itemize}
 	\item \textbf{Descrizione}: è il package che contiene tutte le pagine HTML che ha a disposizione l'utente che ha effettuato l'accesso al sistema, sia che sia un utente normale sia che sia un amministratore. \newline
-	[TO DO] (descrizione del fatto che le classi del Menu sono incluse in ogni altra classe);
+	Per semplicità e chiarezza non è stato evidenziato nel grafico il fatto che ogni classe di questo package possiede un'istanza di MenuMain e di MenuSecond.
 	\item \textbf{Padre}: client::view
 	\item \textbf{Interazione con altri componenti}:
 		\begin{itemize}
@@ -121,120 +129,181 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 		\subparagraph{bdsm\_app::client::view::user::Home} % (fold)
 		\label{subp:bdsm_app_client_view_user_home}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Descrizione}: La classe rappresenta un template HTML per la visualizzazione dell'interfaccia della home dell'aplicazione;
+				\item \textbf{Utilizzo}: Viene utilizzata per generare la pagina HTML della home;
+				\item \textbf{Relazioni con altre classi}: 		
+					\begin{itemize}
+						\item client::view::user::MenuMain
+						\item client::view::user::MenuSecond
+						\item client::controller::user::Home
+					\end{itemize}.
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_home (end)
 
 		\subparagraph{bdsm\_app::client::view::user::Recipe} % (fold)
 		\label{subp:bdsm_app_client_view_user_recipe}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Descrizione}: La classe rappresenta un template HTML per la visualizzazione della pagina di visione delle recipe a disposizione;
+				\item \textbf{Utilizzo}: Viene usata per generare la pagina HTML di visione delle recipe;
+				\item \textbf{Relazioni con altre classi}: 		
+					\begin{itemize}
+						\item client::view::user::MenuMain
+						\item client::view::user::MenuSecond
+						\item client::view::user::Metrics
+						\item client::view::user::Compare
+						\item client::controller::user::Recipe
+					\end{itemize}.
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_recipe (end)
 
 		\subparagraph{bdsm\_app::client::view::user::Metrics} % (fold)
 		\label{subp:bdsm_app_client_view_metrics}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Descrizione}: La classe rappresenta un template HTML per la visualizzazione della pagina di visione delle metriche a disposizione per una selezionata recipe;
+				\item \textbf{Utilizzo}: Viene utilizzata per generare la pagina HTML di visione delle metriche quando viene selezionata una Recipe;
+				\item \textbf{Relazioni con altre classi}: 		
+					\begin{itemize}
+						\item client::view::user::MenuMain
+						\item client::view::user::MenuSecond
+						\item client::view::user::Recipe
+						\item client::view::user::Charts
+						\item client::controller::user::Metrics
+					\end{itemize}.
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_metrics (end)
 
 		\subparagraph{bdsm\_app::client::view::user::Charts} % (fold)
 		\label{subp:bdsm_app_client_view_user_charts}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Descrizione}: La classe rappresenta un template HTML per la visualizzazione della pagina di visione delle view associate ad una metrica selezionata;
+				\item \textbf{Utilizzo}: Viene usata per generare la pagina HTML di visione delle view quando viene selezionata una metrica;
+				\item \textbf{Relazioni con altre classi}: 		
+					\begin{itemize}
+						\item client::view::user::MenuMain
+						\item client::view::user::MenuSecond
+						\item client::view::user::Metrics
+						\item client::controller::user::Charts
+					\end{itemize}.
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_charts (end)
 
 		\subparagraph{bdsm\_app::client::view::user::Compare} % (fold)
 		\label{subp:bdsm_app_client_view_user_compare}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Descrizione}: La classe rappresenta un template HTML per la visualizzazione dell'interfaccia di confronto tra diverse metriche di una recipe;
+				\item \textbf{Utilizzo}: Viene utilizzata per generare la pagina HTML di confronto tra metriche;
+				\item \textbf{Relazioni con altre classi}: 		
+					\begin{itemize}
+						\item client::view::user::MenuMain
+						\item client::view::user::MenuSecond
+						\item client::view::user::Recipe
+						\item client::controller::user::Compare
+					\end{itemize}.
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_compare (end)
 
 		\subparagraph{bdsm\_app::client::view::user::RecipeRequest} % (fold)
 		\label{subp:bdsm_app_client_view_user_reciperequest}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Descrizione}: La classe rappresenta un template HTML per la visualizzazione dell'interfaccia di richiesta di una nuova recipe;
+				\item \textbf{Utilizzo}: Viene utilizzata per generare la pagina HTML di richiesta di una nuova recipe;
+				\item \textbf{Relazioni con altre classi}: 		
+					\begin{itemize}
+						\item client::view::user::MenuMain
+						\item client::view::user::MenuSecond
+						\item client::controller::user::RecipeRequest
+					\end{itemize}.
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_reciperequest (end)
 
 		\subparagraph{bdsm\_app::client::view::user::Favourites} % (fold)
 		\label{subp:bdsm_app_client_view_user_favourites}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Descrizione}: La classe rappresenta un template HTML per la visualizzazione della pagina contenente le view preferite;
+				\item \textbf{Utilizzo}: Viene utilizzata per generare la pagina HTML delle view preferite;
+				\item \textbf{Relazioni con altre classi}: 		
+					\begin{itemize}
+						\item client::view::user::MenuMain
+						\item client::view::user::MenuSecond
+						\item client::controller::user::Favourites					
+					\end{itemize}.
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_favourites (end)
 
 		\subparagraph{bdsm\_app::client::view::user::TokenConfig} % (fold)
 		\label{subp:bdsm_app_client_view_user_tokenconfig}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Descrizione}: La classe rappresenta un template HTML per la visualizzazione dell'interfaccia di gestione dei token per l'utilizzo dei servizi REST;
+				\item \textbf{Utilizzo}: Viene utilizzata per generare la pagina HTML di gestione dei token per i servizi REST;
+				\item \textbf{Relazioni con altre classi}: 		
+					\begin{itemize}
+						\item client::view::user::MenuMain
+						\item client::view::user::MenuSecond
+						\item client::controller::user::TokenConfig					
+					\end{itemize}.
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_tokenconfig (end)
 
 		\subparagraph{bdsm\_app::client::view::user::Settings} % (fold)
 		\label{subp:bdsm_app_client_view_user_settings}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Descrizione}: La classe rappresenta un template HTML per la visualizzazione dell'interfaccia di gestione delle opzioni;
+				\item \textbf{Utilizzo}: Viene utilizzata per generare la pagina HTML delle opzioni;
+				\item \textbf{Relazioni con altre classi}: 		
+					\begin{itemize}
+						\item client::view::user::MenuMain
+						\item client::view::user::MenuSecond
+						\item client::controller::user::Settings
+					\end{itemize}.
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_settings (end)
 
 		\subparagraph{bdsm\_app::client::view::user::Menu} % (fold)
 		\label{subp:bdsm_app_client_view_user_menu}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Descrizione}: Questa classe astratta rappresenta un template HTML per la creazione di un menù;
+				\item \textbf{Utilizzo}: Non viene mai istanziata nel sistema, viene ereditata dalla classi che istanziano dei menù;
+				\item \textbf{Relazioni con altre classi}: 		
+					\begin{itemize}
+						\item client::view::user::MenuMain
+						\item client::view::user::MenuSecond
+						\item client::controller::user::Menu							
+					\end{itemize}.
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_menu (end)
 
 		\subparagraph{bdsm\_app::client::view::user::MenuMain} % (fold)
 		\label{subp:bdsm_app_client_view_user_menumain}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Descrizione}: La classe rappresenta un template HTML per la creazione del menù principale;
+				\item \textbf{Utilizzo}: Viene usata nel generare ogni pagina usata da un utente autenticato per generare il menù principale in essa contenuta;
+				\item \textbf{Classi ereditate}: 
+					\begin{itemize}
+						\item client::view::user::Menu						
+					\end{itemize}.
+				\item \textbf{Relazioni con altre classi}: 		
+					\begin{itemize}
+						\item client::view::user::Menu
+						\item client::controller::user::MenuMain							
+					\end{itemize}.
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_menumain (end)
 
 		\subparagraph{bdsm\_app::client::view::user::MenuSecond} % (fold)
 		\label{subp:bdsm_app_client_view_user_menusecond}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Descrizione}: La classe rappresenta un template HTML per la creazione del menù secondario di un utente non amministratore;
+				\item \textbf{Utilizzo}: Viene usata nel generare ogni pagina di un utente autenticato non amministratore per generare il menù secondario;
+				\item \textbf{Classi ereditate}: 				
+					\begin{itemize}
+						\item client::view::user::Menu						
+					\end{itemize}.
+				\item \textbf{Relazioni con altre classi}: 		
+					\begin{itemize}
+						\item client::view::user::Menu
+						\item client::view::admin::MenuSecondAdmin
+						\item client::controller::user::MenuSecond	
+					\end{itemize}.
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_menusecond (end)
 % subsubsection bdsm_appclient__view_user (end)
@@ -248,7 +317,8 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 \end{figure}
 
 \begin{itemize}
-	\item \textbf{Descrizione}: è il package che contiene tutte le pagine HTML che ha a disposizione l'utente che ha i privilegi di amministratore;
+	\item \textbf{Descrizione}: è il package che contiene tutte le pagine HTML che ha a disposizione l'utente che ha i privilegi di amministratore;\newline
+	Per semplicità e chiarezza non è stato evidenziato nel grafico il fatto che ogni classe di questo package possiede un'istanza di MenuMain e di MenuSecondAdmin.
 	\item \textbf{Padre}: client::view
 	\item \textbf{Interazione con altri componenti}:
 		\begin{itemize}
@@ -260,60 +330,93 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 		\subparagraph{bdsm\_app::client::view::admin::RecipeConfig} % (fold)
 		\label{subp:bdsm_app_client_view_admin_recipeconfig}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Descrizione}: La classe rappresenta un template HTML per la visualizzazione dell'interfaccia di gestione delle Recipe;
+				\item \textbf{Utilizzo}: Viene utilizzata per generare la pagina HTML della gestione delle Recipe;
+				\item \textbf{Relazioni con altre classi}: 		
+					\begin{itemize}
+						\item client::view::user::MenuMain
+						\item client::view::admin::MenuSecondAdmin
+						\item client::view::admin::Insert
+						\item client::controller::admin::RecipeConfig
+					\end{itemize}.
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_admin_recipeconfig (end)
 
 		\subparagraph{bdsm\_app::client::view::admin::RequestList} % (fold)
 		\label{subp:bdsm_app_client_view_admin_requestlist}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Descrizione}: La classe rappresenta un template HTML per la visualizzazione della pagina di visione delle richieste di Recipe;
+				\item \textbf{Utilizzo}: Viene utilizzata per generare la pagina HTML della lista delle richieste di Recipe;
+				\item \textbf{Relazioni con altre classi}: 		
+					\begin{itemize}
+						\item client::view::user::MenuMain
+						\item client::view::admin::MenuSecondAdmin
+						\item client::view::admin::Insert
+						\item client::controller::admin::RequestList
+					\end{itemize}.
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_admin_requestlist (end)
 
 		\subparagraph{bdsm\_app::client::view::admin::Insert} % (fold)
 		\label{subp:bdsm_app_client_view_admin_insert}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Descrizione}: La classe rappresenta un template HTML per la visualizzazione dell'interfaccia di inserimento di una nuova Recipe;
+				\item \textbf{Utilizzo}: Viene utilizzata per generare la pagina HTML di inserimento di una nuova recipe;
+				\item \textbf{Relazioni con altre classi}: 		
+					\begin{itemize}
+						\item client::view::user::MenuMain
+						\item client::view::admin::MenuSecondAdmin
+						\item client::view::admin::RecipeConfig
+						\item client::view::admin::RequestList
+						\item client::controller::admin::Insert
+					\end{itemize}.
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_admin_insert (end)
 
 		\subparagraph{bdsm\_app::client::view::admin::Ratings} % (fold)
 		\label{subp:bdsm_app_client_view_admin_ratings}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Descrizione}: La classe rappresenta un template HTML per la visualizzazione della pagina dei voti assegnati alle varie Recipe;
+				\item \textbf{Utilizzo}: Viene utilizzata per generare la pagina HTML di visione dei voti delle Recipe;
+				\item \textbf{Relazioni con altre classi}: 		
+					\begin{itemize}
+						\item client::view::user::MenuMain
+						\item client::view::admin::MenuSecondAdmin
+						\item client::controller::admin::Ratings
+					\end{itemize}.
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_admin_ratings (end)
 
 		\subparagraph{bdsm\_app::client::view::admin::UsersConfig} % (fold)
 		\label{subp:bdsm_app_client_view_admin_usersconfig}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Descrizione}: La classe rappresenta un template HTML per la visualizzazione dell'interfaccia di gestione degli utenti;
+				\item \textbf{Utilizzo}: Viene utilizzata per generare la pagina HTML di gestione degli utenti;
+				\item \textbf{Relazioni con altre classi}: 		
+					\begin{itemize}
+						\item client::view::user::MenuMain
+						\item client::view::admin::MenuSecondAdmin
+						\item client::controller::admin::UsersConfig
+					\end{itemize}.
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_admin_usersconfig (end)
 
 		\subparagraph{bdsm\_app::client::view::admin::MenuSecondAdmin} % (fold)
 		\label{subp:bdsm_app_client_view_admin_menusecondadmin}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Descrizione}: La classe rappresenta un template HTML per la creazione del menù secondario di un utente amministratore;
+				\item \textbf{Utilizzo}: Viene usata nel generare ogni pagina di un utente autenticato amministratore per generare il menù secondario;
+				\item \textbf{Classi ereditate}: 				
+					\begin{itemize}
+						\item client::view::user::Menu		
+						\item client::view::user::MenuSecond					
+					\end{itemize}.
+				\item \textbf{Relazioni con altre classi}: 		
+					\begin{itemize}
+						\item client::view::user::Menu
+						\item client::view::user::MenuSecond
+						\item client::controller::admin::MenuSecondAdmin	
+					\end{itemize}.
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_admin_menusecondadmin (end)
 
