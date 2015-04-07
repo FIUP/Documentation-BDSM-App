@@ -9,9 +9,13 @@
 % Version		Modifier Date		Change											Author
 % 0.0.1 		2015-03-27 			creato scheletro								Tesser Paolo
 % =================================================================================================
-%
+% Version		Modifier Date		Change											Author
+% 0.0.2		2015-04-04 				iniziata stesura classi							Nicola F. Lorenzo C.
 % =================================================================================================
-%
+% Version		Modifier Date		Change											Author
+% 0.0.3		2015-04-07 				continuata stesura classi						Nicola F. Luca S.
+% =================================================================================================
+
 
 % CONTENUTO DEL CAPITOLO
 
@@ -51,7 +55,7 @@
 				\begin{itemize}
 					\item \textbf{Descrizione}: classe astratta che definisce il modello di un dato grezzo;
 					\item \textbf{Utilizzo}: [TO DO];
-					\item \textbf{Relazioni con altre classi}:
+					\item \textbf{Classi figlie}:
 					\begin{itemize}
 						\item AbsFbRawData;
 						\item RawFbPageTrend;
@@ -64,6 +68,119 @@
 						\item RawIgHashtagTrend;				
 					\end{itemize}
 				\end{itemize}
+			\subparagraph{bdsm\_app::server::db::raw\_model::AbsRawData::AbsFbRawData} % (fold)
+			\label{subp:bdsm_app_server_raw_model_AbsRawData_AbsFbRawData}
+				\begin{itemize}
+					\item \textbf{Descrizione}: classe astratta che definisce il modello dati di Facebook;
+					\item \textbf{Utilizzo}: [TO DO];
+					\item \textbf{Classi figlie}:
+					\begin{itemize}
+						\item RawFbPage;
+						\item RawFbEvent;		
+					\end{itemize}
+					\item \textbf{Classi ereditate}:
+					\begin{itemize}
+						\item AbsRawData;
+					\end{itemize}
+				\end{itemize}
+			\subparagraph{bdsm\_app::server::db::raw\_model::AbsRawData::RawFbPageTrend} % (fold)
+			\label{subp:bdsm_app_server_raw_model_AbsRawData_RawFbPageTrend}
+				\begin{itemize}
+					\item \textbf{Descrizione}: classe che memorizza i trend di una pagina Facebook;
+					\item \textbf{Utilizzo}: classe utilizzata per memorizzare i like e i talking about di ogni singola pagina;
+					\item \textbf{Classi ereditate}:
+					\begin{itemize}
+						\item AbsRawData;
+					\end{itemize}
+				\end{itemize}
+				\subparagraph{bdsm\_app::server::db::raw\_model::AbsRawData::RawFbEventTrend} % (fold)
+			\label{subp:bdsm_app_server_raw_model_AbsRawData_RawFbEventTrend}
+				\begin{itemize}
+					\item \textbf{Descrizione}: classe che memorizza i trend di un evento Facebook;
+					\item \textbf{Utilizzo}: classe utilizzata per memorizzare l'andamento dell'evento in relazione ai partecipanti, agli invitati, alle persone in forse e ai rifiuti;
+					\item \textbf{Classi ereditate}:
+					\begin{itemize}
+						\item AbsRawData;
+					\end{itemize}
+				\end{itemize}
+					\subparagraph{bdsm\_app::server::db::raw\_model::AbsRawData::AbsFbRawData::RawFbPage} % (fold)
+			\label{subp:bdsm_app_server_raw_model_AbsRawData_AbsFbRawData_RawFbPage}
+				\begin{itemize}
+					\item \textbf{Descrizione}: classe che memorizza una pagina Facebook;
+					\item \textbf{Utilizzo}: classe utilizzata per memorizzare i dati statici di una pagina Facebook;
+					\item \textbf{Relazione con altre classi}:
+					\begin{itemize}
+						\item RawFbPageTrend;
+						\item RawFbEvent;
+						\item RawFbPost;
+					\end{itemize}
+					\item \textbf{Classi ereditate}:
+					\begin{itemize}
+						\item AbsFbRawData
+					\end{itemize}
+				\end{itemize}
+				\subparagraph{bdsm\_app::server::db::raw\_model::AbsRawData::AbsFbRawData::RawFbEvent} % (fold)
+			\label{subp:bdsm_app_server_raw_model_AbsRawData_AbsFbRawData_RawFbEvent}
+				\begin{itemize}
+					\item \textbf{Descrizione}: classe che memorizza un evento Facebook;
+					\item \textbf{Utilizzo}: classe utilizzata per memorizzare i dati statici di un evento Facebook;
+					\item \textbf{Relazione con altre classi}:
+					\begin{itemize}
+						\item RawFbEventTrend;
+						\item RawFbPost;
+					\end{itemize}
+					\item \textbf{Classi ereditate}:
+					\begin{itemize}
+						\item AbsFbRawData
+					\end{itemize}
+				\end{itemize}
+				\subparagraph{bdsm\_app::server::db::raw\_model::RawFbPost} % (fold)
+			\label{subp:bdsm_app_server_raw_model_RawFbPost}
+				\begin{itemize}
+					\item \textbf{Descrizione}: classe che memorizza tutti i post di una pagina o di un evento Facebook;
+					\item \textbf{Utilizzo}: classe utilizzata per memorizzare l'insieme di dati ricavato dai post analizzati;
+				\end{itemize}
+				
+				
+				
+%subsubsection di Istagram
+				\subparagraph{bdsm\_app::server::db::raw\_model::AbsRawData::AbsIgRawData} % (fold)
+			\label{subp:bdsm_app_server_raw_model_AbsRawData_AbsIgRawData}
+				\begin{itemize}
+					\item \textbf{Descrizione}: classe astratta che definisce il modello dati di Istagram;
+					\item \textbf{Utilizzo}: [TO DO];
+					\item \textbf{Classi figlie}:
+					\begin{itemize}
+						\item RawIgUser;
+						\item RawIgHashtag;		
+					\end{itemize}
+					\item \textbf{Classi ereditate}:
+					\begin{itemize}
+						\item AbsRawData;
+					\end{itemize}
+				\end{itemize}
+					\subparagraph{bdsm\_app::server::db::raw\_model::AbsRawData::RawIgUserTrend} % (fold)
+			\label{subp:bdsm_app_server_raw_model_AbsRawData_RawIgUserTrend}
+				\begin{itemize}
+					\item \textbf{Descrizione}: classe che definisce i trend di un utente Instagram;
+					\item \textbf{Utilizzo}: classe utilizzata per memorizzare l'andamento del numero di media, di follows e di followed\_by di un utente;
+					\item \textbf{Classi ereditate}:
+					\begin{itemize}
+						\item AbsRawData;
+					\end{itemize}
+				\end{itemize}
+			\subparagraph{bdsm\_app::server::db::raw\_model::AbsRawData::RawIgHashtagTrend} % (fold)
+			\label{subp:bdsm_app_server_raw_model_AbsRawData_RawIgHashtagTrend}
+				\begin{itemize}
+					\item \textbf{Descrizione}: classe che definisce i trend di un hashtag di Instagram;
+					\item \textbf{Utilizzo}: classe utilizzata per memorizzare l'andamento del numero di media di un hashtag;
+					\item \textbf{Classi ereditate}:
+					\begin{itemize}
+						\item AbsRawData;
+					\end{itemize}
+				\end{itemize}
+				
+				
   % subsubsection bdsm_app_server_raw_model (end)
 
   \subsubsection{bdsm\_app::server::db::app\_model} % (fold)
