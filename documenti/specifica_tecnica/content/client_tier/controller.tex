@@ -11,6 +11,8 @@
 % =================================================================================================
 % 0.0.2			2015-04-07			scheletro delle classi dei pack					Tesser Paolo
 % ================================================================================================
+% 0.0.3			2015-04-08			descrizioni classi del pack controller_public	Tesser Paolo
+% ================================================================================================
 %
 
 % CONTENUTO DEL CAPITOLO
@@ -58,30 +60,44 @@
 		\subparagraph{bdsm\_app::client::controller::public::PublicRoute} % (fold)
 		\label{subp:bdsm_app_client_controller_public_publicrouteconfig}
 		\begin{itemize}
-			\item \textbf{Descrizione}: [TO DO];
-			\item \textbf{Utilizzo}: [TO DO];
-			\item \textbf{Classi ereditate}: [TO DO];
-			\item \textbf{Relazioni con altre classi}: [TO DO].
+			\item \textbf{Descrizione}: la classe serve a gestire l'indirizzamento e l'assegnazione di uno stato al template HTML riguardante le pagine che può visualizzare un utente non autenticato, quali quella di autenticazione, di registrazione o di visione della documentazione dei servizi REST offerti;
+			\item \textbf{Utilizzo}: viene utilizzata per reindirizzare l'utente al template HTML adeguato in caso si voglia o autenticare o registrare al sistema, o visualizzare i servizi REST offerti, ed assegnare al template scelto il controller opportuno per gestire i diversi compiti. Nel caso l'utente fosse già autenticato, la classe provvederà a reindirizzarlo all'URL associato alla Home;
+			\item \textbf{Relazioni con altre classi}:
+				\begin{itemize}
+					\item client::controller::public::LoginCtrl
+					\item client::view::public::Login
+					\item client::controller::public::RegisterCtrl
+					\item client::view::public::Register
+					\item client::view::public::ApiDocs
+				\end{itemize}
 		\end{itemize}
 		% subparagraph bdsm_app_client_controller_public_publicrouteconfig (end)
 
 		\subparagraph{bdsm\_app::client::controller::public::LoginCtrl} % (fold)
 		\label{subp:bdsm_app_client_controller_public_loginctrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Descrizione}: la classe è il controller che serve a gestire l'autenticazione al sistema;
+				\item \textbf{Utilizzo}: viene utilizzata per gestire le operazioni di autenticazione al sistema qualora un utente non autenticato decidesse di effettuare l'accesso. Richiamando quindi i servizi che mettono in comunicazione il client con il server, verifica le credenziali ed effettua un reindirizzamento alla Home qualora fossero valide;
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item client::controller::public::PublicRoute
+						\item client::view::public::Login
+						\item [TO DO]
+					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_controller_public_loginctrl (end)
 
 		\subparagraph{bdsm\_app::client::controller::public::RegisterCtrl} % (fold)
 		\label{subp:bdsm_app_client_controller_public_registerctrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Descrizione}: la classe è il controller che serve a gestire la registrazione al sistema;
+				\item \textbf{Utilizzo}: viene utilizzata per gestire le operazioni di registrazione al sistema qualora un utente che non si è ancora registrato decidesse di effettuare l'accesso. Richiamando quindi i servizi che mettono in comunicazione il client con il server, verifica le credenziali ed effettua un reindirizzamento alla pagina di Login qualora la registrazione fosse avvenuta con successo;
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item client::controller::public::PublicRoute
+						\item client::view::public::Register
+						\item [TO DO]
+					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_controller_public_registerctrl (end)
 
