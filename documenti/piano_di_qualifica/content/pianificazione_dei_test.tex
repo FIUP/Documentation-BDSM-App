@@ -442,7 +442,7 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 				\item accedere alla home screen;
 				\item verificare che il sistema permetta all'utente di visualizzare tutte le View che sono state marcate da lui come preferite;
 				\item verificare che il sistema permetta all'utente di aggiungere qualsiasi View a quelle preferite cliccando il pulsante vicino alla View che vuole aggiungere;
-				\item verificare che il sistema permetta all'utente di rimuovere le View che  ha aggiunto tra le preferite cliccando il pulsante vicino alla View che vuole rimuovere;
+				\item verificare che il sistema permetta all'utente di rimuovere le View che ha aggiunto tra le preferite cliccando il pulsante vicino alla View che vuole rimuovere;
 				\item verificare che l'utente possa inserire come preferite un numero illimitato di View.
 			\end{itemize}
 			
@@ -451,7 +451,9 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 			\begin{itemize}
 				\item effettuare l'autenticazione;
 				\item accedere alla home screen;
-				\item verificare che il sistema mostri un errore nel caso non ci fossero View salvate come preferite.
+				\item accedere al menù delle View preferite;
+				\item verificare che il sistema avvisi l'utente nel caso non ci fossero View salvate come preferite;
+				\item verificare che il sistema mostri tutte le View preferite dell'utente nel caso ce ne sia almeno una.
 			\end{itemize}
 			
 		\subsubsection{TVF6.2}
@@ -459,7 +461,9 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 			\begin{itemize}
 				\item effettuare l'autenticazione;
 				\item accedere alla home screen;
-				\item verificare che il sistema mostri un errore nel caso non sia stata aggiunta correttamente una View tra quelle preferite.
+				\item premere il pulsante di aggiunta della View tra le preferite;
+				\item verificare che il sistema mostri un errore nel caso non sia stata aggiunta correttamente una View tra quelle preferite;
+				\item verificare che il sistema abbia aggiunto correttamente la View tra i preferiti.
 			\end{itemize}
 			
 		\subsubsection{TVF6.3}
@@ -467,7 +471,10 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 			\begin{itemize}
 				\item effettuare l'autenticazione;
 				\item accedere alla home screen;
-				\item verificare che il sistema mostri un errore nel caso non sia stata rimossa correttamente una View tra quelle preferite.
+				\item accedere al menù delle View preferite;
+				\item premere il pulsante di rimozione della View dalle preferite;
+				\item verificare che il sistema mostri un errore nel caso non sia stata rimossa correttamente una View tra quelle preferite;
+				\item verificare che il sistema mostri abbia rimosso correttamente una View da quelle preferite.
 			\end{itemize}
 			
 		\subsubsection{TVF7}
@@ -484,15 +491,23 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 			\begin{itemize}
 				\item effettuare l'autenticazione;
 				\item accedere alla sezione per la richiesta di una nuova Recipe;
+				\item verificare che il sistema controlli che l'utente inserisca tutti i parametri richiesti dalla form correttamente;
+				\item premere il pulsante di invio della richiesta;
+				\item verificare che la richiesta fallisca se i dati inseriti sono errati o si sono lasciati campi vuoti.
+			\end{itemize}
+			
+		\subsubsection{TVF7.1.1}
+			L'utente vuole verificare che il sistema controlli che l'utente inserisca tutti i parametri richiesti dalla form correttamente. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere alla sezione per la richiesta di una nuova Recipe;
 				\item inserire il titolo della Recipe;
 				\item inserire almeno una metrica nella richiesta della Recipe;
 				\item selezionare la categoria della metrica tra Facebook, Twitter e Instagram;
 				\item selezionare la tipologia di metrica in base alla categoria scelta;
 				\item compilare i campi in base alla tipologia e alla categoria di metrica scelta;
 				\item verificare che il sistema avvisi l'utente in modo istantaneo se un campo è stato compilato correttamente;
-				\item verificare che il sistema avvisi l'utente in modo istantaneo se un campo obbligatorio è stato lasciato vuoto;
-				\item cliccare il pulsante di invio della richiesta;
-				\item verificare che la richiesta fallisca se i dati inseriti sono errati o si sono lasciati campi vuoti.
+				\item verificare che il sistema avvisi l'utente in modo istantaneo se un campo obbligatorio è stato lasciato vuoto.
 			\end{itemize}
 			
 		\subsubsection{TVF8}
