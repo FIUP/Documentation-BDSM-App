@@ -64,11 +64,11 @@
 			\item \textbf{Utilizzo}: viene utilizzata per reindirizzare l'utente al template HTML adeguato in caso si voglia o autenticare o registrare al sistema, o visualizzare i servizi REST offerti, ed assegnare al template scelto il controller opportuno per gestire i diversi compiti. Nel caso l'utente fosse già autenticato, la classe provvederà a reindirizzarlo all'URL associato alla Home;
 			\item \textbf{Relazioni con altre classi}:
 				\begin{itemize}
-					\item client::controller::public::LoginCtrl
 					\item client::view::public::Login
-					\item client::controller::public::RegisterCtrl
 					\item client::view::public::Register
 					\item client::view::public::ApiDocs
+					\item client::controller::public::LoginCtrl
+					\item client::controller::public::RegisterCtrl
 				\end{itemize}
 		\end{itemize}
 		% subparagraph bdsm_app_client_controller_public_publicrouteconfig (end)
@@ -80,9 +80,9 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire le operazioni di autenticazione al sistema qualora un utente non autenticato decidesse di effettuare l'accesso. Richiamando quindi i servizi che mettono in comunicazione il client con il server, verifica le credenziali ed effettua un reindirizzamento alla Home qualora fossero valide;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item client::controller::public::PublicRoute
-						\item client::view::public::Login
 						\item [TO DO]
+						\item client::view::public::Login
+						\item client::controller::public::PublicRoute
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_controller_public_loginctrl (end)
@@ -94,9 +94,9 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire le operazioni di registrazione al sistema qualora un utente che non si è ancora registrato decidesse di effettuare l'accesso. Richiamando quindi i servizi che mettono in comunicazione il client con il server, verifica le credenziali ed effettua un reindirizzamento alla pagina di Login qualora la registrazione fosse avvenuta con successo;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item client::controller::public::PublicRoute
-						\item client::view::public::Register
 						\item [TO DO]
+						\item client::view::public::Register
+						\item client::controller::public::PublicRoute
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_controller_public_registerctrl (end)
