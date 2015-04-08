@@ -110,8 +110,8 @@ descritto nel \docNameVersionPdP. Vi possono essere due tipologie di range:
 				\item inferiori a 40 difficili da leggere per chi possiede un diploma superiore;
 			\end{itemize}
 			\begin{itemize}
-					\item \textbf{range di accettazione:} [50-100];
-					\item \textbf{range ottimale:} [40-100].
+					\item \textbf{range di accettazione:} [50 - 100];
+					\item \textbf{range ottimale:} [40 - 100].
 			\end{itemize}
 
 È stato considerato che questo indice tuttavia non indica se il testo sia comprensibile o meno, infatti contenuto delle frasi potrebbe essere totalmente non comprensibile e/o stravolto, ma
@@ -124,15 +124,16 @@ avere lo stesso un ottimo indice Gulpease. Visto lo scopo dei documenti e e la l
 					\item \textbf{range di accettazione:} <15;
 					\item \textbf{range ottimale:} <10.
 				\end{itemize}				
-				\item \textbf{Numero di metodi:} metrica utilizzata per calcolare una media delle occorrenze dei metodi per package; valori alti potrebbero indicare la necessità di scomporlo. 					\begin{itemize}
-					\item \textbf{range di accettazione:} [3-10];
-					\item \textbf{range ottimale:} [3-8].
+				\item \textbf{Numero di metodi:} metrica utilizzata per calcolare una media delle occorrenze dei metodi per package; valori alti potrebbero indicare la necessità di scomporlo. 	
+				\begin{itemize}
+					\item \textbf{range di accettazione:} [3 - 10];
+					\item \textbf{range ottimale:} [3 - 8].
 				\end{itemize}
 				
 				\item \textbf{Numero di parametri:} metrica utilizzata per calcolare il numero di parametri formali di un metodo. Un valore basso e indice di maggior manutenibilità e astrazione del codice.
 				\begin{itemize}
-					\item \textbf{range di accettazione:} [0-8];
-					\item \textbf{range ottimale:} [0-4].
+					\item \textbf{range di accettazione:} [0 - 8];
+					\item \textbf{range ottimale:} [0 - 4].
 				\end{itemize}
 				\item \textbf{Linee di codice per linee di commento:} metrica atta a migliorare la manutenibilità del codice attraverso il monitoraggio del rapporto tra questi valori.
 				\begin{itemize}
@@ -143,10 +144,47 @@ avere lo stesso un ottimo indice Gulpease. Visto lo scopo dei documenti e e la l
 				\item \textbf{Bugs for lines of code:} metrica per la misura dei bug trovati per un certo quantitativo di linee di codice. Questa metrica è utile in quanto all'aumentare dell'ampiezza del codice si aumenta la probabilità di nascondere degli errori. Presupponendo che nessuno del gruppo avrà conoscenze sufficienti dello stack tecnologico che si andrà ad utilizzare si partirà con un valore di accettazione alto per poi cercare di ridurlo in modo incrementale. L'obbiettivo fissato è quello di raggiungere valori compresi tra 0 e 20. Difficoltà particolari verranno gestite dal responsabile di progetto;
 				\item \textbf{Numero di livelli di annidamento:} metrica per misurare il livello di annidamento dei metodi. Un numero elevato comporta eccessiva complessità del codice e ne riduce il livello di astrazione.
 				\begin{itemize}
-					\item \textbf{range di accettazione:} [1-6];
-					\item \textbf{range ottimale:} [1-4].
+					\item \textbf{range di accettazione:} [1 - 6];
+					\item \textbf{range ottimale:} [1 - 4].
 				\end{itemize}
 				
+				\item \textbf{Grado di accoppiamento:} viene derivato da due singoli indici:
+				\begin{itemize}
+					\item \textbf{Accoppiamento afferente:} questo indice viene calcolato dal numero di classi esterne al package che hanno dipendenze con classi interne. Se il numero è basso significa che il package fornirà poche funzionalità, se è molto alto avremo molte dipendenze da tracciare in caso di modifiche.
+					\item \textbf{Accoppiamento efferente:} questo indice calcolato dal numero di classi interne al package che hanno dipendenze con classi esterne ad esso. Un numero alto può significare una scarsa progettazione.
+				\end{itemize}
+				
+				\item \textbf{Grado di instabilità:} metrica per la misura dell'instabilità delle componenti del sistema. Questa e molto legata all'indice di accoppiamento afferente e quello efferente, in quanto viene calcolato con questa formula:\\
+				\begin{center}
+					\begin{math}
+						I=\frac{Ce}{Ca+Ce}
+					\end{math}
+				\end{center}		
+				dove Ce rappresenta l'accoppiamento efferente e Ca quello afferente.
+				\begin{itemize}
+					\item \textbf{range di accettazione:} [0 - 0.8];
+					\item \textbf{range ottimale:} [0.3 - 0.7].
+				\end{itemize}
+				
+				\item \textbf{Chiamate innestate di metodi:} metrica per la misura delle chiamate innestate, un gran numero di metodi può portare alla saturazione dello stack, è dunque necessario prestare attenzione anche a questo aspetto.
+				\begin{itemize}
+					\item \textbf{range di accettazione:} [0 - 8];
+					\item \textbf{range ottimale:} [0 - 5].
+				\end{itemize}
+				
+				\item \textbf{Copertura del codice:} metrica che misura la copertura dei test. Maggiore sarà questo valore più significativi saranno i test eseguiti. Questa metrica può essere raffinata tralasciando nell'analisi i metodi semplici che non richiedono test.
+				\begin{itemize}
+					\item \textbf{range di accettazione:} [80\% - 100\%];
+					\item \textbf{range ottimale:} [90\% - 100\%].
+				\end{itemize}			
+				
+				\item \textbf{Validazione W3C:} l'applicativo web deve superare correttamente i test di validazione offerti dal W3C. Qui si controlla il numero di avvisi o inesattezze per pagina che il test segnala.
+				\begin{itemize}
+					\item \textbf{range di accettazione:} [0 - 10];
+					\item \textbf{range ottimale:} [0].
+				\end{itemize}				
+				
 			\end{itemize}
+			
 
 	\pagebreak
