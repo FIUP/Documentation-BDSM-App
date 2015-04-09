@@ -511,7 +511,7 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 			\end{itemize}
 			
 		\subsubsection{TVF8}
-			L'utente vuole verificare che il sistema permetta ad un utente con privilegi di amministratore di accedere all'area riservata de sistema. All'utente è richiesto di:
+			L'utente vuole verificare che il sistema permetta ad un utente con privilegi di amministratore di usufruire di tutte le funzioni offerte agli amministratori. All'utente è richiesto di:
 			\begin{itemize}
 				\item effettuare l'autenticazione;
 				\item accedere all'area riservata;
@@ -545,6 +545,7 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 			\begin{itemize}
 				\item effettuare l'autenticazione;
 				\item accedere all'area riservata;
+				\item inserire i dati della nuova Recipe nel form;
 				\item verificare che sia visualizzato un messaggio d'errore nel caso in cui venga confermata una Recipe che non contiene almeno una metrica per categoria;
 				\item verificare che sia visualizzato un messaggio d'errore nel caso in cui venga confermata una Recipe in cui l'utente non ha inserito dei parametri specificati nel requisito ROF8.1.1.4;
 				\item verificare che nel caso venga confermata una nuova Recipe, il sistema salvi i suoi parametri nel database e reindirizzi l'amministratore all'elenco delle Recipe.
@@ -555,8 +556,9 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 			\begin{itemize}
 				\item effettuare l'autenticazione;
 				\item accedere all'area riservata;
-				\item cliccare il pulsante di eliminazione di una Recipe;
-				\item verificare che il sistema provvedi all'eliminazione di tutte le informazioni legate alla Recipe che si desidera eliminare;
+				\item premere il pulsante di eliminazione posto di fianco alla Recipe che si desidera eliminare;
+				\item verificare che il sistema non provvedi all'eliminazione di tutte le informazioni legate alla Recipe senza aver confermato prima l'eliminazione;
+				\item verificare che il sistema provvedi all'eliminazione di tutte le informazioni legate alla Recipe che si desidera eliminare alla pressione del tasto di conferma eliminazione;
 				\item verificare che il sistema provvedi ad eliminare tutti i dati grezzi dal database legati alla Recipe.
 			\end{itemize}
 			
