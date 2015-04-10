@@ -424,9 +424,6 @@
 
 
 
-
-
-
 \subsubsection{bdsm\_app::client::controller::admin} % (fold)
 \label{ssub:bdsm_app_client_controller_admin}
 \begin{figure}[htbp]
@@ -469,8 +466,8 @@
 		\subparagraph{bdsm\_app::client::controller::admin::RecipeConfigRoute} % (fold)
 		\label{subp:bdsm_app_client_controller_admin_recipeconfigroute}
 			\begin{itemize}
-				\item \textbf{Descrizione}: TO DO;
-				\item \textbf{Utilizzo}: TO DO;
+				\item \textbf{Descrizione}: la classe serve a gestire l'indirizzamento e l'assegnazione di uno stato al template HTML riguardante la pagina che consente di inserire una nuova Recipe nel sistema;
+				\item \textbf{Utilizzo}: viene utilizzata per reindirizzare l'utente al template HTML della pagina che permette all'amministratore di andare ad inserire una nuova Recipe nel sistema ed assegnare al template scelto il controller opportuno per gestire i diversi compiti;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item client::view::admin::RecipeConfig
@@ -482,8 +479,8 @@
 		\subparagraph{bdsm\_app::client::controller::admin::RecipeConfigCtrl} % (fold)
 		\label{subp:bdsm_app_client_controller_admin_recipeconfigctrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: TO DO;
-				\item \textbf{Utilizzo}: TO DO;
+				\item \textbf{Descrizione}: la classe è il controller che serve a gestire la logica applicativa riguardante la pagina che consente ad un amministratore di andare ad inserire una nuova Recipe;
+				\item \textbf{Utilizzo}: viene utilizzata per gestire le operazioni che servono ad andare ad inserire una nuova Recipe;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item TO DO (model)
@@ -496,8 +493,8 @@
 		\subparagraph{bdsm\_app::client::controller::admin::RequestListRoute} % (fold)
 		\label{subp:bdsm_app_client_controller_admin_recipelistroute}
 			\begin{itemize}
-				\item \textbf{Descrizione}: TO DO;
-				\item \textbf{Utilizzo}: TO DO;
+				\item \textbf{Descrizione}: la classe serve a gestire l'indirizzamento e l'assegnazione di uno stato al template HTML riguardante la pagina che mostra la lista di tutte le richieste di nuove Recipe;
+				\item \textbf{Utilizzo}: viene utilizzata per reindirizzare l'utente al template HTML della pagina che permette all'amministratore di visualizzare la lista di tutte le richieste di nuove Recipe proposte dagli utenti ed assegnare al template scelto il controller opportuno per gestire i diversi compiti;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item client::view::admin::RecipeList
@@ -509,8 +506,8 @@
 		\subparagraph{bdsm\_app::client::controller::admin::RequestListCtrl} % (fold)
 		\label{subp:bdsm_app_client_controller_admin_requestlistctrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: TO DO;
-				\item \textbf{Utilizzo}: TO DO;
+				\item \textbf{Descrizione}: la classe è il controller che serve a gestire la logica applicativa riguardante la pagina che consente ad un amministratore di visualizzare tutte le richieste di nuove Recipe inoltrate dagli utenti;
+				\item \textbf{Utilizzo}: viene utilizzata per gestire le operazioni che servono ad andare a visualizzare la lista di tutte le richieste di nuove Recipe. Una volta scelta la richiesta da esaminare, l'amministratore potrà cliccare su un apposito pulsante per visualizzarne i dettagli;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item TO DO (model)
@@ -523,8 +520,8 @@
 		\subparagraph{bdsm\_app::client::controller::admin::InsertRecipeCtrl} % (fold)
 		\label{subp:bdsm_app_client_controller_admin_insertctrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: TO DO;
-				\item \textbf{Utilizzo}: TO DO;
+				\item \textbf{Descrizione}: la classe è il controller che serve a gestire la logica applicativa riguardante il form contenente i campi necessari all'inserimento di una nuova Recipe;
+				\item \textbf{Utilizzo}: viene utilizzata per gestire il form che serve per inserire una nuova Recipe nel sistema. Può essere utilizzato sia per il form di un inserimento ex novo sia per gestire i dettagli delle richieste di nuove Recipe;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item TO DO (model)
@@ -537,8 +534,8 @@
 		\subparagraph{bdsm\_app::client::controller::admin::RatingsRoute} % (fold)
 		\label{subp:bdsm_app_client_controller_admin_ratingsroute}
 			\begin{itemize}
-				\item \textbf{Descrizione}: TO DO;
-				\item \textbf{Utilizzo}: TO DO;
+				\item \textbf{Descrizione}: la classe serve a gestire l'indirizzamento e l'assegnazione di uno stato al template HTML riguardante la pagina che mostra la lista di tutte le Recipe votate con la media del valore assegnato dagli utenti;
+				\item \textbf{Utilizzo}: viene utilizzata per reindirizzare l'utente al template HTML della pagina che permette all'amministratore di visualizzare la lista di tutte le Recipe votate, in ordine dalla più votata, ed assegnare al template scelto il controller opportuno per gestire i diversi compiti;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item client::view::admin::Ratings
@@ -550,8 +547,8 @@
 		\subparagraph{bdsm\_app::client::controller::admin::RatingsCtrl} % (fold)
 		\label{subp:bdsm_app_client_controller_admin_ratingsctrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: TO DO;
-				\item \textbf{Utilizzo}: TO DO;
+				\item \textbf{Descrizione}: la classe è il controller che serve a gestire la logica applicativa riguardante la pagina che consente ad un amministratore di visualizzare tutte le Recipe che sono state votate dagli utenti;
+				\item \textbf{Utilizzo}: viene utilizzata per gestire le operazioni che servono ad andare a visualizzare la lista di tutte le Recipe che sono state votate dagli utenti, ordinandole dalla più votata alla meno;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item TO DO (model)
@@ -564,8 +561,8 @@
 		\subparagraph{bdsm\_app::client::controller::admin::UserConfigRoute} % (fold)
 		\label{subp:bdsm_app_client_controller_admin_userconfigroute}
 			\begin{itemize}
-				\item \textbf{Descrizione}: TO DO;
-				\item \textbf{Utilizzo}: TO DO;
+				\item \textbf{Descrizione}: la classe serve a gestire l'indirizzamento e l'assegnazione di uno stato al template HTML riguardante la pagina che mostra la lista degli utenti registrati al sistema;
+				\item \textbf{Utilizzo}: viene utilizzata per reindirizzare l'utente al template HTML della pagina che permette all'amministratore di visualizzare la lista degli utenti registrati al sistema ed assegnare al template scelto il controller opportuno per gestire i diversi compiti;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item client::view::admin::UserConfig
@@ -577,8 +574,8 @@
 		\subparagraph{bdsm\_app::client::controller::admin::UserConfigCtrl} % (fold)
 		\label{subp:bdsm_app_client_controller_admin_userconfigctrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: TO DO;
-				\item \textbf{Utilizzo}: TO DO;
+				\item \textbf{Descrizione}: la classe è il controller che serve a gestire la logica applicativa riguardante la pagina che consente ad un amministratore di visualizzare la lista degli utenti registrati al sistema;
+				\item \textbf{Utilizzo}: viene utilizzata per gestire le operazioni che servono ad andare a visualizzare la lista degli utenti registrati al sistema, potendo su di essi, andare a modificarne i permessi o a cancellare l'account;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item TO DO (model)
