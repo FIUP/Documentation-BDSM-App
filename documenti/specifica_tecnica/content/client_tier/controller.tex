@@ -15,6 +15,8 @@
 % ================================================================================================
 % 0.0.4			2015-04-08			inserite relazioni tra le classi				Tesser Paolo
 % ================================================================================================
+% 0.0.5			2015-04-09			completata descrizione classi					Tesser Paolo
+% ================================================================================================
 %
 
 % CONTENUTO DEL CAPITOLO
@@ -78,7 +80,7 @@
 		\subparagraph{bdsm\_app::client::controller::public::LoginCtrl} % (fold)
 		\label{subp:bdsm_app_client_controller_public_loginctrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: la classe è il controller che serve a gestire l'autenticazione al sistema;
+				\item \textbf{Descrizione}: la classe è il controller che serve a gestire la logica applicativa riguardante l'autenticazione al sistema;
 				\item \textbf{Utilizzo}: viene utilizzata per gestire le operazioni di autenticazione al sistema qualora un utente non autenticato decidesse di effettuare l'accesso. Richiamando quindi i servizi che mettono in comunicazione il client con il server, verifica le credenziali ed effettua un reindirizzamento alla Home qualora fossero valide;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
@@ -92,7 +94,7 @@
 		\subparagraph{bdsm\_app::client::controller::public::RegisterCtrl} % (fold)
 		\label{subp:bdsm_app_client_controller_public_registerctrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: la classe è il controller che serve a gestire la registrazione al sistema;
+				\item \textbf{Descrizione}: la classe è il controller che serve a gestire la logica applicativa riguardante la registrazione al sistema;
 				\item \textbf{Utilizzo}: viene utilizzata per gestire le operazioni di registrazione al sistema qualora un utente che non si è ancora registrato decidesse di effettuare l'accesso. Richiamando quindi i servizi che mettono in comunicazione il client con il server, verifica le credenziali ed effettua un reindirizzamento alla pagina di Login qualora la registrazione fosse avvenuta con successo;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
@@ -189,8 +191,8 @@
 		\subparagraph{bdsm\_app::client::controller::user::HomeCtrl} % (fold)
 		\label{subp:client_controller_user_homectrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
+				\item \textbf{Descrizione}: la classe è il controller che serve a gestire la logica applicativa riguardante la pagina principale dell'applicazione, una volta che l'utente ha effettuato l'accesso;
+				\item \textbf{Utilizzo}: viene utilizzata per gestire [TO DO];
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item client::view::user::Home
@@ -221,8 +223,8 @@
 		\subparagraph{bdsm\_app::client::controller::user::RecipeCtrl} % (fold)
 		\label{subp:client_controller_user_recipectrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
+				\item \textbf{Descrizione}: la classe è il controller che serve a gestire la logica applicativa riguardante le Recipe presenti nel sistema;
+				\item \textbf{Utilizzo}: viene utilizzata per gestire la lista delle Recipe disponibili che verranno mostrate all'utente e le operazioni che esso ha a disposizione su queste. Queste operazioni saranno sotto forma di pulsanti associati a ciascuna metrica che porteranno l'utente o a visualizzare tutte le metriche inerenti alla Recipe scelta o ad effettuare un confronto tra le diverse metriche presenti;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item [TO DO] (model)
@@ -235,9 +237,8 @@
 		\subparagraph{bdsm\_app::client::controller::user::MetricsCtrl} % (fold)
 		\label{subp:client_controller_user_metricsctrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
+				\item \textbf{Descrizione}: la classe è il controller che serve a gestire la logica applicativa riguardante le metriche associate ad una Recipe precisa;
+				\item \textbf{Utilizzo}: viene utilizzata per gestire la lista delle metriche associate a una Recipe, fornendo dei pulsanti per ciascuna che serviranno all'utente per andare a visualizzare i grafici inerenti alla metrica selezionata;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item [TO DO] (model)
@@ -250,9 +251,8 @@
 		\subparagraph{bdsm\_app::client::controller::user::ChartsCtrl} % (fold)
 		\label{subp:client_controller_user_chartsctrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
+				\item \textbf{Descrizione}: la classe è il controller che serve a gestire la logica applicativa riguardante i grafici che vengono generati a partire dai dati associati ad una metrica precisa;
+				\item \textbf{Utilizzo}: viene utilizzata per gestire e generare i grafici a partire dai dati della metrica selezionata. La classe richiamerà i diversi metodi presenti nel \textbf{model} che a seconda della tipologia della metrica, creeranno i grafici opportuni;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item [TO DO] (model)
@@ -265,9 +265,8 @@
 		\subparagraph{bdsm\_app::client::controller::user::CompareCtrl} % (fold)
 		\label{subp:client_controller_user_comparectrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
+				\item \textbf{Descrizione}: la classe è il controller che serve a gestire la logica applicativa riguardante la generazione di confronti tra diverse metriche di una Recipe;
+				\item \textbf{Utilizzo}: viene utilizzata per gestire e generare i grafici a partire dai dati delle metriche selezionate che si vuole confrontare;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item [TO DO] (model)
@@ -293,8 +292,8 @@
 		\subparagraph{bdsm\_app::client::controller::user::RecipeRequestCtrl} % (fold)
 		\label{subp:client_controller_user_reciperequestctrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
+				\item \textbf{Descrizione}: la classe è il controller che serve a gestire la logica applicativa riguardante il form che l'utente deve compilare per effettuare una richiesta per una nuova Recipe;
+				\item \textbf{Utilizzo}: viene utilizzata per gestire il form che l'utente, che desidera fare richiesta per l'inserimento di una nuova Recipe, deve compilare. La classe dovrà utilizzare il verificare in una prima istanza, la validità dei campi inseriti, anche se poi sarà il \textbf{server} ha validare effettivamente la richiesta;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item [TO DO] (model)
@@ -317,11 +316,13 @@
 			\end{itemize}
 		% subparagraph bdsm_app_client_controller_user_favouritesroute (end)
 
+
+
 		\subparagraph{bdsm\_app::client::controller::user::FavouritesCtrl} % (fold)
 		\label{subp:client_controller_user_favouritesctrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
+				\item \textbf{Descrizione}: la classe è il controller che serve a gestire la logica applicativa riguardante la pagina che mostra tutti i grafici che l'utente ha salvato tra i preferiti;
+				\item \textbf{Utilizzo}: viene utilizzata per gestire tutti i grafici che l'utente ha salvato tra i preferiti;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item [TO DO] (model)
@@ -347,8 +348,8 @@
 		\subparagraph{bdsm\_app::client::controller::user::TokenConfigCtrl} % (fold)
 		\label{subp:client_controller_user_tokenconfigctrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
+				\item \textbf{Descrizione}: la classe è il controller che serve a gestire la logica applicativa riguardante la pagina che fornisce la possibilità ad un utente di ottenere un token da utilizzare per interrogare i servizi REST offerti;
+				\item \textbf{Utilizzo}: viene utilizzata per gestire le operazioni che forniscono all'utente il token necessario ad interrogare i servizi REST offerti;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item [TO DO] (model)
@@ -374,8 +375,8 @@
 		\subparagraph{bdsm\_app::client::controller::user::SettingsCtrl} % (fold)
 		\label{subp:client_controller_user_settingsctrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
+				\item \textbf{Descrizione}: la classe è il controller che serve a gestire la logica applicativa riguardante la pagina che mostra le informazioni dell'utente e la possibilità di modificarle;
+				\item \textbf{Utilizzo}: viene utilizzata per gestire la visualizzazione dei dati personali associati all'utente e per le operazioni di modifica;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item [TO DO] (model)
