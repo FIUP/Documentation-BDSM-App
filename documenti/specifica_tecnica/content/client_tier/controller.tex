@@ -73,6 +73,7 @@
 					\item client::view::public::ApiDocs
 					\item client::controller::public::LoginCtrl
 					\item client::controller::public::RegisterCtrl
+					\item client::controller::public::ApiDocsCtrl
 				\end{itemize}
 		\end{itemize}
 		% subparagraph bdsm_app_client_controller_public_publicrouteconfig (end)
@@ -84,7 +85,7 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire le operazioni di autenticazione al sistema qualora un utente non autenticato decidesse di effettuare l'accesso. Richiamando quindi i servizi che mettono in comunicazione il client con il server, verifica le credenziali ed effettua un reindirizzamento alla Home qualora fossero valide;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item [TO DO] (model)
+						\item TO DO (model)
 						\item client::view::public::Login
 						\item client::controller::public::PublicRoute
 					\end{itemize}
@@ -98,7 +99,7 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire le operazioni di registrazione al sistema qualora un utente che non si è ancora registrato decidesse di effettuare l'accesso. Richiamando quindi i servizi che mettono in comunicazione il client con il server, verifica le credenziali ed effettua un reindirizzamento alla pagina di Login qualora la registrazione fosse avvenuta con successo;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item [TO DO] (model)
+						\item TO DO (model)
 						\item client::view::public::Register
 						\item client::controller::public::PublicRoute
 					\end{itemize}
@@ -107,7 +108,16 @@
 
 		\subparagraph{bdsm\_app::client::controller::public::ApiDocsCtrl} % (fold)
 		\label{subp:bdsm_app_client_controller_public_apidocsctrl}
-		[TO DO] (non so se necessario, se la cosa è statica non servirebbe)
+		\begin{itemize}
+			\item \textbf{Descrizione}: la classe è il controller che serve a gestire la logica applicativa riguardante la pagina di visualizzazione dei servizi REST che il sistema offre;
+			\item \textbf{Utilizzo}: viene utilizzata per gestire in maniera automatica la documentazione riguardante i servizi REST offerti dal sistema;
+			\item \textbf{Relazioni con altre classi}:
+				\begin{itemize}
+					\item TO DO (model)
+					\item client::view::public::ApiDocs
+					\item client::controller::public::PublicRoute
+				\end{itemize}
+		\end{itemize}
 		% subparagraph bdsm_app_client_controller_public_apidocsctrl (end)
 
 
@@ -137,8 +147,8 @@
 		\subparagraph{bdsm\_app::client::controller::user::MenuCtrl} % (fold)
 		\label{subp:client_controller_user_menuctrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
+				\item \textbf{Descrizione}: la classe è il controller che serve a gestire la logica applicativa riguardante la parte in comune tra i diversi menu presenti nell'applicazione
+				\item \textbf{Utilizzo}: viene utilizzata per gestire le operazioni in comune e gli stati tra i diversi menu effettivi che conterranno i vari collegamenti alle diverse pagine;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item client::view::user::Menu
@@ -149,12 +159,18 @@
 		\subparagraph{bdsm\_app::client::controller::user::MenuMainCtrl} % (fold)
 		\label{subp:client_controller_user_menumainctrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
+				\item \textbf{Descrizione}: la classe è il controller che serve a gestire la logica applicativa riguardante il menu principale dell'applicazione;
+				\item \textbf{Utilizzo}: viene utilizzata per gestire i collegamenti principali ad alcune pagine del sistema ed ad effettuare l'operazione di logout;
+				\item \textbf{Classi ereditate}:
+					\begin{itemize}
+						\item client::controller::user::MenuCtrl. Questa ereditarietà è solo logica e non viene implementata in nessuna forma.
+					\end{itemize}
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item client::view::user::MenuMain
+						\item client::controller::user::LogoutCtrl
+						\item client::controller::public::HomeRoute
+						\item client::controller::user::SettingsRoute
 					\end{itemize}
 			\end{itemize}
 		% subparagraph client_controller_user_menumainctrl (end)
@@ -162,17 +178,22 @@
 		\subparagraph{bdsm\_app::client::controller::user::MenuSecondCtrl} % (fold)
 		\label{subp:client_controller_user_menusecondctrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
+				\item \textbf{Descrizione}: la classe è il controller che serve a gestire la logica applicativa riguardante il menu secondario dell'applicazione;
+				\item \textbf{Utilizzo}: viene utilizzata per gestire i collegamenti secondari alla maggior parte delle pagine del sistema;
+				\item \textbf{Classi ereditate}:
+					\begin{itemize}
+						\item client::controller::user::MenuCtrl. Questa ereditarietà è solo logica e non viene implementata in nessuna forma.
+					\end{itemize}
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item client::view::user::MenuSecond
+						\item client::controller::user::RecipeRoute
+						\item client::controller::user::RecipeRequestRoute
+						\item client::controller::user::FavouritesRoute
+						\item client::controller::user::TokenConfigRoute
 					\end{itemize}
 			\end{itemize}
 		% subparagraph client_controller_user_menusecondctrl (end)
-
-
 
 
 		\subparagraph{bdsm\_app::client::controller::user::HomeRoute} % (fold)
@@ -192,7 +213,7 @@
 		\label{subp:client_controller_user_homectrl}
 			\begin{itemize}
 				\item \textbf{Descrizione}: la classe è il controller che serve a gestire la logica applicativa riguardante la pagina principale dell'applicazione, una volta che l'utente ha effettuato l'accesso;
-				\item \textbf{Utilizzo}: viene utilizzata per gestire [TO DO];
+				\item \textbf{Utilizzo}: viene utilizzata per gestire la pagina principale dell'applicazione. Su di essa per il momento non sono state previste particolari operazioni, ma viene lo stesso inserito un controller per scopi futuri;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item client::view::user::Home
@@ -227,7 +248,7 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire la lista delle Recipe disponibili che verranno mostrate all'utente e le operazioni che esso ha a disposizione su queste. Queste operazioni saranno sotto forma di pulsanti associati a ciascuna metrica che porteranno l'utente o a visualizzare tutte le metriche inerenti alla Recipe scelta o ad effettuare un confronto tra le diverse metriche presenti;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item [TO DO] (model)
+						\item TO DO (model)
 						\item client::view::user::Recipe
 						\item client::controller::view::RecipeRoute
 					\end{itemize}
@@ -241,7 +262,7 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire la lista delle metriche associate a una Recipe, fornendo dei pulsanti per ciascuna che serviranno all'utente per andare a visualizzare i grafici inerenti alla metrica selezionata;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item [TO DO] (model)
+						\item TO DO (model)
 						\item client::view::user::metrics
 						\item client::controller::user::RecipeRoute
 					\end{itemize}
@@ -255,7 +276,7 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire e generare i grafici a partire dai dati della metrica selezionata. La classe richiamerà i diversi metodi presenti nel \textbf{model} che a seconda della tipologia della metrica, creeranno i grafici opportuni;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item [TO DO] (model)
+						\item TO DO (model)
 						\item client::view::user::Charts
 						\item client::controller::user::RecipeRoute
 					\end{itemize}
@@ -269,7 +290,7 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire e generare i grafici a partire dai dati delle metriche selezionate che si vuole confrontare;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item [TO DO] (model)
+						\item TO DO (model)
 						\item client::view::user::Compare
 						\item client::controller::RecipeRoute
 					\end{itemize}
@@ -296,7 +317,7 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire il form che l'utente, che desidera fare richiesta per l'inserimento di una nuova Recipe, deve compilare. La classe dovrà utilizzare il verificare in una prima istanza, la validità dei campi inseriti, anche se poi sarà il \textbf{server} ha validare effettivamente la richiesta;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item [TO DO] (model)
+						\item TO DO (model)
 						\item client::view::user::RecipeRequest
 						\item client::controller::user::RecipeRequestRoute
 					\end{itemize}
@@ -317,7 +338,6 @@
 		% subparagraph bdsm_app_client_controller_user_favouritesroute (end)
 
 
-
 		\subparagraph{bdsm\_app::client::controller::user::FavouritesCtrl} % (fold)
 		\label{subp:client_controller_user_favouritesctrl}
 			\begin{itemize}
@@ -325,7 +345,7 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire tutti i grafici che l'utente ha salvato tra i preferiti;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item [TO DO] (model)
+						\item TO DO (model)
 						\item client::view::user::Favourites
 						\item client::controller::user::FavouritesRoute
 					\end{itemize}
@@ -352,7 +372,7 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire le operazioni che forniscono all'utente il token necessario ad interrogare i servizi REST offerti;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item [TO DO] (model)
+						\item TO DO (model)
 						\item client::view::user::TokenConfig
 						\item client::controller::user::TokenConfigRoute
 					\end{itemize}
@@ -379,7 +399,7 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire la visualizzazione dei dati personali associati all'utente e per le operazioni di modifica;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item [TO DO] (model)
+						\item TO DO (model)
 						\item client::view::user::Settings
 						\item client::controller::user::SettingsRoute
 					\end{itemize}
@@ -389,12 +409,13 @@
 		\subparagraph{bdsm\_app::client::controller::user::LogoutCtrl} % (fold)
 		\label{subp:bdsm_app_client_controller_user_logoutctrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
+				\item \textbf{Descrizione}: la classe è il controller che serve a gestire le operazioni di logout di un utente;
+				\item \textbf{Utilizzo}: viene utilizzata per distruggere la sessione attuale di un utente, attraverso la chiamata ad opportuni servizi, e il reindirizzamento alla pagina di Login;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item [TO DO] (model)
+						\item TO DO (model)
 						\item client::view::user::MenuMain
+						\item client::controller::public::PublicRoute
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_controller_user_logoutctrl (end)
@@ -428,12 +449,19 @@
 		\subparagraph{bdsm\_app::client::controller::admin::MenuSecondAdminCtrl} % (fold)
 		\label{subp:bdsm_app_client_controller_admin_menusecondadminctrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
+				\item \textbf{Descrizione}: la classe è il controller che serve a gestire la logica applicativa riguardante il menu secondario dell'applicazione che ha a disposizione in più l'amministratore;
+				\item \textbf{Utilizzo}: viene utilizzata per gestire i collegamenti secondari alle pagine del sistema che l'amministratore ha a disposizione per andare ad effettuare le operazioni aggiuntive a lui consentite;
+				\item \textbf{Classi ereditate}:
+					\begin{itemize}
+						\item client::controller::user::MenuSecondCtrl. Questa ereditarietà è solo logica e non viene implementata in nessuna forma.
+					\end{itemize}
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item client::view::admin::MenuSecondAdmin
+						\item client::controller::admin::RecipeConfigRoute
+						\item client::controller::admin::RequestListRoute
+						\item client::controller::admin::RatingsRoute
+						\item client::controller::admin::UserConfigRoute
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_controller_admin_menusecondadminctrl (end)
@@ -441,8 +469,8 @@
 		\subparagraph{bdsm\_app::client::controller::admin::RecipeConfigRoute} % (fold)
 		\label{subp:bdsm_app_client_controller_admin_recipeconfigroute}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
+				\item \textbf{Descrizione}: TO DO;
+				\item \textbf{Utilizzo}: TO DO;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item client::view::admin::RecipeConfig
@@ -454,11 +482,11 @@
 		\subparagraph{bdsm\_app::client::controller::admin::RecipeConfigCtrl} % (fold)
 		\label{subp:bdsm_app_client_controller_admin_recipeconfigctrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
+				\item \textbf{Descrizione}: TO DO;
+				\item \textbf{Utilizzo}: TO DO;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item [TO DO] (model)
+						\item TO DO (model)
 						\item client::view::admin::RecipeConfig
 						\item client::controller::admin::RecipeConfigRoute
 					\end{itemize}
@@ -468,8 +496,8 @@
 		\subparagraph{bdsm\_app::client::controller::admin::RequestListRoute} % (fold)
 		\label{subp:bdsm_app_client_controller_admin_recipelistroute}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
+				\item \textbf{Descrizione}: TO DO;
+				\item \textbf{Utilizzo}: TO DO;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item client::view::admin::RecipeList
@@ -481,11 +509,11 @@
 		\subparagraph{bdsm\_app::client::controller::admin::RequestListCtrl} % (fold)
 		\label{subp:bdsm_app_client_controller_admin_requestlistctrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
+				\item \textbf{Descrizione}: TO DO;
+				\item \textbf{Utilizzo}: TO DO;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item [TO DO] (model)
+						\item TO DO (model)
 						\item client::view::admin::RecipeList
 						\item client::controller::admin::RecipeListRoute
 					\end{itemize}
@@ -495,11 +523,11 @@
 		\subparagraph{bdsm\_app::client::controller::admin::InsertRecipeCtrl} % (fold)
 		\label{subp:bdsm_app_client_controller_admin_insertctrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
+				\item \textbf{Descrizione}: TO DO;
+				\item \textbf{Utilizzo}: TO DO;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item [TO DO] (model)
+						\item TO DO (model)
 						\item client::view::admin::Insert
 						\item client::controller::admin::RecipeConfigRoute
 					\end{itemize}
@@ -509,8 +537,8 @@
 		\subparagraph{bdsm\_app::client::controller::admin::RatingsRoute} % (fold)
 		\label{subp:bdsm_app_client_controller_admin_ratingsroute}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
+				\item \textbf{Descrizione}: TO DO;
+				\item \textbf{Utilizzo}: TO DO;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item client::view::admin::Ratings
@@ -522,11 +550,11 @@
 		\subparagraph{bdsm\_app::client::controller::admin::RatingsCtrl} % (fold)
 		\label{subp:bdsm_app_client_controller_admin_ratingsctrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
+				\item \textbf{Descrizione}: TO DO;
+				\item \textbf{Utilizzo}: TO DO;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item [TO DO] (model)
+						\item TO DO (model)
 						\item client::view::admin::Ratings
 						\item client::controller::admin::RatingsRoute
 					\end{itemize}
@@ -536,8 +564,8 @@
 		\subparagraph{bdsm\_app::client::controller::admin::UserConfigRoute} % (fold)
 		\label{subp:bdsm_app_client_controller_admin_userconfigroute}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
+				\item \textbf{Descrizione}: TO DO;
+				\item \textbf{Utilizzo}: TO DO;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item client::view::admin::UserConfig
@@ -549,11 +577,11 @@
 		\subparagraph{bdsm\_app::client::controller::admin::UserConfigCtrl} % (fold)
 		\label{subp:bdsm_app_client_controller_admin_userconfigctrl}
 			\begin{itemize}
-				\item \textbf{Descrizione}: [TO DO];
-				\item \textbf{Utilizzo}: [TO DO];
+				\item \textbf{Descrizione}: TO DO;
+				\item \textbf{Utilizzo}: TO DO;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item [TO DO] (model)
+						\item TO DO (model)
 						\item client::view::admin::UserConfig
 						\item client::controller::admin::UserConfigRoute
 					\end{itemize}
