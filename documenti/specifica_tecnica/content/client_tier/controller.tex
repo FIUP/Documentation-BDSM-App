@@ -90,7 +90,7 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire le operazioni di autenticazione al sistema qualora un utente non autenticato decidesse di effettuare l'accesso. Richiamando quindi i servizi che mettono in comunicazione il client con il server, verifica le credenziali ed effettua un reindirizzamento alla Home qualora fossero valide;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item TO DO (model)
+						\item client::model::services::AuthService
 						\item client::view::public::Login
 						\item client::controller::public::PublicRoute
 					\end{itemize}
@@ -104,7 +104,8 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire le operazioni di registrazione al sistema qualora un utente che non si è ancora registrato decidesse di effettuare l'accesso. Richiamando quindi i servizi che mettono in comunicazione il client con il server, verifica le credenziali ed effettua un reindirizzamento alla pagina di Login qualora la registrazione fosse avvenuta con successo;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item TO DO (model)
+						\item client::model::services::AuthService
+						\item client::model::data::UserMode
 						\item client::view::public::Register
 						\item client::controller::public::PublicRoute
 					\end{itemize}
@@ -118,7 +119,7 @@
 			\item \textbf{Utilizzo}: viene utilizzata per gestire in maniera automatica la documentazione riguardante i servizi REST offerti dal sistema;
 			\item \textbf{Relazioni con altre classi}:
 				\begin{itemize}
-					\item TO DO (model)
+					\item client::model::ApiDocsModel
 					\item client::view::public::ApiDocs
 					\item client::controller::public::PublicRoute
 				\end{itemize}
@@ -253,7 +254,7 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire la lista delle Recipe disponibili che verranno mostrate all'utente e le operazioni che esso ha a disposizione su queste. Queste operazioni saranno sotto forma di pulsanti associati a ciascuna metrica che porteranno l'utente o a visualizzare tutte le metriche inerenti alla Recipe scelta o ad effettuare un confronto tra le diverse metriche presenti;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item TO DO (model)
+						\item client::model::services::RecipeService
 						\item client::view::user::Recipe
 						\item client::controller::view::RecipeRoute
 					\end{itemize}
@@ -267,7 +268,7 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire la lista delle metriche associate a una Recipe, fornendo dei pulsanti per ciascuna che serviranno all'utente per andare a visualizzare i grafici inerenti alla metrica selezionata;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item TO DO (model)
+						\item client::model::services::RecipeService
 						\item client::view::user::metrics
 						\item client::controller::user::RecipeRoute
 					\end{itemize}
@@ -281,7 +282,7 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire e generare i grafici a partire dai dati della metrica selezionata. La classe richiamerà i diversi metodi presenti nel \textbf{model} che a seconda della tipologia della metrica, creeranno i grafici opportuni;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item TO DO (model)
+						\item client::model::services::RecipeService
 						\item client::view::user::Charts
 						\item client::controller::user::RecipeRoute
 					\end{itemize}
@@ -295,7 +296,7 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire e generare i grafici a partire dai dati delle metriche selezionate che si vuole confrontare;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item TO DO (model)
+						\item client::model::data::CompareModel
 						\item client::view::user::Compare
 						\item client::controller::RecipeRoute
 					\end{itemize}
@@ -322,7 +323,7 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire il form che l'utente, che desidera fare richiesta per l'inserimento di una nuova Recipe, deve compilare. La classe dovrà utilizzare il verificare in una prima istanza, la validità dei campi inseriti, anche se poi sarà il \textbf{server} ha validare effettivamente la richiesta;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item TO DO (model)
+						\item client::model::data::RecipeRequestModel
 						\item client::view::user::RecipeRequest
 						\item client::controller::user::RecipeRequestRoute
 					\end{itemize}
@@ -350,7 +351,7 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire tutti i grafici che l'utente ha salvato tra i preferiti;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item TO DO (model)
+						\item client::model::services::RecipeService
 						\item client::view::user::Favourites
 						\item client::controller::user::FavouritesRoute
 					\end{itemize}
@@ -377,7 +378,7 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire le operazioni che forniscono all'utente il token necessario ad interrogare i servizi REST offerti;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item TO DO (model)
+						\item client::model::services::UserService
 						\item client::view::user::TokenConfig
 						\item client::controller::user::TokenConfigRoute
 					\end{itemize}
@@ -404,7 +405,7 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire la visualizzazione dei dati personali associati all'utente e per le operazioni di modifica;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item TO DO (model)
+						\item client::model::data::UserModel
 						\item client::view::user::Settings
 						\item client::controller::user::SettingsRoute
 					\end{itemize}
@@ -418,7 +419,7 @@
 				\item \textbf{Utilizzo}: viene utilizzata per distruggere la sessione attuale di un utente, attraverso la chiamata ad opportuni servizi, e il reindirizzamento alla pagina di Login;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item TO DO (model)
+						\item client::model::services::AuthService
 						\item client::view::user::MenuMain
 						\item client::controller::public::PublicRoute
 					\end{itemize}
@@ -488,7 +489,7 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire le operazioni che servono ad andare ad inserire una nuova Recipe;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item TO DO (model)
+						\item client::model::data::RecipeInsertModel
 						\item client::view::admin::RecipeConfig
 						\item client::controller::admin::RecipeConfigRoute
 					\end{itemize}
@@ -515,7 +516,7 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire le operazioni che servono ad andare a visualizzare la lista di tutte le richieste di nuove Recipe. Una volta scelta la richiesta da esaminare, l'amministratore potrà cliccare su un apposito pulsante per visualizzarne i dettagli;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item TO DO (model)
+						\item client::model::services::RecipeAdminService
 						\item client::view::admin::RecipeList
 						\item client::controller::admin::RecipeListRoute
 					\end{itemize}
@@ -529,7 +530,7 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire il form che serve per inserire una nuova Recipe nel sistema. Può essere utilizzato sia per il form di un inserimento ex novo sia per gestire i dettagli delle richieste di nuove Recipe;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item TO DO (model)
+						\item client::model::data::RecipeInsertModel
 						\item client::view::admin::Insert
 						\item client::controller::admin::RecipeConfigRoute
 					\end{itemize}
@@ -556,7 +557,7 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire le operazioni che servono ad andare a visualizzare la lista di tutte le Recipe che sono state votate dagli utenti, ordinandole dalla più votata alla meno;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item TO DO (model)
+						\item client::model::services::RecipeAdminService
 						\item client::view::admin::Ratings
 						\item client::controller::admin::RatingsRoute
 					\end{itemize}
@@ -583,7 +584,7 @@
 				\item \textbf{Utilizzo}: viene utilizzata per gestire le operazioni che servono ad andare a visualizzare la lista degli utenti registrati al sistema, potendo su di essi, andare a modificarne i permessi o a cancellare l'account;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item TO DO (model)
+						\item client::model::services::UserAdminService
 						\item client::view::admin::UserConfig
 						\item client::controller::admin::UserConfigRoute
 					\end{itemize}
