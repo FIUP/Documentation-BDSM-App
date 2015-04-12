@@ -11,6 +11,8 @@
 % =================================================================================================
 % 0.0.2			2015-04-11			scheletro classi contenuti nei package			Tesser Paolo
 % =================================================================================================
+% 0.0.3			2015-04-12			inizio stesura descrizioni delle classi			Tesser Paolo
+% =================================================================================================
 %
 
 % CONTENUTO DEL CAPITOLO
@@ -25,23 +27,26 @@
 \end{figure}
 
 \begin{itemize}
-	\item \textbf{Descrizione}: è il package c;
+	\item \textbf{Descrizione}: è il package che contiene le classi che rappresentano i modelli dei dati utilizzati dal client;
 	\item \textbf{Padre}: client::model
 	\item \textbf{Interazione con altri componenti}:
 		\begin{itemize}
 			\item client::model::services
 			\item client::controller
 		\end{itemize}
+\end{itemize}
 
 	\paragraph{Classi} % (fold)
-
 		\subparagraph{client::model::data::ViewTypeModel} % (fold)
 		\label{subp:client_model_data_viewtypemodel}
 			\begin{itemize}
 				\item \textbf{Descrizione}: [TO DO];
 				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item client::model::
+						\item client::controller::
+					\end{itemize}
 			\end{itemize}
 		% subparagraph client_model_data_viewtypedata (end)
 
@@ -50,8 +55,11 @@
 			\begin{itemize}
 				\item \textbf{Descrizione}: [TO DO];
 				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item client::model::
+						\item client::controller::
+					\end{itemize}
 			\end{itemize}
 		% subparagraph client_model_data_apidocsmodel (end)
 
@@ -61,8 +69,11 @@
 			\begin{itemize}
 				\item \textbf{Descrizione}: [TO DO];
 				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item client::model::
+						\item client::controller::
+					\end{itemize}
 			\end{itemize}
 		% subparagraph client_model_data_user (end)
 
@@ -71,8 +82,12 @@
 			\begin{itemize}
 				\item \textbf{Descrizione}: [TO DO];
 				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Classi ereditate}: client::model::data::UserModel;
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item client::model::
+						\item client::controller::
+					\end{itemize}
 			\end{itemize}
 		% subparagraph client_model_data_useradminmodel (end)
 
@@ -81,8 +96,11 @@
 			\begin{itemize}
 				\item \textbf{Descrizione}: [TO DO];
 				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item client::model::
+						\item client::controller::
+					\end{itemize}
 			\end{itemize}
 		% subparagraph client_model_data_recipe (end)
 
@@ -91,8 +109,12 @@
 			\begin{itemize}
 				\item \textbf{Descrizione}: [TO DO];
 				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Classi ereditate}: client::model::data::RecipeModel;
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item client::model::
+						\item client::controller::
+					\end{itemize}
 			\end{itemize}
 		% subparagraph client_model_data_reciperequestmodel (end)
 
@@ -101,8 +123,12 @@
 			\begin{itemize}
 				\item \textbf{Descrizione}: [TO DO];
 				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Classi ereditate}: client::model::data::RecipeModel;
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item client::model::
+						\item client::controller::
+					\end{itemize}
 			\end{itemize}
 		% subparagraph client_model_data_recipeinsertmodel (end)
 
@@ -111,16 +137,25 @@
 			\begin{itemize}
 				\item \textbf{Descrizione}: [TO DO];
 				\item \textbf{Utilizzo}: [TO DO];
-				\item \textbf{Classi ereditate}: [TO DO];
-				\item \textbf{Relazioni con altre classi}: [TO DO].
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item client::model::
+						\item client::controller::
+					\end{itemize}
 			\end{itemize}
 		% subparagraph client_model_data_metricmodel (end)
 
 		\subparagraph{client::model::data::CompareModel} % (fold)
 		\label{subp:client_model_data_comparemodel}
-		
+			\begin{itemize}
+				\item \textbf{Descrizione}: [TO DO];
+				\item \textbf{Utilizzo}: [TO DO];
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item client::model::
+						\item client::controller::
+					\end{itemize}
+			\end{itemize}
 		% subparagraph client_model_data_comparemodel (end)
 
-
-\end{itemize}
 % subsubsection bdsm_app_client_model_data (end)
