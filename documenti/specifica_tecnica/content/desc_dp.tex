@@ -212,7 +212,7 @@ Il pattern Dependency Injection coinvolge almeno tre elementi:
 		\begin{figure}[htbp]
 			\centering
 			\centerline{\includegraphics[scale=0.3]{./images/example_graph.png}}
-			\caption{Design pattern strutturalie - Fa\c{c}ade}
+			\caption{Design pattern strutturale - Fa\c{c}ade}
 		\end{figure}
 		TO DO (grafico)
 		
@@ -224,6 +224,31 @@ Il pattern Dependency Injection coinvolge almeno tre elementi:
 			
 			\item \textbf{Applicabilità}: Questo pattern può essere utilizzato per fornire una vista semplice e di default di un sottosistema complesso e nel caso di sottosistema stratificato, come entry point per ciascun livello;
 			
+		\end{itemize}
+		
+		\subsubsection{Adapter} % (fold)
+		
+		
+		\begin{figure}[htbp]
+			\centering
+			\centerline{\includegraphics[scale=0.3]{./images/example_graph.png}}
+			\caption{Design pattern strutturale - Adapter}
+		\end{figure}
+		TO DO (grafico)
+		
+		
+		\begin{itemize}
+			\item \textbf{Scopo}: Lo scopo è quello di fornire una soluzione astratta al problema dell'interoperabilità tra interfacce differenti. Questo problema si presenta ogni qual volta nel progetto di un software si debbano utilizzare oggetti la cui interfaccia non è perfettamente compatibile con quanto richiesto da applicazioni già esistenti. Invece di riscrivere parte del sistema, compito oneroso e non sempre possibile se non si ha a disposizione il codice sorgente, può essere comodo scrivere un adapter, appunto, che faccia da tramite;
+			
+			\item \textbf{Motivazione}: E' stato scelto questo pattern perché permette l'interoperabilità tra diversi moduli, anche di terze parti, senza doverli modificare o riscrivere;
+			
+			\item \textbf{Applicabilità}: Questo pattern può essere utilizzato quando interfacce di classi differenti devono comunque poter comunicare tra loro. Alcuni casi sono:
+			
+			\begin{itemize}
+			\item l'utilizzo di una classe esistente che presenti un'interfaccia diversa da quella desiderata;
+			\item la scrittura di una determinata classe senza poter conoscere a priori le altre classi con cui dovrà operare;
+			\end{itemize}
+		
 		\end{itemize}
 
 
