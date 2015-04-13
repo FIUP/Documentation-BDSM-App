@@ -17,7 +17,11 @@
 
 \subsubsection{bdsm\_app::client::model::services} % (fold)
 \label{ssub:bdsm_app_client_model_services}
-[TO DO] (diagramma) \newline \newline
+\begin{figure}[htbp]
+	\centering
+	\centerline{\includegraphics[scale=1.00]{./images/client_model_services.pdf}}
+	\caption{Package - client::model}
+\end{figure}
 
 \begin{itemize}
 	\item \textbf{Descrizione}: È il package che contiene le classi che sviluppano il core business dell'applicazione: in particolare gestiscono il recupero dei dati, siano essi salvati in locale o da recuperare chiamando il server, la crezione dei grafici e l'autenticazione.
@@ -34,7 +38,7 @@
 		\subparagraph{client::model::services::AuthService} % (fold)
 		\label{subp:client_model_services_authservice}
 			\begin{itemize}
-				\item \textbf{Descrizione}: È la classe che implementa un \emph{Facade} per gestire le chiamate al modulo esterno usato per gestire l'autenticazione;
+				\item \textbf{Descrizione}: È la classe che implementa un \emph{Adapter} per gestire le chiamate al modulo esterno usato per gestire l'autenticazione;
 				\item \textbf{Utilizzo}: I metodi di questa classe saranno invocati quando un utente effettua la registrazione al servizio o effettua un login/logout;
 				\item \textbf{Relazioni con altre classi}: 					
 					\begin{itemize}
@@ -64,8 +68,12 @@
 		\subparagraph{client::model::services::RecipeAdminService} % (fold)
 		\label{subp:client_model_services_recipeadminservice}
 			\begin{itemize}
-				\item \textbf{Descrizione}: È la classe che gestisce l'inserimento di nuove recipe nel server e l'eliminazione di Recipe già presenti;
-				\item \textbf{Utilizzo}: I suoi metodi vengono invocati quando un utente amministratore desidera aggiungere o eliminare Recipe dal sistema;
+				\item \textbf{Descrizione}: È la classe che oltre a gestire ciò che è gestito dalla classe padre si occupa dell'inserimento di nuove recipe nel server e dell'eliminazione di Recipe già presenti;
+				\item \textbf{Utilizzo}: I suoi metodi vengono invocati quando un utente amministratore desidera agire su dati di Recipe da pagine non accessibili a un utente non amministratore;
+				\item \textbf{Classi ereditate}:					
+					\begin{itemize}
+						\item client::model::services::RecipeService
+					\end{itemize}
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item client::model::data::RecipeInsertModel
@@ -94,8 +102,12 @@
 		\subparagraph{client::model::services::UserAdminService} % (fold)
 		\label{subp:client_model_services_useradminservice}
 			\begin{itemize}
-				\item \textbf{Descrizione}: È la classe che gestisce il recupero e la modifica di dati di altri utenti, inclusa l'eliminazione di un utente e il cambiare i suoi permessi;
-				\item \textbf{Utilizzo}: I suoi metodi vengono invocati quando un utente amministratore agisce sulla lista degli utenti del servizio;
+				\item \textbf{Descrizione}: È la classe che oltre a gestire ciò che è gestito dalla sua classe padre si occupa del recupero e della modifica di dati di utenti, inclusa l'eliminazione di un utente e il cambiare i suoi permessi;
+				\item \textbf{Utilizzo}: I suoi metodi vengono invocati quando un utente amministratore agisce su dati relativi ad utenti da una pagina non accessibile agli utenti non amministratori;
+				\item \textbf{Classi ereditate}:					
+					\begin{itemize}
+						\item client::model::services::UserService
+					\end{itemize}
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item client::model::data::UserModel
