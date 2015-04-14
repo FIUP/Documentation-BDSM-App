@@ -11,6 +11,8 @@
 % =================================================================================================
 % 0.0.2			2015-04-03			descritto pattern MVC, MVW e DI					Tesser Paolo
 % =================================================================================================
+% 0.0.3			2015-04-13			descritto Three-Tier							Tesser Paolo
+% =================================================================================================
 %
 
 % CONTENUTO DEL CAPITOLO
@@ -19,12 +21,12 @@
 \label{sub:design_pattern_architetturali}
 	\subsubsection{Three-Tier} % (fold)
 	\label{ssub:three_tier}
-	[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
 		\begin{itemize}
-			\item \textbf{Scope dell'utilizzo}: [TO DO];
+			\item \textbf{Scope dell'utilizzo}: è stato scelto il pattern Three-tier per rendere massima la distribuzione delle componenti principali del sistema: client(front-end), server(back-end) e database (Datastore). La decisione di adottare un'architettura REST-like ha contribuito alla scelta dell'infrastruttura, che ci permette di separare al meglio le diverse parti;
 			\item \textbf{Contesto dell'utilizzo}:
 				\begin{itemize}
-					\item \textbf{Intera applicazione}: [TO DO]
+					\item \textbf{Intera applicazione}: la decomposizione del sistema avviene secondo lo schema citato precedentemente. Ogni componente rappresenta un livello del pattern. Il client comunica con il server attraverso i servizi REST esposti da quest'ultimo, mentre il server comunica con il database attraverso le funzionalità offerte dalla Google App Engine. \newline
+					[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
 				\end{itemize}
 		\end{itemize}
 	% subsubsection three_tier (end)
@@ -32,13 +34,12 @@
 
 	\subsubsection{MVW} % (fold)
 	\label{ssub:mvw}
-	[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
-
 		\begin{itemize}
 			\item \textbf{Scope dell'utilizzo}: è un Design Pattern simile a MVC, che permette di avere una corrispondenza più diretta e automatica tra la \emph{view} e il \emph{model}. L'acronimo MVW sta infatti per Model-View-Whatever, dove \emph{Whatever} indica \emph{``whatever works for you''};
 			\item \textbf{Contesto dell'utilizzo}: 
 				\begin{itemize}
-					\item \textbf{Client}: viene utilizzato per gestire il lato client dell'applicazione. Questo ci viene fornito direttamente dal framework AngularJS. La parte W (Whatever) assume internamente due diversi aspetti.
+					\item \textbf{Client}: viene utilizzato per gestire il lato client dell'applicazione. Questo ci viene fornito direttamente dal framework AngularJS. La parte W (Whatever) assume internamente due diversi aspetti. \newline
+					Il diagramma che riporta lo schema del pattern è quello presente alla sezione \ref{sub:client}.
 				\end{itemize}
 		\end{itemize}
 
@@ -69,13 +70,13 @@
 
 	\subsubsection{Dependency Injection} % (fold)
 	\label{ssub:dependency_injection}
-	[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
-
 		\begin{itemize}
 			\item \textbf{Scope dell'utilizzo}: è un Design Pattern che viene utilizzato per favorire la separazione delle responsabilità tra i componenti dalla risoluzione delle dipendenze. Questo permette di avere una migliore modularità del codice, di avere un minor accoppiamento tra le diverse parti e garantisce una più facile fase di testing;
 			\item \textbf{Contesto dell'utilizzo}: 
 				\begin{itemize}
-					\item \textbf{Client}: viene utilizzato direttamente da AngularJS per iniettare le diverse dipendenze nei moduli che le richiedono. In particolare vengono iniettati nei controller tutti i servizi e i modelli dei dati necessari all'interazione dell'utente con le viste.
+					\item \textbf{Client}: viene utilizzato direttamente da AngularJS per iniettare le diverse dipendenze nei moduli che le richiedono. In particolare vengono iniettati nei controller tutti i servizi e i modelli dei dati necessari all'interazione dell'utente con le viste. \newline
+					Ne viene qui di seguito illustrata una implementazione relativa all'iniezione della classe UserService in quella UserModel. \newline
+					[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
 				\end{itemize}
 		\end{itemize}
 	% subsubsection dependency_injection (end)
