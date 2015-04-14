@@ -48,7 +48,7 @@
 			\item \textbf{Scope dell'utilizzo}: [TO DO];
 			\item \textbf{Contesto dell'utilizzo}:
 				\begin{itemize}
-					\item \textbf{Server}: [TO DO] 
+					\item \textbf{Server}: [TO DO]
 				\end{itemize}
 		\end{itemize}
 	% subsubsection factory_method (end)
@@ -58,11 +58,11 @@
 	\label{ssub:singleton}
 	[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
 		\begin{itemize}
-			\item \textbf{Scope dell'utilizzo}: [TO DO];
+			\item \textbf{Scope dell'utilizzo}: questo pattern è utilizzato per limitare l'instaziazione di un certo tipo classe ad un solo oggetto in modo tale che esso rimanga unico nel sistema in cui risiede;
 			\item \textbf{Contesto dell'utilizzo}:
 				\begin{itemize}
 					\item \textbf{Client}: [TO DO];
-					\item \textbf{Server}: [TO DO].
+					\item \textbf{Server}: utilizzato dalla classe \texttt{server::endpoints::RequestHandler} in quanto quest'ultima, essendo implementata secondo il pattern Front Controller, rappresenta il punto di accesso comune a tutto il sistema in cui confluiscono le richieste provenienti dalle classi appartenenti al package \texttt{server::endpoints} (\ref{ssub:bdsm_app_server_endpoints}).
 				\end{itemize}
 		\end{itemize}
 	% subsubsection singleton (end)
