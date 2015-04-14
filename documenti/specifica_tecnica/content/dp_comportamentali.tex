@@ -9,7 +9,9 @@
 % Version		Modifier Date		Change											Author
 % 0.0.1 		2015-03-26 			sistemato header								Tesser Paolo
 % =================================================================================================
-% 0.0.2			2015-04-13			descritit DP Page Controller, Template View		Tesser Paolo
+% 0.0.2			2015-04-14			descritit DP Page Controller, Template View		Tesser Paolo
+% =================================================================================================
+% 0.0.3			2015-04-14			descritto DP Template Method					Tesser Paolo
 % =================================================================================================
 %
 
@@ -19,12 +21,12 @@
 \label{sub:design_pattern_comportamentali}
 	\subsubsection{Page Controller} % (fold)
 	\label{ssub:page_controller}
-	[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
 		\begin{itemize}
-			\item \textbf{Scope dell'utilizzo}: [TO DO];
+			\item \textbf{Scope dell'utilizzo}: questo pattern serve [TO DO];
 			\item \textbf{Contesto dell'utilizzo}:
 				\begin{itemize}
-					\item \textbf{Client}:;
+					\item \textbf{Client}: viene utilizzato \newline
+					[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
 				\end{itemize}
 		\end{itemize}
 	% subsubsection page_controller (end)
@@ -32,13 +34,15 @@
 
 	\subsubsection{Template Method} % (fold)
 	\label{ssub:template_method}
-	[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
 		\begin{itemize}
-			\item \textbf{Scope dell'utilizzo}: [TO DO];
+			\item \textbf{Scope dell'utilizzo}: questo pattern serve per definire lo scheletro di un algoritmo, lasciando l'implementazione di alcuni passi alle sottoclassi;
 			\item \textbf{Contesto dell'utilizzo}:
 				\begin{itemize}
-					\item \textbf{Client}: [TO DO];
-					\item \textbf{Server}: [TO DO].
+					\item \textbf{Client}: viene utilizzato nel package \ref{ssub:bdsm_app_client_model_services}, per permettere di generare tipi di grafici diversi che però hanno in comune la prima parte dell'algoritmo che li genera. In particolare la parte comune si occupa del recupero dei dati a prescindere da quali grafico li userà. [TO DO] \newline
+					[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
+
+					\item \textbf{Server}: [TO DO]. \newline
+					[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
 				\end{itemize}
 		\end{itemize}
 	% subsubsection template_method (end)
@@ -46,12 +50,13 @@
 
 	\subsubsection{Template View} % (fold)
 	\label{ssub:template_view}
-	[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
 		\begin{itemize}
-			\item \textbf{Scope dell'utilizzo}: [TO DO];
+			\item \textbf{Scope dell'utilizzo}: questo pattern serve per interpretare alcune informazioni incorporate nei template HTML. Nei sistemi di template generalmente vengono utilizzati dei segnaposto (markers) di qualche formato che verranno interpretati e sostituiti con il codice HTML adeguato. In AngularJS invece non c'è un formato intermediario perché vengono usate direttamente delle direttive HTML che quando saranno trovate dal compilatore di Angular, verrà invocata la logica ad esse associata;
 			\item \textbf{Contesto dell'utilizzo}:
 				\begin{itemize}
-					\item \textbf{Client}:;
+					\item \textbf{Client}: viene utilizzato in tutti i template HTML presentati nel package \textt{client::view} presente alla sezione \ref{ssub:bdsm_app_client_view}. \newline
+					Ne viene qui di seguito illustrata una implementazione relativa al template HTML Settings. \newline
+					[TO DO]
 				\end{itemize}
 		\end{itemize}
 	% subsubsection template_view (end)
