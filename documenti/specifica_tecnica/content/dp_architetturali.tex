@@ -22,7 +22,10 @@
 	[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
 		\begin{itemize}
 			\item \textbf{Scope dell'utilizzo}: [TO DO];
-			\item \textbf{Contesto dell'utilizzo}: [TO DO];
+			\item \textbf{Contesto dell'utilizzo}:
+				\begin{itemize}
+					\item \textbf{Intera applicazione}: [TO DO]
+				\end{itemize}
 		\end{itemize}
 	% subsubsection three_tier (end)
 
@@ -33,7 +36,10 @@
 
 		\begin{itemize}
 			\item \textbf{Scope dell'utilizzo}: è un Design Pattern simile a MVC, che permette di avere una corrispondenza più diretta e automatica tra la \emph{view} e il \emph{model}. L'acronimo MVW sta infatti per Model-View-Whatever, dove \emph{Whatever} indica \emph{``whatever works for you''};
-			\item \textbf{Contesto dell'utilizzo}: viene utilizzato per gestire il lato client dell'applicazione. Questo ci viene fornito direttamente dal framework AngularJS. La parte W (Whatever) assume internamente due diversi aspetti.
+			\item \textbf{Contesto dell'utilizzo}: 
+				\begin{itemize}
+					\item \textbf{Client}: viene utilizzato per gestire il lato client dell'applicazione. Questo ci viene fornito direttamente dal framework AngularJS. La parte W (Whatever) assume internamente due diversi aspetti.
+				\end{itemize}
 		\end{itemize}
 
 		\paragraph{MVC} % (fold)
@@ -41,7 +47,10 @@
 			\begin{itemize}
 				\item \textbf{Scope dell'utilizzo}: questo pattern è utilizzato per separare le responsabilità dell’applicazione a diversi componenti e permettere di fare una chiara divisione tra presentazione, struttura dei dati e operazioni su di essi;
 
-				\item \textbf{Contesto dell'utilizzo}: viene utilizzato nel livello client per separare i componenti a seconda delle loro responsabilità e secondo una connotazione semantica. Il formalismo che viene quindi assunto per dividere i package è proprio quello fornito dal pattern in questione e cioè: \textbf{model, view e controller}. Questi però non interagiscono tra di loro nella maniera canonica che il pattern offre, ma seguono lo stile proposto da MVVM descritto alla sezione \ref{par:mvvm}.
+				\item \textbf{Contesto dell'utilizzo}: 
+					\begin{itemize}
+						\item \textbf{Client}: viene utilizzato nel livello client per separare i componenti a seconda delle loro responsabilità e secondo una connotazione semantica. Il formalismo che viene quindi assunto per dividere i package è proprio quello fornito dal pattern in questione e cioè: \textbf{model, view e controller}. Questi però non interagiscono tra di loro nella maniera canonica che il pattern offre, ma seguono lo stile proposto da MVVM descritto alla sezione \ref{par:mvvm}.
+					\end{itemize}
 			\end{itemize}
 		% paragraph mvc (end)
 
@@ -50,7 +59,10 @@
 			\begin{itemize}
 				\item \textbf{Scope dell'utilizzo}: questo pattern è utilizzato per gestire il modo con il quale le diverse parti comunicano tra loro per scambiare i dati e per gestire le operazioni che l'utente richiede attraverso l'interazione con la View;
 
-				\item \textbf{Contesto dell'utilizzo}: viene utilizzato nel livello client per gestire lo scambio dei dati e le interazioni che fanno cambiare le View e lo stato del Model, attraverso principalmente un sistema di two-way data binding e di eventi. Il Model però non interagisce direttamente con le View, ma passa attraverso un controller che fa da collante tra la View e il Model (ViewModel) attraverso l'oggetto \$scope.
+				\item \textbf{Contesto dell'utilizzo}: 
+					\begin{itemize}
+						\item \textbf{Client}: viene utilizzato nel livello client per gestire lo scambio dei dati e le interazioni che fanno cambiare le View e lo stato del Model, attraverso principalmente un sistema di two-way data binding e di eventi. Il Model però non interagisce direttamente con le View, ma passa attraverso un controller che fa da collante tra la View e il Model (ViewModel) attraverso l'oggetto \$scope.
+					\end{itemize}
 			\end{itemize}
 		% paragraph mvvm (end)
 	% subsubsection mvw (end)
@@ -61,7 +73,10 @@
 
 		\begin{itemize}
 			\item \textbf{Scope dell'utilizzo}: è un Design Pattern che viene utilizzato per favorire la separazione delle responsabilità tra i componenti dalla risoluzione delle dipendenze. Questo permette di avere una migliore modularità del codice, di avere un minor accoppiamento tra le diverse parti e garantisce una più facile fase di testing;
-			\item \textbf{Contesto dell'utilizzo}: viene utilizzato direttamente da AngularJS per iniettare le diverse dipendenze nei moduli che le richiedono. In particolare vengono iniettati nei controller tutti i servizi e i modelli dei dati necessari all'interazione dell'utente con le viste.
+			\item \textbf{Contesto dell'utilizzo}: 
+				\begin{itemize}
+					\item \textbf{Client}: viene utilizzato direttamente da AngularJS per iniettare le diverse dipendenze nei moduli che le richiedono. In particolare vengono iniettati nei controller tutti i servizi e i modelli dei dati necessari all'interazione dell'utente con le viste.
+				\end{itemize}
 		\end{itemize}
 	% subsubsection dependency_injection (end)
 
