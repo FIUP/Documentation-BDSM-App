@@ -15,6 +15,8 @@
 % =================================================================================================
 % 0.0.4			2015-03-27			rimozione di JINJA e inseriti contro Datastore	Tesser Paolo
 % =================================================================================================
+% 0.0.5			2015-04-07			aggiunta libreria Satelizzer per gestione auth	Tesser Paolo
+% =================================================================================================
 %
 
 % CONTENUTO DEL CAPITOLO
@@ -94,7 +96,7 @@ In questa sezione verranno descritte le tecnologie su cui si basa lo sviluppo de
 		\textbf{Contro}:
 			\begin{itemize}
 				\item assenza di costrutti come lo switch;
-				\item assenza di tipizzazione statica, sarà compito del programmatore rendere esplicito il tipo delle variabili nel codice seguendo delle norme stabiliti nel \docNameVersionNdP.
+				\item assenza di tipizzazione statica, sarà compito del programmatore rendere esplicito il tipo delle variabili nel codice seguendo delle norme stabilite nel \docNameVersionNdP.
 			\end{itemize}
 		\noindent
 		% subsubsection python (end)
@@ -136,7 +138,7 @@ In questa sezione verranno descritte le tecnologie su cui si basa lo sviluppo de
 		\textbf{Pro}:
 			\begin{itemize}
 				\item permette ai grafici di essere responsive;
-				\item presenza di implementazioni per il framework AngularJS.
+				\item presenza di diversi moduli implementativi per il framework AngularJS.
 			\end{itemize}
 		\noindent
 		\newline
@@ -181,6 +183,22 @@ In questa sezione verranno descritte le tecnologie su cui si basa lo sviluppo de
 			\end{itemize}
 		\noindent
 		% subsubsection python_instagram (end)
+
+		\subsubsection{ng-token-auth} % (fold)
+		\label{ssub:satellizer}
+		ng-token-auth è un modulo di autenticazione basato sui token per AngularJS. Fornisce anche un supporto per la registrazione tramite altri sistemi attraverso il protocollo OAuth2. Il modulo è reperibile al seguente indirizzo: \url{https://github.com/lynndylanhurley/ng-token-auth}. \newline
+		\textbf{Pro}:
+			\begin{itemize}
+				\item permette di effettuare tutte le operazioni relative alla gestione di un account utente andando a configurare in maniera semplice le API che dovranno essere chiamate nei diversi metodi offerti;
+				\item fornisce numerosi eventi in risposta alle chiamate precedentemente citate per andare a gestire l'interfaccia utente e le diverse azioni che gli saranno permesse;
+				\item la libreria ha una coverage del 96\%. 
+			\end{itemize}
+		\noindent
+		\textbf{Contro}:
+			\begin{itemize}
+				\item la libreria ha pochi contributori rispetto ad un'altra che si era valutata per eseguire lo stesso compito e cioè Satellizer (\url{https://github.com/sahat/satellizer}), quest'ultima però ha una coverage molto inferiore a quella scelta. Inoltre, per come si è deciso di progettare l'integrazione, non sarà particolarmente problematico decidere di sostituirla in caso non fosse più adeguata alle esigenze dell'applicativo.
+			\end{itemize}
+		% subsubsection satellizer (end)
 	% subsection librerie (end)
 
 	\subsection{Database} % (fold)
