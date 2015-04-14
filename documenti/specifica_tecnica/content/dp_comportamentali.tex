@@ -21,14 +21,14 @@
 \label{sub:design_pattern_comportamentali}
 	\subsubsection{Page Controller} % (fold)
 	\label{ssub:page_controller}
-		\begin{itemize}
-			\item \textbf{Scope dell'utilizzo}: questo pattern serve [TO DO];
-			\item \textbf{Contesto dell'utilizzo}:
-				\begin{itemize}
-					\item \textbf{Client}: viene utilizzato \newline
-					[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
-				\end{itemize}
-		\end{itemize}
+	\begin{itemize}
+		\item \textbf{Scope dell'utilizzo}: questo pattern serve per definire un oggetto che detiene le richieste per una specifica pagina o per un'azione su un sito web. In AngularJS però questo componente è maggiormente limitato in quanto al controller sono affidate meno responsabilità quali l'interazione con l'utente e l'aggiornamento del model, mentre la parte delle richieste è lasciato a servizi come \$route o \$state;
+		\item \textbf{Contesto dell'utilizzo}:
+			\begin{itemize}
+				\item \textbf{Client}: viene utilizzato tra tutti i template HTML e i controller associati ad essi. L'associazione viene definita principalmente nei file che si occupano del routing. \newline
+				[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
+			\end{itemize}
+	\end{itemize}
 	% subsubsection page_controller (end)
 
 
