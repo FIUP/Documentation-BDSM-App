@@ -20,7 +20,7 @@
 
 \subsection{Metodo e formalismo di specifica}
 La descrizione dell'architettura dell'applicazione viene fornita con un approccio di tipo top-down: si descrive l'architettura partendo dal generale e si analizzano via via in dettaglio tutti i moduli che le compongono. Vengono forniti degli esempi d'utilizzo dei design pattern scelti. I diagrammi delle componenti, delle classi e i diagrammi di attività rispettano il formalismo di UML 2.0. \newline
-Le classi i, framework usati dall'applicazione e le librerie utilizzate verranno marcate con colori diversi per facilitare la distinzione durante la consultazione. \newline
+Librerie esterne usate dall'applicazione verranno marcate con colori diversi per facilitare la distinzione durante la consultazione. \newline
 L’architettura generale non tratta l’intero insieme delle sottoclassi del sistema. Di conseguenza viene specificato lo scopo di una gerarchia e vengono individuate le relazioni con le varie componenti del sistema. Il resto dei dettagli viene rimandato alle diverse fasi di Progettazione di Dettaglio.
 
 
@@ -42,25 +42,22 @@ L’architettura generale non tratta l’intero insieme delle sottoclassi del si
 
 
 		\subsubsection{Architettura Client Tier}
-		Per il livello client è stato adottato il design pattern MVC offerto dal framework AngularJS. Questo livello implementa l'interfaccia grafica con cui utenti autenticati e amministratori possono interagire con il sistema in modo completo. Il diagramma seguente illustra l'interazione delle varie parti. \newline \newline
-
-		[TO DO] (Diagramma che rappresenta il design pattern MVC) \newline \newline
-
-		Gli utenti invocheranno determinate azioni utilizzando i pulsanti forniti dall'interfaccia e il sistema risponderà fornendo pagine di configurazione interattive oppure visualizzando una serie di grafici che verranno aggiornanti costantemente utilizzando i servizi REST forniti dall'applicazione tramite il modulo Processor [TO REVIEW]. In dettaglio:
-
+		Per il livello client è stato adottato il design pattern MVW offerto dal framework AngularJS. Questo livello implementa l'interfaccia grafica con cui utenti autenticati e amministratori possono interagire con il sistema in modo completo. Il diagramma seguente illustra l'interazione delle varie parti. \newline
+		Gli utenti invocheranno determinate azioni utilizzando i pulsanti forniti dall'interfaccia e il sistema risponderà fornendo pagine di configurazione interattive oppure visualizzando una serie di grafici che verranno aggiornanti costantemente utilizzando i servizi REST forniti dall'applicazione. In dettaglio:
 		\begin{itemize}
-			\item Model: Contiene il modello dei dati e la \textit{business logic}, che comprende le definizioni delle chiamate che può fare l'applicazione e i servizi che offrono. Inserire la logica dell'applicazione nel modello anziché nel \textit{controller} permette di ridurre la duplicazione del codice;
-			\item View: Contiene tutte le viste utente come astrazione del modello dei dati;
-			\item Controller: Questo modulo, in AngularJS, espone tutti i metodi forniti dalla logica dell'applicazione e permette l'associazione a due vie dei dati tra il livello astratto nelle viste e il livello concreto del modello.
+			\item Model: contiene il modello dei dati e la \textit{business logic}, che comprende le definizioni delle chiamate che può fare l'applicazione e i servizi che offrono. Inserire la logica dell'applicazione nel modello anziché nel \textit{controller} permette di ridurre la duplicazione del codice;
+			\item View: contiene tutte le viste utente come astrazione del modello dei dati;
+			\item Controller: questo modulo, in AngularJS, espone tutti i metodi forniti dalla logica dell'applicazione e permette l'associazione a due vie dei dati tra il livello astratto nelle viste e il livello concreto del modello.
 		\end{itemize}
+		\noindent
+		Una illustrazione più dettagliata viene fornita nella seguente sezione \ref{sub:client}.
 
 		\subsubsection{Architettura Server Tier}
-		[TO REVIEW] Il livello server è composto da un modello e da una parte di comunicazione rappresentata dagli Endpoints forniti dalla piattaforma Google Cloud Engine. \newline \newline
-
-		[TO DO] (Diagramma ancora da definire) \newline \newline
 		[TO REVIEW] \newline
-		La rappresentazione evidenzia il passaggio di dati e richieste che possono avvenire tra questo livello e gli altri presenti nell'applicazione.
-		Una volta che il server riceve una richiesta REST, si occuperà di analizzarla ed elaborarla. Viene di conseguenza individuato l’oggetto o gli oggetti ai quali si riferisce e vengono estrapolati i dati effettivi della richiesta con una chiamata al livello Database. Questo individua la giusta operazione da eseguire, la quale analizzerà i dati associati alla richiesta ed li comunicherà al livello server. Viene infine fornita una risposta che verrà ritrasmessa all'oggetto che ha generato la richiesta REST.
+		Il livello server è composto da un modello e da una parte di comunicazione rappresentata dagli Endpoints forniti dalla piattaforma Google Cloud Engine. \newline
+		La rappresentazione (si riferisce ad un grafico precedente ed ora tolto, quindi sistema come vuoi la parte qua sotto) evidenzia il passaggio di dati e richieste che possono avvenire tra questo livello e gli altri presenti nell'applicazione.
+		Una volta che il server riceve una richiesta REST, si occuperà di analizzarla ed elaborarla. Viene di conseguenza individuato l’oggetto o gli oggetti ai quali si riferisce e vengono estrapolati i dati effettivi della richiesta con una chiamata al livello Database. Questo individua la giusta operazione da eseguire, la quale analizzerà i dati associati alla richiesta ed li comunicherà al livello server. Viene infine fornita una risposta che verrà ritrasmessa all'oggetto che ha generato la richiesta REST. \newline
+		Una illustrazione più dettagliata viene fornita nella seguente sezione \ref{sub:server}.
 
 		\subsubsection{Architettura Database Tier}
 		Il livello database è gestito dal sistema Datastore integrato nella Google Cloud Platform che fornisce la funzionalità di persistenza dei dati. Ad esso spetta il compito di memorizzazione sia tutti i risultati recuperati dal Miner riguardanti i dati grezzi dei social, sia di memorizzare le configurazioni del programma necessarie al Processor e lo stato di lavoro dei Miner ad esso collegati.
