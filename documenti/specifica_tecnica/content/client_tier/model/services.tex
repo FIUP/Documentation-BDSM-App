@@ -19,7 +19,7 @@
 \label{ssub:bdsm_app_client_model_services}
 \begin{figure}[htbp]
 	\centering
-	\centerline{\includegraphics[scale=0.45]{./images/client_model_services.pdf}}
+	\centerline{\includegraphics[scale=1.03]{./images/client_model_services.pdf}}
 	\caption{Package - client::model}
 \end{figure}
 
@@ -36,10 +36,10 @@
 
 	\paragraph{Classi} % (fold)
 
-		\subparagraph{client::model::services::AuthService} % (fold)
+		\subparagraph{client::model::services::AuthServiceTarget} % (fold)
 		\label{subp:client_model_services_authservice}
 			\begin{itemize}
-				\item \textbf{Descrizione}: È la classe che implementa un \emph{Adapter} per gestire le chiamate al modulo esterno usato per gestire l'autenticazione;
+				\item \textbf{Descrizione}: È la classe di interfaccia per gestire le chiamate al modulo esterno usato per gestire l'autenticazione secondo il pattern \emph{Adapter} ;
 				\item \textbf{Utilizzo}: I metodi di questa classe saranno invocati quando un utente effettua la registrazione al servizio o effettua un login/logout;
 				\item \textbf{Relazioni con altre classi}: 					
 					\begin{itemize}
@@ -48,7 +48,28 @@
 						\item client::controller::user::LogoutCtrl
 					\end{itemize}
 			\end{itemize}
+		% subparagraph client_model_services_authservicetarget (end)
 		
+		\subparagraph{client::model::services::AuthServiceAdapter} % (fold)
+		\label{subp:client_model_services_authservice}
+			\begin{itemize}
+				\item \textbf{Descrizione}: È la classe \emph{Adapter} che permette di invocare i metodi del modulo di autenticazione esterno invocando i metodi come presentati in AuthServiceTarget;
+				\item \textbf{Utilizzo}:  I metodi di questa classe saranno invocati quando un utente effettua la registrazione al servizio o effettua un login/logout;
+				\item \textbf{Classi ereditate}:					
+					\begin{itemize}
+						\item client::model::services::AuthServiceTarget
+					\end{itemize}
+				\item \textbf{Relazioni con altre classi}: 					
+					\begin{itemize}
+						\item client::controller::public::LoginCtrl
+						\item client::controller::public::RegisterCtrl
+						\item client::controller::user::LogoutCtrl
+						\item ng-auth::\$auth
+					\end{itemize}
+			\end{itemize}
+		% subparagraph client_model_services_authserviceadapter (end)
+
+
 		\subparagraph{client::model::services::RecipeService} % (fold)
 		\label{subp:client_model_services_recipeservice}
 			\begin{itemize}
