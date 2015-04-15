@@ -18,9 +18,399 @@
 [TO DO] (diagramma) \newline \newline
 
 \begin{itemize}
-  \item \textbf{Descrizione}: ;
-  \item \textbf{Padre}: [TO DO] (qualora presente);
-  \item \textbf{Package contenuti}: [TO DO] (qualora presente);
-  \item \textbf{Interazione con altri componenti}: [TO DO];
+  \item \textbf{Descrizione}: è il package che contiene le componenti che gestiscono le richieste in arrivo dal client grazie ai servizi REST definiti nel package \texttt{server::endpoints::api};
+  \item \textbf{Padre}: server;
+  \item \textbf{Package contenuti}: commands;
+  \item \textbf{Interazione con altri componenti}:
+    \begin{itemize}
+      \item miner;
+      \item endpoints;
+      \item db.
+    \end{itemize}
 \end{itemize}
+
+  \paragraph{Classi} % (fold)
+
+    \subparagraph{bdsm\_app::server::processor::RequestHandler} % (fold)
+    \label{subp:bdsm_app_server_processor_requesthandler}
+    \begin{itemize}
+      \item \textbf{Descrizione}: [TODO];
+      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Relazioni con altre classi}:
+        \begin{itemize}
+          \item [TODO];
+        \end{itemize}
+      \end{itemize}
+    % subparagraph bdsm_app_server_processor_requesthandler (end)
+
+    \subparagraph{bdsm\_app::server::processor::CommandDispatcher} % (fold)
+    \label{subp:bdsm_app_server_:processor_commanddispatcher}
+    \begin{itemize}
+      \item \textbf{Descrizione}: [TODO];
+      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Relazioni con altre classi}:
+        \begin{itemize}
+          \item [TODO];
+        \end{itemize}
+      \end{itemize}
+    % subparagraph bdsm_app_server_processor_commanddispatcher (end)
+
+    \subparagraph{bdsm\_app::server::processor::UpdateRecipeTask} % (fold)
+    \label{subp:bdsm_app_server_processor_updaterecipetask}
+    \begin{itemize}
+      \item \textbf{Descrizione}: [TODO];
+      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Relazioni con altre classi}:
+        \begin{itemize}
+          \item [TODO];
+        \end{itemize}
+    \end{itemize}
+    % subparagraph bdsm_app::server_processor_updaterecipetask (end)
+
+
+    \subsubsection{bdsm\_app::server::processor::commands} % (fold)
+    \label{ssub:bdsm_app_server_processor_commands}
+    [TO DO] (diagramma) \newline \newline
+
+    \begin{itemize}
+      \item \textbf{Descrizione}: [TODO];
+      \item \textbf{Padre}: processor;
+      \item \textbf{Package contenuti}:
+        \begin{itemize}
+          \item recipe;
+          \item requests;
+          \item user;
+        \end{itemize}
+      \item \textbf{Interazione con altri componenti}:
+        \begin{itemize}
+          \item processor;
+          \item db.
+        \end{itemize}
+    \end{itemize}
+
+      \paragraph{Classi} % (fold)
+
+      \subparagraph{bdsm\_app::server::processor::commands::AbsCommand} % (fold)
+      \label{subp:bdsm_app_server_processor_updaterecipetask}
+      \begin{itemize}
+        \item \textbf{Descrizione}: [TODO];
+        \item \textbf{Utilizzo}: [TODO];
+        \item \textbf{Relazioni con altre classi}:
+          \begin{itemize}
+            \item [TODO];
+          \end{itemize}
+      \end{itemize}
+      % subparagraph bdsm_app::server_processor_abscommand (end)
+
+
+      % ==============================
+      % SERVER::COMMANDS::USER PACKAGE
+      %
+      \subsubsection{bdsm\_app::server::processor::commands::user} % (fold)
+      \label{ssub:bdsm_app_server_processor_commands_user}
+      [TO DO] (diagramma) \newline \newline
+
+      \begin{itemize}
+        \item \textbf{Descrizione}: [TODO];
+        \item \textbf{Padre}: commands;
+        \item \textbf{Interazione con altri componenti}:
+          \begin{itemize}
+            \item db.
+          \end{itemize}
+      \end{itemize}
+
+        \paragraph{Classi} % (fold)
+
+        \subparagraph{bdsm\_app::server::processor::commands::user::AbsUserCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_user_absusercommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: [TODO];
+          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item [TODO];
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::user::AddUserCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_user_addusercommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: [TODO];
+          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item [TODO];
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::user::GetUserCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_user_getusercommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: [TODO];
+          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item [TODO];
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::user::DeleteUserCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_user_deleteusercommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: [TODO];
+          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item [TODO];
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::user::EditUserCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_user_editusercommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: [TODO];
+          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item [TODO];
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::user::EditPermissionCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_user_editpermissioncommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: [TODO];
+          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item [TODO];
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::user::GetFavouritesCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_user_getfavouritescommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: [TODO];
+          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item [TODO];
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::user::DeleteFavouriteCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_user_deletefavouritecommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: [TODO];
+          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item [TODO];
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::user::AddFavouriteCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_user_addfavouritecommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: [TODO];
+          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item [TODO];
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+      % subsection
+
+
+      % ================================
+      % SERVER::COMMANDS::RECIPE PACKAGE
+      %
+      \subsubsection{bdsm\_app::server::processor::commands::recipe} % (fold)
+      \label{ssub:bdsm_app_server_processor_commands_recipe}
+      [TO DO] (diagramma) \newline \newline
+
+      \begin{itemize}
+        \item \textbf{Descrizione}: [TODO];
+        \item \textbf{Padre}: commands;
+        \item \textbf{Interazione con altri componenti}:
+          \begin{itemize}
+            \item db.
+          \end{itemize}
+      \end{itemize}
+
+        \paragraph{Classi} % (fold)
+
+        \subparagraph{bdsm\_app::server::processor::commands::recipe::AbsRecipeCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_recipe_absrecipecommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: [TODO];
+          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item [TODO];
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::recipe::GetRecipeCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_recipe_getrecipecommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: [TODO];
+          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item [TODO];
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::recipe::AddRecipeCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_recipe_addrecipecommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: [TODO];
+          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item [TODO];
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::recipe::DeleteRecipeCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_recipe_deleterecipecommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: [TODO];
+          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item [TODO];
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::recipe::RateRecipeCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_recipe_raterecipecommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: [TODO];
+          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item [TODO];
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+
+      % ================================
+      % SERVER::COMMANDS::REQUESTS PACKAGE
+      %
+      \subsubsection{bdsm\_app::server::processor::commands::requests} % (fold)
+      \label{ssub:bdsm_app_server_processor_commands_requests}
+      [TO DO] (diagramma) \newline \newline
+
+      \begin{itemize}
+        \item \textbf{Descrizione}: [TODO];
+        \item \textbf{Padre}: commands;
+        \item \textbf{Interazione con altri componenti}:
+          \begin{itemize}
+            \item db.
+          \end{itemize}
+      \end{itemize}
+
+        \paragraph{Classi} % (fold)
+
+        \subparagraph{bdsm\_app::server::processor::commands::requests::AbsRequestCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_requests_absrequestcommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: [TODO];
+          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item [TODO];
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::requests::GetRequestCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_requests_getrequestcommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: [TODO];
+          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item [TODO];
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::requests::AddRequestCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_requests_addrequestcommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: [TODO];
+          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item [TODO];
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::requests::GetRequestListCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_requests_getrequestlistcommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: [TODO];
+          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item [TODO];
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::requests::DeleteRequestCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_requests_deleterequestcommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: [TODO];
+          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item [TODO];
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::requests::GetMetricsListCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_requests_getmetricslistcommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: [TODO];
+          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item [TODO];
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::requests::GetMetricsDataCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_requests_getmetricsdatacommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: [TODO];
+          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item [TODO];
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+    % subsubsection
+  % subsubsection
 % subsubsection
