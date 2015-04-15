@@ -54,15 +54,12 @@
 	\subsubsection{Front controller} % (fold)
 	\label{ssub:front_controller}
 		\begin{itemize}
-			\item \textbf{Scope dell'utilizzo}: [TO DO];
-			\item \textbf{Contesto dell'utilizzo}: questo pattern è utilizzato per fornire un'unica entità con lo scopo gestire tutte le richieste in entrata da un determinato modulo dell'applicativo. Il Front Controller può inoltre effettuare semplici check o operazioni a seconda dei dati in entrata o lasciare l'elaborazione della richiesta ad una seconda entità, il Dispatcher, il quale si occupa di far confluire tale richiesta al relativo comando contenente la logica per soddisfarla. In questo modo, oltre a creare una gestione centralizzata delle richieste, si crea una divisione tra la logica di implementazione delle richieste e le modalità con cui quest'ultime vengono ricevute ed assegnate;
+			\item \textbf{Scope dell'utilizzo}: questo pattern è utilizzato per fornire un'unica entità con lo scopo gestire tutte le richieste in entrata da un determinato modulo dell'applicativo. Il Front Controller può inoltre effettuare semplici check o operazioni a seconda dei dati in entrata o lasciare l'elaborazione della richiesta ad una seconda entità, il Dispatcher, il quale si occupa di far confluire tale richiesta al relativo comando contenente la logica per soddisfarla. In questo modo, oltre a creare una gestione centralizzata delle richieste, si crea una divisione tra la logica di implementazione delle richieste e le modalità con cui quest'ultime vengono ricevute ed assegnate;
+			\item \textbf{Contesto dell'utilizzo}:
 				\begin{itemize}
 					\item \textbf{Server}: tale pattern è utilizzato dalle classi appartenenti al package \texttt{server::processor} in cui il Front Controller è rappresentato dalla classe \texttt{RequestHandler} che si occupa di ricevere tutte le richieste del client, provenienti dalle classi del package	\texttt{server::endpoints}. La classe \newline \texttt{CommandDispatcher}, inoltre, si occupa di far confluire tali richieste al relativo comando. \newline
 					[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
 				\end{itemize}
 		\end{itemize}
 		% subsubsection front_controller (end)
-
-
-
 % subsection design_pattern_strutturali (end)
