@@ -322,7 +322,8 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 				\item effettuare l'autenticazione;
 				\item accedere alla home screen;
 				\item verificare che il sistema recuperi l'elenco delle Recipe dal database;
-				\item verificare che sia possibile visualizzare tutte le metriche di una Recipe.
+				\item verificare che sia possibile visualizzare tutte le metriche di una Recipe;
+				\item verificare che sia possibile effettuare un confronto.
 			\end{itemize}
 			
 		\subsubsection{TVF5.1}
@@ -331,9 +332,19 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 				\item effettuare l'autenticazione;
 				\item accedere alla home screen;
 				\item verificare che il sistema fornisca per ogni Recipe il titolo e, se presente, la descrizione;
-				\item verificare che il sistema fornisca per ogni Recipe due pulsanti per scegliere se visualizzare le metriche della Recipe o effettuare un confronto tra le metriche.
+				\item verificare che il sistema fornisca per ogni Recipe due pulsanti per scegliere se visualizzare le metriche della Recipe o effettuare un confronto tra le metriche;
+				\item verificare che il sistema permetta di dare un voto alla Recipe tramite un selettore.
 			\end{itemize}
 			
+		\subsubsection{TVF 5.1.3}
+			L'utente vuole verificare che il sistema permetta di dare un voto alla Recipe tramite un selettore. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere alla home screen;
+				\item selezionare dal selettore posto di fianco ad una recipe da una a cinque stelle;
+				\item verificare che il voto dato ad una Recipe sia un intero compreso tra 1 e 5.
+			\end{itemize}
+					
 		\subsubsection{TVF5.2}
 			L'utente vuole verificare che sia possibile visualizzare tutte le metriche di una Recipe. All'utente è richiesto di:
 			\begin{itemize}
@@ -415,8 +426,7 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 				\item verificare che sia visualizzato un Line Chart che mostri il numero di post e il numero di utenti che hanno utilizzato un determinato hashtag;
 				\item verificare che sia visualizzato un Line Chart che mostri il numero di like e il numero di commenti ricevuto dai post che contengono un determinato hashtag;
 				\item verificare che sia visualizzato un Map Chart che mostri le zone geografiche dove sono stati fatti i post contenenti un determinato hashtag;
-				\item ROF5.5.1.9 ??;
-				\item verificare che sia visualizzato un Radar Chart che illustri, per i vari momenti della giornata, la frequenza con cui un utente posta;
+				\item verificare che sia visualizzato un Radar Chart che illustri, per i vari momenti della giornata, la frequenza con cui un utente posta.
 			\end{itemize}
 			
 		\subsubsection{TVF5.6}
@@ -424,11 +434,12 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 			\begin{itemize}
 				\item effettuare l'autenticazione;
 				\item accedere alla home screen;
+				\item premere il tasto di confronto;
 				\item selezionare una categoria tra Facebook, Twitter e Instagram;
 				\item selezionare un tipo di metrica tra quelle presenti nella categoria selezionata;
 				\item verificare che vengano visualizzate tutte le metriche del tipo e della categoria selezionati;
-				\item selezionare delle metriche tra quelle visualizzate;
-				\item verificare che sia possibile generare un confronto tra le metriche selezionate;
+				\item selezionare due o tre metriche tra quelle visualizzate;
+				\item verificare che sia possibile generare un confronto tra le metriche selezionate.
 			\end{itemize}
 			
 		\subsubsection{TVF5.6.4}
@@ -436,11 +447,13 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 			\begin{itemize}
 				\item effettuare l'autenticazione;
 				\item accedere alla home screen;
+				\item premere il tasto di confronto;
 				\item selezionare una categoria tra Facebook, Twitter e Instagram;
-				\item verificare che sia possibile cliccare il pulsante per effettuare il confronto;
-				\item verificare che venga visualizzata la View di confronto;
-				\item selezionare delle metriche tra quelle visualizzate;
-				\item verificare che, nel caso non siano presenti dati sufficienti per generare la View di confronto, venga visualizzato un messaggio di avvertimento e si ritorni alla pagina di selezione delle metriche;
+				\item selezionare un tipo di metrica tra quelle presenti nella categoria selezionata;
+				\item selezionare due o tre metriche tra quelle visualizzate;
+				\item verificare che venga visualizzate la View di confronto;
+				\item verificare che i dati vengano illustrati sul grafico con un colore diverso per ciascuna delle metriche selezionate;
+				\item verificare che, nel caso non siano presenti dati sufficienti per generare la View di confronto, venga visualizzato un messaggio di avvertimento e si ritorni alla pagina di selezione delle metriche.
 			\end{itemize}
 			
 		\subsubsection{TVF6}
@@ -525,7 +538,8 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 				\item accedere all'area riservata;
 				\item verificare che un amministratore può accedere al pannello per inserire una nuova Recipe;
 				\item verificare che il sistema richieda la conferma dei dati inseriti prima di creare la nuova Recipe;
-				\item verificare che l'amministratore possa eliminare una Recipe memorizzata nel sistema dalla schermata di elenco delle Recipe.
+				\item verificare che l'amministratore possa eliminare una Recipe memorizzata nel sistema dalla schermata di elenco delle Recipe;
+				\item verificare che l'amministratore possa visualizzare la classifica delle Recipe valutate dagli utenti.
 			\end{itemize}
 			
 		\subsubsection{TVF8.1}
@@ -568,6 +582,16 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 				\item verificare che il sistema non provvedi all'eliminazione di tutte le informazioni legate alla Recipe senza aver confermato prima l'eliminazione;
 				\item verificare che il sistema provvedi all'eliminazione di tutte le informazioni legate alla Recipe che si desidera eliminare alla pressione del tasto di conferma eliminazione;
 				\item verificare che il sistema provvedi ad eliminare tutti i dati grezzi dal database legati alla Recipe.
+			\end{itemize}
+			
+		\subsubsection{TVF8.4}
+			L'utente vuole verificare che l'amministratore possa visualizzare la classifica delle Recipe valutate dagli utenti. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere all'area riservata;
+				\item premere il pulsante per visualizzare la classifica delle Recipe;
+				\item verificare che se venga visualizzata la lista con le ricette ordinate in base al voto;
+				\item verificare che se nessuna Recipe è stata valutata venga visualizzato un messaggio.
 			\end{itemize}
 			
 		\subsubsection{TVF9}
@@ -639,7 +663,8 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 				\item effettuare l'autenticazione;
 				\item accedere alla home screen;
 				\item accedere all'elenco degli utenti;
-				\item verificare che il sistema permetta all'utente amministratore di kodificare il titolo e la descrizione della Recipe richiesta;
+				\item premere il tasto per visualizzare i dettagli della Recipe;
+				\item verificare che il sistema permetta all'utente amministratore di modificare il titolo e la descrizione della Recipe richiesta;
 				\item verificare che il sistema non permetta di modificare altri campi della richiesta della Recipe al di fuori del titolo e della descrizione.
 			\end{itemize}
 			
@@ -673,6 +698,16 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 				\item verificare che il sistema restituisca un errore se il token utilizzato non è valido.
 			\end{itemize}
 			
+		\subsubsection{TVF12}
+			L'utente vuole verificare che il sistema permetta all'utente di visualizzare la specifica dei servizi REST offerti. All'utente è richiesto di:
+			\begin{itemize}
+				\item effettuare l'autenticazione;
+				\item accedere alla home screen;
+				\item premere il tasto per visualizzare la specifica dei servizi REST;
+				\item verificare che siano elencati tutti i servizi offerti;
+				\item verificare che sia presente un link al manuale completo.
+			\end{itemize}
+			
 		\subsubsection{TVQ1}
 			L'utente vuole verificare che venga fornito un manuale per l'utente. All'utente è richiesto di:
 			\begin{itemize}
@@ -681,28 +716,12 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 				\item verificare che, cliccando il link, si apra il manuale utente correttamente.
 			\end{itemize}
 			
-		\subsubsection{TVQ1.1}
-			L'utente vuole verificare che venga fornito un manuale per l'utente in lingua inglese. All'utente è richiesto di:
-			\begin{itemize}
-				\item accedere al sito;
-				\item verificare che il sito fornisca il manuale utente in lingua inglese attraverso un link;
-				\item verificare che, cliccando il link, si apra il manuale utente in lingua inglese correttamente.
-			\end{itemize}
-			
 		\subsubsection{TVQ3}
 			L'utente vuole verificare che venga fornito un manuale per l'uso dei servizi REST. All'utente è richiesto di:
 			\begin{itemize}
 				\item accedere al sito;
 				\item verificare che il sito fornisca il manuale d'uso dei servizi REST attraverso un link;
 				\item verificare che, cliccando il link, si apra il manuale d'uso dei servizi REST correttamente.
-			\end{itemize}
-			
-		\subsubsection{TVQ3.1}
-			L'utente vuole verificare che venga fornito un manuale per l'uso dei servizi REST in lingua inglese. All'utente è richiesto di:
-			\begin{itemize}
-				\item accedere al sito;
-				\item verificare che il sito fornisca il manuale d'uso dei servizi REST per i in lingua inglese attraverso un link;
-				\item verificare che, cliccando il link, si apra il manuale d'uso dei servizi REST in lingua inglese correttamente.
 			\end{itemize}
 			
 		\subsubsection{TVV1}
@@ -728,14 +747,6 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 				\item effettuare l'autenticazione su Google Cloud Platform;
 				\item accedere alla console della Google Cloud Platform;
 				\item verificare che nella sezione Cloud Datastore sia presente il database.
-			\end{itemize}
-			
-		\subsubsection{TVV1.3}
-			L'utente vuole verificare che il sistema sfrutti gli strumenti offerti da Google Cloud Platform. All'utente è richiesto di:
-			\begin{itemize}
-				\item effettuare l'autenticazione su Google Cloud Platform;
-				\item accedere alla console della Google Cloud Platform;
-				\item TO DO.
 			\end{itemize}
 			
 		\subsubsection{TVV2}
@@ -769,29 +780,6 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 				\item verificare il corretto funzionamento dell'interfaccia web con il browser Safari v. 8.0 e successive.
 			\end{itemize}
 			
-		\subsubsection{TVV5.1}
-			L'utente vuole verificare il corretto funzionamento dell'interfaccia web con il browser Google Chrome v. 39.0 e successive. All'utente è richiesto di:
-			\begin{itemize}
-				\item aprire il browser Google Chrome v. 39.0;
-				\item accedere al sito web;
-				\item verificare il corretto funzionamento dell'interfaccia web.
-			\end{itemize}
-			
-		\subsubsection{TVV5.2}
-			L'utente vuole verificare il corretto funzionamento dell'interfaccia web con il browser Firefox v. 35.0 e successive. All'utente è richiesto di:
-			\begin{itemize}
-				\item aprire il browser Firefox v. 35.0;
-				\item accedere al sito web;
-				\item verificare il corretto funzionamento dell'interfaccia web.
-			\end{itemize}
-			
-		\subsubsection{TVV5.3}
-			L'utente vuole verificare il corretto funzionamento dell'interfaccia web con il browser Safari v. 8.0 e successive. All'utente è richiesto di:
-			\begin{itemize}
-				\item aprire il browser Safari v. 8.0;
-				\item accedere al sito web;
-				\item verificare il corretto funzionamento dell'interfaccia web.
-			\end{itemize}
 			
 		\subsubsection{TVV6}
 			L'utente vuole verificare che il sistema utilizzi le librerie esterne per effettuare le chiamate alle API dei diversi social network. All'utente è richiesto di:
@@ -846,11 +834,11 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 			\end{itemize}
 			
 		\subsubsection{TVV7.2}
-			L'utente vuole verificare che sia utilizzata la libreria TO DO per generare i Map Chart. All'utente è richiesto di:
+			L'utente vuole verificare che sia utilizzata la libreria Google Chart per generare i Map Chart. All'utente è richiesto di:
 			\begin{itemize}
 				\item avere accesso al codice sorgente;
-				\item verificare che sia importata la libreria TO DO;
-				\item verificare che siano utilizzata la libreria TO DO per la generazione dei Map Chart.
+				\item verificare che sia importata la libreria Google Chart;
+				\item verificare che siano utilizzata la libreria Google Chart per la generazione dei Map Chart.
 			\end{itemize}
 			
 		\subsubsection{TVV8}
@@ -872,7 +860,7 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 			L'utente vuole verificare che il token di accesso sia nel formato: "id utente" + "data creazione token" + "valore random". All'utente è richiesto di:
 			\begin{itemize}
 				\item avere accesso al codice sorgente;
-				\item verificare nel codice sorgente che la creazione del token di accesso sia programmato in modo da rispettare la combinazione seguente: "id utente" + "data creazione token" + "valore random".d
+				\item verificare nel codice sorgente che la creazione del token di accesso sia programmato in modo da rispettare la combinazione seguente: ''id utente'' + ''data creazione token'' + ''valore random''.
 			\end{itemize}
 			
 \pagebreak
