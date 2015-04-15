@@ -26,7 +26,7 @@
 		\item \textbf{Contesto dell'utilizzo}:
 			\begin{itemize}
 				\item \textbf{Client}: viene utilizzato tra tutti i template HTML e i controller associati ad essi. L'associazione viene definita principalmente nei file che si occupano del routing. \newline
-				[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
+				Non ne viene fornita alcuna illustrazione in quanto lo schema è molto simile a quello presentato per il pattern Template View, reperibile alla sezione \ref{ssub:template_view}, solo che il focus nel pattern non è sul template HTML, bensì sul controller che lo gestisce.
 			\end{itemize}
 	\end{itemize}
 	% subsubsection page_controller (end)
@@ -60,7 +60,11 @@
 				\begin{itemize}
 					\item \textbf{Client}: viene utilizzato in tutti i template HTML presentati nel package \texttt{client::view} presente alla sezione \ref{ssub:bdsm_app_client_view}. \newline
 					Ne viene qui di seguito illustrata una implementazione relativa al template HTML \texttt{Settings}. \newline
-					[TO DO]
+					\begin{figure}[htbp]
+						\centering
+						\centerline{\includegraphics[scale=0.50]{./images/design_pattern_client/client_template_view.pdf}}
+						\caption{Contestualizzazione Template View - Client}
+					\end{figure}
 				\end{itemize}
 		\end{itemize}
 	% subsubsection template_view (end)
@@ -68,12 +72,12 @@
 
 	\subsubsection{Command} % (fold)
 	\label{ssub:command}
-	[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
 		\begin{itemize}
 			\item \textbf{Scope dell'utilizzo}: questo pattern è utilizzato per incapsulare la logica di una richiesta in un comando totalmente indipendente dall'oggetto che lo invoca. In questo modo si crea una separazione tra logica di esecuzione della richiesta e quella di invocazione, oltre a facilitare l'estensibilità dei comandi associati;
 			\item \textbf{Contesto dell'utilizzo}:
 				\begin{itemize}
-					\item \textbf{Server}: viene utilizzato nel package \texttt{server::processor} in associazione al pattern Front Controller, il cui il dispatcher si occupa di indirizzare la richiesta ricevuta al relativo comando.
+					\item \textbf{Server}: viene utilizzato nel package \texttt{server::processor} in associazione al pattern Front Controller, il cui il dispatcher si occupa di indirizzare la richiesta ricevuta al relativo comando. \newline
+					[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
 				\end{itemize}
 		\end{itemize}
 	% subsubsection command (end)
