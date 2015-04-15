@@ -38,8 +38,12 @@
 			\item \textbf{Scope dell'utilizzo}: questo pattern serve per definire lo scheletro di un algoritmo, lasciando l'implementazione di alcuni passi alle sottoclassi;
 			\item \textbf{Contesto dell'utilizzo}:
 				\begin{itemize}
-					\item \textbf{Client}: viene utilizzato nel package \ref{ssub:bdsm_app_client_model_services}, per permettere di generare tipi di grafici diversi che però hanno in comune la prima parte dell'algoritmo che li genera. In particolare la parte comune si occupa del recupero dei dati a prescindere da quali grafico li userà. [TO DO] \newline
-					[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
+					\item \textbf{Client}: viene utilizzato nel package \ref{ssub:bdsm_app_client_model_services}, per permettere di generare tipi di grafici diversi che però hanno in comune la prima parte dell'algoritmo che li genera. In particolare la parte comune si occupa del recupero dei dati a prescindere da quali grafico li userà.
+					\begin{figure}[htbp]
+						\centering
+						\centerline{\includegraphics[scale=0.50]{./images/design_pattern_client/client_template_method.pdf}}
+						\caption{Contestualizzazione Template Method - Client}
+					\end{figure}
 
 					\item \textbf{Server}: [TO DO]. \newline
 					[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
@@ -55,7 +59,7 @@
 			\item \textbf{Contesto dell'utilizzo}:
 				\begin{itemize}
 					\item \textbf{Client}: viene utilizzato in tutti i template HTML presentati nel package \texttt{client::view} presente alla sezione \ref{ssub:bdsm_app_client_view}. \newline
-					Ne viene qui di seguito illustrata una implementazione relativa al template HTML Settings. \newline
+					Ne viene qui di seguito illustrata una implementazione relativa al template HTML \texttt{Settings}. \newline
 					[TO DO]
 				\end{itemize}
 		\end{itemize}
