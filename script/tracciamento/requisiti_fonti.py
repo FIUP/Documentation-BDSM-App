@@ -12,7 +12,8 @@
 # -----------------------------------------------------------------------
 # 0.0.2     2015-03-18  Tesser Paolo    terminato script con scrittura tracciamento su documento requisiti-fonti.tex
 # -----------------------------------------------------------------------
-#
+# 0.0.3     2015-04-15  Tesser Paolo    aggiunto metodo per generare in un file tex, la lista dei requisiti
+# -----------------------------------------------------------------------
 #
 __author__ = 'ptesser'
 import re
@@ -22,9 +23,11 @@ class RequisitiFonti():
 
     __req_doc_path_str = ""
     __write_doc_path_str = ""
+    __write_list_req_str = ""
 
     __req_doc_file = ""
     __write_doc_file = ""
+    __write_list_req_file = ""
 
     __req_file_line = []
     # array di soli requisiti per poterli scorrere dal primo all'ultimo nell'ordine di inserimento
@@ -53,7 +56,7 @@ class RequisitiFonti():
                 if req:
                     fonti_for_req_array = line.split('&')[2].strip()
                     fonti_single_array = fonti_for_req_array[:-2].strip().split("\\newline")
-                    # aggiorno il dizionario con il nuovo valore del requisito e le sue fonti
+                    # aggiorno ilmv  dizionario con il nuovo valore del requisito e le sue fonti
                     self.__req_fonti_dict.update({req.group(): fonti_for_req_array})
                     # aggiorno l'array solo dei requisiti
                     self.__req_fonti_array.append(req.group())
@@ -92,3 +95,25 @@ class RequisitiFonti():
         self.__write_doc_file.write("\egroup\n")
         self.__write_doc_file.write("\end{center}\n")
         self.__write_doc_file.write("% subsubsection requisiti_fonti (end)\n")
+
+    def write_list_req(self):
+        self.__write_list_req_str = "requisiti-componenti-base.tex"
+        self.__write_list_req_file = open(self.__write_list_req_str, "w")
+        self.__write_list_req_file.write("\subsection{Requisiti-Componenti} % (fold)\n")
+        self.__write_list_req_file.write("\label{sub:componenti_requisiti}\n")
+        self.__write_list_req_file.write("\\begin{center}\n")
+        self.__write_list_req_file.write("\def\\arraystretch{1.5}\n")
+        self.__write_list_req_file.write("\\bgroup\n")
+        self.__write_list_req_file.write("\\begin{longtable}{| p{4cm} | p{8cm} |}\n")
+        self.__write_list_req_file.write("\hline\n")
+        self.__write_list_req_file.write("\\textbf{Requisito} & \\textbf{Componenti} \\\\\n")
+        self.__write_list_req_file.write("\hline\n")
+
+        for val in self.__req_fonti_array:
+            self.__write_list_req_file.write(val + "  &  TO DO \\\\\n")
+            self.__write_list_req_file.write("\hline\n")
+
+        self.__write_list_req_file.write("\end{longtable}\n")
+        self.__write_list_req_file.write("\egroup\n")
+        self.__write_list_req_file.write("\end{center}\n")
+        self.__write_list_req_file.write("% subsection componenti_requisiti (end)\n")

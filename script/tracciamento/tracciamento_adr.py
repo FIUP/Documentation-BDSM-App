@@ -38,3 +38,7 @@ if __name__ == '__main__':
     f.write_fonti_req()
 
     print "*** End: script tracciamento fonti-requisiti ***"
+
+    print "*** Start: generazione file contenente lista requisiti"
+
+    print "*** End: generazione file contenente lista requisiti"
