@@ -17,6 +17,8 @@
 % =================================================================================================
 % 0.0.5			2015-04-07			aggiunta libreria Satelizzer per gestione auth	Tesser Paolo
 % =================================================================================================
+% 0.0.6			2015-04-16			aggiunta libreria Google Chart					Tesser Paolo
+% =================================================================================================
 %
 
 % CONTENUTO DEL CAPITOLO
@@ -27,9 +29,9 @@ In questa sezione verranno descritte le tecnologie su cui si basa lo sviluppo de
 
 	\subsection{Linguaggi} % (fold)
 	\label{sub:linguaggi}
-		\subsubsection{CSS} % (fold)
+		\subsubsection{CSS3} % (fold)
 		\label{ssub:css}
-		CSS (Cascading Style Sheets) è il linguaggio che verrà utilizzato per la formattazione delle pagine web offerte dal sistema. \newline
+		CSS (Cascading Style Sheets) è il linguaggio che verrà utilizzato per la formattazione delle pagine web offerte dal sistema qualora non bastassero i costrutti forniti dal framework Bootstrap \ref{ssub:twitter_bootstrap}. \newline
 		\textbf{Pro}:
 			\begin{itemize}
 				\item permette una buona separazione dal contenuto della pagina rispetto a come verrà visualizzata. Questo garantisce un maggiore controllo sull'aspetto grafico e una più facile manutenzione.
@@ -49,26 +51,27 @@ In questa sezione verranno descritte le tecnologie su cui si basa lo sviluppo de
 			\noindent
 		% subsubsection html (end)
 
-		\subsubsection{Javascript} % (fold)
+		\subsubsection{JavaScript} % (fold)
 		\label{ssub:javascript}
-		Javascript è il linguaggio di scripting che verrà utilizzato lato client per la creazione e l'interazione con l'interfaccia utente. \newline
+		JavaScript è il linguaggio di scripting che verrà utilizzato lato client per la creazione e l'interazione con l'interfaccia utente. \newline
 		\textbf{Pro}:
 			\begin{itemize}
 				\item permette alle pagine di essere dinamiche, reagendo a eventi scaturiti dall'utente;
 				\item permette di validare in prima istanza i dati inseriti dagli utenti.
 			\end{itemize}
 		\noindent
-		\newline
 		\textbf{Contro}:
 			\begin{itemize}
-				\item il codice è visibile e può essere letto da chiunque.
+				\item l'assenza di tipizzazione potrebbe ostacolare la valutazione della correttezza del codice;
+				\item assenza dei costrutti tipici della programmazione ad oggetti come ad esempio le classi. Sarà compito del \roleDesigner{} progettare, dove necessario, soluzione implementativi per sopperire a queste mancanze. I \emph{Programmatori} dovranno seguire tali decisioni attraverso l'attuazione di norme di codifica presenti nelle \docNameVersionNdP;
+				\item il codice è visibile e può essere letto da chiunque, mettendo quindi a rischio la sicurezza dell'utente nel caso venisse eseguito del codice malevolo.
 			\end{itemize}
 			\noindent
 		% subsubsection javascript (end)
 
 		\subsubsection{JSON} % (fold)
 		\label{ssub:json}
-		JSON (Javascript Object Notation) è il formato di dati scelto per lo scambio di informazioni tra il client e il server dell'applicazione. \newline
+		JSON (JavaScript Object Notation) è il formato di dati scelto per lo scambio di informazioni tra il client e il server dell'applicazione. \newline
 		\textbf{Pro}:
 			\begin{itemize}
 				\item utilizzo semplice tramite Javascript;
@@ -85,18 +88,18 @@ In questa sezione verranno descritte le tecnologie su cui si basa lo sviluppo de
 
 		\subsubsection{Python} % (fold)
 		\label{sub:python}
-		Python è il linguaggio utilizzato per gestire il back-end dell'applicazione. \newline
+		Python è il linguaggio utilizzato per gestire il back-end dell'applicazione. Viene scelta la versione 2.7.9 in quanto è quella che la Google App Engine mette a disposizione. \newline
 		\textbf{Pro}:
 			\begin{itemize}
+				\item notevole velocità di apprendimento del linguaggio;
 				\item presenza di una code convention molto forte;
-				\item permette una potente manipolazione dei dati;
+				\item permette una potente manipolazione dei dati.
 			\end{itemize}
 		\noindent
-		\newline
 		\textbf{Contro}:
 			\begin{itemize}
 				\item assenza di costrutti come lo switch;
-				\item assenza di tipizzazione statica, sarà compito del programmatore rendere esplicito il tipo delle variabili nel codice seguendo delle norme stabilite nel \docNameVersionNdP.
+				\item assenza di tipizzazione statica. Sarà compito del programmatore rendere esplicito il tipo delle variabili nel codice seguendo delle norme stabilite nel \docNameVersionNdP.
 			\end{itemize}
 		\noindent
 		% subsubsection python (end)
@@ -118,15 +121,35 @@ In questa sezione verranno descritte le tecnologie su cui si basa lo sviluppo de
 	\label{sub:framework}
 		\subsubsection{AngularJS} % (fold)
 		\label{ssub:angularjs}
-		AngularJS è il framework javascript utilizzato per gestire il lato client dell'applicazione. \newline
+		AngularJS è il framework JavaScript open source utilizzato per gestire il lato client dell'applicazione sia per quanto riguarda la parte HTML sia per la parte algoritmica. Permette di sviluppare più facilmente tutto ciò che riguarda l'applicazione web. \newline
 		\textbf{Pro}:
 			\begin{itemize}
 				\item presenza di una vasta comunità a supporto;
+				\item presenza di numerosi moduli per far fronte a diversi compiti non presenti nativamente nel framework o che richiederebbero altrimenti un maggiore lavoro per la loro realizzazione;
 				\item design pattern MVC e Dependency Injection già presente all'interno del framework.
 			\end{itemize}
 		\noindent
+		\textbf{Contro}:
+			\begin{itemize}
+				\item si è molto vincolati all'ambiente, che non permette facili implementazioni con librerie esterne.
+			\end{itemize}
 		% subsubsection angularjs (end)
 
+		\subsubsection{Twitter Bootstrap} % (fold)
+		\label{ssub:twitter_bootstrap}
+		Bootstrap è un insieme di elementi grafici, scritti in JavaScript e CSS3, che viene utilizzato per permettere di avere una grafica moderna e responsive dell'applicazione. \newline
+		\textbf{Pro}:
+			\begin{itemize}
+				\item permette all'applicativo di essere responsive applicando facilmente delle regole già pronte;
+				\item le diverse componenti vengono già incorporate direttamente nel framework AngularJS;
+				\item presenza di una vasta comunità a supporto.
+			\end{itemize}
+		\noindent
+		\textbf{Contro}:
+			\begin{itemize}
+				\item molto oneroso personalizzare pesantemente gli elementi grafici integrati
+			\end{itemize}
+		% subsubsection twitter_bootstrap (end)
 
 	% subsection framework (end)
 
@@ -134,21 +157,35 @@ In questa sezione verranno descritte le tecnologie su cui si basa lo sviluppo de
 	\label{sub:librerie}
 		\subsubsection{Chart.js} % (fold)
 		\label{ssub:chartsjs}
-		Chart.js è la libreria di grafici in javascript utilizzata per la generazione della maggior parte dei grafici che l'utente andrà a vedere. La libreria è reperibile al seguente indirizzo: \url{http://www.chartjs.org/}. \newline
+		Chart.js è la libreria di grafici in JavaScript utilizzata per la generazione della maggior parte dei grafici che l'utente andrà a vedere. La libreria è reperibile al seguente indirizzo: \url{http://www.chartjs.org/}. \newline
 		\textbf{Pro}:
 			\begin{itemize}
 				\item permette ai grafici di essere responsive;
 				\item presenza di diversi moduli implementativi per il framework AngularJS.
 			\end{itemize}
 		\noindent
-		\newline
 		\textbf{Contro}:
 			\begin{itemize}
-				\item assenza di un map chart, che andrà cercato in un'altra libreria.
+				\item assenza di un Map Chart, che andrà cercato in un'altra libreria.
 			\end{itemize}
-			\noindent
 		% subsubsection chartsjs (end)
-		
+
+		\subsubsection{Google Chart} % (fold)
+		\label{ssub:google_chart}
+		Google Chart è la libreria di grafici in JavaScript utilizzata per la generazione dei Geo Chart (Map Chart) reperibile al seguente indirizzo \url{https://developers.google.com/chart/interactive/docs/gallery/geochart}. \newline
+		\textbf{Pro}:
+			\begin{itemize}
+				\item grosso supporto da parte della comunità;
+				\item presenza di diversi moduli implementativi per il framework AngularJS in particolare di \textbf{angular-google-chart}, il più diffuso e supportato dalla comunità.
+			\end{itemize}
+		\noindent
+		\textbf{Contro}:
+			\begin{itemize}
+				\item i grafici offerti, compresi quindi i Geo Chart utilizzati, non sono responsive. Bisognerà quindi che il team provveda a renderli tali.
+			\end{itemize}
+		% subsubsection google_chart (end)
+
+
 		\subsubsection{facebook-sdk} % (fold)
 		\label{ssub:facebook_sdk}
 		Facebook-sdk è la libreria scelta per effettuare in maniera più semplice e astratta le chiamate alle API di Facebook. La libreria è reperibile al seguente indirizzo: \url{https://facebook-sdk.readthedocs.org/en/latest/}. \newline
