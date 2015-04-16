@@ -35,7 +35,7 @@ L’architettura generale non tratta l’intero insieme delle sottoclassi del si
 		Di seguito viene proposto un diagramma rappresentante le relazioni tra i vari livelli. Vengono individuate le componenti che permettono ai vari livelli di interagire senza dover esporre la struttura interna degli stessi. \newline \newline
 
 		[TO DO] (Diagramma con i tre livelli mostrati come package con all'interno annidati al package che si occupano della comunicazione tra i livelli) \newline \newline
-		
+
 		Come indicato nel diagramma, il livello del client interagisce con il server tramite gli EndPoints forniti dal Server. Esso riceverà e analizzerà la richiesta mediante [TO DO]. Una volta pronta, la risposta verrà fornita al Client.\newline
 		Il client si occuperà di analizzarla per determinare se la richiesta ha avuto un esito positivo o negativo. Nel primo caso la gestione verrà delegata alla componente [TO DO]. \newline
 
@@ -50,20 +50,23 @@ L’architettura generale non tratta l’intero insieme delle sottoclassi del si
 			\item Controller: questo modulo, in AngularJS, espone tutti i metodi forniti dalla logica dell'applicazione e permette l'associazione a due vie dei dati tra il livello astratto nelle viste e il livello concreto del modello.
 		\end{itemize}
 		\noindent
-		Una illustrazione più dettagliata viene fornita nella seguente sezione \ref{sub:client}.
+		Una illustrazione più dettagliata viene fornita nella sezione \ref{sub:client}.
 
 		\subsubsection{Architettura Server Tier}
-		[TO REVIEW] \newline
-		Il livello server è composto da un modello e da una parte di comunicazione rappresentata dagli Endpoints forniti dalla piattaforma Google Cloud Engine. \newline
-		La rappresentazione (si riferisce ad un grafico precedente ed ora tolto, quindi sistema come vuoi la parte qua sotto) evidenzia il passaggio di dati e richieste che possono avvenire tra questo livello e gli altri presenti nell'applicazione.
-		Una volta che il server riceve una richiesta REST, si occuperà di analizzarla ed elaborarla. Viene di conseguenza individuato l’oggetto o gli oggetti ai quali si riferisce e vengono estrapolati i dati effettivi della richiesta con una chiamata al livello Database. Questo individua la giusta operazione da eseguire, la quale analizzerà i dati associati alla richiesta ed li comunicherà al livello server. Viene infine fornita una risposta che verrà ritrasmessa all'oggetto che ha generato la richiesta REST. \newline
-		Una illustrazione più dettagliata viene fornita nella seguente sezione \ref{sub:server}.
+		Il livello server si occupa di raccogliere i dati grezzi tramite le API fornite dai vari social network, elaborare e salvare tali dati nel database, fornire dei servizi REST	ed eleborare le richiste in arrivo dal client. Il back-end è stato suddiviso nei seguenti moduli:
+		\begin{itemize}
+		  \item db: contiene le definizioni del modello dei dati, sia per quanto riguarda i dati grezzi ricavati dai social network, sia per i dati necessari all'applicativo finale in sé;
+			\item miner: contiene le classi ed i package che estraggono i dati grezzi a cadenza regolare e costruiscono nuove entità secondo il modello dei dati che andrà a popolare il database;
+			\item processor: rappresenta il punto centrale del back-end. Si occupa di ricevere ed elaborare le richieste provenienti dal client oltre ad avviare il processo di aggiornamento delle Recipe scadute e recupero dei dati grezzi grazie alle funzionalità di \textit{task scheduling} offerte da Google App Engine;
+			\item endpoints: contengono le classi che definiscono la struttura dei servizi REST offerti tramite l'utilizzo del servizio Cloud Endpoints reso disponibile dalla piattaforma di Google.
+		\end{itemize}
+		Una illustrazione più dettagliata viene fornita nella sezione \ref{sub:server}.
 
 		\subsubsection{Architettura Database Tier}
 		Il livello database è gestito dal sistema Datastore integrato nella Google Cloud Platform che fornisce la funzionalità di persistenza dei dati. Ad esso spetta il compito di memorizzazione sia tutti i risultati recuperati dal Miner riguardanti i dati grezzi dei social, sia di memorizzare le configurazioni del programma necessarie al Processor e lo stato di lavoro dei Miner ad esso collegati.
 
 		\subsubsection{Protocollo di comunicazione Client-Server}
-		La comunicazione tra il livello Client e quello Server avviene tramite i Google Cloud Endpoints. Questi permettono di creare delle API da un'applicazione generata tramite la Google App Engine. Gli Endpoints garantiscono un modo semplice di sviluppare un back-end condiviso, riducendo di molto il lavoro che sarebbe necessario per implementare una simile infrastruttura. 
+		La comunicazione tra il livello Client e quello Server avviene tramite i Google Cloud Endpoints. Questi permettono di creare delle API da un'applicazione generata tramite la Google App Engine. Gli Endpoints garantiscono un modo semplice di sviluppare un back-end condiviso, riducendo di molto il lavoro che sarebbe necessario per implementare una simile infrastruttura.
 
 
 		\subsubsection{Protocollo di comunicazione Server-Database}
