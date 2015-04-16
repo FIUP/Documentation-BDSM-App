@@ -28,37 +28,36 @@
 	\input{./content/requisiti-fonti}
 	\input{./content/fonti-requisiti}
 
+	\subsection{Riepilogo}
 
-\subsection{Riepilogo}
+	\begin{center}
 
-\begin{center}
+		\def\arraystretch{1.5}
+		\bgroup
+		\begin{longtable}{| p{2.7cm} | p{2.4cm} | p{2.4cm} | p{2.4cm} | p{1.7cm} |}
 
-	\def\arraystretch{1.5}
-	\bgroup
-	\begin{longtable}{| p{2.7cm} | p{2.4cm} | p{2.4cm} | p{2.4cm} | p{1.7cm} |}
+			\hline
+			\textbf{Categoria} & \textbf{Obbligatori} & \textbf{Desiderabili} & \textbf{Facoltativi} & \textbf{Totali} \\
+			\hline
 
-		\hline
-		\textbf{Categoria} & \textbf{Obbligatori} & \textbf{Desiderabili} & \textbf{Facoltativi} & \textbf{Totali} \\
-		\hline
+			\textbf{Funzionali}  & 157 & 12 & 46 & 215 \\
+			\hline
+			\textbf{Prestazionali} & 0 & 2 & 1 & 3 \\
+			\hline
+			\textbf{Di qualità} & 5 & 0 & 0 & 5 \\
+			\hline
+			\textbf{Di vincolo} & 17 & 8 & 0 & 25 \\
+			\hline
+			\textbf{Totali}  & 179 & 22 & 47 & 248 \\
+			\hline
+		\end{longtable}
+		\egroup
+	\end{center}
 
-		\textbf{Funzionali}  & 157 & 12 & 46 & 215 \\
-		\hline
-		\textbf{Prestazionali} & 0 & 2 & 1 & 3 \\
-		\hline
-		\textbf{Di qualità} & 5 & 0 & 0 & 5 \\
-		\hline
-		\textbf{Di vincolo} & 17 & 8 & 0 & 25 \\
-		\hline
-		\textbf{Totali}  & 179 & 22 & 47 & 248 \\
-		\hline
-	\end{longtable}
-	\egroup
-\end{center}
-
-\subsection{Requisiti-Test} % (fold)
-\label{sub:requisiti_test}
-In questa sezione vengono riportati, per ogni requisito, il corrispondente test di sistema e test di validazione. I requisiti di qualità non sono tracciati in quanto sono verificati costantemente durante tutto lo sviluppo del progetto. La descrizione dei singoli test è riportata nel \docNameVersionPdQ.
-	\input{./content/requisiti-test}
+	\subsection{Requisiti-Test} % (fold)
+	\label{sub:requisiti_test}
+	In questa sezione vengono riportati, per ogni requisito, il corrispondente test di sistema e test di validazione. I requisiti di qualità non sono tracciati in quanto sono verificati costantemente durante tutto lo sviluppo del progetto. La descrizione dei singoli test è riportata nel \docNameVersionPdQ.
+		\input{./content/requisiti-test}
 % subsection requisiti_test (end)
 
 % section tracciamento (end)
