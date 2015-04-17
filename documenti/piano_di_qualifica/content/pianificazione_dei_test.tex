@@ -116,19 +116,19 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 					\hline
 					TIview & Viene verificato che il sistema permetta una corretta visualizzazione dell'interfaccia grafica. & bdsm\_app::\-client::\-view & N.I.\\
 					\hline
-					%TIpublic & TO DO & bdsm\_app::\-client::\-view::\-public & N.I.\\
+					%TIview\_public & TO DO & bdsm\_app::\-client::\-view::\-public & N.I.\\
 					%\hline
-					%TIuser & TO DO & bdsm\_app::\-client::\-view::\-user & N.I.\\
+					%TIview\_user & TO DO & bdsm\_app::\-client::\-view::\-user & N.I.\\
 					%\hline
-					%TIadmin & TO DO & bdsm\_app::\-client::\-view::\-admin & N.I.\\
+					%TIview\_admin & TO DO & bdsm\_app::\-client::\-view::\-admin & N.I.\\
 					%\hline
 					TIcontroller & Viene verificato che il sistema gestisca correttamente la componente Controller del design pattern MVC verificando che si integri correttamente nell'applicazione. & bdsm\_app::\-client::\-controller & N.I.\\
 					\hline
-					%TIpublic & TO DO & bdsm\_app::\-client::\-controller::\-public & N.I.\\
+					%TIcontroller\_public & TO DO & bdsm\_app::\-client::\-controller::\-public & N.I.\\
 					%\hline
-					%TIuser & TO DO & bdsm\_app::\-client::\-controller::\-user & N.I.\\
+					%TIcontroller\_user & TO DO & bdsm\_app::\-client::\-controller::\-user & N.I.\\
 					%\hline
-					%TIadmin & TO DO & bdsm\_app::\-client::\-controller::\-admin & N.I.\\
+					%TIcontroller\_admin & TO DO & bdsm\_app::\-client::\-controller::\-admin & N.I.\\
 					%\hline
 					TIserver & Viene verificato che il sistema gestisca correttamente il back-end del prodotto. & bdsm\_app::\-server & N.I.\\
 					\hline
@@ -182,6 +182,92 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 			\end{longtable}
 				\egroup
 \end{center}
+
+
+		\subsubsection{Tracciamento componenti - test di integrazione}
+			\begin{center}
+			\def\arraystretch{1.5}
+			\bgroup
+			\begin{longtable}{| p{6cm} | p{4cm} |}
+					\hline
+					\textbf{Componente} & \textbf{Test}\\
+					\hline
+					bdsm\_app & TIbdsm\_app\\
+					\hline
+					bdsm\_app::\-client & TIclient\\
+					\hline
+					bdsm\_app::\-client::\-model & TImodel\\
+					\hline
+					bdsm\_app::\-client::\-model::\-data & TIdata\\
+					\hline
+					bdsm\_app::\-client::\-model::\-services & TIservices\\
+					\hline
+					bdsm\_app::\-client::\-view & TIview\\
+					\hline
+					bdsm\_app::\-client::\-view::\-public & TIview\_public\\
+					\hline
+					bdsm\_app::\-client::\-view::\-user & TIview\_user\\
+					\hline
+					bdsm\_app::\-client::\-view::\-admin & TIview\_admin\\
+					\hline
+					bdsm\_app::\-client::\-controller & TIcontroller\\
+					\hline
+					bdsm\_app::\-client::\-controller::\-public & TIcontroller\_public\\
+					\hline
+					bdsm\_app::\-client::\-controller::\-user & TIcontroller\_user\\
+					\hline
+					bdsm\_app::\-client::\-controller::\-admin & TIcontroller\_admin\\
+					\hline
+					bdsm\_app::\-server & TIserver\\
+					\hline
+					bdsm\_app::\-server::\-db & TIdb\\
+					\hline
+					bdsm\_app::\-server::\-db::\-raw\_model & TIraw\_model\\
+					\hline
+					bdsm\_app::\-server::\-db::\-app\_model & TIapp\_model\\
+					\hline
+					bdsm\_app::\-server::\-processor & TIprocessor\\
+					\hline
+					bdsm\_app::\-server::\-processor::\-commands & TIcommands\\
+					\hline
+					bdsm\_app::\-server::\-processor::\-commands::\-user & TIuser\\
+					\hline
+					bdsm\_app::\-server::\-processor::\-commands::\-recipe & TIrecipe\\
+					\hline
+					bdsm\_app::\-server::\-processor::\-commands::\-requests & TIrequests\\
+					\hline
+					bdsm\_app::\-server::\-miner & TIminer\\
+					\hline
+					bdsm\_app::\-server::\-miner::\-fb & TIminer\_fb\\
+					\hline
+					bdsm\_app::\-server::\-miner::\-tw & TIminer\_tw\\
+					\hline
+					bdsm\_app::\-server::\-miner::\-ig & TIminer\_ig\\
+					\hline
+					bdsm\_app::\-server::\-endpoints & TIendpoints\\
+					\hline
+					bdsm\_app::\-server::\-endpoints::\-api & TIapi\\
+					\hline
+					bdsm\_app::\-server::\-endpoints::\-api::\-public & TIapi\_public\\
+					\hline
+					bdsm\_app::\-server::\-endpoints::\-api::\-private & TIapi\_private\\
+					\hline
+					bdsm\_app::\-server::\-endpoints::\-resp & TIresp\\
+					\hline
+					bdsm\_app::\-server::\-endpoints::\-resp::\-public & TIresp\_public\\
+					\hline
+					bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-fb & TIresp\_fb\\
+					\hline
+					bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-tw & TIresp\_tw\\
+					\hline
+					bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-ig & TIresp\_ig\\
+					\hline
+					bdsm\_app::\-server::\-endpoints::\-resp::\-private & TIresp\_private\\
+					\hline
+			\caption{Tracciamento componenti - test di integrazione}
+			\end{longtable}
+				\egroup
+		\end{center}
 
 	\subsection{Test di validazione}
 		I test di validazione vengono utilizzati per accertarsi che il prodotto finale sviluppato sia conforme alle attese.\\
