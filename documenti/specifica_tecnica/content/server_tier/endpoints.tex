@@ -18,7 +18,7 @@
 [TO DO] (diagramma) \newline \newline
 
 \begin{itemize}
-  \item \textbf{Descrizione}: è il package che contiene tutte le classi utili ad effettuare le chiamate REST e a ritornare i risultati;
+  \item \textbf{Descrizione}: è il package che contiene tutte le classi utili ad effettuare le chiamate Api e a ritornare i risultati;
   \item \textbf{Padre}: server
   \item \textbf{Package contenuti}:
   	\begin{itemize}
@@ -39,7 +39,7 @@
 [TO DO] (diagramma) \newline \newline
 
 \begin{itemize}
-  \item \textbf{Descrizione}: è il package che definisce i servizi REST offerti dall'applicazione e utilizzati dal client;
+  \item \textbf{Descrizione}: è il package che definisce i servizi Api offerti dall'applicazione e utilizzati dal client;
   \item \textbf{Padre}: server::endpoints
   \item \textbf{Package contenuti}:
   	\begin{itemize}
@@ -60,7 +60,7 @@
 [TO DO] (diagramma) \newline \newline
 
 \begin{itemize}
-  \item \textbf{Descrizione}: è il package contenente le componenti che contengono i servizi REST pubblici;
+  \item \textbf{Descrizione}: è il package contenente le componenti che contengono i servizi Api pubblici;
   \item \textbf{Padre}: server::endpoints::api
   \item \textbf{Interazione con altri componenti}:
   	\begin{itemize}
@@ -110,7 +110,6 @@
           \item server::endpoints::resp::public::tw::UserResponse
           \item server::endpoints::resp::public::tw::UserTrendListResponse
           \item server::endpoints::resp::public::tw::TweetListResponse
-          \item server::endpoints::resp::public::tw::HashtagResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_public_twmetricsapi (end)
@@ -125,8 +124,7 @@
           \item server::endpoints::resp::public::ig::UserResponse
           \item server::endpoints::resp::public::ig::UserTrendListResponse
           \item server::endpoints::resp::public::ig::MediaListResponse
-          \item server::endpoints::resp::public::ig::HashtagResponse
-          \item server::endpoints::resp::public::ig::MediaListResponse
+          \item server::endpoints::resp::public::ig::HashtagTrendListResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_public_igmetricsapi (end)
@@ -136,7 +134,7 @@
 [TO DO] (diagramma) \newline \newline
 
 \begin{itemize}
-  \item \textbf{Descrizione}: è il package contenente le classi che definiscono i servizi REST privati [TO DO];
+  \item \textbf{Descrizione}: è il package contenente le classi che definiscono i servizi Api privati [TO DO];
   \item \textbf{Padre}: server::endpoints::api
   \item \textbf{Interazione con altri componenti}:
   	\begin{itemize}
@@ -186,8 +184,8 @@
     \subparagraph{bdsm\_app::server::endpoints::api::private::FavoritesApi} % (fold)
     \label{subp:bdsm_app_server_endpoints_api_private_favoritesapi}
     \begin{itemize}
-      \item \textbf{Descrizione}: classe utilizzata dal client per aggiungere una Recipe ai preferiti o rimuoverne una già presente dai preferiti;
-      \item \textbf{Utilizzo}: i suoi metodi vengono invocati quando viene richiesto dal client l'inserimento di una Recipe nei preferiti o quando viene richiesta la rimozione di una Recipe dai preferiti;
+      \item \textbf{Descrizione}: classe utilizzata dal client per aggiungere una View ai preferiti o rimuoverne una già presente dai preferiti;
+      \item \textbf{Utilizzo}: i suoi metodi vengono invocati quando viene richiesto dal client l'inserimento di una View nei preferiti o quando viene richiesta la rimozione di una View dai preferiti;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
           \item server::endpoints::resp::private::FavoriteListResponse
@@ -200,9 +198,13 @@
 [TO DO] (diagramma) \newline \newline
 
 \begin{itemize}
-  \item \textbf{Descrizione}: [TO DO];
-  \item \textbf{Padre}: [TO DO] (qualora presente);
-  \item \textbf{Package contenuti}: [TO DO] (qualora presente);
+  \item \textbf{Descrizione}: è il package che definisce le risposte da passare al client in seguito alle chiamate Api;
+  \item \textbf{Padre}: server::endpoints
+  \item \textbf{Package contenuti}:
+  	\begin{itemize}
+  		\item server::endpoints::resp::public
+  		\item server::endpoints::resp::private
+	\end{itemize}
   \item \textbf{Interazione con altri componenti}: [TO DO];
 \end{itemize}
 % subsubsection
@@ -212,10 +214,18 @@
 [TO DO] (diagramma) \newline \newline
 
 \begin{itemize}
-  \item \textbf{Descrizione}: [TO DO];
-  \item \textbf{Padre}: [TO DO] (qualora presente);
-  \item \textbf{Package contenuti}: [TO DO] (qualora presente);
-  \item \textbf{Interazione con altri componenti}: [TO DO];
+  \item \textbf{Descrizione}: è il package che definisce le risposte da passare al client in seguito alle chiamate Api; pubbliche;
+  \item \textbf{Padre}: server::endpoints::resp
+  \item \textbf{Package contenuti}:
+  	\begin{itemize}
+  		\item server::endpoints::resp::public::fb
+  		\item server::endpoints::resp::public::tw
+  		\item server::endpoints::resp::public::ig
+	\end{itemize}
+  \item \textbf{Interazione con altri componenti}:
+  	\begin{itemize}
+  		\item server::endpoints::resp::private
+	\end{itemize}
 \end{itemize}
 % subsubsection
 
@@ -224,11 +234,16 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::MetricListResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_metriclistresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati della lista di metriche da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response della lista delle metriche al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::fb::PageResponse
+          \item server::endpoints::resp::public::fb::EventResponse
+          \item server::endpoints::resp::public::tw::UserResponse
+          \item server::endpoints::resp::public::tw::HashtagResponse
+          \item server::endpoints::resp::public::ig::UserResponse
+          \item server::endpoints::resp::public::ig::HashtagResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_metriclistresponse (end)
@@ -238,10 +253,12 @@
 [TO DO] (diagramma) \newline \newline
 
 \begin{itemize}
-  \item \textbf{Descrizione}: [TO DO];
-  \item \textbf{Padre}: [TO DO] (qualora presente);
-  \item \textbf{Package contenuti}: [TO DO] (qualora presente);
-  \item \textbf{Interazione con altri componenti}: [TO DO];
+  \item \textbf{Descrizione}: è il package contenente le classi che rappresentano il modello di dati delle componenti di Facebook da restituire al client;
+  \item \textbf{Padre}: server::endpoints::resp::public
+  \item \textbf{Interazione con altri componenti}:
+  	\begin{itemize}
+  		\item server::endpoints::api::public::FbMetricsApi
+  	\end{itemize}
 \end{itemize}
 % subsubsection
 
@@ -250,11 +267,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::fb::PageResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_fb_pageresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati di una pagina Facebook da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati di una pagina Facebook al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::fb::PageListResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_pageresponse (end)
@@ -262,11 +279,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::fb::PageListResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_fb_pagelistresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati della lista di pagine Facebook da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response della lista delle pagine Facebook al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::fb::PageResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_pagelistresponse (end)
@@ -274,11 +291,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::fb::PageTrendResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_fb_pagetrendresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati dei trend di una pagina Facebook da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei trend di una pagina Facebook al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::fb::PageTrendListResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_pagetrendresponse (end)
@@ -286,11 +303,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::fb::PageTrendListResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_fb_pagetrendlistresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati della lista dei trend di una pagina Facebook da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response della lista dei trend di una pagina Facebook al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::fb::PageTrendResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_pagetrendlistresponse (end)
@@ -298,11 +315,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::fb::EventResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_fb_eventresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati di un evento di Facebook da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati di un evento Facebook al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::fb::EventListResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_eventresponse (end)
@@ -310,11 +327,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::fb::EventListResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_fb_eventlistresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati della lista di eventi Facebook da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response della lista di eventi Facebook al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::fb::EventResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_eventlistresponse (end)
@@ -322,11 +339,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::fb::EventTrendResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_fb_eventtrendresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati dei trend di un evento Facebook da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei trend di un evento Facebook al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::fb::EventTrendListResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_eventtrendresponse (end)
@@ -334,11 +351,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::fb::EventTrendListResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_fb_eventtrendlistresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati della lista dei trend di un evento Facebook da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response della lista dei trend di un evento Facebook al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::fb::EventTrendResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_eventtrendlistresponse (end)
@@ -346,11 +363,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::fb::PostResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_fb_postresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati dei post di Facebook da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati dei post Facebook al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::fb::PostListResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_postresponse (end)
@@ -358,11 +375,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::fb::PostListResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_fb_postlistresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati della lista di post di Facebook da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response della lista di post di Facebook al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::fb::PostResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_postlistresponse (end)
@@ -372,10 +389,12 @@
 [TO DO] (diagramma) \newline \newline
 
 \begin{itemize}
-  \item \textbf{Descrizione}: [TO DO];
-  \item \textbf{Padre}: [TO DO] (qualora presente);
-  \item \textbf{Package contenuti}: [TO DO] (qualora presente);
-  \item \textbf{Interazione con altri componenti}: [TO DO];
+  \item \textbf{Descrizione}: è il package contenente le classi che rappresentano il modello di dati delle componenti di Twitter da restituire al client;
+  \item \textbf{Padre}: server::endpoints::resp::public
+  \item \textbf{Interazione con altri componenti}:
+  	\begin{itemize}
+  		\item server::endpoints::api::public::TwMetricsApi
+  	\end{itemize}
 \end{itemize}
 % subsubsection
 
@@ -384,11 +403,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::tw::UserResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_tw_userresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati di un profilo Twitter da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati di un profilo Twitter al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::tw::UserListResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_tw_pageresponse (end)
@@ -396,11 +415,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::tw::UserListResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_tw_userlistresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati della lista di profili Twitter da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response della lista di profili Twitter al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::tw::UserResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_tw_userlistresponse (end)
@@ -408,11 +427,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::tw::UserTrendResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_tw_usertrendresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati dei trend di un profilo Twitter da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei trend di un profilo Twitter al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::tw::UserTrendListResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_tw_usertrendresponse (end)
@@ -420,11 +439,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::tw::UserTrendListResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_tw_usertrendlistresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati della lista dei trend di un profilo Twitter da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response della lista dei trend di un profilo Twitter al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::tw::UserTrendResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_tw_usertrendlistresponse (end)
@@ -432,11 +451,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::tw::HashtagResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_tw_hashtagresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati di un hashtag di Twitter da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati di un hashtag di Twitter al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::tw::HashtagListResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_tw_hashtagresponse (end)
@@ -444,11 +463,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::tw::HashtagListResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_tw_hashtaglistresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati della lista degli hashtag di Twitter da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response della lista degli hashtag di Twitter al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::tw::HashtagResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_tw_hashtaglistresponse (end)
@@ -456,11 +475,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::tw::TweetResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_tw_tweetresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati dei tweet di Twitter da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati dei tweet di Twitter al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::tw::TweetListResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_tw_tweetresponse (end)
@@ -468,11 +487,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::tw::TweetListResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_tw_tweetlistresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati della lista dei tweet Twitter da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response della lista dei tweet di Twitter al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::tw::TweetResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_tw_tweetlistresponse (end)
@@ -482,10 +501,12 @@
 [TO DO] (diagramma) \newline \newline
 
 \begin{itemize}
-  \item \textbf{Descrizione}: [TO DO];
-  \item \textbf{Padre}: [TO DO] (qualora presente);
-  \item \textbf{Package contenuti}: [TO DO] (qualora presente);
-  \item \textbf{Interazione con altri componenti}: [TO DO];
+  \item \textbf{Descrizione}: è il package contenente le classi che rappresentano il modello di dati delle componenti di Instagram da restituire al client;
+  \item \textbf{Padre}: server::endpoints::resp::public
+  \item \textbf{Interazione con altri componenti}:
+  	\begin{itemize}
+  		\item server::endpoints::api::public::IgMetricsApi
+  	\end{itemize}
 \end{itemize}
 % subsubsection
 
@@ -494,11 +515,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::ig::UserResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_ig_userresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati di un profilo Instagram da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati di un profilo Instagram al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::ig::UserListResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_ig_pageresponse (end)
@@ -506,11 +527,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::ig::UserListResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_ig_userlistresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati della lista dei profili di Instagram da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response della lista dei profili di Instagram al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::ig::UserResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_ig_userlistresponse (end)
@@ -518,11 +539,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::ig::UserTrendResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_ig_usertrendresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati dei trend di un profilo Instagram da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei trend di un profilo Instagram al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::ig::UserTrendListResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_ig_usertrendresponse (end)
@@ -530,11 +551,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::ig::UserTrendListResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_ig_usertrendlistresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati della lista dei trend di un profilo Instagram da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response della lista dei trend di un profilo Instagram al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::ig::UserTrendResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_ig_usertrendlistresponse (end)
@@ -542,11 +563,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::ig::HashtagResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_ig_hashtagresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati di un hashtag di Instagram da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati di un hashtag di Instagram al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::ig::HashtagListResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_ig_hashtagresponse (end)
@@ -554,11 +575,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::ig::HashtagListResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_ig_hashtaglistresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati della lista degli hashtag di Instagram da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response della lista degli hashtag di Instagram al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::ig::HashtagResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_ig_hashtaglistresponse (end)
@@ -566,11 +587,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::ig::HashtagTrendResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_ig_hashtagtrendresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati dei trend di un hashtag di Instagram da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei trend di un hashtag di Instagram al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::ig::HashtagTrendListResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_ig_hashtagtrendresponse (end)
@@ -578,11 +599,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::ig::HashtagTrendListResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_ig_hashtagtrendlistresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati della lista dei trend di un hashtag di Instagram da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response della lista dei trend di un hashtag di Instagram al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::ig::HashtagTrendResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_ig_hashtagtrendlistresponse (end)
@@ -590,11 +611,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::ig::MediaResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_ig_mediaresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati dei media di Instagram da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati dei media di Instagram al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::ig::MediaListResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_ig_mediaresponse (end)
@@ -602,11 +623,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::public::ig::MediaListResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_ig_medialistresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati della lista dei media di Instagram da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response della lista dei media di Instagram al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::ig::MediaResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_ig_medialistresponse (end)
@@ -616,10 +637,12 @@
 [TO DO] (diagramma) \newline \newline
 
 \begin{itemize}
-  \item \textbf{Descrizione}: [TO DO];
-  \item \textbf{Padre}: [TO DO] (qualora presente);
-  \item \textbf{Package contenuti}: [TO DO] (qualora presente);
-  \item \textbf{Interazione con altri componenti}: [TO DO];
+  \item \textbf{Descrizione}: è il package che definisce le risposte da passare al client in seguito alle chiamate Api;
+  \item \textbf{Padre}: server::endpoints::resp
+  \item \textbf{Interazione con altri componenti}:
+  	\begin{itemize}
+  		\item server::endpoints::resp::public
+	\end{itemize}
 \end{itemize}
 % subsubsection
 
@@ -628,23 +651,26 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::private::RecipeResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_private_reciperesponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati di una Recipe da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una Recipe al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
-        \end{itemize}
+  			\item server::endpoints::resp::public::MetricListResponse
+  			\item server::endpoints::resp::private::RecipeListResponse
+  			\item server::endpoints::api::private::RecipeApi
+		\end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_private_reciperesponse (end)
     
     \subparagraph{bdsm\_app::server::endpoints::resp::private::RecipeListResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_private_recipelistresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati di una Recipe da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una Recipe al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::private::RecipeResponse
+          \item server::endpoints::api::private::RecipeApi
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_private_recipelistresponse (end)
@@ -652,11 +678,12 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::private::RecipeReqResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_private_recipereqresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati di una richiesta di Recipe da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una richiesta di Recipe al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::private::RecipeReqListResponse
+          \item server::endpoints::api::private::RecipeRequestApi
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_private_recipereqresponse (end)
@@ -664,11 +691,12 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::private::RecipeReqListResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_private_recipereqlistresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati di una lista di richieste di Recipe da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una lista di richieste di Recipe al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::private::RecipeReqResponse
+          \item server::endpoints::api::private::RecipeRequestApi
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_private_recipereqlistresponse (end)
@@ -676,11 +704,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::private::UserResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_private_userresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati di una lista di richieste di Recipe da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una lista di richieste di Recipe al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::api::private::UserApi
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_private_userresponse (end)
@@ -688,11 +716,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::private::FavoriteResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_private_favoriteresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati di una View preferita da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una View preferita al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::api::private::FavoritesApi
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_private_favoriteresponse (end)
@@ -700,11 +728,11 @@
     \subparagraph{bdsm\_app::server::endpoints::resp::private::FavoriteListResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_private_favoritelistresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: rappresenta il modello di dati di una lista di View preferite da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una lista di View preferite al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::api::private::FavoritesApi
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_private_favoritelistresponse (end)
