@@ -19,13 +19,13 @@
 
 \begin{itemize}
   \item \textbf{Descrizione}: è il package che contiene le componenti che gestiscono le richieste in arrivo dal client grazie ai servizi REST definiti nel package \texttt{server::endpoints::api};
-  \item \textbf{Padre}: server;
-  \item \textbf{Package contenuti}: commands;
+  \item \textbf{Padre}: server
+  \item \textbf{Package contenuti}: server::processor::commands
   \item \textbf{Interazione con altri componenti}:
     \begin{itemize}
-      \item miner;
-      \item endpoints;
-      \item db.
+      \item server::miner
+      \item server::endpoints
+      \item srever::db
     \end{itemize}
 \end{itemize}
 
@@ -34,11 +34,11 @@
     \subparagraph{bdsm\_app::server::processor::RequestHandler} % (fold)
     \label{subp:bdsm_app_server_processor_requesthandler}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: è la classe che implementa il pattern Front Controller e si occupa di raccorgliere le richieste provenienti dal client. Implementa inoltre il pattern Singleton, per cui un'unica istanza di tale classa sarà vivrà nel sistema;
+      \item \textbf{Utilizzo}: viene invocata dalle classi presenti nel package \texttt{server::endpoints::api} in seguito ad una chiamata ai servizi REST offerti dal sistema e trasferisce la richiesta alla classe \texttt{CommandDispatcher} che si occupera di invocare il relativo comando per soddisfare tale richiesta;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::processor::CommandDispatcher
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_processor_requesthandler (end)
@@ -46,11 +46,11 @@
     \subparagraph{bdsm\_app::server::processor::CommandDispatcher} % (fold)
     \label{subp:bdsm_app_server_:processor_commanddispatcher}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: classe che implementa il pattern Command e si occopa di far confluire un determinata richiesta al relativo comando contenente la logica per soddisfarla;
+      \item \textbf{Utilizzo}: contiene un dizionario che mappa tutte le tipologie di richieste al relativo comando che sarà invocato tramite il metodo \texttt{dispatch()}. Si occupa inoltre di ritornare al Front Controller il un dizionario contente un eventuale risposta per il client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::processor::commands::ICommand
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_processor_commanddispatcher (end)
@@ -58,11 +58,11 @@
     \subparagraph{bdsm\_app::server::processor::UpdateRecipeTask} % (fold)
     \label{subp:bdsm_app_server_processor_updaterecipetask}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: è la classe che riceve la notifica dal Cron (funzionalità integrata nella Google Cloud Platform) per aggiornare le Recipe memorizzate nel sistema interagendo con la classe \texttt{server::miner::MinerScheduler} a tale scopo;
+      \item \textbf{Utilizzo}:si occupa di invocare il \texttt{MinerScheduler} avviando il processo di aggiornamento delle Recipe passando al modulo Miner la lista delle ricette da aggiornare;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::miner::MinerScheduler
         \end{itemize}
     \end{itemize}
     % subparagraph bdsm_app::server_processor_updaterecipetask (end)
@@ -73,32 +73,27 @@
     [TO DO] (diagramma) \newline \newline
 
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Padre}: processor;
+      \item \textbf{Descrizione}: contiene le classi ed i package che definiscono i diversi comandi conteneti la logica necessaria a soddisfare le varie richieste in arrivo dal client;
+      \item \textbf{Padre}: server::processor
       \item \textbf{Package contenuti}:
         \begin{itemize}
-          \item recipe;
-          \item requests;
-          \item user;
+          \item server::processor::recipe
+          \item server::processor::requests
+          \item server::processor::user
         \end{itemize}
       \item \textbf{Interazione con altri componenti}:
         \begin{itemize}
-          \item processor;
-          \item db.
+          \item server::db
         \end{itemize}
     \end{itemize}
 
       \paragraph{Classi} % (fold)
 
-      \subparagraph{bdsm\_app::server::processor::commands::AbsCommand} % (fold)
-      \label{subp:bdsm_app_server_processor_updaterecipetask}
+      \subparagraph{bdsm\_app::server::processor::commands::ICommand} % (fold)
+      \label{subp:bdsm_app_server_processor_commands_icommand}
       \begin{itemize}
-        \item \textbf{Descrizione}: [TODO];
-        \item \textbf{Utilizzo}: [TODO];
-        \item \textbf{Relazioni con altre classi}:
-          \begin{itemize}
-            \item [TODO];
-          \end{itemize}
+        \item \textbf{Descrizione}: rappresente un'intefaccia comune per tutti i comandi presenti nel package \texttt{server::commands} e figli;
+        \item \textbf{Utilizzo}: espone un metodo \texttt{execute()}, i quale sarà implementato da tutti i comandi concreti;
       \end{itemize}
       % subparagraph bdsm_app::server_processor_abscommand (end)
 
@@ -111,11 +106,11 @@
       [TO DO] (diagramma) \newline \newline
 
       \begin{itemize}
-        \item \textbf{Descrizione}: [TODO];
-        \item \textbf{Padre}: commands;
+        \item \textbf{Descrizione}: contiene tutti i comandi relativi alla gestione degli utenti;
+        \item \textbf{Padre}: server::processor::commands;
         \item \textbf{Interazione con altri componenti}:
           \begin{itemize}
-            \item db.
+            \item server::db
           \end{itemize}
       \end{itemize}
 
@@ -124,11 +119,11 @@
         \subparagraph{bdsm\_app::server::processor::commands::user::AbsUserCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_user_absusercommand}
         \begin{itemize}
-          \item \textbf{Descrizione}: [TODO];
-          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Descrizione}: rappresenta una classe comune a tutti i comandi relativi alla gestione degli utenti;
+          \item \textbf{Utilizzo}: è stata rappresentata come classe in quanto potrà contentere uno o più metodi di utilità comuni a tutti i comandi relativi alla gestione degli utenti;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
-              \item [TODO];
+              \item server::processor::commands::ICommand
             \end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -136,11 +131,11 @@
         \subparagraph{bdsm\_app::server::processor::commands::user::AddUserCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_user_addusercommand}
         \begin{itemize}
-          \item \textbf{Descrizione}: [TODO];
-          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Descrizione}: definisce la logica per aggiungere un nuovo utente al database;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per aggiungere un nuovo utente al database;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
-              \item [TODO];
+              \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -148,11 +143,11 @@
         \subparagraph{bdsm\_app::server::processor::commands::user::GetUserCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_user_getusercommand}
         \begin{itemize}
-          \item \textbf{Descrizione}: [TODO];
-          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Descrizione}: definisce la logica per ricavare un determinato utente dal database;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ricavare un determinato utente dal database;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
-              \item [TODO];
+              \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -160,11 +155,11 @@
         \subparagraph{bdsm\_app::server::processor::commands::user::DeleteUserCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_user_deleteusercommand}
         \begin{itemize}
-          \item \textbf{Descrizione}: [TODO];
-          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Descrizione}: definisce la logica per rimuovere un determinato utente dal database;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per rimuovere un determinato utente dal database;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
-              \item [TODO];
+              \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -172,11 +167,11 @@
         \subparagraph{bdsm\_app::server::processor::commands::user::EditUserCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_user_editusercommand}
         \begin{itemize}
-          \item \textbf{Descrizione}: [TODO];
-          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Descrizione}: definisce la logica per modificare i dati un determinato utente dal database;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per modificare i dati un determinato utente dal database;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
-              \item [TODO];
+              \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -184,11 +179,11 @@
         \subparagraph{bdsm\_app::server::processor::commands::user::EditPermissionCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_user_editpermissioncommand}
         \begin{itemize}
-          \item \textbf{Descrizione}: [TODO];
-          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Descrizione}: definisce la logica per modificare i permessi di un determinato utente;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per modificare i permessi di un determinato utente;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
-              \item [TODO];
+              \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -196,11 +191,11 @@
         \subparagraph{bdsm\_app::server::processor::commands::user::GetFavouritesCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_user_getfavouritescommand}
         \begin{itemize}
-          \item \textbf{Descrizione}: [TODO];
-          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Descrizione}: definisce la logica per ottenere le View preferite di un determinato utente;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere le View preferite di un determinato utente;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
-              \item [TODO];
+              \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -208,11 +203,11 @@
         \subparagraph{bdsm\_app::server::processor::commands::user::DeleteFavouriteCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_user_deletefavouritecommand}
         \begin{itemize}
-          \item \textbf{Descrizione}: [TODO];
-          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Descrizione}: definisce la logica per rimovere un determinato preferito da un utente specifico;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per rimovere un determinato preferito da un utente specifico;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
-              \item [TODO];
+              \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -220,11 +215,11 @@
         \subparagraph{bdsm\_app::server::processor::commands::user::AddFavouriteCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_user_addfavouritecommand}
         \begin{itemize}
-          \item \textbf{Descrizione}: [TODO];
-          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Descrizione}: definisce la logica per aggiungere un preferito ad un determinato utente;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per aggiungere un preferito ad un determinato utente;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
-              \item [TODO];
+              \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -239,11 +234,11 @@
       [TO DO] (diagramma) \newline \newline
 
       \begin{itemize}
-        \item \textbf{Descrizione}: [TODO];
-        \item \textbf{Padre}: commands;
+        \item \textbf{Descrizione}: contiene tutti i comandi relativi alla gestione delle Recipe;
+        \item \textbf{Padre}: server::commands
         \item \textbf{Interazione con altri componenti}:
           \begin{itemize}
-            \item db.
+            \item server::db
           \end{itemize}
       \end{itemize}
 
@@ -252,11 +247,11 @@
         \subparagraph{bdsm\_app::server::processor::commands::recipe::AbsRecipeCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_recipe_absrecipecommand}
         \begin{itemize}
-          \item \textbf{Descrizione}: [TODO];
-          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Descrizione}: rappresenta una classe comune a tutti i comandi relativi alla gestione delle Recipe;
+          \item \textbf{Utilizzo}: è stata rappresentata come classe in quanto potrà contentere uno o più metodi di utilità comuni a tutti i comandi relativi alla gestione delle Recipe;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
-              \item [TODO];
+              \item server::processor::commands::ICommand;
             \end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -264,11 +259,11 @@
         \subparagraph{bdsm\_app::server::processor::commands::recipe::GetRecipeCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_recipe_getrecipecommand}
         \begin{itemize}
-          \item \textbf{Descrizione}: [TODO];
-          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Descrizione}: definisce la logica per ottenere una determinata Recipe dal database;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere una determinata Recipe dal database;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
-              \item [TODO];
+              \item server::processor::commands::recipe::AbsRecipeCommand
             \end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -276,11 +271,11 @@
         \subparagraph{bdsm\_app::server::processor::commands::recipe::AddRecipeCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_recipe_addrecipecommand}
         \begin{itemize}
-          \item \textbf{Descrizione}: [TODO];
-          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Descrizione}: definisce la logica per aggiungere una nuova Recipe al database;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per aggiungere una nuova Recipe al database;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
-              \item [TODO];
+              \item server::processor::commands::recipe::AbsRecipeCommand
             \end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -288,11 +283,11 @@
         \subparagraph{bdsm\_app::server::processor::commands::recipe::DeleteRecipeCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_recipe_deleterecipecommand}
         \begin{itemize}
-          \item \textbf{Descrizione}: [TODO];
-          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Descrizione}: definisce la logica per rimuovere una determinata Recipe dal database;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per rimuovere una determinata Recipe dal database;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
-              \item [TODO];
+              \item server::processor::commands::recipe::AbsRecipeCommand
             \end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -300,11 +295,11 @@
         \subparagraph{bdsm\_app::server::processor::commands::recipe::RateRecipeCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_recipe_raterecipecommand}
         \begin{itemize}
-          \item \textbf{Descrizione}: [TODO];
-          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Descrizione}: definisce la logica per aggiungere e modificare il rating ad un determinata Recipe;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per aggiungere e modificare il rating ad un determinata Recipe;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
-              \item [TODO];
+              \item server::processor::commands::recipe::AbsRecipeCommand
             \end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -318,11 +313,11 @@
       [TO DO] (diagramma) \newline \newline
 
       \begin{itemize}
-        \item \textbf{Descrizione}: [TODO];
-        \item \textbf{Padre}: commands;
+        \item \textbf{Descrizione}: contiene tutti i comandi relativi alla gestione delle richieste di aggiunta Recipe;
+        \item \textbf{Padre}: server::processor::commands;
         \item \textbf{Interazione con altri componenti}:
           \begin{itemize}
-            \item db.
+            \item server::db
           \end{itemize}
       \end{itemize}
 
@@ -331,11 +326,11 @@
         \subparagraph{bdsm\_app::server::processor::commands::requests::AbsRequestCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_requests_absrequestcommand}
         \begin{itemize}
-          \item \textbf{Descrizione}: [TODO];
-          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Descrizione}: rappresenta una classe comune a tutti i comandi relativi alla gestione delle richieste di aggiunta Recipe;
+          \item \textbf{Utilizzo}: è stata rappresentata come classe in quanto potrà contentere uno o più metodi di utilità comuni a tutti i comandi relativi alla gestione dellerichieste di aggiunta Recipe;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
-              \item [TODO];
+              \item server::processor::commands::ICommand
             \end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -343,11 +338,11 @@
         \subparagraph{bdsm\_app::server::processor::commands::requests::GetRequestCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_requests_getrequestcommand}
         \begin{itemize}
-          \item \textbf{Descrizione}: [TODO];
-          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Descrizione}: definisce la logica per ottenere un determinata richiesta di aggiunta Recipe dal database;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere un determinata richiesta di aggiunta Recipe dal database;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
-              \item [TODO];
+              \item server::processor::commands::requests::AbsRequestCommand
             \end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -355,11 +350,11 @@
         \subparagraph{bdsm\_app::server::processor::commands::requests::AddRequestCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_requests_addrequestcommand}
         \begin{itemize}
-          \item \textbf{Descrizione}: [TODO];
-          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Descrizione}: definisce la logica per aggiungere una nuova richiesta di aggiunta Recipe al database;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per aggiungere una nuova richiesta di aggiunta Recipe al database;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
-              \item [TODO];
+              \item server::processor::commands::requests::AbsRequestCommand
             \end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -367,11 +362,11 @@
         \subparagraph{bdsm\_app::server::processor::commands::requests::GetRequestListCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_requests_getrequestlistcommand}
         \begin{itemize}
-          \item \textbf{Descrizione}: [TODO];
-          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Descrizione}: definisce la logica per ottenere la lista delle richieste di aggiunta Recipe presenti nel database;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere la lista delle richieste di aggiunta Recipe presenti nel database;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
-              \item [TODO];
+              \item server::processor::commands::requests::AbsRequestCommand
             \end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -379,11 +374,11 @@
         \subparagraph{bdsm\_app::server::processor::commands::requests::DeleteRequestCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_requests_deleterequestcommand}
         \begin{itemize}
-          \item \textbf{Descrizione}: [TODO];
-          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Descrizione}: definisce la logica per rimuovere una determinata richiesta di aggiunta Recipe dal database;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per rimuovere una determinata richiesta di aggiunta Recipe dal database;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
-              \item [TODO];
+              \item server::processor::commands::requests::AbsRequestCommand
             \end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -391,23 +386,23 @@
         \subparagraph{bdsm\_app::server::processor::commands::requests::GetMetricsListCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_requests_getmetricslistcommand}
         \begin{itemize}
-          \item \textbf{Descrizione}: [TODO];
-          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Descrizione}: definisce la logica per ottenere la lista delle metriche presenti in una determinata richiesta di aggiunta Recipe;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere la lista delle metriche presenti in una determinata richiesta di aggiunta Recipe;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
-              \item [TODO];
+              \item server::processor::commands::requests::AbsRequestCommand
             \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::requests::GetMetricsDataCommand} % (fold)
+        \subparagraph{bdsm\_app::server::processor::commands::requests::GetMetricDataCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_requests_getmetricsdatacommand}
         \begin{itemize}
-          \item \textbf{Descrizione}: [TODO];
-          \item \textbf{Utilizzo}: [TODO];
+          \item \textbf{Descrizione}: definisce la logica per ottenere i dati associati ad una determinata metrica;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere i dati associati ad una determinata metrica;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
-              \item [TODO];
+              \item server::processor::commands::requests::AbsRequestCommand
             \end{itemize}
         \end{itemize}
         % subparagraph (end)
