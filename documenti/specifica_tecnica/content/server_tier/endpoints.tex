@@ -18,7 +18,7 @@
 [TO DO] (diagramma) \newline \newline
 
 \begin{itemize}
-  \item \textbf{Descrizione}: è il package che contiene tutte le classi utili ad effettuare le chiamate REST e a ritornare i risultati [TO DO];
+  \item \textbf{Descrizione}: è il package che contiene tutte le classi utili ad effettuare le chiamate REST e a ritornare i risultati;
   \item \textbf{Padre}: server
   \item \textbf{Package contenuti}:
   	\begin{itemize}
@@ -28,6 +28,7 @@
   \item \textbf{Interazione con altri componenti}:
   	\begin{itemize}
   		\item server::processor
+  		\item server::miner
   		\item server::db
 	\end{itemize}
 \end{itemize}
@@ -38,14 +39,19 @@
 [TO DO] (diagramma) \newline \newline
 
 \begin{itemize}
-  \item \textbf{Descrizione}: è il package che definisce i servizi REST offerti dall'applicazione [TO DO];
+  \item \textbf{Descrizione}: è il package che definisce i servizi REST offerti dall'applicazione e utilizzati dal client;
   \item \textbf{Padre}: server::endpoints
   \item \textbf{Package contenuti}:
   	\begin{itemize}
   		\item server::endpoints::api::public
   		\item server::endpoints::api::private
 	\end{itemize}
-  \item \textbf{Interazione con altri componenti}: [TO DO];
+  \item \textbf{Interazione con altri componenti}:
+  	\begin{itemize}
+  		\item client::model::services
+  		\item server::processor
+  		\item server::db
+	\end{itemize}
 \end{itemize}
 % subsubsection
 
@@ -54,9 +60,12 @@
 [TO DO] (diagramma) \newline \newline
 
 \begin{itemize}
-  \item \textbf{Descrizione}: è il package contenente le classi che definiscono i servizi REST pubblici [TO DO];
+  \item \textbf{Descrizione}: è il package contenente le componenti che contengono i servizi REST pubblici;
   \item \textbf{Padre}: server::endpoints::api
-  \item \textbf{Interazione con altri componenti}: [TO DO];
+  \item \textbf{Interazione con altri componenti}:
+  	\begin{itemize}
+        \item server::processor
+    \end{itemize}
 \end{itemize}
 % subsubsection
 
@@ -65,11 +74,12 @@
     \subparagraph{bdsm\_app::server::endpoints::api::public::RecipeApi} % (fold)
     \label{subp:bdsm_app_server_endpoints_api_public_recipeapi}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: classe utilizzata dal client per ricavare la lista delle Recipe e delle metriche;
+      \item \textbf{Utilizzo}: i suoi metodi vengono invocati quando viene richiesto dal client di recuperare la lista delle Recipe e delle metriche;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::MetricListResponse;
+          \item server::endpoints::resp::private::RecipeListResponse;
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_public_recipeapi (end)
@@ -77,11 +87,15 @@
     \subparagraph{bdsm\_app::server::endpoints::api::public::FbMetricsApi} % (fold)
     \label{subp:bdsm_app_server_endpoints_api_public_fbmetricsapi}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: classe utilizzata dal client per ottenere i dati relativi ad una metrica di Facebook;
+      \item \textbf{Utilizzo}: i suoi metodi vengono invocati quando viene richiesto dal client dei dati relativi ad una pagina o ad un evento di Facebook;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::fb::PageResponse
+          \item server::endpoints::resp::public::fb::PageTrendListResponse
+          \item server::endpoints::resp::public::fb::PostListResponse
+          \item server::endpoints::resp::public::fb::EventResponse
+          \item server::endpoints::resp::public::fb::EventTrendListResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_public_fbmetricsapi (end)
@@ -89,11 +103,14 @@
     \subparagraph{bdsm\_app::server::endpoints::api::public::TwMetricsApi} % (fold)
     \label{subp:bdsm_app_server_endpoints_api_public_twmetricsapi}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: classe utilizzata dal client per ottenere i dati relativi ad una metrica di Twitter;
+      \item \textbf{Utilizzo}: i suoi metodi vengono invocati quando viene richiesto dal client dei dati relativi ad un utente o un hashtag di Twitter;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::tw::UserResponse
+          \item server::endpoints::resp::public::tw::UserTrendListResponse
+          \item server::endpoints::resp::public::tw::TweetListResponse
+          \item server::endpoints::resp::public::tw::HashtagResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_public_twmetricsapi (end)
@@ -101,11 +118,15 @@
     \subparagraph{bdsm\_app::server::endpoints::api::public::IgMetricsApi} % (fold)
     \label{subp:bdsm_app_server_endpoints_api_public_igmetricsapi}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: classe utilizzata dal client per ottenere i dati relativi ad una metrica di Instagram;
+      \item \textbf{Utilizzo}: i suoi metodi vengono invocati quando viene richiesto dal client dei dati relativi ad un utente o hashtag di Instagram;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::public::ig::UserResponse
+          \item server::endpoints::resp::public::ig::UserTrendListResponse
+          \item server::endpoints::resp::public::ig::MediaListResponse
+          \item server::endpoints::resp::public::ig::HashtagResponse
+          \item server::endpoints::resp::public::ig::MediaListResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_public_igmetricsapi (end)
@@ -117,7 +138,10 @@
 \begin{itemize}
   \item \textbf{Descrizione}: è il package contenente le classi che definiscono i servizi REST privati [TO DO];
   \item \textbf{Padre}: server::endpoints::api
-  \item \textbf{Interazione con altri componenti}: [TO DO];
+  \item \textbf{Interazione con altri componenti}:
+  	\begin{itemize}
+        \item server::processor
+    \end{itemize}
 \end{itemize}
 % subsubsection
 
@@ -126,11 +150,11 @@
     \subparagraph{bdsm\_app::server::endpoints::api::private::RecipeApi} % (fold)
     \label{subp:bdsm_app_server_endpoints_api_private_recipeapi}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: classe utilizzata dal client per aggiungere, rimuovere e valutare una ricetta;
+      \item \textbf{Utilizzo}: i suoi metodi vengono invocati quando viene richiesto dal client di aggiungere, rimuovere o valutare una Recipe;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::private::RecipeListResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_private_recipeapi (end)
@@ -138,11 +162,11 @@
     \subparagraph{bdsm\_app::server::endpoints::api::private::UserApi} % (fold)
     \label{subp:bdsm_app_server_endpoints_api_private_userapi}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: classe utilizzata dal client per ricavare i dati, aggiungere, modificare i dati, modificare i permessi e rimuovere un utente;
+      \item \textbf{Utilizzo}: i suoi metodi vengono invocati quando viene richiesto dal client di aggiungere o rimuovere un utente, ricavare o modificare i dati di un utente o per modificare i dati di un utente;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::private::UserResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_private_userapi (end)
@@ -150,11 +174,11 @@
     \subparagraph{bdsm\_app::server::endpoints::api::private::RecipeRequestApi} % (fold)
     \label{subp:bdsm_app_server_endpoints_api_private::reciperequestapi}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: classe utilizzata dal client per aggiungere e rimuovere la richiesta di una Recipe;
+      \item \textbf{Utilizzo}: i suoi metodi vengono invocati quando viene inviata una richiesta di nuova Recipe o la rimozione di una richiesta precedente da parte del client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::private::RecipeReqListResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_private_reciperequestapi (end)
@@ -162,11 +186,11 @@
     \subparagraph{bdsm\_app::server::endpoints::api::private::FavoritesApi} % (fold)
     \label{subp:bdsm_app_server_endpoints_api_private_favoritesapi}
     \begin{itemize}
-      \item \textbf{Descrizione}: [TODO];
-      \item \textbf{Utilizzo}: [TODO];
+      \item \textbf{Descrizione}: classe utilizzata dal client per aggiungere una Recipe ai preferiti o rimuoverne una già presente dai preferiti;
+      \item \textbf{Utilizzo}: i suoi metodi vengono invocati quando viene richiesto dal client l'inserimento di una Recipe nei preferiti o quando viene richiesta la rimozione di una Recipe dai preferiti;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item [TODO];
+          \item server::endpoints::resp::private::FavoriteListResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_private_favoritesapi (end)
