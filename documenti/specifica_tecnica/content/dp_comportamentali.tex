@@ -19,6 +19,7 @@
 
 \subsection{Design pattern comportamentali} % (fold)
 \label{sub:design_pattern_comportamentali}
+
 	\subsubsection{Page Controller} % (fold)
 	\label{ssub:page_controller}
 	\begin{itemize}
@@ -32,26 +33,6 @@
 	% subsubsection page_controller (end)
 
 
-	\subsubsection{Template Method} % (fold)
-	\label{ssub:template_method}
-		\begin{itemize}
-			\item \textbf{Scope dell'utilizzo}: questo pattern serve per definire lo scheletro di un algoritmo, lasciando l'implementazione di alcuni passi alle sottoclassi;
-			\item \textbf{Contesto dell'utilizzo}:
-				\begin{itemize}
-					\item \textbf{Client}: viene utilizzato nel package \ref{ssub:bdsm_app_client_model_services}, per permettere di generare tipi di grafici diversi che però hanno in comune la prima parte dell'algoritmo che li genera. In particolare la parte comune si occupa del recupero dei dati a prescindere da quali grafico li userà.
-					\begin{figure}[htbp]
-						\centering
-						\centerline{\includegraphics[scale=0.50]{./images/design_pattern_client/client_template_method.pdf}}
-						\caption{Contestualizzazione Template Method - Client}
-					\end{figure}
-
-					\item \textbf{Server}: viene utilizzato nel package \texttt{server::miner}, implementato dalla gerarchia di classi con \texttt{AbsCounter} come classe padre. L'algoritmo serve ad effettuare il counting di differenti entità ottenute tramite le API dei vari social network al fine di ottenere i dati grezzi richiesti. L'algoritmo contiene uno scheletro comune esposto dalla classe padre e viene implementato a seconda del social e del dato di cui si vuole effettuare il conteggio. \newline
-					[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
-				\end{itemize}
-		\end{itemize}
-	% subsubsection template_method (end)
-
-
 	\subsubsection{Template View} % (fold)
 	\label{ssub:template_view}
 		\begin{itemize}
@@ -60,7 +41,7 @@
 				\begin{itemize}
 					\item \textbf{Client}: viene utilizzato in tutti i template HTML presentati nel package \texttt{client::view} presente alla sezione \ref{ssub:bdsm_app_client_view}. \newline
 					Ne viene qui di seguito illustrata una implementazione relativa al template HTML \texttt{Settings}. \newline
-					\begin{figure}[htbp]
+					\begin{figure}[!htbp]
 						\centering
 						\centerline{\includegraphics[scale=0.50]{./images/design_pattern_client/client_template_view.pdf}}
 						\caption{Contestualizzazione Template View - Client}
@@ -77,8 +58,37 @@
 			\item \textbf{Contesto dell'utilizzo}:
 				\begin{itemize}
 					\item \textbf{Server}: viene utilizzato nel package \texttt{server::processor} in associazione al pattern Front Controller, il cui il dispatcher si occupa di indirizzare la richiesta ricevuta al relativo comando. \newline
-					[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
+					\begin{figure}[!htbp]
+						\centering
+						\centerline{\includegraphics[scale=0.35]{./images/design_pattern_server/dp_command.pdf}}
+						\caption{Contestualizzazione Command - Server}
+					\end{figure}
 				\end{itemize}
 		\end{itemize}
 	% subsubsection command (end)
+
+
+	\subsubsection{Template Method} % (fold)
+	\label{ssub:template_method}
+		\begin{itemize}
+			\item \textbf{Scope dell'utilizzo}: questo pattern serve per definire lo scheletro di un algoritmo, lasciando l'implementazione di alcuni passi alle sottoclassi;
+			\item \textbf{Contesto dell'utilizzo}:
+				\begin{itemize}
+					\item \textbf{Client}: viene utilizzato nel package \ref{ssub:bdsm_app_client_model_services}, per permettere di generare tipi di grafici diversi che però hanno in comune la prima parte dell'algoritmo che li genera. In particolare la parte comune si occupa del recupero dei dati a prescindere da quali grafico li userà.
+					\begin{figure}[!htbp]
+						\centering
+						\centerline{\includegraphics[scale=0.40]{./images/design_pattern_client/client_template_method.pdf}}
+						\caption{Contestualizzazione Template Method - Client}
+					\end{figure}
+
+					\item \textbf{Server}: viene utilizzato nel package \texttt{server::miner}, implementato dalla gerarchia di classi con \texttt{AbsCounter} come classe padre. L'algoritmo serve ad effettuare il counting di differenti entità ottenute tramite le API dei vari social network al fine di ottenere i dati grezzi richiesti. L'algoritmo contiene uno scheletro comune esposto dalla classe padre e viene implementato a seconda del social e del dato di cui si vuole effettuare il conteggio. \newline
+					\begin{figure}[!htbp]
+						\centering
+						\centerline{\includegraphics[scale=0.30]{./images/design_pattern_server/dp_template_method.pdf}}
+						\caption{Contestualizzazione Template Method - Server}
+					\end{figure}
+				\end{itemize}
+		\end{itemize}
+	% subsubsection template_method (end)
+
 % subsection design_pattern_comportamentali (end)

@@ -65,7 +65,11 @@
 					\item \textbf{Client}: viene utilizzato direttamente da AngularJS quando si utilizzano i ``service'' o i ``factory'', utilizzati per creare la logica di business del front-end nel package \texttt{client::model}. Il framework gestisce internamente questo pattern attraverso una hash map che risiede nella cache. Essa rappresenta un singleton manager che detiene le dipendenze che vengono istanziate e le restituisce quando richieste senza crearne una nuova se questa esiste già. \newline
 					Non ne viene fornita nessuna rappresentazione grafica in quanto non è una cosa che viene progettata dal team, ma usata direttamente attraverso il framework scelto;
 					\item \textbf{Server}: viene utilizzato dalla classe \texttt{server::endpoints::RequestHandler} in quanto quest'ultima, essendo implementata secondo il pattern Front Controller, rappresenta il punto di accesso comune a tutto il sistema in cui confluiscono le richieste provenienti dalle classi appartenenti al package \texttt{server::endpoints} (\ref{ssub:bdsm_app_server_endpoints}). \newline
-					[TO DO] (grafico del pattern applicato al caso di utilizzo nell'applicativo)
+					\begin{figure}[!htbp]
+						\centering
+						\centerline{\includegraphics[scale=0.50]{./images/design_pattern_server/dp_singleton.pdf}}
+						\caption{Contestualizzazione Singleton - Server}
+					\end{figure}
 				\end{itemize}
 		\end{itemize}
 	% subsubsection singleton (end)
