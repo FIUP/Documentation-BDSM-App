@@ -80,6 +80,7 @@
           \item server::processor::recipe
           \item server::processor::requests
           \item server::processor::user
+          \item server::processor::user
         \end{itemize}
       \item \textbf{Interazione con altri componenti}:
         \begin{itemize}
@@ -120,7 +121,7 @@
         \label{subp:bdsm_app_server_processor_commands_user_absusercommand}
         \begin{itemize}
           \item \textbf{Descrizione}: rappresenta una classe comune a tutti i comandi relativi alla gestione degli utenti;
-          \item \textbf{Utilizzo}: è stata rappresentata come classe in quanto potrà contentere uno o più metodi di utilità comuni a tutti i comandi relativi alla gestione degli utenti;
+          \item \textbf{Utilizzo}: è stata rappresentata come classe in quanto potrà contenere uno o più metodi di utilità comuni a tutti i comandi relativi alla gestione degli utenti;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
               \item server::processor::commands::ICommand
@@ -248,7 +249,7 @@
         \label{subp:bdsm_app_server_processor_commands_recipe_absrecipecommand}
         \begin{itemize}
           \item \textbf{Descrizione}: rappresenta una classe comune a tutti i comandi relativi alla gestione delle Recipe;
-          \item \textbf{Utilizzo}: è stata rappresentata come classe in quanto potrà contentere uno o più metodi di utilità comuni a tutti i comandi relativi alla gestione delle Recipe;
+          \item \textbf{Utilizzo}: è stata rappresentata come classe in quanto potrà contenere uno o più metodi di utilità comuni a tutti i comandi relativi alla gestione delle Recipe;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
               \item server::processor::commands::ICommand;
@@ -259,8 +260,20 @@
         \subparagraph{bdsm\_app::server::processor::commands::recipe::GetRecipeCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_recipe_getrecipecommand}
         \begin{itemize}
-          \item \textbf{Descrizione}: definisce la logica per ottenere una determinata Recipe dal database;
-          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere una determinata Recipe dal database;
+          \item \textbf{Descrizione}: definisce la logica per ottenere una determinata Recipe e la lista delle metriche associata ad essa;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere una determinata Recipe e la lista delle metriche associata ad essa;
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item server::processor::commands::recipe::AbsRecipeCommand
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::recipe::GetRecipeListCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_recipe_getrecipelistcommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: definisce la logica per ottenere la lista delle Recipe presenti nel sistema;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere la lista delle Recipe presenti nel sistema;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
               \item server::processor::commands::recipe::AbsRecipeCommand
@@ -327,7 +340,7 @@
         \label{subp:bdsm_app_server_processor_commands_requests_absrequestcommand}
         \begin{itemize}
           \item \textbf{Descrizione}: rappresenta una classe comune a tutti i comandi relativi alla gestione delle richieste di aggiunta Recipe;
-          \item \textbf{Utilizzo}: è stata rappresentata come classe in quanto potrà contentere uno o più metodi di utilità comuni a tutti i comandi relativi alla gestione dellerichieste di aggiunta Recipe;
+          \item \textbf{Utilizzo}: è stata rappresentata come classe in quanto potrà contenere uno o più metodi di utilità comuni a tutti i comandi relativi alla gestione delle richieste di aggiunta Recipe;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
               \item server::processor::commands::ICommand
@@ -406,6 +419,259 @@
             \end{itemize}
         \end{itemize}
         % subparagraph (end)
+
+      % ================================
+      % SERVER::COMMANDS::SOCIAL PACKAGE
+      %
+      \subsubsection{bdsm\_app::server::processor::commands::social} % (fold)
+      \label{ssub:bdsm_app_server_processor_commands_social}
+      [TO DO] (diagramma) \newline \newline
+
+      \begin{itemize}
+        \item \textbf{Descrizione}: contiene tutti i comandi che per ottenere tutti i dati grezzi ricavati dai social network;
+        \item \textbf{Padre}: server::processor::commands;
+        \item \textbf{Interazione con altri componenti}:
+          \begin{itemize}
+            \item server::db
+          \end{itemize}
+      \end{itemize}
+
+        \paragraph{Classi} % (fold)
+
+        \subparagraph{bdsm\_app::server::processor::commands::social::AbsSocialCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_social_abssocialcommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: rappresenta una classe comune a tutti i comandi relativi alla gestione dei dati grezzi ricavati dai social network;
+          \item \textbf{Utilizzo}: è stata rappresentata come classe in quanto potrà contenere uno o più metodi di utilità comuni a tutti i comandi relativi alla gestione dei dati grezzi ricavati dai social network;
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item server::processor::commands::ICommand
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        % FACEBOOK
+
+        \subparagraph{bdsm\_app::server::processor::commands::social::AbsFbCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_social_absfbcommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: rappresenta una classe comune a tutti i comandi relativi alla gestione dei dati grezzi ricavati da Facebook;
+          \item \textbf{Utilizzo}: è stata rappresentata come classe in quanto potrà contenere uno o più metodi di utilità comuni a tutti i comandi relativi alla gestione dei dati grezzi ricavati da Facebook;
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item server::processor::commands::social::AbsSocialCommand
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::social::FbPageCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_social_fbpagecommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi ad una pagina Facebook;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere i dati grezzi relativi ad una pagin Facebook;
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item server::processor::commands::social::AbsFbCommand
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::social::FbPageTrendCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_social_fbpagetrendcommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi al trend di una pagina Facebook;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere i dati grezzi relativi al trend di una pagina Facebook;
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item server::processor::commands::social::AbsFbCommand
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::social::FbPostsCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_social_fbpostscommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi al trend dei post di una pagina Facebook;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere i dati grezzi relativi al trend dei post di una pagina Facebook;
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item server::processor::commands::social::AbsFbCommand
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::social::FbEventCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_social_fbeventcommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi ad un evento Facebook;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere i dati grezzi relativi ad un evento Facebook;
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item server::processor::commands::social::AbsFbCommand
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::social::FbEventTrendCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_social_fbeventtrendcommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi al trend di un evento Facebook;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere i dati grezzi relativi al trend di un evento Facebook;
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item server::processor::commands::social::AbsFbCommand
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::social::FbEventPostCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_social_fbeventpostcommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi al trend dei post di un evento Facebook;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere i dati grezzi relativi al trend dei post di un evento Facebook;
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item server::processor::commands::social::AbsFbCommand
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        % TWITTER
+
+        \subparagraph{bdsm\_app::server::processor::commands::social::AbsTwCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_social::abstwcommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: rappresenta una classe comune a tutti i comandi relativi alla gestione dei dati grezzi ricavati da Twitter;
+          \item \textbf{Utilizzo}: è stata rappresentata come classe in quanto potrà contenere uno o più metodi di utilità comuni a tutti i comandi relativi alla gestione dei dati grezzi ricavati da Twitter;
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item server::processor::commands::social::AbsSocialCommand
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::social::TwUserCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_social_twusercommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi ad un utente Twitter;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere i dati grezzi relativi ad un utente Twitter;
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item server::processor::commands::social::AbsTwCommand
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::social::TwUserTrendCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_social_twusertrendcommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi al trend di un utente Twitter;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere i dati grezzi relativi al trend di un utente Twitter;
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item server::processor::commands::social::AbsTwCommand
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::social::TwUserTweetsCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_social_twcommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi al trend dei tweet di un utente Twitter;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere i dati grezzi relativi al trend dei tweet di un utente Twitter;
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item server::processor::commands::social::AbsTwCommand
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::social::TwHashtagTweetsCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_social_twhashtagtweetscommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi associati al trend dei tweet relativi ad un daterminato hashtag;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere i dati grezzi associati al trend dei tweet relativi ad un daterminato hashtag;
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item server::processor::commands::social::AbsTwCommand
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        % INSTAGRAM
+
+        \subparagraph{bdsm\_app::server::processor::commands::social::AbsIgCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_social_absigcommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: rappresenta una classe comune a tutti i comandi relativi alla gestione dei dati grezzi ricavati da Instgram;
+          \item \textbf{Utilizzo}: è stata rappresentata come classe in quanto potrà contenere uno o più metodi di utilità comuni a tutti i comandi relativi alla gestione dei dati grezzi ricavati da Instagram;
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item server::processor::commands::social::AbsSocialCommand
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::social::IgUserCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_social_igusercommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi ad un utente Instagram;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere i dati grezzi relativi ad un utente Instagram;
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item server::processor::commands::social::AbsIgCommand
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::social::IgUserTrendCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_social_igusertrendcommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi al trend di un utente Instagram;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere i dati grezzi relativi al trend di un utente Instagram;
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item server::processor::commands::social::AbsIgCommand
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::social::IgUserMediaCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_social_igusermediacommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi al trend dei media di un utente Instagram;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere i dati grezzi relativi al trend dei media di un utente Instagram;
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item server::processor::commands::social::AbsIgCommand
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::social::IgHashtagTrendCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_social_ighashtagtrendcommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi al trend di un hashtag di Intagram;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere i dati grezzi relativi al trend di un hashtag di Intagram;
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item server::processor::commands::social::AbsIgCommand
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{bdsm\_app::server::processor::commands::social::IgHashtagMediaCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_social_twhashtagmediacommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi al trend dei media associati ad un hashtag di Instagram;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere i dati grezzi relativi al trend dei media associati ad un hashtag di Instagram;
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item server::processor::commands::social::AbsIgCommand
+            \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
     % subsubsection
   % subsubsection
 % subsubsection
