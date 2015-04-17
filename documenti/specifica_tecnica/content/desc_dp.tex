@@ -36,7 +36,7 @@
 			\item \textbf{Scopo}: L'architettura Three-Tier, detta anche ``a tre strati'', identifica una particolare architettura software per l'esecuzione di un'applicazione web che prevede la suddivisione dell'applicazione in tre diversi moduli o strati dedicati rispettivamente all'interfaccia utente, alla logica funzionale e alla gestione dei dati persistenti. Tale architettura va tipicamente a mappare a livello fisico-infrastrutturale quella del sistema informatico ospitante l'applicazione da eseguire.
 Tali moduli sono intesi interagire fra loro secondo le linee generali del paradigma client-server ( l'interfaccia è cliente della business logic, e questa è cliente del modulo di gestione dei dati persistenti) e utilizzando interfacce ben definite. In questo modo, ciascuno dei tre moduli può essere modificato o sostituito indipendentemente dagli altri conferendo scalabilità e manutenibilità all'applicazione. Nella maggior parte dei casi, i diversi moduli possono essere distribuiti su diversi nodi di una rete anche eterogenea;
 
-			\item \textbf{Motivazione}: E' stato scelto questo pattern perché il suo utilizzo è particolarmente diffuso nelle web application per poter disporre di moduli distribuiti, posti su piattaforme separate. Questa separazione aumenta le prestazioni e la scalabilità, l'estensibilità dei moduli e lo sviluppo parallelo degli stessi;
+			\item \textbf{Motivazione}: \'E stato scelto questo pattern perché il suo utilizzo è particolarmente diffuso nelle web application per poter disporre di moduli distribuiti, posti su piattaforme separate. Questa separazione aumenta le prestazioni e la scalabilità, l'estensibilità dei moduli e lo sviluppo parallelo degli stessi;
 
 			\item \textbf{Applicabilità}: Oltre ai vantaggi abituali nell'utilizzare software modulare con interfacce ben definite, l'architettura Three-Tier consente anche a qualsiasi dei tre livelli di essere aggiornato o sostituito indipendentemente dal cambiamento di requisiti o tecnologia nell'applicazione;
 
@@ -46,7 +46,11 @@ Tali moduli sono intesi interagire fra loro secondo le linee generali del paradi
 
 		\newpage
 		\subsubsection{MVC} % (fold)
-		TO DO (da rifare grafico tramite Astah in maniera che sia conforme agli altri grafici, può essere sempre generale a livello di nomi, ma così viene più elegante)
+		\begin{figure}[htbp]
+			\centering
+			\centerline{\includegraphics[scale=0.5]{./images/designpatternappendice/mvc.pdf}}
+			\caption{Design pattern architetturale - MVC}
+		\end{figure}
 
 		\begin{itemize}
 			\item \textbf{Scopo}: Il pattern è basato sulla separazione dei compiti fra i componenti software che interpretano tre ruoli principali:
@@ -60,7 +64,7 @@ Tali moduli sono intesi interagire fra loro secondo le linee generali del paradi
 		\noindent
 		Questo schema implica anche la tradizionale separazione fra la logica applicativa (in questo contesto spesso chiamata ``logica di business''), a carico del Controller e del model, e l'interfaccia utente a carico del view. I dettagli delle interazioni fra questi tre oggetti software dipendono molto dalle tecnologie usate (linguaggio di programmazione, eventuali librerie, middleware e via dicendo) e dal tipo di applicazione (per esempio se si tratta di un'applicazione web, o di un'applicazione desktop). Quasi sempre la relazione fra view e model è descrivibile anche come istanza del pattern Observer. A volte, quando è necessario cambiare il comportamento standard dell'applicazione a seconda delle circostanze, il Controller implementa anche il pattern Strategy.;
 
-			\item \textbf{Motivazione}: E' stato scelto questo pattern perché è nata la necessità di rendere modulari le funzionalità dell'interfaccia utente. Utilizzando MVC viene quindi separata la modellazione dal dominio, dalla presentazione e dalle azioni basate sugli input degli utenti in tre classi separate;
+			\item \textbf{Motivazione}: \'E stato scelto questo pattern perché è nata la necessità di rendere modulari le funzionalità dell'interfaccia utente. Utilizzando MVC viene quindi separata la modellazione dal dominio, dalla presentazione e dalle azioni basate sugli input degli utenti in tre classi separate;
 
 			\item \textbf{Applicabilità}: Il pattern MVC può essere utilizzato in diversi casi:
 
@@ -75,13 +79,17 @@ Tali moduli sono intesi interagire fra loro secondo le linee generali del paradi
 
 		\newpage
 		\subsubsection{MVVM} % (fold)
-		TO DO (grafico)
+		\begin{figure}[htbp]
+			\centering
+			\centerline{\includegraphics[scale=0.5]{./images/designpatternappendice/mvvm.pdf}}
+			\caption{Design pattern architetturale - MVVM}
+		\end{figure}
 
 		\begin{itemize}
-			\item \textbf{Scopo}: E' una variante del pattern MVC. Questo pattern propone un ruolo più attivo della View rispetto a MVC: la View è in grado di gestire eventi, eseguire operazioni ed effettuare il data-binding. In questo contesto, quindi, alcune delle funzionalità del Controller vengono inglobate nella View, la quale si appoggia su un'estensione del Model: il ViewModel.
+			\item \textbf{Scopo}: \'E una variante del pattern MVC. Questo pattern propone un ruolo più attivo della View rispetto a MVC: la View è in grado di gestire eventi, eseguire operazioni ed effettuare il data-binding. In questo contesto, quindi, alcune delle funzionalità del Controller vengono inglobate nella View, la quale si appoggia su un'estensione del Model: il ViewModel.
 Il ViewModel è quindi un Model esteso con funzionalità per la manipolazione dei dati e per l'interazione con la View;
 
-			\item \textbf{Motivazione}: E' stato scelto questo pattern perché ha un impatto positivo nella progettazione di interfacce utente e viene implementato in modo semplice da Angular JS;
+			\item \textbf{Motivazione}: \'E stato scelto questo pattern perché ha un impatto positivo nella progettazione di interfacce utente e viene implementato in modo semplice da Angular JS;
 
 			\item \textbf{Applicabilità}: Il pattern MVVM è consigliato qualora si voglia separare interamente la progettazione dell'interfaccia grafica dalla business logic dell'applicazione;
 
@@ -97,7 +105,7 @@ Il ViewModel è quindi un Model esteso con funzionalità per la manipolazione de
 		\end{figure}
 
 		\begin{itemize}
-			\item \textbf{Scopo}: è quello di semplificare lo sviluppo e migliorare la testabilità di software di grandi dimensioni.
+			\item \textbf{Scopo}: \'E quello di semplificare lo sviluppo e migliorare la testabilità di software di grandi dimensioni.
 Il pattern Dependency Injection coinvolge almeno tre elementi:
 
 				\begin{itemize}
@@ -106,7 +114,7 @@ Il pattern Dependency Injection coinvolge almeno tre elementi:
 					\item un injector (chiamato anche provider o container) che crea, a richiesta, le istanze delle classi che implementano delle dependency interfaces;
 				\end{itemize}
 
-			\item \textbf{Motivazione}: E' stato scelto questo pattern perché TO DO;
+			\item \textbf{Motivazione}: \'E stato scelto questo pattern perché TO DO;
 
 			\item \textbf{Applicabilità}: Il pattern Dependency Injection viene utilizzato principalmente nei seguenti casi di:
 			\begin{itemize}
@@ -117,7 +125,7 @@ Il pattern Dependency Injection coinvolge almeno tre elementi:
 La Dependency Injection può essere realizzata in molteplici modi, tra cui il più semplice consiste nell'utilizzo di un factory method;
 
 		\end{itemize}
-		
+
 	% subsection design_pattern_architetturali (end)
 
 
@@ -135,7 +143,7 @@ La Dependency Injection può essere realizzata in molteplici modi, tra cui il pi
 		\begin{itemize}
 			\item \textbf{Scopo}: Prototype permette di creare nuovi oggetti clonando un oggetto iniziale, detto appunto prototipo. A differenza di altri pattern come Abstract Factory o Factory Method permette di specificare nuovi oggetti a tempo d'esecuzione (run-time), utilizzando un gestore di prototipi ( detto prototype manager ) per salvare e reperire dinamicamente le istanze degli oggetti desiderati;
 
-			\item \textbf{Motivazione}: E' stato scelto questo pattern perché permette di incapsulare al suo interno la modalità di istanziazione degli oggetti, liberando il client dalla necessità di conoscere i nomi delle classi da instanziare. Inoltre permette di ridurre la complessità della gerarchia delle sottoclassi rispetto al Factory Method ed evitare la duplicazione di codice quando si usano diverse classi simili tra loro;
+			\item \textbf{Motivazione}: \'E stato scelto questo pattern perché permette di incapsulare al suo interno la modalità di istanziazione degli oggetti, liberando il client dalla necessità di conoscere i nomi delle classi da instanziare. Inoltre permette di ridurre la complessità della gerarchia delle sottoclassi rispetto al Factory Method ed evitare la duplicazione di codice quando si usano diverse classi simili tra loro;
 
 			\item \textbf{Applicabilità}: Come altri pattern creazionali, Prototype mira a rendere indipendente un sistema dal modo in cui i suoi oggetti vengono creati;
 
@@ -144,12 +152,16 @@ La Dependency Injection può essere realizzata in molteplici modi, tra cui il pi
 
 		\newpage
 		\subsubsection{Module Pattern} % (fold)
-		TO DO (grafico)
+		\begin{figure}[htbp]
+			\centering
+			\centerline{\includegraphics[scale=0.5]{./images/designpatternappendice/module_pattern.pdf}}
+			\caption{Design pattern creazionale - Module Pattern}
+		\end{figure}
 
 		\begin{itemize}
 			\item \textbf{Scopo}: Il module pattern prevede che l'applicazione che lo implementa sia divisa in moduli funzionali distinti. Essi consentono di organizzare le parti di un’applicazione in unità separate ma integrabili grazie ai meccanismi di esportazione e importazione, cioè rispettivamente della possibilità di rendere pubblicamente accessibile del codice e di accedere a codice esportato da altri moduli;
 
-			\item \textbf{Motivazione}: E' stato scelto questo pattern perché permette all'applicazione di essere robusta e facilmente mantenibile definendo un codice più chiaro e modulare. Permette inoltre una rapida risoluzione dei nomi, evitando ambiguità con i metodi e le variabili di altre funzioni globali;
+			\item \textbf{Motivazione}: \'E stato scelto questo pattern perché permette all'applicazione di essere robusta e facilmente manutenibile definendo un codice più chiaro e modulare. Permette inoltre una rapida risoluzione dei nomi, evitando ambiguità con i metodi e le variabili di altre funzioni globali;
 
 			\item \textbf{Applicabilità}: Il module pattern è un design pattern usato per implementare il concetto dei moduli software in linguaggi di programmazione che non la supportano nativamente, come per esempio JavaScript;
 
@@ -168,7 +180,7 @@ La Dependency Injection può essere realizzata in molteplici modi, tra cui il pi
 		\begin{itemize}
 			\item \textbf{Scopo}: Il singleton ha lo scopo di garantire che di una determinata classe venga creata una e una sola istanza, e di fornire un punto di accesso globale a tale istanza;
 
-			\item \textbf{Motivazione}: E' stato scelto questo pattern perché permette di creare istanze uniche di classi all'interno dell'applicazione;
+			\item \textbf{Motivazione}: \'E stato scelto questo pattern perché permette di creare istanze uniche di classi all'interno dell'applicazione;
 
 			\item \textbf{Applicabilità}: Il pattern Singleton può essere utilizzato quando deve esistere una sola istanza di una classe in tutta l'applicazione e quando l'unica istanza deve poter essere estesa attraverso la definizione di sottoclassi garantendo che i client possano utilizzare le istanze estese senza dover modificare il proprio codice;
 		\end{itemize}
@@ -182,15 +194,16 @@ La Dependency Injection può essere realizzata in molteplici modi, tra cui il pi
 	\newpage
 	\subsection{Design pattern strutturali} % (fold)
 		\subsubsection{Fa\c{c}ade} % (fold)
-		TO DO (grafico)
+		\begin{figure}[htbp]
+			\centering
+			\centerline{\includegraphics[scale=0.5]{./images/designpatternappendice/facade.pdf}}
+			\caption{Design pattern strutturale - Fa\c{c}ade}
+		\end{figure}
 
 		\begin{itemize}
 			\item \textbf{Scopo}: Il Fa\c{c}ade pattern suggerisce la creazione di un oggetto che presenti un'interfaccia semplificata al cliente, ma in grado di gestire tutta la complessità delle interazioni tra gli oggetti delle diverse classi per compiere l'obbiettivo desiderato;
-
-			\item \textbf{Motivazione}: E' stato scelto questo pattern perché fornisce una interfaccia unificata per un insieme di interfacce di un sottosistema, rendendo più facile l'uso di quest'ultimo;
-
+			\item \textbf{Motivazione}: \'E stato scelto questo pattern perché fornisce una interfaccia unificata per un insieme di interfacce di un sottosistema, rendendo più facile l'uso di quest'ultimo;
 			\item \textbf{Applicabilità}: Questo pattern può essere utilizzato per fornire una vista semplice e di default di un sottosistema complesso e nel caso di sottosistema stratificato, come entry point per ciascun livello;
-
 		\end{itemize}
 
 
@@ -207,10 +220,9 @@ La Dependency Injection può essere realizzata in molteplici modi, tra cui il pi
 		\begin{itemize}
 			\item \textbf{Scopo}: Lo scopo è quello di fornire una soluzione astratta al problema dell'interoperabilità tra interfacce differenti. Questo problema si presenta ogni qual volta nel progetto di un software si debbano utilizzare oggetti la cui interfaccia non è perfettamente compatibile con quanto richiesto da applicazioni già esistenti. Invece di riscrivere parte del sistema, compito oneroso e non sempre possibile se non si ha a disposizione il codice sorgente, può essere comodo scrivere un adapter, appunto, che faccia da tramite;
 
-			\item \textbf{Motivazione}: E' stato scelto questo pattern perché permette l'interoperabilità tra diversi moduli, anche di terze parti, senza doverli modificare o riscrivere;
+			\item \textbf{Motivazione}: \'E stato scelto questo pattern perché permette l'interoperabilità tra diversi moduli, anche di terze parti, senza doverli modificare o riscrivere;
 
 			\item \textbf{Applicabilità}: Questo pattern può essere utilizzato quando interfacce di classi differenti devono comunque poter comunicare tra loro. Alcuni casi sono:
-
 			\begin{itemize}
 			\item l'utilizzo di una classe esistente che presenti un'interfaccia diversa da quella desiderata;
 			\item la scrittura di una determinata classe senza poter conoscere a priori le altre classi con cui dovrà operare;
@@ -225,31 +237,54 @@ La Dependency Injection può essere realizzata in molteplici modi, tra cui il pi
 	\newpage
 	\subsection{Design pattern comportamentali} % (fold)
 		\subsubsection{Page Controller} % (fold)
-		TO DO (grafico)
+		\begin{figure}[htbp]
+			\centering
+			\centerline{\includegraphics[scale=0.5]{./images/designpatternappendice/page_controller.pdf}}
+			\caption{Design pattern comportamentale - Page Controller}
+		\end{figure}
 
 		\begin{itemize}
 			\item \textbf{Scopo}: Il Page Controller pattern suggerisce la creazione di un oggetto dedicato che si occupa di gestire una richiesta per una specifica pagina o azione in un sito Web. Implica quindi che esiste un singolo file che gestisce la richiesta di una specifica pagina. Questo semplice meccanismo rispecchia il funzionamento delle pagine web statiche;
-					
-			\item \textbf{Motivazione}: E' stato scelto questo pattern perché semplifica la gestione delle pagine web statiche utilizzate dall'applicazione e permette di eseguire test e riutilizzare codice in modo agevole;
-			
+			\item \textbf{Motivazione}: \'E stato scelto questo pattern perché semplifica la gestione delle pagine web statiche utilizzate dall'applicazione e permette di eseguire test e riutilizzare codice in modo agevole;
 			\item \textbf{Applicabilità}: Questo pattern può essere utilizzato in quei casi in cui si voglia utilizzare un singolo oggetto per gestire tutte le richieste di una singola pagina logica, a differenza del Front Controller che invece gestisce le richieste di molteplici pagine logiche con un singolo oggetto;
-
 		\end{itemize}
 		% subsubsection page_controller (end)
 
 		\newpage
 		\subsubsection{Template View} % (fold)
-		TO DO (grafico)
+		\begin{figure}[htbp]
+			\centering
+			\centerline{\includegraphics[scale=0.5]{./images/designpatternappendice/template_view.pdf}}
+			\caption{Design pattern comportamentale - Template View}
+		\end{figure}
 
 		\begin{itemize}
-			\item \textbf{Scopo}: Questo pattern specifica la struttura algoritmica di una operazione, demandando l'implementazione di alcuni passi dei suoi metodi alle sottoclassi. Il Template Method consente di ridefinire certi passi di un algoritmo senza cambiarne la sua struttura;
-			
-			\item \textbf{Motivazione}: E' stato scelto questo pattern perché riduce in modo marcato la complessità della realizzazione di una pagina dinamica, tramite l'inserimento di marcatori in una struttura prefissata che serviranno come punti di ingresso per il contenuto dinamico generato;
-			
+			\item \textbf{Scopo}: [TO DO (rivedere, questo scopo è del template method)] Questo pattern specifica la struttura algoritmica di una operazione, demandando l'implementazione di alcuni passi dei suoi metodi alle sottoclassi. Il Template Method consente di ridefinire certi passi di un algoritmo senza cambiarne la sua struttura;
+			\item \textbf{Motivazione}: \'E stato scelto questo pattern perché riduce in modo marcato la complessità della realizzazione di una pagina dinamica, tramite l'inserimento di marcatori in una struttura prefissata che serviranno come punti di ingresso per il contenuto dinamico generato;
 			\item \textbf{Applicabilità}: Questo pattern viene utilizzato quando si vuole generare una pagina web dinamica allo stesso modo di una pagina web statica, definendo una struttura fissa e completandola con il contenuto dinamico richiesto;
-			
 		\end{itemize}
 		% subsubsection template_view (end)
+
+		\newpage
+		\subsubsection{Template Method} % (fold)
+		\label{ssub:template_method}
+		[TO DO] (grafico)
+		\begin{itemize}
+			\item \textbf{Scopo}: [TO DO];
+			\item \textbf{Motivazione}: [TO DO];
+			\item \textbf{Applicabilità}: [TO DO];
+		\end{itemize}
+		% subsubsection template_method (end)
+
+		\subsubsection{Command} % (fold)
+		\label{ssub:command}
+		[TO DO] (grafico)
+		\begin{itemize}
+			\item \textbf{Scopo}: [TO DO];
+			\item \textbf{Motivazione}: [TO DO];
+			\item \textbf{Applicabilità}: [TO DO];
+		\end{itemize}
+		% subsubsection command (end)
 
 	% subsection design_pattern_comportamentali (end)
 
