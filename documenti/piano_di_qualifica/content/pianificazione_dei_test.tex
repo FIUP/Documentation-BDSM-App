@@ -102,82 +102,84 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 
 			\def\arraystretch{1.5}
 			\bgroup
-			\begin{longtable}{| p{2.5cm} | p{5cm} | p{3.5cm} | p{1.5cm} |}
+			\begin{longtable}{| p{3.8cm} | p{4.5cm} | p{3.2cm} | p{1cm} |}
 					\hline
 					\textbf{Test} & \textbf{Descrizione} & \textbf{Componente} & \textbf{Stato}\\
-					\hline						
-					TIclient & Viene verificato che il sistema gestisca correttamente il front-end del prodotto. & bdsm\_app::\-client & N.I.\\
 					\hline
-					%TImodel & TO DO & bdsm\_app::\-client::\-model & N.I.\\
-					%\hline
-					TIdata & Viene verificato che il sistema gestisca correttamente la struttura di memorizzazione dei dati utilizzata. & bdsm\_app::\-client::\-model::\-data & N.I.\\
+					TIadmin\_controller & Viene verificato che il sistema gestisca correttamente le decisioni su quali pagine HTML mostrare all'utente amministratore e su quali operazioni può interagire quest'ultimo. & bdsm\_app::\-client::\-controller::\-admin & N.I.\\
 					\hline
-					TIservices & Viene verificato che il sistema gestisca correttamente l'interazione con il back-end. & bdsm\_app::\-client::\-model::\-services & N.I.\\
-					\hline
-					TIview & Viene verificato che il sistema permetta una corretta visualizzazione dell'interfaccia grafica. & bdsm\_app::\-client::\-view & N.I.\\
-					\hline
-					%TIview\_public & TO DO & bdsm\_app::\-client::\-view::\-public & N.I.\\
-					%\hline
-					%TIview\_user & TO DO & bdsm\_app::\-client::\-view::\-user & N.I.\\
-					%\hline
-					%TIview\_admin & TO DO & bdsm\_app::\-client::\-view::\-admin & N.I.\\
-					%\hline
-					TIcontroller & Viene verificato che il sistema gestisca correttamente la componente Controller del design pattern MVC verificando che si integri correttamente nell'applicazione. & bdsm\_app::\-client::\-controller & N.I.\\
-					\hline
-					%TIcontroller\_public & TO DO & bdsm\_app::\-client::\-controller::\-public & N.I.\\
-					%\hline
-					%TIcontroller\_user & TO DO & bdsm\_app::\-client::\-controller::\-user & N.I.\\
-					%\hline
-					%TIcontroller\_admin & TO DO & bdsm\_app::\-client::\-controller::\-admin & N.I.\\
-					%\hline
-					TIserver & Viene verificato che il sistema gestisca correttamente il back-end del prodotto. & bdsm\_app::\-server & N.I.\\
-					\hline
-					TIdb & TO DO & bdsm\_app::\-server::\-db & N.I.\\
-					\hline
-					TIraw\_model & TO DO & bdsm\_app::\-server::\-db::\-raw\_model & N.I.\\
-					\hline
-					TIapp\_model & TO DO & bdsm\_app::\-server::\-db::\-app\_model & N.I.\\
-					\hline
-					TIprocessor & Viene verificato che il sistema gestisca correttamente le chiamate provenienti dai servizi REST utilizzati dal client. & bdsm\_app::\-server::\-processor & N.I.\\
-					\hline
-					TIcommands & TO DO & bdsm\_app::\-server::\-processor::\-commands & N.I.\\
-					\hline
-					TIuser & TO DO & bdsm\_app::\-server::\-processor::\-commands::\-user & N.I.\\
-					\hline
-					TIrecipe & TO DO & bdsm\_app::\-server::\-processor::\-commands::\-recipe & N.I.\\
-					\hline
-					TIrequests & TO DO & bdsm\_app::\-server::\-processor::\-commands::\-requests & N.I.\\
-					\hline
-					TIminer & Viene verificato che il sistema prelevi, elabori e salvi correttamente i dati dai diversi servizi. & bdsm\_app::\-server::\-miner & N.I.\\
-					\hline
-					TIminer\_fb & Viene verificato che il sistema prelevi, elabori e salvi correttamente i dati dal social network Facebook. & bdsm\_app::\-server::\-miner::\-fb & N.I.\\
-					\hline
-					TIminer\_tw & Viene verificato che il sistema prelevi, elabori e salvi correttamente i dati dal social network Twitter. & bdsm\_app::\-server::\-miner::\-tw & N.I.\\
-					\hline
-					TIminer\_ig & Viene verificato che il sistema prelevi, elabori e salvi correttamente i dati dal social network Instagram. & bdsm\_app::\-server::\-miner::\-ig & N.I.\\
-					\hline
-					TIendpoints & Viene verificato che il sistema gestisca correttamente la componente endpoints del server. Più precisamente viene verificato che il sistema gestisca correttamente le chiamate provenienti dal client e le relative risposte. & bdsm\_app::\-server::\-endpoints & N.I.\\
+					TIadmin\_view & Viene verificato che il sistema permetta una corretta visualizzazione di tutte le pagine HTML disponibili per l'utente amministratore. & bdsm\_app::\-client::\-view::\-admin & N.I.\\
 					\hline
 					TIapi & Viene verificato che il sistema effettui correttamente le chiamate ai servizi REST provenienti dal client. TO DO & bdsm\_app::\-server::\-endpoints::\-api & N.I.\\
 					\hline
-					TIapi\_public & Viene verificato che il sistema effettui correttamente le chiamate ai servizi REST pubblici provenienti dal client. & bdsm\_app::\-server::\-endpoints::\-api::\-public & N.I.\\
+					TIapp\_model & Viene verificato che il sistema gestisca correttamente il modello di dati degli utenti, delle Recipe, dei preferiti e delle richieste di nuove Recipe.. & bdsm\_app::\-server::\-db::\-app\_model & N.I.\\
 					\hline
-					TIapi\_private & Viene verificato che il sistema effettui correttamente le chiamate ai servizi REST privati provenienti dal client. & bdsm\_app::\-server::\-endpoints::\-api::\-private & N.I.\\
+					TIbdsm\_app & Viene verificata la correttezza generale del sistema integrante i livelli client, database e server.  & bdsm\_app & N.I.\\
+					\hline				
+					TIclient & Viene verificato che il sistema gestisca correttamente il front-end del prodotto. & bdsm\_app::\-client & N.I.\\
+					\hline
+					TIcommands & Viene verificato che il sistema gestisca correttamente le chiamate provenienti dal client.  & bdsm\_app::\-server::\-processor::\-commands & N.I.\\
+					\hline
+					%TIcontroller & Viene verificato che il sistema gestisca correttamente la componente Controller del design pattern MVC verificando che si integri correttamente nell'applicazione. & bdsm\_app::\-client::\-controller & N.I.\\
+					%\hline
+					TIdata & Viene verificato che il sistema gestisca correttamente la struttura di memorizzazione dei dati utilizzata. & bdsm\_app::\-client::\-model::\-data & N.I.\\
+					\hline
+					TIdb & Viene verificato che il sistema gestisca correttamente l'interazione con il database. & bdsm\_app::\-server::\-db & N.I.\\
+					\hline
+					TIendpoints & Viene verificato che il sistema gestisca correttamente la componente endpoints del server. Più precisamente viene verificato che il sistema gestisca correttamente le chiamate provenienti dal client e le relative risposte. & bdsm\_app::\-server::\-endpoints & N.I.\\
+					\hline
+					TIfb\_miner & Viene verificato che il sistema prelevi, elabori e salvi correttamente i dati dal social network Facebook. & bdsm\_app::\-server::\-miner::\-fb & N.I.\\
+					\hline
+					TIfb\_resp & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST pubblici che riguardano i dati provenienti dal social network Facebook. & bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-fb & N.I.\\
+					\hline
+					TIig\_miner & Viene verificato che il sistema prelevi, elabori e salvi correttamente i dati dal social network Instagram. & bdsm\_app::\-server::\-miner::\-ig & N.I.\\
+					\hline
+					TIig\_resp & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST pubblici che riguardano i dati provenienti dal social network Instagram. & bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-ig & N.I.\\
+					\hline
+					TIminer & Viene verificato che il sistema prelevi, elabori e salvi correttamente i dati dai diversi servizi. & bdsm\_app::\-server::\-miner & N.I.\\
+					\hline
+					%TImodel & TO DO & bdsm\_app::\-client::\-model & N.I.\\
+					%\hline
+					TIprivate\_api & Viene verificato che il sistema effettui correttamente le chiamate ai servizi REST privati provenienti dal client. & bdsm\_app::\-server::\-endpoints::\-api::\-private & N.I.\\
+					\hline
+					TIprivate\_resp & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST privati verso il client. & bdsm\_app::\-server::\-endpoints::\-resp::\-private & N.I.\\
+					\hline
+					TIprocessor & Viene verificato che il sistema gestisca correttamente le chiamate provenienti dai servizi REST utilizzati dal client. & bdsm\_app::\-server::\-processor & N.I.\\
+					\hline
+					TIpublic\_api & Viene verificato che il sistema effettui correttamente le chiamate ai servizi REST pubblici provenienti dal client. & bdsm\_app::\-server::\-endpoints::\-api::\-public & N.I.\\
+					\hline
+					TIpublic\_controller & Viene verificato che il sistema gestisca correttamente le decisioni su quali pagine HTML mostrare all'utente non autenticato e su quali operazioni può interagire quest'ultimo. & bdsm\_app::\-client::\-controller::\-public & N.I.\\
+					\hline
+					TIpublic\_resp & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST pubblici verso il client. & bdsm\_app::\-server::\-endpoints::\-resp::\-public & N.I.\\
+					\hline
+					TIpublic\_view & Viene verificato che il sistema permetta una corretta visualizzazione di tutte le pagine HTML disponibili per l'utente non autenticato. & bdsm\_app::\-client::\-view::\-public & N.I.\\
+					\hline
+					TIraw\_model & Viene verificato che il sistema gestisca correttamente il modello di dati grezzi ricavati dai vari social network. & bdsm\_app::\-server::\-db::\-raw\_model & N.I.\\
+					\hline
+					TIrecipe\_commands & Viene verificato che il sistema gestisca correttamente i comandi relativi alla gestione delle Recipe. & bdsm\_app::\-server::\-processor::\-commands::\-recipe & N.I.\\
+					\hline
+					TIrequests\_commands & Viene verificato che il sistema gestisca correttamente i comandi relativi alla gestione delle richieste di aggiunta delle Recipe. & bdsm\_app::\-server::\-processor::\-commands::\-requests & N.I.\\
 					\hline
 					TIresp & Viene verificato che il sistema gestisca correttamente le risposte verso il client. & bdsm\_app::\-server::\-endpoints::\-resp & N.I.\\
 					\hline
-					TIresp\_public & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST pubblici verso il client. & bdsm\_app::\-server::\-endpoints::\-resp::\-public & N.I.\\
+					TIserver & Viene verificato che il sistema gestisca correttamente il back-end del prodotto. & bdsm\_app::\-server & N.I.\\
 					\hline
-					TIresp\_fb & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST pubblici contenenti i dati proveniente dal social network facebook verso il client. & bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-fb & N.I.\\
+					TIservices & Viene verificato che il sistema gestisca correttamente l'interazione con il back-end. & bdsm\_app::\-client::\-model::\-services & N.I.\\
 					\hline
-					TIresp\_tw & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST pubblici contenenti i dati proveniente dal social network twitter verso il client. & bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-tw & N.I.\\
+					TIsocial\_commands & Viene verificato che il sistema gestisca correttamente i comandi relativi alla raccolta dei dati grezzi ricavati dai social network. & bdsm\_app::\-server::\-processor::\-commands::\-social & N.I.\\
 					\hline
-					TIresp\_ig & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST pubblici contenenti i dati proveniente dal social network instagram verso il client. & bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-ig & N.I.\\
+					TItw\_miner & Viene verificato che il sistema prelevi, elabori e salvi correttamente i dati dal social network Twitter. & bdsm\_app::\-server::\-miner::\-tw & N.I.\\
 					\hline
-					TIresp\_private & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST privati verso il client. & bdsm\_app::\-server::\-endpoints::\-resp::\-private & N.I.\\
+					TItw\_resp & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST pubblici che riguardano i dati provenienti dal social network Twitter. & bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-tw & N.I.\\
 					\hline
-					TIbdsm\_app & Viene verificata la correttezza generale del sistema integrante i livelli client e server.  & bdsm\_app & N.I.\\
+					TIuser\_commands & Viene verificato che il sistema gestisca correttamente i comandi relativi alla gestione degli utenti.  & bdsm\_app::\-server::\-processor::\-commands::\-user & N.I.\\
 					\hline
+					TIuser\_controller & Viene verificato che il sistema gestisca correttamente le decisioni su quali pagine HTML mostrare all'utente autenticato e su quali operazioni può interagire quest'ultimo. & bdsm\_app::\-client::\-controller::\-user & N.I.\\
+					\hline
+					TIuser\_view & Viene verificato che il sistema permetta una corretta visualizzazione di tutte le pagine HTML disponibili per l'utente autenticato. & bdsm\_app::\-client::\-view::\-user & N.I.\\
+					\hline
+					%TIview & Viene verificato che il sistema permetta una corretta visualizzazione dell'interfaccia grafica. & bdsm\_app::\-client::\-view & N.I.\\
+					%\hline
 			\caption{Tabella test di integrazione}
 			\end{longtable}
 				\egroup
@@ -196,21 +198,21 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 					\hline
 					bdsm\_app::\-client & TIclient\\
 					\hline
-					bdsm\_app::\-client::\-model & TImodel\\
+					bdsm\_app::\-client::\-model & Architettura del sistema\\
 					\hline
 					bdsm\_app::\-client::\-model::\-data & TIdata\\
 					\hline
 					bdsm\_app::\-client::\-model::\-services & TIservices\\
 					\hline
-					bdsm\_app::\-client::\-view & TIview\\
+					bdsm\_app::\-client::\-view & Architettura del sistema\\
 					\hline
-					bdsm\_app::\-client::\-view::\-public & TIview\_public\\
+					bdsm\_app::\-client::\-view::\-public & TIpublic\_view\\
 					\hline
-					bdsm\_app::\-client::\-view::\-user & TIview\_user\\
+					bdsm\_app::\-client::\-view::\-user & TIuser\_view\\
 					\hline
-					bdsm\_app::\-client::\-view::\-admin & TIview\_admin\\
+					bdsm\_app::\-client::\-view::\-admin & TIadmin\_view\\
 					\hline
-					bdsm\_app::\-client::\-controller & TIcontroller\\
+					bdsm\_app::\-client::\-controller & Architettura del sistema\\
 					\hline
 					bdsm\_app::\-client::\-controller::\-public & TIcontroller\_public\\
 					\hline
@@ -230,39 +232,41 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 					\hline
 					bdsm\_app::\-server::\-processor::\-commands & TIcommands\\
 					\hline
-					bdsm\_app::\-server::\-processor::\-commands::\-user & TIuser\\
+					bdsm\_app::\-server::\-processor::\-commands::\-user & TIuser\_commands\\
 					\hline
-					bdsm\_app::\-server::\-processor::\-commands::\-recipe & TIrecipe\\
+					bdsm\_app::\-server::\-processor::\-commands::\-recipe & TIrecipe\_commands\\
 					\hline
-					bdsm\_app::\-server::\-processor::\-commands::\-requests & TIrequests\\
+					bdsm\_app::\-server::\-processor::\-commands::\-requests & TIrequests\_commands\\
+					\hline
+					bdsm\_app::\-server::\-processor::\-commands::\-social & TIsocial\_commands\\
 					\hline
 					bdsm\_app::\-server::\-miner & TIminer\\
 					\hline
-					bdsm\_app::\-server::\-miner::\-fb & TIminer\_fb\\
+					bdsm\_app::\-server::\-miner::\-fb & TIfb\_miner\\
 					\hline
-					bdsm\_app::\-server::\-miner::\-tw & TIminer\_tw\\
+					bdsm\_app::\-server::\-miner::\-tw & TItw\_miner\\
 					\hline
-					bdsm\_app::\-server::\-miner::\-ig & TIminer\_ig\\
+					bdsm\_app::\-server::\-miner::\-ig & TIig\_miner\\
 					\hline
 					bdsm\_app::\-server::\-endpoints & TIendpoints\\
 					\hline
 					bdsm\_app::\-server::\-endpoints::\-api & TIapi\\
 					\hline
-					bdsm\_app::\-server::\-endpoints::\-api::\-public & TIapi\_public\\
+					bdsm\_app::\-server::\-endpoints::\-api::\-public & TIpublic\_api\\
 					\hline
-					bdsm\_app::\-server::\-endpoints::\-api::\-private & TIapi\_private\\
+					bdsm\_app::\-server::\-endpoints::\-api::\-private & TIprivate\_api\\
 					\hline
 					bdsm\_app::\-server::\-endpoints::\-resp & TIresp\\
 					\hline
-					bdsm\_app::\-server::\-endpoints::\-resp::\-public & TIresp\_public\\
+					bdsm\_app::\-server::\-endpoints::\-resp::\-public & TIpublic\_resp\\
 					\hline
-					bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-fb & TIresp\_fb\\
+					bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-fb & TIfb\_resp\\
 					\hline
-					bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-tw & TIresp\_tw\\
+					bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-tw & TItw\_resp\\
 					\hline
-					bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-ig & TIresp\_ig\\
+					bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-ig & TIig\_resp\\
 					\hline
-					bdsm\_app::\-server::\-endpoints::\-resp::\-private & TIresp\_private\\
+					bdsm\_app::\-server::\-endpoints::\-resp::\-private & TIprivate\_resp\\
 					\hline
 			\caption{Tracciamento componenti - test di integrazione}
 			\end{longtable}
