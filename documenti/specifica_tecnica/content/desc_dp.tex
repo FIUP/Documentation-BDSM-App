@@ -270,19 +270,34 @@ La Dependency Injection può essere realizzata in molteplici modi, tra cui il pi
 		\label{ssub:template_method}
 		[TO DO] (grafico)
 		\begin{itemize}
-			\item \textbf{Scopo}: [TO DO];
-			\item \textbf{Motivazione}: [TO DO];
-			\item \textbf{Applicabilità}: [TO DO];
+			\item \textbf{Scopo}: Il Template Method è un pattern comportamentale basato sulle classi e viene utilizzato prevalentemente nell'ambito della programmazione ad oggetti.
+Questo pattern permette di definire la struttura di un algoritmo delegando alle sottoclassi il compito di implementarne alcuni passi. In questo modo si può ridefinire e personalizzare parte del comportamento nelle varie sottoclassi senza dover riscrivere più volte il codice in comune nella classe principale;
+			\item \textbf{Motivazione}: \'E stato scelto questo pattern perché permette una maggior libertà nella definizione dei metodi, dando la possibilità di lavorare nelle sottoclassi senza dover apportare modifiche alla classe astratta principale;
+			\item \textbf{Applicabilità}: Questo pattern può essere utilizzato nei seguenti casi:
+			\begin{itemize}
+			\item quando si vuole implementare la parte invariante di un algoritmo una volta sola e lasciare che le sottoclassi implementino il comportamento variabile dello stesso;
+			\item quando il comportamento comune di più classi può essere inserito all'interno di una classe a parte per evitare la duplicazione di codice;
+			\item per avere modo di controllare quali metodi vengono ereditati dalla super-classe, facendo in modo che i metodi template siano gli unici metodi sovra scrivibili;
+			\end{itemize}
+
 		\end{itemize}
 		% subsubsection template_method (end)
 
+
+		\newpage
 		\subsubsection{Command} % (fold)
 		\label{ssub:command}
 		[TO DO] (grafico)
 		\begin{itemize}
-			\item \textbf{Scopo}: [TO DO];
-			\item \textbf{Motivazione}: [TO DO];
-			\item \textbf{Applicabilità}: [TO DO];
+			\item \textbf{Scopo}: Il Command pattern permette di isolare la porzione di codice che effettua un'azione anche molto complessa dal codice che ne richiede l'esecuzione; l'azione viene tipicamente incapsulata in un oggetto specifico detto "command". 
+			L'obiettivo è rendere variabile l'azione del client senza però conoscere i dettagli dell'operazione stessa. Un altro aspetto importante è che il destinatario della richiesta può non essere deciso staticamente all'atto dell'istanziazione dell'oggetto "command" ma ricavato a tempo di esecuzione;
+			\item \textbf{Motivazione}: \'E stato scelto questo pattern perché permette agli oggetti "command" di essere decisi dinamicamente in base all'operazione che bisogna eseguire;
+			\item \textbf{Applicabilità}: Questo pattern può essere utilizzato nei casi in cui:
+			\begin{itemize}
+			\item si richiede che un'azione sia atomica: si può implementare un oggetto di comando in modo che le transazioni al suo interno vengano svolte in toto o per nulla;
+			\item si vuole rendere asincrona la scelta dei comandi rispetto alla loro esecuzione. Un certo numero di "command" possono essere elaborati da un altro oggetto che li riceve in un tempo diverso dalla loro selezione;
+			\end{itemize}			
+
 		\end{itemize}
 		% subsubsection command (end)
 
