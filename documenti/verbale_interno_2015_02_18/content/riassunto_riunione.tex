@@ -17,40 +17,31 @@
 \label{sec:riassunto_della_riunione}
 
 \subsection{Risposte all'ordine del giorno}
-Le risposte di seguito fornite non sono la trascrizione esatta di quanto detto al momento, ma una elaborazione
-finale in accordo con il proponente. \newline
+Le risposte di seguito fornite non sono la trascrizione esatta di quanto detto al momento, ma una elaborazione finale in accordo con il proponente. \newline
 Esse saranno fonte di requisiti e di casi d'uso che verranno descritti in maniera più dettagliata nel documento di \docNameVersionAdR.
-\begin{itemize}
-  \item La struttura del sistema ha subito un raffinamento per il corretto funzionamento nella Google Cloud Platform.
-  Il lato back-end sarà interamente ospitato in Google App Engine e conterrà i moduli individuati in precedenza:
-  \begin{itemize}
-    \item \textbf{Processor}: gestisce il funzionamento dei moduli Miner ed interagisce con la base di dati a seconda
-    delle richieste effettuate dall'utente;
-    \item \textbf{Cron}: definisce la cadenza temporale di aggiornamento dei dati di cui si occupa il Miner;
-    \item \textbf{Miner}: modulo definito per ogni social network che interroga e raccoglie i dati tramite le
-    API del servixzio stesso memorizzandole nella base di dati;
-  \end{itemize}
-  Il lato front-end, inoltre, sarà totalmente indipente del resto del sistema e comunicherà con il database attraverso
-  dei servizi REST esposti dal back-end. Tali servizi saranno resi disponibili tramite Google Endpoints, incluso nella
-  piattaforma, ed includeranno delle API pubbliche e private. Le prime saranno rese disponibili agli utenti autenticati che
-  ne faranno richiesta e si occuperanno di esporre i dati relativi alle View mentre le seconde saranno utilizzate per
-  le configurazioni relative all'utente ed alla parte amministrativa.
 
-  \item Con l'aiuto del proponente sono state discusse le prime analisi effettuate sulla ricerca della tipologia
-  di dati da ricavare tramite le API esposte dai vari social network. In particolare modo, sono state individuate
-  le prime metriche che andranno a definire le funzionalità rese disponibili dalle View e che individueranno i dati
-  grezzi necessari alle Recipe;
-  \item Il proponente ha fornito un elenco di servizi web che potrebbero facilitare l'analisi dei dati ricavati dai
-  social network o, in alcuni casi, fornire funzionalità ed informazioni aggiuntive al risultato finale esposto
-  dalle View, grazie alle API esposte da ognuno di essi. Tali servizi sono:
-  \begin{itemize}
-    \item \textbf{PageSpeed Insights}: servizio fornito da Google per l'analisi della velocità ed il rendimento di un sito web;
-    \item \textbf{MozRank}: fornisce informazioni sull'importanza di un sito web a seconda della qualità pagine che contengono uno o più link a tale sito;
-    \item \textbf{Feedly}: espone delle API che forniscono dati e statistiche sull'uso dei feed all'interno del servizio, inclusi topic, categorie, tag ed interessi popolari tra gli utenti;
-    \item \textbf{Ritetag}: fornisce analisi e statistiche sul trend e la popolarità di determinati hashtag;
-    \item \textbf{Klout}: fornisce analisi sull'influenza generata da parte di una pagina o di un profilo attivo in un social network;
-    \item \textbf{ShareCount}: traccia l'andamento di un URL nei vari social network;
-    \item \textbf{W3C}: fornisce errori sul codice front-end di un determinato sito web;
-    \item \textbf{GTMetrix}: fornisce analisi sulla pesantezza e la velocità di una pagina web.
-  \end{itemize}
+\begin{itemize}
+  	\item La struttura del sistema ha subito un raffinamento per il corretto funzionamento nella Google Cloud Platform.
+  Il lato back-end sarà interamente ospitato in Google App Engine e conterrà i moduli individuati in precedenza:
+  	\begin{itemize}
+    	\item \textbf{Processor}: gestisce il funzionamento dei moduli Miner ed interagisce con la base di dati a seconda delle richieste effettuate dall'utente;
+    	\item \textbf{Cron}: definisce la cadenza temporale di aggiornamento dei dati di cui si occupa il Miner;
+    	\item \textbf{Miner}: modulo definito per ogni social network che interroga e raccoglie i dati tramite le API del servizio stesso memorizzandole nella base di dati;
+	\end{itemize}
+  Il lato front-end, inoltre, sarà totalmente indipendente del resto del sistema e comunicherà con il database attraverso dei servizi REST esposti dal back-end. Tali servizi saranno resi disponibili tramite Google Endpoints, incluso nella piattaforma, ed includeranno delle API pubbliche e private. Le prime saranno rese disponibili agli utenti autenticati che ne faranno richiesta e si occuperanno di esporre i dati relativi alle View mentre le seconde saranno utilizzate per le configurazioni relative all'utente ed alla parte amministrativa.
+
+ 	\item Con l'aiuto del proponente sono state discusse le prime analisi effettuate sulla ricerca della tipologia di dati da ricavare tramite le API esposte dai vari social network. In particolare modo, sono state individuate le prime metriche che andranno a definire le funzionalità rese disponibili dalle View e che individueranno i dati grezzi necessari alle Recipe. Queste metriche andranno a fare parte dei requisiti funzionali;
+	\item Il proponente ha fornito un elenco di servizi web che potrebbero facilitare l'analisi dei dati ricavati dai social network o, in alcuni casi, fornire funzionalità ed informazioni aggiuntive al risultato finale esposto dalle View, grazie alle API esposte da ognuno di essi. Tali servizi sono:
+  	\begin{itemize}
+    	\item \textbf{PageSpeed Insights}: servizio fornito da Google per l'analisi della velocità ed il rendimento di un sito web;
+    	\item \textbf{MozRank}: fornisce informazioni sull'importanza di un sito web a seconda della qualità pagine che contengono uno o più link a tale sito;
+    	\item \textbf{Feedly}: espone delle API che forniscono dati e statistiche sull'uso dei feed all'interno del servizio, inclusi topic, categorie, tag ed interessi popolari tra gli utenti;
+    	\item \textbf{Ritetag}: fornisce analisi e statistiche sul trend e la popolarità di determinati hashtag;
+    	\item \textbf{Klout}: fornisce analisi sull'influenza generata da parte di una pagina o di un profilo attivo in un social network;
+    	\item \textbf{ShareCount}: traccia l'andamento di un URL nei vari social network;
+    	\item \textbf{W3C}: fornisce errori sul codice front-end di un determinato sito web;
+    	\item \textbf{GTMetrix}: fornisce analisi sulla pesantezza e la velocità di una pagina web.
+  	\end{itemize}
+	\noindent
+	Dopo un'attenta valutazione, in accordo con il proponente, per non rischiare di eccedere i tempi previsti, si è deciso per il momento di accantonare queste tipologie di metrica e di non includerle nel documento di \docNameVersionAdR.
 \end{itemize}
