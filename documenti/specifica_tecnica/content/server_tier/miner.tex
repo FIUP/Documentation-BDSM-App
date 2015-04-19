@@ -33,7 +33,7 @@
   \item \textbf{Interazione con altri componenti}:
   	\begin{itemize}
   		\item server::processor
-  		\item server::database
+  		\item server::db
   	\end{itemize}
 \end{itemize}
 
@@ -42,7 +42,7 @@
 		\label{subp:server_miner_MinerScheduler}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che crea i fetcher per ogni social network;
-				\item \textbf{Utilizzo}: classe che contiene un campo che rappresenta una recipe e un metodo che andrà a creare i fetcher;
+				\item \textbf{Utilizzo}: classe che contiene un campo che rappresenta una recipe e un metodo che inizialmente crea e successivamente andrà a schedulare i fetcher;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item server::miner::AbsFetcher;
@@ -54,7 +54,7 @@
 		\label{subp:server_miner_AbsCounter}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe astratta che rappresenta il padre delle classi counter delle varie metriche;
-				\item \textbf{Utilizzo}: classe che descrive lo scheletro dell'algoritmo di counting;
+				\item \textbf{Utilizzo}: classe che descrive lo scheletro dell'algoritmo di counting. Essa ha lo scopo di controllale la logica di avvio schedulato dei processi;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item server::miner::fb::AbsFbCounter;
@@ -68,7 +68,7 @@
 		\label{subp:server_miner_AbsFetcher}
 				\begin{itemize}
 				\item \textbf{Descrizione}: classe astratta che rappresenta il padre delle classi fetcher dei vari social network;
-				\item \textbf{Utilizzo}: classe utile in caso l'applicazione venga estesa con altri social network oltre a quelli presi in considerazione;
+				\item \textbf{Utilizzo}: classe utile in caso l'applicazione venga estesa con altre API dei social network oltre a quelli presi in considerazione;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item server::miner::fb::AbsFbFetcher;
@@ -265,7 +265,7 @@ astratto che verrà definito nelle classi figlie;
 		\label{subp:server_miner_tw_TwHashtagFetcher}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che ricava i dati degli hashtag di Twitter;
-				\item \textbf{Utilizzo}: classe che contiene un campo che descrive i dati statici dell' hashtag Twitter, e un metodo che ricava i dati dinamici da HashtagTweetCounter;
+				\item \textbf{Utilizzo}: classe che contiene un campo che descrive i dati statici dell'hashtag Twitter, e un metodo che ricava i dati dinamici da HashtagTweetCounter;
 				\item \textbf{Classi ereditate}: server::miner::tw::AbsTwFetcher;
 				\item \textbf{Relazioni con altre classi}: 
 					\begin{itemize}
