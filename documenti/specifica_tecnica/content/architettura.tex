@@ -25,21 +25,24 @@ L’architettura generale non tratta l’intero insieme delle sottoclassi del si
 
 
 	\subsection{Architettura generale}
+	\label{susb:architettura_generale}
 	L’architettura dell'applicazione segue il design pattern Three-Tier. Viene quindi suddivisa in tre livelli:
 		\begin{enumerate}
-			\item Client Tier;
-			\item Server Tier;
-			\item DataBase Tier.
+			\item Client Tier
+			\item Server Tier
+			\item DataBase Tier
 		\end{enumerate}
 		\noindent
 		Di seguito viene proposto un diagramma rappresentante le relazioni tra i vari livelli. Vengono individuate le componenti che permettono ai vari livelli di interagire senza dover esporre la struttura interna degli stessi. \newline \newline
 
-		[TO DO] (Diagramma con i tre livelli mostrati come package con all'interno annidati al package che si occupano della comunicazione tra i livelli) \newline \newline
+		\begin{figure}[htbp]
+			\centering
+			\centerline{\includegraphics[scale=0.5]{./images/three_tier.pdf}}
+			\caption{Three-Tier}
+		\end{figure}
 
-		Come indicato nel diagramma, il livello del client interagisce con il server tramite gli EndPoints forniti dal Server. Esso riceverà e analizzerà la richiesta mediante [TO DO]. Una volta pronta, la risposta verrà fornita al Client.\newline
-		Il client si occuperà di analizzarla per determinare se la richiesta ha avuto un esito positivo o negativo. Nel primo caso la gestione verrà delegata alla componente [TO DO]. \newline
-
-
+		Come indicato nel diagramma, il livello del client interagisce con il server tramite gli Endpoints forniti dal Server. Esso riceverà e analizzerà la richiesta. Una volta pronta, la risposta verrà fornita al Client. \newline
+		Il client si occuperà di analizzarla per determinare se la richiesta ha avuto un esito positivo o negativo e nel primo caso utilizzerà i dati per effettuare le opportune operazioni.
 
 		\subsubsection{Architettura Client Tier}
 		Per il livello client è stato adottato il design pattern MVW offerto dal framework AngularJS. Questo livello implementa l'interfaccia grafica con cui utenti autenticati e amministratori possono interagire con il sistema in modo completo. Il diagramma seguente illustra l'interazione delle varie parti. \newline
@@ -53,7 +56,7 @@ L’architettura generale non tratta l’intero insieme delle sottoclassi del si
 		Una illustrazione più dettagliata viene fornita nella sezione \ref{sub:client}.
 
 		\subsubsection{Architettura Server Tier}
-		Il livello server si occupa di raccogliere i dati grezzi tramite le API fornite dai vari social network, elaborare e salvare tali dati nel database, fornire dei servizi REST	ed eleborare le richiste in arrivo dal client. Il back-end è stato suddiviso nei seguenti moduli:
+		Il livello server si occupa di raccogliere i dati grezzi tramite le API fornite dai vari social network, elaborare e salvare tali dati nel database, fornire dei servizi REST ed elaborare le richieste in arrivo dal client. Il back-end è stato suddiviso nei seguenti moduli:
 		\begin{itemize}
 		  \item db: contiene le definizioni del modello dei dati, sia per quanto riguarda i dati grezzi ricavati dai social network, sia per i dati necessari all'applicativo finale in sé;
 			\item miner: contiene le classi ed i package che estraggono i dati grezzi a cadenza regolare e costruiscono nuove entità secondo il modello dei dati che andrà a popolare il database;
