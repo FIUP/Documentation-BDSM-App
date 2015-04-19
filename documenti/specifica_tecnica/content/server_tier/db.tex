@@ -14,16 +14,27 @@
 
 \subsubsection{bdsm\_app::server::db} % (fold)
 \label{ssub:bdsm_app_server_db}
-	[TO DO] (diagramma) \newline \newline
+
+	\begin{figure}[htbp]
+		\centering
+		\centerline{\includegraphics[scale=0.5]{./images/server/db.pdf}}
+		\caption{Package - server::db}
+	\end{figure}
 
 	\begin{itemize}
-		\item \textbf{Descrizione}: [TO DO];
+		\item \textbf{Descrizione}: è il package che contiene le componenti che gestiscono e mantengono coerente la base di dati. Esse utilizzano standard proprietari Google per la loro implementazione. Sono suddivise in due package uno adatto per l'immagazzinamento dei dati grezzi mentre l'altro per la memorizzazione dei parametri del software e degli utenti;
+		\item \textbf{Padre}: server;
 		\item \textbf{Package contenuti}:
 			\begin{itemize}
-				\item bdsm\_app::server::raw\_data;
 				\item bdsm\_app::server::app\_data.
+				\item bdsm\_app::server::raw\_data;
 			\end{itemize}
-		\item \textbf{Interazione con altri componenti}: [TO DO];
+		\item \textbf{Interazione con altri componenti}:
+			\begin{itemize}
+				\item server::miner
+				\item server::endpoints
+				\item srever::processor
+			\end{itemize}
 	\end{itemize}
 
 
