@@ -50,7 +50,7 @@
 
 
 	\paragraph{Classi} % (fold)
-		
+
 
 		\subparagraph{bdsm\_app::server::db::raw\_model::AbsRawData} % (fold)
 		\label{subp:bdsm_app_server_raw_model_AbsRawData}
@@ -75,7 +75,7 @@
 			\caption{Package - server::db::raw\_data::fb}
 		\end{figure}
 
-		
+
 		\subparagraph{server::db::raw\_data::fb::AbsFbRawData} % (fold)
 		\label{subp:server_db_raw_data_fb_absfbrawdata}
 			\begin{itemize}
@@ -160,7 +160,7 @@
 			\caption{Package - server::db::raw\_data::ig}
 		\end{figure}
 
-		
+
 		\subparagraph{server::db::raw\_data::ig::AbsIgRawData} % (fold)
 		\label{subp:server_db_raw_data_ig_absigrawdata}
 			\begin{itemize}
@@ -245,7 +245,7 @@
 			\caption{Package - server::db::raw\_data::tw}
 		\end{figure}
 
-		
+
 		\subparagraph{server::db::raw\_data::tw::AbsTwRawData} % (fold)
 		\label{subp:server_db_raw_data_tw_abstwrawdata}
 			\begin{itemize}
@@ -333,12 +333,6 @@
 
 
 
-
-
-
-
-
-
 \subsubsection{bdsm\_app::server::db::app\_data} % (fold)
 \label{ssub:bdsm_app_server_app_data}
 
@@ -352,11 +346,11 @@
 
 	\begin{itemize}
 		\item \textbf{Descrizione}: è il package che contiene le informazioni di tutti gli utenti registrati e le loro preferenze. Contiene inoltre il modello di recipe che l'amministratore decide di creare;
-		\item \textbf{Padre}: server;
+		\item \textbf{Padre}: server
 		\item \textbf{Package contenuti}
 			\begin{itemize}
-				\item user;
-				\item recipe;
+				\item user
+				\item recipe
 			\end{itemize}
 		\item \textbf{Interazione con altri componenti}: interagisce con tutti i componenti del server in quanto fornisce i metodi per manipolare tutti i dati da memorizzare;
 	\end{itemize}
@@ -372,7 +366,7 @@
 				\item \textbf{Utilizzo}: la classe conterrà i metodi per la creazione, eliminazione, modifica degli account utente;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item server::db::app\_data::user::Favorites;
+						\item server::db::app\_data::user::FavouritesModel;
 						\item server::db:::app\_data::user::AdminModel;
 						\item server::db::app\_data::recipe::RecipeRequestModel;
 					\end{itemize}
@@ -394,7 +388,7 @@
 		% subparagraph server_db_app_data_user_admin_model [end]
 
 
-		\subparagraph{server::db::app\_data::user::Favorites} % (fold)
+		\subparagraph{server::db::app\_data::user::FavouritesModel} % (fold)
 		\label{subp:server_db_app_data_user_favorites}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che memorizzare i preferiti dell'utente;
@@ -438,6 +432,18 @@
 				\item \textbf{Descrizione}: classe che rappresenta il modello di ricetta;
 				\item \textbf{Utilizzo}: la classe specializza la ricetta. Vengono forniti i campi dati per il possibile incremento temporale dei dati;
 				\item \textbf{Classi ereditate}: server::db::app\_data::recipe::AbsRecipeModel;
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item server::db::app\_data::recipe::RatingModel
+					\end{itemize}
+			\end{itemize}
+		% subparagraph server_db_app_data_recipe_recipemodel [end]
+
+		\subparagraph{server::db::app\_data::recipe::RatingModel} % (fold)
+		\label{subp:server_db_app_data_recipe_recipemodel}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe che rappresenta il modello del rating di una Recipe;
+				\item \textbf{Utilizzo}: viene utilizzata risalire al voto di ogni utente per una determinata Recipe;
 			\end{itemize}
 		% subparagraph server_db_app_data_recipe_recipemodel [end]
 
