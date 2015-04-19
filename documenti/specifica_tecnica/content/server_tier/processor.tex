@@ -38,8 +38,8 @@
     \subparagraph{bdsm\_app::server::processor::RequestHandler} % (fold)
     \label{subp:bdsm_app_server_processor_requesthandler}
     \begin{itemize}
-      \item \textbf{Descrizione}: è la classe che implementa il pattern Front Controller e si occupa di raccorgliere le richieste provenienti dal client. Implementa inoltre il pattern Singleton, per cui un'unica istanza di tale classa sarà vivrà nel sistema;
-      \item \textbf{Utilizzo}: viene invocata dalle classi presenti nel package \texttt{server::endpoints::api} in seguito ad una chiamata ai servizi REST offerti dal sistema e trasferisce la richiesta alla classe \texttt{CommandDispatcher} che si occupera di invocare il relativo comando per soddisfare tale richiesta;
+      \item \textbf{Descrizione}: è la classe che implementa il pattern Front Controller e si occupa di raccorgliere le richieste provenienti dal client. Implementa inoltre il pattern Singleton, perciò un'unica istanza di tale classe vivrà nel sistema;
+      \item \textbf{Utilizzo}: viene invocata dalle classi presenti nel package \texttt{server::endpoints::api} in seguito ad una chiamata ai servizi REST offerti dal sistema e trasferisce la richiesta alla classe \texttt{CommandDispatcher} che si occuperà di invocare il relativo comando per soddisfare tale richiesta;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
           \item server::processor::CommandDispatcher
@@ -50,8 +50,8 @@
     \subparagraph{bdsm\_app::server::processor::CommandDispatcher} % (fold)
     \label{subp:bdsm_app_server_:processor_commanddispatcher}
     \begin{itemize}
-      \item \textbf{Descrizione}: classe che implementa il pattern Command e si occopa di far confluire un determinata richiesta al relativo comando contenente la logica per soddisfarla;
-      \item \textbf{Utilizzo}: contiene un dizionario che mappa tutte le tipologie di richieste al relativo comando che sarà invocato tramite il metodo \texttt{dispatch()}. Si occupa inoltre di ritornare al Front Controller il un dizionario contente un eventuale risposta per il client;
+      \item \textbf{Descrizione}: classe che implementa il pattern Command e si occupa di far confluire una determinata richiesta al relativo comando contenente la logica per soddisfarla;
+      \item \textbf{Utilizzo}: contiene un dizionario che mappa tutte le tipologie di richieste al relativo comando che sarà invocato tramite il metodo \texttt{dispatch()}. Si occupa inoltre di ritornare al Front Controller un dizionario contenente un'eventuale risposta per il client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
           \item server::processor::commands::ICommand
@@ -81,14 +81,14 @@
     \end{figure}
 
     \begin{itemize}
-      \item \textbf{Descrizione}: contiene le classi ed i package che definiscono i diversi comandi conteneti la logica necessaria a soddisfare le varie richieste in arrivo dal client;
+      \item \textbf{Descrizione}: contiene le classi ed i package che definiscono i diversi comandi contenenti la logica necessaria a soddisfare le varie richieste in arrivo dal client;
       \item \textbf{Padre}: server::processor
       \item \textbf{Package contenuti}:
         \begin{itemize}
-          \item server::processor::recipe
-          \item server::processor::requests
-          \item server::processor::user
-          \item server::processor::user
+          \item server::processor::commands::recipe
+          \item server::processor::commands::requests
+          \item server::processor::commands::user
+          \item server::processor::commands::social
         \end{itemize}
       \item \textbf{Interazione con altri componenti}:
         \begin{itemize}
@@ -101,8 +101,8 @@
       \subparagraph{bdsm\_app::server::processor::commands::ICommand} % (fold)
       \label{subp:bdsm_app_server_processor_commands_icommand}
       \begin{itemize}
-        \item \textbf{Descrizione}: rappresente un'intefaccia comune per tutti i comandi presenti nel package \texttt{server::commands} e figli;
-        \item \textbf{Utilizzo}: espone un metodo \texttt{execute()}, i quale sarà implementato da tutti i comandi concreti;
+        \item \textbf{Descrizione}: rappresenta un'interfaccia comune per tutti i comandi presenti nel package \texttt{server::commands} e figli;
+        \item \textbf{Utilizzo}: espone un metodo \texttt{execute()}, il quale sarà implementato da tutti i comandi concreti;
       \end{itemize}
       % subparagraph bdsm_app::server_processor_abscommand (end)
 
@@ -216,8 +216,8 @@
         \subparagraph{bdsm\_app::server::processor::commands::user::DeleteFavouriteCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_user_deletefavouritecommand}
         \begin{itemize}
-          \item \textbf{Descrizione}: definisce la logica per rimovere un determinato preferito da un utente specifico;
-          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per rimovere un determinato preferito da un utente specifico;
+          \item \textbf{Descrizione}: definisce la logica per rimuovere un determinato preferito da un utente specifico;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per rimuovere un determinato preferito da un utente specifico;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
               \item server::processor::commands::user::AbsUserCommand
@@ -372,7 +372,7 @@
         \label{subp:bdsm_app_server_processor_commands_requests_getrequestcommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per ottenere un determinata richiesta di aggiunta Recipe dal database;
-          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere un determinata richiesta di aggiunta Recipe dal database;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere una determinata richiesta di aggiunta Recipe dal database;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
               \item server::processor::commands::requests::AbsRequestCommand
@@ -480,7 +480,7 @@
         \label{subp:bdsm_app_server_processor_commands_social_fbpagecommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi ad una pagina Facebook;
-          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere i dati grezzi relativi ad una pagin Facebook;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere i dati grezzi relativi ad una pagina Facebook;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
               \item server::processor::commands::social::AbsFbCommand
@@ -601,8 +601,8 @@
         \subparagraph{bdsm\_app::server::processor::commands::social::TwHashtagTweetsCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_social_twhashtagtweetscommand}
         \begin{itemize}
-          \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi associati al trend dei tweet relativi ad un daterminato hashtag;
-          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere i dati grezzi associati al trend dei tweet relativi ad un daterminato hashtag;
+          \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi associati al trend dei tweet relativi ad un determinato hashtag;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere i dati grezzi associati al trend dei tweet relativi ad un determinato hashtag;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
               \item server::processor::commands::social::AbsTwCommand
@@ -615,7 +615,7 @@
         \subparagraph{bdsm\_app::server::processor::commands::social::AbsIgCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_social_absigcommand}
         \begin{itemize}
-          \item \textbf{Descrizione}: rappresenta una classe comune a tutti i comandi relativi alla gestione dei dati grezzi ricavati da Instgram;
+          \item \textbf{Descrizione}: rappresenta una classe comune a tutti i comandi relativi alla gestione dei dati grezzi ricavati da Instagram;
           \item \textbf{Utilizzo}: è stata rappresentata come classe in quanto potrà contenere uno o più metodi di utilità comuni a tutti i comandi relativi alla gestione dei dati grezzi ricavati da Instagram;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
@@ -663,7 +663,7 @@
         \subparagraph{bdsm\_app::server::processor::commands::social::IgHashtagTrendCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_social_ighashtagtrendcommand}
         \begin{itemize}
-          \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi al trend di un hashtag di Intagram;
+          \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi al trend di un hashtag di Instagram;
           \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere i dati grezzi relativi al trend di un hashtag di Intagram;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
