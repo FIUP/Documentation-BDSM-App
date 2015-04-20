@@ -110,11 +110,11 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 					\hline
 					TIadmin\_view & Viene verificato che il sistema permetta una corretta visualizzazione di tutte le pagine HTML disponibili per l'utente amministratore. & bdsm\_app::\-client::\-view::\-admin & N.I.\\
 					\hline
-					TIapi & Viene verificato che il sistema effettui correttamente le chiamate ai servizi REST provenienti dal client. TO DO & bdsm\_app::\-server::\-endpoints::\-api & N.I.\\
+					TIapi & Viene verificato che il sistema fornisca delle API funzionanti al client che le utilizzerà. & bdsm\_app::\-server::\-endpoints::\-api & N.I.\\
 					\hline
-					TIapp\_model & Viene verificato che il sistema gestisca correttamente il modello di dati degli utenti, delle Recipe, dei preferiti e delle richieste di nuove Recipe.. & bdsm\_app::\-server::\-db::\-app\_model & N.I.\\
+					TIapp\_data & Viene verificato che il sistema gestisca correttamente il modello di dati degli utenti, delle Recipe, dei preferiti e delle richieste di nuove Recipe. & bdsm\_app::\-server::\-db::\-app\_data & N.I.\\
 					\hline
-					TIbdsm\_app & Viene verificata la correttezza generale del sistema integrante i livelli client, database e server.  & bdsm\_app & N.I.\\
+					TIbdsm\_app & Viene verificata la correttezza generale del sistema integrante i livelli client, database e server. & bdsm\_app & N.I.\\
 					\hline				
 					TIclient & Viene verificato che il sistema gestisca correttamente il front-end del prodotto. & bdsm\_app::\-client & N.I.\\
 					\hline
@@ -154,7 +154,7 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 					\hline
 					TIpublic\_view & Viene verificato che il sistema permetta una corretta visualizzazione di tutte le pagine HTML disponibili per l'utente non autenticato. & bdsm\_app::\-client::\-view::\-public & N.I.\\
 					\hline
-					TIraw\_model & Viene verificato che il sistema gestisca correttamente il modello di dati grezzi ricavati dai vari social network. & bdsm\_app::\-server::\-db::\-raw\_model & N.I.\\
+					TIraw\_data & Viene verificato che il sistema gestisca correttamente il modello di dati grezzi ricavati dai vari social network. & bdsm\_app::\-server::\-db::\-raw\_data & N.I.\\
 					\hline
 					TIrecipe\_commands & Viene verificato che il sistema gestisca correttamente i comandi relativi alla gestione delle Recipe. & bdsm\_app::\-server::\-processor::\-commands::\-recipe & N.I.\\
 					\hline
@@ -224,9 +224,9 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 					\hline
 					bdsm\_app::\-server::\-db & TIdb\\
 					\hline
-					bdsm\_app::\-server::\-db::\-raw\_model & TIraw\_model\\
+					bdsm\_app::\-server::\-db::\-raw\_data & TIraw\_data\\
 					\hline
-					bdsm\_app::\-server::\-db::\-app\_model & TIapp\_model\\
+					bdsm\_app::\-server::\-db::\-app\_data & TIapp\_data\\
 					\hline
 					bdsm\_app::\-server::\-processor & TIprocessor\\
 					\hline
