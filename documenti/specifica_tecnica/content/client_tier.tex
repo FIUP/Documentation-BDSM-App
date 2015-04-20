@@ -23,7 +23,7 @@
 \label{sub:client}
 Nel descrivere le componenti si parlerà di classi, che però saranno da intendersi nella loro accezione logica. Il linguaggio di programmazione impiegato infatti non possiede la struttura di classe, ma solo di oggetto, sarà quindi compito del codificatore riportare le classi di seguito identificate nelle strutture fornite dallo specifico linguaggio.
 
-	\subsubsection{bdsm\_app::client} % (fold)
+	\subsubsection{client} % (fold)
 	\label{ssub:bdsm_app_client}
 	\begin{figure}[htbp]
 		\centering
@@ -36,9 +36,9 @@ Nel descrivere le componenti si parlerà di classi, che però saranno da intende
 		\item \textbf{Descrizione}: è il package che racchiude tutte le parti del front-end. \'E quindi l'insieme dei componenti che viene eseguito nel browser degli utenti normali e degli amministratori, fornendo loro un'interfaccia grafica per interagire con il sistema;
 		\item \textbf{Package contenuti}:
 			\begin{itemize}
-				\item *::client::model
-				\item *::client::view
-				\item *::client::controller
+				\item client::model
+				\item client::view
+				\item client::controller
 			\end{itemize}
 		\item \textbf{Interazione con altri componenti}: interagisce con il server definito nella sezione \ref{sub:server} effettuando delle chiamate ai servizi REST esposti;
 	\end{itemize}
