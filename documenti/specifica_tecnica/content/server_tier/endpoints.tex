@@ -60,6 +60,7 @@
   		\item client::model::services
   		\item server::processor
   		\item server::db
+			\item server::endpoints::resp
 	\end{itemize}
 \end{itemize}
 % subsubsection
@@ -78,6 +79,7 @@
   \item \textbf{Interazione con altri componenti}:
   	\begin{itemize}
         \item server::processor
+				\item server::endpoints::resp::public
     \end{itemize}
 \end{itemize}
 % subsubsection
@@ -151,11 +153,12 @@
 \end{figure}
 
 \begin{itemize}
-  \item \textbf{Descrizione}: è il package contenente le classi che definiscono i servizi API privati [TO DO];
+  \item \textbf{Descrizione}: è il package contenente l'implementazione delle web API private;
   \item \textbf{Padre}: server::endpoints::api
   \item \textbf{Interazione con altri componenti}:
   	\begin{itemize}
         \item server::processor
+				\item server::endpoints::resp::private
     \end{itemize}
 \end{itemize}
 % subsubsection
@@ -226,7 +229,6 @@
   		\item server::endpoints::resp::public
   		\item server::endpoints::resp::private
 	\end{itemize}
-  %\item \textbf{Interazione con altri componenti}: [TO DO];
 \end{itemize}
 % subsubsection
 
