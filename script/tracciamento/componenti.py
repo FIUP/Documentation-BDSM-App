@@ -23,8 +23,8 @@ class Componenti():
     __client_base_path_str = "/client_tier/"
     __server_base_path_str = "/server_tier/"
 
-    __doc_path_array = [__base_path_str + __client_base_path_str + "model/data.tex",
-                        __base_path_str + __client_base_path_str + "model/services.tex",
+    __doc_path_array = [__base_path_str + __client_base_path_str + "model_data.tex",
+                        __base_path_str + __client_base_path_str + "model_services.tex",
                         __base_path_str + __client_base_path_str + "view.tex",
                         __base_path_str + __client_base_path_str + "controller.tex",
                         __base_path_str + __server_base_path_str + "db.tex",
