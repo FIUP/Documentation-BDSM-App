@@ -13,7 +13,7 @@
 % CONTENUTO DEL CAPITOLO
 
 
-\subsubsection{bdsm\_app::server::processor} % (fold)
+\subsubsection{server::processor} % (fold)
 \label{ssub:bdsm_app_server_processor}
 \begin{figure}[!htbp]
 	\centering
@@ -35,7 +35,7 @@
 
   \paragraph{Classi} % (fold)
 
-    \subparagraph{bdsm\_app::server::processor::RequestHandler} % (fold)
+    \subparagraph{server::processor::RequestHandler} % (fold)
     \label{subp:bdsm_app_server_processor_requesthandler}
     \begin{itemize}
       \item \textbf{Descrizione}: è la classe che implementa il pattern Front Controller e si occupa di raccorgliere le richieste provenienti dal client. Implementa inoltre il pattern Singleton, perciò un'unica istanza di tale classe vivrà nel sistema;
@@ -47,7 +47,7 @@
       \end{itemize}
     % subparagraph bdsm_app_server_processor_requesthandler (end)
 
-    \subparagraph{bdsm\_app::server::processor::CommandDispatcher} % (fold)
+    \subparagraph{server::processor::CommandDispatcher} % (fold)
     \label{subp:bdsm_app_server_:processor_commanddispatcher}
     \begin{itemize}
       \item \textbf{Descrizione}: classe che implementa il pattern Command e si occupa di far confluire una determinata richiesta al relativo comando contenente la logica per soddisfarla;
@@ -59,7 +59,7 @@
       \end{itemize}
     % subparagraph bdsm_app_server_processor_commanddispatcher (end)
 
-    \subparagraph{bdsm\_app::server::processor::UpdateRecipeTask} % (fold)
+    \subparagraph{server::processor::UpdateRecipeTask} % (fold)
     \label{subp:bdsm_app_server_processor_updaterecipetask}
     \begin{itemize}
       \item \textbf{Descrizione}: è la classe che riceve la notifica dal Cron (funzionalità integrata nella Google Cloud Platform) per aggiornare le Recipe memorizzate nel sistema interagendo con la classe \texttt{server::miner::MinerScheduler} a tale scopo;
@@ -72,7 +72,7 @@
     % subparagraph bdsm_app::server_processor_updaterecipetask (end)
 
 
-    \subsubsection{bdsm\_app::server::processor::commands} % (fold)
+    \subsubsection{server::processor::commands} % (fold)
     \label{ssub:bdsm_app_server_processor_commands}
     \begin{figure}[!htbp]
     	\centering
@@ -98,7 +98,7 @@
 
       \paragraph{Classi} % (fold)
 
-      \subparagraph{bdsm\_app::server::processor::commands::ICommand} % (fold)
+      \subparagraph{server::processor::commands::ICommand} % (fold)
       \label{subp:bdsm_app_server_processor_commands_icommand}
       \begin{itemize}
         \item \textbf{Descrizione}: rappresenta un'interfaccia comune per tutti i comandi presenti nel package \texttt{server::commands} e figli;
@@ -110,7 +110,7 @@
       % ==============================
       % SERVER::COMMANDS::USER PACKAGE
       %
-      \subsubsection{bdsm\_app::server::processor::commands::user} % (fold)
+      \subsubsection{server::processor::commands::user} % (fold)
       \label{ssub:bdsm_app_server_processor_commands_user}
       \begin{figure}[!htbp]
       	\centering
@@ -129,7 +129,7 @@
 
         \paragraph{Classi} % (fold)
 
-        \subparagraph{bdsm\_app::server::processor::commands::user::AbsUserCommand} % (fold)
+        \subparagraph{server::processor::commands::user::AbsUserCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_user_absusercommand}
         \begin{itemize}
           \item \textbf{Descrizione}: rappresenta una classe comune a tutti i comandi relativi alla gestione degli utenti;
@@ -141,7 +141,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::user::AddUserCommand} % (fold)
+        \subparagraph{server::processor::commands::user::AddUserCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_user_addusercommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per aggiungere un nuovo utente al database;
@@ -153,7 +153,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::user::GetUserCommand} % (fold)
+        \subparagraph{server::processor::commands::user::GetUserCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_user_getusercommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per ricavare un determinato utente dal database;
@@ -165,7 +165,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::user::DeleteUserCommand} % (fold)
+        \subparagraph{server::processor::commands::user::DeleteUserCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_user_deleteusercommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per rimuovere un determinato utente dal database;
@@ -177,7 +177,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::user::EditUserCommand} % (fold)
+        \subparagraph{server::processor::commands::user::EditUserCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_user_editusercommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per modificare i dati un determinato utente dal database;
@@ -189,7 +189,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::user::EditPermissionCommand} % (fold)
+        \subparagraph{server::processor::commands::user::EditPermissionCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_user_editpermissioncommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per modificare i permessi di un determinato utente;
@@ -201,7 +201,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::user::GetFavouritesCommand} % (fold)
+        \subparagraph{server::processor::commands::user::GetFavouritesCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_user_getfavouritescommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per ottenere le View preferite di un determinato utente;
@@ -213,7 +213,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::user::DeleteFavouriteCommand} % (fold)
+        \subparagraph{server::processor::commands::user::DeleteFavouriteCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_user_deletefavouritecommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per rimuovere un determinato preferito da un utente specifico;
@@ -225,7 +225,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::user::AddFavouriteCommand} % (fold)
+        \subparagraph{server::processor::commands::user::AddFavouriteCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_user_addfavouritecommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per aggiungere un preferito ad un determinato utente;
@@ -242,7 +242,7 @@
       % ================================
       % SERVER::COMMANDS::RECIPE PACKAGE
       %
-      \subsubsection{bdsm\_app::server::processor::commands::recipe} % (fold)
+      \subsubsection{server::processor::commands::recipe} % (fold)
       \label{ssub:bdsm_app_server_processor_commands_recipe}
       \begin{figure}[!htbp]
       	\centering
@@ -261,7 +261,7 @@
 
         \paragraph{Classi} % (fold)
 
-        \subparagraph{bdsm\_app::server::processor::commands::recipe::AbsRecipeCommand} % (fold)
+        \subparagraph{server::processor::commands::recipe::AbsRecipeCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_recipe_absrecipecommand}
         \begin{itemize}
           \item \textbf{Descrizione}: rappresenta una classe comune a tutti i comandi relativi alla gestione delle Recipe;
@@ -273,7 +273,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::recipe::GetRecipeCommand} % (fold)
+        \subparagraph{server::processor::commands::recipe::GetRecipeCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_recipe_getrecipecommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per ottenere una determinata Recipe e la lista delle metriche associata ad essa;
@@ -285,7 +285,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::recipe::GetRecipeListCommand} % (fold)
+        \subparagraph{server::processor::commands::recipe::GetRecipeListCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_recipe_getrecipelistcommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per ottenere la lista delle Recipe presenti nel sistema;
@@ -297,7 +297,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::recipe::AddRecipeCommand} % (fold)
+        \subparagraph{server::processor::commands::recipe::AddRecipeCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_recipe_addrecipecommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per aggiungere una nuova Recipe al database;
@@ -309,7 +309,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::recipe::DeleteRecipeCommand} % (fold)
+        \subparagraph{server::processor::commands::recipe::DeleteRecipeCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_recipe_deleterecipecommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per rimuovere una determinata Recipe dal database;
@@ -321,7 +321,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::recipe::RateRecipeCommand} % (fold)
+        \subparagraph{server::processor::commands::recipe::RateRecipeCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_recipe_raterecipecommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per aggiungere e modificare il rating ad un determinata Recipe;
@@ -337,7 +337,7 @@
       % ================================
       % SERVER::COMMANDS::REQUESTS PACKAGE
       %
-      \subsubsection{bdsm\_app::server::processor::commands::requests} % (fold)
+      \subsubsection{server::processor::commands::requests} % (fold)
       \label{ssub:bdsm_app_server_processor_commands_requests}
       \begin{figure}[!htbp]
       	\centering
@@ -356,7 +356,7 @@
 
         \paragraph{Classi} % (fold)
 
-        \subparagraph{bdsm\_app::server::processor::commands::requests::AbsRequestCommand} % (fold)
+        \subparagraph{server::processor::commands::requests::AbsRequestCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_requests_absrequestcommand}
         \begin{itemize}
           \item \textbf{Descrizione}: rappresenta una classe comune a tutti i comandi relativi alla gestione delle richieste di aggiunta Recipe;
@@ -368,7 +368,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::requests::GetRequestCommand} % (fold)
+        \subparagraph{server::processor::commands::requests::GetRequestCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_requests_getrequestcommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per ottenere un determinata richiesta di aggiunta Recipe dal database;
@@ -380,7 +380,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::requests::AddRequestCommand} % (fold)
+        \subparagraph{server::processor::commands::requests::AddRequestCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_requests_addrequestcommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per aggiungere una nuova richiesta di aggiunta Recipe al database;
@@ -392,7 +392,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::requests::GetRequestListCommand} % (fold)
+        \subparagraph{server::processor::commands::requests::GetRequestListCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_requests_getrequestlistcommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per ottenere la lista delle richieste di aggiunta Recipe presenti nel database;
@@ -404,7 +404,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::requests::DeleteRequestCommand} % (fold)
+        \subparagraph{server::processor::commands::requests::DeleteRequestCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_requests_deleterequestcommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per rimuovere una determinata richiesta di aggiunta Recipe dal database;
@@ -416,7 +416,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::requests::GetMetricsListCommand} % (fold)
+        \subparagraph{server::processor::commands::requests::GetMetricsListCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_requests_getmetricslistcommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per ottenere la lista delle metriche presenti in una determinata richiesta di aggiunta Recipe;
@@ -431,7 +431,7 @@
       % ================================
       % SERVER::COMMANDS::SOCIAL PACKAGE
       %
-      \subsubsection{bdsm\_app::server::processor::commands::social} % (fold)
+      \subsubsection{server::processor::commands::social} % (fold)
       \label{ssub:bdsm_app_server_processor_commands_social}
       \begin{figure}[!htbp]
       	\centering
@@ -450,7 +450,7 @@
 
         \paragraph{Classi} % (fold)
 
-        \subparagraph{bdsm\_app::server::processor::commands::social::AbsSocialCommand} % (fold)
+        \subparagraph{server::processor::commands::social::AbsSocialCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_social_abssocialcommand}
         \begin{itemize}
           \item \textbf{Descrizione}: rappresenta una classe comune a tutti i comandi relativi alla gestione dei dati grezzi ricavati dai social network;
@@ -464,7 +464,7 @@
 
         % FACEBOOK
 
-        \subparagraph{bdsm\_app::server::processor::commands::social::AbsFbCommand} % (fold)
+        \subparagraph{server::processor::commands::social::AbsFbCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_social_absfbcommand}
         \begin{itemize}
           \item \textbf{Descrizione}: rappresenta una classe comune a tutti i comandi relativi alla gestione dei dati grezzi ricavati da Facebook;
@@ -476,7 +476,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::social::FbPageCommand} % (fold)
+        \subparagraph{server::processor::commands::social::FbPageCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_social_fbpagecommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi ad una pagina Facebook;
@@ -488,7 +488,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::social::FbPageTrendCommand} % (fold)
+        \subparagraph{server::processor::commands::social::FbPageTrendCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_social_fbpagetrendcommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi al trend di una pagina Facebook;
@@ -500,7 +500,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::social::FbPostsCommand} % (fold)
+        \subparagraph{server::processor::commands::social::FbPostsCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_social_fbpostscommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi al trend dei post di una pagina Facebook;
@@ -512,7 +512,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::social::FbEventCommand} % (fold)
+        \subparagraph{server::processor::commands::social::FbEventCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_social_fbeventcommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi ad un evento Facebook;
@@ -524,7 +524,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::social::FbEventTrendCommand} % (fold)
+        \subparagraph{server::processor::commands::social::FbEventTrendCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_social_fbeventtrendcommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi al trend di un evento Facebook;
@@ -536,7 +536,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::social::FbEventPostCommand} % (fold)
+        \subparagraph{server::processor::commands::social::FbEventPostCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_social_fbeventpostcommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi al trend dei post di un evento Facebook;
@@ -550,7 +550,7 @@
 
         % TWITTER
 
-        \subparagraph{bdsm\_app::server::processor::commands::social::AbsTwCommand} % (fold)
+        \subparagraph{server::processor::commands::social::AbsTwCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_social::abstwcommand}
         \begin{itemize}
           \item \textbf{Descrizione}: rappresenta una classe comune a tutti i comandi relativi alla gestione dei dati grezzi ricavati da Twitter;
@@ -562,7 +562,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::social::TwUserCommand} % (fold)
+        \subparagraph{server::processor::commands::social::TwUserCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_social_twusercommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi ad un utente Twitter;
@@ -574,7 +574,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::social::TwUserTrendCommand} % (fold)
+        \subparagraph{server::processor::commands::social::TwUserTrendCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_social_twusertrendcommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi al trend di un utente Twitter;
@@ -586,7 +586,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::social::TwUserTweetsCommand} % (fold)
+        \subparagraph{server::processor::commands::social::TwUserTweetsCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_social_twcommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi al trend dei tweet di un utente Twitter;
@@ -598,7 +598,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::social::TwHashtagTweetsCommand} % (fold)
+        \subparagraph{server::processor::commands::social::TwHashtagTweetsCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_social_twhashtagtweetscommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi associati al trend dei tweet relativi ad un determinato hashtag;
@@ -612,7 +612,7 @@
 
         % INSTAGRAM
 
-        \subparagraph{bdsm\_app::server::processor::commands::social::AbsIgCommand} % (fold)
+        \subparagraph{server::processor::commands::social::AbsIgCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_social_absigcommand}
         \begin{itemize}
           \item \textbf{Descrizione}: rappresenta una classe comune a tutti i comandi relativi alla gestione dei dati grezzi ricavati da Instagram;
@@ -624,7 +624,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::social::IgUserCommand} % (fold)
+        \subparagraph{server::processor::commands::social::IgUserCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_social_igusercommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi ad un utente Instagram;
@@ -636,7 +636,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::social::IgUserTrendCommand} % (fold)
+        \subparagraph{server::processor::commands::social::IgUserTrendCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_social_igusertrendcommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi al trend di un utente Instagram;
@@ -648,7 +648,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::social::IgUserMediaCommand} % (fold)
+        \subparagraph{server::processor::commands::social::IgUserMediaCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_social_igusermediacommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi al trend dei media di un utente Instagram;
@@ -660,7 +660,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::social::IgHashtagTrendCommand} % (fold)
+        \subparagraph{server::processor::commands::social::IgHashtagTrendCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_social_ighashtagtrendcommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi al trend di un hashtag di Instagram;
@@ -672,7 +672,7 @@
         \end{itemize}
         % subparagraph (end)
 
-        \subparagraph{bdsm\_app::server::processor::commands::social::IgHashtagMediaCommand} % (fold)
+        \subparagraph{server::processor::commands::social::IgHashtagMediaCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_social_twhashtagmediacommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi al trend dei media associati ad un hashtag di Instagram;

@@ -22,17 +22,17 @@
 \subsection{Server (Back-end)} % (fold)
 \label{sub:server}
 
-  \subsubsection{bdsm\_app::server} % (fold)
+  \subsubsection{server} % (fold)
   [TO DO] (diagramma) \newline \newline
 
   \begin{itemize}
-    \item \textbf{Descrizione}: è il package che racchiude tutte le parti del back-end. \'E quindi l'insieme dei componenti che si occupa di soddifare le richieste provenienti dal front-end, interagire col database, raccogliere i dati provenienti dai social networks, elaborarli ed esporli attraverso servizi REST.
+    \item \textbf{Descrizione}: è il package che racchiude tutte le parti del back-end. \'E quindi l'insieme dei componenti che si occupa di soddisfare le richieste provenienti dal front-end, interagire col database, raccogliere i dati provenienti dai social networks, elaborarli ed esporli attraverso servizi REST.
     \item \textbf{Package contenuti}:
       \begin{itemize}
-        \item *::server::processor
-        \item *::server::db
-        \item *::server::miner
-        \item *::server::endpoints
+        \item server::processor
+        \item server::db
+        \item server::miner
+        \item server::endpoints
       \end{itemize}
     \item \textbf{Interazione con altri componenti}: interagisce con il client definito nella sezione \ref{sub:client} tramite i servizi REST offerti dal modulo in questione;
   \end{itemize}
