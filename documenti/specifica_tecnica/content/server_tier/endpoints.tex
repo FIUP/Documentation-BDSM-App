@@ -15,7 +15,11 @@
 
 \subsubsection{server::endpoints} % (fold)
 \label{ssub:bdsm_app_server_endpoints}
-[TO DO] (diagramma) \newline \newline
+\begin{figure}[!htbp]
+	\centering
+	\centerline{\includegraphics[scale=0.6]{./images/server/endpoints.pdf}}
+	\caption{Package - server::endpoints}
+\end{figure}
 
 \begin{itemize}
   \item \textbf{Descrizione}: è il package che contiene tutte le classi che implementato l'interfaccia REST del sistema tramite Google Cloud Endpoints;
@@ -35,7 +39,13 @@
 
 \subsubsection{server::endpoints::api} % (fold)
 \label{ssub:bdsm_app_server_endpoints_api}
-[TO DO] (diagramma) \newline \newline
+
+	In questo package e nei suoi package figli viene utilizzata la classe \textbf{ResourceContainer} offerta dai Google Cloud Endpoints per le richieste contenenti percorsi e query.
+\begin{figure}[!htbp]
+	\centering
+	\centerline{\includegraphics[scale=0.4]{./images/server/api.pdf}}
+	\caption{Package - server::endpoints::api}
+\end{figure}
 
 \begin{itemize}
   \item \textbf{Descrizione}: è il package che definisce le web API offerte dall'applicazione e utilizzati dal client;
@@ -56,7 +66,11 @@
 
 \subsubsection{server::endpoints::api::public} % (fold)
 \label{ssub:bdsm_app_server_endpoints_api_public}
-[TO DO] (diagramma) \newline \newline
+\begin{figure}[!htbp]
+	\centering
+	\centerline{\includegraphics[scale=0.4]{./images/server/api_public.pdf}}
+	\caption{Package - server::endpoints::api::public}
+\end{figure}
 
 \begin{itemize}
   \item \textbf{Descrizione}: è il package contenente l'implementazione delle web API pubbliche;
@@ -130,7 +144,11 @@
 
 \subsubsection{server::endpoints::api::private} % (fold)
 \label{ssub:bdsm_app_server_endpoints_api_private}
-[TO DO] (diagramma) \newline \newline
+\begin{figure}[!htbp]
+	\centering
+	\centerline{\includegraphics[scale=0.4]{./images/server/api_private.pdf}}
+	\caption{Package - server::endpoints::api::private}
+\end{figure}
 
 \begin{itemize}
   \item \textbf{Descrizione}: è il package contenente le classi che definiscono i servizi API privati [TO DO];
@@ -194,7 +212,11 @@
 
 \subsubsection{server::endpoints::resp} % (fold)
 \label{ssub:bdsm_app_server_endpoints_resp}
-[TO DO] (diagramma) \newline \newline
+\begin{figure}[!htbp]
+	\centering
+	\centerline{\includegraphics[scale=0.45]{./images/server/resp.pdf}}
+	\caption{Package - server::endpoints::resp}
+\end{figure}
 
 \begin{itemize}
   \item \textbf{Descrizione}: è il package che definisce il modelli delle risposte da passare al client in seguito alle chiamate API;
@@ -210,7 +232,11 @@
 
 \subsubsection{server::endpoints::resp::public} % (fold)
 \label{ssub:bdsm_app_server_endpoints_resp_public}
-[TO DO] (diagramma) \newline \newline
+\begin{figure}[!htbp]
+	\centering
+	\centerline{\includegraphics[scale=0.55]{./images/server/resp_public.pdf}}
+	\caption{Package - server::endpoints::resp::public}
+\end{figure}
 
 \begin{itemize}
   \item \textbf{Descrizione}: è il package che definisce il modello delle risposte da passare al client in seguito alle chiamate delle API pubbliche;
@@ -249,7 +275,11 @@
 
 \subsubsection{server::endpoints::resp::public::fb} % (fold)
 \label{ssub:bdsm_app_server_endpoints_resp_public_fb}
-[TO DO] (diagramma) \newline \newline
+\begin{figure}[!htbp]
+	\centering
+	\centerline{\includegraphics[scale=0.55]{./images/server/resp_fb.pdf}}
+	\caption{Package - server::endpoints::resp::public::fb}
+\end{figure}
 
 \begin{itemize}
   \item \textbf{Descrizione}: è il package contenente le classi che rappresentano il modello di dati delle componenti di Facebook da restituire al client;
@@ -367,7 +397,11 @@
 
 \subsubsection{server::endpoints::resp::public::tw} % (fold)
 \label{ssub:bdsm_app_server_endpoints_resp_public_tw}
-[TO DO] (diagramma) \newline \newline
+\begin{figure}[!htbp]
+	\centering
+	\centerline{\includegraphics[scale=0.5]{./images/server/resp_tw.pdf}}
+	\caption{Package - server::endpoints::resp::public::tw}
+\end{figure}
 
 \begin{itemize}
   \item \textbf{Descrizione}: è il package contenente le classi che rappresentano il modello dei dati delle componenti di Twitter da restituire al client;
@@ -464,7 +498,11 @@
 
 \subsubsection{server::endpoints::resp::public::ig} % (fold)
 \label{ssub:bdsm_app_server_endpoints_resp_public_ig}
-[TO DO] (diagramma) \newline \newline
+\begin{figure}[!htbp]
+	\centering
+	\centerline{\includegraphics[scale=0.5]{./images/server/resp_ig.pdf}}
+	\caption{Package - server::endpoints::resp::public::ig}
+\end{figure}
 
 \begin{itemize}
   \item \textbf{Descrizione}: è il package contenente le classi che rappresentano il modello dei dati delle componenti di Instagram da restituire al client;
@@ -582,7 +620,11 @@
 
 \subsubsection{server::endpoints::resp::private} % (fold)
 \label{ssub:bdsm_app_server_endpoints_resp_private}
-[TO DO] (diagramma) \newline \newline
+\begin{figure}[!htbp]
+	\centering
+	\centerline{\includegraphics[scale=0.45]{./images/server/resp_private.pdf}}
+	\caption{Package - server::endpoints::resp::private}
+\end{figure}
 
 \begin{itemize}
   \item \textbf{Descrizione}: è il package che definisce i modelli delle risposte da passare al client in seguito alle chiamate API;
