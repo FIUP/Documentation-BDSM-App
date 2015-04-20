@@ -23,7 +23,7 @@
 
 \begin{itemize}
   \item \textbf{Descrizione}: è il package che contiene tutte le classi con i metodi per prelevare i dati dai social network e per salvarli nel database;
-  \item \textbf{Padre}: server;
+  \item \textbf{Padre}: server
   \item \textbf{Package contenuti}:
   	\begin{itemize}
   		\item fb;
@@ -45,7 +45,7 @@
 				\item \textbf{Utilizzo}: classe che contiene un campo che rappresenta una recipe e un metodo che inizialmente crea e successivamente andrà a schedulare i fetcher;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item server::miner::AbsFetcher;
+						\item server::miner::AbsFetcher
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_MinerScheduler [end]
@@ -54,12 +54,12 @@
 		\label{subp:server_miner_AbsCounter}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe astratta che rappresenta il padre delle classi counter delle varie metriche;
-				\item \textbf{Utilizzo}: classe che descrive lo scheletro dell'algoritmo di counting. Essa ha lo scopo di controllale la logica di avvio schedulato dei processi;
+				\item \textbf{Utilizzo}: classe che descrive lo scheletro dell'algoritmo di counting. Essa ha lo scopo di controllare la logica di avvio schedulato dei processi;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item server::miner::fb::AbsFbCounter;
-						\item server::miner::tw::AbsTwCounter;
-						\item server::miner::ig::AbsIgCounter;
+						\item server::miner::fb::AbsFbCounter
+						\item server::miner::tw::AbsTwCounter
+						\item server::miner::ig::AbsIgCounter
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_AbsCounter [end]
@@ -71,9 +71,9 @@
 				\item \textbf{Utilizzo}: classe utile in caso l'applicazione venga estesa con altre API dei social network oltre a quelli presi in considerazione;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item server::miner::fb::AbsFbFetcher;
-						\item server::miner::tw::AbsTwFetcher;
-						\item server::miner::ig::AbsIgFetcher;
+						\item server::miner::fb::AbsFbFetcher
+						\item server::miner::tw::AbsTwFetcher
+						\item server::miner::ig::AbsIgFetcher
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_AbsFetcher [end]
@@ -88,10 +88,10 @@
 
 \begin{itemize}
   \item \textbf{Descrizione}: è il package che contiene tutte le classi con i metodi per prelevare i dati da Facebook e per salvarli nel database;
-  \item \textbf{Padre}: server::miner;
+  \item \textbf{Padre}: server::miner
   \item \textbf{Interazione con altri componenti}:
   	\begin{itemize}
-  		\item server::database;
+  		\item server::db
   	\end{itemize}
 \end{itemize}
 
@@ -101,11 +101,11 @@
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe astratta che ricava i dati da Facebook;
 				\item \textbf{Utilizzo}: classe che contiene un metodo che ricava i dati statici e un metodo astratto che verrà definito nelle classi figlie;
-				\item \textbf{Classi ereditate}: server::miner::AbsFetcher;
+				\item \textbf{Classi ereditate}: server::miner::AbsFetcher
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item server::miner::fb::FbPageFetcher;
-						\item server::miner::fb::FbEventFetcher;
+						\item server::miner::fb::FbPageFetcher
+						\item server::miner::fb::FbEventFetcher
 					\end{itemize}
 			\end{itemize}
 	% subparagraph server_miner_fb_AbsFbFetcher [end]
@@ -115,10 +115,10 @@
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che ricava i dati dalle pagine Facebook;
 				\item \textbf{Utilizzo}: classe che contiene un campo che descrive i dati statici di una pagina, un campo che descrive i dati dinamici e un metodo che li ricava tramite l'invocazione della classe PostCounter;
-				\item \textbf{Classi ereditate}: server::miner::fb::AbsFbFetcher;
+				\item \textbf{Classi ereditate}: server::miner::fb::AbsFbFetcher
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item server::miner::fb::PostCounter;
+						\item server::miner::fb::PostCounter
 					\end{itemize}
 			\end{itemize}
 	% subparagraph server_miner_fb_FbPageFetcher [end]
@@ -127,15 +127,15 @@
 		\label{subp:server_miner_fb_FbEventFetcher}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che ricava i dati dagli eventi Facebook
-				\item \textbf{Utilizzo}: classe che contiene un campo che descrive i dati statici dell'evento Facebook, un campo che descrive i dati dinamici e un metodi che li ricava tramite l'invocazione della classe PostCounter;
-				\item \textbf{Classi ereditate}: server::miner::fb::AbsFbFetcher;
+				\item \textbf{Utilizzo}: classe che contiene un campo che descrive i dati statici di un evento, un campo che descrive i dati dinamici e un metodi che li ricava tramite l'invocazione della classe PostCounter;
+				\item \textbf{Classi ereditate}: server::miner::fb::AbsFbFetcher
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item server::miner::fb::PostCounter;
-						\item server::miner::fb::AttendingCounter;
-						\item server::miner::fb::MaybeCounter;
-						\item server::miner::fb::InvitedCounter;
-						\item server::miner::fb::RefusedCounter;
+						\item server::miner::fb::PostCounter
+						\item server::miner::fb::AttendingCounter
+						\item server::miner::fb::MaybeCounter
+						\item server::miner::fb::InvitedCounter
+						\item server::miner::fb::RefusedCounter
 					\end{itemize}
 			\end{itemize}
 	% subparagraph server_miner_fb_FbEventFetcher [end]
@@ -143,18 +143,18 @@
 		\subparagraph{server::miner::fb::AbsFbCounter} % (fold)
 		\label{subp:server_miner_fb_AbsFbCounter}
 			\begin{itemize}
-				\item \textbf{Descrizione}: classe astratta che rappresenta il padre per tutte le classe counter delle metriche di Facebook;
+				\item \textbf{Descrizione}: classe astratta che rappresenta il padre per tutte le classi counter delle metriche di Facebook;
 				\item \textbf{Utilizzo}: classe che contiene l'id delle metriche su cui effettuare il counting, questa classe effettua l'overloading dei metodi della classe padre per specificarne l'utilizzo;
-				\item \textbf{Classi ereditate}: server::miner::AbsCounter;
+				\item \textbf{Classi ereditate}: server::miner::AbsCounter
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item server::miner::fb::AttendingCounter;
-						\item server::miner::fb::MaybeCounter;
-						\item server::miner::fb::InvitedCounter;
-						\item server::miner::fb::RefusedCounter;
-						\item server::miner::fb::PostCounter;
-						\item server::miner::fb::CommentCounter;
-						\item server::miner::fb::LikeCounter;
+						\item server::miner::fb::AttendingCounter
+						\item server::miner::fb::MaybeCounter
+						\item server::miner::fb::InvitedCounter
+						\item server::miner::fb::RefusedCounter
+						\item server::miner::fb::PostCounter
+						\item server::miner::fb::CommentCounter
+						\item server::miner::fb::LikeCounter
 					\end{itemize}
 			\end{itemize}
 	% subparagraph server_miner_fb_AbsFbCounter [end]
@@ -164,7 +164,7 @@
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che descrive l'algoritmo per il counting degli invitati che non hanno ancora risposto in un evento Facebook;
 				\item \textbf{Utilizzo}: classe che ricava il numero di persone invitate che non hanno ancora risposto di un evento Facebook;
-				\item \textbf{Classi ereditate}: server::miner::fb::AbsFbCounter;
+				\item \textbf{Classi ereditate}: server::miner::fb::AbsFbCounter
 			\end{itemize}
 	% subparagraph server_miner_fb_AttendingCounter
 
@@ -173,16 +173,16 @@
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che descrive l'algoritmo per il counting dei maybe in un evento Facebook;
 				\item \textbf{Utilizzo}: classe che ricava il numero di persone in forse per un evento Facebook;
-				\item \textbf{Classi ereditate}: server::miner::fb::AbsFbCounter;
+				\item \textbf{Classi ereditate}: server::miner::fb::AbsFbCounter
 			\end{itemize}
 	% subparagraph server_miner_fb_MaybeCounter
 
 	\subparagraph{server::miner::fb::InvitedCounter} % (fold)
 		\label{subp:server_miner_fb_InvitedCunter}
 			\begin{itemize}
-				\item \textbf{Descrizione}: classe che descrive l'algoritmo per il counting dei invited in un evento Facebook;
+				\item \textbf{Descrizione}: classe che descrive l'algoritmo per il counting degli invited in un evento Facebook;
 				\item \textbf{Utilizzo}: classe che ricava il numero di persone invitate ad un evento Facebook;
-				\item \textbf{Classi ereditate}: server::miner::fb::AbsFbCounter;
+				\item \textbf{Classi ereditate}: server::miner::fb::AbsFbCounter
 			\end{itemize}
 	% subparagraph server_miner_fb_InvitedCounter
 
@@ -191,20 +191,20 @@
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che descrive l'algoritmo per il counting dei refused in un evento Facebook;
 				\item \textbf{Utilizzo}: classe che ricava il numero di persone che hanno rifiutato l'invito per un evento Facebook;
-				\item \textbf{Classi ereditate}: server::miner::fb::AbsFbCounter;
+				\item \textbf{Classi ereditate}: server::miner::fb::AbsFbCounter
 			\end{itemize}
 	% subparagraph server_miner_fb_RefusedCounter
 
 	\subparagraph{server::miner::fb::PostCounter} % (fold)
 		\label{subp:server_miner_fb_PostCounter}
 			\begin{itemize}
-				\item \textbf{Descrizione}: classe che descrive l'algoritmo per calcolare il numero dei post per ogni evento o pagina
+				\item \textbf{Descrizione}: classe che descrive l'algoritmo per calcolare il numero dei post per ogni evento o pagina;
 				\item \textbf{Utilizzo}: classe che contiene un campo per il numero dei like e un campo per il numero dei talking about per ogni post di Facebook;
-				\item \textbf{Classe ereditate}: server::miner::fb::AbsFbCounter;
+				\item \textbf{Classe ereditate}: server::miner::fb::AbsFbCounter
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item server::miner::fb::CommentCounter;
-						\item server::miner::fb::LikeCounter;
+						\item server::miner::fb::CommentCounter
+						\item server::miner::fb::LikeCounter
 					\end{itemize}
 			\end{itemize}
 	% subparagraph server_miner_fb_PostCounter
@@ -212,18 +212,18 @@
 	\subparagraph{server::miner::fb::CommentCounter} % (fold)
 		\label{subp:server_miner_fb_CommentCounter}
 			\begin{itemize}
-				\item \textbf{Descrizione}:classe che descrive l'algoritmo per calcolare il numero di commenti per ogni post
+				\item \textbf{Descrizione}: classe che descrive l'algoritmo per calcolare il numero di commenti per ogni post;
 				\item \textbf{Utilizzo}: classe che ricava il numero di commenti per ogni post;
-				\item \textbf{Classe ereditate}: server::miner::fb::AbsFbCounter;
+				\item \textbf{Classe ereditate}: server::miner::fb::AbsFbCounter
 			\end{itemize}
 	% subparagraph server_miner_fb_CommentCounter
 
 	\subparagraph{server::miner::fb::LikeCounter} % (fold)
 		\label{subp:server_miner_fb_LikeCounter}
 			\begin{itemize}
-					\item \textbf{Descrizione}:classe che descrive l'algoritmo per calcolare il numero di like per ogni post
+				\item \textbf{Descrizione}: classe che descrive l'algoritmo per calcolare il numero di like per ogni post;
 				\item \textbf{Utilizzo}: classe che ricava il numero di like per ogni post;
-				\item \textbf{Classe ereditate}: server::miner::fb::AbsFbCounter;
+				\item \textbf{Classe ereditate}: server::miner::fb::AbsFbCounter
 			\end{itemize}
 	% subparagraph server_miner_fb_LikeCounter
 
@@ -236,12 +236,11 @@
 \end{figure}
 
 \begin{itemize}
-  \item \textbf{Descrizione}:è il package che contiene tutte le classi con i metodi per prelevare
-i dati da Twitter e per salvarli nel database;
-  \item \textbf{Padre}: server::miner;
+  \item \textbf{Descrizione}:è il package che include tutte le classi contenenti i metodi per prelevare i dati da Twitter e per salvarli nel database;
+  \item \textbf{Padre}: server::miner
   \item \textbf{Interazione con altri componenti}:
   	\begin{itemize}
-  		\item server::database;
+  		\item server::database
   	\end{itemize}
 \end{itemize}
 
@@ -250,13 +249,12 @@ i dati da Twitter e per salvarli nel database;
 		\label{subp:server_miner_tw_AbsTwFetcher}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe astratta che ricava i dati da Twitter;
-				\item \textbf{Utilizzo}: classe che contiene un metodo che ricava i dati statici e un metodo
-astratto che verrà definito nelle classi figlie;
-				\item \textbf{Classi ereditate}: server::miner::AbsFetcher;
+				\item \textbf{Utilizzo}: classe che contiene un metodo che ricava i dati statici e un metodo astratto che verrà definito nelle classi figlie;
+				\item \textbf{Classi ereditate}: server::miner::AbsFetcher
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item server::miner::tw::TwHashtagFetcher;
-						\item server::miner::tw::TwUserFetcher;
+						\item server::miner::tw::TwHashtagFetcher
+						\item server::miner::tw::TwUserFetcher
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_tw_AbsTwFetcher
@@ -265,11 +263,11 @@ astratto che verrà definito nelle classi figlie;
 		\label{subp:server_miner_tw_TwHashtagFetcher}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che ricava i dati degli hashtag di Twitter;
-				\item \textbf{Utilizzo}: classe che contiene un campo che descrive i dati statici dell'hashtag Twitter, e un metodo che ricava i dati dinamici da HashtagTweetCounter;
-				\item \textbf{Classi ereditate}: server::miner::tw::AbsTwFetcher;
+				\item \textbf{Utilizzo}: classe che contiene un campo che descrive i dati statici di un hashtag di Twitter, e un metodo che ricava i dati dinamici da HashtagTweetCounter;
+				\item \textbf{Classi ereditate}: server::miner::tw::AbsTwFetcher
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item server::miner::tw::HashtagTweetCounter;
+						\item server::miner::tw::HashtagTweetCounter
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_tw_TwHashtagFetcher
@@ -279,10 +277,10 @@ astratto che verrà definito nelle classi figlie;
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che ricava i dati degli utenti di Twitter;
 				\item \textbf{Utilizzo}: classe che contiene un campo che descrive i dati statici dell'utente, un campo che descrive i dati dinamici [TO DO]
-				\item \textbf{Classi ereditate}: server::miner::tw::AbsTwFetcher;
+				\item \textbf{Classi ereditate}: server::miner::tw::AbsTwFetcher
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item server::miner::tw::UserTweetCounter;
+						\item server::miner::tw::UserTweetCounter
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_tw_TwUserFetcher
@@ -290,12 +288,12 @@ astratto che verrà definito nelle classi figlie;
 	\subparagraph{server::miner::tw::AbsTwCounter} % (fold)
 		\label{subp:server_miner_tw_AbsTwCounter}
 			\begin{itemize}
-				\item \textbf{Descrizione}: classe astratta che rappresenta il padre per tutte le classe counter delle metriche di Twitter;
-				\item \textbf{Utilizzo}: classe che contiene l’id delle metriche su cui effettuare il counting, questa classe effettua l’overloading dei metodi della classe padre per specificarne l’utilizzo;
+				\item \textbf{Descrizione}: classe astratta che rappresenta il padre per tutte le classi counter delle metriche di Twitter;
+				\item \textbf{Utilizzo}: classe che contiene l’id delle metriche su cui effettuare il counting, questa classe effettua l'overloading dei metodi della classe padre per specificarne l’utilizzo;
 				\item \textbf{Classi ereditate}: server::miner::AbsCounter
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item server::miner::UserTweetCounter;
+						\item server::miner::UserTweetCounter
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_tw_AbsTwCounter
@@ -305,7 +303,7 @@ astratto che verrà definito nelle classi figlie;
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che descrive l'algoritmo per il counting dei campi di un tweet, relativo ad un utente, di cui ci interessa fare un trend;
 				\item \textbf{Utilizzo}: classe che ricava il numero dei retweets, il numero dei favoriti, il tipo di device, e il numero di media per ogni tweet;
-				\item \textbf{Classi ereditate}: server::miner::tw::AbsTwCounter;
+				\item \textbf{Classi ereditate}: server::miner::tw::AbsTwCounter
 			\end{itemize}
 		% subparagraph server_miner_tw_UserTweetCounter
 
@@ -315,7 +313,7 @@ astratto che verrà definito nelle classi figlie;
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che descrive l'algoritmo per il counting dei campi di un tweet, relativo ad un hashtag, di cui ci interessa fare un trend;
 				\item \textbf{Utilizzo}: classe che ricava anche la time zone di ogni tweet;
-				\item \textbf{Classi ereditate}: server::miner::tw::UserTweetCounter;
+				\item \textbf{Classi ereditate}: server::miner::tw::UserTweetCounter
 			\end{itemize}
 		% subparagraph server_miner_tw_HashtagTweetCounter
 
@@ -333,7 +331,7 @@ astratto che verrà definito nelle classi figlie;
   \item \textbf{Padre}: server::miner
    \item \textbf{Interazione con altri componenti}:
   	\begin{itemize}
-  		\item server::database;
+  		\item server::database
   	\end{itemize}
 \end{itemize}
 
@@ -341,13 +339,13 @@ astratto che verrà definito nelle classi figlie;
 	\subparagraph{server::miner::ig::AbsIgFetcher} % (fold)
 		\label{subp:server_miner_ig_AbsIgFetcher}
 			\begin{itemize}
-				\item \textbf{Descrizione}: classe astratta che ricava i dati da Instagram
+				\item \textbf{Descrizione}: classe astratta che ricava i dati da Instagram;
 				\item \textbf{Utilizzo}: classe che contiene un metodo che ricava i dati statici e un metodo astratto che verrà definito nelle classi figlie;
-				\item \textbf{Classi ereditate}: server::miner::AbsFetcher;
+				\item \textbf{Classi ereditate}: server::miner::AbsFetcher
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item server::miner::ig::IgUserFetcher;
-						\item server::miner::ig::IgHashtagFetcher;
+						\item server::miner::ig::IgUserFetcher
+						\item server::miner::ig::IgHashtagFetcher
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_ig_AbsIgFetcher
@@ -355,12 +353,12 @@ astratto che verrà definito nelle classi figlie;
 	\subparagraph{server::miner::ig::IgUserFetcher} % (fold)
 		\label{subp:server_miner_ig_IgUserFetcher}
 			\begin{itemize}
-				\item \textbf{Descrizione}: classe che ricava i dati dagli utenti Instagram;
+				\item \textbf{Descrizione}: classe che ricava i dati dagli utenti di Instagram;
 				\item \textbf{Utilizzo}: classe che contiene un campo che descrive i dati statici di un utente, un campo che descrive i dati dinamici [TO DO]
-				\item \textbf{Classi ereditate}: server::miner::ig::AbsIgFetcher;
+				\item \textbf{Classi ereditate}: server::miner::ig::AbsIgFetcher
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item server::miner::ig::MediaCounter;
+						\item server::miner::ig::MediaCounter
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_ig_IgUserFetcher
@@ -370,10 +368,10 @@ astratto che verrà definito nelle classi figlie;
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che ricava i dati dagli hashtag di Instagram;
 				\item \textbf{Utilizzo}: classe che contiene un campo che descrive i dati statici di un hashtag, un campo che descrive i dati dinamici [TO DO]
-				\item \textbf{Classi ereditate}: server::miner::ig::AbsIgFetcher;
+				\item \textbf{Classi ereditate}: server::miner::ig::AbsIgFetcher
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item server::miner::ig::MediaCounter;
+						\item server::miner::ig::MediaCounter
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_ig_IgHashtagFetcher
@@ -381,12 +379,12 @@ astratto che verrà definito nelle classi figlie;
 	\subparagraph{server::miner::ig::AbsIgCounter} % (fold)
 		\label{subp:server_miner_ig_AbsIgCounter}
 			\begin{itemize}
-				\item \textbf{Descrizione}: classe astratta che rappresenta il padre per tutte le classe counter delle metriche di Instagram;
-				\item \textbf{Utilizzo}: classe che contiene l’id delle metriche su cui effettuare il counting, questa classe effettua l’overloading dei metodi della classe padre per specificarne l’utilizzo;
+				\item \textbf{Descrizione}: classe astratta che rappresenta il padre per tutte le classi counter delle metriche di Instagram;
+				\item \textbf{Utilizzo}: classe che contiene l’id delle metriche su cui effettuare il counting, questa classe effettua l'overloading dei metodi della classe padre per specificarne l’utilizzo;
 				\item \textbf{Classi ereditate}: server::miner::AbsCounter
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item server::miner::ig::MediaCounter;
+						\item server::miner::ig::MediaCounter
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_ig_AbsIgCounter
@@ -395,9 +393,9 @@ astratto che verrà definito nelle classi figlie;
 	\subparagraph{server::miner::ig::MediaCounter} % (fold)
 		\label{subp:server_miner_ig_MediaCounter}
 			\begin{itemize}
-				\item \textbf{Descrizione}: classe che descrive l’algoritmo per il counting delle metriche che ci interessano per fare un trend.
-				\item \textbf{Utilizzo}: classe che ricava il numero di commenti, il numero di like, il numero di foto e il numero di video, di un media;
-				\item \textbf{Classi ereditate}: server::miner::ig::AbsIgCounter;
+				\item \textbf{Descrizione}: classe che descrive l'algoritmo per il counting delle metriche che ci interessano per fare un trend;
+				\item \textbf{Utilizzo}: classe che ricava il numero di commenti, il numero di like, il numero di foto e il numero di video di un media;
+				\item \textbf{Classi ereditate}: server::miner::ig::AbsIgCounter
 			\end{itemize}
 		% subparagraph server_miner_ig_MediaCounter
 
