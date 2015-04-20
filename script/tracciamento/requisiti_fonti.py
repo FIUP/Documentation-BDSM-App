@@ -22,14 +22,17 @@ import re
 class RequisitiFonti():
 
     __req_doc_path_str = ""
+    __comp_doc_path_str = ""
     __write_doc_path_str = ""
     __write_list_req_str = ""
 
     __req_doc_file = ""
+    __comp_doc_file = ""
     __write_doc_file = ""
     __write_list_req_file = ""
 
     __req_file_line = []
+    __comp_file_line = []
     # array di soli requisiti per poterli scorrere dal primo all'ultimo nell'ordine di inserimento
     __req_fonti_array = []
 
@@ -37,6 +40,8 @@ class RequisitiFonti():
     __fonti_req_dict = {}
     # dizionario per ricavarmi le fonti sapendo il requisito come chiave
     __req_fonti_dict = {}
+    # dizionario per ricavarmi i componenti sapendo il requisito come chiave
+    __req_comp_dict = {}
 
     def __init__(self):
         pass
@@ -48,6 +53,13 @@ class RequisitiFonti():
         # mi salvo tutte le righe del file in una lista togliendoli il carattere di ritorno a capo
         self.__req_doc_file.close()
 
+    def open_doc_componenti(self):
+        self.__comp_doc_path_str = "../../documenti/specifica_tecnica/content/tracciamento/componenti-requisiti.tex"
+        self.__comp_doc_file = open(self.__comp_doc_path_str, "r")
+        self.__comp_file_line = [line.strip() for line in self.__comp_doc_file]
+        # mi salvo tutte le righe del file in una lista togliendoli il carattere di ritorno a capo
+        self.__comp_doc_file.close()
+
     def take_req(self):
         for line in self.__req_file_line:
             req_match_re = re.match(r"^R(.*)", line)
@@ -56,7 +68,7 @@ class RequisitiFonti():
                 if req:
                     fonti_for_req_array = line.split('&')[2].strip()
                     fonti_single_array = fonti_for_req_array[:-2].strip().split("\\newline")
-                    # aggiorno ilmv  dizionario con il nuovo valore del requisito e le sue fonti
+                    # aggiorno il dizionario con il nuovo valore del requisito e le sue fonti
                     self.__req_fonti_dict.update({req.group(): fonti_for_req_array})
                     # aggiorno l'array solo dei requisiti
                     self.__req_fonti_array.append(req.group())
@@ -66,6 +78,25 @@ class RequisitiFonti():
                             self.__fonti_req_dict[fonte.strip()].append(req.group().strip())
                         else:
                             self.__fonti_req_dict[fonte.strip()] = [req.group().strip()]
+
+    def take_req_comp(self):
+        for line in self.__comp_file_line:
+            comp_match_re = re.match(r"^(server|client)", line)
+            if comp_match_re is not None:
+                comp = re.search(r"^(server|client)(.*)&", line)
+                comp = (comp.group(1) + comp.group(2)).strip()
+
+                if comp:
+                    # TODO: change name
+                    fonti_for_req_array = line.split('&')[1].strip()
+                    fonti_single_array = fonti_for_req_array[:-2].strip().split("\\newline")
+                    for req in fonti_single_array:
+                        if req.strip() in self.__req_comp_dict:
+                            self.__req_comp_dict[req.strip()].append(comp.strip())
+                        else:
+                            self.__req_comp_dict[req.strip()] = [comp.strip()]
+
+        # print self.__req_comp_dict
 
     def get_list_req(self):
         return self.__req_fonti_dict
@@ -110,7 +141,21 @@ class RequisitiFonti():
         self.__write_list_req_file.write("\hline\n")
 
         for val in self.__req_fonti_array:
-            self.__write_list_req_file.write(val + "  &  TO DO \\\\\n")
+            val = val.strip()
+            if val in self.__req_comp_dict:
+                comp_for_req = self.__req_comp_dict[val]
+                self.__write_list_req_file.write(val + " & ")
+                length = len(comp_for_req)
+                counter = 0
+                for r in comp_for_req:
+                    self.__write_list_req_file.write(r + " ")
+                    counter += 1
+                    if counter != length:
+                        self.__write_list_req_file.write("\\newline ")
+            else:
+                self.__write_list_req_file.write(val + " & TO DO: Componente non tracciato! ")
+
+            self.__write_list_req_file.write("\\\\\n")
             self.__write_list_req_file.write("\hline\n")
 
         self.__write_list_req_file.write("\end{longtable}\n")

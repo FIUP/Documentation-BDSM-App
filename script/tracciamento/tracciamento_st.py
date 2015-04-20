@@ -23,7 +23,9 @@ if __name__ == '__main__':
 
     r = RequisitiFonti()
     r.open_doc_req()
+    r.open_doc_componenti()
     r.take_req()
+    r.take_req_comp()
     r.write_list_req()
 
     print "*** End: generazione file contenente lista requisiti"
