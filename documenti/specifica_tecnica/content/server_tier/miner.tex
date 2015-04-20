@@ -54,7 +54,7 @@
 		\label{subp:server_miner_AbsCounter}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe astratta che rappresenta il padre delle classi counter delle varie metriche;
-				\item \textbf{Utilizzo}: descrive lo scheletro dell'algoritmo di counting necessario ad effettuare il conteggio di determinati dati ricavati con lo scopo ottenre un trend;
+				\item \textbf{Utilizzo}: descrive lo scheletro dell'algoritmo di counting necessario ad effettuare il conteggio di determinati dati ricavati con lo scopo ottenere un trend;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item server::miner::fb::AbsFbCounter
@@ -99,7 +99,7 @@
 		\subparagraph{server::miner::fb::AbsFbFetcher} % (fold)
 		\label{subp:server_miner_fb_AbsFbFetcher}
 			\begin{itemize}
-				\item \textbf{Descrizione}: classe astratta che rapprenta il padre di ogni fetcher relativo a Facebook;
+				\item \textbf{Descrizione}: classe astratta che rappresenta il padre di ogni fetcher relativo a Facebook;
 				\item \textbf{Utilizzo}: contiene un metodo che ricava i dati statici di un'entità Facebook ed un metodo astratto che verrà definito nelle classi figlie;
 				\item \textbf{Classi ereditate}: server::miner::AbsFetcher
 				\item \textbf{Relazioni con altre classi}:
@@ -144,7 +144,7 @@
 		\label{subp:server_miner_fb_AbsFbCounter}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe astratta che rappresenta il padre per tutte le classi counter delle metriche di Facebook;
-				\item \textbf{Utilizzo}: classe che contiene l'id delle metriche su cui effettuare il counting, questa classe effettua l'overloading dei metodi della classe padre specificando la struttura dell'algoritmo per il couting su dati Facebook;
+				\item \textbf{Utilizzo}: classe che contiene l'id delle metriche su cui effettuare il counting, questa classe effettua l'overloading dei metodi della classe padre specificando la struttura dell'algoritmo per il counting su dati Facebook;
 				\item \textbf{Classi ereditate}: server::miner::AbsCounter
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
@@ -248,7 +248,7 @@
 	\subparagraph{server::miner::tw::AbsTwFetcher} % (fold)
 		\label{subp:server_miner_tw_AbsTwFetcher}
 			\begin{itemize}
-				\item \textbf{Descrizione}: classe astratta che rapprenta il padre di ogni fetcher relativo a Twitter;
+				\item \textbf{Descrizione}: classe astratta che rappresenta il padre di ogni fetcher relativo a Twitter;
 				\item \textbf{Utilizzo}: contiene un metodo che ricava i dati statici di un'entità Twitter ed un metodo astratto che verrà definito nelle classi figlie;
 				\item \textbf{Classi ereditate}: server::miner::AbsFetcher
 				\item \textbf{Relazioni con altre classi}:
@@ -289,7 +289,7 @@
 		\label{subp:server_miner_tw_AbsTwCounter}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe astratta che rappresenta il padre per tutte le classi counter delle metriche di Twitter;
-				\item \textbf{Utilizzo}: oltre a contenere l’id delle metriche su cui effettuare il counting, questa classe effettua l'overloading dei metodi della classe padre specificando la struttura dell'algoritmo per il couting su dati Twitter;
+				\item \textbf{Utilizzo}: oltre a contenere l’id delle metriche su cui effettuare il counting, questa classe effettua l'overloading dei metodi della classe padre specificando la struttura dell'algoritmo per il counting su dati Twitter;
 				\item \textbf{Classi ereditate}: server::miner::AbsCounter
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
@@ -339,7 +339,7 @@
 	\subparagraph{server::miner::ig::AbsIgFetcher} % (fold)
 		\label{subp:server_miner_ig_AbsIgFetcher}
 			\begin{itemize}
-				\item \textbf{Descrizione}: classe astratta che rapprenta il padre di ogni fetcher relativo a Instagram;
+				\item \textbf{Descrizione}: classe astratta che rappresenta il padre di ogni fetcher relativo a Instagram;
 				\item \textbf{Utilizzo}: contiene un metodo che ricava i dati statici di un'entità Instagram ed un metodo astratto che verrà definito nelle classi figlie;
 				\item \textbf{Classi ereditate}: server::miner::AbsFetcher
 				\item \textbf{Relazioni con altre classi}:
@@ -379,7 +379,7 @@
 	\subparagraph{server::miner::ig::AbsIgCounter} % (fold)
 		\label{subp:server_miner_ig_AbsIgCounter}
 			\begin{itemize}
-				\item \textbf{Descrizione}: classe astratta che rappresenta il padre per tutte le classi counter delle metriche realtive ad Instagram;
+				\item \textbf{Descrizione}: classe astratta che rappresenta il padre per tutte le classi counter delle metriche relative ad Instagram;
 				\item \textbf{Utilizzo}: classe che contiene l’id delle metriche su cui effettuare il counting, questa classe effettua l'overloading dei metodi della classe padre per specificarne l’utilizzo sui dati relativi ad Instagram;
 				\item \textbf{Classi ereditate}: server::miner::AbsCounter
 				\item \textbf{Relazioni con altre classi}:

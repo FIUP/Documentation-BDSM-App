@@ -29,7 +29,7 @@
     \begin{itemize}
       \item server::miner
       \item server::endpoints
-      \item srever::db
+      \item server::db
     \end{itemize}
 \end{itemize}
 
@@ -38,7 +38,7 @@
     \subparagraph{server::processor::RequestHandler} % (fold)
     \label{subp:bdsm_app_server_processor_requesthandler}
     \begin{itemize}
-      \item \textbf{Descrizione}: è la classe che implementa il pattern Front Controller e si occupa di raccorgliere le richieste provenienti dal client. Implementa inoltre il pattern Singleton, perciò un'unica istanza di tale classe vivrà nel sistema;
+      \item \textbf{Descrizione}: è la classe che implementa il pattern Front Controller e si occupa di raccogliere le richieste provenienti dal client. Implementa inoltre il pattern Singleton, perciò un'unica istanza di tale classe vivrà nel sistema;
       \item \textbf{Utilizzo}: viene invocata dalle classi presenti nel package \texttt{server::endpoints::api} in seguito ad una chiamata ai servizi REST offerti dal sistema e trasferisce la richiesta alla classe \texttt{CommandDispatcher} che si occuperà di invocare il relativo comando per soddisfare tale richiesta;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
@@ -664,7 +664,7 @@
         \label{subp:bdsm_app_server_processor_commands_social_ighashtagtrendcommand}
         \begin{itemize}
           \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi al trend di un hashtag di Instagram;
-          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere i dati grezzi relativi al trend di un hashtag di Intagram;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere i dati grezzi relativi al trend di un hashtag di Instagram;
           \item \textbf{Relazioni con altre classi}:
             \begin{itemize}
               \item server::processor::commands::social::AbsIgCommand
