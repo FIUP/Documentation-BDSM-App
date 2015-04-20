@@ -26,9 +26,22 @@ for doc_dir in docs_dir_list:
     # mi prelevo la lista di tutti i file .tex contenuti dentro la cartella del documento che sto esaminando
     # nell'iterazione corrente
     content_list = os.listdir(content_path)
+    final_content_list = []
+    final_content_list.extend(content_list)
+
+    for content in content_list:
+        content_file_path = content_path + "/" + content
+
+        if os.path.isdir(content_file_path):
+            final_content_list.remove(content)
+            contents_subdir = os.listdir(content_file_path)
+            # print contents_subdir
+            for content_subdir in contents_subdir:
+                print content + "/" + content_subdir
+                final_content_list.append(content + "/" + content_subdir)
 
     # itero su tutti i file .tex contenuti dentro
-    for content in content_list:
+    for content in final_content_list:
         term_maiusc_file = open(term_maiusc_path, "r")
         term_min_file = open(term_min_path, "r")
 
@@ -42,33 +55,35 @@ for doc_dir in docs_dir_list:
 
         # TERMINI MAIUSCOLI
         for line_term in lines_maiusc_term:
+            if line_term != "C++":
+                # rimpiazzo gli spazi con il simbolo per lo spazio nelle espressioni regolari
+                line_new = line_term.replace(" ", "\s")
+                #  -> esattamente la parola contenente dentro line_new e nessun altro patter
+                line_new = "\\b" + line_new + "\\b"
+                term_maiusc_cmd = ["perl", "-i", "-p", "-e", "s/" + line_new + "/" + line_term + "\\\gloss{}/ "
+                                   + "if !(m/\\\section/ || m/\\\subsection/"
+                                   + " || m/\\\subsubsection/ || m/\\\caption/ || m/\\\includegraphics/"
+                                   + " || m/\\\label/ || m/\\\hyperref/ || m/\\\url/ || m/\\\paragraph/"
+                                   + " || m/\\\subparagraph/ || m/\\\[r]ef/ || m/\\\[b]egin/ || m/\\\input/ )",
+                                   content_file_path]
 
-            # rimpiazzo gli spazi con il simbolo per lo spazio nelle espressioni regolari
-            line_new = line_term.replace(" ", "\s")
-            #  -> esattamente la parola contenente dentro line_new e nessun altro patter
-            line_new = "\\b" + line_new + "\\b"
-            term_maiusc_cmd = ["perl", "-i", "-p", "-e", "s/" + line_new + "/" + line_term + "\\\gloss{}/ "
-                               + "if !(m/\\\section/"
-                               + " || m/\\\subsection/ || m/\\\subsubsection/ || m/\\\caption/ || m/\\\includegraphics/"
-                               + " || m/\\\label/ || m/\\\hyperref/ || m/\\\url/ || m/\\\paragraph/"
-                               + "|| m/\\\subparagraph/ || m/\\\[r]ef/ || m/\\\[b]egin/)", content_file_path]
-
-            subprocess.call(term_maiusc_cmd)
+                subprocess.call(term_maiusc_cmd)
 
         term_maiusc_file.close()
 
         # TERMINI MINUSCOLI
         for line_term in lines_min_term:
+            if line_term != "c++" or line_term != "view":
+                line_new = line_term.replace(" ", "\s")
+                line_new = "\\b" + line_new + "\\b"
+                term_min_cmd = ["perl", "-i", "-p", "-e", "s/" + line_new + "/" + line_term + "\\\gloss{}/ "
+                                + "if !(m/\\\section/ || m/\\\subsection/"
+                                + " || m/\\\subsubsection/ || m/\\\caption/ || m/\\\includegraphics/"
+                                + " || m/\\\label/ || m/\\\hyperref/ || m/\\\url/ || m/\\\paragraph/"
+                                + " || m/\\\subparagraph/ || m/\\\[r]ef/ || m/\\\[b]egin/ || m/\\\input/ )",
+                                content_file_path]
 
-            line_new = line_term.replace(" ", "\s")
-            line_new = "\\b" + line_new + "\\b"
-            term_min_cmd = ["perl", "-i", "-p", "-e", "s/" + line_new + "/" + line_term + "\\\gloss{}/ "
-                            + "if !(m/\\\section/"
-                            + " || m/\\\subsection/ || m/\\\subsubsection/ || m/\\\caption/ || m/\\\includegraphics/"
-                            + " || m/\\\label/ || m/\\\hyperref/ || m/\\\url/ || m/\\\paragraph/"
-                            + " || m/\\\subparagraph/ || m/\\\[r]ef/ || m/\\\[b]egin/)", content_file_path]
-
-            subprocess.call(term_min_cmd)
+                subprocess.call(term_min_cmd)
 
         term_min_file.close()
 
