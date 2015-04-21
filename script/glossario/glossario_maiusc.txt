@@ -8,6 +8,7 @@ Big query
 BOM
 Bug
 C++
+Categoria
 Ciclo di Deming
 Cloud Database
 Commit
@@ -39,6 +40,9 @@ Java
 JavaScript
 JSON
 \LaTeX
+Linguaggio di scripting
+Markup
+Metrica
 Milestone
 Miner
 MySql
@@ -56,6 +60,7 @@ Repository
 Recipe
 REST
 Reveal.js
+Schema-less
 SDK
 Socket.io
 SPICE
@@ -65,6 +70,7 @@ Task
 Template
 Ticket
 Ticketing
+Tool
 Twitter Bootstrap
 UML
 UTF

@@ -1,0 +1,90 @@
+% =================================================================================================
+% File:			client_tier.tex
+% Description:	Defiinisce la sezione relativa al front-end dell'applicazione
+% Created:		2015-03-27
+% Author:		Tesser Paolo
+% Email:		tesser.paolo@mashup-unipd.it
+% =================================================================================================
+% Modification History:
+% Version		Modifier Date		Change											Author
+% 0.0.1 		2015-03-27 			creato scheletro								Tesser Paolo
+% =================================================================================================
+% 0.0.2			2015-03-28			inserito scheletro del package					Tesser Paolo
+% =================================================================================================
+% 0.0.3			2015-04-04			inseriti padri dei package e pack contenuti		Tesser Paolo
+% =================================================================================================
+% 0.0.4			2015-04-04			inserite classi del package View				Tesser Paolo
+% =================================================================================================
+%
+
+% CONTENUTO DEL CAPITOLO
+
+\subsection{Client (Front-end)} % (fold)
+\label{sub:client}
+Nel descrivere le componenti si parlerà di classi, che però saranno da intendersi nella loro accezione logica. Il linguaggio di programmazione impiegato infatti non possiede la struttura di classe, ma solo di oggetto, sarà quindi compito del codificatore riportare le classi di seguito identificate nelle strutture fornite dallo specifico linguaggio.
+
+	\subsubsection{client} % (fold)
+	\label{ssub:bdsm_app_client}
+	\begin{figure}[htbp]
+		\centering
+		\centerline{\includegraphics[scale=0.45]{./images/client/client.pdf}}
+		\label{fig:package_client}
+		\caption{Package - client}
+	\end{figure}
+
+	\begin{itemize}
+		\item \textbf{Descrizione}: è il package che racchiude tutte le parti del front-end. \'E quindi l'insieme dei componenti che viene eseguito nel browser degli utenti normali e degli amministratori, fornendo loro un'interfaccia grafica per interagire con il sistema;
+		\item \textbf{Package contenuti}:
+			\begin{itemize}
+				\item client::model
+				\item client::view
+				\item client::controller
+			\end{itemize}
+		\item \textbf{Interazione con altri componenti}: interagisce con il server definito nella sezione \ref{sub:server} effettuando delle chiamate ai servizi REST esposti;
+	\end{itemize}
+	% subsubsection bdsm_app_client (end)
+
+	\pagebreak
+	% PACKAGE MODEL
+	\input{./content/client_tier/model} \clearpage \newpage
+	% END PACKAGE MODEL
+
+	% PACKAGE DELLA VIEW
+	\input{./content/client_tier/view} \clearpage \newpage
+	% END PACKAGE VIEW
+
+	% PACKAGE CONTROLLER
+	\input{./content/client_tier/controller} \clearpage \newpage
+	% END PACKAGE CONTROLLER
+
+
+	% TEMPLATE PER IL PACKAGE
+%	\begin{comment}
+%	\subsubsection{Nome package} % (fold)
+%	\label{ssub:nome_del_package}
+%	[TO DO] (diagramma) \newline \newline
+
+%	\begin{itemize}
+%		\item \textbf{Descrizione}: [TO DO];
+%		\item \textbf{Padre}: [TO DO] (qualora presente);
+%		\item \textbf{Package contenuti}: [TO DO] (qualora presente);
+%		\item \textbf{Interazione con altri componenti}: [TO DO];
+%	\end{itemize}
+
+%		\paragraph{Classi} % (fold)
+%			\subparagraph{Nome package::Nome classe} % (fold)
+%			\label{subp:subparagraph_name}
+%				\begin{itemize}
+%					\item \textbf{Descrizione}: [TO DO];
+%					\item \textbf{Utilizzo}: [TO DO];
+%					\item \textbf{Classi ereditate}: [TO DO];
+%					\item \textbf{Relazioni con altre classi}: [TO DO].
+%				\end{itemize}
+			% subparagraph subparagraph_name (end)
+%	\end{comment}
+			% subsection nome_classe (end)
+
+		% paragraph classi (end)
+	% subsubsection nome_del_package (end)
+
+% subsection client (end)

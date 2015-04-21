@@ -1,0 +1,83 @@
+% =================================================================================================
+% File:			dp_architetturali.tex
+% Description:	Defiinisce la sezione relativa a ...
+% Created:		2015-03-26
+% Author:		Tesser Paolo
+% Email:		tesser.paolo@mashup-unipd.it
+% =================================================================================================
+% Modification History:
+% Version		Modifier Date		Change											Author
+% 0.0.1 		2015-03-26 			aggiunto sezioni								Tesser Paolo
+% =================================================================================================
+% 0.0.2			2015-04-03			descritto pattern MVC, MVW e DI					Tesser Paolo
+% =================================================================================================
+% 0.0.3			2015-04-13			descritto Three-Tier							Tesser Paolo
+% =================================================================================================
+%
+
+% CONTENUTO DEL CAPITOLO
+
+\subsection{Design pattern architetturali} % (fold)
+\label{sub:design_pattern_architetturali}
+	\subsubsection{Three-Tier} % (fold)
+	\label{ssub:three_tier}
+		\begin{itemize}
+			\item \textbf{Scope dell'utilizzo}: è stato scelto il pattern Three-tier per rendere massima la distribuzione delle componenti principali del sistema: client(front-end), server(back-end) e database (Datastore). La decisione di adottare un'architettura REST-like ha contribuito alla scelta dell'infrastruttura, che ci permette di separare al meglio le diverse parti;
+			\item \textbf{Contesto dell'utilizzo}:
+				\begin{itemize}
+					\item \textbf{Intera applicazione}: la decomposizione del sistema avviene secondo lo schema citato precedentemente. Ogni componente rappresenta un livello del pattern. Il client comunica con il server attraverso i servizi REST esposti da quest'ultimo, mentre il server comunica con il database attraverso le funzionalità offerte dalla Google App Engine. \newline
+					Il diagramma che riporta lo schema del pattern è quello presente alla sezione \ref{susb:architettura_generale}.
+				\end{itemize}
+		\end{itemize}
+	% subsubsection three_tier (end)
+
+
+	\subsubsection{MVW} % (fold)
+	\label{ssub:mvw}
+		\begin{itemize}
+			\item \textbf{Scope dell'utilizzo}: è un Design Pattern simile a MVC, che permette di avere una corrispondenza più diretta e automatica tra la \emph{view} e il \emph{model}. L'acronimo MVW sta infatti per Model-View-Whatever, dove \emph{Whatever} indica \emph{``whatever works for you''};
+			\item \textbf{Contesto dell'utilizzo}: 
+				\begin{itemize}
+					\item \textbf{Client}: viene utilizzato per gestire il lato client dell'applicazione. Questo ci viene fornito direttamente dal framework AngularJS. La parte W (Whatever) assume internamente due diversi aspetti. \newline
+					Il diagramma che riporta lo schema del pattern è quello presente alla sezione \ref{sub:client}.
+				\end{itemize}
+		\end{itemize}
+
+		\paragraph{MVC} % (fold)
+		\label{par:mvc}
+			\begin{itemize}
+				\item \textbf{Scope dell'utilizzo}: questo pattern è utilizzato per separare le responsabilità dell’applicazione a diversi componenti e permettere di fare una chiara divisione tra presentazione, struttura dei dati e operazioni su di essi;
+
+				\item \textbf{Contesto dell'utilizzo}: 
+					\begin{itemize}
+						\item \textbf{Client}: viene utilizzato nel livello client per separare i componenti a seconda delle loro responsabilità e secondo una connotazione semantica. Il formalismo che viene quindi assunto per dividere i package è proprio quello fornito dal pattern in questione e cioè: \textbf{model, view e controller}. Questi però non interagiscono tra di loro nella maniera canonica che il pattern offre, ma seguono lo stile proposto da MVVM descritto alla sezione \ref{par:mvvm}.
+					\end{itemize}
+			\end{itemize}
+		% paragraph mvc (end)
+
+		\paragraph{MVVM} % (fold)
+		\label{par:mvvm}
+			\begin{itemize}
+				\item \textbf{Scope dell'utilizzo}: questo pattern è utilizzato per gestire il modo con il quale le diverse parti comunicano tra loro per scambiare i dati e per gestire le operazioni che l'utente richiede attraverso l'interazione con la View;
+
+				\item \textbf{Contesto dell'utilizzo}: 
+					\begin{itemize}
+						\item \textbf{Client}: viene utilizzato nel livello client per gestire lo scambio dei dati e le interazioni che fanno cambiare le View e lo stato del Model, attraverso principalmente un sistema di two-way data binding e di eventi. Il Model però non interagisce direttamente con le View, ma passa attraverso un controller che fa da collante tra la View e il Model (ViewModel) attraverso l'oggetto \$scope.
+					\end{itemize}
+			\end{itemize}
+		% paragraph mvvm (end)
+	% subsubsection mvw (end)
+
+	\subsubsection{Dependency Injection} % (fold)
+	\label{ssub:dependency_injection}
+		\begin{itemize}
+			\item \textbf{Scope dell'utilizzo}: è un Design Pattern che viene utilizzato per favorire la separazione delle responsabilità tra i componenti dalla risoluzione delle dipendenze. Questo permette di avere una migliore modularità del codice, di avere un minor accoppiamento tra le diverse parti e garantisce una più facile fase di testing;
+			\item \textbf{Contesto dell'utilizzo}: 
+				\begin{itemize}
+					\item \textbf{Client}: viene utilizzato direttamente da AngularJS per iniettare le diverse dipendenze nei moduli che le richiedono. In particolare vengono iniettati nei controller tutti i servizi e i modelli dei dati necessari all'interazione dell'utente con le viste. \newline
+					Non ne viene fornita nessuna rappresentazione grafica in quanto non è una cosa che viene progettata dal team, ma usata direttamente attraverso il framework scelto;
+				\end{itemize}
+		\end{itemize}
+	% subsubsection dependency_injection (end)
+
+% subsection design_pattern_architetturali (end)

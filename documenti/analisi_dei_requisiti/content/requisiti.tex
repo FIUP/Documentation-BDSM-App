@@ -1,35 +1,48 @@
 % =================================================================================================
 % File:			requisiti.tex
 % Description:	Definisce il capitolo che contiene i requisiti in forma tabellare
-% Created:		2014/12/10
+% Created:		2014-12-10
 % Author:		Roetta Marco
 % Email:		roetta.marco@mashup-unipd.it
 % =================================================================================================
 % Modification History:
-% Version		Modifier Date		Change											Author
-% 0.0.1 		2014/12/10 			aggiunta sezione e iniziata stesura				Roetta Marco
+% Version		Modifier Date		Change													Author
+% 0.0.1 		2014-12-10 			aggiunta sezione e iniziata stesura						Roetta Marco
 % =================================================================================================
-% Version		Modifier Date		Change											Author
-% 0.0.2 		2015/01/12 			aggiunte tabelle								Carnovalini Filippo
+% 0.0.2 		2015-01-12 			aggiunte tabelle										Carnovalini Filippo
 % =================================================================================================
-% Version		Modifier Date		Change											Author
-% 0.0.3 		2015/01/16 			requisiti prestazionali di qualità e di vincolo	Carnovalini Filippo
+% 0.0.3 		2015-01-16 			requisiti prestazionali di qualità e di vincolo			Carnovalini Filippo
 % =================================================================================================
-% Version		Modifier Date		Change											Author
-% 0.0.4 		2015/01/16 			aggiunti requisiti funzionali, fixing generale 	Cusinato Giacomo
+% 0.0.4 		2015-01-16 			aggiunti requisiti funzionali, fixing generale 			Cusinato Giacomo
 % =================================================================================================
-% Version		Modifier Date		Change											Author
-% 0.0.5 		2015/01/17 			requisiti tratti dagli UC1.2, 1.5 e 1.6		Carnovalini Filippo
+% 0.0.5 		2015-01-17 			requisiti tratti dagli UC1.2, 1.5 e 1.6					Carnovalini Filippo
 % =================================================================================================
-% Version		Modifier Date		Change											Author
-% 0.0.6 		2015/01/18 			requisiti tratti dagli UC1.3 e 1.7				Carnovalini Filippo
+% 0.0.6 		2015-01-18 			requisiti tratti dagli UC1.3 e 1.7						Carnovalini Filippo
 % =================================================================================================
-% Version		Modifier Date		Change											Author
-% 0.0.7 		2015/01/18 			aggiunti requsiti funzionali e di vincolo		Cusinato Giacomo
+% 0.0.7 		2015-01-18 			aggiunti requsiti funzionali e di vincolo				Cusinato Giacomo
 % =================================================================================================
-% Version		Modifier Date		Change											Author
-% 1.0.0 		2015/01/21 			inizio verifica documento						Faccin Nicola
+% 1.0.0 		2015-01-21 			inizio verifica documento								Faccin Nicola
 % =================================================================================================
+% 1.1.0 		2015-02-20 			correzione in base all'esito RR	 						Carnovalini Filippo
+% =================================================================================================
+% 2.0.1			2015-03-12			correzione piccoli errori ortografici					Tesser Paolo
+% =================================================================================================
+% 2.0.2			2015-03-12			rimossi requisiti: ROF3.2.2.3, RDF5.2.2, RDF5.2.2.1		Tesser Paolo
+% =================================================================================================
+% 2.0.3			2015-03-12			rimossi req: RDF6, ROF7 e derivati						Tesser Paolo
+% =================================================================================================
+% 2.0.4			2015-03-12			modificati req: RDF6, ROF7 e derivati					Tesser Paolo
+% =================================================================================================
+% 2.0.5			2015-03-15			modificate fonti conformi ai nuovi UC					Tesser Paolo
+% =================================================================================================
+% 2.0.6			2015-03-15			inseriti req. ROF5 e derivati riguardanti View FB		Tesser Paolo
+% =================================================================================================
+% 2.0.7			2015-03-16			inseriti req. ROF6/7 con derivati						Tesser Paolo
+% =================================================================================================
+% 2.0.8			2015-04-02			inseriti requisiti per API offerte						Tesser Paolo
+% =================================================================================================
+%
+
 % CONTENUTO DEL CAPITOLO
 
 \section{Requisiti}
@@ -54,9 +67,9 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 \begin{itemize}
 	\item \emph{importanza}: può assumere uno tra i seguenti valori:
 	\begin{itemize}
-		\item \emph{0}: requisito obbligatorio;
-		\item \emph{1}: requisito desiderabile;
-		\item \emph{2}: requisito opzionale;
+		\item \emph{O}: requisito obbligatorio;
+		\item \emph{D}: requisito desiderabile;
+		\item \emph{F}: requisito facoltativo (opzionale);
 	\end{itemize}
 	\item \emph{tipo}: può assumere uno tra i seguenti valori:
 	\begin{itemize}
@@ -75,191 +88,492 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 
 	\def\arraystretch{1.5}
 	\bgroup
-	\begin{longtable}{| p{2cm} | p{8cm} | p{2cm} |}
+	\begin{longtable}{| p{2.5cm} | p{8cm} | p{2cm} |}
 
 		\hline
 		\textbf{Requisito} & \textbf{Descrizione} & \textbf{Fonti} \\
 		\hline
 
-		R0F1  &  L'utente non autenticato può effettuare la registrazione al servizio  &  UC1.8 \\
+		% Registrazione utente
+
+		ROF1  &  L'utente non autenticato può effettuare la registrazione al servizio  & UC1 \newline UC1.8 \\
 		\hline
-		R0F1.1  &  La registrazione richiede l'inserimento dello username  &  UC1.8.1 \\
+		ROF1.1  &  La registrazione richiede l'inserimento dello username  &  UC1.8.1 \\
 		\hline
-		R0F1.1.1  &  Lo username è univoco in tutto il sistema  &  Interno \\
+		ROF1.1.1  &  Lo username è univoco in tutto il sistema  &  Interno \\
 		\hline
-		R0F1.1.2  &  Lo username è una stringa contetente esclusivamente caratteri alfanumerici e underscore (\_)  &  Interno \\
+		ROF1.1.2  &  Lo username è una stringa contenente esclusivamente caratteri alfanumerici e underscore (\_)  &  Interno \\
 		\hline
-		R0F1.1.3  &  La lunghezza dello username è contenuta tra i 4 ed i 30 caratteri  &  Interno \\
+		ROF1.1.3  &  La lunghezza dello username è contenuta tra i 4 ed i 30 caratteri  &  Interno \\
 		\hline
-		R0F1.2  &  La registrazione richiede l'inserimento di un indirizzo e-mail valido &  UC1.8.2 \\
+		ROF1.2  &  La registrazione richiede l'inserimento di un indirizzo e-mail valido &  UC1.8.2 \\
 		\hline
-		R0F1.3  &  La registrazione richiede l'inserimento della password  &  UC1.8.3 \\
+		ROF1.3  &  La registrazione richiede l'inserimento della password  &  UC1.8.3 \\
 		\hline
-		R0F1.3.1  &  La password non può contenere lo username  &  Interno \\
+		ROF1.3.1  &  La password non può contenere lo username  &  Interno \\
 		\hline
-		R0F1.3.2  &  La password è una striga contetente esclusivamente caratteri alfanumerici e speciali ( ? ! \$ + - / . , \textless \textgreater $@$ \textasciitilde \^{} \_ )  &  Interno \\
+		ROF1.3.2  &  La password è una stringa contenente esclusivamente caratteri alfanumerici e speciali ( ? ! \$ + - / . , \textless \textgreater $@$ \textasciitilde \^{} \_ )  &  Interno \\
 		\hline
-		R0F1.3.3  &  La lunghezza minima della password è di 6 caratteri  &  Interno \\
+		ROF1.3.3  &  La lunghezza minima della password è di 6 caratteri  &  Interno \\
 		\hline
-		R0F1.4  &  La registrazione richiede la conferma della password  &  Interno \\
+		ROF1.4  &  La registrazione richiede la conferma della password  &  Interno \\
 		\hline
-		R0F1.4.1  &  La password di conferma deve coincidere con la password inserita precedentemente  &  Interno \\
+		ROF1.4.1  &  La password di conferma deve coincidere con la password inserita precedentemente  &  Interno \\
 		\hline
-		R0F1.5  &  Il sistema avverte l'utente in fase di compilazione della form nel caso i dati inseriti in quel momento non risultino conformi alle norme del sistema  &  Interno \\
+		RDF1.5  &  Il sistema avverte l'utente in fase di compilazione della form nel caso i dati inseriti in quel momento non risultino conformi alle norme del sistema  &  Interno \\
 		\hline
-		R0F1.6  &  L'utente non autenticato può confermare la registrazione tramite l'apposito pulsante  &  UC1.8.4 \\
+		ROF1.6  &  L'utente non autenticato può confermare la registrazione tramite l'apposito pulsante  &  UC1.8.4 \\
 		\hline
-		R0F1.7  &  Il sistema visualizza un messaggio di errore nel caso i dati inseriti risultino non conformi alle norme imposte dal sistema  &  UC1.8.5 \\
+		ROF1.7  &  Il sistema visualizza un messaggio di errore nel caso i dati inseriti risultino non conformi alle norme imposte dal sistema  &  UC1.8.5 \\
 		\hline
-		R0F1.8  &  Nel caso la registrazione sia andata a buon fine, il sistema aggiunge i dati dell'utente nel rispettivo database  &  Interno \\
+		RDF1.8  &  Nel caso la registrazione sia andata a buon fine, viene inviata una e-mail di conferma all'indirizzo inserito dall'utente  &  Interno \\
 		\hline
-		R1F1.9  &  Nel caso la registrazione sia andata a buon fine, viene inviata una e-mail di conferma all'indirizzo inserito dall'utente  &  Interno \\
+
+		% Login Utente
+
+		ROF2  &  L'utente non autenticato può effettuare il login tramite l'apposto form di login  &  UC1 \newline UC1.1 \\
 		\hline
-		R0F2  &  L'utente non autenticato può effettuare il login tramite l'apposto form di login  &  UC1.1 \\
+		ROF2.1  &  Il login richiede l'inserimento dello username  &  UC1.1.1 \\
 		\hline
-		R0F2.1  &  Il login richiede l'inserimento dello username  &  UC1.1.1 \\
+		ROF2.2  &  Il login richiede l'inserimento della password  &  UC1.1.2 \\
 		\hline
-		R0F2.2  &  Il login richiede l'inserimento della password  &  UC1.1.2 \\
+		ROF2.3  &  L'utente può completare il login tramite l'apposito pulsante di conferma  &  UC1.1.3 \\
 		\hline
-		R0F2.3  &  L'utente può completare il login tramite l'apposito pulsante di conferma  &  UC1.1.3 \\
+		ROF2.4  &  Il sistema visualizza un messaggio di errore nel caso i dati inseriti dall'utente risultino errati  &  UC1.1.4 \\
 		\hline
-		R0F2.4  &  Il sistema visualizza un messaggio di errore nel caso i dati inserito dall'utente risultino errati  &  UC1.1.4 \\
+		ROF2.4.1  &  Il sistema visualizza un messaggio di errore nel caso in cui non esista un utente registrato con l'username inserito  &  UC1.1.4 \\
 		\hline
-		R0F2.5  &  Il sistema aggiorna la home screen permettendo all'utente autenticato di accedere alle diverse aree del del servizio  &  Interno  \\
+		ROF2.4.2  &  Il sistema visualizza un messaggio di errore nel caso in cui la password inserita non è quella corretta per l'username inserito  &  UC1.1.4 \\
 		\hline
-		R0F3  &  Nella home screen dell'utente autenticato è presente un pulsante per aprire il menù delle informazioni personali  &  UC1.2 \newline UC1.5 \\
+		ROF2.5  &  Il sistema aggiorna la home screen permettendo all'utente autenticato di accedere alle diverse aree del del servizio  &  Interno  \\
 		\hline
-		R0F3.1  &  Nel menù delle informazioni personali è presente un pulsante per visualizzare i propri dati  &  UC1.2.1 \newline UC1.2.2 \\
+
+		% Info e Statistiche utente
+
+		ROF3  &  Nella home screen dell'utente autenticato è presente un pulsante per aprire il menù delle informazioni personali e le statistiche del sistema  & UC1 \newline UC1.2 \\
 		\hline
-		R0F3.1.1  &  Se l'utente seleziona il pulsante di visualizzazione dei dati personali il sistema deve reperire il suo nome utente, il suo indirizzo e-mail e la data del suo ultimo accesso &  Interno \\
+		ROF3.1  &  Il sistema offre un pannello per la visualizzazione dei dettagli utente &  UC1.2.1 \\
 		\hline
-		R0F3.1.2  &  Se l'utente seleziona il pulsante di visualizzazione dei dati personali deve aprirsi una finestra che mostra il nome utente, l'indirizzo e-mail ad esso associata e la data del suo ultimo accesso &  UC1.2.2 \\
+		ROF3.1.1  &  Se l'utente seleziona il pulsante di visualizzazione dei dati personali il sistema deve reperire il suo nome utente, il suo indirizzo e-mail e la data del suo ultimo accesso &  Interno \\
 		\hline
-		R0F3.2  &  Nel menù delle informazioni personali è presente un pulsante per visualizzare le proprie statistiche &  UC1.2.1 \newline UC1.2.3 \\
+		ROF3.1.2  &  Nel pannello dei dati personali l'utente può visualizzare il proprio username  &  UC1.2.1.1 \\
 		\hline
-		R0F3.2.1  &  Se l'utente seleziona il pulsante di visualizzazione delle statistiche, il sistema deve reperire le informazioni necessarie  &  Interno \\
+		ROF3.1.3  &  Nel pannello dei dati personali l'utente può visualizzare il proprio indirizzo email  &  UC1.2.1.2 \\
 		\hline
-		R0F3.2.2  &  Se l'utente seleziona il pulsante di visualizzazione delle statistiche deve aprirsi una finestra che mostra il numero di View attive, il numero di Recipe disponibili e il numero di accessi negli ultimi 30 giorni &  UC1.2.3 \\
+		RFF3.1.4  &  Nel pannello dei dati personali l'utente può visualizzare l'ultimo accesso effettuato  &  UC1.2.1.3 \\
 		\hline
-		R0F3.3  &  Nel menù delle informazioni personali è presente un pulsante per modificare la propria password &  UC1.5 \\
+		RFF3.2  &  Il sistema offre un pannello per la visualizzazione delle statistiche utente e di sistema  &  UC1.2.2 \\
 		\hline
-		R0F3.3.1  &  Se l'utente seleziona il pulsante di cambio della password, si deve aprire una finestra con il form per l'inserimento di una nuova password e della password di conferma. Viene richiesto anche l'inserimento della vecchia password. &  UC1.5 \newline UC1.5.1 \newline UC1.5.2 \newline UC1.5.3 \\
+		RFF3.2.1  &  Se l'utente seleziona il pulsante di visualizzazione delle statistiche, il sistema deve reperire le informazioni necessarie  &  Interno \\
 		\hline
-		R0F3.3.2  &  La password e la password di conferma devono essere nella forma descritta nei requisiti R0F1.3.1, R0F1.3.2, R0F1.3.3 e R0F1.4.1  &  Interno \\
+		RFF3.2.2 &  Nel pannello delle statistiche viene mostrato il numero di View preferite &  UC1.2.2.1 \\
 		\hline
-		R0F3.3.2.1  &  Il sistema visualizza eventuali non conformità in fase di compilazione  &  Interno \\
+		RFF3.2.3  &  Nel pannello delle statistiche viene mostrato il numero di Recipe disponibili &  UC1.2.2.2 \\
 		\hline
-		R0F3.3.3  &  L'utente può cliccare il tasto di conferma se ha riempito il form  &  UC1.5.4 \\
+		ROF3.3  &  Nel menù delle informazioni personali è presente un pulsante per modificare i propri dettagli personali & UC1 \newline UC1.5 \\
 		\hline
-		R0F3.3.3.1  &  Una volta premuto il tasto di conferma appare un messaggio di errore se la password non coincide con la conferma o se la vecchia password inserita non è corretta.  &  UC1.5.5 \\
+		ROF3.3.1  &  Se l'utente seleziona il pulsante di modifica dettagli personali, il sistema visualizza una pagina tramite cui è possibile modificare il proprio username, indirizzo email e password &  UC1.5 \newline UC1.5.1 \newline UC1.5.2 \newline UC1.5.3 \newline UC1.5.4 \\
 		\hline
-		R0F3.3.3.2  &  Una volta premuto il tasto di conferma appare un messaggio di conferma se la password è stata modificata  &  Interno \\
+		ROF3.3.2  &  L'utente può inserire il nuovo username nell'apposito form  &  UC1.5.2 \\
 		\hline
-		R0F3.3.3.3  &  Una volta premuto il tasto di conferma il sistema aggiorna la password nel Database  &  Interno \\
+		ROF3.3.2.1  &  Il nuovo username non può essere uguale a quello attualmente utilizzato  &  Interno \\
 		\hline
-		R0F4  &  Nella home screen è presente un pulsante di logout  &  UC1.6 \\
+		ROF3.3.2.2  &  Il nuovo username deve essere conforme ai vincoli indicati nei requisiti ROF1.1.1, ROF1.1.2,  e ROF1.1.3  &  Interno \\
 		\hline
-		R0F4.1  &  Una volta premuto il tasto di logout il sistema verifica se la sessione in corso è valida o scaduta  &  Interno \\
+		ROF3.3.3  &  L'utente può cambiare indirizzo email inserendolo nell'apposito form  &  UC1.5.3 \newline UC1.5.3.1  \\
 		\hline
-		R0F4.1.1  &  Se la sessione è valida appare un messaggio che chiede conferma del logout  &  UC1.6.1 \\
+		ROF3.3.3.1  &  L'utente deve ridigitare l'indirizzo inserito in un form apposito per conferma  &  UC1.5.3 \newline UC1.5.3.2  \\
 		\hline
-		R0F4.1.1.1  &  Se il logout viene confermato la sessione viene segnata come scaduta e il sistema aggiorna la pagina per mostrare la schermata di login  &  UC1.6.2 \\
+		ROF3.3.3.2  &  Il nuovo indirizzo email inserito deve essere diverso da quello attualmente in uso  &  Interno \\
 		\hline
-		R0F4.1.2  &  Se la sessione è scaduta appare un messaggio di errore e il sistema aggiorna la pagina per mostrare la schermata di login  &  Interno \\
+		ROF3.3.3.3  &  Il nuovo indirizzo email deve essere un indirizzo valido  &  Interno \\
 		\hline
-		R0F5  &  Nella home screen dell'utente autenticato sono mostrare tutte le View che l'utente ha creato aggiornate al momento del caricamento della pagina &  UC1.3 \newline UC1.3.1 \\
+		ROF3.3.4  &  Per effettuare il cambio password, l'utente deve digitare la password attualmente in uso, la password nuova ed una copia di quest'ultima  &  UC1.5.4 \\
 		\hline
-		R0F5.1  &  Il sistema ad ogni caricamento della pagina deve recuperare i dati relativi alle View dell'utente e generare i grafici relativi  &  Interno \\
+		ROF3.3.4.1  &  L'utente può inserire la password attualmente in uso nell'apposito form  &  UC1.5.4.1 \\
 		\hline
-		R1F5.2  &  Nella home screen è disponibile un elenco delle View attive dell'utente  &  UC1.3.1.1 \\
+		ROF3.3.4.2  &  L'utente può inserire la nuova password nell'apposito form  &  UC1.5.4.2 \\
 		\hline
-		R1F5.2.1  &  Cliccando su una View dall'elenco di viene portati al grafico relativo  &  Interno \\
+		ROF3.3.4.2.1  &  La nuova password deve essere nella forma descritta nei requisiti ROF1.3.1, ROF1.3.2, ROF1.3.3 e ROF1.4.1  &  Interno \\
 		\hline
-		R1F5.2.2  &  Accanto ad ogni voce dell'elenco è disponibile il tasto modifica  &  UC1.3.4 \newline UC1.3.4.1 \newline UC1.3.4.2 \newline UC1.3.6.1 \\
+		ROF3.3.4.3  &  L'utente deve ridigitare la password per conferma nell'apposito form  &  UC1.5.4.3 \\
 		\hline
-		R1F5.2.2.1  &  Cliccando sul tasto modifica si viene reindirizzati alla pagina di modifica della View  &  Interno \\
+		ROF3.3.4.3.1  &  La password di conferma deve essere uguale alla nuova password digitata in precedenza  &  Interno \\
 		\hline
-		R1F6  &  Nella pagina di modifica della View è presente il grafico relativo alla View selezionata e un form per modificare i dati  &  Interno \\
+		RDF3.3.5  &  Il sistema visualizza eventuali non conformità in fase di compilazione  &  Interno \\
 		\hline
-		R1F6.1  &  Il sistema deve recuperare i dati relativi alla View selezionata e generare il grafico e riempire la form con i dati preesistenti  &  Interno \\
+		ROF3.3.6  &  L'utente può cliccare il tasto di conferma se ha riempito il form  &  UC1.5.6 \\
 		\hline
-		R1F6.2  &  L'utente deve poter inserire nuovi dati oppure lasciare quelli preesistenti  &  UC1.3.4.3 \\
+		ROF3.3.6.1  &  Una volta premuto il tasto di conferma, il sistema analizza la conformità dei dati rispetto ai vincoli indicati nei requisiti ROF3.3.2.1, ROF3.3.2.2, ROF3.3.3.1, ROF3.3.3.2, ROF3.3.4.2.1, ROF3.3.4.3.1  &  Interno \\
 		\hline
-		R1F6.2.1  &  Eventuali errori sui dati inseriti vengono segnalati dal sistema in fase di compilazione del form  &  Interno \\
+		ROF3.3.6.2  &  Se i dati inseriti non rispettano i vincoli di sistema, viene visualizzato un avviso contenente gli errori effettuati  &  UC1.5.7 \\
 		\hline
-		R1F6.3  &  L'utente deve poter confermare i dati modificati premendo il tasto di conferma  &  UC1.3.4.4 \\
+		ROF3.3.6.3  &  Se i dati inseriti sono corretti viene visualizzato un messaggio che indica il salvataggio dei cambiamenti  &  UC1.5.5 \\
 		\hline
-		R1F6.3.1  &  Se la modifica è avvenuta con successo appare un messaggio di conferma e si viene reindirizzati alla home screen  &  Interno \\
+		ROF3.3.7  &  Il sistema dispone di un pulsante per effettuare l'eliminazione dell'account personale dalla pagina di modifica dettagli utente  &  UC1.5.6 \\
 		\hline
-		R1F6.3.1.1  &  Se la modifica è avvenuta con successo il sistema memorizza i nuovi dati nel database sovrascrivendo i vecchi  &  Interno \\
+		ROF3.3.7.1  &  L'utente può selezionare l'apposito pulsante per procedere alla rimozione del proprio account dalla pagina di modifica dettagli utente  &  UC1.5.5.1 \\
 		\hline
-		R1F6.3.2  &  Se c'è un errore sui dati o c'è un problema di connessione al server viene visualizzato un messaggio di errore e si viene riportati alla form di modifica  &  UC1.3.5 \\
+		ROF3.3.7.2  &  L'utente deve confermare la rimozione del proprio account una volta selezionato l'avvio dell'eliminazione dello stesso  &  UC1.5.5.2 \\
 		\hline
-		R1F6.4  &  Nella pagina di modifica è presente un tasto per eliminare la View  &  UC1.3.6 \newline UC1.3.6.2 \\
+		ROF3.3.7.2.1  &  Una volta confermata l'eliminazione dell'account personale il sistema provvede a rimuovere tutti i dati associati all'utente in questione  &  Interno \\
 		\hline
-		R1F6.4.1  &  Se l'utente preme il pulsante di eliminazione appare un messaggio che chiede conferma dell'eliminazione  &  UC1.3.6.3 \\
+		ROF3.3.7.2.2  &  Una volta confermata l'eliminazione dell'account personale l'utente viene riportato alla home page di default dell'applicazione per gli utenti sconosciuti al sistema  &  Interno \\
+
+		% Logout
+
 		\hline
-		R1F6.4.2  &  Se l'eliminazione viene confermata la View e i relativi dati vengono eliminati dal database  &  Interno \\
+		ROF4  &  Nella home screen è presente un pulsante di logout  &  UC1 \newline UC1.6 \\
 		\hline
-		R1F6.4.3  &  Una volta eliminata una View si viene reindirizzati alla home screen  &  Interno \\
+		ROF4.1  &  Una volta premuto il tasto di logout il sistema verifica se la sessione in corso è valida o scaduta  &  Interno \\
 		\hline
-		R0F7  &  Nella home screen è presente un tasto per creare una nuova View  &  UC1.3.2 \newline UC1.3.2.1 \\
+		ROF4.1.1  &  Se la sessione è valida appare un messaggio che chiede conferma del logout  &  UC1.6.1 \\
 		\hline
-		R0F7.1  &  Nella pagina di creazione della View è presente un form per inserire i dati della View da generare  &  UC1.3.2.2 \\
+		ROF4.1.1.1  &  Se il logout viene confermato la sessione viene segnata come scaduta e il sistema aggiorna la pagina per mostrare la schermata di login  &  UC1.6.2 \\
 		\hline
-		R0F7.1.1  &  Eventuali errori sui dati inseriti vengono segnalati dal sistema in fase di compilazione del form  &  Interno \\
+		ROF4.1.2  &  Se la sessione è scaduta appare un messaggio di errore e il sistema aggiorna la pagina per mostrare la schermata di login  &  Interno \\
+
+		% Recipes e Views
+
 		\hline
-		R0F7.2  &  L'utente deve poter confermare i dati modificati premendo il tasto di conferma  &  UC1.3.2.3 \\
+		ROF5  &  Nella home screen dell'utente autenticato sono mostrare tutte le Recipe presenti nel sistema & UC1 \newline UC1.3 \\
 		\hline
-		R0F7.3  &  Se la modifica è avvenuta con successo appare un messaggio di conferma e si viene reindirizzati alla home screen  &  Interno \\
+		ROF5.1  & Il sistema ad ogni caricamento della pagina deve recuperare l'elenco delle Recipe  &  Interno \\
 		\hline
-		R0F7.3.1  &  Se la modifica è avvenuta con successo il sistema memorizza i nuovi dati nel database  &  Interno \\
+		ROF5.1.1  & Il sistema, per ogni Recipe dell'elenco, deve fornire il titolo e qualora presente la descrizione  &  Interno \\
 		\hline
-		R0F7.3.2  &  Se c'è un errore sui dati o c'è un problema di connessione al server viene visualizzato un messaggio di errore e si viene riportati alla form di inserimento  &  UC1.3.3 \\
+		ROF5.1.2  & Il sistema, per ogni Recipe dell'elenco, deve fornire due pulsanti per scegliere se visualizzare le metriche della Recipe o effettuare un confronto tra le metriche &  UC1.3 \\
 		\hline
-		R0F8  &  Un utente che possiede i privilegi di amministratore può accedere all'area riservata del sistema una volta effettuata l'autenticazione tramite il login  &  UC1.4 \newline UC1.7 \\
+		RFF5.1.3  & Il sistema, per ogni Recipe dell'elenco, deve fornire un selettore che permetta di dare un voto alla recipe &  UC1.3.3 \\
 		\hline
-		R0F8.1  &  Un amministratore può visualizzare tutte le Recipe memorizzate nel sistema selezionando l'apposito pulsante  &  UC1.4.1 \\
+		RFF5.1.3.1  & Il voto dato a una recipe è un intero compreso tra 1 e 5 &  UC1.3.3 \\
 		\hline
-		R0F8.2  &  Un amministratore può accedere al pannello per inserire una nuova Recipe  &  UC1.4.2 \newline UC1.4.2.1 \newline UC1.4.2.2  \\
+		RFF5.1.3.2  & Il voto sarà espresso selezionando da una a cinque stelle da un apposito selettore &  Intero \\
 		\hline
-		R0F8.2.1  &  Il sistema richiede l'inserimento di determinati parametri per individuare il contesto dei dati richiesti dalla Recipe  &  Interno \newline UC1.4.2.3 \\
+		ROF5.2  &  L'utente deve potere visualizzare tutte le metriche di una Recipe una volta premuto l'apposito pulsante  &  UC1.3.1 \\
 		\hline
-		R0F8.2.2  &  Il sistema richiede la conferma dei dati inseriti prima di creare la nuova Recepie  &  UC1.4.2.4 \\
+		ROF5.2.1  &  La visualizzazione delle metriche sarà suddivisa per categoria  &  UC1.3.1 \\
 		\hline
-		R0F8.3  &  Il sistema visualizza un messaggio di errore contenente i parametri inseriti non corretti oppure il messaggio di una eccezione lasciato in fase di creazione della Recipe  &  UC1.4.3 \\
+		ROF5.2.1.1  &  Le categorie sono: Facebook, Twitter, Instagram &  UC1.3.1 \newline Capitolato \\
 		\hline
-		R0F8.3.1  &  Nel caso venga confermata  una nuova Recipe corretta, il sistema salva i suoi parametri nel database  e riporta l'amministratore all'elenco delle Recipe  &  Interno \\
+		ROF5.2.1.2  &  Il sistema, per ogni metrica dell'elenco, fornirà il nome, la descrizione se presente e la tipologia della metrica (vedi ROF7.1.1.5, ROF7.1.1.6, ROF7.1.1.7). &  UC1.3.1 \\
 		\hline
-		R0F8.4  &  L'utente amministratore può eliminare una Recipe memorizzata nel sistema tramite il relativo pulsante nella schermata di elenco delle Recipe  &  UC1.4.4 \newline UC1.4.4.1 \newline UC1.4.4.2 \\
+		ROF5.2.1.3  &  Il sistema, per ogni metrica dell'elenco, deve fornire il pulsante per accedere alle visualizzazioni delle View presenti per quella metrica. &  UC1.3.1 \\
 		\hline
-		R0F8.4.1  &  L'utente amministratore deve confermare l'eliminazione della Recipe una volta premuto l'apposito pulsate  &  UC1.4.4.3 \\
+		ROF5.2.2 & Se viene selezionata una metrica di una categoria per la quale il sistema non ha ancora raccolto dati sufficienti a generare una View, viene visualizzato un messaggio che avverte l'impossibilità a generare alcuna View &  UC1.3.1.4  \\
 		\hline
-		R0F8.4.2  &  Una volta confermata l'eliminazione di una Recipe, il sistema provvede all'eliminazione di tutte le informazioni legate ad essa presenti nel database  &  Interno \\
+
+
+
+
+ 			% Facebook
+
+		ROF5.3  & Premendo sul pulsante del ROF5.2.1.3, da dentro la categoria Facebook, vengono fornite tutte le View predisposte dal sistema per avere delle statistiche. & UC1.3.1.1 \\
 		\hline
-		R0F8.4.3  &  Una volta confermata l'eliminazione di una Recipe, il sistema provvede ad eliminare tutti i dati grezzi presenti nel database legati a tale Recipe  &  Interno \\
+		ROF5.3.1  & Le View offerte per la categoria di Facebook possono mostrare grafici di diversi tipi: Line Chart, Bar Chart, Pie Chart e Map Chart. &  UC1.3.1.1  \\
 		\hline
-		R2F8.5  &  Dal pannello di amministrazione è possibile visualizzare feedback e statistiche sugli utenti in relazione ai dati delle Recipe utilizzati  &  Interno \\
+		ROF5.3.1.1  & Tipo di View: viene visualizzato un Line Chart con due linee per vedere l'andamento dei ``likes'' rispetto ai ``talking about'' di una pagina. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale.  & Interno \\
 		\hline
-		R1F9 & Nella home screen dell'utente amministratore è presente un pulsante per accedere all'elenco degli utenti  &  UC1.7.1 \newline UC1.7.2.1 \newline UC1.7.3.1 \\
+		ROF5.3.1.2  &  Tipo di View: viene visualizzato un Pie Chart che prende tutti gli eventi creati da una pagina e mostra, la percentuale di persone che hanno messo partecipa, forse o rifiuta. I dati vengono forniti anche non in percentuale. & Interno \\
 		\hline
-		R1F9.1  &  Accanto al nome di ogni utente nella lista è presente un pulsante modifica  &  Interno \\
+		ROF5.3.1.3  &  Tipo di View: viene visualizzato un Pie Chart che mostra la percentuale di commenti di terzi a tutti i post di una pagina rispetto la percentuale di commenti della pagina stessa. & Interno \\
 		\hline
-		R1F9.1.1  &  Cliccando sul pulsante modifica si viene reindirizzati alla pagina di modifica degli utenti  &  UC1.7.2.2 \\
+		ROF5.3.1.4  &  Tipo di View: viene visualizzato un Pie Chart che mostra la percentuale di commenti della pagina e di terzi rispetto a tutti i post di terzi sulla pagina in questione. & Interno \\
 		\hline
-		R2F9.2  &  Nella pagina di modifica di un utente l'amministratore può cambiare i permessi di un utente  &  UC1.7.2 \newline UC1.7.2.3 \\
+		ROF5.3.1.5  &  Tipo di View: viene visualizzato un Map Chart che illustra le zone nella quale si sono creati degli eventi di una pagina e mostra dei cerchi di diverse dimensioni a seconda della media di partecipanti agli eventi di quella zona. & Interno \\
 		\hline
-		R2F9.2.1  &  Premendo conferma il ruolo e i permessi dell'utente vengono modificati sul database  &  UC1.7.2.4 \\
+		ROF5.3.1.6  &  Tipo di View: viene visualizzato un Bar Chart che mostra la media di commenti delle pagina per ogni post effettuato dalla stessa. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
 		\hline
-		R1F9.3  &  Nella pagina di modifica di un utente è presente il pulsante elimina utente  &  UC1.7.3 \newline UC1.7.3.2 \\
+
+ 			% Twitter
+
+		ROF5.4  &  Premendo sul pulsante del ROF5.2.1.3, da dentro la categoria Twitter, vengono fornite tutte le View predisposte dal sistema per avere delle statistiche. &  UC1.3.1.2  \\
 		\hline
-		R1F9.3.1  &  Se viene premuto il pulsante di eliminazione di un utente appare un messaggio che chiede conferma dell'eliminazione  & UC1.7.3.3\\
+		ROF5.4.1  & Le View offerte per la categoria di Twitter possono mostrare grafici di diversi tipi: Line Chart, Bar Chart, Pie Chart, Radar Chart e Map Chart.  &  UC1.3.1.2  \\
 		\hline
-		R1F9.3.1.1  &  Se viene confermata il sistema verifica se l'utente è loggato e in tal caso segnala l'errore e interrompe l'eliminazione  & Interno \\
+		ROF5.4.1.1  &  Tipo di View: viene visualizzato un Bar Chart orizzontale che mostra un riepilogo istantaneo dei Tweet e dei Follower di un singolo utente. & Interno \\
 		\hline
-		R1F9.3.1.2  &  Se l'eliminazione ha successo appare un messaggio di conferma e si viene reindirizzati alla home screen  & UC1.7.3.3\\
+		ROF5.4.1.2  &  Tipo di View: viene visualizzato un Line Chart che indica il numero di Tweet e il numero di Follower dell'utente, fornendo una visualizzazione settimanale, mensile ed annuale. & Interno \\
 		\hline
-		R1F9.3.1.3  &  Se c'è stato un errore appare un messaggio d'errore e si è riportati alla pagina di modifica di un utente  & UC1.7.4\\
+		ROF5.4.1.3  &  Tipo di View: viene visualizzato un Map Chart che illustra l'area geografica di appartenenza dei Tweet con un particolare hashtag. & Interno \\
+		\hline
+		ROF5.4.1.4  &  Tipo di View: viene visualizzato un Line Chart che mostra il numero di Tweet con un hashtag.  & Interno \\
+		\hline
+		ROF5.4.1.5  &  Tipo di View: viene visualizzato un Pie Chart che illustra quanti Tweet, quanti Preferiti e quanti Retweet ha un utente. & Interno \\
+		\hline
+		ROF5.4.1.6  &  Tipo di View: viene visualizzato un Radar Chart che illustra in che momento della giornata vengono fatti i Tweet. & Interno \\
+		\hline
+		ROF5.4.1.7  &  Tipo di View: viene visualizzato un Pie Chart che indica su che tipo di piattaforma gli utenti hanno twittato. & Interno \\
+		\hline
+
+ 			% Instagram
+
+		ROF5.5  &  Premendo sul pulsante del ROF5.2.1.3, da dentro la categoria Instagram, vengono fornite tutte le View predisposte dal sistema per avere delle statistiche &  UC1.3.1.3  \\
+		\hline
+		ROF5.5.1  & Le View offerte per la categoria di Instagram possono mostrare grafici di diversi tipi: Line Chart, Bar Chart, Pie Chart, Radar Chart e Map Chart  &  UC1.3.1.3  \\
+		\hline
+		ROF5.5.1.1  &  Tipo di View: vengono visualizzati per ogni post di un utente il numero di like e il numero di commenti in un Bar Chart & Interno \\
+		\hline
+		ROF5.5.1.2  &  Tipo di View: vengono visualizzati i nuovi followers di un utente per giorno, in un Line Chart. Nel grafico vengono anche segnati come linee verticali i momenti in cui l'utente ha pubblicato un post. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
+		\hline
+		ROF5.5.1.3  &  Tipo di View: vengono visualizzati i nuovi like e i nuovi commenti ricevuti da un utente per giorno, in un Line Chart. Nel grafico vengono anche segnati come linee verticali i momenti in cui l'utente ha pubblicato un post. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
+		\hline
+		ROF5.5.1.4  & Tipo di View: viene visualizzato in un Line Chart l'andamento dei like e quello dei commenti ricevuti da un utente fratto il numero di followers che possiede. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
+		\hline
+		ROF5.5.1.5  &  Tipo di View: viene visualizzato in un Line Chart il numero di like ricevuti al giorno da un utente fratto la frequenza di post dell'utente (ovvero il numero di post al giorno). Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
+		\hline
+		ROF5.5.1.6  &  Tipo di View: viene visualizzato un Radar Chart che illustra per i vari momenti della giornata la frequenza con cui vengono fatti i post di un utente. & Interno \\
+		\hline
+		ROF5.5.1.7  &  Tipo di View: viene visualizzato in un Line Chart il numero di post e il numero utenti che hanno usato un dato hashtag. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
+		\hline
+		ROF5.5.1.8  &  Tipo di View: viene visualizzato in un Line Chart il numero di like e il numero di commenti ricevuti dai post che contengono un dato hashtag. Per questo grafico viene fornita una visualizzazione settimanale, mensile e annuale. & Interno \\
+		\hline
+		ROF5.5.1.9  &  Tipo di View: vengono visualizzate in un Map Chart le zone geografiche dove sono stati fatti i post contenenti un dato hashtag (di cui è nota la localizzazione), colorandole con una colorazione di intensità proporzionale al numero di post contenti l'hashtag nella zona. & Interno \\
+		\hline
+		ROF5.5.1.10  &  Tipo di View: viene visualizzato un Pie Chart che mostra per un dato hashtag la percentuale di post fatti in un dato stato sul totale di post contenenti l'hashtag dei quali è noto lo stato in cui sono stati fatti. I dati vengono forniti anche non in percentuale. & Interno \\
+		\hline
+
+		% Confronto
+
+		ROF5.6  &  Premendo il tasto di confronto l'utente deve visualizzare una schermata in cui selezionare i parametri per il confronto  &  UC1.3.2 \newline UC1.3.2.1 \\
+		\hline
+		ROF5.6.1  &  L'utente deve poter selezionare la categoria tra Facebook, Twitter e Instagram  &  UC1.3.2.1.1 \\
+		\hline
+		ROF5.6.2  &  L'utente deve poter selezionare un tipo di metrica tra quelle presenti nella categoria selezionata  &  UC1.3.2.1.2 \\
+		\hline
+		ROF5.6.2.1  &  Per la categoria Facebook sono disponibili i tipi di metrica Evento o Pagina  &  Interno \\
+		\hline
+		ROF5.6.2.2  &  Per la categoria Twitter sono disponibili i tipi di metrica Utente o hashtag &  Interno \\
+		\hline
+		ROF5.6.2.3  &  Per la categoria Instagram sono disponibili i tipi di metrica Utente e hashtag   &  Interno \\
+		\hline
+		ROF5.6.3  &  Una volta selezionata la categoria e il tipo di metrica l'utente deve visualizzare tutte le metriche di quel tipo e categoria presenti nella Recipe &  UC1.3.2.1.3 \\
+		\hline
+		ROF5.6.3.1  &  L'utente deve poter selezionare delle metriche tra quelle visualizzate &  UC1.3.2.1.3 \\
+		\hline
+		ROF5.6.4  &  Una volta selezionate almeno due metriche e massimo tre tra quelle visualizzate l'utente deve poter cliccare un pulsante per generare il confronto  &  UC1.3.2.2 \\
+		\hline
+		ROF5.6.4.1  &  Una volta cliccato il pulsante per generare il confronto l'utente deve poter vedere le View di confronto generate dal confronto selezionato  &  UC1.3.2.3 \\
+		\hline
+		ROF5.6.4.1.1  &  Per la categoria Facebook selezionando il tipo di metrica Evento le View di confronto generate sono quelle descritte nei requisiti ROF5.3.1.2  &  Interno \\
+		\hline
+		ROF5.6.4.1.2  &  Per la categoria Facebook selezionando il tipo di metrica Pagina le View di confronto generate sono quelle descritte nei requisiti ROF5.3.1.1, ROF5.3.1.3, ROF5.3.1.4, ROF5.3.1.6 &  Interno \\
+		\hline
+		ROF5.6.4.1.3  &  Per la categoria Twitter selezionando il tipo di metrica Utente le View di confronto generate sono quelle descritte nei requisiti ROF5.4.1.1, ROF5.4.1.2, ROF5.4.1.6 &  Interno \\
+		\hline
+		ROF5.6.4.1.4  &  Per la categoria Twitter selezionando il tipo di metrica hashtag le View di confronto generate sono quelle descritte nei requisiti ROF5.4.1.4 &  Interno \\
+		\hline
+		ROF5.6.4.1.5  &  Per la categoria Instagram selezionando il tipo di metrica Utente le View di confronto generate sono quelle descritte nei requisiti ROF5.5.1.2, ROF5.5.1.3 e ROF5.5.1.5 &  Interno \\
+		\hline
+		ROF5.6.4.1.6  &  Per la categoria Instagram selezionando il tipo di metrica hashtag le View di confronto generate sono quelle descritte nei requisiti ROF5.5.1.7 e ROF5.5.1.8  &  Interno \\
+		\hline
+		ROF5.6.4.2  &  I dati devono essere illustrati sul grafico con un colore diverso per ciascuna delle metriche selezionate  &  Interno \\
+		\hline
+		ROF5.6.4.3  &  Se non fossero presenti nel database dati sufficienti per generare la View l'utente deve poter visualizzare un messaggio di avvertimento ed essere riportato alla selezione delle metriche  &  UC1.3.2.4 \\
+		\hline
+
+
+
+ 		% View Preferite
+
+		RDF6  & L'utente ha la possibilità di gestire le View che più preferisce in maniera da averle a disposizione più velocemente. &  UC1 \newline UC1.11 \\
+		\hline
+		RDF6.1  & L'utente visualizza tutte le View che sono state marcate da lui come preferite entrando dal menù nell'apposita pagina. & UC1.11.1 \\
+		\hline
+		RDF6.1.1  & Il sistema mostra un messaggio qualora non ci fossero View salvate come preferite. &  UC1.11.4 \\
+		\hline
+		RDF6.2  & L'utente ha la possibilità di aggiungere qualsiasi View a quelle preferite premendo sull'apposito pulsante vicino alla View che desidera aggiungere. & UC1.11.2 \\
+		\hline
+		RDF6.2.1  & Il pulsante per aggiungere una View alle preferite è presente vicino a ogni View in qualsiasi parte del sistema, eccetto nella pagina delle View preferite.  & Interno \\
+		\hline
+		RDF6.2.2  & Il sistema visualizza un messaggio se la View non è stata aggiunta correttamente tra quelle preferite.  & Interno \\
+		\hline
+		RDF6.3  & L'utente ha la possibilità di rimuovere le View che ha aggiunto tra quelle preferite premendo sull'apposito pulsante vicino la View che desidera rimuovere.  &  UC1.11.3 \\
+		\hline
+		RDF6.3.1  & Il sistema visualizza un messaggio se la View non è stata rimossa correttamente tra quelle preferite.  &  Interno \\
+		\hline
+		RDF6.4 & L'utente può marcare come preferite un numero illimitato di View. &  Interno \\
+		\hline
+
+ 		% Richiesta nuova recipe
+
+		RFF7  & L'utente ha la possibilità di richiedere l'inserimento di una nuova Recipe. & UC1 \newline UC1.9 \\
+		\hline
+		RFF7.1  & L'utente può generare una richiesta dall'apposito form presente in un'apposita sezione della Web GUI. & UC1.9 \newline UC1.9.1 \\
+		\hline
+		RFF7.1.1 & L'utente deve inserire i parametri richiesti dal form perché la richiesta sia considerata valida dal sistema. & UC1.9.2  \\
+		\hline
+		RFF7.1.1.1 & L'utente deve inserire il titolo della Recipe che desidera richiedere. Questo campo è obbligatorio. & UC1.9.2.1 \\
+		\hline
+		RFF7.1.1.2 & L'utente può inserire una breve descrizione della Recipe che desidera richiedere. Questo campo è facoltativo. & UC1.9.2.2 \\
+		\hline
+		RFF7.1.1.3 & L'utente deve inserire almeno una metrica nella richiesta della Recipe che desidera. & UC1.9.2.3 \\
+		\hline
+		RFF7.1.1.4 & L'utente deve scegliere la categoria della metrica tra: Facebook, Twitter o Instagram. Questa selezione è obbligatoria e vincolata dal sistema. & Interno \\
+		\hline
+		RFF7.1.1.5 & L'utente deve scegliere la tipologia della metrica tra: Evento o Pagina, se ha scelto la categoria Facebook. Questa selezione è obbligatoria e vincolata dal sistema. & Interno \\
+		\hline
+		RFF7.1.1.6 & L'utente deve scegliere la tipologia della metrica tra: Utente o hashtag, se ha scelto la categoria Twitter. Questa selezione è obbligatoria e vincolata dal sistema. & Interno \\
+		\hline
+		RFF7.1.1.7 & L'utente deve scegliere la tipologia della metrica tra: Utente o hashtag, se ha scelto la categoria Instagram. Questa selezione è obbligatoria e vincolata dal sistema. & Interno \\
+		\hline
+		RFF7.1.1.8 & Se l'utente sceglie la categoria Facebook deve inserire il ``nome'' o ``l'identificativo'' della Pagina o dell'Evento del quale vuole raccogliere i dati. Questo campo è obbligatorio. & Interno \\
+		\hline
+		RFF7.1.1.9 & Se l'utente sceglie la categoria Twitter deve inserire il ``nome'' dell'Utente o dell'hashtag del quale vuole raccogliere i dati. Questo campo è obbligatorio. & Interno \\
+		\hline
+		RFF7.1.1.10 & Se l'utente sceglie la categoria Instagram deve inserire il ``nome'' dell'Utente o dell'hashtag del quale vuole raccogliere i dati. Questo campo è obbligatorio. & Interno \\
+		\hline
+		RFF7.1.1.11 & Il sistema avviserà l'utente in maniera istantanea se un campo è compilato correttamente. & Interno \\
+		\hline
+		RFF7.1.1.12 & Il sistema avviserà l'utente in maniera istantanea se è stato lasciato vuoto un campo obbligatorio. & Interno \\
+		\hline
+		RFF7.1.2 & L'utente deve premere sul pulsante di invio della richiesta per inviarla agli amministratori. & UC1.9.3  \\
+		\hline
+		RFF7.1.3 & La richiesta può fallire se i dati inseriti non sono corretti o ci sono dei campi obbligatori vuoti. & UC1.9.4  \\
+		\hline
+		RFF7.2  & Il sistema invierà una notifica agli amministratori che è stata inserita una nuova richiesta per l'inserimento di una Recipe. & Interno \\
+		\hline
+
+ 		% Admin Area
+
+		ROF8  &  Un utente che possiede i privilegi di amministratore può accedere ad alcune aree riservate del sistema.  &  UC1 \newline UC1.4 \newline UC1.7 \\
+		\hline
+		ROF8.1  &  Un amministratore può accedere al pannello per inserire una nuova Recipe  & UC1 \newline UC1.4.1 \newline UC1.4.1.1 \\
+		\hline
+		ROF8.1.1  &  Il sistema richiede l'inserimento di determinati parametri per individuare il contesto dei dati richiesti dalla Recipe.  &  UC1.4.1.2 \\
+		\hline
+		ROF8.1.1.1  &  Viene richiesto obbligatoriamente l'inserimento del titolo della Recipe.  &  UC1.4.1.2.1 \\
+		\hline
+		ROF8.1.1.2  &  Viene richiesto opzionalmente l'inserimento di una descrizione della Recipe.  &  UC1.4.1.2.2 \\
+		\hline
+		ROF8.1.1.3  &  L'utente amministratore può aggiungere un numero qualsiasi di metriche alla Recipe. È però obbligatorio che siano almeno una per categoria  &  UC1.4.1.2.3 \\
+		\hline
+		ROF8.1.1.4  &  Per ogni metrica che l'utente amministratore desidera inserire deve specificare i dati descritti nei requisiti ROF7.1.1.4, ROF7.1.1.5, ROF7.1.1.6, ROF7.1.1.7, ROF7.1.1.8, ROF7.1.1.9, ROF7.1.1.10  &  Interno \\
+		\hline
+		ROF8.2  &  Il sistema richiede la conferma dei dati inseriti prima di creare la nuova Recipe.  &  UC1.4.1.3 \\
+		\hline
+		ROF8.2.1  &  Nel caso venga confermata una Recipe incorretta o incompleta, il sistema visualizza un messaggio di errore che illustra i parametri non inseriti o non corretti. &  UC1.4.2 \\
+		\hline
+		ROF8.2.1.1  &  Una Recipe è incompleta se non è stato specificato il titolo o non contiene almeno una metrica per categoria. &  Interno \\
+		\hline
+		ROF8.2.1.2  &  Una Recipe è incorretta se l'utente non ha inserito correttamente i parametri citati nel requisito ROF8.1.1.4 &  Interno \\
+		\hline
+		ROF8.2.2  &  Nel caso venga confermata  una nuova Recipe corretta, il sistema salva i suoi parametri nel database e riporta l'amministratore all'elenco delle Recipe  &  Interno \\
+		\hline
+		ROF8.3  &  L'utente amministratore può eliminare una Recipe memorizzata nel sistema tramite il relativo pulsante nella schermata di elenco delle Recipe  &  UC1.4.3 \newline UC1.4.3.1  \\
+		\hline
+		ROF8.3.1  &  L'utente amministratore deve confermare l'eliminazione della Recipe una volta premuto l'apposito pulsate  &  UC1.4.3.2 \\
+		\hline
+		ROF8.3.2  &  Una volta confermata l'eliminazione di una Recipe, il sistema provvede all'eliminazione di tutte le informazioni legate ad essa presenti nel database  &  Interno \\
+		\hline
+		ROF8.3.3  &  Una volta confermata l'eliminazione di una Recipe, il sistema provvede ad eliminare tutti i dati grezzi presenti nel database legati a tale Recipe  &  Interno \\
+		\hline
+		RFF8.4 & L'utente amministratore può visualizzare la classifica delle Recipe valutate dagli utenti  & UC1.4.4  \\
+		\hline
+		RFF8.4.1 & Cliccando il pulsante apposito viene aperto l'elenco delle Recipe che hanno ricevuto una valutazione, in ordine da quella che ha il voto più alto a quella che ha il voto più basso  & UC1.4.4  \\
+		\hline
+		RFF8.4.1.1 & Il voto di una Recipe è dato dalla media aritmetica dei voti assegnati dagli utenti a quella Recipe  & UC1.4.4  \\
+		\hline
+		RFF8.4.1.2 & Il voto di una Recipe è un numero compreso tra 1 e 5 espresso con al più due cifre decimali  &  Interno  \\
+		\hline
+		RFF8.4.2 & Se nessuna Recipe ha ricevuto una valutazione al posto della lista viene visualizzato un messaggio che riporta l'assenza di valutazioni  & UC1.4.5  \\
+		\hline
+
+
+ 		% Modifica permessi utenti
+
+		ROF9  &  Nella home screen dell'utente amministratore è presente un pulsante per accedere all'elenco degli utenti  &  UC1.7.1 \\
+		\hline
+		ROF9.1  &  Accanto al nome di ogni utente nella lista è presente un pulsante che permette di modificare i permessi di un utente  &  UC1.7.2 \\
+		\hline
+		RFF9.1.1  &  Una volta premuto l'apposito pulsate per la modifica dei permessi utente, le modifiche effettuate vengono applicate localmente in attesa che le modifiche generali agli utenti vengano confermate  &  Interno \\
+		\hline
+		ROF9.1.2  &  All'amministratore non è offerta la possibilità di modificare i permessi a se stesso  &  Interno \\
+		\hline
+		ROF9.2  &  Accanto al nome di ogni utente nella lista è presente un pulsante che permette di eliminare un utente dal sistema  &  UC1.7.3 \\
+		\hline
+		RFF9.2.1  &  Una volta premuto l'apposito pulsate per l'eliminazione di un utente, le modifiche effettuate vengono applicate localmente in attesa che le modifiche generali agli utenti vengano confermate  &  Interno \\
+		\hline
+		ROF9.2.2  &  Un utente non può essere eliminato se questo è attualmente loggato al sistema  &  Interno \\
+		\hline
+		ROF9.3  &  Al termine dell'elenco degli utenti attualmente visualizzati è presente un pulsante per confermare le modifiche applicate  &  UC1.7.4 \\
+		\hline
+		ROF9.3.1  &  Se la conferma delle modifiche ha successo, l'amministratore visualizza un messaggio di conferma  &  UC1.7.4 \\
+		\hline
+		ROF9.3.2  &  Nel caso le modifiche non rispettano i vincoli indicati nei requisiti ROF9.1.2 e ROF9.2.2, il sistema produce un messaggio di errore e le modifiche vengono annullate  &  UC1.7.5 \\
+		\hline
+
+ 		% Gestione richieste recipe
+
+		RFF10  &  L'amministratore può gestire tutte le richieste di nuove Recipe, ricevute dagli utenti, da una apposita sezione.  & UC1 \newline UC1.10 \\
+		\hline
+		RFF10.1  &  L'amministratore può vedere l'elenco delle richieste di nuove Recipe.  & UC1.10.1 \\
+		\hline
+		RFF10.1.1  &  Per ogni voce dell'elenco deve essere fornito il titolo della Recipe richiesta, la sua descrizione qualora presente e lo username dell'utente che ha fatto richiesta.  & Interno \\
+		\hline
+		RFF10.1.2  &  Per ogni voce dell'elenco deve essere fornito un pulsante per potere accedere alla visualizzazione dei dettagli della richiesta.  & Interno \\
+		\hline
+		RFF10.2  &  Il sistema visualizza un messaggio qualora non fossero presenti richieste di nuove Recipe.  & UC1.10.6 \\
+		\hline
+		RFF10.3  &  Premendo sul pulsante della visualizzazione dettagli si accede a un pannello contenente il form per la creazione di una nuova Recipe già compilato con i dati richiesti.  &  UC1.10.2 \newline Interno \\
+		\hline
+		RFF10.3.1  &  L'amministratore può decidere se modificare il titolo e la descrizione generale della Recipe richiesta.  & UC1.10.3 \newline UC1.10.3.1 \newline UC1.10.3.2 \\
+		\hline
+		RFF10.3.2  &  L'amministratore non può modificare altri campi della richiesta oltre a quelli descritti in ROF10.3.1.  & Interno \\
+		\hline
+		RFF10.3.2.1  &  I campi non modificabili saranno disabilitati.  & Interno \\
+		\hline
+		RFF10.4  &  L'amministratore premendo sul pulsante di accettazione andrà a inserire la Recipe richiesta nel sistema.  & UC1.10.4 \\
+		\hline
+		RFF10.5  &  L'amministratore, premendo sul pulsante di respinta andrà a rifiutare la Recipe richiesta.  & UC1.10.5 \newline UC1.10.5.1 \newline UC1.10.5.3 \\
+		\hline
+		RFF10.5.1  &  L'amministratore potrà fornire un messaggio di risposta che motivi il rifiuto della richiesta.  & UC1.10.5.2 \\
+		\hline
+		RFF10.5.1.1  &  Il sistema invierà una mail all'utente per notificare il messaggio di rifiuto.  &  Interno \\
+		\hline
+
+ 		% REST
+
+		ROF11  &  Il sistema fornisce una serie di servizi REST  & Capitolato \newline UC2 \\
+		\hline
+		ROF11.1  &  Il sistema è un grado di gestire una richiesta di un token di accesso per utilizzare i servizi REST se l'utente è autenticato.  & UC2.1 \newline UC2.1.1 \\
+		\hline
+		ROF11.1.1  &  Il sistema genera e restituisce un token di accesso se l'utente è autenticato. & UC2.1.2 \\
+		\hline
+		ROF11.1.2  &  Il sistema restituisce un errore se il sistema ha avuto problemi nel generare il token. & Interno \\
+		\hline
+		ROF11.2  &  L'utente premendo su un pulsante può richiedere che un token valido venga considerato non valido.  & UC2.3  \\
+		\hline
+		ROF11.2.1  &  Il sistema è in grado di gestire una richiesta di chiusura sessione contenente un token di accesso valido rendendolo non valido. & UC2.3 \newline UC2.3.1 \\
+		\hline
+		ROF11.2.2  &  Il sistema restituisce un errore se non è riuscito a invalidare il token. & UC2.3.2 \\
+		\hline
+		ROF11.2.3  &  Il sistema restituisce una conferma dell'avvenuta invalidazione del token. & UC2.3.3 \\
+		\hline
+		ROF11.3  &  Il sistema è in grado di gestire una richiesta che richiede i dati di una View contenente un token di accesso.  &  UC2.2 \newline UC2.2.1 \\
+		\hline
+		ROF11.3.1  &  Il sistema restituisce i dati richiesti se il token utilizzato è valido.  &  UC2.2.3 \\
+		\hline
+		ROF11.3.1.1 & Servizio: restituzione della lista della Recipe presenti disponibili. & Interno \\
+		\hline
+		ROF11.3.1.2 & Servizio: restituzione della lista delle metriche presenti in una determinata Recipe. & Interno \\
+		\hline
+		ROF11.3.1.3 & Servizio: restituzione dei dati associati a una metrica. & Interno \\
+		\hline
+		ROF11.3.2  &  Il sistema restituisce un errore se il token utilizzato è non valido  &  UC2.2.2 \\
+		\hline
+
+		ROF12 & È presente un tasto nella home page che permette di visualizzare la specifica dei servizi REST offerti. &  UC2.4  \\
+		\hline
+		ROF12.1 & Nella specifica sono elencati tutti i servizi offerti. &  UC2.4  \\
+		\hline
+		ROF12.1.1 & Per ogni servizio viene data una breve descrizione dell'effetto di una chiamata di quel servizio. & Interno \\
+		\hline
+		ROF12.1.2 & Per ogni servizio viene descritta la sintassi che deve rispettare la richiesta. & Interno \\
+		\hline
+		ROF12.1.3 & Per ogni servizio viene fornito un semplice esempio d'uso. & Interno \\
+		\hline
+		ROF12.2 & È presente nella pagina della specifica un link al manuale completo del requisito. ROQ3 & Interno \\
 		\hline
 
 	\end{longtable}
@@ -273,17 +587,17 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 
 	\def\arraystretch{1.5}
 	\bgroup
-	\begin{longtable}{| p{2cm} | p{8cm} | p{2cm} |}
+	\begin{longtable}{| p{2.5cm} | p{8cm} | p{2cm} |}
 
 		\hline
 		\textbf{Requisito} & \textbf{Descrizione} & \textbf{Fonti} \\
 		\hline
 
-		R1P1  &  Una volta autenticato l'utente deve poter visualizzare le proprie View entro 10 secondi salvo problemi di connesione &  Interno \\
+		RDP1  &  Una volta autenticato l'utente deve poter visualizzare le proprie View entro 10 secondi salvo problemi di connessione &  Interno \\
 		\hline
-		R1P1.1  &  Il recupero dei dati dal database deve impiegare al più 7 secondi  &  Interno \\
+		RDP1.1  &  Il recupero dei dati dal database deve impiegare al più 7 secondi  &  Interno \\
 		\hline
-		R2P2  &  L'interfaccia web utilizzerà un design di tipo responsive  &  Capitolato \\
+		RFP2  &  L'interfaccia web utilizzerà un design di tipo responsive  &  Capitolato \\
 		\hline
 
 	\end{longtable}
@@ -296,17 +610,21 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 
 	\def\arraystretch{1.5}
 	\bgroup
-	\begin{longtable}{| p{2cm} | p{8cm} | p{2cm} |}
+	\begin{longtable}{| p{2.5cm} | p{8cm} | p{2cm} |}
 
 		\hline
 		\textbf{Requisito} & \textbf{Descrizione} & \textbf{Fonti} \\
 		\hline
 
-		R0Q1  &  Viene fornito un manuale per l'utente  &  Interno \\
+		ROQ1  &  Viene fornito un manuale per l'utente  &  Interno \\
 		\hline
-		R0Q1.1  &  Il manuale utente deve rispettare le norme e le metriche descritte nel \docNameVersionPdQ  &  Interno \\
+		ROQ1.1  &  Il manuale utente deve rispettare le norme e le metriche descritte nel \docNameVersionPdQ  &  Interno \\
 		\hline
-		R0Q2  &  Tutto il codice rispetta le norme e le metriche descritte nel \docNameVersionPdQ{} e nelle \docNameVersionNdP  &  Interno \\
+		ROQ2  &  Tutto il codice rispetta le norme e le metriche descritte nel \docNameVersionPdQ{} e nelle \docNameVersionNdP  &  Interno \\
+		\hline
+		ROQ3  &  Viene fornito un manuale per l'uso dei servizi REST offerti dal sistema  &  Interno \\
+		\hline
+		ROQ3.1  &  Il manuale dei servizi REST deve rispettare le norme e le metriche descritte nel \docNameVersionPdQ  &  Interno \\
 		\hline
 
 
@@ -320,30 +638,71 @@ La classificazione dei requisiti sarà riportata tramite il seguente formalismo:
 
 	\def\arraystretch{1.5}
 	\bgroup
-	\begin{longtable}{| p{2cm} | p{8cm} | p{2cm} |}
+	\begin{longtable}{| p{2.5cm} | p{8cm} | p{2cm} |}
 
 		\hline
 		\textbf{Requisito} & \textbf{Descrizione} & \textbf{Fonti} \\
 		\hline
 
-		R1V1  &  Il sistema sfrutterà gli strumenti offerti da Google Cloud Platform  &  Capitolato \newline Verbale 2015/01/14 \\
+		RDV1  &  Il sistema sfrutterà gli strumenti offerti da Google Cloud Platform.  &  Capitolato \newline Verbale 2015/01/14 \\
 		\hline
-		R1V1.1  &  Il sistema sfrutterà Google App Engine  &  Capitolato \newline Verbale 2015/01/14 \\
+		RDV1.1  &  Il sistema sfrutterà Google App Engine.  &  Capitolato \newline Verbale 2015/01/14 \\
 		\hline
-		R1V1.2  &  Il sistema sfrutterà Google Cloud Datastore  &  Capitolato \newline Verbale 2015/01/14 \\
+		RDV1.2  &  Il sistema sfrutterà Google Cloud Datastore.  &  Capitolato \newline Verbale 2015/01/14 \\
 		\hline
-		R1V1.2.1  &  Il database sarà di tipo non relazione composto da documenti in stile JSON, stesso formato dei dati in entrata  &  Interno \newline Verbale 2015/01/14 \\
+		RDV1.2.1  &  Il database sarà di tipo non relazione composto da documenti in stile JSON, stesso formato dei dati in entrata.  &  Interno \newline Verbale 2015/01/14 \\
 		\hline
-		R1V1.3  &  Il sistema sfrutterà gli strumenti offerti da Google Cloud Platform  &  Capitolato \newline Verbale 2015/01/14 \\
+		RDV1.3  &  Il sistema sfrutterà gli strumenti offerti da Google Cloud Platform.  &  Capitolato \newline Verbale 2015/01/14 \\
 		\hline
-		R1V2  &  Il linguaggio di programmazione principalmente usato sarà Python  &  Capitolato \newline Verbale 2015/01/14 \\
+RDV1.4  &  Il sistema sfrutterà Google Cloud Endpoints. & Capitolato \newline Verbale 2015/01/14 \\
 		\hline
-		R1V3  &  Il codice sorgente sarà soggetto a versionamento tramite il modello di branching descritto nelle \docNameVersionNdP  &  Capitolato \\
+
+		RDV2  &  Il linguaggio di programmazione principalmente usato per il back-end sarà Python.  &  Capitolato \newline Verbale 2015/01/28 \\
 		\hline
-		R1V4  &  L'interfaccia web sarà di tipo single-page  &  Interno \\
+		RDV2.1 & Il codice e la documentazione relativi al linguaggio Python dovranno seguire la Google Python Style Guide. & Verbale 2015/01/28 \\
+		\hline
+
+		RDV3  &  Il codice sorgente sarà soggetto a versionamento tramite il modello di branching descritto nelle \docNameVersionNdP  &  Capitolato \\
+		\hline
+		RDV4  &  L'interfaccia web sarà di tipo single-page.  &  Interno \\
+		\hline
+
+		ROV5  &  Il corretto funzionamento dell'interfaccia web deve essere garantito per l'utilizzo con i principali browser attualmente sul mercato.   &  Interno \\
+		\hline
+		ROV5.1  &  Ogni funzionalità dell'interfaccia web descritta nei requisiti funzionali deve essere compatibile con il browser Google Chrome v. 39.0 e successive.   &  Interno \\
+		\hline
+		ROV5.2  &  Ogni funzionalità dell'interfaccia web descritta nei requisiti funzionali deve essere compatibile con il browser Firefox v. 35.0 e successive.   &  Interno \\
+		\hline
+		ROV5.3  &  Ogni funzionalità dell'interfaccia web descritta nei requisiti funzionali deve essere compatibile con il browser Safari v. 8.0 e successive.   &  Interno \\
+		\hline
+
+		ROV6  &  Il sistema utilizzerà delle librerie esterne per effettuare le chiamate alle API dei diversi social.  &  Interno \\
+		\hline
+		ROV6.1  &  Il sistema utilizzerà facebook-sdk per effettuare le chiamate alle API di Facebook.  &  Interno \\
+		\hline
+		ROV6.2  &  Il sistema utilizzerà tweepy per effettuare le chiamate alle API di Twitter.  &  Interno \\
+		\hline
+		ROV6.3  &  Il sistema utilizzerà python-instagram per effettuare le chiamate alle API di Instagram.  &  Interno \\
+		\hline
+
+		ROV7  &  Il sistema utilizzerà delle librerie esterne per generare i grafici necessari alle View.  &  Interno \\
+		\hline
+		ROV7.1  &  Il sistema utilizzerà Chart.js per generare i Line Chart, Bar Chart, Pie Chart e Radar Chart.  &  Interno \\
+		\hline
+		ROV7.2  &  Il sistema utilizzerà i Geo Chart di Google Charts per generare i Map Chart.  &  Interno \\
+		\hline
+
+		ROV8  &  Il linguaggio di programmazione principalmente usato per il front-end sarà Javascript.  &  Verbale 2015/01/28 \\
+		\hline
+		ROV8.1 & Il codice e la documentazione relativi al linguaggio Javascript dovranno seguire la Google JavaScript Style Guide. & Verbale 2015/01/28 \\
+		\hline
+		ROV8.2  &  Il sistema utilizzerà AngularJS come framework per il front-end.  &  Verbale 2015/01/28 \\
+		\hline
+		ROV8.2.1 & Il codice e la documentazione relativi ad AngularJS dovranno seguire l'AngularJS Style Guide di Google. & Verbale 2015/01/28 \\
+		\hline
+		ROV9  &  Il token di accesso dovrà essere formato dalla combinazione seguente: ``id utente'' + ``data creazione token'' + ``valore random''.  &  Interno \\
 		\hline
 
 	\end{longtable}
 	\egroup
 \end{center}
-

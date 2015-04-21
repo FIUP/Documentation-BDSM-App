@@ -1,0 +1,243 @@
+% =================================================================================================
+% File:			    servizi_rest.tex
+% Description:	Definisce la sezione relativa ai servizi REST offerti dal back-end
+% Created:	   	2015-04-18
+% Author:		    Giacomo Cusinato
+% Email:		    cusinato.giacomo@mashup-unipd.it
+% =================================================================================================
+% Modification History:
+% Version		Modifier Date		Change											Author
+% 0.0.1
+% =================================================================================================
+%
+
+% CONTENUTO DEL CAPITOLO
+
+\section{Interfaccia REST} % (fold)
+\label{sec:servizi_rest}
+
+Per servizi web offerti dal back-end è stato deciso di utilizzare delle API basate su un'architettura di tipo REST. Cloud Endpoints, integrato nella Google Cloud Platform, fornisce infatti un'astrazione che facilità l'integrazione di tali servizi nella piattaforma lato server e delle librerie lato client. \newline
+Le API RESTful, che aderiscono ai vincoli dell'architettura REST, utilizzano standard come HTTP per l'implementazione dei metodi, JSON per il formato di risposta e URI per l'identificazione della risorsa.
+
+\noindent \newline
+Di seguito sono riportati i metodi HTTP utilizzati utilizzati dei servizi RESTful della piattaforma:
+
+\begin{center}
+\def\arraystretch{1.5}
+\bgroup
+\begin{longtable}{| p{2cm} | p {6cm} | p{6cm} |}
+  \hline
+  \textbf{Metodo} & URI di una collezione, come \newline \texttt{http://example.com/recipes/}  & URI di uno specifico elemento, come \newline \texttt{http://example.com/recipes/r18} \\
+  \hline
+  \textbf{GET} & Fornisce la lista degli elementi richiesti ed eventuali dettagli per ognuno. & Fornisce una rappresentazione dell'elemento richiesto. \\
+  \hline
+  \textbf{PUT} & Non utilizzato. & Sostituisce l'elemento richiesto o lo crea nel caso non esista ancora. \\
+  \hline
+  \textbf{POST} & Crea un nuovo elemento nella collezione. &  Non utilizzato. \\
+  \hline
+  \textbf{DELETE} & Non utilizzato. & Elimina l'elemento specificato. \\
+  \hline
+\end{longtable}
+\egroup
+\end{center}
+% subsection componenti_requisiti (end)
+
+
+\subsection{Lista servizi REST}
+\label{sub:lista_servizi_rest}
+
+Di seguito sono riportate tutte le web API offerte dal back-end specificando per ognuna l'URI relativo della chiamata, il metodo HTTP utilizzato ed una descrizione dell'utilizzo di tale API. Queste sono state divise a seconda dei permessi di utilizzo e, nello specifico, si divideranno in:
+\begin{itemize}
+  \item pubbliche: contengono tutti i servizi utilizzabili dagli utenti registrati al sistema che hanno ottenuto un token di accesso. Sono le API che espongono i dati grezzi ricavati dai vari social network suddivisi per Recipe.
+  \item private: contengono tutti i servizi utilizzati esclusivamente dal modulo client. Questi includono tutte le API mirate al funzionamento dell'applicazione.
+\end{itemize}
+
+
+\subsubsection{API pubbliche}
+\label{ssub:api_pubbliche}
+
+\begin{itemize}
+
+  % Recipe
+  \item \textit{\textbf{/recipe}}
+  \begin{itemize}
+    \item \textbf{Tipo:} GET
+    \item \textbf{Utilizzo:} restituisce la lista di tutte le Recipe presenti nel sistema.
+  \end{itemize}
+  \item \textit{\textbf{/recipe/\{recipe-id\}/metrics}}
+  \begin{itemize}
+    \item \textbf{Tipo:} GET
+    \item \textbf{Utilizzo:} restituisce la lista di tutte le metriche associate ad una Recipe.
+  \end{itemize}
+
+  % Facebook
+  \item \textit{\textbf{/fb/page/\{page-id\}}}
+  \begin{itemize}
+    \item \textbf{Tipo:} GET
+    \item \textbf{Utilizzo:} restituisce tutti i dati di una pagina Facebook.
+  \end{itemize}
+  \item \textit{\textbf{/fb/page/\{page-id\}/trend}}
+  \begin{itemize}
+    \item \textbf{Tipo:} GET
+    \item \textbf{Utilizzo:} restituisce tutti i dati associati al trend di una pagina Facebook.
+  \end{itemize}
+  \item \textit{\textbf{/fb/page/\{page-id\}/posts}}
+  \begin{itemize}
+    \item \textbf{Tipo:} GET
+    \item \textbf{Utilizzo:} restituisce tutti i dati associati al trend dei post di una pagina Facebook.
+  \end{itemize}
+  \item \textit{\textbf{/fb/event/\{event-id\}}}
+  \begin{itemize}
+    \item \textbf{Tipo:} GET
+    \item \textbf{Utilizzo:} restituisce tutti i dati di un evento Facebook.
+  \end{itemize}
+  \item \textit{\textbf{/fb/event/\{event-id\}/trend}}
+  \begin{itemize}
+    \item \textbf{Tipo:} GET
+    \item \textbf{Utilizzo:} restituisce tutti i dati associati al trend di un evento Facebook.
+  \end{itemize}
+  \item \textit{\textbf{/fb/event/\{event-id\}/posts}}
+  \begin{itemize}
+    \item \textbf{Tipo:} GET
+    \item \textbf{Utilizzo:} restituisce tutti i dati associati al trend dei post di un evento Facebook.
+  \end{itemize}
+
+  % Twitter
+  \item \textit{\textbf{/tw/user/\{user-id\}}}
+  \begin{itemize}
+    \item \textbf{Tipo:} GET
+    \item \textbf{Utilizzo:} restituisce tutti i dati di un utente Twitter.
+  \end{itemize}
+  \item \textit{\textbf{/tw/user/\{user-id\}/trend}}
+  \begin{itemize}
+    \item \textbf{Tipo:} GET
+    \item \textbf{Utilizzo:} restituisce tutti i dati associati al trend di un utente Twitter.
+  \end{itemize}
+  \item \textit{\textbf{/tw/user/\{user-id\}/tweets}}
+  \begin{itemize}
+    \item \textbf{Tipo:} GET
+    \item \textbf{Utilizzo:} restituisce tutti i dati associati al trend dei tweet un utente Twitter.
+  \end{itemize}
+  \item \textit{\textbf{/tw/user/\{hashtag\}/tweets}}
+  \begin{itemize}
+    \item \textbf{Tipo:} GET
+    \item \textbf{Utilizzo:} restituisce tutti i dati associati al trend dei tweet relativi ad un hashtag Twitter.
+  \end{itemize}
+
+  % Instagram
+  \item \textit{\textbf{/ig/user/\{user-id\}}}
+  \begin{itemize}
+    \item \textbf{Tipo:} GET
+    \item \textbf{Utilizzo:} restituisce tutti i dati di un utente Instagram.
+  \end{itemize}
+  \item \textit{\textbf{/ig/user/\{user-id\}/trend}}
+  \begin{itemize}
+    \item \textbf{Tipo:} GET
+    \item \textbf{Utilizzo:} restituisce tutti i dati associati al trend di un utente Instagram.
+  \end{itemize}
+  \item \textit{\textbf{/ig/user/\{user-id\}/media}}
+  \begin{itemize}
+    \item \textbf{Tipo:} GET
+    \item \textbf{Utilizzo:} restituisce tutti i dati associati al trend dei media di un utente Instagram.
+  \end{itemize}
+  \item \textit{\textbf{/ig/hashtag/\{hashtag-name\}/trend}}
+  \begin{itemize}
+    \item \textbf{Tipo:} GET
+    \item \textbf{Utilizzo:} restituisce tutti i dati associati al trend di un hashtag Instagram.
+  \end{itemize}
+  \item \textit{\textbf{/ig/hashtag/\{hashtag-name\}/media}}
+  \begin{itemize}
+    \item \textbf{Tipo:} GET
+    \item \textbf{Utilizzo:} restituisce tutti i dati associati al trend dei media di un hashtag Instagram.
+  \end{itemize}
+
+\end{itemize}
+
+\subsubsection{API private}
+\label{ssub:api_private}
+
+\begin{itemize}
+
+  % User
+  \item \textbf{/user}
+  \begin{itemize}
+    \item \textbf{Tipo:} POST
+    \item \textbf{Tipo:} aggiunge un utente al sistema.
+  \end{itemize}
+  \item \textbf{/user/\{user-id\}}
+  \begin{itemize}
+    \item \textbf{Tipo:} GET
+    \item \textbf{Tipo:} ottiene le informazioni associate ad un utente.
+  \end{itemize}
+  \item \textbf{/user/\{user-id\}}
+  \begin{itemize}
+    \item \textbf{Tipo:} PUT
+    \item \textbf{Tipo:} modifica le informazioni associate ad un utente.
+  \end{itemize}
+  \item \textbf{/user/\{user-id\}}
+  \begin{itemize}
+    \item \textbf{Tipo:} DELETE
+    \item \textbf{Tipo:} elimina un utente dal sistema.
+  \end{itemize}
+  \item \textbf{/user/\{user-id\}/permission}
+  \begin{itemize}
+    \item \textbf{Tipo:} PUT
+    \item \textbf{Tipo:} modifica i permessi di un utente.
+  \end{itemize}
+  \item \textbf{/user/\{user-id\}/favourites}
+  \begin{itemize}
+    \item \textbf{Tipo:} GET
+    \item \textbf{Tipo:} ottiene la lista delle View preferite di un utente.
+  \end{itemize}
+  \item \textbf{/user/\{user-id\}/favourites}
+  \begin{itemize}
+    \item \textbf{Tipo:} POST
+    \item \textbf{Tipo:} aggiunge una View tra le preferite di un utente.
+  \end{itemize}
+  \item \textbf{/user/\{user-id\}/favourites}
+  \begin{itemize}
+    \item \textbf{Tipo:} DELETE
+    \item \textbf{Tipo:} rimuove una View dalle preferite di un utente.
+  \end{itemize}
+
+  % Recipe
+  \item \textbf{/recipe}
+  \begin{itemize}
+    \item \textbf{Tipo:} POST
+    \item \textbf{Tipo:} aggiunge una nuova Recipe al sistema.
+  \end{itemize}
+  \item \textbf{/recipe/\{recipe-id\}}
+  \begin{itemize}
+    \item \textbf{Tipo:} DELETE
+    \item \textbf{Tipo:} rimuove una nuova Recipe dal sistema.
+  \end{itemize}
+  \item \textbf{/recipe/\{recipe-id\}/rate}
+  \begin{itemize}
+    \item \textbf{Tipo:} POST
+    \item \textbf{Tipo:} aggiunge un voto ad un Recipe.
+  \end{itemize}
+
+
+  % Recipe request
+  \item \textbf{/recipe/request}
+  \begin{itemize}
+    \item \textbf{Tipo:} POST
+    \item \textbf{Tipo:} aggiunge una nuova richiesta di creazione Recipe al sistema.
+  \end{itemize}
+  \item \textbf{/recipe/request}
+  \begin{itemize}
+    \item \textbf{Tipo:} GET
+    \item \textbf{Tipo:} ottiene la lista delle richieste di creazione Recipe presenti nel sistema.
+  \end{itemize}
+  \item \textbf{/recipe/request/\{request-id\}}
+  \begin{itemize}
+    \item \textbf{Tipo:} GET
+    \item \textbf{Tipo:} ottiene i dati associati ad una richiesta di creazione Recipe.
+  \end{itemize}
+  \item \textbf{/recipe/request/\{request-id\}}
+  \begin{itemize}
+    \item \textbf{Tipo:} DELETE
+    \item \textbf{Tipo:} rimuove una richiesta di creazione Recipe dal sistema.
+  \end{itemize}
+
+\end{itemize}

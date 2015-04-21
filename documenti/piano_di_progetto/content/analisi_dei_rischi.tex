@@ -6,14 +6,18 @@
 % Email:		tesser.paolo@mashup-unipd.it
 % =================================================================================================
 % Modification History:
-% Version		Modifier Date		Change											Author
-% 0.0.1 		2014-12-30 			creata struttura analisi dei rischi				Tesser Paolo
+% Version		Modifier Date		Change												Author
+% 0.0.1 		2014-12-30 			creata struttura analisi dei rischi					Tesser Paolo
 % =================================================================================================
-% 0.0.2			2015-01-03			iniziata prima stesura							Tesser Paolo
+% 0.0.2			2015-01-03			iniziata prima stesura								Tesser Paolo
 % =================================================================================================
-% 0.0.3			2015-01-05			continuata stesura in dettaglio					Tesser Paolo
+% 0.0.3			2015-01-05			continuata stesura in dettaglio						Tesser Paolo
 % =================================================================================================
-%
+% 1.0.1			2015-02-09			inserito periodo di valutazione dei rischi			Ceccon Lorenzo
+% =================================================================================================
+% 1.0.2			2015-02-19			aggiunta sezione rischi riscontrati per ogni fase	Ceccon Lorenzo
+% =================================================================================================
+% 2.0.1 		2015-03-17			aggiunti rischi progettazione architetturale		Luca Santacatterina
 % =================================================================================================
 %
 
@@ -54,10 +58,19 @@ Per ogni rischio inoltre andrà riportato se ne sono avvenuti riscontri durante 
 				\item \textbf{Contromisure}: non è possibile annullare i ritardi qualora il rischio venisse riscontrato, ma per minimizzarli il \roleProjectManager{} dovrà effettuare un'attenta pianificazione che consenta a ciascun membro di avere il tempo necessario per acquisire le conoscenze attraverso il materiale fornito dall'\roleAdministrator.
 			\end{itemize}
 		\noindent
-		\textbf{Riscontro effettivo}: \\
-		Non sono stati riscontrati problemi inerenti a questo rischio in quanto le tecnologie scelte devono essere ancora utilizzate.
+		\textbf{Riscontro effettivo}
+			\begin{itemize}
+				\item \textbf{Analisi dei requisiti}: non sono stati riscontrati problemi inerenti a questo rischio in quanto le tecnologie scelte devono essere ancora utilizzate;
+				\item \textbf{Analisi di dettaglio}: non sono stati riscontrati problemi inerenti a questo rischio in quanto le tecnologie scelte devono essere ancora utilizzate;
+				\item \textbf{Progettazione architetturale}: si sono dovute apprendere nuove tecnologie all'interno di questa fase. Questo ha portato a delle incomprensioni all'interno del team in quanto non si prevedeva l'implementazione di ulteriori software. Nonostante ciò si è proceduto con un periodo di apprendimento approfondito. Grazie al proponente è stato possibile chiedere alcune delucidazioni sul software e le tecnologie da adottare. Le nuove tecnologie dovranno essere approfondite anche in seguito in quanto richiedono un livello di abilità maggiore;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti obbligatori}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti desiderabili}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti opzionali}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Validazione}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+			\end{itemize}
+
 		% subsubsection inesperienza_sulle_tecnlogie_scelte (end)
-		
+
 		\subsubsection{Problemi Hardware} % (fold)
 		\label{ssub:problemi_hardware}
 			\begin{itemize}
@@ -68,8 +81,16 @@ Per ogni rischio inoltre andrà riportato se ne sono avvenuti riscontri durante 
 				\item \textbf{Contromisure}: nel caso si guastasse una delle macchine verrà riparata il prima possibile. Nel frattempo il lavoro proseguirà su una messa a disposizione dal laboratorio. La possibile perdita dei dati sarà minimizzata in quanto ogni membro, terminata la sessione di lavoro, dovrà eseguire il push sul repository, presente su un servizio di hosting, esterno al controllo del team.
 			\end{itemize}
 		\noindent
-		\textbf{Riscontro effettivo}: \\
-		Non sono stati riscontrati problemi inerenti a questo rischio.
+		\textbf{Riscontro effettivo}
+			\begin{itemize}
+				\item \textbf{Analisi dei requisiti}: non sono stati riscontrati problemi inerenti a questo rischio;
+				\item \textbf{Analisi di dettaglio}: rottura del monitor del computer di un componente del team nei giorni precedenti alla presentazione della \RR. Questo non ha causato ritardi in quanto le attività necessarie alla preparazione di essa si sono potute svolgere tramite un qualunque browser web grazie alla tipologia di software scelto per raggiungere tale scopo;
+				\item \textbf{Progettazione architetturale}: non sono stati riscontrati problemi inerenti a questo rischio;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti obbligatori}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti desiderabili}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti opzionali}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Validazione}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+			\end{itemize}
 		% subsubsection problemi_hardware (end)
 		
 		\subsubsection{Problemi Software} % (fold)
@@ -84,11 +105,20 @@ Per ogni rischio inoltre andrà riportato se ne sono avvenuti riscontri durante 
 				Per quanto riguarda invece gli strumenti web utilizzati, in particolare per il servizio di hosting del repository e per il sistema di ticketing, verranno effettuati giornalmente dei backup per minimizzare la possibile perdita dei dati.
 			\end{itemize}
 		\noindent
-		\textbf{Riscontro effettivo}: \\
-		Un componente del gruppo ha dovuto provvedere alla sistemazione di un problema della scheda grafica sul suo sistema operativo. \\
-		Questo non ha causato però ritardi in quanto il membro, fino a quando non ha sistemato il problema, ha lavorato su una postazione fissa presente a casa sua.
+		\textbf{Riscontro effettivo}
+			\begin{itemize}
+				\item \textbf{Analisi dei requisiti}: un componente del gruppo ha dovuto provvedere alla sistemazione di un problema della scheda grafica sul suo sistema operativo. \newline
+				Questo non ha causato però ritardi in quanto il membro, fino a quando non ha sistemato il problema, ha lavorato su una postazione fissa presente a casa sua;
+				\item \textbf{Analisi di dettaglio}: non sono stati riscontrati problemi inerenti a questo rischio;
+				\item \textbf{Progettazione architetturale}: non sono stati riscontrati problemi inerenti a questo rischio;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti obbligatori}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti desiderabili}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti opzionali}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Validazione}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+			\end{itemize}
+
 		% subsubsection problemi_software (end)
-		
+
 	% subsection rischi_tecnologici (end)
 	
 	\subsection{Rischi dovuti al personale} % (fold)
@@ -102,14 +132,22 @@ Per ogni rischio inoltre andrà riportato se ne sono avvenuti riscontri durante 
 				Può accadere anche che i membri del gruppo si ammalino;
 				\item \textbf{Metodi di rilevazione}: i membri dovranno rendere noti i loro impegni fissi al \roleProjectManager{} il quale, grazie all'ausilio di calendari di gruppo, potrà pianificare al meglio la gestione delle risorse. \\
 				Se l'impegno non è fisso o un membro dovesse ammalarsi, dovrà essere lo stesso comunicato al \roleProjectManager{} con un anticipo di almeno 24 ore per l'impegno e, per quanto riguarda le malattie, quando la salute lo renderà possibile;
-				\item \textbf{Contromisure}: dopo avere ricevuto notifica dell'impegno da parte del membro il \roleProjectManager{} dovrà effettuare una nuova pianificazione inerente al periodo riscontrato. Questo comporterà un sovraccarico temporaneo delle risorse per sopperire all'assenza del componente, ma consentirà di annullare i ritardi. \\
+				\item \textbf{Contromisure}: dopo avere ricevuto notifica dell'impegno da parte del membro il \roleProjectManager{} dovrà effettuare una nuova pianificazione inerente al periodo riscontrato. Questo comporterà un sovraccarico temporaneo delle risorse per sopperire all'assenza del componente, ma consentirà di annullare i ritardi. \newline
 				Non è possibile annullare il rischio di ritardo nel caso di malattia, ma solo di minimizzarlo.
 			\end{itemize}
 		\noindent
-		\textbf{Riscontro effettivo}: \\
-		Una notevole parte del gruppo si è ammalata durante il primo periodo. Questo ha portato ad alcuni ritardi nelle attività e ad un sovraccarico di alcune risorse, che non hanno però compromesso il raggiungimento della milestone fissata per la revisione dei requisiti.
+		\textbf{Riscontro effettivo}
+			\begin{itemize}
+				\item \textbf{Analisi dei requisiti}: una notevole parte del gruppo si è ammalata durante il primo periodo. Questo ha portato ad alcuni ritardi nelle attività e ad un sovraccarico di alcune risorse, che non hanno però compromesso il raggiungimento della milestone fissata per la revisione dei requisiti;
+				\item \textbf{Analisi di dettaglio}: molti dei componenti sono stati impegnati pesantemente in esami inerenti ad altri corsi di studio. Questo ha fatto si che le risorse disponibili per lo svolgimento dei compiti previsti diminuisse, con una conseguente diminuzione del carico di ore preventivate;
+				\item \textbf{Progettazione architetturale}: un paio di componenti del gruppo hanno avuto dei problemi con impegni universitari e lavorativi. Questo ha portato per loro un aumento del lavoro durante le ore serali. Ma grazie ad una accurata gestione dei task e della centralizzazione del lavoro non ha portato gravi disagi, bensì si è potuto testare la flessibilità del sistema;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti obbligatori}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti desiderabili}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti opzionali}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Validazione}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+			\end{itemize}
 		% subsubsection impegni_personali_dei_componenti (end)
-		
+
 		\subsubsection{Problemi tra i componenti} % (fold)
 		\label{ssub:problemi_tra_i_componenti}
 			\begin{itemize}
@@ -117,16 +155,24 @@ Per ogni rischio inoltre andrà riportato se ne sono avvenuti riscontri durante 
 				\item \textbf{Grado di pericolosità}: Medio;
 				\item \textbf{Descrizione}: il gruppo è formato da individui diversi sia per idee sia per comportamenti. Per quasi tutti è la prima esperienza in un lavoro collaborativo così numeroso e questo può portare alla nascita di incomprensioni e dissidi. Tutto ciò potrebbe portare il team ad essere meno efficace e meno efficiente, appesantendo l'ambiente lavorativo;
 				\item \textbf{Metodi di rilevazione}: ogni membro dovrà fare presente al \roleProjectManager{} se si venissero a verificare dei conflitti con altri componenti;
-				\item \textbf{Contromisure}: una stretta collaborazione, in particolare modo nelle scelte di fattori trasversali alle risorse, cercherà di annullare i possibili disaccordi. \\
-				Qualora ciò non fosse sufficiente il \roleProjectManager{} dovrà cercare di risolvere il conflitto tra le parti. Se ciò non riuscisse ad avvenire in pieno, egli dovrà di cercare di minimizzare il contatto tra le due risorse grazie ad un'attenta pianificazione. \\
+				\item \textbf{Contromisure}: una stretta collaborazione, in particolare modo nelle scelte di fattori trasversali alle risorse, cercherà di annullare i possibili disaccordi. \newline
+				Qualora ciò non fosse sufficiente il \roleProjectManager{} dovrà cercare di risolvere il conflitto tra le parti. Se ciò non riuscisse ad avvenire in pieno, egli dovrà di cercare di minimizzare il contatto tra le due risorse grazie ad un'attenta pianificazione. \newline
 			\end{itemize}
 		\noindent
-		\textbf{Riscontro effettivo}: \\
-		Non sono stati riscontrati problemi inerenti a questo rischio.
+		\textbf{Riscontro effettivo}
+			\begin{itemize}
+				\item \textbf{Analisi dei requisiti}: non sono stati riscontrati problemi inerenti a questo rischio;
+				\item \textbf{Analisi di dettaglio}: non sono stati riscontrati problemi inerenti a questo rischio;
+				\item \textbf{Progettazione architetturale}: non sono stati riscontrati problemi inerenti a questo rischio;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti obbligatori}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti desiderabili}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti opzionali}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Validazione}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+			\end{itemize}
 		% subsubsection problemi_tra_i_componenti (end)
-		
+
 	% subsection rischi_dovuti_al_personale (end)
-	
+
 	\subsection{Rischi organizzativi} % (fold)
 	\label{sub:rischi_organizzativi}
 		\subsubsection{Sovraccarico delle risorse} % (fold)
@@ -140,14 +186,21 @@ Per ogni rischio inoltre andrà riportato se ne sono avvenuti riscontri durante 
 				Nel caso in cui ricevesse una notifica da parte di uno dei componenti come sopra indicato, se riterrà valida la cosa provvederà al ricollocamento di parte delle attività su altre risorse.
 			\end{itemize}
 		\noindent
-		\textbf{Riscontro effettivo}: \\
-		Non sono stati riscontrati problemi inerenti a questo rischio.
+		\textbf{Riscontro effettivo}
+			\begin{itemize}
+				\item \textbf{Analisi dei requisiti}: non sono stati riscontrati problemi inerenti a questo rischio;
+				\item \textbf{Analisi di dettaglio}: la pianificazione iniziale aveva sovraccaricato le risorse rispetto agli impegni previsti. Questo ha fatto si che le ore effettive di attività fossero ridimensionate in minor numero;
+				\item \textbf{Progettazione architetturale}: i componenti sono stati un po' sovraccaricati per compensare quanto accaduto nella fase precedente. Questo però non ha comportato disagi in quanto era stato pianificato dal \roleProjectManager{} all'inizio della fase in analisi;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti obbligatori}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti desiderabili}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti opzionali}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Validazione}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+			\end{itemize}
+
 		% subsubsection sovraccarico_delle_risorse (end)
-		
+
 	% subsection rischi_organizzativi (end)
-	
-	
-	
+
 	\subsection{Rischi dovuti agli strumenti} % (fold)
 	\label{sub:rischi_dovuti_agli_strumenti}
 		\subsubsection{Inesperienza del gruppo sugli strumenti utilizzati} % (fold)
@@ -160,14 +213,23 @@ Per ogni rischio inoltre andrà riportato se ne sono avvenuti riscontri durante 
 				\item \textbf{Contromisure}: il \roleProjectManager{} dovrà assegnare la gestione dello strumento alla persona che ritiene più adeguata per padroneggiarlo. Se non si riuscisse a trovare nessun componente già formato sul mezzo in questione, colui che è stato scelto dovrà documentarsi su come utilizzarlo. Nel caso in cui questa attività dovesse richiedere troppo tempo il \roleProjectManager{} dovrà notificarlo all'\roleAdministrator{} che provvederà a trovare uno strumento sostitutivo di più facile comprensione.
 			\end{itemize}
 		\noindent
-		\textbf{Riscontro effettivo}: \\
-		\'E stato richiesto ad uno dei membri di passare ad utilizzare un sistema Unix per svolgere le attività di progetto. Questa scelta, effettuata a posteriori dall'inizio delle attività, ha generato un piccolo ritardo in alcuni compiti riguardanti l'implementazione degli strumenti perché il componente in questione era uno degli \emph{Amministratori di Progetto} al momento in carica. \\
-		La conformità dei sistemi operativi permetterà però in futuro di guadagnare tempo all'\roleAdministrator{} qualora dovessero essere introdotti nuovi strumenti, in particolare negli script che automatizzano parte dei controlli di conformità con le norme. \\
-		Per quanto riguarda il resto dei componenti non ci sono stati particolari problemi in quanto il tempo predisposto nella prima fase, esposta nella sezione \ref{sub:ricerca_e_implementazione_degli_strumenti}, ha permesso a ciascun membro di apprendere gli strumenti scelti.
+		\textbf{Riscontro effettivo}
+			\begin{itemize}
+				\item \textbf{Analisi dei requisiti}: è stato richiesto ad uno dei membri di passare ad utilizzare un sistema Unix per svolgere le attività di progetto. Questa scelta, effettuata a posteriori dall'inizio delle attività, ha generato un piccolo ritardo in alcuni compiti riguardanti l'implementazione degli strumenti perché il componente in questione era uno degli \emph{Amministratori di Progetto} al momento in carica. \newline
+				La conformità dei sistemi operativi permetterà però in futuro di guadagnare tempo all'\roleAdministrator{} qualora dovessero essere introdotti nuovi strumenti, in particolare negli script che automatizzano parte dei controlli di conformità con le norme. \newline
+				Per quanto riguarda il resto dei componenti non ci sono stati particolari problemi in quanto il tempo predisposto nella prima fase, esposta nella sezione \ref{sub:ricerca_e_implementazione_degli_strumenti}, ha permesso a ciascun membro di apprendere gli strumenti scelti;
+				\item \textbf{Analisi di dettaglio}: non sono stati riscontrati problemi inerenti a questo rischio;
+				\item \textbf{Progettazione architetturale}: nella seguente fase si sono introdotti nuovi ambienti di lavoro e conseguentemente si sono introdotti nuove piattaforme software. Grazie alla preparazione più avanzata di alcuni membri del gruppo è alla documentazione relativa al nuovo software è stato possibile portare ad un livello paritario tutti i componenti del gruppo. Le nuove piattaforme non hanno riscontrato problemi con la piattaforma Unix in quanto dichiarate compatibili dal produttore;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti obbligatori}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti desiderabili}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti opzionali}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Validazione}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+			\end{itemize}
+
 		% subsubsection inesperienza_del_gruppo_sugli_strumenti_utilizzati (end)
-		
+
 	% subsection rischi_dovuti_agli_strumenti (end)
-		
+
 	\subsection{Rischi dovuti ai requisiti} % (fold)
 	\label{sub:rischi_dovuti_ai_requisiti}
 		\begin{itemize}
@@ -179,11 +241,20 @@ Per ogni rischio inoltre andrà riportato se ne sono avvenuti riscontri durante 
 			Verranno inoltre corretti errori o mancanze esposte dal committente dopo l'esito di ogni revisione in particolare al termine della \RR.			
 		\end{itemize}
 	\noindent
-	\textbf{Riscontro effettivo}: \\
-	I requisiti trovati fino al momento dell'incontro con il proponente sono stati valutati da esso abbastanza positivamente. Se ne sono dovuti però cambiare alcuni che non rispecchiavano la sua idea dell'applicativo.  \\
-	Non si hanno ancora avuto riscontri dal committente in quanto non si è effettuata nessuna revisione di progetto.
+	\textbf{Riscontro effettivo}
+		\begin{itemize}
+			\item \textbf{Analisi dei requisiti}: i requisiti trovati fino al momento dell'incontro con il proponente sono stati valutati da esso abbastanza positivamente. Se ne sono dovuti però cambiare alcuni che non rispecchiavano la sua idea dell'applicativo.  \newline
+			Non si hanno ancora avuto riscontri dal committente in quanto non si è effettuata nessuna revisione di progetto;
+			\item \textbf{Analisi di dettaglio}: non si hanno ancora avuto riscontri dal committente ne dal proponente, che prenderà in visione il lavoro svolto durante il prossimo incontro;
+			\item \textbf{Progettazione architetturale}: all'inizio di questa fase sono emersi i risultati sulla validità dei requisiti trovati da parte del committente, il quale ha espresso i suoi dubbi sull'insufficiente profondità di analisi in particolare modo per i casi d'uso trovati, mentre per quanto riguarda i requisiti sono stati valutati positivamente al netto di qualche errore. Questo ha fatto si che il gruppo fosse impegnato più del previsto nella rivisitazione del documento di \docNameVersionAdR;
+			\item \textbf{Progettazione di dettaglio e codifica dei requisiti obbligatori}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+			\item \textbf{Progettazione di dettaglio e codifica dei requisiti desiderabili}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+			\item \textbf{Progettazione di dettaglio e codifica dei requisiti opzionali}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+			\item \textbf{Validazione}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+		\end{itemize}
+
 	% subsection rischi_dovuti_ai_requisiti (end)
-	
+
 	\subsection{Rischi dovuti a stime errate} % (fold)
 	\label{sub:rischi_dovuti_a_stime_errate}
 		\subsubsection{Tempi di sviluppo sottostimati} % (fold)
@@ -196,10 +267,20 @@ Per ogni rischio inoltre andrà riportato se ne sono avvenuti riscontri durante 
 				\item \textbf{Contromisure}: il \roleProjectManager{} dovrà prevedere un periodo di slack, in modo tale che un ritardo non influenzi il raggiungimento delle milestone fissate. Si è inoltre pensato di presentare un preventivo maggiorato nel caso lo slack assegnato non bastasse.
 			\end{itemize}
 		\noindent
-		\textbf{Riscontro effettivo}: \\
-		In un primo periodo sono avvenuti dei ritardi dovuti a una sottostima dei tempi, questo però non ha influenzato i costi preventivati in quanto si era prevista una maggiorazione. 
+		\textbf{Riscontro effettivo}
+			\begin{itemize}
+				\item \textbf{Analisi dei requisiti}: in un primo periodo sono avvenuti dei ritardi dovuti a una sottostima dei tempi, questo però non ha influenzato i costi preventivati in quanto si era prevista una maggiorazione;
+				\item \textbf{Analisi di dettaglio}: non sono stati riscontrati problemi inerenti a questo rischio;
+				\item \textbf{Progettazione architetturale}: si sono verificati dei ritardi dovuti a stime errate riguardanti sia il lavoro di rivisitazione e miglioramento del documento di \docNameVersionAdR, sia per quanto riguarda il lavoro inerente alla \docNameVersionST. Questo ha influenzato i costi preventivati aumentandone sensibilmente il budget. Si dovrà ottimizzare il lavoro nelle successive fasi;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti obbligatori}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti desiderabili}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti opzionali}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Validazione}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+			\end{itemize}
+
+
 		% subsubsection tempi_di_sviluppo_sottostimati (end)
-		
+
 		\subsubsection{Tempi di sviluppo sovrastimati} % (fold)
 		\label{ssub:tempi_di_sviluppo_sovrastimati}
 			\begin{itemize}
@@ -210,10 +291,20 @@ Per ogni rischio inoltre andrà riportato se ne sono avvenuti riscontri durante 
 				\item \textbf{Contromisure}: il \roleProjectManager{} dovrà pianificare al meglio le attività da assegnare ai singoli membri, in modo tale che, se una di esse si riuscisse a concludere in anticipo, il membro possa proseguire con l'inizio di un'altra a lui assegnata che non necessita della terminazione di altre attività.
 			\end{itemize}
 		\noindent
-		\textbf{Riscontro effettivo}: \\
-		Non sono stati riscontrati problemi inerenti a questo rischio.
+		\textbf{Riscontro effettivo}
+			\begin{itemize}
+				\item \textbf{Analisi dei requisiti}: non sono stati riscontrati problemi inerenti a questo rischio;
+				\item \textbf{Analisi di dettaglio}: è stato impiegato meno tempo rispetto a quanto pianificato per le attività di incremento dei requisiti individuati precedentemente. Questo è avvenuto per un'errata considerazione degli impegni riguardanti gli altri corsi;
+				\item \textbf{Progettazione architetturale}: non sono stati riscontrati problemi inerenti a questo rischio;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti obbligatori}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti desiderabili}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Progettazione di dettaglio e codifica dei requisiti opzionali}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+				\item \textbf{Validazione}: non sono stati riscontrati problemi in quanto le attività di questa fase dovranno essere svolte durante successivi incrementi;
+			\end{itemize}
+
+
 		% subsubsection tempi_di_sviluppo_sovrastimati (end)
-		
+
 	% subsection rischi_dovuti_a_stime_errate (end)
 	\newpage
 	\subsection{Riepilogo rischi} % (fold)
@@ -232,7 +323,6 @@ Per ogni rischio inoltre andrà riportato se ne sono avvenuti riscontri durante 
 					Alta &
 					Alto \\
 					\hline
-					
 					\ref{ssub:inesperienza_sulle_tecnlogie_scelte} Inesperienza sulle tecnologie scelte &
 					Alta &
 					Medio \\
@@ -249,8 +339,6 @@ Per ogni rischio inoltre andrà riportato se ne sono avvenuti riscontri durante 
 					Bassa &
 					Medio \\
 					\hline
-					
-						
 					\ref{ssub:tempi_di_sviluppo_sovrastimati}  Tempi di sviluppo sovrastimati &
 					Alta &
 					Basso \\
