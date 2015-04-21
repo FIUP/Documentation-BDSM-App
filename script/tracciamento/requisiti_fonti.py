@@ -82,15 +82,19 @@ class RequisitiFonti():
     def take_req_comp(self):
         for line in self.__comp_file_line:
             comp_match_re = re.match(r"^(server|client)", line)
+
             if comp_match_re is not None:
+                # comp = re.search(r"^(server|client)(.*)", line)
+                # print comp.group()
                 comp = re.search(r"^(server|client)(.*)&", line)
                 comp = (comp.group(1) + comp.group(2)).strip()
-
                 if comp:
                     # TODO: change name
                     fonti_for_req_array = line.split('&')[1].strip()
-                    fonti_single_array = fonti_for_req_array[:-2].strip().split("\\newline")
+                    # print fonti_for_req_array
+                    fonti_single_array = fonti_for_req_array[:-1].strip().split("\\newline")
                     for req in fonti_single_array:
+                        # print req.strip()
                         if req.strip() in self.__req_comp_dict:
                             self.__req_comp_dict[req.strip()].append(comp.strip())
                         else:
