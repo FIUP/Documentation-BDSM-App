@@ -23,257 +23,7 @@
 Lo stato \textbf{N.I.} presente nelle tabelle sottostanti è da intendersi come non applicato, tali test verranno infatti svolti successivamente come descritto in \docNameVersionPdP.\\
 Per una descrizione più dettagliata sui test si rimanda alla sezione dei test del documento \docNameVersionNdP.
 
-	\subsection{Test di sistema}
-		I test di sistema servono per verificare che il sistema software completamente integrato soddisfi tutti i requisiti software individuati e descritti nel documento \docNameVersionAdR.
-		\subsubsection{Descrizione dei test di sistema}
-			\begin{center}
-
-			\def\arraystretch{1.5}
-			\bgroup
-			\begin{longtable}{| p{2cm} | p{7cm} | p{1.5cm} | p{2cm} |}
-					\hline
-					\textbf{Test} & \textbf{Descrizione} & \textbf{Stato} & \textbf{Requisito}\\
-					\hline						
-					TSF1 & Viene verificato che il sistema permetta, all'utente non autenticato, la registrazione al servizio & N.I. & ROF1\\
-					\hline
-					TSF2 & Viene verificato che il sistema permetta all'utente di effettuare l'autenticazione & N.I. & ROF2\\
-					\hline
-					TSF3 & Viene verificato che il sistema permetta, all'utente autenticato, di accedere al menù delle informazioni personali e delle statistiche del sistema & N.I. & ROF3\\
-					\hline
-					TSF4 & Viene verificato che il sistema permetta, all'utente autenticato, di effettuare la deautenticazione & N.I. & ROF4\\
-					\hline
-					TSF5 & Viene verificato che il sistema permetta, all'utente autenticato, di visualizzare tutte le Recipe presenti nel sistema & N.I. & ROF5\\
-					\hline
-					TSF6 & Viene verificato che il sistema permetta all'utente di gestire le proprie View & N.I. & RDF6\\
-					\hline
-					TSF7 & Viene verificato che il sistema permetta all'utente di richiedere l'inserimento di una nuova Recipe & N.I. & RFF7\\
-					\hline
-					TSF8 & Viene verificato che il sistema permetta, all'utente amministratore autenticato, di accedere all'area riservata del sistema & N.I. & ROF8\\
-					\hline
-					TSF9 & Viene verificato che il sistema permetta, all'utente amministratore autenticato, di accedere all'elenco degli utenti registrati & N.I. & ROF9\\
-					\hline
-					TSF10 & Viene verificato che il sistema permetta, all'utente amministratore, di gestire la richiesta di nuove Recipe & N.I. & RFF10\\
-					\hline
-					TSF11 & Viene verificato che il sistema fornisca una serie di servizi REST & N.I. & ROF11\\
-					\hline
-					TSF12 & Viene verificato che il sistema permetta all'utente di visualizzare la specifica dei servizi REST offerti & N.I. & ROF12\\
-					\hline
-					TSP1 & Viene verificato che l'utente visualizzi le proprie View entro 10 secondi & N.I. & RDP1\\
-					\hline
-					TSP2 & Viene verificato che l'interfaccia web utilizzi un design di tipo responsive & N.I. & RFP2\\
-					\hline
-					TSQ1 & Viene verificato che sia disponibile un manuale per l'utente & N.I. & ROQ1\\
-					\hline
-					TSQ2 & Viene verificato che tutto il codice rispetti le norme e le metriche descritte nel \docNameVersionPdQ{} e \docNameVersionNdP & N.I. & ROQ2\\
-					\hline
-					TSQ3 & Viene verificato che sia disponibile un manuale per l'uso dei servizi REST & N.I. & ROQ3\\
-					\hline
-					TSV1 & Viene verificato che il sistema utilizzi gli strumenti offerti da Google Cloud Platform & N.I. & RDV1\\
-					\hline
-					TSV2 & Viene verificato che il linguaggio di programmazione utilizzato per il back-end sia Python & N.I. & RDV2\\
-					\hline
-					TSV3 & Viene verificato che il codice soggetto sia soggetto a versionamento tramite il modello di branching descritto nelle \docNameVersionNdP & N.I. & RDV3\\
-					\hline
-					TSV4 & Viene verificato che l'interfaccia web sia di tipo single-page & N.I. & RDV4\\
-					\hline
-					TSV5 & Viene verificato che l'interfaccia web funzioni con i principali browser attualmente sul mercato& N.I. & ROV5\\
-					\hline
-					TSV6 & Viene verificato che il sistema utilizzi librerie esterne per effettuare le chiamate alle API dei diversi social network & N.I. & ROV6\\
-					\hline
-					TSV7 & Viene verificato che il sistema utilizzi librerie esterne per generare i grafici necessari alle View & N.I. & ROV7\\
-					\hline
-					TSV8 & Viene verificato che il linguaggio di programmazione utilizzato per il front-end sia Javascript & N.I. & ROV8\\
-					\hline
-					TSV9 & Viene verificato che il token di accesso sia formato dalla combinazione: ''id utente'' + ''data creazione token'' + ''valore random'' & N.I. & ROV9\\
-					\hline
-			\caption{Tracciamento test di sistema - requisiti}
-			\end{longtable}
-				\egroup
-\end{center}
-		
-	\subsection{Test di integrazione}
-		I test di integrazione vengono utilizzati per verificare che tutti i componenti del sistema siano integrati correttamente tra di loro e che il flusso dati all'interno del sistema sia corretto.\\
-		Si è deciso di fare affidamento ad una strategia di integrazione di tipo incrementale in modo da permetterci di sviluppare e verificare più componenti in parallelo.\\
-		La strategia incrementale ci permette anche di effettuare la ricerca dei difetti in maniera più precisa, infatti nel caso si presenti un errore, questo sarà probabilmente causato dall'ultima componente inserita e permettendoci di ritornare ad uno stato del sistema corretto.\\
-		Viene utilizzato il metodo bottom-up, cioè vengono prima integrate le componenti con minor dipendenze funzionali e con maggiori funzionalità, che corrispondono, quindi, ai requisiti obbligatori. In questo modo è possibile ottenere un prodotto funzionante, che soddisfa tutti i requisiti obbligatori, il prima possibile. Sarà, quindi, necessario testare più volte le componenti per assicurarci che il prodotto software finale non contenga difetti.\\ Successivamente si procederà ad aggiungere le componenti che corrispondono ai requisiti desiderabili e opzionali.
-		 
-		\subsubsection{Descrizione dei test di integrazione}
-			\begin{center}
-
-			\def\arraystretch{1.5}
-			\bgroup
-			\begin{longtable}{| p{3.8cm} | p{4.5cm} | p{3.2cm} | p{1cm} |}
-					\hline
-					\textbf{Test} & \textbf{Descrizione} & \textbf{Componente} & \textbf{Stato}\\
-					\hline
-					TIadmin\_controller & Viene verificato che il sistema gestisca correttamente le decisioni su quali pagine HTML mostrare all'utente amministratore e su quali operazioni può interagire quest'ultimo. & bdsm\_app::\-client::\-controller::\-admin & N.I.\\
-					\hline
-					TIadmin\_view & Viene verificato che il sistema permetta una corretta visualizzazione di tutte le pagine HTML disponibili per l'utente amministratore. & bdsm\_app::\-client::\-view::\-admin & N.I.\\
-					\hline
-					TIapi & Viene verificato che il sistema fornisca delle API funzionanti al client che le utilizzerà. & bdsm\_app::\-server::\-endpoints::\-api & N.I.\\
-					\hline
-					TIapp\_data & Viene verificato che il sistema gestisca correttamente il modello di dati degli utenti, delle Recipe, dei preferiti e delle richieste di nuove Recipe. & bdsm\_app::\-server::\-db::\-app\_data & N.I.\\
-					\hline
-					TIbdsm\_app & Viene verificata la correttezza generale del sistema integrante i livelli client, database e server. & bdsm\_app & N.I.\\
-					\hline				
-					TIclient & Viene verificato che il sistema gestisca correttamente il front-end del prodotto. & bdsm\_app::\-client & N.I.\\
-					\hline
-					TIcommands & Viene verificato che il sistema gestisca correttamente le chiamate provenienti dal client.  & bdsm\_app::\-server::\-processor::\-commands & N.I.\\
-					\hline
-					%TIcontroller & Viene verificato che il sistema gestisca correttamente la componente Controller del design pattern MVC verificando che si integri correttamente nell'applicazione. & bdsm\_app::\-client::\-controller & N.I.\\
-					%\hline
-					TIdata & Viene verificato che il sistema gestisca correttamente la struttura di memorizzazione dei dati utilizzata. & bdsm\_app::\-client::\-model::\-data & N.I.\\
-					\hline
-					TIdb & Viene verificato che il sistema gestisca correttamente l'interazione con il database. & bdsm\_app::\-server::\-db & N.I.\\
-					\hline
-					TIendpoints & Viene verificato che il sistema gestisca correttamente la componente endpoints del server. Più precisamente viene verificato che il sistema gestisca correttamente le chiamate provenienti dal client e le relative risposte. & bdsm\_app::\-server::\-endpoints & N.I.\\
-					\hline
-					TIfb\_miner & Viene verificato che il sistema prelevi, elabori e salvi correttamente i dati dal social network Facebook. & bdsm\_app::\-server::\-miner::\-fb & N.I.\\
-					\hline
-					TIfb\_resp & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST pubblici che riguardano i dati provenienti dal social network Facebook. & bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-fb & N.I.\\
-					\hline
-					TIig\_miner & Viene verificato che il sistema prelevi, elabori e salvi correttamente i dati dal social network Instagram. & bdsm\_app::\-server::\-miner::\-ig & N.I.\\
-					\hline
-					TIig\_resp & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST pubblici che riguardano i dati provenienti dal social network Instagram. & bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-ig & N.I.\\
-					\hline
-					TIminer & Viene verificato che il sistema prelevi, elabori e salvi correttamente i dati dai diversi servizi. & bdsm\_app::\-server::\-miner & N.I.\\
-					\hline
-					%TImodel & TO DO & bdsm\_app::\-client::\-model & N.I.\\
-					%\hline
-					TIprivate\_api & Viene verificato che il sistema effettui correttamente le chiamate ai servizi REST privati provenienti dal client. & bdsm\_app::\-server::\-endpoints::\-api::\-private & N.I.\\
-					\hline
-					TIprivate\_resp & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST privati verso il client. & bdsm\_app::\-server::\-endpoints::\-resp::\-private & N.I.\\
-					\hline
-					TIprocessor & Viene verificato che il sistema gestisca correttamente le chiamate provenienti dai servizi REST utilizzati dal client. & bdsm\_app::\-server::\-processor & N.I.\\
-					\hline
-					TIpublic\_api & Viene verificato che il sistema effettui correttamente le chiamate ai servizi REST pubblici provenienti dal client. & bdsm\_app::\-server::\-endpoints::\-api::\-public & N.I.\\
-					\hline
-					TIpublic\_controller & Viene verificato che il sistema gestisca correttamente le decisioni su quali pagine HTML mostrare all'utente non autenticato e su quali operazioni può interagire quest'ultimo. & bdsm\_app::\-client::\-controller::\-public & N.I.\\
-					\hline
-					TIpublic\_resp & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST pubblici verso il client. & bdsm\_app::\-server::\-endpoints::\-resp::\-public & N.I.\\
-					\hline
-					TIpublic\_view & Viene verificato che il sistema permetta una corretta visualizzazione di tutte le pagine HTML disponibili per l'utente non autenticato. & bdsm\_app::\-client::\-view::\-public & N.I.\\
-					\hline
-					TIraw\_data & Viene verificato che il sistema gestisca correttamente il modello di dati grezzi ricavati dai vari social network. & bdsm\_app::\-server::\-db::\-raw\_data & N.I.\\
-					\hline
-					TIrecipe\_commands & Viene verificato che il sistema gestisca correttamente i comandi relativi alla gestione delle Recipe. & bdsm\_app::\-server::\-processor::\-commands::\-recipe & N.I.\\
-					\hline
-					TIrequests\_commands & Viene verificato che il sistema gestisca correttamente i comandi relativi alla gestione delle richieste di aggiunta delle Recipe. & bdsm\_app::\-server::\-processor::\-commands::\-requests & N.I.\\
-					\hline
-					TIresp & Viene verificato che il sistema gestisca correttamente le risposte verso il client. & bdsm\_app::\-server::\-endpoints::\-resp & N.I.\\
-					\hline
-					TIserver & Viene verificato che il sistema gestisca correttamente il back-end del prodotto. & bdsm\_app::\-server & N.I.\\
-					\hline
-					TIservices & Viene verificato che il sistema gestisca correttamente l'interazione con il back-end. & bdsm\_app::\-client::\-model::\-services & N.I.\\
-					\hline
-					TIsocial\_commands & Viene verificato che il sistema gestisca correttamente i comandi relativi alla raccolta dei dati grezzi ricavati dai social network. & bdsm\_app::\-server::\-processor::\-commands::\-social & N.I.\\
-					\hline
-					TItw\_miner & Viene verificato che il sistema prelevi, elabori e salvi correttamente i dati dal social network Twitter. & bdsm\_app::\-server::\-miner::\-tw & N.I.\\
-					\hline
-					TItw\_resp & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST pubblici che riguardano i dati provenienti dal social network Twitter. & bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-tw & N.I.\\
-					\hline
-					TIuser\_commands & Viene verificato che il sistema gestisca correttamente i comandi relativi alla gestione degli utenti.  & bdsm\_app::\-server::\-processor::\-commands::\-user & N.I.\\
-					\hline
-					TIuser\_controller & Viene verificato che il sistema gestisca correttamente le decisioni su quali pagine HTML mostrare all'utente autenticato e su quali operazioni può interagire quest'ultimo. & bdsm\_app::\-client::\-controller::\-user & N.I.\\
-					\hline
-					TIuser\_view & Viene verificato che il sistema permetta una corretta visualizzazione di tutte le pagine HTML disponibili per l'utente autenticato. & bdsm\_app::\-client::\-view::\-user & N.I.\\
-					\hline
-					%TIview & Viene verificato che il sistema permetta una corretta visualizzazione dell'interfaccia grafica. & bdsm\_app::\-client::\-view & N.I.\\
-					%\hline
-			\caption{Tabella test di integrazione}
-			\end{longtable}
-				\egroup
-\end{center}
-
-
-		\subsubsection{Tracciamento componenti - test di integrazione}
-			\begin{center}
-			\def\arraystretch{1.5}
-			\bgroup
-			\begin{longtable}{| p{6cm} | p{4cm} |}
-					\hline
-					\textbf{Componente} & \textbf{Test}\\
-					\hline
-					bdsm\_app & TIbdsm\_app\\
-					\hline
-					bdsm\_app::\-client & TIclient\\
-					\hline
-					bdsm\_app::\-client::\-model & Architettura del sistema\\
-					\hline
-					bdsm\_app::\-client::\-model::\-data & TIdata\\
-					\hline
-					bdsm\_app::\-client::\-model::\-services & TIservices\\
-					\hline
-					bdsm\_app::\-client::\-view & Architettura del sistema\\
-					\hline
-					bdsm\_app::\-client::\-view::\-public & TIpublic\_view\\
-					\hline
-					bdsm\_app::\-client::\-view::\-user & TIuser\_view\\
-					\hline
-					bdsm\_app::\-client::\-view::\-admin & TIadmin\_view\\
-					\hline
-					bdsm\_app::\-client::\-controller & Architettura del sistema\\
-					\hline
-					bdsm\_app::\-client::\-controller::\-public & TIcontroller\_public\\
-					\hline
-					bdsm\_app::\-client::\-controller::\-user & TIcontroller\_user\\
-					\hline
-					bdsm\_app::\-client::\-controller::\-admin & TIcontroller\_admin\\
-					\hline
-					bdsm\_app::\-server & TIserver\\
-					\hline
-					bdsm\_app::\-server::\-db & TIdb\\
-					\hline
-					bdsm\_app::\-server::\-db::\-raw\_data & TIraw\_data\\
-					\hline
-					bdsm\_app::\-server::\-db::\-app\_data & TIapp\_data\\
-					\hline
-					bdsm\_app::\-server::\-processor & TIprocessor\\
-					\hline
-					bdsm\_app::\-server::\-processor::\-commands & TIcommands\\
-					\hline
-					bdsm\_app::\-server::\-processor::\-commands::\-user & TIuser\_commands\\
-					\hline
-					bdsm\_app::\-server::\-processor::\-commands::\-recipe & TIrecipe\_commands\\
-					\hline
-					bdsm\_app::\-server::\-processor::\-commands::\-requests & TIrequests\_commands\\
-					\hline
-					bdsm\_app::\-server::\-processor::\-commands::\-social & TIsocial\_commands\\
-					\hline
-					bdsm\_app::\-server::\-miner & TIminer\\
-					\hline
-					bdsm\_app::\-server::\-miner::\-fb & TIfb\_miner\\
-					\hline
-					bdsm\_app::\-server::\-miner::\-tw & TItw\_miner\\
-					\hline
-					bdsm\_app::\-server::\-miner::\-ig & TIig\_miner\\
-					\hline
-					bdsm\_app::\-server::\-endpoints & TIendpoints\\
-					\hline
-					bdsm\_app::\-server::\-endpoints::\-api & TIapi\\
-					\hline
-					bdsm\_app::\-server::\-endpoints::\-api::\-public & TIpublic\_api\\
-					\hline
-					bdsm\_app::\-server::\-endpoints::\-api::\-private & TIprivate\_api\\
-					\hline
-					bdsm\_app::\-server::\-endpoints::\-resp & TIresp\\
-					\hline
-					bdsm\_app::\-server::\-endpoints::\-resp::\-public & TIpublic\_resp\\
-					\hline
-					bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-fb & TIfb\_resp\\
-					\hline
-					bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-tw & TItw\_resp\\
-					\hline
-					bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-ig & TIig\_resp\\
-					\hline
-					bdsm\_app::\-server::\-endpoints::\-resp::\-private & TIprivate\_resp\\
-					\hline
-			\caption{Tracciamento componenti - test di integrazione}
-			\end{longtable}
-				\egroup
-		\end{center}
-
-	\subsection{Test di validazione}
+\subsection{Test di validazione}
 		I test di validazione vengono utilizzati per accertarsi che il prodotto finale sviluppato sia conforme alle attese.\\
 		Per ogni test viene riportata una descrizione contenente i passi che l'utente deve seguire per verificare che i requisiti siano soddisfatti. Il tracciamento tra test di validazione e i requisiti correlati viene riportati nel documento \docNameVersionAdR.
 		
@@ -1024,3 +774,255 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 			\end{itemize}
 			
 \pagebreak
+
+	\subsection{Test di sistema}
+		I test di sistema servono per verificare che il sistema software completamente integrato soddisfi tutti i requisiti software individuati e descritti nel documento \docNameVersionAdR.
+		\subsubsection{Descrizione dei test di sistema}
+			\begin{center}
+
+			\def\arraystretch{1.5}
+			\bgroup
+			\begin{longtable}{| p{2cm} | p{7cm} | p{1.5cm} | p{2cm} |}
+					\hline
+					\textbf{Test} & \textbf{Descrizione} & \textbf{Stato} & \textbf{Requisito}\\
+					\hline						
+					TSF1 & Viene verificato che il sistema permetta, all'utente non autenticato, la registrazione al servizio & N.I. & ROF1\\
+					\hline
+					TSF2 & Viene verificato che il sistema permetta all'utente di effettuare l'autenticazione & N.I. & ROF2\\
+					\hline
+					TSF3 & Viene verificato che il sistema permetta, all'utente autenticato, di accedere al menù delle informazioni personali e delle statistiche del sistema & N.I. & ROF3\\
+					\hline
+					TSF4 & Viene verificato che il sistema permetta, all'utente autenticato, di effettuare la deautenticazione & N.I. & ROF4\\
+					\hline
+					TSF5 & Viene verificato che il sistema permetta, all'utente autenticato, di visualizzare tutte le Recipe presenti nel sistema & N.I. & ROF5\\
+					\hline
+					TSF6 & Viene verificato che il sistema permetta all'utente di gestire le proprie View & N.I. & RDF6\\
+					\hline
+					TSF7 & Viene verificato che il sistema permetta all'utente di richiedere l'inserimento di una nuova Recipe & N.I. & RFF7\\
+					\hline
+					TSF8 & Viene verificato che il sistema permetta, all'utente amministratore autenticato, di accedere all'area riservata del sistema & N.I. & ROF8\\
+					\hline
+					TSF9 & Viene verificato che il sistema permetta, all'utente amministratore autenticato, di accedere all'elenco degli utenti registrati & N.I. & ROF9\\
+					\hline
+					TSF10 & Viene verificato che il sistema permetta, all'utente amministratore, di gestire la richiesta di nuove Recipe & N.I. & RFF10\\
+					\hline
+					TSF11 & Viene verificato che il sistema fornisca una serie di servizi REST & N.I. & ROF11\\
+					\hline
+					TSF12 & Viene verificato che il sistema permetta all'utente di visualizzare la specifica dei servizi REST offerti & N.I. & ROF12\\
+					\hline
+					TSP1 & Viene verificato che l'utente visualizzi le proprie View entro 10 secondi & N.I. & RDP1\\
+					\hline
+					TSP2 & Viene verificato che l'interfaccia web utilizzi un design di tipo responsive & N.I. & RFP2\\
+					\hline
+					TSQ1 & Viene verificato che sia disponibile un manuale per l'utente & N.I. & ROQ1\\
+					\hline
+					TSQ2 & Viene verificato che tutto il codice rispetti le norme e le metriche descritte nel \docNameVersionPdQ{} e \docNameVersionNdP & N.I. & ROQ2\\
+					\hline
+					TSQ3 & Viene verificato che sia disponibile un manuale per l'uso dei servizi REST & N.I. & ROQ3\\
+					\hline
+					TSV1 & Viene verificato che il sistema utilizzi gli strumenti offerti da Google Cloud Platform & N.I. & RDV1\\
+					\hline
+					TSV2 & Viene verificato che il linguaggio di programmazione utilizzato per il back-end sia Python & N.I. & RDV2\\
+					\hline
+					TSV3 & Viene verificato che il codice soggetto sia soggetto a versionamento tramite il modello di branching descritto nelle \docNameVersionNdP & N.I. & RDV3\\
+					\hline
+					TSV4 & Viene verificato che l'interfaccia web sia di tipo single-page & N.I. & RDV4\\
+					\hline
+					TSV5 & Viene verificato che l'interfaccia web funzioni con i principali browser attualmente sul mercato& N.I. & ROV5\\
+					\hline
+					TSV6 & Viene verificato che il sistema utilizzi librerie esterne per effettuare le chiamate alle API dei diversi social network & N.I. & ROV6\\
+					\hline
+					TSV7 & Viene verificato che il sistema utilizzi librerie esterne per generare i grafici necessari alle View & N.I. & ROV7\\
+					\hline
+					TSV8 & Viene verificato che il linguaggio di programmazione utilizzato per il front-end sia Javascript & N.I. & ROV8\\
+					\hline
+					TSV9 & Viene verificato che il token di accesso sia formato dalla combinazione: ''id utente'' + ''data creazione token'' + ''valore random'' & N.I. & ROV9\\
+					\hline
+			\caption{Tracciamento test di sistema - requisiti}
+			\end{longtable}
+				\egroup
+\end{center}
+		
+	\subsection{Test di integrazione}
+		I test di integrazione vengono utilizzati per verificare che tutti i componenti del sistema siano integrati correttamente tra di loro e che il flusso dati all'interno del sistema sia corretto.\\
+		Si è deciso di fare affidamento ad una strategia di integrazione di tipo incrementale in modo da permetterci di sviluppare e verificare più componenti in parallelo.\\
+		La strategia incrementale ci permette anche di effettuare la ricerca dei difetti in maniera più precisa, infatti nel caso si presenti un errore, questo sarà probabilmente causato dall'ultima componente inserita e permettendoci di ritornare ad uno stato del sistema corretto.\\
+		Viene utilizzato il metodo bottom-up, cioè vengono prima integrate le componenti con minor dipendenze funzionali e con maggiori funzionalità, che corrispondono, quindi, ai requisiti obbligatori. In questo modo è possibile ottenere un prodotto funzionante, che soddisfa tutti i requisiti obbligatori, il prima possibile. Sarà, quindi, necessario testare più volte le componenti per assicurarci che il prodotto software finale non contenga difetti.\\ Successivamente si procederà ad aggiungere le componenti che corrispondono ai requisiti desiderabili e opzionali.
+		 
+		\subsubsection{Descrizione dei test di integrazione}
+			\begin{center}
+
+			\def\arraystretch{1.5}
+			\bgroup
+			\begin{longtable}{| p{3.8cm} | p{4.5cm} | p{3.2cm} | p{1cm} |}
+					\hline
+					\textbf{Test} & \textbf{Descrizione} & \textbf{Componente} & \textbf{Stato}\\
+					\hline
+					TIadmin\_controller & Viene verificato che il sistema gestisca correttamente le decisioni su quali pagine HTML mostrare all'utente amministratore e su quali operazioni può interagire quest'ultimo. & bdsm\_app::\-client::\-controller::\-admin & N.I.\\
+					\hline
+					TIadmin\_view & Viene verificato che il sistema permetta una corretta visualizzazione di tutte le pagine HTML disponibili per l'utente amministratore. & bdsm\_app::\-client::\-view::\-admin & N.I.\\
+					\hline
+					TIapi & Viene verificato che il sistema fornisca delle API funzionanti al client che le utilizzerà. & bdsm\_app::\-server::\-endpoints::\-api & N.I.\\
+					\hline
+					TIapp\_data & Viene verificato che il sistema gestisca correttamente il modello di dati degli utenti, delle Recipe, dei preferiti e delle richieste di nuove Recipe. & bdsm\_app::\-server::\-db::\-app\_data & N.I.\\
+					\hline
+					TIbdsm\_app & Viene verificata la correttezza generale del sistema integrante i livelli client, database e server. & bdsm\_app & N.I.\\
+					\hline				
+					TIclient & Viene verificato che il sistema gestisca correttamente il front-end del prodotto. & bdsm\_app::\-client & N.I.\\
+					\hline
+					TIcommands & Viene verificato che il sistema gestisca correttamente le chiamate provenienti dal client.  & bdsm\_app::\-server::\-processor::\-commands & N.I.\\
+					\hline
+					%TIcontroller & Viene verificato che il sistema gestisca correttamente la componente Controller del design pattern MVC verificando che si integri correttamente nell'applicazione. & bdsm\_app::\-client::\-controller & N.I.\\
+					%\hline
+					TIdata & Viene verificato che il sistema gestisca correttamente la struttura di memorizzazione dei dati utilizzata. & bdsm\_app::\-client::\-model::\-data & N.I.\\
+					\hline
+					TIdb & Viene verificato che il sistema gestisca correttamente l'interazione con il database. & bdsm\_app::\-server::\-db & N.I.\\
+					\hline
+					TIendpoints & Viene verificato che il sistema gestisca correttamente la componente endpoints del server. Più precisamente viene verificato che il sistema gestisca correttamente le chiamate provenienti dal client e le relative risposte. & bdsm\_app::\-server::\-endpoints & N.I.\\
+					\hline
+					TIfb\_miner & Viene verificato che il sistema prelevi, elabori e salvi correttamente i dati dal social network Facebook. & bdsm\_app::\-server::\-miner::\-fb & N.I.\\
+					\hline
+					TIfb\_resp & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST pubblici che riguardano i dati provenienti dal social network Facebook. & bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-fb & N.I.\\
+					\hline
+					TIig\_miner & Viene verificato che il sistema prelevi, elabori e salvi correttamente i dati dal social network Instagram. & bdsm\_app::\-server::\-miner::\-ig & N.I.\\
+					\hline
+					TIig\_resp & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST pubblici che riguardano i dati provenienti dal social network Instagram. & bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-ig & N.I.\\
+					\hline
+					TIminer & Viene verificato che il sistema prelevi, elabori e salvi correttamente i dati dai diversi servizi. & bdsm\_app::\-server::\-miner & N.I.\\
+					\hline
+					%TImodel & TO DO & bdsm\_app::\-client::\-model & N.I.\\
+					%\hline
+					TIprivate\_api & Viene verificato che il sistema effettui correttamente le chiamate ai servizi REST privati provenienti dal client. & bdsm\_app::\-server::\-endpoints::\-api::\-private & N.I.\\
+					\hline
+					TIprivate\_resp & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST privati verso il client. & bdsm\_app::\-server::\-endpoints::\-resp::\-private & N.I.\\
+					\hline
+					TIprocessor & Viene verificato che il sistema gestisca correttamente le chiamate provenienti dai servizi REST utilizzati dal client. & bdsm\_app::\-server::\-processor & N.I.\\
+					\hline
+					TIpublic\_api & Viene verificato che il sistema effettui correttamente le chiamate ai servizi REST pubblici provenienti dal client. & bdsm\_app::\-server::\-endpoints::\-api::\-public & N.I.\\
+					\hline
+					TIpublic\_controller & Viene verificato che il sistema gestisca correttamente le decisioni su quali pagine HTML mostrare all'utente non autenticato e su quali operazioni può interagire quest'ultimo. & bdsm\_app::\-client::\-controller::\-public & N.I.\\
+					\hline
+					TIpublic\_resp & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST pubblici verso il client. & bdsm\_app::\-server::\-endpoints::\-resp::\-public & N.I.\\
+					\hline
+					TIpublic\_view & Viene verificato che il sistema permetta una corretta visualizzazione di tutte le pagine HTML disponibili per l'utente non autenticato. & bdsm\_app::\-client::\-view::\-public & N.I.\\
+					\hline
+					TIraw\_data & Viene verificato che il sistema gestisca correttamente il modello di dati grezzi ricavati dai vari social network. & bdsm\_app::\-server::\-db::\-raw\_data & N.I.\\
+					\hline
+					TIrecipe\_commands & Viene verificato che il sistema gestisca correttamente i comandi relativi alla gestione delle Recipe. & bdsm\_app::\-server::\-processor::\-commands::\-recipe & N.I.\\
+					\hline
+					TIrequests\_commands & Viene verificato che il sistema gestisca correttamente i comandi relativi alla gestione delle richieste di aggiunta delle Recipe. & bdsm\_app::\-server::\-processor::\-commands::\-requests & N.I.\\
+					\hline
+					TIresp & Viene verificato che il sistema gestisca correttamente le risposte verso il client. & bdsm\_app::\-server::\-endpoints::\-resp & N.I.\\
+					\hline
+					TIserver & Viene verificato che il sistema gestisca correttamente il back-end del prodotto. & bdsm\_app::\-server & N.I.\\
+					\hline
+					TIservices & Viene verificato che il sistema gestisca correttamente l'interazione con il back-end. & bdsm\_app::\-client::\-model::\-services & N.I.\\
+					\hline
+					TIsocial\_commands & Viene verificato che il sistema gestisca correttamente i comandi relativi alla raccolta dei dati grezzi ricavati dai social network. & bdsm\_app::\-server::\-processor::\-commands::\-social & N.I.\\
+					\hline
+					TItw\_miner & Viene verificato che il sistema prelevi, elabori e salvi correttamente i dati dal social network Twitter. & bdsm\_app::\-server::\-miner::\-tw & N.I.\\
+					\hline
+					TItw\_resp & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST pubblici che riguardano i dati provenienti dal social network Twitter. & bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-tw & N.I.\\
+					\hline
+					TIuser\_commands & Viene verificato che il sistema gestisca correttamente i comandi relativi alla gestione degli utenti.  & bdsm\_app::\-server::\-processor::\-commands::\-user & N.I.\\
+					\hline
+					TIuser\_controller & Viene verificato che il sistema gestisca correttamente le decisioni su quali pagine HTML mostrare all'utente autenticato e su quali operazioni può interagire quest'ultimo. & bdsm\_app::\-client::\-controller::\-user & N.I.\\
+					\hline
+					TIuser\_view & Viene verificato che il sistema permetta una corretta visualizzazione di tutte le pagine HTML disponibili per l'utente autenticato. & bdsm\_app::\-client::\-view::\-user & N.I.\\
+					\hline
+					%TIview & Viene verificato che il sistema permetta una corretta visualizzazione dell'interfaccia grafica. & bdsm\_app::\-client::\-view & N.I.\\
+					%\hline
+			\caption{Tabella test di integrazione}
+			\end{longtable}
+				\egroup
+\end{center}
+
+
+		\subsubsection{Tracciamento componenti - test di integrazione}
+			\begin{center}
+			\def\arraystretch{1.5}
+			\bgroup
+			\begin{longtable}{| p{6cm} | p{4cm} |}
+					\hline
+					\textbf{Componente} & \textbf{Test}\\
+					\hline
+					bdsm\_app & TIbdsm\_app\\
+					\hline
+					bdsm\_app::\-client & TIclient\\
+					\hline
+					bdsm\_app::\-client::\-model & Architettura del sistema\\
+					\hline
+					bdsm\_app::\-client::\-model::\-data & TIdata\\
+					\hline
+					bdsm\_app::\-client::\-model::\-services & TIservices\\
+					\hline
+					bdsm\_app::\-client::\-view & Architettura del sistema\\
+					\hline
+					bdsm\_app::\-client::\-view::\-public & TIpublic\_view\\
+					\hline
+					bdsm\_app::\-client::\-view::\-user & TIuser\_view\\
+					\hline
+					bdsm\_app::\-client::\-view::\-admin & TIadmin\_view\\
+					\hline
+					bdsm\_app::\-client::\-controller & Architettura del sistema\\
+					\hline
+					bdsm\_app::\-client::\-controller::\-public & TIcontroller\_public\\
+					\hline
+					bdsm\_app::\-client::\-controller::\-user & TIcontroller\_user\\
+					\hline
+					bdsm\_app::\-client::\-controller::\-admin & TIcontroller\_admin\\
+					\hline
+					bdsm\_app::\-server & TIserver\\
+					\hline
+					bdsm\_app::\-server::\-db & TIdb\\
+					\hline
+					bdsm\_app::\-server::\-db::\-raw\_data & TIraw\_data\\
+					\hline
+					bdsm\_app::\-server::\-db::\-app\_data & TIapp\_data\\
+					\hline
+					bdsm\_app::\-server::\-processor & TIprocessor\\
+					\hline
+					bdsm\_app::\-server::\-processor::\-commands & TIcommands\\
+					\hline
+					bdsm\_app::\-server::\-processor::\-commands::\-user & TIuser\_commands\\
+					\hline
+					bdsm\_app::\-server::\-processor::\-commands::\-recipe & TIrecipe\_commands\\
+					\hline
+					bdsm\_app::\-server::\-processor::\-commands::\-requests & TIrequests\_commands\\
+					\hline
+					bdsm\_app::\-server::\-processor::\-commands::\-social & TIsocial\_commands\\
+					\hline
+					bdsm\_app::\-server::\-miner & TIminer\\
+					\hline
+					bdsm\_app::\-server::\-miner::\-fb & TIfb\_miner\\
+					\hline
+					bdsm\_app::\-server::\-miner::\-tw & TItw\_miner\\
+					\hline
+					bdsm\_app::\-server::\-miner::\-ig & TIig\_miner\\
+					\hline
+					bdsm\_app::\-server::\-endpoints & TIendpoints\\
+					\hline
+					bdsm\_app::\-server::\-endpoints::\-api & TIapi\\
+					\hline
+					bdsm\_app::\-server::\-endpoints::\-api::\-public & TIpublic\_api\\
+					\hline
+					bdsm\_app::\-server::\-endpoints::\-api::\-private & TIprivate\_api\\
+					\hline
+					bdsm\_app::\-server::\-endpoints::\-resp & TIresp\\
+					\hline
+					bdsm\_app::\-server::\-endpoints::\-resp::\-public & TIpublic\_resp\\
+					\hline
+					bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-fb & TIfb\_resp\\
+					\hline
+					bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-tw & TItw\_resp\\
+					\hline
+					bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-ig & TIig\_resp\\
+					\hline
+					bdsm\_app::\-server::\-endpoints::\-resp::\-private & TIprivate\_resp\\
+					\hline
+			\caption{Tracciamento componenti - test di integrazione}
+			\end{longtable}
+				\egroup
+		\end{center}
+
+	
