@@ -16,5 +16,91 @@
 
 \section{Configurazione File AngularJS} % (fold)
 \label{sec:configurazione_file_angularjs}
-TODO
+Di seguito vengono presentati i template che ogni \roleProgrammer{} dovrà utilizzare quando andrà ad effettuare la codifica del lato client. Andranno inseriti seguendo la procedura descritta in \ref{par:aggiunta_template_di_struttura_file_in_webstorm}. Il linguaggio utilizzato per il sistema di templating è quello offerto dagli applicativi JetBrains e cioè Apache Velocity. \newline
+
+	\subsection{Page Controller} % (fold)
+	\label{sub:page_controller}
+	\begin{verbatim}
+	 (function(){
+	    'use strict';
+
+	   /**
+	   * Name: nome.js
+	   * Author: Cognome Nome
+	   * Mail. cognome.nome@mashup-unipd.it
+	   *
+	   * Modify
+	   * Version  Date        Author          Desc
+	   * ==========================================================
+	   * 0.0.1    aaaa-mm-dd  Cognome Nome    description
+	   * -----------------------------------------------------------
+	   *
+	   */
+
+	   /**
+	   * @ngdoc function
+	   * @name nameModule.controller:NameCtrl
+	   * @description
+	   * # NameCtrl
+	   * Controller of the clientApp
+	   */
+
+	  var $NameCtrl = function(){
+
+	    var vm = this;
+
+	  };
+
+	  $NameCtrl.${DS}inject = [];
+
+	  angular.module('$nameModule').controller('$NameCtrl', $NameCtrl);
+
+	})();
+	\end{verbatim}
+	% subsubsection controller (end)
+
+	\subsection{Route Controller} % (fold)
+	\label{sub:route_controller}
+	\begin{verbatim}
+	(function(){
+	  'use strict';
+
+	  /**
+	   * Name: $nameConfigRoute.js
+	   * Author: Cognome Nome
+	   * Mail. cognome.nome@mashup-unipd.it
+	   *
+	   * Modify
+	   * Version  Date        Author          Desc
+	   * ==========================================================
+	   * 0.0.1    aaaa-mm-dd  Cognome Nome    description
+	   * -----------------------------------------------------------
+	   *
+	   */
+
+	  /**
+	   *
+	   * @param ${DS}stateProvider
+	   */
+	  var $NameConfigRoutes = function(${DS}stateProvider) {
+
+	    ${DS}stateProvider
+	      .state('state',{
+	        url: '/url',
+	        views: {
+	          '':{
+	            templateUrl: 'url',
+	            controller: '$NameCtrl'
+	          }
+	        }
+	      })
+	  };
+
+	  angular.module('$nameRouteApp', ['ui.router'])
+	    .config(['${DS}stateProvider', '${DS}urlRouterProvider', $NameConfigRoutes]);
+
+	})();
+	\end{verbatim}
+	% subsubsection route_controller (end)
+
 % section configurazione_file_angularjs (end)
