@@ -76,7 +76,8 @@ Il \roleProjectManager{} dovrà eseguire una serie di compiti per delineare i la
 				\subparagraph{Specifica Tecnica}
 				Compito dei \emph{Progettisti} sarà descrivere la progettazione ad alto livello dell'architettura dell'applicazione e dei singoli componenti nella \docNameVersionST. Devono inoltre progettare gli opportuni test di integrazione.\\ \\
 					\noindent
-					\textbf{Diagrammi UML}\\
+
+					\textbf{Diagrammi UML} \\
 					Si utilizzerà il linguaggio UML per definire:
 						\begin{itemize}
 							\item Diagrammi delle classi;
@@ -89,22 +90,37 @@ Il \roleProjectManager{} dovrà eseguire una serie di compiti per delineare i la
 							\item \textbf{Standard:} standard UML 2.0;
 							\item \textbf{Lingua:} la lingua utilizzata è l'inglese.
 						\end{itemize}
-					\textbf{Design pattern}\\
-					La descrizione dei design pattern sarà a carico dei \emph{Progettisti} che sceglieranno quelli più adatti al contesto dell'applicativo per migliorarne l'efficienza. Ogni uno di questi sarà accompagnato da una breve descrizione e da un diagramma che ne esemplificano il funzionamento e la struttura.\\ \\
-					\textbf{Test di integrazione}\\
-					I \emph{Progettisti} dovranno definire delle classi di verifica, necessarie per verificare che i componenti del sistema funzionino correttamente.\\ 
+
+					\textbf{Design pattern} \\
+					La descrizione dei design pattern sarà a carico dei \emph{Progettisti} che sceglieranno quelli più adatti al contesto dell'applicativo per migliorarne l'efficienza. Ogni uno di questi sarà accompagnato da una breve descrizione e da un diagramma che ne esemplificano il funzionamento e la struttura. \\
+
+					\textbf{Tracciamento componenti} \\
+					Ogni requisito deve essere tracciato al componente che lo soddisfa. In questo modo sarà possibile misurare il progresso nell’attività di progettazione e garantire che ogni componente soddisfi almeno un requisito.
+
+					\textbf{Test di integrazione} \\
+					I \emph{Progettisti} dovranno definire delle classi di verifica, necessarie per verificare che i componenti del sistema funzionino correttamente.
 
 				\subparagraph{Definizione di prodotto}
-				TODO \newline
-				La seguente sezione verrà redatta nelle fasi successive di Progettazione di dettaglio e codifica.
+				Compito dei \emph{Progettisti} sarà descrivere la progettazione a basso livello dell'architettura dell'applicazione nella \docNameVersionDdP, andando ad ampliare quanto descritto nella \docNameVersionST. \\ \\ 
+
+				\textbf{Diagrammi UML} \\
+				Si utilizzerà il linguaggio UML per definire:
+					\begin{itemize}
+						\item Diagrammi delle classi;
+						\item Diagrammi delle attività;
+						\item Diagrammi di sequenza;
+					\end{itemize}
+
+				\textbf{Tracciamento classi} \\
+				Ogni requisito deve essere tracciato dalla classe che lo soddisfa. In questo modo sarà possibile misurare il progresso nell’attività di progettazione e garantire che ogni classe soddisfi almeno un requisito.
+
+				\textbf{Test di unità} \\
+				I \emph{Progettisti} dovranno definire i test di unità necessari a verificare che i singoli componenti del sistema funzionino nel modo previsto.
 
 			\paragraph{Codifica}
-			TODO \newline
-			La seguente sezione verrà redatta nelle fasi successive di Progettazione di dettaglio e codifica.
-
+			Le attività di codifica seguiranno svolte dai \emph{Programmatori} dovranno basarsi su quanto descritto nella \docNameVersionDdP{} e seguire le linee guida presenti in questo documento.
 
 		\subsubsection{Procedure}
-
 			\paragraph{Inserimento requisiti nella base di dati}
 			Tramite la base di dati creata appositamente è possibile poter inserire nuovi requisiti (figura \ref{fig:procedura_inserimento_requisiti}), l'\roleAnalyst{} deve eseguire le seguenti procedure ordinatamente:
 
@@ -143,14 +159,19 @@ Il \roleProjectManager{} dovrà eseguire una serie di compiti per delineare i la
 					\label{fig:procedura_inserimento_uc}
 				\end{figure}
 
+
+
+
 			\paragraph{Aggiunta template di struttura file in WebStorm} % (fold)
 			\label{par:aggiunta_template_di_struttura_file_in_webstorm}
-			TO DO \newline
+			TODO
 				\begin{enumerate}
 					\item 
 				\end{enumerate}
-			TO DO (con anche diagramma attività)
+			TODO (con anche diagramma attività)
 			% paragraph aggiunta_template_di_struttura_file_in_webstorm (end)
+
+
 
 		\subsubsection{Norme}
 			\paragraph{Classificazione requisiti}
