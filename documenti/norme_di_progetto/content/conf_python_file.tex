@@ -16,5 +16,32 @@
 
 \section{Configurazione File Python} % (fold)
 \label{sec:configurazione_file_python}
-TODO
+
+	\subsection{Configurazione costrutto switch} % (fold)
+	\label{sub:configurazione_costrutto_switch}
+	Python nella versione 2.7.9 non presenta il costrutto switch tipico di numerosi linguaggi di programmazione. Deve essere quindi implementato in maniera differente. Di seguito viene dato un esempio di una soluzione semplice di come il costrutto dovrà essere codificato qualora necessario. Tuttavia il suddetto esempio, anche se funziona, non è una delle soluzioni più eleganti. Spetterà quindi al \roleAdministrator{} cercare una migliore implementazione qualora lo ritenesse opportuno.
+	\begin{verbatim}
+	if n == 0:
+	    print "You typed zero.\n"
+	elif n== 1 or n == 9 or n == 4:
+	    print "n is a perfect square\n"
+	elif n == 2:
+	    print "n is an even number\n"
+	elif  n== 3 or n == 5 or n == 7:
+	    print "n is a prime number\n"
+	\end{verbatim}
+	% subsection configurazione_costrutto_switch (end)
+
+	\subsection{Nome variabili} % (fold)
+	\label{sub:nome_variabili}
+	Essendo python un linguaggio senza variabili tipizzate, nonostante a runtime effettui un forte controllo dei tipi, può causare qualche disorientamento a comprendere il codice da parte di un \roleProgrammer{} che non abbia lui stesso scritto quel modulo. Per ovviare a questo problema viene imposto che alla fine delle variabili sia indicato il tipo nel seguente modo:
+		\begin{itemize}
+			\item nome\_var\_int (intero)
+			\item nome\_var\_str (stringa)
+			\item nome\_var\_list (lista)
+			\item nome\_var\_array (array)
+			\item nome\_var\_obj (tipo non implementato nativamente in python, ma dagli sviluppatori dell'applicazione)
+		\end{itemize}
+	% subsection nome_variabili (end)
+
 % section configurazione_file_python (end)

@@ -18,6 +18,19 @@
 \label{sec:configurazione_file_angularjs}
 Di seguito vengono presentati i template che ogni \roleProgrammer{} dovrà utilizzare quando andrà ad effettuare la codifica del lato client. Andranno inseriti seguendo la procedura descritta in \ref{par:aggiunta_template_di_struttura_file_in_webstorm}. Il linguaggio utilizzato per il sistema di templating è quello offerto dagli applicativi JetBrains e cioè Apache Velocity. \newline
 
+	\subsection{View} % (fold)
+	\label{sub:view}
+	Le View sono template HTML che verranno richiamati opportunamente dal sistema di routing e di state offerto dal modulo \textbf{ui.router} disponibile in AngularJS. \newline
+	Per rendere validabili queste pagine, secondo le regole imposte dal W3C, ogni direttiva dovrà essere preceduta dal prefisso \textbf{data-}. \newline
+	Esempi:
+		\begin{itemize}
+			\item data-ng-app
+			\item data-ng-controller
+			\item data-ng-repeat
+		\end{itemize}
+
+	% subsection view (end)
+
 	\subsection{Page Controller} % (fold)
 	\label{sub:page_controller}
 	\begin{verbatim}
@@ -102,5 +115,18 @@ Di seguito vengono presentati i template che ogni \roleProgrammer{} dovrà utili
 	})();
 	\end{verbatim}
 	% subsubsection route_controller (end)
+
+	\subsection{Data Model} % (fold)
+	\label{sub:data_model}
+	\begin{verbatim}
+	TODO
+	\end{verbatim}
+
+	% subsection data_model (end)
+
+	\subsection{Services Model} % (fold)
+	\label{sub:services_model}
+	TODO
+	% subsection services_model (end)
 
 % section configurazione_file_angularjs (end)
