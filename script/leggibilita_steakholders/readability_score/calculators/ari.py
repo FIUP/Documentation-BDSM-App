@@ -15,7 +15,7 @@ from __future__ import division
 
 class ARI:
     def __init__(self, text, locale='en_GB'):
-        from readability_score.common import getTextScores, getMinimumAgeFromUsGrade
+        from leggibilita.readability_score.common import getTextScores, getMinimumAgeFromUsGrade
         
         self.us_grade = 0
         self.min_age = 0

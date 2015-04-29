@@ -14,7 +14,7 @@ License: GPL-2
 """
 class FleschDouma():
     def __init__(self, text, locale='en_GB'):
-        from readability_score.common import getTextScores
+        from leggibilita.readability_score.common import getTextScores
 
         self.readingindex = 0
         self.min_age = 0

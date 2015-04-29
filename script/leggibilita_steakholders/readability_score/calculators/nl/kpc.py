@@ -15,7 +15,7 @@ from __future__ import division
 
 class KPC():
 	def __init__(self, text, locale='en_GB'):
-		from readability_score.common import getTextScores
+		from leggibilita.readability_score.common import getTextScores
 		
 		self.avi = 0
 		self.readingindex = 0

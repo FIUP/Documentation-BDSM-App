@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-import os, sys, re
+import os
+import sys
+
 sys.path.append(os.path.dirname(__file__))
 
-from readability_score.calculators.fleschkincaid import *
-from readability_score.calculators.dalechall import *
-from readability_score.calculators.it.gulpease import *
+from leggibilita.readability_score.calculators.it.gulpease import *
 
 # If args is empty then fileinput.input() will read from stdin;
 # otherwise it reads from each file in turn
