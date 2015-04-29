@@ -29,7 +29,7 @@ if __name__ == '__main__':
     # salvo il contenuto della cartella documenti
     doc_file_list = os.listdir(doc_real_path)
 
-    # prelevo dalla lista solo le cartelle su sulla quale devo effettuare le sostituzioni
+    # prelevo dalla lista solo le cartelle su sulla quale devo calcolare l'indice
     docs_dir_list = [d for d in doc_file_list if os.path.isdir(os.path.join(doc_real_path, d)) and d != "glossario" and
                      d != "template" and d != "template_document" and d != "lettera_di_presentazione"]
 

@@ -19,7 +19,17 @@ import re
 
 
 class FontiRequisiti():
+    """This class is used to tracks fonti to requisiti that generates it and viceversa
 
+    Attributes:
+        __req_doc_path_str: TODO
+        __write_doc_path_str: TODO
+        __req_doc_file: TODO
+        __write_doc_file: TODO
+        __req_file_line: TODO
+        __fonti_req_dict: TODO
+        __casi_uso_array: TODO
+    """
     __req_doc_path_str = ""
     __write_doc_path_str = ""
 
@@ -35,9 +45,19 @@ class FontiRequisiti():
         pass
 
     def add_fonti_req(self, fonti_req_dict_arg):
+        """TODO
+
+        Args:
+            fonti_req_dict_arg:
+        """
         self.__fonti_req_dict = fonti_req_dict_arg
 
     def write_fonti_req(self):
+        """TODO
+
+        Returns:
+            TODO
+        """
         self.__write_doc_path_str = "fonti-requisiti.tex"
         self.__write_doc_file = open(self.__write_doc_path_str, "w")
 
@@ -112,6 +132,11 @@ class FontiRequisiti():
         self.__write_doc_file.write("% subsubsection fonti_requisiti (end)\n")
 
     def open_doc_fonti(self):
+        """TODO
+
+        Returns:
+            TODO
+        """
         self.__req_doc_path_str = "../../documenti/analisi_dei_requisiti/content/casi_uso.tex"
         self.__req_doc_file = open(self.__req_doc_path_str, "r")
         # mi salvo tutte le righe del file in una lista togliendoli il carattere di ritorno a capo
@@ -120,6 +145,11 @@ class FontiRequisiti():
         self.__req_doc_file.close()
 
     def set_casi_uso(self):
+        """TODO
+
+        Returns:
+            TODO
+        """
         for line in self.__req_file_line:
             caso_match_re = re.match(r"^\\(subsection|subsubsection){UC(.*?):", line)
             if caso_match_re is not None:
@@ -129,7 +159,17 @@ class FontiRequisiti():
                     self.__casi_uso_array.append("UC" + caso.group(2))
 
     def get_list_fonti(self):
+        """TODO
+
+        Returns:
+            TODO
+        """
         return self.__fonti_req_dict
 
     def get_array_casi_uso(self):
+        """TODO
+
+        Returns:
+            TODO
+        """
         return self.__casi_uso_array
