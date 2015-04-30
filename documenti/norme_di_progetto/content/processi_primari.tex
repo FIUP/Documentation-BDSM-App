@@ -135,7 +135,7 @@ Il \roleProjectManager{} dovrà eseguire una serie di compiti per delineare i la
 
 			 	\begin{figure}
 					\centering
-					\includegraphics[scale=0.4]{images/classificazione_requisiti.pdf}
+					\includegraphics[scale=0.45]{images/classificazione_requisiti.pdf}
 					\caption{Diagramma di attività - procedura d'inserimento dei requisiti}
 					\label{fig:procedura_inserimento_requisiti}
 				\end{figure}
@@ -154,7 +154,7 @@ Il \roleProjectManager{} dovrà eseguire una serie di compiti per delineare i la
 
 			 	\begin{figure}
 					\centering
-					\includegraphics[scale=0.4]{images/classificazione_uc.pdf}
+					\includegraphics[scale=0.45]{images/classificazione_uc.pdf}
 					\caption{Diagramma di attività - procedura d'inserimento dei casi d'uso}
 					\label{fig:procedura_inserimento_uc}
 				\end{figure}
@@ -164,18 +164,31 @@ Il \roleProjectManager{} dovrà eseguire una serie di compiti per delineare i la
 
 			\paragraph{Aggiunta template di struttura file in WebStorm} % (fold)
 			\label{par:aggiunta_template_di_struttura_file_in_webstorm}
-			TODO
+			Di seguito vengono elencati i passi che ogni \roleProgrammer{} dovrà compiere la prima volta che andrà a lavorare sul codice relativo al client dell'applicazione.
 				\begin{enumerate}
-					\item 
+					\item aprire l'applicativo WebStorm;
+					\item aprire il pannello delle preferenze;
+					\item selezionare la voce \textbf{File and Code Templates};
+					\item premere sul tasto + in verde che dice ``Create Template'';
+					\item dare un nome significativo a seconda del tipo che si vuole creare;
+					\item copiare uno dei template riportati nell'appendice \ref{sec:configurazione_file_angularjs};
+					\item salvare le nuove aggiunte;
+					\item ripetere dal passo 4 finché non saranno terminati i template da inserire.
 				\end{enumerate}
-			TODO (con anche diagramma attività)
+
+		 	\begin{figure}
+				\centering
+				\includegraphics[scale=0.45]{images/proc_aggiunta_template.pdf}
+				\caption{Diagramma di attività - procedura di aggiunta template in WebStorm}
+				\label{fig:procedura_inserimento_uc}
+			\end{figure}
 			% paragraph aggiunta_template_di_struttura_file_in_webstorm (end)
 
 
 
 		\subsubsection{Norme}
 			\paragraph{Classificazione requisiti}
-I requisiti prodotti dovranno essere classificati a seconda del tipo e dell'importanza, seguendo la seguente notazione:
+			I requisiti prodotti dovranno essere classificati a seconda del tipo e dell'importanza, seguendo la seguente notazione:
 				\begin{center}
 					R[Importanza][Tipo][Codice]
 				\end{center}
@@ -309,4 +322,5 @@ I casi d'uso devono essere divisi in ordine gerarchico secondo il seguente schem
 			\paragraph{Yeoman}
 			\label{par:yeoman}
 			Al fine di creare la struttura di base per l'applicativo web front-end verrà usato il software di scaffolding Yeoman, con il generatore generator-angular. \newline
-			Verranno selezionate tra le opzioni proposte di non utilizzare Sass, di includere Bootstrap e tutti i moduli presenti di AngularJS.
+			Verranno selezionate tra le opzioni proposte di non utilizzare Sass, di includere Bootstrap e tutti i moduli presenti di AngularJS. \newline
+			Questo strumento fornisce già dei sistemi incorporati per gestire anche tutta la parte relativa ai test dell'applicazione che verranno spiegati alla sezione \ref{ssub:verifica_strumenti} come Karma, Jasmine e PhantomJS.
