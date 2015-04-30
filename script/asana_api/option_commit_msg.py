@@ -31,41 +31,42 @@ options_cmd = {
 
 # END FUNCTIONS
 
-# MAIN
-print "Execution script from branch: ", sys.argv[1]
-# print "List of commit message: "
-# print sys.argv[2]
+if __name__ == '__main__':
 
-list_commit_queue = sys.argv[2].split("END")
-# print list_commit_queue
+    print "Execution script from branch: ", sys.argv[1]
+    # print "List of commit message: "
+    # print sys.argv[2]
 
-for commit_msg in list_commit_queue:
-    if commit_msg != "":  # per non eseguire le istruzioni sull'ultimo valore che è sempre vuoto
-        list_message = commit_msg.splitlines()  # separo ogni riga del messaggio quando trovo il carattere \n
-        id_task_str = ""
-        option_list = []
+    list_commit_queue = sys.argv[2].split("END")
+    # print list_commit_queue
 
-        for line in list_message:  # scorro tutte le linee trovate
-            task_match_re = re.match(r"^Task(.*)", line.strip())  # mi salvo la riga che inizia con 'Task'
-            opt_match_re = re.match(r"^Option(.*)", line.strip())  # mi salvo la riga che inizia con 'Option'
+    for commit_msg in list_commit_queue:
+        if commit_msg != "":  # per non eseguire le istruzioni sull'ultimo valore che è sempre vuoto
+            list_message = commit_msg.splitlines()  # separo ogni riga del messaggio quando trovo il carattere \n
+            id_task_str = ""
+            option_list = []
 
-            if task_match_re:
-                id_task_re = re.search(r"#(.*)", str(task_match_re.group()))
-                if id_task_re is not None:
-                    id_task_str = id_task_re.group()[1:]
+            for line in list_message:  # scorro tutte le linee trovate
+                task_match_re = re.match(r"^Task(.*)", line.strip())  # mi salvo la riga che inizia con 'Task'
+                opt_match_re = re.match(r"^Option(.*)", line.strip())  # mi salvo la riga che inizia con 'Option'
 
-            if opt_match_re:
-                option_list = re.findall(r"\[[a-z]*\]", str(opt_match_re.group()), flags=0)
-                if option_list is not None:
-                    for option in option_list:
-                        option_msg_str = str(option)[1:-1]
-                        if option_msg_str != "option" and id_task_str != "id_task":
-                            try:
-                                options_cmd[option_msg_str](id_task_str)
-                            except asana.AsanaException:
-                                checkout_asana_cmd = ["git", "checkout", "script/asana_api"]
-                                subprocess.call(checkout_asana_cmd)
+                if task_match_re:
+                    id_task_re = re.search(r"#(.*)", str(task_match_re.group()))
+                    if id_task_re is not None:
+                        id_task_str = id_task_re.group()[1:]
 
-checkout_asana_cmd = ["git", "checkout", "script/asana_api"]
-subprocess.call(checkout_asana_cmd)
-sys.exit(0)
+                if opt_match_re:
+                    option_list = re.findall(r"\[[a-z]*\]", str(opt_match_re.group()), flags=0)
+                    if option_list is not None:
+                        for option in option_list:
+                            option_msg_str = str(option)[1:-1]
+                            if option_msg_str != "option" and id_task_str != "id_task":
+                                try:
+                                    options_cmd[option_msg_str](id_task_str)
+                                except asana.AsanaException:
+                                    checkout_asana_cmd = ["git", "checkout", "script/asana_api"]
+                                    subprocess.call(checkout_asana_cmd)
+
+    checkout_asana_cmd = ["git", "checkout", "script/asana_api"]
+    subprocess.call(checkout_asana_cmd)
+    sys.exit(0)

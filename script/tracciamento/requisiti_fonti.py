@@ -20,7 +20,25 @@ import re
 
 
 class RequisitiFonti():
+    """This class is used to tracks requisiti to fonti that generates it and viceversa
 
+    Attributes:
+        __req_doc_path_str: TODO
+        __comp_doc_path_str: TODO
+        __write_doc_path_str: TODO
+        __write_list_req_str: TODO
+        __req_doc_file: TODO
+        __comp_doc_file: TODO
+        __write_do_file: TODO
+        __write_list_req_str: TODO
+        __req_file_ine: TODO
+        __comp_file_line: TODO
+        __req_fonti_array: TODO
+        __fonti_req_dict: TODO
+        __req_fonti_dict: TODO
+        __req_comp_dict: TODO
+
+    """
     __req_doc_path_str = ""
     __comp_doc_path_str = ""
     __write_doc_path_str = ""
@@ -47,6 +65,11 @@ class RequisitiFonti():
         pass
 
     def open_doc_req(self):
+        """TODO
+
+        Returns:
+            TODO
+        """
         self.__req_doc_path_str = "../../documenti/analisi_dei_requisiti/content/requisiti.tex"
         self.__req_doc_file = open(self.__req_doc_path_str, "r")
         self.__req_file_line = [line.strip() for line in self.__req_doc_file]
@@ -54,6 +77,11 @@ class RequisitiFonti():
         self.__req_doc_file.close()
 
     def open_doc_componenti(self):
+        """TODO
+
+        Returns:
+            TODO
+        """
         self.__comp_doc_path_str = "../../documenti/specifica_tecnica/content/tracciamento/componenti-requisiti.tex"
         self.__comp_doc_file = open(self.__comp_doc_path_str, "r")
         self.__comp_file_line = [line.strip() for line in self.__comp_doc_file]
@@ -61,6 +89,11 @@ class RequisitiFonti():
         self.__comp_doc_file.close()
 
     def take_req(self):
+        """TODO
+
+        Returns:
+            TODO
+        """
         for line in self.__req_file_line:
             req_match_re = re.match(r"^R(.*)", line)
             if req_match_re is not None:
@@ -80,6 +113,11 @@ class RequisitiFonti():
                             self.__fonti_req_dict[fonte.strip()] = [req.group().strip()]
 
     def take_req_comp(self):
+        """TODO
+
+        Returns:
+            TODO
+        """
         for line in self.__comp_file_line:
             comp_match_re = re.match(r"^(server|client)", line)
 
@@ -103,12 +141,27 @@ class RequisitiFonti():
         # print self.__req_comp_dict
 
     def get_list_req(self):
+        """TODO
+
+        Returns:
+            TODO
+        """
         return self.__req_fonti_dict
 
     def get_list_fonti(self):
+        """TODO
+
+        Returns:
+            TODO
+        """
         return self.__fonti_req_dict
 
     def write_req_fonti(self):
+        """TODO
+
+        Returns:
+            TODO
+        """
         self.__write_doc_path_str = "requisiti-fonti.tex"
         self.__write_doc_file = open(self.__write_doc_path_str, "w")
         self.__write_doc_file.write("\subsection{Requisiti-Fonti} % (fold)\n")
@@ -132,6 +185,11 @@ class RequisitiFonti():
         self.__write_doc_file.write("% subsubsection requisiti_fonti (end)\n")
 
     def write_list_req(self):
+        """TODO
+
+        Returns:
+            TODO
+        """
         self.__write_list_req_str = "requisiti-componenti-base.tex"
         self.__write_list_req_file = open(self.__write_list_req_str, "w")
         self.__write_list_req_file.write("\subsection{Requisiti-Componenti} % (fold)\n")

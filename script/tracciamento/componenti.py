@@ -19,6 +19,17 @@ import re
 
 
 class Componenti():
+    """TODO
+
+    Attributes:
+        __base_path_str: TODO
+        __client_base_path_str: TODO
+        __server_base_path_str: TODO
+        __doc_path_array: TODO
+        __comp_array: TODO
+        __write_list_comp_str: TODO
+        __write_list_comp_file: TODO
+    """
     __base_path_str = "../../documenti/specifica_tecnica/content/"
     __client_base_path_str = "/client_tier/"
     __server_base_path_str = "/server_tier/"
@@ -42,6 +53,11 @@ class Componenti():
         pass
 
     def take_componenti(self):
+        """TODO
+
+        Returns:
+            TODO
+        """
 
         for doc in self.__doc_path_array:
             doc_file = open(doc, "r")
@@ -56,6 +72,11 @@ class Componenti():
                         self.__comp_array.append(caso.group(2))
 
     def write_componenti(self):
+        """TODO
+
+        Returns:
+            TODO
+        """
         self.__write_list_comp_str = "componenti-requisiti-base.tex"
         self.__write_list_comp_file = open(self.__write_list_comp_str, "w")
         self.__write_list_comp_file.write("\subsection{Componenti-Requisiti} % (fold)\n")
