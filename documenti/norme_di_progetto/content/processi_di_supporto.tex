@@ -389,7 +389,7 @@
 
 
 		\subsubsection{Strumenti} % (fold)
-		\label{ssub:strumenti}
+		\label{ssub:verifica_strumenti}
 			\paragraph{Correzione ortografica} % (fold)
 			\label{par:correzione_ortografica}
 			Per la parte di correzione ortografica, si sono scelti di usare due strumenti di analisi. Il primo risiede all'interno dell'editor TexMaker, offrendo le funzionalità di correttore ortografico per i file \LaTeX. Esso ha dei limiti, in quanto usa un normale dizionario presente all'interno del sistema operativo e può essere utile per gli errori più grossolani di ortografia. \\
@@ -400,5 +400,30 @@
 			\label{par:calcolo_indice_gulpease}
 			Attraverso i file di testo, generati in automatico per ogni documento dallo script elencato nella sezione \ref{par:script_doc}, l'\roleAdministrator{} potrà confrontarne la conformità con le metriche previste dal \docNameVersionPdQ.
 			% paragraph calcolo_indice_gulpease (end)
+
+			\paragraph{Wercker} % (fold)
+			\label{par:wercker}
+			TODO (Continuos integration)
+			% paragraph wercker (end)
+
+
+			\paragraph{Karma} % (fold)
+			\label{par:karmajs}
+			Karma è uno strumento che permette di eseguire del codice JavaScript in più browser o di testarlo in diverse maniere e in diversi momenti. \newline
+			Viene configurato direttamente quando si installa Yeoman attraverso il generatore di angular utilizzato.
+			% paragraph karmajs (end)
+
+			\paragraph{Jasmine} % (fold)
+			\label{par:jasmine}
+			Jasmine è un framework JavaScript di sviluppo basato sul comportamento che viene utilizzato per testare l'applicazione, in particolare per programmare i ``test di unità''. Fornisce delle funzioni che aiutano a strutturare i test e che permettono di fare delle asserzioni. \newline
+			Viene configurato direttamente quando si installa Yeoman attraverso il generatore di angular utilizzato.
+			% paragraph jasmine (end)
+
+			\paragraph{Protractor} % (fold)
+			\label{par:protractor}
+			Protractor è un framework JavaScript di test ``end-to-end (e2e)'' per le applicazioni in AngularJS che permette di simulare le interazioni dell'utente. Utilizza Jasmine \ref{par:jasmine} per la sintassi dei test. Viene consigliato l'uso di questo strumento al posto del deprecato \textbf{Angular Scenario Runner}.
+			% paragraph protractor (end)
+
+			% paragraph phantomjs (end)
 		% subsubsection strumenti (end)	
 
