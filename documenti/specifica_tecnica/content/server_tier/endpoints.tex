@@ -181,10 +181,11 @@
     \label{subp:bdsm_app_server_endpoints_api_private_userapi}
     \begin{itemize}
       \item \textbf{Descrizione}: classe che rappresenta l'implementazione delle web API relative alla gestione degli utenti;
-      \item \textbf{Utilizzo}: i suoi metodi vengono invocati quando viene richiesto dal client di aggiungere o rimuovere un utente, ricavare o modificare i dati di un utente o per modificare i dati di un utente;
+      \item \textbf{Utilizzo}: i suoi metodi vengono invocati quando viene richiesto dal client di ricavare la lista degli utenti, di aggiungere o rimuovere un utente, ricavare o modificare i dati di un utente o per modificare i dati di un utente;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
           \item server::endpoints::resp::private::UserResponse
+          \item server::endpoints::resp::private::UserListResponse
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_private_userapi (end)
@@ -692,6 +693,14 @@
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response contenente i dati un un utente al client;
     \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_private_userresponse (end)
+    
+    \subparagraph{server::endpoints::resp::private::UserListResponse} % (fold)
+    \label{subp:bdsm_app_server_endpoints_resp_private_userlistresponse}
+    \begin{itemize}
+      \item \textbf{Descrizione}: rappresenta il modello dei dati della lista degli utenti registrati da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response della lista degli utenti al client;
+    \end{itemize}
+    % subparagraph bdsm_app_server_endpoints_resp_private_userlistresponse (end)
 
     \subparagraph{server::endpoints::resp::private::FavoriteResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_private_favoriteresponse}
