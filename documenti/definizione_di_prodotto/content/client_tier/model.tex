@@ -1,0 +1,47 @@
+% =================================================================================================
+% File:			client_tier/model.tex
+% Description:	Defiinisce la sezione relativa al front-end dell'applicazione
+% Created:		2015-04-07
+% Author:		Tesser Paolo
+% Email:		tesser.paolo@mashup-unipd.it
+% =================================================================================================
+% Modification History:
+% Version		Modifier Date		Change											Author
+% 0.0.1 		2015-04-07 			creato scheletro								Tesser Paolo
+% =================================================================================================
+%
+%
+
+% CONTENUTO DEL CAPITOLO
+
+
+\subsubsection{client::model} % (fold)
+\label{ssub:bdsm_app_client_model}
+\begin{figure}[htbp]
+	\centering
+	\centerline{\includegraphics[scale=0.9]{./images/client/client_model.pdf}}
+	\caption{Package - client::model}
+\end{figure}
+
+\begin{itemize}
+	\item \textbf{Descrizione}: è il package che contiene sia le classi dei modelli di dati utilizzati dal client sia i servizi che mettono in comunicazione esso con il server attraverso i diversi servizi REST;
+	\item \textbf{Padre}: client;
+	\item \textbf{Package contenuti}:
+		\begin{itemize}
+			\item client::model::data
+			\item client::model::services
+		\end{itemize}
+	\item \textbf{Interazione con altri componenti}:
+		\begin{itemize}
+			\item client::controller
+		\end{itemize}
+\end{itemize}
+% subsubsection bdsm_app_client_model (end)
+
+% PACKAGE MODEL::DATA
+\input{./content/client_tier/model_data} % \clearpage \newpage
+% END PACKAGE MODEL::DATA
+
+% PACKAGE MODEL::SERVICES
+\input{./content/client_tier/model_services}
+% END PACKAGE MODEL::SERVICES

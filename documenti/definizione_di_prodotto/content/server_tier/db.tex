@@ -1,0 +1,629 @@
+% =================================================================================================
+% File:			server_tier/db.tex
+% Description:	Definisce la sezione relativa al back-end dell'applicazione
+% Created:		2015-04-07
+% Author:		Cusinato Giacomo
+% Email:		cusinato.giacomo@mashup-unipd.it
+% =================================================================================================
+% Modification History:
+% Version		Modifier Date		Change											Author
+% 0.0.1			2015-04-18			Modifica grafici e relative descrizioni			Luca Santacatterina
+% =================================================================================================
+
+% CONTENUTO DEL CAPITOLO
+
+\subsubsection{server::db} % (fold)
+\label{ssub:bdsm_app_server_db}
+
+	\begin{figure}[htbp]
+		\centering
+		\centerline{\includegraphics[scale=0.5]{./images/server/db.pdf}}
+		\caption{Package - server::db}
+	\end{figure}
+
+	\begin{itemize}
+		\item \textbf{Descrizione}: è il package che contiene le componenti che gestiscono e mantengono coerente la base di dati. Esse utilizzano standard proprietari Google per la loro implementazione. Sono suddivise in due package: uno atto a rappresentare il modello dei dati grezzi, l'altro dei parametri del software e degli utenti;
+		\item \textbf{Padre}: server;
+		\item \textbf{Package contenuti}:
+			\begin{itemize}
+				\item server::app\_data.
+				\item server::raw\_data;
+			\end{itemize}
+	\end{itemize}
+
+
+
+% subsubsection RAW_DATA
+\subsubsection{server::db::raw\_data} % (fold)
+\label{ssub:bdsm_app_server_raw_data}
+	\begin{figure}[htbp]
+		\centering
+		\centerline{\includegraphics[scale=0.4]{./images/server/raw_data.pdf}}
+		\caption{Package - server::db::raw\_data}
+	\end{figure}
+
+	\begin{itemize}
+	\item \textbf{Descrizione}: package che definisce il modello dei dati grezzi ricavati dai vari social network;
+		\item \textbf{Padre}: server::db;
+		\item \textbf{Package contenuti}:
+			\begin{itemize}
+				\item server::db::raw\_data::fb
+				\item server::db::raw\_data::tw
+				\item server::db::raw\_data::ig
+		\end{itemize}
+	\end{itemize}
+
+
+	\paragraph{Classi} % (fold)
+
+		\subparagraph{server::db::raw\_data::AbsRawData} % (fold)
+		\label{subp:bdsm_app_server_raw_data_absrawdata}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe astratta che definisce il modello di un dato grezzo;
+				\item \textbf{Utilizzo}: la classe funge da padre per tutte le classi rappresentanti un dato grezzo;
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item server::db::raw\_data::fb::AbsFbRawData
+						\item server::db::raw\_data::tw::AbsTwRawData
+						\item server::db::raw\_data::ig::AbsIgRawData
+						\item server::db::raw\_data::fb::RawFbPageTrend
+						\item server::db::raw\_data::fb::RawFbEventTrend
+						\item server::db::raw\_data::fb::RawFbPostTrend
+						\item server::db::raw\_data::tw::RawTwUserTrend
+						\item server::db::raw\_data::tw::RawTwHashtagTrend
+						\item server::db::raw\_data::tw::RawTwUserTweet
+						\item server::db::raw\_data::ig::RawIgUserTrend
+						\item server::db::raw\_data::ig::RawIgHashtagTrend
+						\item server::db::raw\_data::ig::RawIgMedia
+					\end{itemize}
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
+			\end{itemize}
+
+
+		% subsubsection FACEBOOK
+		\subsubsection{server::db::raw\_data::fb} % (fold)
+		\label{ssub:bdsm_app_server_db_raw_data_fb}
+		\begin{figure}[htbp]
+			\centering
+			\centerline{\includegraphics[scale=0.5]{./images/server/raw_data_fb.pdf}}
+			\caption{Package - server::db::raw\_data::fb}
+		\end{figure}
+
+		\begin{itemize}
+		  \item \textbf{Descrizione}:  è il package contenente le classi che definiscono i modelli dei dati grezzi relativi a Facebook;
+		  \item \textbf{Padre}: server::db::raw\_data
+		  \item \textbf{Interazione con altri componenti}:
+		  	\begin{itemize}
+		  		\item server::db
+				\end{itemize}
+		\end{itemize}
+		% subsubsection
+
+		\paragraph{Classi} % (fold)
+
+			\subparagraph{server::db::raw\_data::fb::AbsFbRawData} % (fold)
+			\label{subp:server_db_raw_data_fb_absfbrawdata}
+				\begin{itemize}
+					\item \textbf{Descrizione}: classe astratta che definisce il modello dati grezzi relativi a Facebook;
+					\item \textbf{Utilizzo}: la classe contiene l'id fornito dall'utente il quale permette di identificare univocamente la risorsa nel social media;
+					\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
+					\item \textbf{Attributi}: TO DO
+					\item \textbf{Metodi}: TO DO
+				\end{itemize}
+			% subparagraph server_db_raw_data_fb_absfbrawdata [end]
+
+
+			\subparagraph{server::db::raw\_data::fb::RawFbPage} % (fold)
+			\label{subp:server_db_raw_data_fb_rawfbpage}
+				\begin{itemize}
+					\item \textbf{Descrizione}: classe che rappresenta il modello di una pagina Facebook;
+					\item \textbf{Utilizzo}: la classe fornisce metodi per memorizzare i dati statici di una pagina Facebook;
+					\item \textbf{Classi ereditate}: server::db::raw\_data::AbsFbRawData
+					\item \textbf{Relazioni con altre classi}:
+						\begin{itemize}
+							\item server::db::raw\_data::fb::RawFbEvent
+							\item server::db::raw\_data::fb::RawFbPageTrend
+							\item server::db::raw\_data::fb::RawFbPost
+						\end{itemize}
+					\item \textbf{Attributi}: TO DO
+					\item \textbf{Metodi}: TO DO
+				\end{itemize}
+			% subparagraph server_db_raw_data_fb_rawfbpage [end]
+
+			\subparagraph{server::db::raw\_data::fb::RawFbPageTrend} % (fold)
+			\label{subp:server_db_raw_data_fb_rowfbpagetrend}
+				\begin{itemize}
+					\item \textbf{Descrizione}: classe che rappresenta il modello del trend dei dati una pagina Facebook;
+					\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare e il numero di like e di talking about di ogni singola pagina;
+					\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
+					\item \textbf{Attributi}: TO DO
+					\item \textbf{Metodi}: TO DO
+				\end{itemize}
+			% subparagraph server_db_raw_data_fb_rowfbpagetrend [end]
+
+
+			\subparagraph{server::db::raw\_data::fb::RawFbEvent} % (fold)
+			\label{subp:server_db_raw_data_fb_rawfbevent}
+				\begin{itemize}
+					\item \textbf{Descrizione}: classe che rappresenta il modello di un evento Facebook;
+					\item \textbf{Utilizzo}: la classe fornisce metodi per memorizzare i dati statici di un evento Facebook;
+					\item \textbf{Classi ereditate}: server::db::raw\_data::AbsFbRawData
+					\item \textbf{Relazioni con altre classi}:
+						\begin{itemize}
+							\item server::db::raw\_data::fb::RawFbEventTrend
+							\item server::db::raw\_data::fb::RawFbPost
+						\end{itemize}
+					\item \textbf{Attributi}: TO DO
+					\item \textbf{Metodi}: TO DO
+				\end{itemize}
+			% subparagraph server_db_raw_data_fb_rawfbevent [end]
+
+
+			\subparagraph{server::db::raw\_data::fb::RawFbEventTrend} % (fold)
+			\label{subp:server_db_raw_data_fb_rowfbeventtrend}
+				\begin{itemize}
+					\item \textbf{Descrizione}: classe che rappresenta il modello del trend di un evento su Facebook;
+					\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di utenti invitati, partecipanti e non di un evento;
+					\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
+					\item \textbf{Attributi}: TO DO
+					\item \textbf{Metodi}: TO DO
+				\end{itemize}
+			% subparagraph server_db_raw_data_fb_rowfbeventtrend [end]
+
+
+			\subparagraph{server::db::raw\_data::fb::RawFbPost} % (fold)
+			\label{subp:server_db_raw_data_fb_rawfbpost}
+				\begin{itemize}
+					\item \textbf{Descrizione}: classe che rappresenta il modello del trend dei post di una pagina o di un evento su Facebook;
+					\item \textbf{Utilizzo}: la classe fornisce metodi per sommare i dati statici sui post di Facebook;
+					\item \textbf{Attributi}: TO DO
+					\item \textbf{Metodi}: TO DO
+				\end{itemize}
+			% subparagraph server_db_raw_data_fb_rawfbpost [end]
+
+
+		% subsubsection TWITTER
+		\subsubsection{server::db::raw\_data::tw} % (fold)
+		\label{ssub:bdsm_app_server_db_raw_data_tw}
+		\begin{figure}[htbp]
+			\centering
+			\centerline{\includegraphics[scale=0.45]{./images/server/raw_data_tw.pdf}}
+			\caption{Package - server::db::raw\_data::tw}
+		\end{figure}
+
+		\begin{itemize}
+		  \item \textbf{Descrizione}: è il package contenente le classi che definiscono i modelli dei dati grezzi relativi a Twitter;
+		  \item \textbf{Padre}: server::db::raw\_data
+		  \item \textbf{Interazione con altri componenti}:
+		  	\begin{itemize}
+		  		\item server::db
+			\end{itemize}
+		\end{itemize}
+		% subsubsection
+
+		\paragraph{Classi} % (fold)
+
+
+		\subparagraph{server::db::raw\_data::tw::AbsTwRawData} % (fold)
+		\label{subp:server_db_raw_data_tw_abstwrawdata}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe astratta che definisce il modello dati grezzi relativi a Twitter;
+				\item \textbf{Utilizzo}: la classe contiene l'id fornito dall'utente il quale permette di identificare univocamente la risorsa nel social media;
+				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
+			\end{itemize}
+		% subparagraph server_db_raw_data_tw_abstwrawdata [end]
+
+
+		\subparagraph{server::db::raw\_data::tw::RawTwUser} % (fold)
+		\label{subp:server_db_raw_data_tw_rawtwuser}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe che definisce il modello dei dati di un utente Twitter;
+				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione completa dell'utente Twitter. Vengono forniti metodi automatici per il conteggio dei parametri che verranno utilizzati per seguire un trend;;
+				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsTwRawData
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item server::db::raw\_data::tw::RawTwUserTrend
+						\item server::db::raw\_data::tw::RawTwUserTweet
+					\end{itemize}
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
+			\end{itemize}
+		% subparagraph server_db_raw_data_tw_rawtwuser [end]
+
+
+		\subparagraph{server::db::raw\_data::tw::RawTwUserTrend} % (fold)
+		\label{subp:server_db_raw_data_tw_rawigusertrend}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend di un utente Twitter;
+				\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di favoriti, di followers, di friends e statuses di una determinata persona;
+				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsTwRawData
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
+			\end{itemize}
+		% subparagraph server_db_raw_data_tw_rawigusertrend [end]
+
+
+		\subparagraph{server::db::raw\_data::tw::RawTwUserTweet} % (fold)
+		\label{subp:server_db_raw_data_tw_rawtwusertweet}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend dei tweet relativi ad un utente Twitter;
+				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione dettagliata di un tweet creato da un utente specifico su Twitter;
+				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
+			\end{itemize}
+		% subparagraph server_db_raw_data_tw_rawtwusertweet [end]
+
+
+		\subparagraph{server::db::raw\_data::tw::RawTwHashtag} % (fold)
+		\label{subp:server_db_raw_data_tw_rawtwhashtag}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe che definisce il modello dei dati di un hashtag su Twitter;
+				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione minimale di un hashtag su Twitter. Vengono forniti metodi automatici per il conteggio dei parametri che verranno utilizzati per seguire un trend;
+				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsTwRawData
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item server::db::raw\_data::tw::RawTwHashtagTrend
+						\item server::db::raw\_data::tw::RawTwHashtagTweet
+					\end{itemize}
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
+			\end{itemize}
+		% subparagraph server_db_raw_data_tw_rawtwhashtag [end]
+
+
+		\subparagraph{server::db::raw\_data::tw::RawTwHashtagTrend} % (fold)
+		\label{subp:server_db_raw_data_tw_rawighashtagtrend}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend di un hashtag su Twitter;
+				\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di favoriti, di followers e statuses di un determinato hashtag;
+				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsTwRawData
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
+			\end{itemize}
+		% subparagraph server_db_raw_data_tw_rawighashtagtrend [end]
+
+
+		\subparagraph{server::db::raw\_data::tw::RawTwHashtagTweet} % (fold)
+		\label{subp:server_db_raw_data_tw_rawtwhashtagtweet}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend dei tweet relativi ad un hashtag Twitter;
+				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione della locazione spaziale di un tweet relativo all'hashtag su Twitter;
+				\item \textbf{Classi ereditate}: server::db::raw\_data::RawTwUserTweet
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
+			\end{itemize}
+		% subparagraph server_db_raw_data_tw_rawtwhashtagtweet [end]
+
+
+		% subsubsection INSTAGRAM
+		\subsubsection{server::db::raw\_data::ig} % (fold)
+		\label{ssub:bdsm_app_server_db_raw_data_ig}
+		\begin{figure}[htbp]
+			\centering
+			\centerline{\includegraphics[scale=0.5]{./images/server/raw_data_ig.pdf}}
+			\caption{Package - server::db::raw\_data::ig}
+		\end{figure}
+
+		\begin{itemize}
+		  \item \textbf{Descrizione}: è il package contenente le classi che definiscono i modelli dei dati grezzi relativi a Instagram;
+		  \item \textbf{Padre}: server::db::raw\_data
+		  \item \textbf{Interazione con altri componenti}:
+		  	\begin{itemize}
+		  		\item server::db
+				\end{itemize}
+		\end{itemize}
+		% subsubsection
+
+		\paragraph{Classi} % (fold)
+
+
+		\subparagraph{server::db::raw\_data::ig::AbsIgRawData} % (fold)
+		\label{subp:server_db_raw_data_ig_absigrawdata}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe astratta che definisce il modello dei dati grezzi relativi ad Instagram;
+				\item \textbf{Utilizzo}: la classe contiene l'id fornito dall'utente il quale permette di identificare univocamente la risorsa nel social media;
+				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
+			\end{itemize}
+		% subparagraph server_db_raw_data_ig_absigrawdata [end]
+
+
+		\subparagraph{server::db::raw\_data::ig::RawIgUser} % (fold)
+		\label{subp:server_db_raw_data_ig_rawiguser}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe che definisce il modello dei dati di un utente Instagram;
+				\item \textbf{Utilizzo}:  la classe viene utilizzata per memorizzare le i dettagli di un utente Instagram;
+				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsIgRawData
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item server::db::raw\_data::ig::RawIgUserTrend
+						\item server::db::raw\_data::ig::RawIgMedia
+					\end{itemize}
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
+			\end{itemize}
+		% subparagraph server_db_raw_data_ig_rawiguser [end]
+
+
+		\subparagraph{server::db::raw\_data::ig::RawIgUserTrend} % (fold)
+		\label{subp:server_db_raw_data_ig_rawigusertrend}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend di un utente Instagram;
+				\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di media, di followed e follows di una determinata persona;
+				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
+			\end{itemize}
+		% subparagraph server_db_raw_data_ig_rawigusertrend [end]
+
+
+		\subparagraph{server::db::raw\_data::ig::RawIgHashtag} % (fold)
+		\label{subp:server_db_raw_data_ig_rawighashtag}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe che definisce il modello dei dati di un hashtag Instagram;
+				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione minimale dell'hashtag su Instagram;
+				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsIgRawData
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item server::db::raw\_data::ig::RawIgHashtagTrend
+						\item server::db::raw\_data::ig::RawIgMedia
+					\end{itemize}
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
+			\end{itemize}
+		% subparagraph server_db_raw_data_ig_rawighashtag [end]
+
+
+		\subparagraph{server::db::raw\_data::ig::RawIgHashtagTrend} % (fold)
+		\label{subp:server_db_raw_data_ig_rawighashtagtrend}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend di un hastag Instagram;
+				\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di media caricati di un determinato hashtag;
+				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
+			\end{itemize}
+		% subparagraph server_db_raw_data_ig_rawighashtagtrend [end]
+
+
+		\subparagraph{server::db::raw\_data::ig::RawIgMedia} % (fold)
+		\label{subp:server_db_raw_data_ig_rawigmedia}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe che definisce il modello dei dati di un media realtivo ad Instagram;
+				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione dettagliata di un media caricato da un utente specifico su Instagram. Vengono forniti metodi automatici per il conteggio dei parametri che verranno utilizzati per seguire un trend;
+				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
+			\end{itemize}
+		% subparagraph server_db_raw_data_ig_rawigmedia [end]
+
+\subsubsection{server::db::app\_data} % (fold)
+\label{ssub:bdsm_app_server_app_data}
+
+
+	\begin{figure}[htbp]
+		\centering
+		\centerline{\includegraphics[scale=0.38]{./images/server/app_data.pdf}}
+		\caption{Package - server::db::app\_data}
+	\end{figure}
+
+
+	\begin{itemize}
+		\item \textbf{Descrizione}: è il package che contiene la definizione dei modelli degli utenti registrati e le loro preferenze. Contiene inoltre il modello delle Recipe che l'amministratore decide di creare;
+		\item \textbf{Padre}: server::db
+		\item \textbf{Package contenuti}
+			\begin{itemize}
+				\item server::db::app\_data::user
+				\item server::db::app\_data::recipe
+			\end{itemize}
+	\end{itemize}
+	% subsubsection bdsm_app_server_app_data [end]
+
+
+\subsubsection{server::db::app\_data::user} % (fold)
+\label{ssub:bdsm_app_server_app_data_user}
+
+	\begin{itemize}
+		\item \textbf{Descrizione}: è il package che contiene la definizione dei modelli degli utenti registrati e le loro preferenze;
+		\item \textbf{Padre}: server::db::app\_data
+		\item \textbf{Interazione con altri componenti}:
+			\begin{itemize}
+				\item server::db::app\_data::recipe
+			\end{itemize}
+	\end{itemize}
+	% subsubsection bdsm_app_server_app_data_user [end]
+
+
+	\paragraph{Classi} % (fold)
+
+		\subparagraph{server::db::app\_data::user::UserModel} % (fold)
+		\label{subp:server_db_app_data_user_user_model}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe che definisce il modello dei dati degli utenti all'interno della base di dati;
+				\item \textbf{Utilizzo}: la classe conterrà i metodi per la creazione, eliminazione, modifica degli account utente;
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item server::db::app\_data::user::FavouritesModel
+						\item server::db:::app\_data::user::AdminModel
+						\item server::db::app\_data::recipe::RecipeRequestModel
+					\end{itemize}
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
+			\end{itemize}
+		% subparagraph server_db_app_data_user_user_model [end]
+
+
+		\subparagraph{server::db::app\_data::user::AdminModel} % (fold)
+		\label{subp:server_db_app_data_user_admin_model}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe che definisce il modello dei dati degli utenti amministratori all'interno della base di dati;
+				\item \textbf{Utilizzo}: la classe specializza l'utente amministratore. Viene implementata con dei metodi per l'aggiunta la modifica e la rimozione;
+				\item \textbf{Classi ereditate}: server::db::app\_data::user::UserModel;
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item server::db::app\_data::recipe::RecipeModel
+					\end{itemize}
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
+			\end{itemize}
+		% subparagraph server_db_app_data_user_admin_model [end]
+
+
+		\subparagraph{server::db::app\_data::user::FavouritesModel} % (fold)
+		\label{subp:server_db_app_data_user_favorites}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe che definisce il modello dei dati relativo ai preferiti dell'utente;
+				\item \textbf{Utilizzo}: la classe  permette all'utente di aggiungere dei modelli di view nei preferiti. Contiene metodi per l'inserimento e rimozione di preferiti;
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item server::db::app\_data::recipe::AbsMetricModel
+					\end{itemize}
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
+			\end{itemize}
+		% subparagraph server_db_app_data_user_favorites [end]
+
+
+\subsubsection{server::db::app\_data::recipe} % (fold)
+\label{ssub:bdsm_app_server_app_data_recipe}
+
+	\begin{itemize}
+		\item \textbf{Descrizione}: è il package che contiene la definizione dei modelli delle Recipe che l'amministratore decide di creare;
+		\item \textbf{Padre}: server::db::app\_data
+		\item \textbf{Interazione con altri componenti}:
+			\begin{itemize}
+				\item server::db::app\_data::user
+			\end{itemize}
+	\end{itemize}
+	% subsubsection bdsm_app_server_app_data_recipe [end]
+
+
+	\paragraph{Classi} % (fold)
+
+		\subparagraph{server::db::app\_data::recipe::AbsRecipeModel} % (fold)
+		\label{subp:server_db_app_data_recipe_absrecipemodel}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe astratta che rappresenta un modello comune per Recipe e richiesta di aggiunta Recipe;
+				\item \textbf{Utilizzo}: la classe mantiene l'estensibilità per eventuali nuovi tipi di Recipe;
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item server::db::app\_data::recipe::RecipeModel
+						\item server::db::app\_data::recipe::RecipeRequestModel
+						\item server::db::app\_data::recipe::AbsMetricModel
+					\end{itemize}
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
+			\end{itemize}
+		% subparagraph server_db_app_data_recipe_absrecipemodel [end]
+
+
+		\subparagraph{server::db::app\_data::recipe::RecipeRequestModel} % (fold)
+		\label{subp:server_db_app_data_recipe_reciperequestmodel}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe che definisce il modello dei dati per la richiesta di aggiunta Recipe;
+				\item \textbf{Utilizzo}: la classe specializza la richiesta identificandone l'utente;
+				\item \textbf{Classi ereditate}: server::db::app\_data::recipe::AbsRecipeModel
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
+			\end{itemize}
+		% subparagraph server_db_app_data_recipe_reciperequestmodel [end]
+
+
+		\subparagraph{server::db::app\_data::recipe::RecipeModel} % (fold)
+		\label{subp:server_db_app_data_recipe_recipemodel}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe che definisce il modello dei dati realtivo ad una Recipe;
+				\item \textbf{Utilizzo}: la classe specializza la ricetta. Vengono forniti i campi dati per il possibile incremento temporale dei dati;
+				\item \textbf{Classi ereditate}: server::db::app\_data::recipe::AbsRecipeModel
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item server::db::app\_data::recipe::RatingModel
+					\end{itemize}
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
+			\end{itemize}
+		% subparagraph server_db_app_data_recipe_recipemodel [end]
+
+		\subparagraph{server::db::app\_data::recipe::RatingModel} % (fold)
+		\label{subp:server_db_app_data_recipe_recipemodel}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe che rappresenta il modello del rating di una Recipe;
+				\item \textbf{Utilizzo}: viene utilizzata risalire al voto di ogni utente per una determinata Recipe;
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
+			\end{itemize}
+		% subparagraph server_db_app_data_recipe_recipemodel [end]
+
+
+		\subparagraph{server::db::app\_data::recipe::AbsMetricModel} % (fold)
+		\label{subp:server_db_app_data_recipe_absmetricmodel}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe che definisce il modello dei dati di una metrica contenuta in una Ricetta;
+				\item \textbf{Utilizzo}: la classe ha il compito di inglobare tutte le sotto-metriche e non solo quelle derivate dai social media;
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item server::db::app\_data::recipe::AbsSocialMetricModel
+					\end{itemize}
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
+			\end{itemize}
+		% subparagraph server_db_app_data_recipe_absmetricmodel [end]
+
+
+		\subparagraph{server::db::app\_data::recipe::AbsSocialMetricModel} % (fold)
+		\label{subp:server_db_app_data_recipe_abssocialmetricmodel}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe che definisce il modello dei dati delle metriche relative ai social media;
+				\item \textbf{Utilizzo}: la classe ha il compito di raggruppare i social media da rappresentare e identificarli univocamente;
+				\item \textbf{Classi ereditate}: server::db::app\_data::recipe::AbsMetricModel
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item server::db::app\_data::recipe::FbMetricModel
+						\item server::db::app\_data::recipe::IgMetricModel
+						\item server::db::app\_data::recipe::TwMetricModel
+					\end{itemize}
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
+			\end{itemize}
+		% subparagraph server_db_app_data_recipe_abssocialmetricmodel [end]
+
+
+		\subparagraph{server::db::app\_data::recipe::FbMetricModel} % (fold)
+		\label{subp:server_db_app_data_recipe_fbmetricmodel}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe che definisce il modello dei dati delle metriche relative a Facebook;
+				\item \textbf{Utilizzo}: la classe ha il compito di identificare univocamente l'id della pagina o l'id dell'evento da analizzare. La classe fornisce metodi per l'aggiunta e la rimozione ricorsiva in caso di cancellazione;
+				\item \textbf{Classi ereditate}: server::db::app\_data::recipe::AbsSocialMetricModel;
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
+			\end{itemize}
+		% subparagraph server_db_app_data_recipe_fbmetricmodel [end]
+
+
+		\subparagraph{server::db::app\_data::recipe::IgMetricModel} % (fold)
+		\label{subp:server_db_app_data_recipe_igmetricmodel}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe che definisce il modello dei dati delle metriche relative a Instagram;
+				\item \textbf{Utilizzo}: la classe ha il compito di identificare univocamente l'id della pagina o l'hashtag da analizzare. La classe fornisce metodi per l'aggiunta e la rimozione ricorsiva in caso di cancellazione;
+				\item \textbf{Classi ereditate}: server::db::app\_data::recipe::AbsSocialMetricModel;
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
+			\end{itemize}
+		% subparagraph server_db_app_data_recipe_igmetricmodel [end]
+
+
+		\subparagraph{server::db::app\_data::recipe::TwMetricModel} % (fold)
+		\label{subp:server_db_app_data_recipe_twmetricmodel}
+			\begin{itemize}
+				\item \textbf{Descrizione}: classe che definisce il modello dei dati delle metriche relative a Twitter;
+				\item \textbf{Utilizzo}: la classe ha il compito di identificare univocamente l'id della pagina o l'hashtag da analizzare. La classe fornisce metodi per l'aggiunta e la rimozione ricorsiva in caso di cancellazione;
+				\item \textbf{Classi ereditate}: server::db::app\_data::recipe::AbsSocialMetricModel;
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
+			\end{itemize}
+		% subparagraph server_db_app_data_recipe_twmetricmodel [end]
