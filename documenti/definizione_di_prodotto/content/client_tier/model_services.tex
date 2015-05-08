@@ -37,6 +37,11 @@
 
 		\subparagraph{client::model::services::AuthServiceTarget} % (fold)
 		\label{subp:client_model_services_authservice}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.7]{./images/client/classes/example_class.png}}
+				\caption{Classe - client::model::services::AuthServiceTarget}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: è la classe di interfaccia per gestire le chiamate al modulo esterno usato per gestire l'autenticazione secondo il pattern \emph{Adapter} ;
 				\item \textbf{Utilizzo}: i metodi di questa classe saranno invocati quando un utente effettua la registrazione al servizio o effettua un login/logout;
@@ -53,6 +58,11 @@
 
 		\subparagraph{client::model::services::AuthServiceAdapter} % (fold)
 		\label{subp:client_model_services_authservice}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.7]{./images/client/classes/example_class.png}}
+				\caption{Classe - client::model::services::AuthServiceAdapter}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: è la classe \emph{Adapter} che permette di invocare i metodi del modulo di autenticazione esterno invocando i metodi come presentati in AuthServiceTarget;
 				\item \textbf{Utilizzo}:  i metodi di questa classe saranno invocati quando un utente effettua la registrazione al servizio o effettua un login/logout;
@@ -75,6 +85,11 @@
 
 		\subparagraph{client::model::services::RecipeService} % (fold)
 		\label{subp:client_model_services_recipeservice}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.7]{./images/client/classes/example_class.png}}
+				\caption{Classe - client::model::services::RecipeService}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: p la classe che racchiude i metodi per reperire i dati relativi alle Recipe, siano essi salvati in locale o da recuperare dal server, inoltre gestisce l'invio di richieste di Recipe al server;
 				\item \textbf{Utilizzo}: i suoi metodi vengono invocati ogni volta che sia necessario avere dei dati relativi a una o più Recipe per un utente non amministratore, o se un utente non amministratore desidera inviare una richiesta di Recipe;
@@ -94,6 +109,11 @@
 
 		\subparagraph{client::model::services::RecipeAdminService} % (fold)
 		\label{subp:client_model_services_recipeadminservice}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.7]{./images/client/classes/example_class.png}}
+				\caption{Classe - client::model::services::RecipeAdminService}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: è la classe che oltre a gestire ciò che è gestito dalla classe padre si occupa dell'inserimento di nuove recipe nel server e dell'eliminazione di Recipe già presenti;
 				\item \textbf{Utilizzo}: i suoi metodi vengono invocati quando un utente amministratore desidera agire su dati di Recipe da pagine non accessibili a un utente non amministratore;
@@ -116,6 +136,11 @@
 
 		\subparagraph{client::model::services::UserService} % (fold)
 		\label{subp:client_model_services_userservice}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.7]{./images/client/classes/example_class.png}}
+				\caption{Classe - client::model::services::UserService}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: è la classe che gestisce il recupero e la modifica di dati utente relativi a sé stessi;
 				\item \textbf{Utilizzo}: i suoi metodi vengono invocati quando un utente accede alla pagina dei propri dati personali;
@@ -132,6 +157,11 @@
 
 		\subparagraph{client::model::services::UserAdminService} % (fold)
 		\label{subp:client_model_services_useradminservice}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.7]{./images/client/classes/example_class.png}}
+				\caption{Classe - client::model::services::UserAdminService}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: è la classe che oltre a gestire ciò che è gestito dalla sua classe padre si occupa del recupero e della modifica di dati di utenti, inclusa l'eliminazione di un utente e il cambiare i suoi permessi;
 				\item \textbf{Utilizzo}: i suoi metodi vengono invocati quando un utente amministratore agisce su dati relativi ad utenti da una pagina non accessibile agli utenti non amministratori;
@@ -152,6 +182,11 @@
 
 		\subparagraph{client::model::services::ChartCreator} % (fold)
 		\label{subp:chartcreator}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.7]{./images/client/classes/example_class.png}}
+				\caption{Classe - client::model::services::ChartCreator}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: è una classe astratta che descrive il codice comune delle classi che generano un grafico, secondo il pattern \emph{template method};
 				\item \textbf{Utilizzo}: i suoi metodi vengono invocati dalle classi figlie nella creazione di grafici;
@@ -173,6 +208,11 @@
 
 		\subparagraph{client::model::services::LineChartCreator} % (fold)
 		\label{subp:linechartcreator}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.7]{./images/client/classes/example_class.png}}
+				\caption{Classe - client::model::services::LineChartCreator}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: la classe contiene i metodi per la creazione di un Line Chart;
 				\item \textbf{Utilizzo}: i suoi metodi vengono invocati quando si vuole creare un Line Chart;
@@ -185,12 +225,19 @@
 						\item client::controller::user::ChartsCtrl
 						\item client::controller::user::CompareCtrl
 					\end{itemize}
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
 			\end{itemize}
 		% subparagraph linechartcreator (end)
 
 
 		\subparagraph{client::model::services::BarChartCreator} % (fold)
 		\label{subp:barchartcreator}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.7]{./images/client/classes/example_class.png}}
+				\caption{Classe - client::model::services::BarChartCreator}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: la classe contiene i metodi per la creazione di un Bar Chart;
 				\item \textbf{Utilizzo}: i suoi metodi vengono invocati quando si vuole creare un Bar Chart;
@@ -203,11 +250,18 @@
 						\item client::controller::user::ChartsCtrl
 						\item client::controller::user::CompareCtrl
 					\end{itemize}
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
 			\end{itemize}
 		% subparagraph barchartcreator (end)
 
 		\subparagraph{client::model::services::PieChartCreator} % (fold)
 		\label{subp:piechartcreator}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.7]{./images/client/classes/example_class.png}}
+				\caption{Classe - client::model::services::PieChartCreator}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: la classe contiene i metodi per la creazione di un Pie Chart;
 				\item \textbf{Utilizzo}: i suoi metodi vengono invocati quando si vuole creare un Pie Chart;
@@ -220,11 +274,18 @@
 						\item client::controller::user::ChartsCtrl
 						\item client::controller::user::CompareCtrl
 					\end{itemize}
+				\item \textbf{Attributi}: TO DO
+				\item \textbf{Metodi}: TO DO
 			\end{itemize}
 		% subparagraph piechartcreator (end)
 
 		\subparagraph{client::model::services::MapChartCreator} % (fold)
 		\label{subp:mapchartcreator}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.7]{./images/client/classes/example_class.png}}
+				\caption{Classe - client::model::services::MapChartCreator}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: la classe contiene i metodi per la creazione di un Map Chart;
 				\item \textbf{Utilizzo}: i suoi metodi vengono invocati quando si vuole creare un Map Chart;
@@ -244,6 +305,11 @@
 
 		\subparagraph{client::model::services::RadarChartCreator} % (fold)
 		\label{subp:radarchartcreator}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.7]{./images/client/classes/example_class.png}}
+				\caption{Classe - client::model::services::RadarChartCreator}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: la classe contiene i metodi per la creazione di un Radar Chart;
 				\item \textbf{Utilizzo}: i suoi metodi vengono invocati quando si vuole creare un Radar Chart;
@@ -263,6 +329,11 @@
 
 		\subparagraph{client::model::services::ManagerDataExpirationDate} % (fold)
 		\label{subp:radarchartcreator}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.7]{./images/client/classes/example_class.png}}
+				\caption{Classe - client::model::services::ManagerDataExpirationDate}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: questa classe controlla se i dati che vengono richiesti sono già presenti in locale o se devono essere richiesti al server: in particolare li richiede al server solo se questi sono assenti o se sono l'ultima volta che sono stati chiesti al server è passata da troppo tempo;
 				\item \textbf{Utilizzo}: i suoi metodi vengono invocati dalle classi che desiderano fare richieste al server;
