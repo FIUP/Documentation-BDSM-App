@@ -525,17 +525,22 @@
 				\subparagraph{Struttura di src\_BDSM\_App\_client}
 				Le cartelle nel repository verranno organizzate nel seguente modo a partire dalla root:
 					\begin{itemize}
-						\item TODO
+						\item \textbf{app}: serve per gestire il codice sorgente in produzione del client;
+						\item \textbf{test}: serve per gestire i test di integrazione e di sistema relativi al client;
+						\item \textbf{script\_repo}: serve per gestire gli script che automatizzano parte del lavoro e dei controlli sul repository relativi al codice sorgente del client.
 					\end{itemize}
 
 				\subparagraph{Nomi dei file in src\_BDSM\_App\_server}
-				I file e le cartelle presenti nel repository devono essere conformi al formalismo presente al link
+				I file e le cartelle presenti nel repository devono essere conformi al formalismo presente al link \url{https://google-styleguide.googlecode.com/svn/trunk/pyguide.html#Naming}.
 
 				\subparagraph{Struttura di src\_BDSM\_App\_server}
 				Le cartelle nel repository verranno organizzate nel seguente modo a partire dalla root:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
+				\begin{itemize}
+					\item \textbf{lib}: serve per contenere le librerie esterne che andranno utilizzate dall'applicazione;
+					\item \textbf{src}: serve per gestire il codice sorgente in produzione del server;
+					\item \textbf{test}: serve per gestire i test di unità, integrazione e di sistema relativi al server;
+					\item \textbf{script\_repo}: serve per gestire gli script che automatizzano parte del lavoro e dei controlli sul repository relativi al codice sorgente del server.
+				\end{itemize}
 
 
 
