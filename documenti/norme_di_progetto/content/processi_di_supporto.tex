@@ -366,10 +366,31 @@
 			Il sistema automaticamente provvederà alla notifica del nuovo task attraverso l'invio di una mail.
 			\begin{figure}[htbp]
 				\centering
-				\includegraphics[scale=0.4]{images/proc_assegnazione_anomalie.pdf}
+				\includegraphics[scale=0.5]{images/proc_assegnazione_anomalie.pdf}
 				\caption{Diagramma di attività - procedura assegnazione anomalie}
 				\label{fig:procedura_assegnazione_anomalie}
 			\end{figure}
+
+
+			\paragraph{Configurazione sistema di Continuous Integration} % (fold)
+			\label{par:configurazione_sistema_di_continuos_integration}
+			Ogni membro del gruppo dovrà seguire la seguente procedura per interfacciarsi con il sistema adottato di Continuous Integration \ref{par:wercker} configurato dall'\roleAdministrator.
+				\begin{itemize}
+					\item accedere al sito \url{http://wercker.com/} tramite l'account di GitHub;
+					\item dal menù in alto selezionare la voce ``Create'' e scegliere ``Application'';
+					\item selezionare GitHub come provider di Git;
+					\item selezionare il repository che interessa (src\_BDSM\_App\_client e src\_BDSM\_App\_server);
+					\item premere il pulsante ``Join App'';
+					\item ripetere la procedura per entrambi i repository citati al punto 4.
+				\end{itemize}
+				
+				\begin{figure}[htbp]
+					\centering
+					\includegraphics[scale=0.5]{images/proc_aggiunta_wercker.pdf}
+					\caption{Diagramma di attività - procedura configurazione continuous integration}
+					\label{fig:procedura_assegnazione_anomalie}
+				\end{figure}
+			% paragraph procedura_di_configurazione_sistema_di_continuos_integration (end)
 		% subsubsection procedure (end)
 
 
@@ -403,7 +424,7 @@
 
 			\paragraph{Wercker} % (fold)
 			\label{par:wercker}
-			TODO (Continuos integration)
+			Wercker è lo strumento scelto per le attività di Continuous Integration. \'E disponibile come applicazione cloud, non necessitando quindi di essere scaricato in locale. Questo consente di non dover provvedere a possibili diverse configurazioni nelle macchine dei diversi membri del gruppo. Sarà compito dell'\roleAdministrator{} impostare inizialmente i settaggi necessari a far funzionare l'applicativo.
 			% paragraph wercker (end)
 
 
@@ -425,6 +446,10 @@
 			Non è presente di default negli strumenti impostati da Yeoman. Verrà quindi configurato dall'\roleAdministrator{} prima che gli altri componenti vadano a codificare questo tipo di test.
 			% paragraph protractor (end)
 
-			% paragraph phantomjs (end)
+			\paragraph{Testbed GAE} % (fold)
+			\label{par:testbed_gae}
+			TODO
+			% paragraph testbed_gae (end)
+
 		% subsubsection strumenti (end)	
 
