@@ -413,7 +413,8 @@
 			Una volta iscritti i membri dovranno comunicare all'\roleAdministrator{} il loro nome utente che provvederà ad autorizzarne l'accesso.
 				\begin{itemize}
 					\item \textbf{doc\_BDSM\_App}: gestione della documentazione;
-					\item \textbf{src\_BDSM\_App}: gestione del codice;
+					\item \textbf{src\_BDSM\_App\_client}: gestione del codice relativo al client;
+					\item \textbf{src\_BDSM\_App\_server}: gestione del codice relativo al server;
 				\end{itemize}
 			\paragraph{Gestione dei Git Hooks}
 			L'\roleAdministrator{} ha il compito di mantenere gli script che permettono di tenere il repository consistente con le norme descritte in questo documento. \newline
@@ -518,10 +519,31 @@
 						\item \textbf{presentazioni}: contenente le presentazioni create per le diverse revisioni esportate dall'applicativo web utilizzato per esse. Viene fatto ciò per sicurezza qualora il sito non fosse raggiungibile a causa di diversi problemi. All'interno di essa c'è un ulteriore suddivisione rispetto alle singole revisioni nello stesso modo in cui è suddivisa la cartella ``consegne''.
 					\end{itemize}
 
-				\subparagraph{Nomi dei file in src\_BDSM\_App}
-				La presente sezione verrà redatta in futuro, presumibilmente nella prima fase di progettazione di dettaglio e codifica dei requisiti come esposto nel documento \docNameVersionPdP.
-				\subparagraph{Struttura di src\_BDSM\_App}
-				La presente sezione verrà redatta in futuro, presumibilmente nella prima fase di progettazione di dettaglio e codifica dei requisiti come esposto nel documento \docNameVersionPdP.
+				\subparagraph{Nomi dei file in src\_BDSM\_App\_client}
+				I file e le cartelle presenti nel repository devono essere conformi al formalismo definito al link \url{https://github.com/johnpapa/angular-styleguide#naming}.
+
+				\subparagraph{Struttura di src\_BDSM\_App\_client}
+				Le cartelle nel repository verranno organizzate nel seguente modo a partire dalla root:
+					\begin{itemize}
+						\item \textbf{app}: serve per gestire il codice sorgente in produzione del client;
+						\item \textbf{test}: serve per gestire i test di integrazione e di sistema relativi al client;
+						\item \textbf{script\_repo}: serve per gestire gli script che automatizzano parte del lavoro e dei controlli sul repository relativi al codice sorgente del client.
+					\end{itemize}
+
+				\subparagraph{Nomi dei file in src\_BDSM\_App\_server}
+				I file e le cartelle presenti nel repository devono essere conformi al formalismo presente al link \url{https://google-styleguide.googlecode.com/svn/trunk/pyguide.html#Naming}.
+
+				\subparagraph{Struttura di src\_BDSM\_App\_server}
+				Le cartelle nel repository verranno organizzate nel seguente modo a partire dalla root:
+				\begin{itemize}
+					\item \textbf{lib}: serve per contenere le librerie esterne che andranno utilizzate dall'applicazione;
+					\item \textbf{src}: serve per gestire il codice sorgente in produzione del server;
+					\item \textbf{test}: serve per gestire i test di unità, integrazione e di sistema relativi al server;
+					\item \textbf{script\_repo}: serve per gestire gli script che automatizzano parte del lavoro e dei controlli sul repository relativi al codice sorgente del server.
+				\end{itemize}
+
+
+
 
 				\subparagraph{Modello di sviluppo}
 				Per lo sviluppo della documentazione e del codice necessari al progetto si è scelto di adottare il modello proposto dal proponente, spiegato nel dettaglio al seguente link:

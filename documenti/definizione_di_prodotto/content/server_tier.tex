@@ -1,0 +1,94 @@
+% =================================================================================================
+% File:			server_tier.tex
+% Description:	Defiinisce la sezione relativa al back-end dell'applicazione
+% Created:		2015-03-27
+% Author:		Tesser Paolo
+% Email:		tesser.paolo@mashup-unipd.it
+% =================================================================================================
+% Modification History:
+% Version		Modifier Date		Change											Author
+% 0.0.1 		2015-03-27 			creato scheletro								Tesser Paolo
+% =================================================================================================
+% Version		Modifier Date		Change											Author
+% 0.0.2		2015-04-04 				iniziata stesura classi							Nicola F. Lorenzo C.
+% =================================================================================================
+% Version		Modifier Date		Change											Author
+% 0.0.3		2015-04-07 				continuata stesura classi						Nicola F. Luca S.
+% =================================================================================================
+
+
+% CONTENUTO DEL CAPITOLO
+
+\subsection{Server (Back-end)} % (fold)
+\label{sub:server}
+
+  \subsubsection{server} % (fold)
+  \begin{figure}[htbp]
+    \centering
+    \centerline{\includegraphics[scale=0.38]{./images/server/server.pdf}}
+    \caption{Package - server}
+  \end{figure}
+
+
+  \begin{itemize}
+    \item \textbf{Descrizione}: è il package che racchiude tutte le parti del back-end. \'E quindi l'insieme dei componenti che si occupa di soddisfare le richieste provenienti dal front-end, interagire col database, raccogliere i dati provenienti dai social networks, elaborarli ed esporli attraverso servizi REST.
+    \item \textbf{Package contenuti}:
+      \begin{itemize}
+        \item server::processor
+        \item server::db
+        \item server::miner
+        \item server::endpoints
+      \end{itemize}
+    \item \textbf{Interazione con altri componenti}: interagisce con il client definito nella sezione \ref{sub:client} tramite i servizi REST offerti dal modulo in questione;
+  \end{itemize}
+  % subsubsection bdsm_app_client (end)
+
+  \pagebreak
+
+  % PACKAGE DELLA DB
+  \input{./content/server_tier/db} \clearpage \newpage
+  % END PACKAGE DB
+
+  % PACKAGE PROCESSOR
+  \input{./content/server_tier/processor} \clearpage \newpage
+  % END PACKAGE PROCESSOR
+
+  % PACKAGE MINER
+  \input{./content/server_tier/miner} \clearpage \newpage
+  % END PACKAGE MINER
+
+  % PACKAGE ENDPOINTS
+  \input{./content/server_tier/endpoints} \clearpage \newpage
+  % END PACKAGE ENDPOINTS
+
+
+% TEMPLATE PER IL PACKAGE
+%	\begin{comment}
+%	\subsubsection{Nome package} % (fold)
+%	\label{ssub:nome_del_package}
+%	[TO DO] (diagramma) \newline \newline
+
+%	\begin{itemize}
+%		\item \textbf{Descrizione}: [TO DO];
+%		\item \textbf{Padre}: [TO DO] (qualora presente);
+%		\item \textbf{Package contenuti}: [TO DO] (qualora presente);
+%		\item \textbf{Interazione con altri componenti}: [TO DO];
+%	\end{itemize}
+
+%		\paragraph{Classi} % (fold)
+%			\subparagraph{Nome package::Nome classe} % (fold)
+%			\label{subp:subparagraph_name}
+%				\begin{itemize}
+%					\item \textbf{Descrizione}: [TO DO];
+%					\item \textbf{Utilizzo}: [TO DO];
+%					\item \textbf{Classi ereditate}: [TO DO];
+%					\item \textbf{Relazioni con altre classi}: [TO DO].
+%				\end{itemize}
+    % subparagraph subparagraph_name (end)
+%	\end{comment}
+    % subsection nome_classe (end)
+
+  % paragraph classi (end)
+% subsubsection nome_del_package (end)
+
+% subsection client (end)
