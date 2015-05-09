@@ -250,7 +250,7 @@
 		\label{subp:server_miner_tw_AbsTwFetcher}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe astratta che rappresenta il padre di ogni fetcher relativo a Twitter;
-				\item \textbf{Utilizzo}: contiene un metodo che ricava i dati statici di un'entità Twitter ed un metodo astratto che verrà definito nelle classi figlie;
+				\item \textbf{Utilizzo}: contiene due metodi astratti che verranno definiti nelle classi figlie, uno per i dati statici di un'entità Twitter e uno per i dati dinamici;
 				\item \textbf{Classi ereditate}: server::miner::AbsFetcher
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
@@ -264,7 +264,7 @@
 		\label{subp:server_miner_tw_TwHashtagFetcher}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che ricava i dati degli hashtag di Twitter;
-				\item \textbf{Utilizzo}: classe che contiene un campo che descrive i dati statici di un hashtag di Twitter e un metodo che ricava i dati dinamici tramite l'utilizzo di \texttt{HashtagTweetCounter};
+				\item \textbf{Utilizzo}: classe che contiene un campo che descrive i dati statici di un hashtag di Twitter,un metodo che ricava i dati statici di un hashtag di e un metodo che ricava i dati dinamici tramite l'utilizzo di \texttt{HashtagTweetCounter};
 				\item \textbf{Classi ereditate}: server::miner::tw::AbsTwFetcher
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
@@ -277,7 +277,7 @@
 		\label{subp:server_miner_tw_TwUserFetcher}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che ricava i dati degli utenti di Twitter;
-				\item \textbf{Utilizzo}: classe che contiene un campo che descrive i dati statici dell'utente ed un metodo che ricava i dati dinamici tramite l'utilizzo di \texttt{UserTweetCounter};
+				\item \textbf{Utilizzo}: classe che contiene un campo che descrive i dati statici dell'utente, un metodo che ricava i dati statici relativi all'utente ed un metodo che ricava i dati dinamici tramite l'utilizzo di \texttt{UserTweetCounter};
 				\item \textbf{Classi ereditate}: server::miner::tw::AbsTwFetcher
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
