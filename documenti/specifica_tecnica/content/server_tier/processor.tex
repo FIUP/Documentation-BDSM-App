@@ -102,7 +102,7 @@
       \label{subp:bdsm_app_server_processor_commands_icommand}
       \begin{itemize}
         \item \textbf{Descrizione}: rappresenta un'interfaccia comune per tutti i comandi presenti nel package \texttt{server::commands} e figli;
-        \item \textbf{Utilizzo}: espone un metodo \texttt{execute()}, il quale sarà implementato da tutti i comandi concreti;
+        \item \textbf{Utilizzo}: espone un metodo \texttt{execute()}, il quale sarà implementato da tutti i comandi concreti; Nel caso la richiesta necessiti di una risposta, l'elemento da ritornare verrà restituito tramite un dizionario chiave-valore contenente i dati richiesti dalla chiamata.
       \end{itemize}
       % subparagraph bdsm_app::server_processor_abscommand (end)
 

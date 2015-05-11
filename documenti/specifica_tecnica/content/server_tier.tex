@@ -22,6 +22,14 @@
 \subsection{Server (Back-end)} % (fold)
 \label{sub:server}
 
+\subsubsection{Premessa}
+\label{sub:server_premessa}
+I moduli del server sono interamente ospitati in Google App Engine e utilizzano determinati servizi associati a tale piattaforma. Quest'ultima, essendo un servizio PaaS (Platform as a Service), quando da un lato facilita lo sviluppo dell'applicativo offrendo un'astrazione framework-like su determinate funzionalità (database, web API), dall'altro limita gran parte degli applicativi a rimanere compatibili solo con tale piattaforma.
+Sebbene gran parte dei componenti server possano essere portati in altre infrastrutture o servizi PaaS, package come \texttt{db} e \texttt{endpoints} risultano strettamente legati a Google App Engine causa l'utilizzo dei servizi Cloud Datastore e Cloud Endpoints. Non è stato inoltre deciso di fornire un'astrazione per rendere portabili tali moduli in quando andrebbe creata una copia profonda di tali componenti e questa scelta, oltre a richiedere la creazione di numerose "classi copia", risulterebbe difficilmente mantenibile in caso di modifiche sui componenti.
+
+\pagebreak
+
+
   \subsubsection{server} % (fold)
   \begin{figure}[htbp]
     \centering
@@ -42,6 +50,7 @@
     \item \textbf{Interazione con altri componenti}: interagisce con il client definito nella sezione \ref{sub:client} tramite i servizi REST offerti dal modulo in questione;
   \end{itemize}
   % subsubsection bdsm_app_client (end)
+
 
   \pagebreak
 
