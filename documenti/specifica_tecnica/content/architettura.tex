@@ -26,14 +26,14 @@ L’architettura generale non tratta l’intero insieme delle sottoclassi del si
 
 	\subsection{Architettura generale}
 	\label{susb:architettura_generale}
-	L’architettura dell'applicazione segue il design pattern Three-Tier. Viene quindi suddivisa in tre livelli:
+	L’architettura dell'applicazione si ispira all'architettura Three-Tier. Viene quindi suddivisa in tre moduli (detti per comodità anche livelli o tier):
 		\begin{enumerate}
 			\item Client Tier
 			\item Server Tier
 			\item DataBase Tier
 		\end{enumerate}
 		\noindent
-		Di seguito viene proposto un diagramma rappresentante le relazioni tra i vari livelli. Vengono individuate le componenti che permettono ai vari livelli di interagire senza dover esporre la struttura interna degli stessi. \newline \newline
+		Non si tratta di una vera e propria architettura Three-Tier non essendo applicata a un singolo modulo, e anzi i tre moduli sono distribuiti su macchine diverse. Il riferimento all'architettura Three-Tier è concettuale, ed è servito ai progettisti per pensare alla struttura di base dell'applicazione. Di seguito viene proposto un diagramma rappresentante le relazioni tra i vari livelli. Vengono individuate le componenti che permettono ai vari livelli di interagire senza dover esporre la struttura interna degli stessi. \newline \newline
 
 		\begin{figure}[htbp]
 			\centering
@@ -45,7 +45,8 @@ L’architettura generale non tratta l’intero insieme delle sottoclassi del si
 		Il client si occuperà di analizzarla per determinare se la richiesta ha avuto un esito positivo o negativo e nel primo caso utilizzerà i dati per effettuare le opportune operazioni.
 
 		\subsubsection{Architettura Client Tier}
-		Per il livello client è stato adottato il design pattern MVW offerto dal framework AngularJS. Questo livello implementa l'interfaccia grafica con cui utenti autenticati e amministratori possono interagire con il sistema in modo completo. Il diagramma seguente illustra l'interazione delle varie parti. \newline
+		Per il livello client è stato adottato il design pattern MVW offerto dal framework AngularJS. Questo livello implementa l'interfaccia grafica con cui utenti autenticati e amministratori possono interagire con il sistema in modo completo.
+		\newline
 		Gli utenti invocheranno determinate azioni utilizzando i pulsanti forniti dall'interfaccia e il sistema risponderà fornendo pagine di configurazione interattive oppure visualizzando una serie di grafici che verranno aggiornanti costantemente utilizzando i servizi REST forniti dall'applicazione. In dettaglio:
 		\begin{itemize}
 			\item Model: contiene il modello dei dati e la \textit{business logic}, che comprende le definizioni delle chiamate che può fare l'applicazione e i servizi che offrono. Inserire la logica dell'applicazione nel modello anziché nel \textit{controller} permette di ridurre la duplicazione del codice;

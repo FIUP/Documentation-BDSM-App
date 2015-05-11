@@ -17,21 +17,6 @@
 
 % CONTENUTO DEL CAPITOLO
 
-\subsection{Design pattern architetturali} % (fold)
-\label{sub:design_pattern_architetturali}
-	\subsubsection{Three-Tier} % (fold)
-	\label{ssub:three_tier}
-		\begin{itemize}
-			\item \textbf{Scope dell'utilizzo}: è stato scelto il pattern Three-tier per rendere massima la distribuzione delle componenti principali del sistema: client(front-end), server(back-end) e database (Datastore). La decisione di adottare un'architettura REST-like ha contribuito alla scelta dell'infrastruttura, che ci permette di separare al meglio le diverse parti;
-			\item \textbf{Contesto dell'utilizzo}:
-				\begin{itemize}
-					\item \textbf{Intera applicazione}: la decomposizione del sistema avviene secondo lo schema citato precedentemente. Ogni componente rappresenta un livello del pattern. Il client comunica con il server attraverso i servizi REST esposti da quest'ultimo, mentre il server comunica con il database attraverso le funzionalità offerte dalla Google App Engine. \newline
-					Il diagramma che riporta lo schema del pattern è quello presente alla sezione \ref{susb:architettura_generale}.
-				\end{itemize}
-		\end{itemize}
-	% subsubsection three_tier (end)
-
-
 	\subsubsection{MVW} % (fold)
 	\label{ssub:mvw}
 		\begin{itemize}
