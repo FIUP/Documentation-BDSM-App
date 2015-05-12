@@ -44,8 +44,16 @@
         \begin{itemize}
           \item server::processor::CommandDispatcher
         \end{itemize}
-		\item \textbf{Attributi}: TO DO
-		\item \textbf{Metodi}: TO DO
+		\item \textbf{Attributi}:
+        	\begin{itemize}
+          		\item istance\_obj : RequestHandler
+        	\end{itemize} 
+		\item \textbf{Metodi}: 
+        	\begin{itemize}
+         		 \item private RequestHandler() 
+         		 \item public dispatch\_request() : Dictionary
+         		 \item public get\_istance() : RequestHandler
+        	\end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_processor_requesthandler (end)
 
@@ -58,8 +66,14 @@
         \begin{itemize}
           \item server::processor::commands::ICommand
         \end{itemize}
-		\item \textbf{Attributi}: TO DO
-		\item \textbf{Metodi}: TO DO
+		\item \textbf{Attributi}: 
+        	\begin{itemize}
+          		\item commands\_dict : Dictionary
+        	\end{itemize}
+		\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public dispatch() : Dictionary
+        	\end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_processor_commanddispatcher (end)
 
@@ -72,8 +86,14 @@
         \begin{itemize}
           \item server::miner::MinerScheduler
         \end{itemize}
-		\item \textbf{Attributi}: TO DO
-		\item \textbf{Metodi}: TO DO
+		\item \textbf{Attributi}: 
+        	\begin{itemize}
+          		\item miner\_obj : MinerScheduler
+        	\end{itemize}
+		\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public update\_recipe() : void
+        	\end{itemize}
     \end{itemize}
     % subparagraph bdsm_app::server_processor_updaterecipetask (end)
 
@@ -109,8 +129,11 @@
       \begin{itemize}
         \item \textbf{Descrizione}: rappresenta un'interfaccia comune per tutti i comandi presenti nel package \texttt{server::commands} e figli;
         \item \textbf{Utilizzo}: espone un metodo \texttt{execute()}, il quale sarà implementato da tutti i comandi concreti;
-		\item \textbf{Attributi}: TO DO
-		\item \textbf{Metodi}: TO DO
+		\item \textbf{Attributi}: N/A
+		\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
       \end{itemize}
       % subparagraph bdsm_app::server_processor_abscommand (end)
 
@@ -146,8 +169,8 @@
             \begin{itemize}
               \item server::processor::commands::ICommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: N/A
         \end{itemize}
         % subparagraph (end)
 
@@ -160,8 +183,11 @@
             \begin{itemize}
               \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -174,8 +200,11 @@
             \begin{itemize}
               \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -188,8 +217,11 @@
             \begin{itemize}
               \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -202,8 +234,11 @@
             \begin{itemize}
               \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -216,8 +251,11 @@
             \begin{itemize}
               \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -230,8 +268,11 @@
             \begin{itemize}
               \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -244,8 +285,11 @@
             \begin{itemize}
               \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -258,8 +302,11 @@
             \begin{itemize}
               \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
       % subsection
@@ -296,8 +343,8 @@
             \begin{itemize}
               \item server::processor::commands::ICommand;
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: N/A
         \end{itemize}
         % subparagraph (end)
 
@@ -310,8 +357,11 @@
             \begin{itemize}
               \item server::processor::commands::recipe::AbsRecipeCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -324,8 +374,11 @@
             \begin{itemize}
               \item server::processor::commands::recipe::AbsRecipeCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -338,8 +391,11 @@
             \begin{itemize}
               \item server::processor::commands::recipe::AbsRecipeCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -352,8 +408,11 @@
             \begin{itemize}
               \item server::processor::commands::recipe::AbsRecipeCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -366,8 +425,11 @@
             \begin{itemize}
               \item server::processor::commands::recipe::AbsRecipeCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -403,8 +465,8 @@
             \begin{itemize}
               \item server::processor::commands::ICommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: N/A
         \end{itemize}
         % subparagraph (end)
 
@@ -417,8 +479,11 @@
             \begin{itemize}
               \item server::processor::commands::requests::AbsRequestCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -431,8 +496,11 @@
             \begin{itemize}
               \item server::processor::commands::requests::AbsRequestCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -445,8 +513,11 @@
             \begin{itemize}
               \item server::processor::commands::requests::AbsRequestCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -459,8 +530,11 @@
             \begin{itemize}
               \item server::processor::commands::requests::AbsRequestCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -473,8 +547,11 @@
             \begin{itemize}
               \item server::processor::commands::requests::AbsRequestCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -509,8 +586,8 @@
             \begin{itemize}
               \item server::processor::commands::ICommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: N/A
         \end{itemize}
         % subparagraph (end)
 
@@ -525,8 +602,8 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsSocialCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: N/A
         \end{itemize}
         % subparagraph (end)
 
@@ -539,8 +616,11 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsFbCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -553,8 +633,11 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsFbCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -567,6 +650,11 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsFbCommand
             \end{itemize}
+            \item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -579,6 +667,11 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsFbCommand
             \end{itemize}
+            \item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -591,6 +684,11 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsFbCommand
             \end{itemize}
+            \item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -603,6 +701,11 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsFbCommand
             \end{itemize}
+            \item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -617,8 +720,8 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsSocialCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: N/A
         \end{itemize}
         % subparagraph (end)
 
@@ -631,8 +734,11 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsTwCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -645,8 +751,11 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsTwCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -659,8 +768,11 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsTwCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -673,8 +785,11 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsTwCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -689,8 +804,8 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsSocialCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: N/A
         \end{itemize}
         % subparagraph (end)
 
@@ -703,8 +818,11 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsIgCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -717,8 +835,11 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsIgCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -731,8 +852,11 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsIgCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -745,8 +869,11 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsIgCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -759,8 +886,11 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsIgCommand
             \end{itemize}
-			\item \textbf{Attributi}: TO DO
-			\item \textbf{Metodi}: TO DO
+			\item \textbf{Attributi}: N/A
+			\item \textbf{Metodi}: 
+        	\begin{itemize}
+          		\item public execute() : Dictionary
+        	\end{itemize}
         \end{itemize}
         % subparagraph (end)
 
