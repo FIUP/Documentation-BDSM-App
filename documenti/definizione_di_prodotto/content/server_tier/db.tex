@@ -612,8 +612,13 @@
 						\item server::db::app\_data::recipe::RecipeRequestModel
 						\item server::db::app\_data::recipe::AbsMetricModel
 					\end{itemize}
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}:  
+					\begin{itemize}
+						\item data\_create\_date : Date
+						\item desc\_str : String
+						\item title\_str : String
+					\end{itemize}
+				\item \textbf{Metodi}: N/A
 			\end{itemize}
 		% subparagraph server_db_app_data_recipe_absrecipemodel [end]
 
@@ -624,8 +629,8 @@
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati per la richiesta di aggiunta Recipe;
 				\item \textbf{Utilizzo}: la classe specializza la richiesta identificandone l'utente;
 				\item \textbf{Classi ereditate}: server::db::app\_data::recipe::AbsRecipeModel
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}: N/A
+				\item \textbf{Metodi}: N/A
 			\end{itemize}
 		% subparagraph server_db_app_data_recipe_reciperequestmodel [end]
 
@@ -640,8 +645,12 @@
 					\begin{itemize}
 						\item server::db::app\_data::recipe::RatingModel
 					\end{itemize}
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}:  
+					\begin{itemize}
+						\item update\_interval\_date : Date
+						\item last\_update\_date : Date
+					\end{itemize}
+				\item \textbf{Metodi}: N/A
 			\end{itemize}
 		% subparagraph server_db_app_data_recipe_recipemodel [end]
 
@@ -650,8 +659,12 @@
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che rappresenta il modello del rating di una Recipe;
 				\item \textbf{Utilizzo}: viene utilizzata risalire al voto di ogni utente per una determinata Recipe;
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}:  
+					\begin{itemize}
+						\item rating\_float : float
+						\item user\_id\_int : int
+					\end{itemize}
+				\item \textbf{Metodi}: N/A
 			\end{itemize}
 		% subparagraph server_db_app_data_recipe_recipemodel [end]
 
@@ -665,8 +678,8 @@
 					\begin{itemize}
 						\item server::db::app\_data::recipe::AbsSocialMetricModel
 					\end{itemize}
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}: N/A
+				\item \textbf{Metodi}: N/A
 			\end{itemize}
 		% subparagraph server_db_app_data_recipe_absmetricmodel [end]
 
@@ -683,8 +696,12 @@
 						\item server::db::app\_data::recipe::IgMetricModel
 						\item server::db::app\_data::recipe::TwMetricModel
 					\end{itemize}
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}:  
+					\begin{itemize}
+						\item type\_str : String
+						\item node\_name\_str : String
+					\end{itemize}
+				\item \textbf{Metodi}: N/A
 			\end{itemize}
 		% subparagraph server_db_app_data_recipe_abssocialmetricmodel [end]
 
@@ -695,8 +712,8 @@
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati delle metriche relative a Facebook;
 				\item \textbf{Utilizzo}: la classe ha il compito di identificare univocamente l'id della pagina o l'id dell'evento da analizzare. La classe fornisce metodi per l'aggiunta e la rimozione ricorsiva in caso di cancellazione;
 				\item \textbf{Classi ereditate}: server::db::app\_data::recipe::AbsSocialMetricModel;
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}: N/A
+				\item \textbf{Metodi}: N/A
 			\end{itemize}
 		% subparagraph server_db_app_data_recipe_fbmetricmodel [end]
 
@@ -707,8 +724,8 @@
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati delle metriche relative a Instagram;
 				\item \textbf{Utilizzo}: la classe ha il compito di identificare univocamente l'id della pagina o l'hashtag da analizzare. La classe fornisce metodi per l'aggiunta e la rimozione ricorsiva in caso di cancellazione;
 				\item \textbf{Classi ereditate}: server::db::app\_data::recipe::AbsSocialMetricModel;
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}: N/A
+				\item \textbf{Metodi}: N/A
 			\end{itemize}
 		% subparagraph server_db_app_data_recipe_igmetricmodel [end]
 
@@ -719,7 +736,7 @@
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati delle metriche relative a Twitter;
 				\item \textbf{Utilizzo}: la classe ha il compito di identificare univocamente l'id della pagina o l'hashtag da analizzare. La classe fornisce metodi per l'aggiunta e la rimozione ricorsiva in caso di cancellazione;
 				\item \textbf{Classi ereditate}: server::db::app\_data::recipe::AbsSocialMetricModel;
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}: N/A
+				\item \textbf{Metodi}: N/A
 			\end{itemize}
 		% subparagraph server_db_app_data_recipe_twmetricmodel [end]
