@@ -70,7 +70,7 @@ L’architettura generale non tratta l’intero insieme delle sottoclassi del si
 		Il livello database è gestito dal sistema Datastore integrato nella Google Cloud Platform che fornisce la funzionalità di persistenza dei dati. Ad esso spetta il compito di memorizzazione sia tutti i risultati recuperati dal Miner riguardanti i dati grezzi dei social, sia di memorizzare le configurazioni del programma necessarie al Processor e lo stato di lavoro dei Miner ad esso collegati.
 
 		\subsubsection{Protocollo di comunicazione Client-Server}
-		La comunicazione tra il livello Client e quello Server avviene tramite i Google Cloud Endpoints. Questi permettono di creare delle API da un'applicazione generata tramite la Google App Engine. Gli Endpoints garantiscono un modo semplice di sviluppare un back-end condiviso, riducendo di molto il lavoro che sarebbe necessario per implementare una simile infrastruttura.
+		La comunicazione tra il livello Client e quello Server avviene tramite i Google Cloud Endpoints. Questi permettono di creare delle API di tipo RESTful da un'applicazione generata tramite la Google App Engine. Il Client potrà duneque interagire con il Server attraverso delle chiamate REST, come descritto più affrofonditamente nel capitolo \ref{sec:servizi_rest}. Gli Endpoints garantiscono un modo semplice di sviluppare un back-end condiviso, riducendo di molto il lavoro che sarebbe necessario per implementare una simile infrastruttura.
 
 
 		\subsubsection{Protocollo di comunicazione Server-Database}
