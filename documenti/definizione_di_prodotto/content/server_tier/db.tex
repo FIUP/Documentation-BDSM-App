@@ -76,8 +76,11 @@
 						\item server::db::raw\_data::ig::RawIgHashtagTrend
 						\item server::db::raw\_data::ig::RawIgMedia
 					\end{itemize}
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}: 
+					\begin{itemize}
+						\item date_created_date : Date
+					\end{itemize}
+				\item \textbf{Metodi}: N/A
 			\end{itemize}
 
 
@@ -108,8 +111,11 @@
 					\item \textbf{Descrizione}: classe astratta che definisce il modello dati grezzi relativi a Facebook;
 					\item \textbf{Utilizzo}: la classe contiene l'id fornito dall'utente il quale permette di identificare univocamente la risorsa nel social media;
 					\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
-					\item \textbf{Attributi}: TO DO
-					\item \textbf{Metodi}: TO DO
+					\item \textbf{Attributi}: 
+					\begin{itemize}
+						\item node_id : int
+					\end{itemize}
+					\item \textbf{Metodi}: N/A
 				\end{itemize}
 			% subparagraph server_db_raw_data_fb_absfbrawdata [end]
 
@@ -126,8 +132,12 @@
 							\item server::db::raw\_data::fb::RawFbPageTrend
 							\item server::db::raw\_data::fb::RawFbPost
 						\end{itemize}
-					\item \textbf{Attributi}: TO DO
-					\item \textbf{Metodi}: TO DO
+					\item \textbf{Attributi}:
+					\begin{itemize}
+						\item name_str : String
+						\item category_str : String
+					\end{itemize}
+					\item \textbf{Metodi}: N/A
 				\end{itemize}
 			% subparagraph server_db_raw_data_fb_rawfbpage [end]
 
@@ -137,8 +147,12 @@
 					\item \textbf{Descrizione}: classe che rappresenta il modello del trend dei dati una pagina Facebook;
 					\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare e il numero di like e di talking about di ogni singola pagina;
 					\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
-					\item \textbf{Attributi}: TO DO
-					\item \textbf{Metodi}: TO DO
+					\item \textbf{Attributi}: 
+					\begin{itemize}
+						\item likes_int : int
+						\item talking_about_int : int
+					\end{itemize}
+					\item \textbf{Metodi}: N/A
 				\end{itemize}
 			% subparagraph server_db_raw_data_fb_rowfbpagetrend [end]
 
@@ -154,8 +168,12 @@
 							\item server::db::raw\_data::fb::RawFbEventTrend
 							\item server::db::raw\_data::fb::RawFbPost
 						\end{itemize}
-					\item \textbf{Attributi}: TO DO
-					\item \textbf{Metodi}: TO DO
+					\item \textbf{Attributi}: 
+					\begin{itemize}
+						\item name_str : String
+						\item location_obj : GeoPoint
+					\end{itemize}
+					\item \textbf{Metodi}: N/A
 				\end{itemize}
 			% subparagraph server_db_raw_data_fb_rawfbevent [end]
 
@@ -166,8 +184,14 @@
 					\item \textbf{Descrizione}: classe che rappresenta il modello del trend di un evento su Facebook;
 					\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di utenti invitati, partecipanti e non di un evento;
 					\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
-					\item \textbf{Attributi}: TO DO
-					\item \textbf{Metodi}: TO DO
+					\item \textbf{Attributi}: 
+					\begin{itemize}
+						\item invited_int : int
+						\item attending_int : int
+						\item declined_int : int
+						\item maybe_int : int
+					\end{itemize}
+					\item \textbf{Metodi}: N/A
 				\end{itemize}
 			% subparagraph server_db_raw_data_fb_rowfbeventtrend [end]
 
@@ -177,8 +201,17 @@
 				\begin{itemize}
 					\item \textbf{Descrizione}: classe che rappresenta il modello del trend dei post di una pagina o di un evento su Facebook;
 					\item \textbf{Utilizzo}: la classe fornisce metodi per sommare i dati statici sui post di Facebook;
-					\item \textbf{Attributi}: TO DO
-					\item \textbf{Metodi}: TO DO
+					\item \textbf{Attributi}: 
+					\begin{itemize}
+						\item date_created_date : Date
+						\item posts_int : int
+						\item comments_int : int
+						\item admin_posts_int : int
+						\item admin_comments_int : int
+						\item posts_like_int : int
+						\item comments_like_int : int
+					\end{itemize}
+					\item \textbf{Metodi}: N/A
 				\end{itemize}
 			% subparagraph server_db_raw_data_fb_rawfbpost [end]
 
@@ -211,8 +244,11 @@
 				\item \textbf{Descrizione}: classe astratta che definisce il modello dati grezzi relativi a Twitter;
 				\item \textbf{Utilizzo}: la classe contiene l'id fornito dall'utente il quale permette di identificare univocamente la risorsa nel social media;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}: 
+					\begin{itemize}
+						\item name_str : String
+					\end{itemize}
+				\item \textbf{Metodi}: N/A
 			\end{itemize}
 		% subparagraph server_db_raw_data_tw_abstwrawdata [end]
 
@@ -228,8 +264,12 @@
 						\item server::db::raw\_data::tw::RawTwUserTrend
 						\item server::db::raw\_data::tw::RawTwUserTweet
 					\end{itemize}
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}: 
+					\begin{itemize}
+						\item full_name_str : String
+						\item photo_url_str : String
+					\end{itemize}
+				\item \textbf{Metodi}: N/A
 			\end{itemize}
 		% subparagraph server_db_raw_data_tw_rawtwuser [end]
 
@@ -240,8 +280,14 @@
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend di un utente Twitter;
 				\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di favoriti, di followers, di friends e statuses di una determinata persona;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsTwRawData
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}: 
+					\begin{itemize}
+						\item favourites_count_int : int
+						\item followers_count_int : int
+						\item friends_count_int : int
+						\item sattuses_count_int : int
+					\end{itemize}
+				\item \textbf{Metodi}: N/A
 			\end{itemize}
 		% subparagraph server_db_raw_data_tw_rawigusertrend [end]
 
@@ -252,8 +298,15 @@
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend dei tweet relativi ad un utente Twitter;
 				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione dettagliata di un tweet creato da un utente specifico su Twitter;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}: 
+					\begin{itemize}
+						\item source_devices_list : List
+						\item favourites_count_int : int
+						\item media_count_int : int
+						\item retweets_count_int : int
+						\item tweets_count_int : int
+					\end{itemize}
+				\item \textbf{Metodi}: N/A
 			\end{itemize}
 		% subparagraph server_db_raw_data_tw_rawtwusertweet [end]
 
@@ -269,8 +322,8 @@
 						\item server::db::raw\_data::tw::RawTwHashtagTrend
 						\item server::db::raw\_data::tw::RawTwHashtagTweet
 					\end{itemize}
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}: N/A
+				\item \textbf{Metodi}: N/A
 			\end{itemize}
 		% subparagraph server_db_raw_data_tw_rawtwhashtag [end]
 
@@ -281,8 +334,13 @@
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend di un hashtag su Twitter;
 				\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di favoriti, di followers e statuses di un determinato hashtag;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsTwRawData
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}:  
+					\begin{itemize}
+						\item followers_count_int : int
+						\item favourites_count_int : int
+						\item statuses_cont_int : int
+					\end{itemize}
+				\item \textbf{Metodi}: N/A
 			\end{itemize}
 		% subparagraph server_db_raw_data_tw_rawighashtagtrend [end]
 
@@ -293,8 +351,11 @@
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend dei tweet relativi ad un hashtag Twitter;
 				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione della locazione spaziale di un tweet relativo all'hashtag su Twitter;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::RawTwUserTweet
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}:  
+					\begin{itemize}
+						\item time_zone_list : List
+					\end{itemize}
+				\item \textbf{Metodi}: N/A
 			\end{itemize}
 		% subparagraph server_db_raw_data_tw_rawtwhashtagtweet [end]
 
@@ -327,8 +388,11 @@
 				\item \textbf{Descrizione}: classe astratta che definisce il modello dei dati grezzi relativi ad Instagram;
 				\item \textbf{Utilizzo}: la classe contiene l'id fornito dall'utente il quale permette di identificare univocamente la risorsa nel social media;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}:  
+					\begin{itemize}
+						\item name_node_str : String
+					\end{itemize}
+				\item \textbf{Metodi}: N/A
 			\end{itemize}
 		% subparagraph server_db_raw_data_ig_absigrawdata [end]
 
@@ -344,8 +408,12 @@
 						\item server::db::raw\_data::ig::RawIgUserTrend
 						\item server::db::raw\_data::ig::RawIgMedia
 					\end{itemize}
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}:  
+					\begin{itemize}
+						\item id_int : int
+						\item fullname_str : String
+					\end{itemize}
+				\item \textbf{Metodi}: N/A
 			\end{itemize}
 		% subparagraph server_db_raw_data_ig_rawiguser [end]
 
@@ -356,8 +424,13 @@
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend di un utente Instagram;
 				\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di media, di followed e follows di una determinata persona;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}:  
+					\begin{itemize}
+						\item media_int : int
+						\item followed_by_int : int
+						\item follows_int : int
+					\end{itemize}
+				\item \textbf{Metodi}: N/A
 			\end{itemize}
 		% subparagraph server_db_raw_data_ig_rawigusertrend [end]
 
@@ -373,8 +446,8 @@
 						\item server::db::raw\_data::ig::RawIgHashtagTrend
 						\item server::db::raw\_data::ig::RawIgMedia
 					\end{itemize}
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}: N/A
+				\item \textbf{Metodi}: N/A
 			\end{itemize}
 		% subparagraph server_db_raw_data_ig_rawighashtag [end]
 
@@ -385,8 +458,11 @@
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend di un hastag Instagram;
 				\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di media caricati di un determinato hashtag;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}:  
+					\begin{itemize}
+						\item media_count_int : int
+					\end{itemize}
+				\item \textbf{Metodi}: N/A
 			\end{itemize}
 		% subparagraph server_db_raw_data_ig_rawighashtagtrend [end]
 
@@ -397,12 +473,21 @@
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati di un media realtivo ad Instagram;
 				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione dettagliata di un media caricato da un utente specifico su Instagram. Vengono forniti metodi automatici per il conteggio dei parametri che verranno utilizzati per seguire un trend;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}:  
+					\begin{itemize}
+						\item date_created_date : Date
+						\item media_int : int
+						\item comments_int : int
+						\item likes_int : int
+						\item photos_count_int : int
+						\item videos_count_int : int
+						\item location_obj : List
+					\end{itemize}
+				\item \textbf{Metodi}: N/A
 			\end{itemize}
 		% subparagraph server_db_raw_data_ig_rawigmedia [end]
 
-\subsubsection{server::db::app\_data} % (fold)
+\subsubsection{server::db::app\_data} % (fold) -----------------------------------------------------
 \label{ssub:bdsm_app_server_app_data}
 
 
