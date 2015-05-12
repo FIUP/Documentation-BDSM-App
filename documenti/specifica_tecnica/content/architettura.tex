@@ -45,7 +45,7 @@ L’architettura generale non tratta l’intero insieme delle sottoclassi del si
 		Il client si occuperà di analizzarla per determinare se la richiesta ha avuto un esito positivo o negativo e nel primo caso utilizzerà i dati per effettuare le opportune operazioni.
 
 		\subsubsection{Architettura Client Tier}
-		Per il livello client è stato adottato il design pattern MVW offerto dal framework AngularJS. Questo livello implementa l'interfaccia grafica con cui utenti autenticati e amministratori possono interagire con il sistema in modo completo.
+		L'architettura del livello client è stata pensata nell'ottica MVW tipica del framework AngularJS. Questo livello implementa l'interfaccia grafica attraverso la quale utenti autenticati e amministratori possono interagire con il sistema in modo completo.
 		\newline
 		Gli utenti invocheranno determinate azioni utilizzando i pulsanti forniti dall'interfaccia e il sistema risponderà fornendo pagine di configurazione interattive oppure visualizzando una serie di grafici che verranno aggiornanti costantemente utilizzando i servizi REST forniti dall'applicazione. In dettaglio:
 		\begin{itemize}

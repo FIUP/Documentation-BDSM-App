@@ -20,15 +20,12 @@
 	\subsubsection{MVW} % (fold)
 	\label{ssub:mvw}
 		\begin{itemize}
-			\item \textbf{Scope dell'utilizzo}: è un Design Pattern simile a MVC, che permette di avere una corrispondenza più diretta e automatica tra la \emph{view} e il \emph{model}. L'acronimo MVW sta infatti per Model-View-Whatever, dove \emph{Whatever} indica \emph{``whatever works for you''};
-			\item \textbf{Contesto dell'utilizzo}: 
-				\begin{itemize}
-					\item \textbf{Client}: viene utilizzato per gestire il lato client dell'applicazione. Questo ci viene fornito direttamente dal framework AngularJS. La parte W (Whatever) assume internamente due diversi aspetti. \newline
-					Il diagramma che riporta lo schema del pattern è quello presente alla sezione \ref{sub:client}.
-				\end{itemize}
+			\item Non si tratta di un design pattern vero e proprio, ma è un modo di intendere il pattern MVC prendendo alcune caratteristiche dal pattern MVVM, cosa che permette di avere una corrispondenza più diretta e automatica tra la \emph{view} e il \emph{model}. L'acronimo MVW sta infatti per Model-View-Whatever, dove \emph{Whatever} indica \emph{``whatever works for you''};
 		\end{itemize}
+	% subsubsection mvw (end)
 
-		\paragraph{MVC} % (fold)
+
+		\subsubsection{MVC} % (fold)
 		\label{par:mvc}
 			\begin{itemize}
 				\item \textbf{Scope dell'utilizzo}: questo pattern è utilizzato per separare le responsabilità dell’applicazione a diversi componenti e permettere di fare una chiara divisione tra presentazione, struttura dei dati e operazioni su di essi;
@@ -38,9 +35,9 @@
 						\item \textbf{Client}: viene utilizzato nel livello client per separare i componenti a seconda delle loro responsabilità e secondo una connotazione semantica. Il formalismo che viene quindi assunto per dividere i package è proprio quello fornito dal pattern in questione e cioè: \textbf{model, view e controller}. Questi però non interagiscono tra di loro nella maniera canonica che il pattern offre, ma seguono lo stile proposto da MVVM descritto alla sezione \ref{par:mvvm}.
 					\end{itemize}
 			\end{itemize}
-		% paragraph mvc (end)
+		% subsubsection mvc (end)
 
-		\paragraph{MVVM} % (fold)
+		\subsubsection{MVVM} % (fold)
 		\label{par:mvvm}
 			\begin{itemize}
 				\item \textbf{Scope dell'utilizzo}: questo pattern è utilizzato per gestire il modo con il quale le diverse parti comunicano tra loro per scambiare i dati e per gestire le operazioni che l'utente richiede attraverso l'interazione con la View;
@@ -50,8 +47,8 @@
 						\item \textbf{Client}: viene utilizzato nel livello client per gestire lo scambio dei dati e le interazioni che fanno cambiare le View e lo stato del Model, attraverso principalmente un sistema di two-way data binding e di eventi. Il Model però non interagisce direttamente con le View, ma passa attraverso un controller che fa da collante tra la View e il Model (ViewModel) attraverso l'oggetto \$scope.
 					\end{itemize}
 			\end{itemize}
-		% paragraph mvvm (end)
-	% subsubsection mvw (end)
+		% subsubsection mvvm (end)
+
 
 	\subsubsection{Dependency Injection} % (fold)
 	\label{ssub:dependency_injection}
