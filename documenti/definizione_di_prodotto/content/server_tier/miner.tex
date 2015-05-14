@@ -47,8 +47,14 @@
 					\begin{itemize}
 						\item server::miner::AbsFetcher
 					\end{itemize}
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}:
+					\begin{itemize}
+						\item recipes\_id\_list : List
+					\end{itemize}
+				\item \textbf{Metodi}:   
+					\begin{itemize}
+						\item public schedule\_fetchers() : boolean
+					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_MinerScheduler [end]
 
@@ -63,8 +69,16 @@
 						\item server::miner::tw::AbsTwCounter
 						\item server::miner::ig::AbsIgCounter
 					\end{itemize}
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}: 
+					\begin{itemize}
+						\item counter\_int : int
+					\end{itemize}
+				\item \textbf{Metodi}:   
+					\begin{itemize}
+						\item count() : int
+						\item break\_condition : boolean
+						\item action() : boolean
+					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_AbsCounter [end]
 
@@ -79,8 +93,8 @@
 						\item server::miner::tw::AbsTwFetcher
 						\item server::miner::ig::AbsIgFetcher
 					\end{itemize}
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}: N/A
+				\item \textbf{Metodi}: N/A
 			\end{itemize}
 		% subparagraph server_miner_AbsFetcher [end]
 
@@ -113,8 +127,15 @@
 						\item server::miner::fb::FbPageFetcher
 						\item server::miner::fb::FbEventFetcher
 					\end{itemize}
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}: 
+					\begin{itemize}
+						\item item\_id\_int : int
+					\end{itemize}
+				\item \textbf{Metodi}:   
+					\begin{itemize}
+						\item public get\_static\_data() : String
+						\item get\_trend\_data() : void
+					\end{itemize}
 			\end{itemize}
 	% subparagraph server_miner_fb_AbsFbFetcher [end]
 
@@ -128,8 +149,16 @@
 					\begin{itemize}
 						\item server::miner::fb::PostCounter
 					\end{itemize}
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}: 
+					\begin{itemize}
+						\item page\_obj : RawFbPage
+						\item page\_trend\_obj : RawFbPageTrend
+					\end{itemize}
+				\item \textbf{Metodi}:   
+					\begin{itemize}
+						\item get\_data() : void
+						\item get\_trend\_data() : void
+					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_fb_FbPageFetcher [end]
 
@@ -147,8 +176,16 @@
 						\item server::miner::fb::InvitedCounter
 						\item server::miner::fb::RefusedCounter
 					\end{itemize}
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}: 
+					\begin{itemize}
+						\item event\_obj : RawFbEvent
+						\item event\_trend : RawFbEventTrend
+					\end{itemize}
+				\item \textbf{Metodi}:   
+					\begin{itemize}
+						\item get\_data() : void
+						\item get\_trend\_data() : void
+					\end{itemize}
 			\end{itemize}
 	% subparagraph server_miner_fb_FbEventFetcher [end]
 
@@ -168,8 +205,16 @@
 						\item server::miner::fb::CommentCounter
 						\item server::miner::fb::LikeCounter
 					\end{itemize}
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}:  
+					\begin{itemize}
+						\item counter\_int : int
+					\end{itemize}
+				\item \textbf{Metodi}:   
+					\begin{itemize}
+						\item public counter\_int : int
+						\item protected break\_condition() : boolean
+						\item protected action() : boolean
+					\end{itemize}
 			\end{itemize}
 	% subparagraph server_miner_fb_AbsFbCounter [end]
 
@@ -179,8 +224,11 @@
 				\item \textbf{Descrizione}: classe che descrive l'algoritmo per il counting degli invitati che non hanno ancora risposto in un evento Facebook;
 				\item \textbf{Utilizzo}: classe che ricava il numero di persone invitate che non hanno ancora risposto di un evento Facebook;
 				\item \textbf{Classi ereditate}: server::miner::fb::AbsFbCounter
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}: N/A
+				\item \textbf{Metodi}:  
+					\begin{itemize}
+						\item protected action() : boolean
+					\end{itemize}
 			\end{itemize}
 	% subparagraph server_miner_fb_AttendingCounter
 
@@ -190,8 +238,11 @@
 				\item \textbf{Descrizione}: classe che descrive l'algoritmo per il counting dei maybe in un evento Facebook;
 				\item \textbf{Utilizzo}: classe che ricava il numero di persone in forse per un evento Facebook;
 				\item \textbf{Classi ereditate}: server::miner::fb::AbsFbCounter
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}: N/A
+				\item \textbf{Metodi}:  
+					\begin{itemize}
+						\item protected action() : boolean
+					\end{itemize}
 			\end{itemize}
 	% subparagraph server_miner_fb_MaybeCounter
 
@@ -201,8 +252,11 @@
 				\item \textbf{Descrizione}: classe che descrive l'algoritmo per il counting degli invited in un evento Facebook;
 				\item \textbf{Utilizzo}: classe che ricava il numero di persone invitate ad un evento Facebook;
 				\item \textbf{Classi ereditate}: server::miner::fb::AbsFbCounter
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}: N/A
+				\item \textbf{Metodi}:  
+					\begin{itemize}
+						\item protected action() : boolean
+					\end{itemize}
 			\end{itemize}
 	% subparagraph server_miner_fb_InvitedCounter
 
@@ -212,8 +266,11 @@
 				\item \textbf{Descrizione}: classe che descrive l'algoritmo per il counting dei refused in un evento Facebook;
 				\item \textbf{Utilizzo}: classe che ricava il numero di persone che hanno rifiutato l'invito per un evento Facebook;
 				\item \textbf{Classi ereditate}: server::miner::fb::AbsFbCounter
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}: N/A
+				\item \textbf{Metodi}:  
+					\begin{itemize}
+						\item protected action() : boolean
+					\end{itemize}
 			\end{itemize}
 	% subparagraph server_miner_fb_RefusedCounter
 
@@ -228,8 +285,15 @@
 						\item server::miner::fb::CommentCounter
 						\item server::miner::fb::LikeCounter
 					\end{itemize}
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}:  
+					\begin{itemize}
+						\item comments\_count\_int : int
+						\item likes\_count\_int : int
+					\end{itemize}
+				\item \textbf{Metodi}:  
+					\begin{itemize}
+						\item protected action() : boolean
+					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_fb_PostCounter
 
@@ -239,8 +303,11 @@
 				\item \textbf{Descrizione}: classe che descrive l'algoritmo per calcolare il numero di commenti per ogni post;
 				\item \textbf{Utilizzo}: classe che ricava il numero di commenti per ogni post;
 				\item \textbf{Classe ereditate}: server::miner::fb::AbsFbCounter
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}: N/A
+				\item \textbf{Metodi}:  
+					\begin{itemize}
+						\item protected action() : boolean
+					\end{itemize}
 			\end{itemize}
 	% subparagraph server_miner_fb_CommentCounter
 
@@ -250,8 +317,11 @@
 				\item \textbf{Descrizione}: classe che descrive l'algoritmo per calcolare il numero di like per ogni post;
 				\item \textbf{Utilizzo}: classe che ricava il numero di like per ogni post;
 				\item \textbf{Classe ereditate}: server::miner::fb::AbsFbCounter
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}: N/A
+				\item \textbf{Metodi}:  
+					\begin{itemize}
+						\item protected action() : boolean
+					\end{itemize}
 			\end{itemize}
 	% subparagraph server_miner_fb_LikeCounter
 
@@ -285,8 +355,15 @@
 						\item server::miner::tw::TwHashtagFetcher
 						\item server::miner::tw::TwUserFetcher
 					\end{itemize}
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}:   
+					\begin{itemize}
+						\item name\_str : String
+					\end{itemize}
+				\item \textbf{Metodi}:  
+					\begin{itemize}
+						\item public get\_data : void
+						\item public get\_trend\_data() : void
+					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_tw_AbsTwFetcher
 
@@ -300,8 +377,15 @@
 					\begin{itemize}
 						\item server::miner::tw::HashtagTweetCounter
 					\end{itemize}
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}:    
+					\begin{itemize}
+						\item hasjtag\_obj : RawTwHashtag
+					\end{itemize}
+				\item \textbf{Metodi}:  
+					\begin{itemize}
+						\item public get\_data : void
+						\item public get\_trend\_data() : void
+					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_tw_TwHashtagFetcher
 
@@ -315,8 +399,15 @@
 					\begin{itemize}
 						\item server::miner::tw::UserTweetCounter
 					\end{itemize}
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}:    
+					\begin{itemize}
+						\item user\_obj : RawTwUser
+					\end{itemize}
+				\item \textbf{Metodi}:  
+					\begin{itemize}
+						\item public get\_data : void
+						\item public get\_trend\_data() : void
+					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_tw_TwUserFetcher
 
@@ -330,8 +421,11 @@
 					\begin{itemize}
 						\item server::miner::UserTweetCounter
 					\end{itemize}
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}: N/A
+				\item \textbf{Metodi}: 
+					\begin{itemize}
+						\item public count() : int
+					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_tw_AbsTwCounter
 
@@ -341,8 +435,18 @@
 				\item \textbf{Descrizione}: classe che descrive l'algoritmo per il counting dei campi di un tweet, relativo ad un utente, di cui ci interessa fare un trend;
 				\item \textbf{Utilizzo}: classe che ricava il numero dei retweets, il numero dei favoriti, il tipo di device, e il numero di media per ogni tweet;
 				\item \textbf{Classi ereditate}: server::miner::tw::AbsTwCounter
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}:    
+					\begin{itemize}
+						\item public retweets\_count : int
+						\item public favourites\_count : int
+						\item public media\_count : int
+						\item public source\_devices\_list : List
+					\end{itemize}
+				\item \textbf{Metodi}:  
+					\begin{itemize}
+						\item public action() : boolean
+						\item public break\_condition : boolean
+					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_tw_UserTweetCounter
 
@@ -353,8 +457,14 @@
 				\item \textbf{Descrizione}: classe che descrive l'algoritmo per il counting dei campi di un tweet, relativo ad un hashtag, di cui ci interessa fare un trend;
 				\item \textbf{Utilizzo}: classe che ricava anche la time zone di ogni tweet;
 				\item \textbf{Classi ereditate}: server::miner::tw::UserTweetCounter
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}:    
+					\begin{itemize}
+						\item public time\_zones\_list : List
+					\end{itemize}
+				\item \textbf{Metodi}:  
+					\begin{itemize}
+						\item public action() : boolean
+					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_tw_HashtagTweetCounter
 
@@ -388,8 +498,15 @@
 						\item server::miner::ig::IgUserFetcher
 						\item server::miner::ig::IgHashtagFetcher
 					\end{itemize}
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}:    
+					\begin{itemize}
+						\item name\_str : String
+					\end{itemize}
+				\item \textbf{Metodi}:  
+					\begin{itemize}
+						\item public get\_data : void
+						\item public get\_trend\_data() : void
+					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_ig_AbsIgFetcher
 
@@ -403,8 +520,16 @@
 					\begin{itemize}
 						\item server::miner::ig::MediaCounter
 					\end{itemize}
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}:    
+					\begin{itemize}
+						\item user\_obj : RawIgUser
+						\item user\_trend\_obj : RawIgUserTrend
+					\end{itemize}
+				\item \textbf{Metodi}:  
+					\begin{itemize}
+						\item public get\_data : void
+						\item public get\_trend\_data() : void
+					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_ig_IgUserFetcher
 
@@ -418,8 +543,16 @@
 					\begin{itemize}
 						\item server::miner::ig::MediaCounter
 					\end{itemize}
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}:    
+					\begin{itemize}
+						\item hashtag\_obj : RawIgHashtag
+						\item hashtag\_trend\_obj : RawIgHashtagTrend
+					\end{itemize}
+				\item \textbf{Metodi}:  
+					\begin{itemize}
+						\item public get\_data : void
+						\item public get\_trend\_data() : void
+					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_ig_IgHashtagFetcher
 
@@ -433,8 +566,11 @@
 					\begin{itemize}
 						\item server::miner::ig::MediaCounter
 					\end{itemize}
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}: N/A
+				\item \textbf{Metodi}: 
+					\begin{itemize}
+						\item public count() : int
+					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_ig_AbsIgCounter
 
@@ -445,8 +581,19 @@
 				\item \textbf{Descrizione}: classe che descrive l'algoritmo per il counting delle metriche necessarie a descrivere il trend dei media di un utente o di un hashtag  Instagram;
 				\item \textbf{Utilizzo}: classe che ricava il numero di commenti, il numero di like, il numero di foto e il numero di video di un media;
 				\item \textbf{Classi ereditate}: server::miner::ig::AbsIgCounter
-				\item \textbf{Attributi}: TO DO
-				\item \textbf{Metodi}: TO DO
+				\item \textbf{Attributi}:    
+					\begin{itemize}
+						\item public likes\_count\_int : int
+						\item public comments\_count\_int : int
+						\item public photos\_count\_int : int
+						\item public videos\_count\_int : int
+						\item public geolist\_list : List
+					\end{itemize}
+				\item \textbf{Metodi}:  
+					\begin{itemize}
+						\item protected action() : boolean
+						\item protected break\_condition() : boolean
+					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_ig_MediaCounter
 
