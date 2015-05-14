@@ -96,11 +96,12 @@
           \item server::endpoints::resp::public::MetricListResponse;
           \item server::endpoints::resp::private::RecipeListResponse;
         \end{itemize}
-		\item \textbf{Attributi}:  
+		\item \textbf{Attributi}: N/A
+		\item \textbf{Metodi}:   
 			\begin{itemize}
-				\item 
+				\item public recipe\_list() : RecipeListResponse
+				\item public metric\_list(request : ResourceContainer) : MetricListResponse
 			\end{itemize}
-		\item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_public_recipeapi (end)
 
@@ -117,8 +118,16 @@
           \item server::endpoints::resp::public::fb::EventResponse
           \item server::endpoints::resp::public::fb::EventTrendListResponse
         \end{itemize}
-		\item \textbf{Attributi}: TO DO
-		\item \textbf{Metodi}: TO DO
+		\item \textbf{Attributi}: N/A
+		\item \textbf{Metodi}:   
+			\begin{itemize}
+				\item public get\_page(request : ResourceContainer) : PageResponse
+				\item public get\_page\_trend(request : ResourceContainer) : PageTrendListResponse
+				\item public get\_page\_posts(request : ResourceContainer) : PostListResponse
+				\item public get\_event(request : ResourceContainer) : EventResponse
+				\item public get\_event\_trend(request : ResourceContainer) : EventTrendListResponse
+				\item public get\_event\_posts(request : ResourceContainer) : PostListResponse
+			\end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_public_fbmetricsapi (end)
 
@@ -133,8 +142,14 @@
           \item server::endpoints::resp::public::tw::UserTrendListResponse
           \item server::endpoints::resp::public::tw::TweetListResponse
         \end{itemize}
-		\item \textbf{Attributi}: TO DO
-		\item \textbf{Metodi}: TO DO
+		\item \textbf{Attributi}: N/A
+		\item \textbf{Metodi}:   
+			\begin{itemize}
+				\item public get\_user(request : ResourceContainer) : UserResponse
+				\item public get\_user\_trend(request : ResourceContainer) : UserTrendListResponse
+				\item public get\_user\_tweet(request : ResourceContainer) : TweetListResponse
+				\item public get\_hashtag\_tweet(request : ResourceContainer) : TweetListResponse
+			\end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_public_twmetricsapi (end)
 
@@ -150,8 +165,15 @@
           \item server::endpoints::resp::public::ig::MediaListResponse
           \item server::endpoints::resp::public::ig::HashtagTrendListResponse
         \end{itemize}
-		\item \textbf{Attributi}: TO DO
-		\item \textbf{Metodi}: TO DO
+		\item \textbf{Attributi}: N/A
+		\item \textbf{Metodi}:   
+			\begin{itemize}
+				\item public get\_user(request : ResourceContainer) : UserResponse
+				\item public get\_user\_trend(request : ResourceContainer) : UserTrendListResponse
+				\item public get\_user\_media(request : ResourceContainer) :MediaListResponse
+				\item public get\_hashtag\_trend(request : ResourceContainer) : HashtagTrendtListResponse
+				\item public get\_hashtag\_media(request : ResourceContainer) : MediaListResponse
+			\end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_public_igmetricsapi (end)
 
@@ -185,8 +207,13 @@
         \begin{itemize}
           \item server::endpoints::resp::private::RecipeListResponse
         \end{itemize}
-		\item \textbf{Attributi}: TO DO
-		\item \textbf{Metodi}: TO DO
+		\item \textbf{Attributi}: N/A
+		\item \textbf{Metodi}:   
+			\begin{itemize}
+				\item public add\_recipe(request : ResourceContainer) : void
+				\item public remove\_recipe(request : ResourceContainer) : void
+				\item public rate\_recipe(request : ResourceContainer) : void
+     	 \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_private_recipeapi (end)
 
@@ -200,8 +227,16 @@
           \item server::endpoints::resp::private::UserResponse
           \item server::endpoints::resp::private::UserListResponse
         \end{itemize}
-		\item \textbf{Attributi}: TO DO
-		\item \textbf{Metodi}: TO DO
+		\item \textbf{Attributi}: N/A
+		\item \textbf{Metodi}:   
+			\begin{itemize}
+				\item public user\_list() : UserListResponse
+				\item public user\_details(request : ResourceContainer) : UserResponse
+				\item public add\_user(request : ResourceContainer) : void
+				\item public edit\_user(request : ResourceContainer) : void
+				\item public edit\_permission(request : ResourceContainer) : void
+				\item public remove\_user(request : ResourceContainer) : void
+     	 \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_private_userapi (end)
 
@@ -214,8 +249,13 @@
         \begin{itemize}
           \item server::endpoints::resp::private::RecipeReqListResponse
         \end{itemize}
-		\item \textbf{Attributi}: TO DO
-		\item \textbf{Metodi}: TO DO
+		\item \textbf{Attributi}: N/A
+		\item \textbf{Metodi}:   
+			\begin{itemize}
+				\item public request\_list() : RecipeReqListResponse
+				\item public add\_request(request : ResourceContainer) : void
+				\item public remove\_request(request : ResourceContainer) : void
+     	 \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_private_reciperequestapi (end)
 
@@ -228,8 +268,13 @@
         \begin{itemize}
           \item server::endpoints::resp::private::FavoriteListResponse
         \end{itemize}
-		\item \textbf{Attributi}: TO DO
-		\item \textbf{Metodi}: TO DO
+		\item \textbf{Attributi}: N/A
+		\item \textbf{Metodi}:   
+			\begin{itemize}
+				\item public favourites\_list() : FavouriteListResponse
+				\item public add\_favourite(request : ResourceContainer) : void
+				\item public remove\_favourite(request : ResourceContainer) : void
+     	 \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_private_favoritesapi (end)
 
