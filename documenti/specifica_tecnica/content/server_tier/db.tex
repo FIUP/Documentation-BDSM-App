@@ -70,7 +70,6 @@
 						\item server::db::raw\_data::fb::RawFbEventTrend
 						\item server::db::raw\_data::fb::RawFbPostTrend
 						\item server::db::raw\_data::tw::RawTwUserTrend
-						\item server::db::raw\_data::tw::RawTwHashtagTrend
 						\item server::db::raw\_data::tw::RawTwUserTweet
 						\item server::db::raw\_data::ig::RawIgUserTrend
 						\item server::db::raw\_data::ig::RawIgHashtagTrend
@@ -205,7 +204,7 @@
 		\label{subp:server_db_raw_data_tw_rawtwuser}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati di un utente Twitter;
-				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione completa dell'utente Twitter. Vengono forniti metodi automatici per il conteggio dei parametri che verranno utilizzati per seguire un trend;;
+				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione completa dell'utente Twitter. Vengono forniti metodi automatici per il conteggio dei parametri che verranno utilizzati per seguire un trend;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsTwRawData
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
@@ -240,26 +239,14 @@
 		\label{subp:server_db_raw_data_tw_rawtwhashtag}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati di un hashtag su Twitter;
-				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione minimale di un hashtag su Twitter. Vengono forniti metodi automatici per il conteggio dei parametri che verranno utilizzati per seguire un trend;
+				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione minimale di un hashtag su Twitter. Vengono forniti metodi automatici per il conteggio dei parametri che verranno utilizzati per seguire un trend, in oltre contiene un campo dati che conta i tweet relativi all'hashtag selezionato;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsTwRawData
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item server::db::raw\_data::tw::RawTwHashtagTrend
 						\item server::db::raw\_data::tw::RawTwHashtagTweet
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_db_raw_data_tw_rawtwhashtag [end]
-
-
-		\subparagraph{server::db::raw\_data::tw::RawTwHashtagTrend} % (fold)
-		\label{subp:server_db_raw_data_tw_rawighashtagtrend}
-			\begin{itemize}
-				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend di un hashtag su Twitter;
-				\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di favoriti, di followers e statuses di un determinato hashtag;
-				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsTwRawData
-			\end{itemize}
-		% subparagraph server_db_raw_data_tw_rawighashtagtrend [end]
-
 
 		\subparagraph{server::db::raw\_data::tw::RawTwHashtagTweet} % (fold)
 		\label{subp:server_db_raw_data_tw_rawtwhashtagtweet}
