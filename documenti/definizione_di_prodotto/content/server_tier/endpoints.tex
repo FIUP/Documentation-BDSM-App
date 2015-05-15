@@ -337,8 +337,8 @@
           \item server::endpoints::resp::public::ig::UserResponse
           \item server::endpoints::resp::public::ig::HashtagResponse
         \end{itemize}
-		\item \textbf{Attributi}: TO DO
-		\item \textbf{Metodi}: TO DO
+		\item \textbf{Attributi}: N/A
+		\item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_metriclistresponse (end)
 
@@ -365,8 +365,12 @@
       \item \textbf{Descrizione}: rappresenta il modello dei dati di una pagina Facebook da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati di una pagina Facebook al client;
       
-	  \item \textbf{Attributi}: TO DO
-	  \item \textbf{Metodi}: TO DO
+	  \item \textbf{Attributi}: 
+	  	\begin{itemize}
+	  		\item name\_str : String
+	  		\item category\_str : String
+	  	\end{itemize}
+	  \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_pageresponse (end)
 
@@ -379,8 +383,8 @@
         \begin{itemize}
           \item server::endpoints::resp::public::fb::PageResponse
         \end{itemize}
-	  \item \textbf{Attributi}: TO DO
-	  \item \textbf{Metodi}: TO DO
+	  \item \textbf{Attributi}: N/A
+	  \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_pagelistresponse (end)
 
@@ -390,8 +394,12 @@
       \item \textbf{Descrizione}: rappresenta il modello dei dati dei trend di una pagina Facebook da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei trend di una pagina Facebook al client;
       %\item \textbf{Relazioni con altre classi}:
-	  \item \textbf{Attributi}: TO DO
-	  \item \textbf{Metodi}: TO DO
+	  \item \textbf{Attributi}:  
+	  	\begin{itemize}
+	  		\item likes\_int : int
+	  		\item talking\_about\_int : int
+	  	\end{itemize}
+	  \item \textbf{Metodi}: N/A
     \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_pagetrendresponse (end)
 
@@ -404,8 +412,8 @@
         \begin{itemize}
           \item server::endpoints::resp::public::fb::PageTrendResponse
         \end{itemize}
-	  \item \textbf{Attributi}: TO DO
-	  \item \textbf{Metodi}: TO DO
+	  \item \textbf{Attributi}: N/A
+	  \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_pagetrendlistresponse (end)
 
@@ -415,8 +423,12 @@
       \item \textbf{Descrizione}: rappresenta il modello dei dati di un evento di Facebook da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati di un evento Facebook al client;
       
-	  \item \textbf{Attributi}: TO DO
-	  \item \textbf{Metodi}: TO DO
+	  \item \textbf{Attributi}:  
+	  	\begin{itemize}
+	  		\item name\_str : String
+	  		\item location\_obj : RawLocation
+	  	\end{itemize}
+	  \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_eventresponse (end)
 
@@ -429,8 +441,8 @@
         \begin{itemize}
           \item server::endpoints::resp::public::fb::EventResponse
         \end{itemize}
-	  \item \textbf{Attributi}: TO DO
-	  \item \textbf{Metodi}: TO DO
+	  \item \textbf{Attributi}: N/A
+	  \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_eventlistresponse (end)
 
@@ -440,8 +452,14 @@
       \item \textbf{Descrizione}: rappresenta il modello dei dati dei trend di un evento Facebook da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei trend di un evento Facebook al client;
       
-	  \item \textbf{Attributi}: TO DO
-	  \item \textbf{Metodi}: TO DO
+	  \item \textbf{Attributi}:  
+	  	\begin{itemize}
+	  		\item invited\_int : int
+	  		\item attending\_int : int
+	  		\item declined\_int : int
+	  		\item maybe\_int : int
+	  	\end{itemize}
+	  \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_eventtrendresponse (end)
 
@@ -454,8 +472,8 @@
         \begin{itemize}
           \item server::endpoints::resp::public::fb::EventTrendResponse
         \end{itemize}
-	  \item \textbf{Attributi}: TO DO
-	  \item \textbf{Metodi}: TO DO
+	  \item \textbf{Attributi}: N/A
+	  \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_eventtrendlistresponse (end)
 
@@ -465,8 +483,17 @@
       \item \textbf{Descrizione}: rappresenta il modello dei dati dei post di Facebook da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati dei post Facebook al client;
       
-	  \item \textbf{Attributi}: TO DO
-	  \item \textbf{Metodi}: TO DO
+	  \item \textbf{Attributi}:  
+	  	\begin{itemize}
+	  		\item date\_created\_date : Date
+	  		\item posts\_int : int
+	  		\item comments\_int : int
+	  		\item admin\_posts\_int : int
+	  		\item admin\_comments\_int : int
+	  		\item posts\_likes\_int : int
+	  		\item comments\_likes\_int :int
+	  	\end{itemize}
+	  \item \textbf{Metodi}: N/A
     \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_postresponse (end)
 
@@ -479,8 +506,8 @@
         \begin{itemize}
           \item server::endpoints::resp::public::fb::PostResponse
         \end{itemize}
-	  \item \textbf{Attributi}: TO DO
-	  \item \textbf{Metodi}: TO DO
+	  \item \textbf{Attributi}: N/A
+	  \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_postlistresponse (end)
 
@@ -507,8 +534,14 @@
       \item \textbf{Descrizione}: rappresenta il modello dei dati di un profilo Twitter da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati di un profilo Twitter al client;
       
-	  \item \textbf{Attributi}: TO DO
-	  \item \textbf{Metodi}: TO DO
+	  \item \textbf{Attributi}:  
+	  	\begin{itemize}
+	  		\item email\_str : String
+	  		\item full\_name\_str : String
+	  		\item photo\_url\_str : String
+	  		\item screen\_name\_str : String
+	  	\end{itemize}
+	  \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_tw_pageresponse (end)
 
@@ -521,8 +554,8 @@
         \begin{itemize}
           \item server::endpoints::resp::public::tw::UserResponse
         \end{itemize}
-	  \item \textbf{Attributi}: TO DO
-	  \item \textbf{Metodi}: TO DO
+	  \item \textbf{Attributi}: N/A
+	  \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_tw_userlistresponse (end)
 
@@ -532,8 +565,14 @@
       \item \textbf{Descrizione}: rappresenta il modello dei dati dei trend di un profilo Twitter da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei trend di un profilo Twitter al client;
       
-	  \item \textbf{Attributi}: TO DO
-	  \item \textbf{Metodi}: TO DO
+	  \item \textbf{Attributi}:  
+	  	\begin{itemize}
+	  		\item favourites\_count\_int : int
+	  		\item followers\_count\_int : int
+	  		\item friends\_count\_int : int
+	  		\item statuses\_count\_int : int
+	  	\end{itemize}
+	  \item \textbf{Metodi}: N/A
     \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_tw_usertrendresponse (end)
 
@@ -546,8 +585,8 @@
         \begin{itemize}
           \item server::endpoints::resp::public::tw::UserTrendResponse
         \end{itemize}
-	  \item \textbf{Attributi}: TO DO
-	  \item \textbf{Metodi}: TO DO
+	  \item \textbf{Attributi}: N/A
+	  \item \textbf{Metodi}: N/A
     \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_tw_usertrendlistresponse (end)
 
@@ -557,8 +596,11 @@
       \item \textbf{Descrizione}: rappresenta il modello dei dati di un hashtag di Twitter da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati di un hashtag di Twitter al client;
       
-	  \item \textbf{Attributi}: TO DO
-	  \item \textbf{Metodi}: TO DO
+	  \item \textbf{Attributi}:  
+	  	\begin{itemize}
+	  		\item hashtag\_name\_str : String
+	  	\end{itemize}
+	  \item \textbf{Metodi}: N/A
     \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_tw_hashtagresponse (end)
 
@@ -571,8 +613,8 @@
         \begin{itemize}
           \item server::endpoints::resp::public::tw::HashtagResponse
         \end{itemize}
-	  \item \textbf{Attributi}: TO DO
-	  \item \textbf{Metodi}: TO DO
+	  \item \textbf{Attributi}: N/A
+	  \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_tw_hashtaglistresponse (end)
 
@@ -582,8 +624,16 @@
       \item \textbf{Descrizione}: rappresenta il modello dei dati dei tweet di Twitter da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati dei tweet di Twitter al client;
       
-	  \item \textbf{Attributi}: TO DO
-	  \item \textbf{Metodi}: TO DO
+	  \item \textbf{Attributi}: 
+	  	\begin{itemize}
+	  		\item source\_devices\_list : List
+	  		\item favourites\_count\_int : int
+	  		\item media\_count\_int : int
+	  		\item retweets\_count\_int : int
+	  		\item tweets\_count\_int : int
+	  		\item time\_zone\_list : List
+	  	\end{itemize}
+	  \item \textbf{Metodi}: N/A
     \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_tw_tweetresponse (end)
 
@@ -596,8 +646,8 @@
         \begin{itemize}
           \item server::endpoints::resp::public::tw::TweetResponse
         \end{itemize}
-	  \item \textbf{Attributi}: TO DO
-	  \item \textbf{Metodi}: TO DO
+	  \item \textbf{Attributi}: N/A
+	  \item \textbf{Metodi}: N/A
     \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_tw_tweetlistresponse (end)
 
