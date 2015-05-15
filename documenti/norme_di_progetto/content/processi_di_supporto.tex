@@ -34,7 +34,7 @@
 		\subsubsection{Procedure}
 
 			\paragraph{Gestione dei documenti}
-			Per ogni documento che il \roleProjectManager{} ritiene utile essere steso dovrà essere generato con appositi tools messi a disposizione. Essi permettono di mantenere un certo ordine e rigore logico. 
+			Per ogni documento che il \roleProjectManager{} ritiene utile essere steso dovrà essere generato con appositi tools messi a disposizione. Essi permettono di mantenere un certo ordine e rigore logico.
 
 				\subparagraph{Creazione di un nuovo documento}
 				Ogni qualvolta il \roleProjectManager{} voglia creare un nuovo documento dovrà eseguire i seguenti passi:
@@ -58,7 +58,7 @@
 			Ogni membro, a seconda di chi il \roleProjectManager{} riterrà opportuno, potrà andare a redigere il glossario. \\
 				\subparagraph{Inserimento di un termine}
 				In un apposito documento creato su Google Drive, ogni componente che durante la stesura di un documento andrà ad imbattersi in parole che possono risultare ambigue al lettore dovrà inserire quel termine nel documento.
-				
+
 				\subparagraph{Eliminazione di un termine}
 				L'incaricato alla stesura del \docNameVersionGlo{} andrà a prendere i termini presenti nel documenti in Google Drive e ad inserirli in ordine alfabetico. Una volta inserito il vocabolo provvederà alla sua rimozione da Google Drive.
 
@@ -113,7 +113,7 @@
 					% Modification History:
 					% Version	Modifier Date	Change							Author
 					% 0.0.1 	aaaa-mm-gg 		Descrizione del cambiamento		Cognome Nome
-					
+
 				\end{verbatim}
 			\noindent
 
@@ -128,7 +128,7 @@
 				La prima pagina contiene un elenco delle caratteristiche fondamentali del documento quali:
 				\begin{itemize}
 					\item logo del progetto;
-					\item logo, nome ed email del gruppo; 
+					\item logo, nome ed email del gruppo;
 					\item nome del documento;
 					\item versione del documento;
 					\item data redazione del documento;
@@ -181,10 +181,10 @@
 				\subparagraph{Specifica Tecnica} Il documento identifica una prima progettazione ad altro livello del sistema che si andrà a sviluppare. Saranno individuati e dettagliatamente specificati i design pattern utilizzati nel progetto.\\
 				Il documento è di tipo esterno.
 
-				\subparagraph{Definizione di Prodotto} Il documento identifica dettagliatamente il prodotto che si va a sviluppare. Tale documento sarà utilizzato dai programmatori per poter sviluppare il software.\\ 
+				\subparagraph{Definizione di Prodotto} Il documento identifica dettagliatamente il prodotto che si va a sviluppare. Tale documento sarà utilizzato dai programmatori per poter sviluppare il software.\\
 				Il documento è di tipo esterno.
 
-				\subparagraph{Glossario} Il documento raccoglie tutti i termini usati nella documentazione e ne riporta una definizione più descrittiva.  
+				\subparagraph{Glossario} Il documento raccoglie tutti i termini usati nella documentazione e ne riporta una definizione più descrittiva.
 				Il documento è di tipo esterno.
 
 
@@ -192,7 +192,7 @@
 			Tutti i documenti devono rispettare le seguenti norme tipografiche, utili per mantenere i documenti omogenei tra loro.
 
 				\subparagraph{Stili di testo}
-				Molti stili di testo sono già stati definiti ed inclusi in appositi file. \LaTeX{} permette così un forte controllo sulla tipografia, restringendone i campi d'applicazione solamente quando necessario.  
+				Molti stili di testo sono già stati definiti ed inclusi in appositi file. \LaTeX{} permette così un forte controllo sulla tipografia, restringendone i campi d'applicazione solamente quando necessario.
 				\begin{itemize}
 					\item \textbf{Colori}: il testo colorato è previsto solamente nei link. Essi sono di colore blu;
 					\item \textbf{Corsivo}: il testo corsivo deve essere utilizzato ogni qual volta si voglia dare enfasi ad una determinata parola/frase;
@@ -205,7 +205,7 @@
 				L'utilizzo della punteggiatura deve essere coerente per tutti i testi scritti in \LaTeX. Si impone così:
 				\begin{itemize}
 					\item \textbf{Maiuscole}: il primo carattere di testo maiuscolo è consentito solamente dopo il punto, punto di domanda, punto esclamativo o nell'intestazione di ogni elenco;
-					\item \textbf{Numeri}: i numeri dovranno rispettare lo standard SI/ISO 31-0 
+					\item \textbf{Numeri}: i numeri dovranno rispettare lo standard SI/ISO 31-0
 					\item \textbf{Parentesi}: nel testo è ammesso solamente l'uso di parentesi tonde. Il testo racchiuso tra parentesi non deve mai iniziare o finire con alcun carattere di spaziatura;
 					\item \textbf{Punteggiatura}: prima di ogni simbolo di punteggiatura \emph{non deve} essere presente alcun carattere di spaziatura. L'uso del punto servirà solamente per terminare una discussione;
 					\item \textbf{Spazi}: non dovranno mai essere presenti spazi doppi, o spazi per la tabulazione.
@@ -349,7 +349,7 @@
 			L'assegnazione delle anomalie riscontrate da parte del \roleVerifier{} deve avvenire tramite l'uso della piattaforma Asana.\\
 			Esistono due tipi di sezioni sulle quali effettuare la segnalazione:
 			\begin{itemize}
-				\item \textbf{Bug Tracking Document}: sezione dedicata alle anomalie riguardante la documentazione; 
+				\item \textbf{Bug Tracking Document}: sezione dedicata alle anomalie riguardante la documentazione;
 				\item \textbf{Bug Tracking Source}: sezione dedicata alle anomalie riguardante il codice sorgente del software.
 			\end{itemize}
 			\noindent
@@ -383,7 +383,7 @@
 					\item premere il pulsante ``Join App'';
 					\item ripetere la procedura per entrambi i repository citati al punto 4.
 				\end{itemize}
-				
+
 				\begin{figure}[htbp]
 					\centering
 					\includegraphics[scale=0.5]{images/proc_aggiunta_wercker.pdf}
@@ -396,12 +396,12 @@
 
 		\subsubsection{Norme}
 		\label{ssub:norme}
-			
+
 			\paragraph{Priorità risoluzione anomalie}
 			\label{par:priorita_risoluzione_anomalie}
 			Ogni anomalia riportata nel sistema deve avere una priorità di esecuzione. Di seguito vengono definite le possibili scelte:
 			\begin{itemize}
-				\item \textbf{P0}: priorità elevata, la risoluzione deve avvenire entro le 24 ore dalla notifica; 
+				\item \textbf{P0}: priorità elevata, la risoluzione deve avvenire entro le 24 ore dalla notifica;
 				\item \textbf{P1}: priorità media, la risoluzione deve avvenire entro 3 giorni dalla notifica;
 				\item \textbf{P2}: priorità normale, la risoluzione deve avvenire entro 7 giorni dalla notifica;
 				\item \textbf{P3}: priorità bassa, la risoluzione deve avvenire entro 2 settimane dalla notifica;
@@ -446,10 +446,14 @@
 			Non è presente di default negli strumenti impostati da Yeoman. Verrà quindi configurato dall'\roleAdministrator{} prima che gli altri componenti vadano a codificare questo tipo di test.
 			% paragraph protractor (end)
 
-			\paragraph{Testbed GAE} % (fold)
+
+			\paragraph{Python unittest}
+			\texttt{unittest} è un modulo integrato in Python che fornice un framework per effettuare i test di unità di tutti i moduli Python presenti nell'applicativo. Tra le diverse cose, \texttt{unittest} fornisce una classe base su cui definire diversi test e metodi per avviare il testing dell'applicativo.
+			% paragraph python_unittest (end)
+
+			\paragraph{GAE testbed} % (fold)
 			\label{par:testbed_gae}
-			TODO
+			\texttt{testbed} è un modulo Python fornito da Google che permette di testare in locale le componenti che saranno ospitati in Google App Engine fornendo dei servizi stub, dei metodi che simulano i vari servizi offerti da Google Cloud Platform.  In quanto tale modulo necessita che l'SDK di Google App Engine sia presente nel path di sistema, sarà compito dell'\roleAdministrator{} configurarne l'utilizzo in modo tale che rimanga uniforme per tutte le macchine che lo utilizzeranno.
 			% paragraph testbed_gae (end)
 
-		% subsubsection strumenti (end)	
-
+		% subsubsection strumenti (end)
