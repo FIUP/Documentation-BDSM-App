@@ -70,7 +70,6 @@
 						\item server::db::raw\_data::fb::RawFbEventTrend
 						\item server::db::raw\_data::fb::RawFbPostTrend
 						\item server::db::raw\_data::tw::RawTwUserTrend
-						\item server::db::raw\_data::tw::RawTwHashtagTrend
 						\item server::db::raw\_data::tw::RawTwUserTweet
 						\item server::db::raw\_data::ig::RawIgUserTrend
 						\item server::db::raw\_data::ig::RawIgHashtagTrend
@@ -285,7 +284,7 @@
 						\item favourites\_count\_int : int
 						\item followers\_count\_int : int
 						\item friends\_count\_int : int
-						\item sattuses\_count\_int : int
+						\item tweets\_count\_int : int
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
 			\end{itemize}
@@ -302,9 +301,7 @@
 					\begin{itemize}
 						\item source\_devices\_list : List
 						\item favourites\_count\_int : int
-						\item media\_count\_int : int
 						\item retweets\_count\_int : int
-						\item tweets\_count\_int : int
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
 			\end{itemize}
@@ -319,30 +316,15 @@
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsTwRawData
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item server::db::raw\_data::tw::RawTwHashtagTrend
 						\item server::db::raw\_data::tw::RawTwHashtagTweet
 					\end{itemize}
-				\item \textbf{Attributi}: N/A
+				\item \textbf{Attributi}: 
+					\begin{itemize}
+						\item tweets\_count\_int : int
+					\end{itemize}
 				\item \textbf{Metodi}: N/A
 			\end{itemize}
 		% subparagraph server_db_raw_data_tw_rawtwhashtag [end]
-
-
-		\subparagraph{server::db::raw\_data::tw::RawTwHashtagTrend} % (fold)
-		\label{subp:server_db_raw_data_tw_rawighashtagtrend}
-			\begin{itemize}
-				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend di un hashtag su Twitter;
-				\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di favoriti, di followers e statuses di un determinato hashtag;
-				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsTwRawData
-				\item \textbf{Attributi}:  
-					\begin{itemize}
-						\item followers\_count\_int : int
-						\item favourites\_count\_int : int
-						\item statuses\_cont\_int : int
-					\end{itemize}
-				\item \textbf{Metodi}: N/A
-			\end{itemize}
-		% subparagraph server_db_raw_data_tw_rawighashtagtrend [end]
 
 
 		\subparagraph{server::db::raw\_data::tw::RawTwHashtagTweet} % (fold)
