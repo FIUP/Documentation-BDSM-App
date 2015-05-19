@@ -336,13 +336,11 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item client::controller::user::TokenConfigRoute
 						\item client::controller::user::TokenConfigCtrl
 					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
-						\item TODO
+						\item \textbf{ng-controller}: permette l'attivazione del controller associato al template HTML relativo alla pagina di visualizzazione del form di richiesta/cancellazione di un token di accesso ai servizi REST;
+						\item \textbf{ng-if}: permette di visualizzare un determinato elemento, e il contenuto al suo interno, qualora la condizione specificata risultasse vera. Viene utilizzata per alternare i pulsanti di richiesta/cancellazione del token di accesso, a seconda se esso sia già stato generato o meno;
+						\item \textbf{ng-bind}: permette di rimpiazzare il contenuto di un elemento con il valore dato dall'espressione definita. Questa direttiva viene preferita all'uso dell'operatore \{\{ \}\}. Viene utilizzata per stampare il valore del token generato.
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_tokenconfig (end)
@@ -360,13 +358,14 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item client::controller::user::SettingsRoute
 						\item client::controller::user::SettingsCtrl
 					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
-						\item TODO
+						\item \textbf{ng-controller}: permette l'attivazione del controller associato al template HTML relativo alla pagina di visualizzazione del form delle impostazioni personali del profilo utente;
+						\item \textbf{ng-init}: permette di inizializzare una variabile definita all'interno del template con un determinato valore. Viene utilizzata per impostare le variabili \textbf{editUserName} e \textbf{editMail} inizialmente a \textbf{true};
+						\item \textbf{ng-model}: TODO;
+						\item \textbf{ng-submit}: permette di rilevare una scelta di invio dati dell'utente e attiva una funzione, in questo caso \textbf{saveEdit()} definita in SettingsCtrl;
+						\item \textbf{ng-click}: permette di rilevare una scelta dell'utente e attiva una funzione o cambia il valore di qualche variabile dichiarata all'interno del template, in questo caso cambia la variabile \textbf{editUserName} o \textbf{editMail} nel valore \textbf{editUserName} o \textbf{editMail};
+						\item \textbf{ng-disabled}: permette di bloccare un determinato campo fintanto che una o più condizioni non vengono soddisfatte. Viene utilizzata per bloccare il pulsante di salvataggio delle modifiche o per bloccare i campi di modifica della password e della mail, attivabile solo premendo su un apposito pulsante.
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_settings (end)
@@ -381,14 +380,6 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item client::view::user::MenuMain
 						\item client::view::user::MenuSecond
 						\item client::controller::user::MenuCtrl
-					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
-				\item \textbf{Direttive AngularJS}:
-					\begin{itemize}
-						\item TODO
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_menu (end)
@@ -408,13 +399,9 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item client::view::user::Menu
 						\item client::controller::user::MenuMainCtrl
 					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
-						\item TODO
+						\item \textbf{ui-sref}: permette di effettuare un reindirizzamento in una determinata pagina, con la possibilità di passare dei parametri. Viene utilizzata dai pulsanti presenti nel menu principale per navigare in alcune delle pagine del sistema;
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_menumain (end)
@@ -435,13 +422,9 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item client::view::admin::MenuSecondAdmin
 						\item client::controller::user::MenuSecondCtrl
 					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
-						\item TODO
+						\item \textbf{ui-sref}: permette di effettuare un reindirizzamento in una determinata pagina, con la possibilità di passare dei parametri. Viene utilizzata dai pulsanti presenti nel menu secondario per navigare in alcune delle pagine del sistema;
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_menusecond (end)
@@ -479,10 +462,6 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item client::view::admin::Insert
 						\item client::controller::admin::RecipeConfigRoute
 						\item client::controller::admin::RecipeConfigCtrl
-					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
 					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
