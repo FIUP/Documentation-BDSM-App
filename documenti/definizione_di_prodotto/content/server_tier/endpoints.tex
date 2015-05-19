@@ -221,7 +221,7 @@
     \label{subp:bdsm_app_server_endpoints_api_private_userapi}
     \begin{itemize}
       \item \textbf{Descrizione}: classe che rappresenta l'implementazione delle web API relative alla gestione degli utenti;
-      \item \textbf{Utilizzo}: i suoi metodi vengono invocati quando viene richiesto dal client di ricavare la lista degli utenti, di aggiungere o rimuovere un utente, ricavare o modificare i dati di un utente o per modificare i dati di un utente;
+      \item \textbf{Utilizzo}: i suoi metodi vengono invocati quando viene richiesto dal client di ricavare la lista degli utenti, rimuovere un utente, ricavare o modificare i dati di un utente o per modificare i dati di un utente;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
           \item server::endpoints::resp::private::UserResponse
@@ -276,6 +276,16 @@
 				\item public remove\_favourite(request : ResourceContainer) : void
      	 \end{itemize}
       \end{itemize}
+    % subparagraph bdsm_app_server_endpoints_api_private_favoritesapi (end)
+    
+	\subparagraph{server::endpoints::api::private::OAuthApi} % (fold)
+    \label{subp:bdsm_app_server_endpoints_api_private_oauthapi}
+    \begin{itemize}
+      	\item \textbf{Descrizione}: classe che rappresenta l'implementazione delle web API relative alla registrazione e all'autenticazione dell'utente;
+      	\item \textbf{Utilizzo}: i suoi metodi vengono invocati quando viene richiesto dal client la registrazione al sistema, quando viene richiesto di autenticarsi o de-autenticarsi;
+		\item \textbf{Attributi}: N/A
+		\item \textbf{Metodi}: N/A   
+    \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_private_favoritesapi (end)
 
 \subsubsection{server::endpoints::resp} % (fold)
