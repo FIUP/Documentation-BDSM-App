@@ -8,6 +8,7 @@
 % Modification History:
 % Version		Modifier Date		Change											Author
 % 0.0.1			2015-04-18			Modifica grafici e relative descrizioni			Luca Santacatterina
+% 0.0.2			2015-05-20			Inserim. descrizione attributi e sist. grafici	Luca Santacatterina
 % =================================================================================================
 
 % CONTENUTO DEL CAPITOLO
@@ -78,6 +79,9 @@
 				\item \textbf{Attributi}: 
 					\begin{itemize}
 						\item date\_created\_date : Date
+						\begin{description}
+							\item \textbf{Descrizione}: data acquisizione dati grezzi
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
 			\end{itemize}
@@ -98,7 +102,7 @@
 		  \item \textbf{Interazione con altri componenti}:
 		  	\begin{itemize}
 		  		\item server::db
-				\end{itemize}
+			\end{itemize}
 		\end{itemize}
 		% subsubsection
 
@@ -113,6 +117,9 @@
 					\item \textbf{Attributi}: 
 					\begin{itemize}
 						\item node\_id\_str : String
+						\begin{description}
+							\item \textbf{Descrizione}: codice identificativo evento o pagina Facebook
+						\end{description}
 					\end{itemize}
 					\item \textbf{Metodi}: N/A
 				\end{itemize}
@@ -134,7 +141,13 @@
 					\item \textbf{Attributi}:
 					\begin{itemize}
 						\item name\_str : String
+						\begin{description}
+							\item \textbf{Descrizione}: nome pagina Facebook
+						\end{description}
 						\item category\_str : String
+						\begin{description}
+							\item \textbf{Descrizione}: categoria pagina Facebook
+						\end{description}
 					\end{itemize}
 					\item \textbf{Metodi}: N/A
 				\end{itemize}
@@ -149,7 +162,13 @@
 					\item \textbf{Attributi}: 
 					\begin{itemize}
 						\item likes\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: numero likes di una determinata pagina Facebook
+						\end{description}
 						\item talking\_about\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: numero di talking about di una determinata pagina Facebook
+						\end{description}
 					\end{itemize}
 					\item \textbf{Metodi}: N/A
 				\end{itemize}
@@ -170,7 +189,13 @@
 					\item \textbf{Attributi}: 
 					\begin{itemize}
 						\item name\_str : String
+						\begin{description}
+							\item \textbf{Descrizione}: nome evento Facebook
+						\end{description}
 						\item location\_obj : GeoPoint
+						\begin{description}
+							\item \textbf{Descrizione}: localizzazione tramite latitudine e longitudine pagina evento Facebook
+						\end{description}
 					\end{itemize}
 					\item \textbf{Metodi}: N/A
 				\end{itemize}
@@ -186,9 +211,22 @@
 					\item \textbf{Attributi}: 
 					\begin{itemize}
 						\item invited\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: numero persone invitate evento Facebook
+						\end{description}
 						\item attending\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: numero persone partecipanti evento Facebook
+						\end{description}
 						\item declined\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: numero persone che hanno rifiutato la partecipazione evento Facebook
+							 evento Facebook
+						\end{description}
 						\item maybe\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: numero persone incerte se partecipare evento Facebook
+						\end{description}
 					\end{itemize}
 					\item \textbf{Metodi}: N/A
 				\end{itemize}
@@ -202,13 +240,30 @@
 					\item \textbf{Utilizzo}: la classe fornisce metodi per sommare i dati statici sui post di Facebook;
 					\item \textbf{Attributi}: 
 					\begin{itemize}
-						\item date\_created\_date : Date
 						\item posts\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: numero post utente
+						\end{description}
 						\item comments\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: numero commenti utente
+						\end{description}
 						\item admin\_posts\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: numero post admin
+						\end{description}
 						\item admin\_comments\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: numero commenti admin
+						\end{description}
 						\item posts\_like\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: numero like del post
+						\end{description}
 						\item comments\_like\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: numero like dei commenti
+						\end{description}
 					\end{itemize}
 					\item \textbf{Metodi}: N/A
 				\end{itemize}
@@ -246,6 +301,9 @@
 				\item \textbf{Attributi}: 
 					\begin{itemize}
 						\item name\_str : String
+						\begin{description}
+							\item \textbf{Descrizione}: nome identificativo pagina o hashtag
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
 			\end{itemize}
@@ -266,7 +324,13 @@
 				\item \textbf{Attributi}: 
 					\begin{itemize}
 						\item full\_name\_str : String
+						\begin{description}
+							\item \textbf{Descrizione}: nome completo del profilo utente
+						\end{description}
 						\item photo\_url\_str : String
+						\begin{description}
+							\item \textbf{Descrizione}: indirizzo url foto profilo utente
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
 			\end{itemize}
@@ -282,9 +346,21 @@
 				\item \textbf{Attributi}: 
 					\begin{itemize}
 						\item favourites\_count\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: numero di favoriti utente Twitter
+						\end{description}
 						\item followers\_count\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: numero di followers utente Twitter
+						\end{description}
 						\item friends\_count\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: numero di amici utente Twitter
+						\end{description}
 						\item tweets\_count\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: numero di tweets utente Twitter
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
 			\end{itemize}
@@ -300,8 +376,17 @@
 				\item \textbf{Attributi}: 
 					\begin{itemize}
 						\item source\_devices\_list : List
+						\begin{description}
+							\item \textbf{Descrizione}: lista composta da quantità e tipo dispositivi utilizzati per pubblicazione tweet
+						\end{description}
 						\item favourites\_count\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: somma della quantità di favoriti dei tweets
+						\end{description}
 						\item retweets\_count\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: somma della quantità di retweets dei tweets
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
 			\end{itemize}
@@ -318,10 +403,7 @@
 					\begin{itemize}
 						\item server::db::raw\_data::tw::RawTwHashtagTweet
 					\end{itemize}
-				\item \textbf{Attributi}: 
-					\begin{itemize}
-						\item tweets\_count\_int : int
-					\end{itemize}
+				\item \textbf{Attributi}: N/A
 				\item \textbf{Metodi}: N/A
 			\end{itemize}
 		% subparagraph server_db_raw_data_tw_rawtwhashtag [end]
@@ -336,6 +418,13 @@
 				\item \textbf{Attributi}:  
 					\begin{itemize}
 						\item time\_zone\_list : List
+						\begin{description}
+							\item \textbf{Descrizione}: lista composta da quantità è timezone ricavati dai tweets contenenti il determinato hashtag
+						\end{description}
+						\item tweets\_count\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: somma dei tweets contenenti un determinato hashtag
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
 			\end{itemize}
@@ -373,6 +462,9 @@
 				\item \textbf{Attributi}:  
 					\begin{itemize}
 						\item name\_node\_str : String
+						\begin{description}
+							\item \textbf{Descrizione}: nome identificativo pagina o hashtag
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
 			\end{itemize}
@@ -393,7 +485,13 @@
 				\item \textbf{Attributi}:  
 					\begin{itemize}
 						\item id\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: numero identificativo utente Instagram
+						\end{description}
 						\item fullname\_str : String
+						\begin{description}
+							\item \textbf{Descrizione}: nome completo del profilo utente Instagram
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
 			\end{itemize}
@@ -409,8 +507,17 @@
 				\item \textbf{Attributi}:  
 					\begin{itemize}
 						\item media\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: numero di media caricati dall'utente su Instagram
+						\end{description}
 						\item followed\_by\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: numero di followed dell'utente
+						\end{description}
 						\item follows\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: numero di follows che segue l'utente
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
 			\end{itemize}
@@ -443,6 +550,9 @@
 				\item \textbf{Attributi}:  
 					\begin{itemize}
 						\item media\_count\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: numero totale di media caricati dato un hashtag su Instagram
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
 			\end{itemize}
@@ -458,11 +568,29 @@
 				\item \textbf{Attributi}:  
 					\begin{itemize}
 						\item media\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: numero identificativo media su Instagram
+						\end{description}
 						\item comments\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: numero di commenti del media
+						\end{description}
 						\item likes\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: numero di like del media
+						\end{description}
 						\item photos\_count\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: numero di foto del media
+						\end{description}
 						\item videos\_count\_int : int
-						\item location\_obj : List
+						\begin{description}
+							\item \textbf{Descrizione}: numero di video del media
+						\end{description}
+						\item location\_obj : GeoPoint
+						\begin{description}
+							\item \textbf{Descrizione}: localizzazione tramite latitudine e longitudine di un media su Instagram
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
 			\end{itemize}
@@ -521,11 +649,29 @@
 				\item \textbf{Attributi}: 
 					\begin{itemize}
 						\item username\_str : String
+						\begin{description}
+							\item \textbf{Descrizione}: username utente
+						\end{description}
 						\item email\_str : String
+						\begin{description}
+							\item \textbf{Descrizione}: email utente
+						\end{description}
 						\item pwd\_str : String
+						\begin{description}
+							\item \textbf{Descrizione}: password utente
+						\end{description}
 						\item data\_created\_date : Date
+						\begin{description}
+							\item \textbf{Descrizione}: data creazione account utente
+						\end{description}
 						\item access\_token\_str : String
+						\begin{description}
+							\item \textbf{Descrizione}: access token utente per i servizi rest
+						\end{description}
 						\item active\_bool : boolean
+						\begin{description}
+							\item \textbf{Descrizione}: utente attivo o disattivo
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
 			\end{itemize}
@@ -560,6 +706,9 @@
 				\item \textbf{Attributi}: 
 					\begin{itemize}
 						\item chart\_type\_str : String
+						\begin{description}
+							\item \textbf{Descrizione}: tipo di grafico scelto dall'utente e salvato nei preferiti
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
 			\end{itemize}
@@ -596,8 +745,17 @@
 				\item \textbf{Attributi}:  
 					\begin{itemize}
 						\item data\_create\_date : Date
+						\begin{description}
+							\item \textbf{Descrizione}: data creazione recipe
+						\end{description}
 						\item desc\_str : String
+						\begin{description}
+							\item \textbf{Descrizione}: descrizione dettagliata recipe
+						\end{description}
 						\item title\_str : String
+						\begin{description}
+							\item \textbf{Descrizione}: titolo recipe
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
 			\end{itemize}
@@ -629,7 +787,13 @@
 				\item \textbf{Attributi}:  
 					\begin{itemize}
 						\item update\_interval\_hours\_int : int
+						\begin{description}
+							\item \textbf{Descrizione}: intervallo di tempo schedulazione recipe
+						\end{description}
 						\item last\_update\_date : Date
+						\begin{description}
+							\item \textbf{Descrizione}: data ultimo avvio miner recipe
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
 			\end{itemize}
@@ -639,12 +803,18 @@
 		\label{subp:server_db_app_data_recipe_recipemodel}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che rappresenta il modello del rating di una Recipe;
-				\item \textbf{Utilizzo}: viene utilizzata risalire al voto di ogni utente per una determinata Recipe;
+				\item \textbf{Utilizzo}: viene utilizzata per risalire al voto di ogni utente per una determinata Recipe;
 				\item \textbf{Attributi}:  
 					\begin{itemize}
 						\item rating\_float : float
+						\begin{description}
+							\item \textbf{Descrizione}: punteggio gradimento recipe utente
+						\end{description}
 						\item user\_id\_int : int
 					\end{itemize}
+					\begin{description}
+							\item \textbf{Descrizione}: identificativo utente votante
+						\end{description}
 				\item \textbf{Metodi}: N/A
 			\end{itemize}
 		% subparagraph server_db_app_data_recipe_recipemodel [end]
@@ -680,7 +850,13 @@
 				\item \textbf{Attributi}:  
 					\begin{itemize}
 						\item type\_str : String
+						\begin{description}
+							\item \textbf{Descrizione}: tipo di metrica
+						\end{description}
 						\item node\_name\_str : String
+						\begin{description}
+							\item \textbf{Descrizione}: nome categoria metrica
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
 			\end{itemize}
