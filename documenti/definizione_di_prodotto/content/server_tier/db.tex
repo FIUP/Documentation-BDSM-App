@@ -68,7 +68,7 @@
 						\item server::db::raw\_data::ig::AbsIgRawData
 						\item server::db::raw\_data::fb::RawFbPageTrend
 						\item server::db::raw\_data::fb::RawFbEventTrend
-						\item server::db::raw\_data::fb::RawFbPostTrend
+						\item server::db::raw\_data::fb::RawFbPostTrendTrend
 						\item server::db::raw\_data::tw::RawTwUserTrend
 						\item server::db::raw\_data::tw::RawTwUserTweet
 						\item server::db::raw\_data::ig::RawIgUserTrend
@@ -112,7 +112,7 @@
 					\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
 					\item \textbf{Attributi}: 
 					\begin{itemize}
-						\item node\_id : int
+						\item node\_id\_str : String
 					\end{itemize}
 					\item \textbf{Metodi}: N/A
 				\end{itemize}
@@ -129,7 +129,7 @@
 						\begin{itemize}
 							\item server::db::raw\_data::fb::RawFbEvent
 							\item server::db::raw\_data::fb::RawFbPageTrend
-							\item server::db::raw\_data::fb::RawFbPost
+							\item server::db::raw\_data::fb::RawFbPostTrend
 						\end{itemize}
 					\item \textbf{Attributi}:
 					\begin{itemize}
@@ -165,7 +165,7 @@
 					\item \textbf{Relazioni con altre classi}:
 						\begin{itemize}
 							\item server::db::raw\_data::fb::RawFbEventTrend
-							\item server::db::raw\_data::fb::RawFbPost
+							\item server::db::raw\_data::fb::RawFbPostTrend
 						\end{itemize}
 					\item \textbf{Attributi}: 
 					\begin{itemize}
@@ -195,8 +195,8 @@
 			% subparagraph server_db_raw_data_fb_rowfbeventtrend [end]
 
 
-			\subparagraph{server::db::raw\_data::fb::RawFbPost} % (fold)
-			\label{subp:server_db_raw_data_fb_rawfbpost}
+			\subparagraph{server::db::raw\_data::fb::RawFbPostTrend} % (fold)
+			\label{subp:server_db_raw_data_fb_RawFbPostTrend}
 				\begin{itemize}
 					\item \textbf{Descrizione}: classe che rappresenta il modello del trend dei post di una pagina o di un evento su Facebook;
 					\item \textbf{Utilizzo}: la classe fornisce metodi per sommare i dati statici sui post di Facebook;
@@ -212,7 +212,7 @@
 					\end{itemize}
 					\item \textbf{Metodi}: N/A
 				\end{itemize}
-			% subparagraph server_db_raw_data_fb_rawfbpost [end]
+			% subparagraph server_db_raw_data_fb_RawFbPostTrend [end]
 
 
 		% subsubsection TWITTER
@@ -628,7 +628,7 @@
 					\end{itemize}
 				\item \textbf{Attributi}:  
 					\begin{itemize}
-						\item update\_interval\_date : Date
+						\item update\_interval\_hours\_int : int
 						\item last\_update\_date : Date
 					\end{itemize}
 				\item \textbf{Metodi}: N/A

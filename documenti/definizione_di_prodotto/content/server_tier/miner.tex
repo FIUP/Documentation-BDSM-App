@@ -129,7 +129,7 @@
 					\end{itemize}
 				\item \textbf{Attributi}: 
 					\begin{itemize}
-						\item item\_id\_int : int
+						\item item\_id\_str : String
 					\end{itemize}
 				\item \textbf{Metodi}:   
 					\begin{itemize}
@@ -143,11 +143,11 @@
 		\label{subp:server_miner_fb_FbPageFetcher}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che si occupa ricava i dati dalle pagine Facebook;
-				\item \textbf{Utilizzo}: contiene un campo che descrive i dati statici di una pagina, un campo che descrive i dati dinamici ed un metodo che li ricava tramite l'utilizzo della classe \texttt{PostCounter};
+				\item \textbf{Utilizzo}: contiene un campo che descrive i dati statici di una pagina, un campo che descrive i dati dinamici ed un metodo che li ricava tramite l'utilizzo della classe \texttt{PostsCounter};
 				\item \textbf{Classi ereditate}: server::miner::fb::AbsFbFetcher
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item server::miner::fb::PostCounter
+						\item server::miner::fb::PostsCounter
 					\end{itemize}
 				\item \textbf{Attributi}: 
 					\begin{itemize}
@@ -166,23 +166,20 @@
 		\label{subp:server_miner_fb_FbEventFetcher}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che ricava i dati di un evento Facebook;
-				\item \textbf{Utilizzo}: contiene un campo che descrive i dati statici di un evento, un campo che descrive i dati dinamici e un metodo che li ricava tramite l'utilizzo della classe \texttt{PostCounter};
+				\item \textbf{Utilizzo}: contiene un campo che descrive i dati statici di un evento, un campo che descrive i dati dinamici e un metodo che li ricava tramite l'utilizzo della classe \texttt{PostsCounter};
 				\item \textbf{Classi ereditate}: server::miner::fb::AbsFbFetcher
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item server::miner::fb::PostCounter
-						\item server::miner::fb::AttendingCounter
-						\item server::miner::fb::MaybeCounter
-						\item server::miner::fb::InvitedCounter
-						\item server::miner::fb::RefusedCounter
+						\item server::miner::fb::PostsCounter
 					\end{itemize}
 				\item \textbf{Attributi}: 
 					\begin{itemize}
+						\item parent\_key\_int : int
 						\item event\_obj : RawFbEvent
-						\item event\_trend : RawFbEventTrend
 					\end{itemize}
 				\item \textbf{Metodi}:   
 					\begin{itemize}
+						\item get\_invited\_stats() : Dictionary
 						\item get\_data() : void
 						\item get\_trend\_data() : void
 					\end{itemize}
@@ -197,13 +194,8 @@
 				\item \textbf{Classi ereditate}: server::miner::AbsCounter
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item server::miner::fb::AttendingCounter
-						\item server::miner::fb::MaybeCounter
-						\item server::miner::fb::InvitedCounter
-						\item server::miner::fb::RefusedCounter
-						\item server::miner::fb::PostCounter
-						\item server::miner::fb::CommentCounter
-						\item server::miner::fb::LikeCounter
+						\item server::miner::fb::PostsCounter
+						\item server::miner::fb::CommentsCounter
 					\end{itemize}
 				\item \textbf{Attributi}:  
 					\begin{itemize}
@@ -218,112 +210,49 @@
 			\end{itemize}
 	% subparagraph server_miner_fb_AbsFbCounter [end]
 
-		\subparagraph{server::miner::fb::AttendingCounter} % (fold)
-		\label{subp:server_miner_fb_AttendingCounter}
-			\begin{itemize}
-				\item \textbf{Descrizione}: classe che descrive l'algoritmo per il counting degli invitati che non hanno ancora risposto in un evento Facebook;
-				\item \textbf{Utilizzo}: classe che ricava il numero di persone invitate che non hanno ancora risposto di un evento Facebook;
-				\item \textbf{Classi ereditate}: server::miner::fb::AbsFbCounter
-				\item \textbf{Attributi}: N/A
-				\item \textbf{Metodi}:  
-					\begin{itemize}
-						\item protected action() : boolean
-					\end{itemize}
-			\end{itemize}
-	% subparagraph server_miner_fb_AttendingCounter
 
-		\subparagraph{server::miner::fb::MaybeCounter} % (fold)
-		\label{subp:server_miner_fb_MaybeCounter}
-			\begin{itemize}
-				\item \textbf{Descrizione}: classe che descrive l'algoritmo per il counting dei maybe in un evento Facebook;
-				\item \textbf{Utilizzo}: classe che ricava il numero di persone in forse per un evento Facebook;
-				\item \textbf{Classi ereditate}: server::miner::fb::AbsFbCounter
-				\item \textbf{Attributi}: N/A
-				\item \textbf{Metodi}:  
-					\begin{itemize}
-						\item protected action() : boolean
-					\end{itemize}
-			\end{itemize}
-	% subparagraph server_miner_fb_MaybeCounter
-
-	\subparagraph{server::miner::fb::InvitedCounter} % (fold)
-		\label{subp:server_miner_fb_InvitedCunter}
-			\begin{itemize}
-				\item \textbf{Descrizione}: classe che descrive l'algoritmo per il counting degli invited in un evento Facebook;
-				\item \textbf{Utilizzo}: classe che ricava il numero di persone invitate ad un evento Facebook;
-				\item \textbf{Classi ereditate}: server::miner::fb::AbsFbCounter
-				\item \textbf{Attributi}: N/A
-				\item \textbf{Metodi}:  
-					\begin{itemize}
-						\item protected action() : boolean
-					\end{itemize}
-			\end{itemize}
-	% subparagraph server_miner_fb_InvitedCounter
-
-	\subparagraph{server::miner::fb::RefusedCounter} % (fold)
-		\label{subp:server_miner_fb_RefusedCounter}
-			\begin{itemize}
-				\item \textbf{Descrizione}: classe che descrive l'algoritmo per il counting dei refused in un evento Facebook;
-				\item \textbf{Utilizzo}: classe che ricava il numero di persone che hanno rifiutato l'invito per un evento Facebook;
-				\item \textbf{Classi ereditate}: server::miner::fb::AbsFbCounter
-				\item \textbf{Attributi}: N/A
-				\item \textbf{Metodi}:  
-					\begin{itemize}
-						\item protected action() : boolean
-					\end{itemize}
-			\end{itemize}
-	% subparagraph server_miner_fb_RefusedCounter
-
-	\subparagraph{server::miner::fb::PostCounter} % (fold)
-		\label{subp:server_miner_fb_PostCounter}
+	\subparagraph{server::miner::fb::PostsCounter} % (fold)
+		\label{subp:server_miner_fb_PostsCounter}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che descrive l'algoritmo per calcolare il numero dei post per ogni evento o pagina;
 				\item \textbf{Utilizzo}: classe che contiene un campo per il numero dei like e un campo per il numero dei talking about per ogni post di Facebook;
 				\item \textbf{Classe ereditate}: server::miner::fb::AbsFbCounter
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
-						\item server::miner::fb::CommentCounter
-						\item server::miner::fb::LikeCounter
+						\item server::miner::fb::CommentsCounter
 					\end{itemize}
 				\item \textbf{Attributi}:  
 					\begin{itemize}
+						\item admin\_comments\_count\_int : int
 						\item comments\_count\_int : int
 						\item likes\_count\_int : int
 					\end{itemize}
 				\item \textbf{Metodi}:  
 					\begin{itemize}
+						\item get\_likes\_count(post\_id : String) : int
 						\item protected action() : boolean
 					\end{itemize}
 			\end{itemize}
-		% subparagraph server_miner_fb_PostCounter
+		% subparagraph server_miner_fb_PostsCounter
 
-	\subparagraph{server::miner::fb::CommentCounter} % (fold)
-		\label{subp:server_miner_fb_CommentCounter}
+	\subparagraph{server::miner::fb::CommentsCounter} % (fold)
+		\label{subp:server_miner_fb_CommentsCounter}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che descrive l'algoritmo per calcolare il numero di commenti per ogni post;
 				\item \textbf{Utilizzo}: classe che ricava il numero di commenti per ogni post;
 				\item \textbf{Classe ereditate}: server::miner::fb::AbsFbCounter
-				\item \textbf{Attributi}: N/A
+				\item \textbf{Attributi}: 
+					\begin{itemize}
+						\item metric\_name\_str() : String
+					\end{itemize}
 				\item \textbf{Metodi}:  
 					\begin{itemize}
+						\item get\_metric\_name\_str() : String
 						\item protected action() : boolean
 					\end{itemize}
 			\end{itemize}
-	% subparagraph server_miner_fb_CommentCounter
+	% subparagraph server_miner_fb_CommentsCounter
 
-	\subparagraph{server::miner::fb::LikeCounter} % (fold)
-		\label{subp:server_miner_fb_LikeCounter}
-			\begin{itemize}
-				\item \textbf{Descrizione}: classe che descrive l'algoritmo per calcolare il numero di like per ogni post;
-				\item \textbf{Utilizzo}: classe che ricava il numero di like per ogni post;
-				\item \textbf{Classe ereditate}: server::miner::fb::AbsFbCounter
-				\item \textbf{Attributi}: N/A
-				\item \textbf{Metodi}:  
-					\begin{itemize}
-						\item protected action() : boolean
-					\end{itemize}
-			\end{itemize}
-	% subparagraph server_miner_fb_LikeCounter
 
 \subsubsection{server::miner::tw} % (fold)
 \label{ssub:bdsm_app_server_miner_tw}
