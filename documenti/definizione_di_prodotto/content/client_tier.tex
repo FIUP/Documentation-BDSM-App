@@ -15,13 +15,25 @@
 % =================================================================================================
 % 0.0.4			2015-04-04			inserite classi del package View				Tesser Paolo
 % =================================================================================================
+% 1.0.1			2015-05-20			aggiunta nota su serivizi AngularJS				Tesser Paolo
+% =================================================================================================
 %
 
 % CONTENUTO DEL CAPITOLO
 
 \subsection{Client (Front-end)} % (fold)
 \label{sub:client}
-Nel descrivere le componenti si parlerà di classi, che però saranno da intendersi nella loro accezione logica. Il linguaggio di programmazione impiegato infatti non possiede la struttura di classe, ma solo di oggetto, sarà quindi compito del codificatore riportare le classi di seguito identificate nelle strutture fornite dallo specifico linguaggio.
+Nel descrivere le componenti si parlerà di classi, che però saranno da intendersi nella loro accezione logica. Il linguaggio di programmazione impiegato infatti non possiede la struttura di classe, ma solo di oggetto, sarà quindi compito del codificatore riportare le classi di seguito identificate nelle strutture fornite dallo specifico linguaggio. \newline
+Al fine di rendere maggiormente comprensibile la descrizione testuale di alcune classi abbiamo deciso di presentare ora alcuni dei servizi che utilizzeremo in parte delle classi presenti che ci vengono offerti direttamente dal framework AngularJS o da qualche modulo esterno utilizzato.
+	\begin{itemize}
+		\item \textbf{\$scope}: rappresenta un contesto di esecuzione dove sono definiti e poi utilizzati dati necessari all'aggiornamento della view e alle elaborazioni dei controller. Per questo motivo viene spesso utilizzato come argomento delle funzioni nel controller. Esso è responsabile del two-way data binding;
+		\item \textbf{\$http}: gestisce le richieste del front-end per il back-end ed inoltre gestisce le risposte di quest'ultimo utilizzando il protocollo HTTP. Questo servizio viene utilizzato nei servizi definiti nel package \textbf{client::model::services};
+		\item \textbf{\$stateProvider}: utilizzato per implementare la navigazione tra le varie pagine del nostro sito. Viene utilizzato in ogni classe di routing nel controller per il reindirizzamento alla pagina adeguata e per poter assegnare un controller personalizzato ad ogni pagina nel caso fosse necessario. Questo servizio ci viene offerto dal modulo \textbf{ui-router};
+		\item \textbf{\$location}: permette di manipolare la URL del browser;
+		\item \textbf{\$on}: rappresenta un ascoltatore di eventi che è in ascolto di un segnale emesso dal broadcast;
+	\end{itemize}
+
+	\pagebreak
 
 	\subsubsection{client} % (fold)
 	\label{ssub:bdsm_app_client}
