@@ -84,8 +84,12 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 					\item client::controller::public::RegisterCtrl
 					\item client::controller::public::ApiDocsCtrl
 				\end{itemize}
-				\item \textbf{Attributi}: N/A
-				\item \textbf{Metodi}: N/A
+				\item \textbf{Attributi associati allo \$scope}: N/A
+				\item \textbf{Metodi associati allo \$scope e privati}: N/A
+				\item \textbf{Servizi AngularJS utilizzati}:
+					\begin{itemize}
+						\item \$stateProvider
+					\end{itemize}
 		\end{itemize}
 		% subparagraph bdsm_app_client_controller_public_publicrouteconfig (end)
 
@@ -108,18 +112,15 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item TODO
+						\item \textbf{+ credentials} : oggetto nel formato JSON che contiene il valore iniziale dei campi mail e password che inizialmente saranno vuoti.
 					\end{itemize}
 
-				\item \textbf{Metodi}:
+				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item TODO
+						\item \textbf{+ login(cred)} : gli vengono passati i dati dalla view e viene invocato il metodo login della classe AuthService.
 					\end{itemize}
 
-				\item \textbf{Servizi AngularJS utilizzati}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
+				\item \textbf{Servizi AngularJS utilizzati}: N/A
 
 			\end{itemize}
 		% subparagraph bdsm_app_client_controller_public_loginctrl (end)
@@ -143,18 +144,17 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 					\end{itemize}
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item TODO
+						\item \textbf{+ credentials} : oggetto nel formato JSON che contiene il valore iniziale dei campi username, mail, password e password da confermare che inizialmente saranno vuoti;
+						\item \textbf{+ matchPwd} : booleano inizializzato a false che cambia valore se il valore della nuova password e quello di conferma non combaciano.
 					\end{itemize}
 
-				\item \textbf{Metodi}:
+				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item TODO
+						\item \textbf{+ register(cred)} : gli vengono passati i dati dalla view e viene invocato il metodo register della classe AuthService;
+						\item \textbf{- checkMatchPwd(newPwd, confirmNewPwd)} : gli vengono passati i valori della nuova password e il valore di conferma. Ritorna true se combaciano, altrimenti false.
 					\end{itemize}
 
-				\item \textbf{Servizi AngularJS utilizzati}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
+				\item \textbf{Servizi AngularJS utilizzati}: N/A
 
 			\end{itemize}
 		% subparagraph bdsm_app_client_controller_public_registerctrl (end)
@@ -178,18 +178,15 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 			\item \textbf{Attributi associati allo \$scope}:
 				\begin{itemize}
-					\item TODO
+					\item \textbf{+ restServices} : array di oggetti nel formato JSON che rappresentano la lista delle API pubbliche. Questa variabile viene inizializzata tramite la chiamata immediata alla funzione privata getRestService.
 				\end{itemize}
 
-			\item \textbf{Metodi}:
+			\item \textbf{Metodi associati allo \$scope e privati}:
 				\begin{itemize}
-					\item TODO
+					\item \textbf{- getRestService()} : funzione che preleva la lista delle API pubbliche tramite una chiamata alla classe ApiDocsModel.
 				\end{itemize}
 
-			\item \textbf{Servizi AngularJS utilizzati}:
-				\begin{itemize}
-					\item TODO
-				\end{itemize}
+			\item \textbf{Servizi AngularJS utilizzati}: N/A
 
 		\end{itemize}
 		% subparagraph bdsm_app_client_controller_public_apidocsctrl (end)
