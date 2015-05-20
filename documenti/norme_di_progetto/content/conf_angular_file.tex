@@ -58,7 +58,7 @@ Di seguito vengono presentati i template che ogni \roleProgrammer{} dovrà utili
 	   * Controller of the clientApp
 	   */
 
-	  var $NameCtrl = function(){
+	  function $NameCtrl(){
 
 	    var vm = this;
 
@@ -66,7 +66,9 @@ Di seguito vengono presentati i template che ogni \roleProgrammer{} dovrà utili
 
 	  $NameCtrl.${DS}inject = [];
 
-	  angular.module('$nameModule').controller('$NameCtrl', $NameCtrl);
+	  angular
+		.module('$nameModule')
+		.controller('$NameCtrl', $NameCtrl);
 
 	})();
 	\end{verbatim}
@@ -91,11 +93,7 @@ Di seguito vengono presentati i template che ogni \roleProgrammer{} dovrà utili
 	   *
 	   */
 
-	  /**
-	   *
-	   * @param ${DS}stateProvider
-	   */
-	  var $NameConfigRoutes = function(${DS}stateProvider) {
+	  function $NameConfigRoutes(${DS}stateProvider) {
 
 	    ${DS}stateProvider
 	      .state('state',{
@@ -109,24 +107,75 @@ Di seguito vengono presentati i template che ogni \roleProgrammer{} dovrà utili
 	      })
 	  };
 
-	  angular.module('$nameRouteApp', ['ui.router'])
+	  angular
+		.module('$nameRouteApp', ['ui.router'])
 	    .config(['${DS}stateProvider', '${DS}urlRouterProvider', $NameConfigRoutes]);
 
 	})();
 	\end{verbatim}
 	% subsubsection route_controller (end)
 
-	\subsection{Data Model} % (fold)
-	\label{sub:data_model}
-	\begin{verbatim}
-	TODO
-	\end{verbatim}
-
-	% subsection data_model (end)
 
 	\subsection{Services Model} % (fold)
 	\label{sub:services_model}
-	TODO
+	\begin{verbatim}
+		(function() {
+
+			'use strict';
+
+		  /**
+		   * Name: $nameService.js
+		   * Author: Cognome Nome
+		   * Mail. cognome.nome@mashup-unipd.it
+		   *
+		   * Modify
+		   * Version  Date        Author          Desc
+		   * ==========================================================
+		   * 0.0.1    aaaa-mm-dd  Cognome Nome    description
+		   * -----------------------------------------------------------
+		   *
+		   */
+
+			function $NameService(){
+
+				var factory = {
+					publicVar: '',
+					publicFunction: publicFunction
+				};
+
+				return factory;
+
+				///////////////
+
+
+				/**
+				 * TODO
+				 */
+				function publicFunction(){
+					// TODO
+				}
+
+				////////////////
+				
+				/**
+				 * TODO
+				 */
+				function privateFunction(){
+					// TODO
+				}
+
+			}
+
+
+			$NameService.$inject = [];
+
+			angular
+				.module('$nameModule')
+				.factory('$NameService', $NameService);
+
+
+		})();
+	\end{verbatim}
 	% subsection services_model (end)
 
 % section configurazione_file_angularjs (end)
