@@ -74,13 +74,12 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item client::controller::public::PublicRoute
 						\item client::controller::public::LoginCtrl
 					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
-						\item TODO
+						\item \textbf{ng-controller}: permette l'attivazione del controller associato al template HTML relativo alla pagina di Login;
+						\item \textbf{ng-submit}: rileva una scelta di invio dati dell'utente e attiva una funzione, in questo caso \textbf{login(credentials)} definita in LoginCtrl;
+						\item \textbf{ng-model}: permette di creare un legame tra le variabili presenti nel controller e i campi di tipo input dell'HTML. Questi campi appartengono di fatto allo scope, ma vengono gestiti in una maniera diversa TODO;
+						\item \textbf{ng-disabled}: permette di bloccare un determinato campo fintanto che una o più condizioni non vengono soddisfatte. Viene utilizzata per bloccare il pulsante di login qualora non fossero stati completati correttamente i campi presenti.
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_public_login (end)
@@ -94,14 +93,7 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 					\begin{itemize}
 						\item client::controller::public::PublicRoute
 					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
-				\item \textbf{Direttive AngularJS}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
+				\item \textbf{Direttive AngularJS}: non sono state utilizzate direttive in quanto è una pagina statica senza bisogno di interazioni con l'utente.
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_public_about (end)
 
@@ -115,13 +107,15 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item client::controller::public::PublicRoute
 						\item client::controller::public::RegisterCtrl
 					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
-						\item TODO
+						\item \textbf{ng-controller}: permette l'attivazione del controller associato al template HTML relativo alla pagina di registrazione;
+						\item \textbf{ng-submit}: rileva una scelta di invio dati dell'utente e attiva una funzione, in questo caso \textbf{register(credentials)} definita in RegisterCtrl;
+						\item \textbf{ng-disabled}: permette di bloccare un determinato campo fintanto che una o più condizioni non vengono soddisfatte. Viene utilizzata per bloccare il pulsante di login qualora non fossero stati completati correttamente i campi presenti;
+						\item \textbf{ng-model}: TODO
+						\item \textbf{ng-message}: permette di visualizzare un determinato messaggio che viene associato ad un particolare errore scaturito nel form di registrazione;
+						\item \textbf{ng-if}: permette di visualizzare un determinato elemento, e il contenuto al suo interno, qualora la condizione specificata risultasse vera. Viene utilizzata per nascondere i messaggi d'errore e renderli visibili qualora l'errore si verificasse;
+						\item \textbf{ng-class}: permette di associare una determinata classe, a un elemento del template, qualora la condizione specificata risultasse vera. Questa viene utilizzata per mostrare un colore rosso d'errore sui campi che non soddisfano le specifiche richieste dal form.
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_public_register (end)
@@ -137,13 +131,11 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item client::controller::public::PublicRoute
 						\item client::controller::public::ApiDocsCtrl
 					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
-						\item TODO
+						\item \textbf{ng-controller}: permette l'attivazione del controller associato al template HTML relativo alla pagina di visualizzazione delle API disponibili a un utente che ha ottenuto un token di accesso per usarle;
+						\item \textbf{ng-repeat}: permette di iterare ogni elemento di una lista e di poterlo utilizzare all'interno del template HTML grazie alla direttiva \textbf{ng-bind} potendone ricavare dati o eseguire metodi su di esso. Viene utilizzata per stampare la lista di tutte le API e la loro descrizione;
+						\item \textbf{ng-bind}: permette di rimpiazzare il contenuto di un elemento con il valore dato dall'espressione definita. Questa direttiva viene preferita all'uso dell'operatore \{\{ \}\}. Viene utilizzata per stampare il valore degli elementi che si stanno iterando tramite la direttiva \textbf{ng-repeat}.
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_public_apidocs (end)
@@ -174,22 +166,17 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 		\label{subp:bdsm_app_client_view_user_home}
 
 			\begin{itemize}
-				\item \textbf{Descrizione}: la classe rappresenta un template HTML per la visualizzazione dell'interfaccia della home dell'applicazione;
-				\item \textbf{Utilizzo}: viene utilizzata per generare la pagina HTML della home;
+				\item \textbf{Descrizione}: la classe rappresenta un template HTML contenente lo scheletro delle pagine destinate a uno User e a un Admin;
+				\item \textbf{Utilizzo}: viene utilizzata per generare lo scheletro della pagina HTML utilizzata come base da altre pagine;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item client::view::user::MenuMain
 						\item client::view::user::MenuSecond
 						\item client::controller::public::HomeRoute
-						\item client::controller::user::HomeCtrl
-					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
 					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
-						\item TODO
+						\item \textbf{ui-view}: direttiva utilizzata dal modulo \textbf{ui-router} che permette il caricamento del template HTML corretto a secondo di un determinato url o di uno stato attivato tramite la direttiva \textbf{ui-sref}.
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_home (end)
@@ -209,13 +196,12 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item client::controller::user::RecipeRoute
 						\item client::controller::user::RecipeCtrl
 					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
-						\item TODO
+						\item \textbf{ng-controller}: permette l'attivazione del controller associato al template HTML relativo alla pagina di visualizzazione delle recipe presenti nel sistema;
+						\item \textbf{ng-repeat}: permette di iterare ogni elemento di una lista e di poterlo utilizzare all'interno del template HTML grazie alla direttiva \textbf{ng-bind} potendone ricavare dati o eseguire metodi su di esso. Viene utilizzata per stampare la lista di tutte le recipe;
+						\item \textbf{ng-bind}: permette di rimpiazzare il contenuto di un elemento con il valore dato dall'espressione definita. Questa direttiva viene preferita all'uso dell'operatore \{\{ \}\}. Viene utilizzata per stampare il valore degli elementi che si stanno iterando tramite la direttiva \textbf{ng-repeat}.
+						\item \textbf{ui-sref}: permette di effettuare un reindirizzamento in una determinata pagina, con la possibilità di passare dei parametri. Viene utilizzata dai pulsanti \textbf{Show metrics} e \textbf{Compare metrics} per andare alle pagine Metrics e Compare a seconda delle necessità dell'utente.
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_recipe (end)
@@ -235,13 +221,12 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item client::controller::user::RecipeRoute
 						\item client::controller::user::MetricsCtrl
 					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
-						\item TODO
+						\item \textbf{ng-controller}: permette l'attivazione del controller associato al template HTML relativo alla pagina di visualizzazione delle metriche di una determinata recipe;
+						\item \textbf{ng-repeat}: permette di iterare ogni elemento di una lista e di poterlo utilizzare all'interno del template HTML grazie alla direttiva \textbf{ng-bind} potendone ricavare dati o eseguire metodi su di esso. Viene utilizzata per stampare la lista di tutte le metriche relative a una determinata recipe;
+						\item \textbf{ng-bind}: permette di rimpiazzare il contenuto di un elemento con il valore dato dall'espressione definita. Questa direttiva viene preferita all'uso dell'operatore \{\{ \}\}. Viene utilizzata per stampare il valore degli elementi che si stanno iterando tramite la direttiva \textbf{ng-repeat}.
+						\item \textbf{ui-sref}: permette di effettuare un reindirizzamento in una determinata pagina, con la possibilità di passare dei parametri. Viene utilizzata dai pulsanti \textbf{Show charts} per andare alla pagina che visualizza tutti i grafici associati a una determinata metrica. 
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_metrics (end)
@@ -259,10 +244,6 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item client::view::user::Metrics
 						\item client::controller::user::RecipeRoute
 						\item client::controller::user::ChartsCtrl
-					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
 					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
@@ -284,10 +265,6 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item client::view::user::Recipe
 						\item client::controller::user::RecipeRoute
 						\item client::controller::user::CompareCtrl
-					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
 					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
@@ -314,7 +291,14 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
-						\item TODO
+						\item \textbf{ng-controller}: permette l'attivazione del controller associato al template HTML relativo alla pagina di visualizzazione del form di richiesta di inserimento di una nuova recipe;
+						\item \textbf{ng-submit}: permette di rilevare una scelta di invio dati dell'utente e attiva una funzione, in questo caso \textbf{insertRecipeRequest()} definita in RecipeRequestCtrl;
+						\item \textbf{ng-click}: permette di rilevare una scelta dell'utente e attiva una funzione, in questo caso \textbf{addMetric()} definita in RecipeRequestCtrl.
+						\item \textbf{ng-disabled}: permette di bloccare un determinato campo fintanto che una o più condizioni non vengono soddisfatte. Viene utilizzata per bloccare il pulsante di inserimento della richiesta qualora non fossero stati completati correttamente i campi presenti;
+						\item \textbf{ng-model}: TODO;
+						\item \textbf{ng-if}: permette di visualizzare un determinato elemento, e il contenuto al suo interno, qualora la condizione specificata risultasse vera. Viene utilizzata per nascondere i messaggi d'errore e renderli visibili qualora l'errore si verificasse;
+						\item \textbf{ng-repeat}: permette di iterare ogni elemento di una lista e di poterlo utilizzare all'interno del template HTML grazie alla direttiva \textbf{ng-bind} potendone ricavare dati o eseguire metodi su di esso. Viene utilizzata per stampare la lista di tutte le metriche aggiunte alla richiesta di inserimento di una recipe;
+						\item \textbf{ng-bind}: permette di rimpiazzare il contenuto di un elemento con il valore dato dall'espressione definita. Questa direttiva viene preferita all'uso dell'operatore \{\{ \}\}. Viene utilizzata per stampare il valore degli elementi che si stanno iterando tramite la direttiva \textbf{ng-repeat}.
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_reciperequest (end)
@@ -331,10 +315,6 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item client::view::user::MenuSecond
 						\item client::controller::user::FavouritesRoute
 						\item client::controller::user::FavouritesCtrl
-					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
 					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
@@ -356,13 +336,11 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item client::controller::user::TokenConfigRoute
 						\item client::controller::user::TokenConfigCtrl
 					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
-						\item TODO
+						\item \textbf{ng-controller}: permette l'attivazione del controller associato al template HTML relativo alla pagina di visualizzazione del form di richiesta/cancellazione di un token di accesso ai servizi REST;
+						\item \textbf{ng-if}: permette di visualizzare un determinato elemento, e il contenuto al suo interno, qualora la condizione specificata risultasse vera. Viene utilizzata per alternare i pulsanti di richiesta/cancellazione del token di accesso, a seconda se esso sia già stato generato o meno;
+						\item \textbf{ng-bind}: permette di rimpiazzare il contenuto di un elemento con il valore dato dall'espressione definita. Questa direttiva viene preferita all'uso dell'operatore \{\{ \}\}. Viene utilizzata per stampare il valore del token generato.
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_tokenconfig (end)
@@ -380,13 +358,14 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item client::controller::user::SettingsRoute
 						\item client::controller::user::SettingsCtrl
 					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
-						\item TODO
+						\item \textbf{ng-controller}: permette l'attivazione del controller associato al template HTML relativo alla pagina di visualizzazione del form delle impostazioni personali del profilo utente;
+						\item \textbf{ng-init}: permette di inizializzare una variabile definita all'interno del template con un determinato valore. Viene utilizzata per impostare le variabili \textbf{editUserName} e \textbf{editMail} inizialmente a \textbf{true};
+						\item \textbf{ng-model}: TODO;
+						\item \textbf{ng-submit}: permette di rilevare una scelta di invio dati dell'utente e attiva una funzione, in questo caso \textbf{saveEdit()} definita in SettingsCtrl;
+						\item \textbf{ng-click}: permette di rilevare una scelta dell'utente e attiva una funzione o cambia il valore di qualche variabile dichiarata all'interno del template, in questo caso cambia la variabile \textbf{editUserName} o \textbf{editMail} nel valore \textbf{editUserName} o \textbf{editMail};
+						\item \textbf{ng-disabled}: permette di bloccare un determinato campo fintanto che una o più condizioni non vengono soddisfatte. Viene utilizzata per bloccare il pulsante di salvataggio delle modifiche o per bloccare i campi di modifica della password e della mail, attivabile solo premendo su un apposito pulsante.
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_settings (end)
@@ -401,14 +380,6 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item client::view::user::MenuMain
 						\item client::view::user::MenuSecond
 						\item client::controller::user::MenuCtrl
-					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
-				\item \textbf{Direttive AngularJS}:
-					\begin{itemize}
-						\item TODO
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_menu (end)
@@ -428,13 +399,9 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item client::view::user::Menu
 						\item client::controller::user::MenuMainCtrl
 					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
-						\item TODO
+						\item \textbf{ui-sref}: permette di effettuare un reindirizzamento in una determinata pagina, con la possibilità di passare dei parametri. Viene utilizzata dai pulsanti presenti nel menu principale per navigare in alcune delle pagine del sistema;
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_menumain (end)
@@ -455,13 +422,9 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item client::view::admin::MenuSecondAdmin
 						\item client::controller::user::MenuSecondCtrl
 					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
-						\item TODO
+						\item \textbf{ui-sref}: permette di effettuare un reindirizzamento in una determinata pagina, con la possibilità di passare dei parametri. Viene utilizzata dai pulsanti presenti nel menu secondario per navigare in alcune delle pagine del sistema;
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_menusecond (end)
@@ -500,10 +463,6 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item client::controller::admin::RecipeConfigRoute
 						\item client::controller::admin::RecipeConfigCtrl
 					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
 						\item TODO
@@ -525,13 +484,13 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item client::controller::admin::RequestListRoute
 						\item client::controller::admin::RequestListCtrl
 					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
-						\item TODO
+						\item \textbf{ng-controller}: permette l'attivazione del controller associato al template HTML relativo alla pagina di visualizzazione delle richieste di nuove recipe;
+						\item \textbf{ng-click}: permette di rilevare una scelta dell'utente e attiva una funzione o cambia il valore di qualche variabile dichiarata all'interno del template, in questo viene utilizzato da due pulsanti che attivano le relative funzioni \textbf{discardRequest(idRequestRecipe)} e \textbf{approvedRequest(idRequestRecipe)};
+						\item \textbf{ng-repeat}: permette di iterare ogni elemento di una lista e di poterlo utilizzare all'interno del template HTML grazie alla direttiva \textbf{ng-bind} potendone ricavare dati o eseguire metodi su di esso. Viene utilizzata per stampare la lista di tutte le richieste di nuove recipe;
+						\item \textbf{ng-bind}: permette di rimpiazzare il contenuto di un elemento con il valore dato dall'espressione definita. Questa direttiva viene preferita all'uso dell'operatore \{\{ \}\}. Viene utilizzata per stampare il valore degli elementi che si stanno iterando tramite la direttiva \textbf{ng-repeat};
+						\item \textbf{ui-sref}: permette di effettuare un reindirizzamento in una determinata pagina, con la possibilità di passare dei parametri. Viene utilizzata dal pulsante \textbf{See Details} che manda alla visualizzazione dei dettagli di una richiesta particolare.
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_admin_requestlist (end)
@@ -550,10 +509,6 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item client::view::admin::RequestList
 						\item client::controller::admin::RecipeConfigRoute
 						\item client::controller::admin::InsertRecipeCtrl
-					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
 					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
@@ -575,13 +530,11 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item client::controller::admin::RatingsRoute
 						\item client::controller::admin::RatingsCtrl
 					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
-						\item TODO
+						\item \textbf{ng-controller}: permette l'attivazione del controller associato al template HTML relativo alla pagina di visualizzazione delle valutazione delle recipe;
+						\item \textbf{ng-repeat}: permette di iterare ogni elemento di una lista e di poterlo utilizzare all'interno del template HTML grazie alla direttiva \textbf{ng-bind} potendone ricavare dati o eseguire metodi su di esso. Viene utilizzata per stampare la lista di tutte le recipe con affianco la loro valutazione;
+						\item \textbf{ng-bind}: permette di rimpiazzare il contenuto di un elemento con il valore dato dall'espressione definita. Questa direttiva viene preferita all'uso dell'operatore \{\{ \}\}. Viene utilizzata per stampare il valore degli elementi che si stanno iterando tramite la direttiva \textbf{ng-repeat};
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_admin_ratings (end)
@@ -599,13 +552,12 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item client::controller::admin::UsersConfigRoute
 						\item client::controller::admin::UsersConfigCtrl
 					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
-						\item TODO
+						\item \textbf{ng-controller}: permette l'attivazione del controller associato al template HTML relativo alla pagina di visualizzazione della lista degli utenti presenti nel sistema;
+						\item \textbf{ng-click}: permette di rilevare una scelta dell'utente e attiva una funzione o cambia il valore di qualche variabile dichiarata all'interno del template, in questo viene utilizzato dal pulsante che elimina un utente tramite la funzione \textbf{deleteAccount(idUser)};
+						\item \textbf{ng-repeat}: permette di iterare ogni elemento di una lista e di poterlo utilizzare all'interno del template HTML grazie alla direttiva \textbf{ng-bind} potendone ricavare dati o eseguire metodi su di esso. Viene utilizzata per stampare la lista di tutti gli utenti del sistema;
+						\item \textbf{ng-bind}: permette di rimpiazzare il contenuto di un elemento con il valore dato dall'espressione definita. Questa direttiva viene preferita all'uso dell'operatore \{\{ \}\}. Viene utilizzata per stampare il valore degli elementi che si stanno iterando tramite la direttiva \textbf{ng-repeat};
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_admin_usersconfig (end)
@@ -627,13 +579,9 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item client::view::user::MenuSecond
 						\item client::controller::admin::MenuSecondAdminCtrl
 					\end{itemize}
-				\item \textbf{Dipende da}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
-						\item TODO
+						\item \textbf{ui-sref}: permette di effettuare un reindirizzamento in una determinata pagina, con la possibilità di passare dei parametri. Viene utilizzata dai pulsanti presenti nel menu secondario per navigare in alcune delle pagine del sistema riservate all'amministratore;
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_admin_menusecondadmin (end)
