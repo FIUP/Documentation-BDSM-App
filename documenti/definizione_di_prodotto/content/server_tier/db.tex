@@ -78,7 +78,7 @@
 					\end{itemize}
 				\item \textbf{Attributi}: 
 					\begin{itemize}
-						\item date\_created\_date : Date
+						\item \textcolor{forestgreen}{\texttt{+ date\_created\_date : Date}}
 						\begin{description}
 							\item \textbf{Descrizione}: data acquisizione dati grezzi
 						\end{description}
@@ -116,7 +116,7 @@
 					\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
 					\item \textbf{Attributi}: 
 					\begin{itemize}
-						\item node\_id\_str : String
+						\item \textcolor{forestgreen}{\texttt{+ node\_id\_str : String}}
 						\begin{description}
 							\item \textbf{Descrizione}: codice identificativo evento o pagina Facebook
 						\end{description}
@@ -140,11 +140,11 @@
 						\end{itemize}
 					\item \textbf{Attributi}:
 					\begin{itemize}
-						\item name\_str : String
+						\item \textcolor{forestgreen}{\texttt{+ name\_str : String}}
 						\begin{description}
 							\item \textbf{Descrizione}: nome pagina Facebook
 						\end{description}
-						\item category\_str : String
+						\item \textcolor{forestgreen}{\texttt{+ category\_str : String}}
 						\begin{description}
 							\item \textbf{Descrizione}: categoria pagina Facebook
 						\end{description}
@@ -161,11 +161,11 @@
 					\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
 					\item \textbf{Attributi}: 
 					\begin{itemize}
-						\item likes\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ likes\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: numero likes di una determinata pagina Facebook
 						\end{description}
-						\item talking\_about\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ talking\_about\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: numero di talking about di una determinata pagina Facebook
 						\end{description}
@@ -188,11 +188,11 @@
 						\end{itemize}
 					\item \textbf{Attributi}: 
 					\begin{itemize}
-						\item name\_str : String
+						\item \textcolor{forestgreen}{\texttt{+ name\_str : String}}
 						\begin{description}
 							\item \textbf{Descrizione}: nome evento Facebook
 						\end{description}
-						\item location\_obj : GeoPoint
+						\item \textcolor{forestgreen}{\texttt{+ location\_obj : GeoPoint}}
 						\begin{description}
 							\item \textbf{Descrizione}: localizzazione tramite latitudine e longitudine pagina evento Facebook
 						\end{description}
@@ -210,20 +210,19 @@
 					\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
 					\item \textbf{Attributi}: 
 					\begin{itemize}
-						\item invited\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ invited\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: numero persone invitate evento Facebook
 						\end{description}
-						\item attending\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ attending\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: numero persone partecipanti evento Facebook
 						\end{description}
-						\item declined\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ declined\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: numero persone che hanno rifiutato la partecipazione evento Facebook
-							 evento Facebook
 						\end{description}
-						\item maybe\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ maybe\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: numero persone incerte se partecipare evento Facebook
 						\end{description}
@@ -240,27 +239,27 @@
 					\item \textbf{Utilizzo}: la classe fornisce metodi per sommare i dati statici sui post di Facebook;
 					\item \textbf{Attributi}: 
 					\begin{itemize}
-						\item posts\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ posts\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: numero post utente
 						\end{description}
-						\item comments\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ comments\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: numero commenti utente
 						\end{description}
-						\item admin\_posts\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ admin\_posts\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: numero post admin
 						\end{description}
-						\item admin\_comments\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ admin\_comments\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: numero commenti admin
 						\end{description}
-						\item posts\_like\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ posts\_like\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: numero like del post
 						\end{description}
-						\item comments\_like\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ comments\_like\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: numero like dei commenti
 						\end{description}
@@ -300,7 +299,7 @@
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
 				\item \textbf{Attributi}: 
 					\begin{itemize}
-						\item name\_str : String
+						\item \textcolor{forestgreen}{\texttt{+ name\_str : String}}
 						\begin{description}
 							\item \textbf{Descrizione}: nome identificativo pagina o hashtag
 						\end{description}
@@ -323,11 +322,11 @@
 					\end{itemize}
 				\item \textbf{Attributi}: 
 					\begin{itemize}
-						\item full\_name\_str : String
+						\item \textcolor{forestgreen}{\texttt{+ full\_name\_str : String}}
 						\begin{description}
 							\item \textbf{Descrizione}: nome completo del profilo utente
 						\end{description}
-						\item photo\_url\_str : String
+						\item \textcolor{forestgreen}{\texttt{+ photo\_url\_str : String}}
 						\begin{description}
 							\item \textbf{Descrizione}: indirizzo url foto profilo utente
 						\end{description}
@@ -345,19 +344,19 @@
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsTwRawData
 				\item \textbf{Attributi}: 
 					\begin{itemize}
-						\item favourites\_count\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ favourites\_count\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: numero di favoriti utente Twitter
 						\end{description}
-						\item followers\_count\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ followers\_count\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: numero di followers utente Twitter
 						\end{description}
-						\item friends\_count\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ friends\_count\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: numero di amici utente Twitter
 						\end{description}
-						\item tweets\_count\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ tweets\_count\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: numero di tweets utente Twitter
 						\end{description}
@@ -375,15 +374,15 @@
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
 				\item \textbf{Attributi}: 
 					\begin{itemize}
-						\item source\_devices\_list : List
+						\item \textcolor{forestgreen}{\texttt{+ source\_devices\_list : List}}
 						\begin{description}
 							\item \textbf{Descrizione}: lista composta da quantità e tipo dispositivi utilizzati per pubblicazione tweet
 						\end{description}
-						\item favourites\_count\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ favourites\_count\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: somma della quantità di favoriti dei tweets
 						\end{description}
-						\item retweets\_count\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ retweets\_count\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: somma della quantità di retweets dei tweets
 						\end{description}
@@ -417,11 +416,11 @@
 				\item \textbf{Classi ereditate}: server::db::raw\_data::RawTwUserTweet
 				\item \textbf{Attributi}:  
 					\begin{itemize}
-						\item time\_zone\_list : List
+						\item \textcolor{forestgreen}{\texttt{+ time\_zone\_list : List}}
 						\begin{description}
 							\item \textbf{Descrizione}: lista composta da quantità è timezone ricavati dai tweets contenenti il determinato hashtag
 						\end{description}
-						\item tweets\_count\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ tweets\_count\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: somma dei tweets contenenti un determinato hashtag
 						\end{description}
@@ -461,7 +460,7 @@
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
 				\item \textbf{Attributi}:  
 					\begin{itemize}
-						\item name\_node\_str : String
+						\item \textcolor{forestgreen}{\texttt{+ name\_node\_str : String}}
 						\begin{description}
 							\item \textbf{Descrizione}: nome identificativo pagina o hashtag
 						\end{description}
@@ -484,11 +483,11 @@
 					\end{itemize}
 				\item \textbf{Attributi}:  
 					\begin{itemize}
-						\item id\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ id\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: numero identificativo utente Instagram
 						\end{description}
-						\item fullname\_str : String
+						\item \textcolor{forestgreen}{\texttt{+ fullname\_str : String}}
 						\begin{description}
 							\item \textbf{Descrizione}: nome completo del profilo utente Instagram
 						\end{description}
@@ -506,15 +505,15 @@
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
 				\item \textbf{Attributi}:  
 					\begin{itemize}
-						\item media\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ media\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: numero di media caricati dall'utente su Instagram
 						\end{description}
-						\item followed\_by\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ followed\_by\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: numero di followed dell'utente
 						\end{description}
-						\item follows\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ follows\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: numero di follows che segue l'utente
 						\end{description}
@@ -549,7 +548,7 @@
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
 				\item \textbf{Attributi}:  
 					\begin{itemize}
-						\item media\_count\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ media\_count\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: numero totale di media caricati dato un hashtag su Instagram
 						\end{description}
@@ -567,27 +566,27 @@
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
 				\item \textbf{Attributi}:  
 					\begin{itemize}
-						\item media\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ media\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: numero identificativo media su Instagram
 						\end{description}
-						\item comments\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ comments\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: numero di commenti del media
 						\end{description}
-						\item likes\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ likes\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: numero di like del media
 						\end{description}
-						\item photos\_count\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ photos\_count\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: numero di foto del media
 						\end{description}
-						\item videos\_count\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ videos\_count\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: numero di video del media
 						\end{description}
-						\item location\_obj : GeoPoint
+						\item \textcolor{forestgreen}{\texttt{+ location\_obj : GeoPoint}}
 						\begin{description}
 							\item \textbf{Descrizione}: localizzazione tramite latitudine e longitudine di un media su Instagram
 						\end{description}
@@ -648,27 +647,27 @@
 					\end{itemize}
 				\item \textbf{Attributi}: 
 					\begin{itemize}
-						\item username\_str : String
+						\item \textcolor{forestgreen}{\texttt{+ username\_str : String}}
 						\begin{description}
 							\item \textbf{Descrizione}: username utente
 						\end{description}
-						\item email\_str : String
+						\item \textcolor{forestgreen}{\texttt{+ email\_str : String}}
 						\begin{description}
 							\item \textbf{Descrizione}: email utente
 						\end{description}
-						\item pwd\_str : String
+						\item \textcolor{forestgreen}{\texttt{+ pwd\_str : String}}
 						\begin{description}
 							\item \textbf{Descrizione}: password utente
 						\end{description}
-						\item data\_created\_date : Date
+						\item \textcolor{forestgreen}{\texttt{+ data\_created\_date : Date}}
 						\begin{description}
 							\item \textbf{Descrizione}: data creazione account utente
 						\end{description}
-						\item access\_token\_str : String
+						\item \textcolor{forestgreen}{\texttt{+ access\_token\_str : String}}
 						\begin{description}
 							\item \textbf{Descrizione}: access token utente per i servizi rest
 						\end{description}
-						\item active\_bool : boolean
+						\item \textcolor{forestgreen}{\texttt{+ active\_bool : boolean}}
 						\begin{description}
 							\item \textbf{Descrizione}: utente attivo o disattivo
 						\end{description}
@@ -705,7 +704,7 @@
 					\end{itemize}
 				\item \textbf{Attributi}: 
 					\begin{itemize}
-						\item chart\_type\_str : String
+						\item \textcolor{forestgreen}{\texttt{chart\_type\_str : String}}
 						\begin{description}
 							\item \textbf{Descrizione}: tipo di grafico scelto dall'utente e salvato nei preferiti
 						\end{description}
@@ -744,15 +743,15 @@
 					\end{itemize}
 				\item \textbf{Attributi}:  
 					\begin{itemize}
-						\item data\_create\_date : Date
+						\item \textcolor{forestgreen}{\texttt{data\_create\_date : Date}}
 						\begin{description}
 							\item \textbf{Descrizione}: data creazione recipe
 						\end{description}
-						\item desc\_str : String
+						\item \textcolor{forestgreen}{\texttt{desc\_str : String}}
 						\begin{description}
 							\item \textbf{Descrizione}: descrizione dettagliata recipe
 						\end{description}
-						\item title\_str : String
+						\item \textcolor{forestgreen}{\texttt{title\_str : String}}
 						\begin{description}
 							\item \textbf{Descrizione}: titolo recipe
 						\end{description}
@@ -786,11 +785,11 @@
 					\end{itemize}
 				\item \textbf{Attributi}:  
 					\begin{itemize}
-						\item update\_interval\_hours\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ update\_interval\_hours\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: intervallo di tempo schedulazione recipe
 						\end{description}
-						\item last\_update\_date : Date
+						\item \textcolor{forestgreen}{\texttt{+ last\_update\_date : Date}}
 						\begin{description}
 							\item \textbf{Descrizione}: data ultimo avvio miner recipe
 						\end{description}
@@ -806,11 +805,11 @@
 				\item \textbf{Utilizzo}: viene utilizzata per risalire al voto di ogni utente per una determinata Recipe;
 				\item \textbf{Attributi}:  
 					\begin{itemize}
-						\item rating\_float : float
+						\item \textcolor{forestgreen}{\texttt{+ rating\_float : float}}
 						\begin{description}
 							\item \textbf{Descrizione}: punteggio gradimento recipe utente
 						\end{description}
-						\item user\_id\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ user\_id\_int : int}}
 					\end{itemize}
 					\begin{description}
 							\item \textbf{Descrizione}: identificativo utente votante
@@ -849,11 +848,11 @@
 					\end{itemize}
 				\item \textbf{Attributi}:  
 					\begin{itemize}
-						\item type\_str : String
+						\item \textcolor{forestgreen}{\texttt{+ type\_str : String}}
 						\begin{description}
 							\item \textbf{Descrizione}: tipo di metrica
 						\end{description}
-						\item node\_name\_str : String
+						\item \textcolor{forestgreen}{\texttt{+ node\_name\_str : String}}
 						\begin{description}
 							\item \textbf{Descrizione}: nome categoria metrica
 						\end{description}
