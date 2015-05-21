@@ -46,14 +46,14 @@
         \end{itemize}
       \item \textbf{Attributi}:
           \begin{itemize}
-              \item static istance\_obj : RequestHandler
+              \item \textcolor{forestgreen}{\texttt{- static istance\_obj : RequestHandler}}
               \begin{description}
                 \item \textbf{Descrizione}: rappresenta la singola istanza della classe RequestHandler.
               \end{description}
           \end{itemize}
       \item \textbf{Metodi}:
           \begin{itemize}
-             \item private RequestHandler()
+             \item \textcolor{forestgreen}{\texttt{- RequestHandler()}}
               \begin{description}
                 \item \textbf{Descrizione}: construttore privato del singleton RequestHandler.
               \end{description}
@@ -61,7 +61,7 @@
               \begin{description}
                 \item \textbf{Descrizione}: metodo che si occupa di far confluire la richiesta in arrivo alla classe CommandDispatcher. I dati della richiesta vengono rappresentati come un dizionario chiave-valore, come quelli della risposta che saranno ritornati al chiamante.
               \end{description}
-             \item public static get\_istance() : RequestHandler
+             \item \textcolor{forestgreen}{\texttt{+ static get\_istance() : RequestHandler}}
               \begin{description}
                 \item \textbf{Descrizione}: ritorna la singola istanza della classe RequestHandler o ne crea una se tale classe non risulta ancora istanziata.
               \end{description}
@@ -80,14 +80,14 @@
         \end{itemize}
     \item \textbf{Attributi}:
           \begin{itemize}
-              \item commands\_dict : Dictionary
+              \item \textcolor{forestgreen}{\texttt{- commands\_dict : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: contiene una mappa che collega ogni tipologia di richiesta ad un determinato comando. Una richiesta è rappresentata da una specifica stringa.
               \end{description}
           \end{itemize}
     \item \textbf{Metodi}:
           \begin{itemize}
-              \item public dispatch(request\_name: String, request: Dictionary) : Dictionary
+              \item \textcolor{forestgreen}{\texttt{+ dispatch(request\_name: String, request: Dictionary) : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: metodo che si occupa di far confluire un determinata richiesta (ed i dati associati mappati in un dizionario) ad un determinato comando grazie all'attributo \texttt{commands\_dict}. Ritorna la risposta alla chiamata tramite un dizionario.
               \end{description}
@@ -130,7 +130,7 @@
     \item \textbf{Attributi}: N/A
     \item \textbf{Metodi}:
           \begin{itemize}
-              \item public execute(request: Dictionary) : Dictionary
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: metodo astratto che definisce un contratto per tutte le classi che implementato ICommand. Accetta un parametro di tipo Dictionary, contente i dati della richiesta, e ritorna un oggetto dello stesso tipo contente i dati da ritornare alla chiamata (se necessari) ed informazioni successo o meno di esecuzione del comando.
               \end{description}
@@ -187,7 +187,7 @@
           \item \textbf{Attributi}: N/A
           \item \textbf{Metodi}:
           \begin{itemize}
-              \item public execute(request: Dictionary) : Dictionary
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: aggiunge un nuovo utente al database.
               \end{description}
@@ -207,7 +207,7 @@
           \item \textbf{Attributi}: N/A
           \item \textbf{Metodi}:
           \begin{itemize}
-              \item public execute(request: Dictionary) : Dictionary
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: ritorna un determinato utente presente nel database.
               \end{description}
@@ -227,7 +227,7 @@
           \item \textbf{Attributi}: N/A
           \item \textbf{Metodi}:
           \begin{itemize}
-              \item public execute(request: Dictionary) : Dictionary
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: elimina un determinato utente dal database.
               \end{description}
@@ -247,7 +247,7 @@
           \item \textbf{Attributi}: N/A
           \item \textbf{Metodi}:
           \begin{itemize}
-              \item public execute(request: Dictionary) : Dictionary
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: modifica i dati associati ad un determinato utente presente nel database.
               \end{description}
@@ -267,7 +267,7 @@
           \item \textbf{Attributi}: N/A
           \item \textbf{Metodi}:
           \begin{itemize}
-              \item public execute(request: Dictionary) : Dictionary
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: modifica i permessi di un determinato utente presente nel database.
               \end{description}
@@ -287,7 +287,7 @@
           \item \textbf{Attributi}: N/A
           \item \textbf{Metodi}:
           \begin{itemize}
-              \item public execute(request: Dictionary) : Dictionary
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: ritorna i preferiti associati ad un determinato utente.
               \end{description}
@@ -307,7 +307,7 @@
           \item \textbf{Attributi}: N/A
           \item \textbf{Metodi}:
           \begin{itemize}
-              \item public execute(request: Dictionary) : Dictionary
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: rimuove dal database un determinato preferito associato ad un utente.
               \end{description}
@@ -327,7 +327,7 @@
           \item \textbf{Attributi}: N/A
           \item \textbf{Metodi}:
           \begin{itemize}
-              \item public execute(request: Dictionary) : Dictionary
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: aggiunge al database un preferito associato ad un determinato utente.
               \end{description}
@@ -385,7 +385,7 @@
           \item \textbf{Attributi}: N/A
           \item \textbf{Metodi}:
           \begin{itemize}
-              \item public execute(request: Dictionary) : Dictionary
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: restituisce i dati associati ad una determinata Recipe presente nel database.
               \end{description}
@@ -405,7 +405,7 @@
           \item \textbf{Attributi}: N/A
           \item \textbf{Metodi}:
           \begin{itemize}
-              \item public execute(request: Dictionary) : Dictionary
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: restituisce la lista delle Recipe presenti nel database.
               \end{description}
@@ -425,7 +425,7 @@
           \item \textbf{Attributi}: N/A
           \item \textbf{Metodi}:
           \begin{itemize}
-              \item public execute(request: Dictionary) : Dictionary
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: aggiunge una nuova Recipe al database.
               \end{description}
@@ -445,7 +445,7 @@
           \item \textbf{Attributi}: N/A
           \item \textbf{Metodi}:
           \begin{itemize}
-              \item public execute(request: Dictionary) : Dictionary
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: rimuove una determinata Recipe dal database.
               \end{description}
@@ -465,7 +465,7 @@
           \item \textbf{Attributi}: N/A
           \item \textbf{Metodi}:
           \begin{itemize}
-              \item public execute(request: Dictionary) : Dictionary
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: aggiunge o modifica il rating di una determinata Recipe.
               \end{description}
@@ -522,7 +522,7 @@
           \item \textbf{Attributi}: N/A
           \item \textbf{Metodi}:
           \begin{itemize}
-              \item public execute(request: Dictionary) : Dictionary
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: restituisce i dati associati ad una determinata richiesta di aggiunta Recipe presente nel database.
               \end{description}
@@ -542,7 +542,7 @@
           \item \textbf{Attributi}: N/A
           \item \textbf{Metodi}:
           \begin{itemize}
-              \item public execute(request: Dictionary) : Dictionary
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: aggiunge una nuova richiesta di aggiunta Recipe al database.
               \end{description}
@@ -562,7 +562,7 @@
           \item \textbf{Attributi}: N/A
           \item \textbf{Metodi}:
           \begin{itemize}
-              \item public execute(request: Dictionary) : Dictionary
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: restituisce i dati associati ad una determinata richiesta di aggiunta Recipe presente nel database.
               \end{description}
@@ -582,7 +582,7 @@
           \item \textbf{Attributi}: N/A
           \item \textbf{Metodi}:
           \begin{itemize}
-              \item public execute(request: Dictionary) : Dictionary
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: rimuove una determinata richiesta di aggiunta Recipe presente nel database.
               \end{description}
@@ -602,7 +602,7 @@
           \item \textbf{Attributi}: N/A
           \item \textbf{Metodi}:
           \begin{itemize}
-              \item public execute(request: Dictionary) : Dictionary
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: restituisce la lista delle metriche associate ad una determinata Recipe.
               \end{description}
@@ -674,7 +674,7 @@
           \item \textbf{Attributi}: N/A
           \item \textbf{Metodi}:
           \begin{itemize}
-              \item public execute(request: Dictionary) : Dictionary
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: restituisce i dati associati ad una determinata pagina Facebook presente nel database.
               \end{description}
@@ -694,7 +694,7 @@
           \item \textbf{Attributi}: N/A
           \item \textbf{Metodi}:
           \begin{itemize}
-              \item public execute(request: Dictionary) : Dictionary
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: restituisce i dati associati al trend di una determinata pagina Facebook presente nel database.
               \end{description}
@@ -714,7 +714,7 @@
             \item \textbf{Attributi}: N/A
             \item \textbf{Metodi}:
             \begin{itemize}
-                \item public execute(request: Dictionary) : Dictionary
+                \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
                 \begin{description}
                   \item \textbf{Descrizione}: restituisce i dati associati ad un determinato evento Facebook presente nel database.
                 \end{description}
@@ -734,7 +734,7 @@
             \item \textbf{Attributi}: N/A
             \item \textbf{Metodi}:
             \begin{itemize}
-                \item public execute(request: Dictionary) : Dictionary
+                \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
                 \begin{description}
                   \item \textbf{Descrizione}: restituisce i dati associati al trend di un determinato evento Facebook presente nel database.
                 \end{description}
@@ -754,7 +754,7 @@
             \item \textbf{Attributi}: N/A
             \item \textbf{Metodi}:
             \begin{itemize}
-                \item public execute(request: Dictionary) : Dictionary
+                \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
                 \begin{description}
                   \item \textbf{Descrizione}: restituisce i dati associati al trend dei post di un determinato avento Facebook presente nel database.
                 \end{description}
@@ -790,7 +790,7 @@
           \item \textbf{Attributi}: N/A
           \item \textbf{Metodi}:
           \begin{itemize}
-              \item public execute(request: Dictionary) : Dictionary
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: restituisce i dati associati ad un determinato utente Twitter presente nel database.
               \end{description}
@@ -810,7 +810,7 @@
           \item \textbf{Attributi}: N/A
           \item \textbf{Metodi}:
           \begin{itemize}
-              \item public execute(request: Dictionary) : Dictionary
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: restituisce i dati associati al trend di un determinato utente Twitter presente nel database.
               \end{description}
@@ -830,7 +830,7 @@
           \item \textbf{Attributi}: N/A
           \item \textbf{Metodi}:
           \begin{itemize}
-              \item public execute(request: Dictionary) : Dictionary
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: restituisce i dati associati al trend dei tweet di un determinato utente Twitter presente nel database.
               \end{description}
@@ -850,7 +850,7 @@
           \item \textbf{Attributi}: N/A
           \item \textbf{Metodi}:
           \begin{itemize}
-              \item public execute(request: Dictionary) : Dictionary
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
               \begin{description}
                 \item \textbf{Descrizione}: restituisce i dati associati al trend dei tweet relativi ad un determinato hashtag Twitter presente nel database.
               \end{description}
@@ -886,7 +886,7 @@
 					\item \textbf{Attributi}: N/A
 					\item \textbf{Metodi}:
         	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
+          		\item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
 							\begin{description}
 								\item \textbf{Descrizione}: restituisce i dati associati ad un determinato utente Instagram presente nel database.
 							\end{description}
@@ -906,7 +906,7 @@
 					\item \textbf{Attributi}: N/A
 					\item \textbf{Metodi}:
         	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
+          		\item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
 							\begin{description}
 								\item \textbf{Descrizione}: restituisce i dati associati al trend di un determinato utente Instagram presente nel database.
 							\end{description}
@@ -926,7 +926,7 @@
 					\item \textbf{Attributi}: N/A
 					\item \textbf{Metodi}:
         	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
+          		\item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
 							\begin{description}
 								\item \textbf{Descrizione}: restituisce i dati associati al trend dei media di un determinato utente Instagram presente nel database.
 							\end{description}
@@ -946,7 +946,7 @@
 					\item \textbf{Attributi}: N/A
 				\item \textbf{Metodi}:
         	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
+          		\item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
 							\begin{description}
 								\item \textbf{Descrizione}: restituisce i dati associati al trend relativo ad un determinato hashtag Instagram presente nel database.
 							\end{description}
@@ -966,7 +966,7 @@
 					\item \textbf{Attributi}: N/A
 				\item \textbf{Metodi}:
         	\begin{itemize}
-          		\item \texttt{public execute(request: Dictionary) : Dictionary}
+          		\item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
 							\begin{description}
 								\item \textbf{Descrizione}: restituisce i dati associati al trend relativo ad un determinato hashtag Instagram presente nel database.
 							\end{description}
