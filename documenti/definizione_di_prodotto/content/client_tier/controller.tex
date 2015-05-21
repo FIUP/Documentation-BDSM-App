@@ -112,12 +112,21 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item \textbf{+ credentials} : oggetto nel formato JSON che contiene il valore iniziale dei campi mail e password che inizialmente saranno vuoti.
+
+						\item \textcolor{forestgreen}{\texttt{+ credentials : oggetto JSON}}
+							\begin{description}
+								\item \textbf{Descrizione}: oggetto nel formato JSON che contiene il valore iniziale dei campi mail e password che inizialmente saranno vuoti.
+							\end{description}
+
 					\end{itemize}
 
 				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item \textbf{+ login(cred)} : gli vengono passati i dati dalla view e viene invocato il metodo login della classe AuthService.
+						\item \textcolor{forestgreen}{\texttt{+ login(cred)}}
+							\begin{description}
+								\item \textbf{Descrizione}: gli vengono passati i dati dalla view e viene invocato il metodo login della classe AuthService.
+							\end{description}
+
 					\end{itemize}
 
 				\item \textbf{Servizi AngularJS utilizzati}: N/A
@@ -144,14 +153,29 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 					\end{itemize}
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item \textbf{+ credentials} : oggetto nel formato JSON che contiene il valore iniziale dei campi username, mail, password e password da confermare che inizialmente saranno vuoti;
-						\item \textbf{+ matchPwd} : booleano inizializzato a false che cambia valore se il valore della nuova password e quello di conferma non combaciano.
+						\item \textcolor{forestgreen}{\texttt{+ credentials : oggetto JSON}}
+							\begin{description}
+								\item \textbf{Descrizione}: oggetto nel formato JSON che contiene il valore iniziale dei campi username, mail, password e password da confermare che inizialmente saranno vuoti.
+							\end{description}
+
+						\item \textcolor{forestgreen}{\texttt{+ matchPwd : bool}} 
+							\begin{description}
+								\item \textbf{Descrizione}: booleano inizializzato a false che cambia valore se il valore della nuova password e quello di conferma non combaciano.
+							\end{description}
+
 					\end{itemize}
 
 				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item \textbf{+ register(cred)} : gli vengono passati i dati dalla view e viene invocato il metodo register della classe AuthService;
-						\item \textbf{- checkMatchPwd(newPwd, confirmNewPwd)} : gli vengono passati i valori della nuova password e il valore di conferma. Ritorna true se combaciano, altrimenti false.
+						\item \textcolor{forestgreen}{\texttt{+ register(cred)}}
+							\begin{description}
+								\item \textbf{Descrizione}: gli vengono passati i dati dalla view e viene invocato il metodo register della classe AuthService.
+							\end{description}
+
+						\item \textcolor{forestgreen}{\texttt{- checkMatchPwd(newPwd, confirmNewPwd)}}
+							\begin{description}
+								\item \textbf{Descrizione}: gli vengono passati i dati dalla view e viene invocato il metodo register della classe AuthService.
+							\end{description}
 					\end{itemize}
 
 				\item \textbf{Servizi AngularJS utilizzati}: N/A
@@ -178,12 +202,18 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 			\item \textbf{Attributi associati allo \$scope}:
 				\begin{itemize}
-					\item \textbf{+ restServices} : array di oggetti nel formato JSON che rappresentano la lista delle API pubbliche. Questa variabile viene inizializzata tramite la chiamata immediata alla funzione privata getRestService.
+					\item \textcolor{forestgreen}{\texttt{+ restServices : array di oggetti JSON }}
+						\begin{description}
+							\item \textbf{Descrizione}: array di oggetti nel formato JSON che rappresentano la lista delle API pubbliche. Questa variabile viene inizializzata tramite la chiamata immediata alla funzione privata getRestService.
+						\end{description}
 				\end{itemize}
 
 			\item \textbf{Metodi associati allo \$scope e privati}:
 				\begin{itemize}
-					\item \textbf{- getRestService()} : funzione che preleva la lista delle API pubbliche tramite una chiamata alla classe ApiDocsModel.
+					\item \textcolor{forestgreen}{\texttt{- getRestService()}}
+						\begin{description}
+							\item \textbf{Descrizione}: funzione che preleva la lista delle API pubbliche tramite una chiamata alla classe ApiDocsModel.
+						\end{description}
 				\end{itemize}
 
 			\item \textbf{Servizi AngularJS utilizzati}: N/A
@@ -226,7 +256,7 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 						\item client::view::user::Menu
 					\end{itemize}
 				\item \textbf{Attributi associati allo \$scope}: N/A
-				\item \textbf{Metodi}: N/A
+				\item \textbf{Metodi associati allo \$scope e privati}: N/A
 			\end{itemize}
 		% subparagraph client_controller_user_menuctrl (end)
 
@@ -248,7 +278,7 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 						\item client::controller::user::SettingsRoute
 					\end{itemize}
 				\item \textbf{Attributi associati allo \$scope}: N/A
-				\item \textbf{Metodi}: N/A
+				\item \textbf{Metodi associati allo \$scope e privati}: N/A
 			\end{itemize}
 		% subparagraph client_controller_user_menumainctrl (end)
 
@@ -312,9 +342,7 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 					\end{itemize}
 
 				\item \textbf{Attributi associati allo \$scope}: N/A
-
 				\item \textbf{Metodi associati allo \$scope e privati}: N/A
-
 				\item \textbf{Servizi AngularJS utilizzati}: N/A
 
 			\end{itemize}
@@ -365,18 +393,23 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{ + listRecipes : array di oggetti JSON}}
+							\begin{description}
+								\item \textbf{Descrizione}: array di oggetti nel formato JSON che rappresentano la lista delle recipe presenti nel sistema. Questa variabile viene inizializzata tramite la chiamata immediata alla funzione privata getListOfRecipes.
+							\end{description}
+
 					\end{itemize}
 
-				\item \textbf{Metodi}:
+				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{- getListOfRecipes()}}
+							\begin{description}
+								\item \textbf{Descrizione}: funzione che preleva la lista delle recipe tramite una chiamata al metodo \textbf{getRecipesList} della classe RecipeService.
+							\end{description}
+
 					\end{itemize}
 
-				\item \textbf{Servizi AngularJS utilizzati}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
+				\item \textbf{Servizi AngularJS utilizzati}: N/A
 
 			\end{itemize}
 		% subparagraph client_controller_user_recipectrl (end)
@@ -400,17 +433,41 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{+ titleRecipe : String}}
+							\begin{description}
+								\item \textbf{Descrizione}: parametro che identifica il nome della Recipe che contiene le metriche visualizzate dalla pagina.
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ titleRecipe : String}}
+							\begin{description}
+								\item \textbf{Descrizione}: parametro che identifica il nome della Recipe che contiene le metriche visualizzate dalla pagina.
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ titleRecipe : String}}
+							\begin{description}
+								\item \textbf{Descrizione}: parametro che identifica il nome della Recipe che contiene le metriche visualizzate dalla pagina.
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ titleRecipe : String}}
+							\begin{description}
+								\item \textbf{Descrizione}: parametro che identifica il nome della Recipe che contiene le metriche visualizzate dalla pagina.
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ titleRecipe : String}}
+							\begin{description}
+								\item \textbf{Descrizione}: parametro che identifica il nome della Recipe che contiene le metriche visualizzate dalla pagina.
+							\end{description}
+
 					\end{itemize}
 
-				\item \textbf{Metodi}:
+				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+
 					\end{itemize}
 
 				\item \textbf{Servizi AngularJS utilizzati}:
 					\begin{itemize}
-						\item TODO
+						\item \$stateParams
 					\end{itemize}
 
 			\end{itemize}
@@ -435,12 +492,20 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+
 					\end{itemize}
 
-				\item \textbf{Metodi}:
+				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+
 					\end{itemize}
 
 				\item \textbf{Servizi AngularJS utilizzati}:
@@ -470,12 +535,20 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+
 					\end{itemize}
 
-				\item \textbf{Metodi}:
+				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+
 					\end{itemize}
 
 				\item \textbf{Servizi AngularJS utilizzati}:
@@ -524,12 +597,20 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+
 					\end{itemize}
 
-				\item \textbf{Metodi}:
+				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+
 					\end{itemize}
 
 				\item \textbf{Servizi AngularJS utilizzati}:
@@ -584,12 +665,20 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+
 					\end{itemize}
 
-				\item \textbf{Metodi}:
+				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+
 					\end{itemize}
 
 				\item \textbf{Servizi AngularJS utilizzati}:
@@ -639,12 +728,20 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+
 					\end{itemize}
 
-				\item \textbf{Metodi}:
+				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+
 					\end{itemize}
 
 				\item \textbf{Servizi AngularJS utilizzati}:
@@ -698,12 +795,20 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+
 					\end{itemize}
 
-				\item \textbf{Metodi}:
+				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+
 					\end{itemize}
 
 				\item \textbf{Servizi AngularJS utilizzati}:
@@ -815,12 +920,20 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+
 					\end{itemize}
 
 				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+
 					\end{itemize}
 
 				\item \textbf{Servizi AngularJS utilizzati}:
@@ -868,20 +981,9 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 						\item client::controller::admin::RecipeListRoute
 					\end{itemize}
 
-				\item \textbf{Attributi associati allo \$scope}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
-
-				\item \textbf{Metodi associati allo \$scope e privati}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
-
-				\item \textbf{Servizi AngularJS utilizzati}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
+				\item \textbf{Attributi associati allo \$scope}: N/A
+				\item \textbf{Metodi associati allo \$scope e privati}: N/A
+				\item \textbf{Servizi AngularJS utilizzati}: N/A
 
 			\end{itemize}
 		% subparagraph bdsm_app_client_controller_admin_requestlistctrl (end)
@@ -905,18 +1007,65 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
 					\end{itemize}
 
 				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
 					\end{itemize}
 
-				\item \textbf{Servizi AngularJS utilizzati}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
+				\item \textbf{Servizi AngularJS utilizzati}: N/A
 
 			\end{itemize}
 		% subparagraph bdsm_app_client_controller_admin_insertctrl (end)
@@ -964,12 +1113,20 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+
 					\end{itemize}
 
 				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+
 					\end{itemize}
 
 				\item \textbf{Servizi AngularJS utilizzati}:
@@ -1019,12 +1176,20 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+
 					\end{itemize}
 
 				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+
 					\end{itemize}
 
 				\item \textbf{Servizi AngularJS utilizzati}:
