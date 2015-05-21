@@ -1,12 +1,12 @@
 % =================================================================================================
-% File:			server_tier/processor.tex
-% Description:	Definisce la sezione relativa al back-end dell'applicazione
-% Created:		2015-04-07
-% Author:		Cusinato Giacomo
-% Email:		cusinato.giacomo@mashup-unipd.it
+% File:     server_tier/processor.tex
+% Description:  Definisce la sezione relativa al back-end dell'applicazione
+% Created:    2015-04-07
+% Author:   Cusinato Giacomo
+% Email:    cusinato.giacomo@mashup-unipd.it
 % =================================================================================================
 % Modification History:
-% Version		Modifier Date		Change											Author
+% Version   Modifier Date   Change                      Author
 % 0.0.1
 % =================================================================================================
 
@@ -16,9 +16,9 @@
 \subsubsection{server::processor} % (fold)
 \label{ssub:bdsm_app_server_processor}
 \begin{figure}[!htbp]
-	\centering
-	\centerline{\includegraphics[scale=0.4]{./images/server/processor.pdf}}
-	\caption{Package - server::processor}
+  \centering
+  \centerline{\includegraphics[scale=0.4]{./images/server/processor.pdf}}
+  \caption{Package - server::processor}
 \end{figure}
 
 \begin{itemize}
@@ -35,7 +35,7 @@
 
   \paragraph{Classi} % (fold)
 
-    \subparagraph{server::processor::RequestHandler} % (fold)
+\subparagraph{server::processor::RequestHandler} % (fold)
     \label{subp:bdsm_app_server_processor_requesthandler}
     \begin{itemize}
       \item \textbf{Descrizione}: è la classe che implementa il pattern Front Controller e si occupa di raccogliere le richieste provenienti dal client. Implementa inoltre il pattern Singleton, perciò un'unica istanza di tale classe vivrà nel sistema;
@@ -44,20 +44,32 @@
         \begin{itemize}
           \item server::processor::CommandDispatcher
         \end{itemize}
-		\item \textbf{Attributi}:
-        	\begin{itemize}
-          		\item istance\_obj : RequestHandler
-        	\end{itemize} 
-		\item \textbf{Metodi}: 
-        	\begin{itemize}
-         		 \item private RequestHandler() 
-         		 \item public dispatch\_request(request: Dictionary) : Dictionary
-         		 \item public get\_istance() : RequestHandler
-        	\end{itemize}
+      \item \textbf{Attributi}:
+          \begin{itemize}
+              \item static istance\_obj : RequestHandler
+              \begin{description}
+                \item \textbf{Descrizione}: rappresenta la singola istanza della classe RequestHandler.
+              \end{description}
+          \end{itemize}
+      \item \textbf{Metodi}:
+          \begin{itemize}
+             \item private RequestHandler()
+              \begin{description}
+                \item \textbf{Descrizione}: construttore privato del singleton RequestHandler.
+              \end{description}
+             \item public dispatch\_request(request\_name: String, request\_args: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: metodo che si occupa di far confluire la richiesta in arrivo alla classe CommandDispatcher. I dati della richiesta vengono rappresentati come un dizionario chiave-valore, come quelli della risposta che saranno ritornati al chiamante.
+              \end{description}
+             \item public static get\_istance() : RequestHandler
+              \begin{description}
+                \item \textbf{Descrizione}: ritorna la singola istanza della classe RequestHandler o ne crea una se tale classe non risulta ancora istanziata.
+              \end{description}
+          \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_processor_requesthandler (end)
 
-    \subparagraph{server::processor::CommandDispatcher} % (fold)
+\subparagraph{server::processor::CommandDispatcher} % (fold)
     \label{subp:bdsm_app_server_:processor_commanddispatcher}
     \begin{itemize}
       \item \textbf{Descrizione}: classe che implementa il pattern Command e si occupa di far confluire una determinata richiesta al relativo comando contenente la logica per soddisfarla;
@@ -66,41 +78,30 @@
         \begin{itemize}
           \item server::processor::commands::ICommand
         \end{itemize}
-		\item \textbf{Attributi}: 
-        	\begin{itemize}
-          		\item commands\_dict : Dictionary
-        	\end{itemize}
-		\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public dispatch(request: Dictionary) : Dictionary
-        	\end{itemize}
+    \item \textbf{Attributi}:
+          \begin{itemize}
+              \item commands\_dict : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: contiene una mappa che collega ogni tipologia di richiesta ad un determinato comando. Una richiesta è rappresentata da una specifica stringa.
+              \end{description}
+          \end{itemize}
+    \item \textbf{Metodi}:
+          \begin{itemize}
+              \item public dispatch(request\_name: String, request: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: metodo che si occupa di far confluire un determinata richiesta (ed i dati associati mappati in un dizionario) ad un determinato comando grazie all'attributo \texttt{commands\_dict}. Ritorna la risposta alla chiamata tramite un dizionario.
+              \end{description}
+          \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_processor_commanddispatcher (end)
-
-    \subparagraph{server::processor::UpdateRecipeTask} % (fold)
-    \label{subp:bdsm_app_server_processor_updaterecipetask}
-    \begin{itemize}
-      \item \textbf{Descrizione}: è la classe che riceve la notifica dal Cron (funzionalità integrata nella Google Cloud Platform) per aggiornare le Recipe memorizzate nel sistema interagendo con la classe \texttt{server::miner::MinerScheduler} a tale scopo;
-      \item \textbf{Utilizzo}:si occupa di invocare il \texttt{MinerScheduler} avviando il processo di aggiornamento delle Recipe passando al modulo Miner la lista delle ricette da aggiornare;
-      \item \textbf{Relazioni con altre classi}:
-        \begin{itemize}
-          \item server::miner::MinerScheduler
-        \end{itemize}
-		\item \textbf{Attributi}: N/A
-		\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public get() : void
-        	\end{itemize}
-    \end{itemize}
-    % subparagraph bdsm_app::server_processor_updaterecipetask (end)
 
 
     \subsubsection{server::processor::commands} % (fold)
     \label{ssub:bdsm_app_server_processor_commands}
     \begin{figure}[!htbp]
-    	\centering
-    	\centerline{\includegraphics[scale=0.4]{./images/server/commands.pdf}}
-    	\caption{Package - server::processor::commands}
+      \centering
+      \centerline{\includegraphics[scale=0.4]{./images/server/commands.pdf}}
+      \caption{Package - server::processor::commands}
     \end{figure}
 
     \begin{itemize}
@@ -126,11 +127,14 @@
       \begin{itemize}
         \item \textbf{Descrizione}: rappresenta un'interfaccia comune per tutti i comandi presenti nel package \texttt{server::commands} e figli;
         \item \textbf{Utilizzo}: espone un metodo \texttt{execute()}, il quale sarà implementato da tutti i comandi concreti;
-		\item \textbf{Attributi}: N/A
-		\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+    \item \textbf{Attributi}: N/A
+    \item \textbf{Metodi}:
+          \begin{itemize}
+              \item public execute(request: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: metodo astratto che definisce un contratto per tutte le classi che implementato ICommand. Accetta un parametro di tipo Dictionary, contente i dati della richiesta, e ritorna un oggetto dello stesso tipo contente i dati da ritornare alla chiamata (se necessari) ed informazioni successo o meno di esecuzione del comando.
+              \end{description}
+          \end{itemize}
       \end{itemize}
       % subparagraph bdsm_app::server_processor_abscommand (end)
 
@@ -141,9 +145,9 @@
       \subsubsection{server::processor::commands::user} % (fold)
       \label{ssub:bdsm_app_server_processor_commands_user}
       \begin{figure}[!htbp]
-      	\centering
-      	\centerline{\includegraphics[scale=0.5]{./images/server/user.pdf}}
-      	\caption{Package - server::processor::commands::user}
+        \centering
+        \centerline{\includegraphics[scale=0.5]{./images/server/user.pdf}}
+        \caption{Package - server::processor::commands::user}
       \end{figure}
 
       \begin{itemize}
@@ -166,8 +170,8 @@
             \begin{itemize}
               \item server::processor::commands::ICommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: N/A
+      \item \textbf{Attributi}: N/A
+      \item \textbf{Metodi}: N/A
         \end{itemize}
         % subparagraph (end)
 
@@ -180,11 +184,14 @@
             \begin{itemize}
               \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item public execute(request: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: aggiunge un nuovo utente al database.
+              \end{description}
+          \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -197,11 +204,14 @@
             \begin{itemize}
               \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item public execute(request: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: ritorna un determinato utente presente nel database.
+              \end{description}
+          \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -214,11 +224,14 @@
             \begin{itemize}
               \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item public execute(request: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: elimina un determinato utente dal database.
+              \end{description}
+          \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -231,11 +244,14 @@
             \begin{itemize}
               \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item public execute(request: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: modifica i dati associati ad un determinato utente presente nel database.
+              \end{description}
+          \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -248,11 +264,14 @@
             \begin{itemize}
               \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item public execute(request: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: modifica i permessi di un determinato utente presente nel database.
+              \end{description}
+          \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -265,11 +284,14 @@
             \begin{itemize}
               \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item public execute(request: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: ritorna i preferiti associati ad un determinato utente.
+              \end{description}
+          \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -282,11 +304,14 @@
             \begin{itemize}
               \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item public execute(request: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: rimuove dal database un determinato preferito associato ad un utente.
+              \end{description}
+          \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -299,11 +324,14 @@
             \begin{itemize}
               \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item public execute(request: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: aggiunge al database un preferito associato ad un determinato utente.
+              \end{description}
+          \end{itemize}
         \end{itemize}
         % subparagraph (end)
       % subsection
@@ -315,9 +343,9 @@
       \subsubsection{server::processor::commands::recipe} % (fold)
       \label{ssub:bdsm_app_server_processor_commands_recipe}
       \begin{figure}[!htbp]
-      	\centering
-      	\centerline{\includegraphics[scale=0.5]{./images/server/recipe.pdf}}
-      	\caption{Package - server::processor::commands::recipe}
+        \centering
+        \centerline{\includegraphics[scale=0.5]{./images/server/recipe.pdf}}
+        \caption{Package - server::processor::commands::recipe}
       \end{figure}
 
       \begin{itemize}
@@ -340,8 +368,8 @@
             \begin{itemize}
               \item server::processor::commands::ICommand;
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: N/A
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}: N/A
         \end{itemize}
         % subparagraph (end)
 
@@ -354,11 +382,14 @@
             \begin{itemize}
               \item server::processor::commands::recipe::AbsRecipeCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item public execute(request: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: restituisce i dati associati ad una determinata Recipe presente nel database.
+              \end{description}
+          \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -371,11 +402,14 @@
             \begin{itemize}
               \item server::processor::commands::recipe::AbsRecipeCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item public execute(request: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: restituisce la lista delle Recipe presenti nel database.
+              \end{description}
+          \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -388,11 +422,14 @@
             \begin{itemize}
               \item server::processor::commands::recipe::AbsRecipeCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item public execute(request: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: aggiunge una nuova Recipe al database.
+              \end{description}
+          \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -405,11 +442,14 @@
             \begin{itemize}
               \item server::processor::commands::recipe::AbsRecipeCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item public execute(request: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: rimuove una determinata Recipe dal database.
+              \end{description}
+          \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -422,11 +462,14 @@
             \begin{itemize}
               \item server::processor::commands::recipe::AbsRecipeCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item public execute(request: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: aggiunge o modifica il rating di una determinata Recipe.
+              \end{description}
+          \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -437,9 +480,9 @@
       \subsubsection{server::processor::commands::requests} % (fold)
       \label{ssub:bdsm_app_server_processor_commands_requests}
       \begin{figure}[!htbp]
-      	\centering
-      	\centerline{\includegraphics[scale=0.5]{./images/server/requests.pdf}}
-      	\caption{Package - server::processor::commands::requests}
+        \centering
+        \centerline{\includegraphics[scale=0.5]{./images/server/requests.pdf}}
+        \caption{Package - server::processor::commands::requests}
       \end{figure}
 
       \begin{itemize}
@@ -462,8 +505,8 @@
             \begin{itemize}
               \item server::processor::commands::ICommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: N/A
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}: N/A
         \end{itemize}
         % subparagraph (end)
 
@@ -476,11 +519,14 @@
             \begin{itemize}
               \item server::processor::commands::requests::AbsRequestCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item public execute(request: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: restituisce i dati associati ad una determinata richiesta di aggiunta Recipe presente nel database.
+              \end{description}
+          \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -493,11 +539,14 @@
             \begin{itemize}
               \item server::processor::commands::requests::AbsRequestCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item public execute(request: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: aggiunge una nuova richiesta di aggiunta Recipe al database.
+              \end{description}
+          \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -510,11 +559,14 @@
             \begin{itemize}
               \item server::processor::commands::requests::AbsRequestCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item public execute(request: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: restituisce i dati associati ad una determinata richiesta di aggiunta Recipe presente nel database.
+              \end{description}
+          \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -527,11 +579,14 @@
             \begin{itemize}
               \item server::processor::commands::requests::AbsRequestCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item public execute(request: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: rimuove una determinata richiesta di aggiunta Recipe presente nel database.
+              \end{description}
+          \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -544,23 +599,26 @@
             \begin{itemize}
               \item server::processor::commands::requests::AbsRequestCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item public execute(request: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: restituisce la lista delle metriche associate ad una determinata Recipe.
+              \end{description}
+          \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
-      % ================================
+        % ================================
       % SERVER::COMMANDS::SOCIAL PACKAGE
       %
       \subsubsection{server::processor::commands::social} % (fold)
       \label{ssub:bdsm_app_server_processor_commands_social}
       \begin{figure}[!htbp]
-      	\centering
-      	\centerline{\includegraphics[scale=0.4]{./images/server/social.pdf}}
-      	\caption{Package - server::processor::commands::social}
+        \centering
+        \centerline{\includegraphics[scale=0.4]{./images/server/social.pdf}}
+        \caption{Package - server::processor::commands::social}
       \end{figure}
 
       \begin{itemize}
@@ -583,8 +641,8 @@
             \begin{itemize}
               \item server::processor::commands::ICommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: N/A
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}: N/A
         \end{itemize}
         % subparagraph (end)
 
@@ -599,8 +657,8 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsSocialCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: N/A
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}: N/A
         \end{itemize}
         % subparagraph (end)
 
@@ -613,11 +671,14 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsFbCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item public execute(request: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: restituisce i dati associati ad una determinata pagina Facebook presente nel database.
+              \end{description}
+          \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -630,28 +691,14 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsFbCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
-        \end{itemize}
-        % subparagraph (end)
-
-        \subparagraph{server::processor::commands::social::FbPostsCommand} % (fold)
-        \label{subp:bdsm_app_server_processor_commands_social_fbpostscommand}
-        \begin{itemize}
-          \item \textbf{Descrizione}: definisce la logica per ottenere i dati grezzi relativi al trend dei post di una pagina Facebook;
-          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere i dati grezzi relativi al trend dei post di una pagina Facebook;
-          \item \textbf{Relazioni con altre classi}:
-            \begin{itemize}
-              \item server::processor::commands::social::AbsFbCommand
-            \end{itemize}
-            \item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item public execute(request: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: restituisce i dati associati al trend di una determinata pagina Facebook presente nel database.
+              \end{description}
+          \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -665,10 +712,13 @@
               \item server::processor::commands::social::AbsFbCommand
             \end{itemize}
             \item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+            \item \textbf{Metodi}:
+            \begin{itemize}
+                \item public execute(request: Dictionary) : Dictionary
+                \begin{description}
+                  \item \textbf{Descrizione}: restituisce i dati associati ad un determinato evento Facebook presente nel database.
+                \end{description}
+            \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -682,10 +732,13 @@
               \item server::processor::commands::social::AbsFbCommand
             \end{itemize}
             \item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+            \item \textbf{Metodi}:
+            \begin{itemize}
+                \item public execute(request: Dictionary) : Dictionary
+                \begin{description}
+                  \item \textbf{Descrizione}: restituisce i dati associati al trend di un determinato evento Facebook presente nel database.
+                \end{description}
+            \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -699,10 +752,13 @@
               \item server::processor::commands::social::AbsFbCommand
             \end{itemize}
             \item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+            \item \textbf{Metodi}:
+            \begin{itemize}
+                \item public execute(request: Dictionary) : Dictionary
+                \begin{description}
+                  \item \textbf{Descrizione}: restituisce i dati associati al trend dei post di un determinato avento Facebook presente nel database.
+                \end{description}
+            \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -717,8 +773,8 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsSocialCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: N/A
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}: N/A
         \end{itemize}
         % subparagraph (end)
 
@@ -731,11 +787,14 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsTwCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item public execute(request: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: restituisce i dati associati ad un determinato utente Twitter presente nel database.
+              \end{description}
+          \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -748,11 +807,14 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsTwCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item public execute(request: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: restituisce i dati associati al trend di un determinato utente Twitter presente nel database.
+              \end{description}
+          \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -765,11 +827,14 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsTwCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item public execute(request: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: restituisce i dati associati al trend dei tweet di un determinato utente Twitter presente nel database.
+              \end{description}
+          \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -782,11 +847,14 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsTwCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
-        	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
-        	\end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item public execute(request: Dictionary) : Dictionary
+              \begin{description}
+                \item \textbf{Descrizione}: restituisce i dati associati al trend dei tweet relativi ad un determinato hashtag Twitter presente nel database.
+              \end{description}
+          \end{itemize}
         \end{itemize}
         % subparagraph (end)
 
@@ -801,8 +869,8 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsSocialCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: N/A
+					\item \textbf{Attributi}: N/A
+					\item \textbf{Metodi}: N/A
         \end{itemize}
         % subparagraph (end)
 
@@ -815,10 +883,13 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsIgCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+					\item \textbf{Attributi}: N/A
+					\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
+							\begin{description}
+								\item \textbf{Descrizione}: restituisce i dati associati ad un determinato utente Instagram presente nel database.
+							\end{description}
         	\end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -832,10 +903,13 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsIgCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+					\item \textbf{Attributi}: N/A
+					\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
+							\begin{description}
+								\item \textbf{Descrizione}: restituisce i dati associati al trend di un determinato utente Instagram presente nel database.
+							\end{description}
         	\end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -849,10 +923,13 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsIgCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+					\item \textbf{Attributi}: N/A
+					\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
+							\begin{description}
+								\item \textbf{Descrizione}: restituisce i dati associati al trend dei media di un determinato utente Instagram presente nel database.
+							\end{description}
         	\end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -866,10 +943,13 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsIgCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+					\item \textbf{Attributi}: N/A
+				\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
+							\begin{description}
+								\item \textbf{Descrizione}: restituisce i dati associati al trend relativo ad un determinato hashtag Instagram presente nel database.
+							\end{description}
         	\end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -883,10 +963,13 @@
             \begin{itemize}
               \item server::processor::commands::social::AbsIgCommand
             \end{itemize}
-			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+					\item \textbf{Attributi}: N/A
+				\item \textbf{Metodi}:
         	\begin{itemize}
-          		\item public execute(request: Dictionary) : Dictionary
+          		\item \texttt{public execute(request: Dictionary) : Dictionary}
+							\begin{description}
+								\item \textbf{Descrizione}: restituisce i dati associati al trend relativo ad un determinato hashtag Instagram presente nel database.
+							\end{description}
         	\end{itemize}
         \end{itemize}
         % subparagraph (end)
