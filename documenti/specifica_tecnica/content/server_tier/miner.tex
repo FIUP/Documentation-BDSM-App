@@ -78,6 +78,41 @@
 			\end{itemize}
 		% subparagraph server_miner_AbsFetcher [end]
 
+		\subparagraph{server::miner::SocialAuth} % (fold)
+		\label{subp:server_miner_SocialAuth}
+				\begin{itemize}
+				\item \textbf{Descrizione}: classe che rappresenta la fase di autenticazione dei social network;
+				\item \textbf{Utilizzo}: fornisce metodi statici per effettuare l'autenticazione ai social network presi in considerazione;
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item server::miner::fb::FbEventFetcher
+						\item server::miner::fb::FbPageFetcher
+						\item server::miner::fb::PostsCounter
+						\item server::miner::tw::TwHashtagFetcher
+						\item server::miner::tw::HashtagTweetCounter
+						\item server::miner::tw::TwUserFetcher
+						\item server::miner::tw::UserTweetCounter
+						\item server::miner::ig::IgUserFetcher
+						\item server::miner::ig::IgHastagFetcher
+						\item server::miner::ig::MediaCounter
+					\end{itemize}
+			\end{itemize}
+		% subparagraph server_miner_SocialAuth [end]
+
+		\subparagraph{server::miner::GeocodeHelper} % (fold)
+		\label{subp:server_miner_GeocodeHelper}
+				\begin{itemize}
+				\item \textbf{Descrizione}: classe che si occupa di convertire la geolocalizzazione;
+				\item \textbf{Utilizzo}: fornisce metodi statici ai social network presi in considerazione per la conversione dei luoghi in latitudine e longitudine;
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item server::miner::fb::FbEventFetcher
+						\item server::miner::tw::UserTweetCounter
+						\item server::miner::ig::MediaCounter
+					\end{itemize}
+			\end{itemize}
+		% subparagraph server_miner_GeocodeHelper [end]
+
 \subsubsection{server::miner::fb} % (fold)
 \label{ssub:bdsm_app_server_miner_fb}
 \begin{figure}[htbp]

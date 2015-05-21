@@ -8,6 +8,7 @@
 % Modification History:
 % Version		Modifier Date		Change											Author
 % 0.0.1
+% 0.0.2			2015-05-21			Inserim. descrizione attributi e sist. grafici	Luca Santacatterina
 % =================================================================================================
 
 % CONTENUTO DEL CAPITOLO
@@ -49,11 +50,33 @@
 					\end{itemize}
 				\item \textbf{Attributi}:
 					\begin{itemize}
-						\item recipes\_id\_list : List
+						\item \textcolor{forestgreen}{\texttt{recipes\_id\_list : List}}
+						\begin{description}
+							\item \textbf{Descrizione}: lista di recipes da aggiornare;
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}:   
 					\begin{itemize}
-						\item public schedule\_fetchers() : boolean
+						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(recipe\_id\_list : int ) : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: costruttore della classe di default. Inizializza la variabile recipe\_id\_list con la lista delle ricette da aggiornare;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ schedule\_fetchers() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: avvia l'update delle recipes contenute nella lista passata;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ update\_fb\_metrics(recipe\_id : String) : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo controlla il tipo di recipe e avvia l'aggiornamento della recipe di Facebook;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ update\_ig\_metrics(recipe\_id : String) : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo controlla il tipo di recipe e avvia l'aggiornamento della recipe di Instagram;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ update\_tw\_metrics(recipe\_id : String) : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo controlla il tipo di recipe e avvia l'aggiornamento della recipe di Twitter;
+						\end{description}
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_MinerScheduler [end]
@@ -71,13 +94,29 @@
 					\end{itemize}
 				\item \textbf{Attributi}: 
 					\begin{itemize}
-						\item counter\_int : int
+						\item \textcolor{forestgreen}{\texttt{counter\_int : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: contiene la somma richiesta;
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}:   
 					\begin{itemize}
-						\item count() : int
-						\item break\_condition() : boolean
-						\item action() : boolean
+						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: costruttore della classe di default. Inizializza la variabile del contatore a 0;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ abstract action() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo in questa classe viene solamente marcato come astratto, verrà implementato successivamente nelle classi figlie. Il metodo viene utilizzato in ogni elemento ciclato;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ abstract break\_condition() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo in questa classe viene solamente marcato come astratto, verrà implementato successivamente nelle classi figlie. Il metodo blocca il count degli elementi;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ abstract count() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo in questa classe viene solamente marcato come astratto, verrà implementato successivamente nelle classi figlie. Il metodo avvia il count degli elementi ;
+						\end{description}
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_AbsCounter [end]
@@ -94,9 +133,120 @@
 						\item server::miner::ig::AbsIgFetcher
 					\end{itemize}
 				\item \textbf{Attributi}: N/A
-				\item \textbf{Metodi}: N/A
+				\item \textbf{Metodi}:
+					\begin{itemize}
+						\item \textcolor{forestgreen}{\texttt{+ abstract get\_data() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo in questa classe viene solamente marcato come astratto, verrà implementato successivamente nelle classi figlie. Il metodo ottiene i dati statici del post;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ abstract get\_trend\_data() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo in questa classe viene solamente marcato come astratto, verrà implementato successivamente nelle classi figlie. Il metodo ottiene i dati del trend;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ run() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo avvia sequenzialmente get\_data ed get\_trend\_data;
+						\end{description}
+					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_AbsFetcher [end]
+
+		\subparagraph{server::miner::SocialAuth} % (fold)
+		\label{subp:server_miner_SocialAuth}
+				\begin{itemize}
+				\item \textbf{Descrizione}: classe che rappresenta la fase di autenticazione dei social network;
+				\item \textbf{Utilizzo}: fornisce metodi statici per effettuare l'autenticazione ai social network presi in considerazione;
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item server::miner::fb::FbEventFetcher
+						\item server::miner::fb::FbPageFetcher
+						\item server::miner::fb::PostsCounter
+						\item server::miner::tw::TwHashtagFetcher
+						\item server::miner::tw::HashtagTweetCounter
+						\item server::miner::tw::TwUserFetcher
+						\item server::miner::tw::UserTweetCounter
+						\item server::miner::ig::IgUserFetcher
+						\item server::miner::ig::IgHastagFetcher
+						\item server::miner::ig::MediaCounter
+					\end{itemize}
+				\item \textbf{Attributi}:
+					\begin{itemize}
+						\item \textcolor{forestgreen}{\texttt{- \_\_FACEBOOK\_APP\_ID : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile deve essere definita costante e privata. Contiene l'id di autenticazione di Facebook;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{- \_\_FACEBOOK\_APP\_SECRET : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile deve essere definita costante e privata. Contiene l'id di autenticazione di Facebook;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{- \_\_CONSUMER\_KEY : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile deve essere definita costante e privata. Contiene l'access token utente pubblico di autenticazione di Twitter;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{- \_\_CONSUMER\_SECRET : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile deve essere definita costante e privata. Contiene l'access token utente privato di autenticazione di Twitter;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{- \_\_ACCESS\_TOKEN : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile deve essere definita costante e privata. Contiene l'access token pubblico di autenticazione di Twitter;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{- \_\_ACCESS\_TOKEN\_SECRET : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile deve essere definita costante e privata. Contiene l'access token privato di autenticazione di Twitter;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{- \_\_CLIENT\_ID : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile deve essere definita costante e privata. Contiene il client id pubblico di autenticazione di Instagram;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{- \_\_CLIENT\_SECRET : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile deve essere definita costante e privata. Contiene il client id privato di autenticazione di Instagram;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{- \_\_ACCESS\_TOKEN : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile deve essere definita costante e privata. Contiene l'access token di autenticazione di Instagram;
+						\end{description}
+					\end{itemize}
+				\item \textbf{Metodi}:
+					\begin{itemize}
+						\item \textcolor{forestgreen}{\texttt{+ static get\_fb\_auth() : String}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo deve essere dichiarato statico. Il metodo ha il compito di effettuare l'autenticazione su Facebook e di restituire l'access token valido per le chiamate;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ static get\_tw\_auth() : String}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo deve essere dichiarato statico. Il metodo ha il compito di effettuare l'autenticazione su Twitter e di restituire l'access token valido per le chiamate;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ static get\_ig\_auth() : String}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo deve essere dichiarato statico. Il metodo ha il compito di effettuare l'autenticazione su Instagram e di restituire il l'access token valido per le chiamate;
+						\end{description}
+					\end{itemize}
+			\end{itemize}
+		% subparagraph server_miner_SocialAuth [end]
+
+		\subparagraph{server::miner::GeocodeHelper} % (fold)
+		\label{subp:server_miner_GeocodeHelper}
+				\begin{itemize}
+				\item \textbf{Descrizione}: classe che si occupa di convertire la geolocalizzazione;
+				\item \textbf{Utilizzo}: fornisce metodi statici ai social network presi in considerazione per la conversione dei luoghi in latitudine e longitudine;
+				\item \textbf{Relazioni con altre classi}:
+					\begin{itemize}
+						\item server::miner::fb::FbEventFetcher
+						\item server::miner::tw::UserTweetCounter
+						\item server::miner::ig::MediaCounter
+					\end{itemize}
+				\item \textbf{Attributi}: N/A
+				\item \textbf{Metodi}:
+					\begin{itemize}
+						\item \textcolor{forestgreen}{\texttt{+ static get\_coordinates(location\_str : String) : Dictionary}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo deve essere dichiarato statico. Il metodo ha il compito di ricevere un indirizzo o una città e restituire le relative coordinate di latitudine e longitudine sottoforma di dizionario;
+						\end{description}
+					\end{itemize}
+			\end{itemize}
+		% subparagraph server_miner_GeocodeHelper [end]
 
 \subsubsection{server::miner::fb} % (fold)
 \label{ssub:bdsm_app_server_miner_fb}
@@ -129,12 +279,21 @@
 					\end{itemize}
 				\item \textbf{Attributi}: 
 					\begin{itemize}
-						\item item\_id\_str : String
+						\item \textcolor{forestgreen}{\texttt{+ node\_id\_str : String}}
+						\begin{description}
+							\item \textbf{Descrizione}: contiene ed identifica l'id univoco della risorsa sul sito Facebook;
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}:   
 					\begin{itemize}
-						\item public get\_static\_data() : String
-						\item get\_trend\_data() : void
+						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: costruttore della classe di default. Inizializza la variabile node\_id\_str con l'id della risorsa;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ fetch\_item() : String}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo attiva l'autenticazione sulle API di Facebook ed effettua la chiamata utilizzando node\_id\_str. Ritorna i dati ottenuti dalla chiamata;
+						\end{description}
 					\end{itemize}
 			\end{itemize}
 	% subparagraph server_miner_fb_AbsFbFetcher [end]
@@ -151,13 +310,33 @@
 					\end{itemize}
 				\item \textbf{Attributi}: 
 					\begin{itemize}
-						\item page\_obj : RawFbPage
-						\item page\_trend\_obj : RawFbPageTrend
+						\item \textcolor{forestgreen}{\texttt{+ page\_obj : RawFbPage}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene i risultati della chiamata effettuata tramite le API di Facebook riguardante una pagina utente;
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}:   
 					\begin{itemize}
-						\item get\_data() : void
-						\item get\_trend\_data() : void
+						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(name\_str : String) : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: costruttore della classe di default. Inizializza la variabile page\_obj ed effettua la costruzione della classe astratta derivata passando l'id della risorsa;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ get\_data() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo recupera i dati statici della pagina utente dalle API di Facebook e li memorizza nella base di dati;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ get\_trend\_data() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo ha il compito di recuperare tramite le API di Facebook i dati della pagina utente, di rielaborarli e salvarli nella base di dati;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ get\_page\_events() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo tramite chiamate alle API di Facebook scarica tutti i dati associati agli eventi di una pagina, li rielabora e li inserisce nella base di dati;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ run() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo invoca la costruzione della classe astratta derivata ed avvia l'acquisizione dei dati. Inoltre avvia l'acquisizione dei dati statici e dinamici delle pagine eventi su Facebook;
+						\end{description}
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_fb_FbPageFetcher [end]
@@ -174,14 +353,37 @@
 					\end{itemize}
 				\item \textbf{Attributi}: 
 					\begin{itemize}
-						\item parent\_key\_int : int
-						\item event\_obj : RawFbEvent
+						\item \item \textcolor{forestgreen}{\texttt{+ parent\_key\_int : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: viene indicata la chiave del padre per poter collegare il nuovo nodo come figlio;
+						\end{description}
+						\item \item \textcolor{forestgreen}{\texttt{+ event\_obj : RawFbEvent}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene i risultati della chiamata effettuata tramite le API di Facebook riguardante una pagina evento;
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}:   
 					\begin{itemize}
-						\item get\_invited\_stats() : Dictionary
-						\item get\_data() : void
-						\item get\_trend\_data() : void
+						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: costruttore della classe di default. Inizializza la classe astratta derivata passandogli l'id della risorsa. Inizializza inoltre event\_obj e parent\_key con i dati a disposizione;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ get\_invited\_stats() : Dictionary}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo recupera i dati statici riguardanti le statistiche di partecipazione della pagina evento tramite le API di Facebook e li memorizza nella base di dati;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ get\_data() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo recupera i dati statici della pagina evento tramite le API di Facebook e li memorizza nella base di dati;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ get\_trend\_data() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo ha il compito di recuperare tramite le API di Facebook i dati della pagina evento, di rielaborarli e salvarli nella base di dati;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ static parse\_location(event: String) : Dictionary}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo deve essere dichiarato statico. Tramite l'uso del metodo GeoCodeHelper si ricavano latitudine e longitudine e si restituiscono con tipo dizionario;
+						\end{description}
 					\end{itemize}
 			\end{itemize}
 	% subparagraph server_miner_fb_FbEventFetcher [end]
@@ -199,13 +401,41 @@
 					\end{itemize}
 				\item \textbf{Attributi}:  
 					\begin{itemize}
-						\item counter\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ API\_LIMIT : Dictionary}}
+						\begin{description}
+							\item \textbf{Descrizione}: la varibile contiene un dizionario di chiavi-valore, riguardanti i limiti delle chiamate alle API Facebook;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ node\_id\_str : String}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene l'id della risorsa univoca presente in Facebook;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ fb\_edge\_str : String}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene il parametro richiesto dalle API di Facebook per ricavare i vari tipi di dato associati ad una metrica evento o pagina;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ counter\_int : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene il numero di occorrenze dell'oggetto specifico di Facebook;
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}:   
 					\begin{itemize}
-						\item public counter\_int() : int
-						\item protected break\_condition() : boolean
-						\item protected action() : boolean
+						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(node\_id : int, fb\_edge : String)}}
+						\begin{description}
+							\item \textbf{Descrizione}: costruttore della classe di default. Il metodo inizializza le variabili passate e inizializza a 0 il counter\_int;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ counter\_int() : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo conta le occorrenze dell'oggetto Facebook passato dal costruttore;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ break\_condition() : boolean}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo definisce le condizioni di arresto del loop per il counting;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ abstract action() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo in questa classe viene solamente marcato come astratto, verrà implementato successivamente nelle classi figlie. Il metodo viene utilizzato in ogni elemento ciclato;
+						\end{description}
 					\end{itemize}
 			\end{itemize}
 	% subparagraph server_miner_fb_AbsFbCounter [end]
@@ -223,14 +453,37 @@
 					\end{itemize}
 				\item \textbf{Attributi}:  
 					\begin{itemize}
-						\item admin\_comments\_count\_int : int
-						\item comments\_count\_int : int
-						\item likes\_count\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ admin\_comments\_count\_int : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene il numero di commenti dell'amministratore;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ comments\_count\_int : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene il numero di commenti totali;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ likes\_count\_int : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene il numero di likes della pagina;
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}:  
 					\begin{itemize}
-						\item get\_likes\_count(post\_id : String) : int
-						\item protected action() : boolean
+						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(node\_id\_str : String, fb\_edge\_str : String) : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: costruttore della classe di default. Il metodo invoca la costruzione della classe astratta derivata settando l'id della risorsa e il tipo di metrica associata. Inoltre inizializza a 0 le variabili per il conteggio;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ action() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo viene definito. Effettua la somma dei commenti e dei likes di una pagina Facebook;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ get\_metric\_name(): Dictionary}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo identifica il tipo di pagina analizzate e restituisce un dizionario contenente il tipo;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ static get\_likes\_count(post\_id : String) : Dictionary}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo in questa classe viene marcato astratto, implementa il conteggio dei like nei post di una pagina Facebook. Ritorna un dizionario con la quantità di likes ottenuti;
+						\end{description}
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_fb_PostsCounter
@@ -243,27 +496,43 @@
 				\item \textbf{Classe ereditate}: server::miner::fb::AbsFbCounter
 				\item \textbf{Attributi}: 
 					\begin{itemize}
-						\item metric\_name\_str() : String
+						\item \textcolor{forestgreen}{\texttt{+ admin\_comments\_count\_int : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: variabile contenente il numero di commenti effettuati dall'admin della pagina Facebook ;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ metric\_name\_str : String}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene il parametro ricavare i vari tipi di dato associati ad una metrica evento o pagina; ;
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}:  
 					\begin{itemize}
-						\item get\_metric\_name\_str() : String
-						\item protected action() : boolean
+						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(node\_id\_str : int, metric\_name\_str: String, fb\_edge\_str : String) : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: costruttore della classe di default. Il metodo invoca il costruttore della classe astratta passandogli l'id della risorsa e il tipo di metrica da applicare alla risorsa. Vengono inoltre inizializzate le variabili a 0;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ action() : boolean}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo effettua i conteggi per ricavare la quanità di commenti dell'utente amministratore;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ break\_condition() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo viene definito ma non implementato;
+						\end{description}
 					\end{itemize}
 			\end{itemize}
 	% subparagraph server_miner_fb_CommentsCounter
-
 
 \subsubsection{server::miner::tw} % (fold)
 \label{ssub:bdsm_app_server_miner_tw}
 
 \begin{itemize}
-  \item \textbf{Descrizione}: è il package che contiene tutte le classi che includono i metodi per prelevare i dati da Twitter e salvarli nel database;
-  \item \textbf{Padre}: server::miner
-  \item \textbf{Interazione con altri componenti}:
-  	\begin{itemize}
-  		\item server::db
-  	\end{itemize}
+	\item \textbf{Descrizione}: è il package che contiene tutte le classi che includono i metodi per prelevare i dati da Twitter e salvarli nel database;
+	\item \textbf{Padre}: server::miner
+	\item \textbf{Interazione con altri componenti}:
+		\begin{itemize}
+			\item server::db
+		\end{itemize}
 \end{itemize}
 
 	\begin{figure}[!htbp]
@@ -286,12 +555,17 @@
 					\end{itemize}
 				\item \textbf{Attributi}:   
 					\begin{itemize}
-						\item name\_str : String
+						\item \textcolor{forestgreen}{\texttt{+ name\_str : String}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene l'id univoco della risorsa presente nel social network Twitter;
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}:  
 					\begin{itemize}
-						\item public get\_data() : void
-						\item public get\_trend\_data() : void
+						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(name\_str : String)}}
+						\begin{description}
+							\item \textbf{Descrizione}: costruttore della classe di default. Il metodo invoca la classe astratta per la costruzione;
+						\end{description}
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_tw_AbsTwFetcher
@@ -308,13 +582,25 @@
 					\end{itemize}
 				\item \textbf{Attributi}:    
 					\begin{itemize}
-						\item hasjtag\_obj : RawTwHashtag
-						\item tweets\_count\_int : int
+						\item \textcolor{forestgreen}{\texttt{+ hashtag\_obj : RawTwHashtag}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene l'oggetto RawTwHashtag per poterne poi aggiungere i figli associati;
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}:  
 					\begin{itemize}
-						\item public get\_data() : void
-						\item public get\_trend\_data() : void
+						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(name\_str : String)}}
+						\begin{description}
+							\item \textbf{Descrizione}: costruttore della classe di default. Il metodo invoca la classe astratta per la costruzione passando il nome della risorsa. Istanzia l'oggetto hashtag\_obj;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ get\_data() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo costruisce, se non già presente, l'oggetto padre contenente il nome e la data di creazione della risorsa ricercata;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ get\_trend\_data() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo ha il compito di ricercare i dati di trend per l'hashtag. Dopo averli sommati, vengono immagazzinati nella base di dati;
+						\end{description}
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_tw_TwHashtagFetcher
@@ -331,12 +617,25 @@
 					\end{itemize}
 				\item \textbf{Attributi}:    
 					\begin{itemize}
-						\item user\_obj : RawTwUser
+						\item \textcolor{forestgreen}{\texttt{+ user\_obj : RawTwUser}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene l'oggetto RawTwUser per poterne poi aggiungere i figli associati;
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}:  
 					\begin{itemize}
-						\item public get\_data() : void
-						\item public get\_trend\_data() : void
+						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(name\_str: String) : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: costruttore della classe di default. Il metodo invoca la classe astratta per la costruzione passando il nome della risorsa. Istanzia l'oggetto user\_obj;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ get\_data() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo tramite le API di Twitter ottiene i dati statici della pagina utente e li memorizza nella base di dati;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ get\_trend\_data() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo tramite le API di Twitter ottiene i dati dinamici della pagina utente e tramite ulteriori chiamate ai metodi ne ricava i dati di trend. Alla fine della elaborazione viene creato l'oggetto padre ed i relativi figli;
+						\end{description}
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_tw_TwUserFetcher
@@ -351,10 +650,31 @@
 					\begin{itemize}
 						\item server::miner::UserTweetCounter
 					\end{itemize}
-				\item \textbf{Attributi}: N/A
+				\item \textbf{Attributi}:
+					\begin{itemize}
+						\item \textcolor{forestgreen}{\texttt{+ recent\_tweet : String}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene il nome della metrica rispetto alla pagina Twitter analizzata;
+						\end{description}
+					\end{itemize}
 				\item \textbf{Metodi}: 
 					\begin{itemize}
-						\item public count() : int
+						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(recent\_tweet : String) : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: costruttore della classe di default. Il metodo invoca la classe astratta per la costruzione passando la metrica della risorsa. Istanzia l'oggetto recent\_tweet;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ count() : Boolean}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo conta le occorrenze dell'oggetto passato implementando l'azione si stop quando necessario. Ritorna False quando l'azione non è più necessaria;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ abstract action() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo viene definito astratto ma non viene implementato;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ abstract break\_condition() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo viene definito astratto ma non viene implementato;
+						\end{description}
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_tw_AbsTwCounter
@@ -367,14 +687,37 @@
 				\item \textbf{Classi ereditate}: server::miner::tw::AbsTwCounter
 				\item \textbf{Attributi}:    
 					\begin{itemize}
-						\item public retweets\_count : int
-						\item public favourites\_count : int
-						\item public source\_devices\_list : List
+						\item \textcolor{forestgreen}{\texttt{+ favourites\_count\_int : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene il numero di favoriti contati nei tweets;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ retweets\_count\_int : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene il numero retweets contati nei tweets;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ source\_devices\_list : List}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene una lista chiave-valore di dispositivi e quantità utilizzati per la pubblicazione dei tweets;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ date\_created\_date : Date}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene la data di acquisizione dei dati;
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}:  
 					\begin{itemize}
-						\item public action() : boolean
-						\item public break\_condition() : boolean
+						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(name\_str : String) : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: costruttore della classe di default. Il metodo invoca la classe astratta per la costruzione passando l'id della risorsa. Istanzia i contatori a 0 e la lista vuota;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ action(tweet : TweetUserFetcher) : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo invoca la somma dei campi dati dell'oggetto passato;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ break\_condition(data : Date) : Boolean}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo definisce la condizione di stop per i cicli di somma;
+						\end{description}
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_tw_UserTweetCounter
@@ -388,14 +731,46 @@
 				\item \textbf{Classi ereditate}: server::miner::tw::UserTweetCounter
 				\item \textbf{Attributi}:    
 					\begin{itemize}
-						\item public time\_zones\_list : List
+						\item \textcolor{forestgreen}{\texttt{+ favourites\_count\_int : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene la somma dei favoriti dell'hashtag Twitter;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ retweets\_count\_int : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene la somma dei retweets dell'hashtag Twitter;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ source\_devices\_list : List}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene la lista formata da chiave-valore dei dispositivi utilizzati per la scrittura dell'hashtag Twitter;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ date\_created\_date : Date}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene la data di acquisizione dei dati;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ time\_zone\_list : Date}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene la lista formata da chiave-valore dei timezone della pubblicazione dell'hashtag Twitter;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ tweets\_count\_int : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene la somma dei tweets dell'hashtag Twitter;
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}:  
 					\begin{itemize}
-						\item public action() : boolean
+						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(name\_str: String) : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: costruttore della classe di default. Il metodo invoca la classe astratta per la costruzione passando l'id della risorsa. Istanzia i contatori a 0, la lista vuota e la data di creazione;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ action(tweet : TwHashtagFetcher) : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo definisce i campi dati da sommare;
+						\end{description}
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_tw_HashtagTweetCounter
+
+
 
 \subsubsection{server::miner::ig} % (fold)
 \label{ssub:bdsm_app_server_miner_ig}
