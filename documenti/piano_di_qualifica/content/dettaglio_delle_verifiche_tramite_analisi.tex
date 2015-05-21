@@ -190,14 +190,14 @@
 		\end{table}
 		
 		\subsubsection{Progettazione}
-		Viene riportata di seguito una tabella riassuntiva che espone gli indici di instabilità per i componenti rilevati durante la progettazione.
-		\begin{table}[!ht]
-			\begin{center}
-				\begin{tabularx}{1.1\textwidth}{|l|c|X|}
+		Viene riportata di seguito una tabella riassuntiva (tabella 10) che espone gli indici di instabilità per i componenti rilevati durante la progettazione. In questa tabella in oltre viene specificato come i componenti superano questo test, se in modo ottimale, scritta in \textcolor{green}{verde} o in modo accettabile \textcolor{yellow}{giallo}. Le componenti invece che non superano il test sono contrassegnate con la scritta \textit{Non Superato} in \textcolor{red}{rosso}. Per quanto riguarda le componenti che non hanno superato il test non si pianificano degli obbiettivi di miglioramento in quanto il non superamento è causato dalla natura e dalla funzionalità dei componenti stessi.
+		\begin{center}
+
+			\def\arraystretch{1.5}
+			\bgroup
+			\begin{longtable}{| p{8.5cm} | p{3.5cm} | p{3cm} |}
 					\hline
 					\textbf{Componente} & \textbf{Indice instabilità} & \textbf{Esito}\\
-					\hline
-					\texttt{src::client} & 0 & \textcolor{green}{Superato}\\
 					\hline
 					\texttt{src::client::model} & 0 & \textcolor{green}{Superato}\\
 					\hline
@@ -277,10 +277,34 @@
 					\hline
 					\texttt{src::server::endpoints::resp::private} & ?? & ??\\
 					\hline
-				\end{tabularx}
-			\end{center}
-			\caption{Esiti indici di instabilità}
-		\end{table}
+					\caption{Tracciamento test di sistema - requisiti}
+				\end{longtable}
+				\egroup
+			\end{center}		
+			
+		\subsubsection{Soddisfacimento metriche}
+			Questa sezione traccia i risultati ricavati applicando le metriche relative al codice descritte nella sezione 2.8.3 di questo documento.\\
+			\paragraph{Soddisfacimento metriche componenti}
+				Nella tabella 11 viene riportata la percentuale di copertura del codice dei test in relazione alle componenti \texttt{client} e \texttt{server}.
+				\begin{table}[!ht]
+					\begin{center}
+						\begin{tabularx}{0.9\textwidth}{|l|l|X|}
+							\hline
+							\textbf{Componente} & \textbf{Indice di copertura} & \textbf{Esito}\\
+							\hline
+							\texttt{src::client} & ?? & ??\\
+							\hline
+							\texttt{src::server} & ?? & ??\\
+							\hline					
+						\end{tabularx}
+					\end{center}
+					\caption{Esiti indice di copertura}
+				\end{table}
+			\paragraph{Soddisfacimento metriche classi}
+				Nella tabella 12 vengono riportati per ogni classe il numero di attributi e il rapporto tra linee di commento e quelle di codice.
+				
+				
+
 		
 		
 	\subsection{Progettazione di dettaglio e codifica dei requisiti desiderabili}
