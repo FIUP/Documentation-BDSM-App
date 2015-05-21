@@ -157,7 +157,7 @@
 		La best practice usata nelle fasi precedenti è stata applicata anche qui. Nonostante questo tutti i task pianificati non sono stati completati entro la data di fine fase, 2015/05/08. Il ritardo è stato causato dalla pianificazione in difetto per quanto riguarda le ore di programmazione ed alcune rivisitazioni dei diagrammi delle classi completati in precedenza. I task che non sono stati \textit{Developed}, \textit{Verified}, \textit{Approved} andranno ad appesantire ulteriormente la fase successiva e chiederanno un impegno maggiore a tutto il gruppo per completarli entro la data fissata dal proponente.		
 			\begin{figure}[htbp]
 				\centering
-				\centerline{\includegraphics[scale=1]{images/Grafico_fase_5.pdf}}
+				\centerline{\includegraphics[scale=0.6]{images/Grafico_fase_5.pdf}}
 				\caption{Grafico task Progettazione di dettaglio e codifica dei requisiti obbligatori}
 				\label{fig:taskfase5}
 			\end{figure}
@@ -189,12 +189,106 @@
 			\caption{Risultati indice Gulpease - Progettazione di dettaglio e codifica dei requisiti obbligatori}
 		\end{table}
 		
+		\subsubsection{Progettazione}
+		Viene riportata di seguito una tabella riassuntiva che espone gli indici di instabilità per i componenti rilevati durante la progettazione.
+		\begin{table}[!ht]
+			\begin{center}
+				\begin{tabularx}{1.1\textwidth}{|l|c|X|}
+					\hline
+					\textbf{Componente} & \textbf{Indice instabilità} & \textbf{Esito}\\
+					\hline
+					\texttt{src::client} & 0 & \textcolor{green}{Superato}\\
+					\hline
+					\texttt{src::client::model} & 0 & \textcolor{green}{Superato}\\
+					\hline
+					\texttt{src::client::model::data} & 0.75 & \textcolor{yellow}{Superato}\\
+					\hline
+					\texttt{src::client::model::services} & 0.33 & \textcolor{green}{Superato}\\
+					\hline
+					\texttt{src::client::view} & 0.5 & \textcolor{green}{Superato}\\ 
+					\hline
+					\texttt{src::client::view::public} & 0.5 & \textcolor{green}{Superato}\\
+					\hline
+					\texttt{src::client::view::user} & 0.33 & \textcolor{green}{Superato}\\
+					\hline
+					\texttt{src::client::view::admin} & 0.66 & \textcolor{green}{Superato}\\
+					\hline
+					\texttt{src::client::controller} &  0.75 & \textcolor{yellow}{Superato}\\
+					\hline
+					\texttt{src::client::controller::public} & 0.75 & \textcolor{yellow}{Superato}\\
+					\hline
+					\texttt{src::client::controller::user} & 0.75 & \textcolor{yellow}{Superato}\\
+					\hline
+					\texttt{src::client::controller::admin} & 0.75 & \textcolor{yellow}{Superato}\\
+					\hline
+					\texttt{src::server::db} & 0 & \textcolor{green}{Superato}\\
+					\hline
+					\texttt{src::server::db::raw\_data} & 0 & \textcolor{green}{Superato}\\ 
+					\hline
+					\texttt{src::server::db::raw\_data::fb} & 0.8 & \textcolor{yellow}{Superato}\\
+					\hline
+					\texttt{src::server::db::raw\_data::tw} & 0.75 & \textcolor{yellow}{Superato}\\
+					\hline
+					\texttt{src::server::db::raw\_data::ig} & 0.8 & \textcolor{yellow}{Superato}\\
+					\hline
+					\texttt{src::server::db::app\_data} & 0 & \textcolor{green}{Superato}\\
+					\hline
+					\texttt{src::server::db::app\_data::user} & 0.75 & \textcolor{yellow}{Superato}\\
+					\hline
+					\texttt{src::server::db::app\_data::recipe} & 0 & \textcolor{green}{Superato}\\
+					\hline
+					\texttt{src::server::processor} & 0.8 & \textcolor{yellow}{Superato}\\
+					\hline
+					\texttt{src::server::processor::commands} & 0.8 & \textcolor{yellow}{Superato}\\
+					\hline
+					\texttt{src::server::processor::commands::user} & 1 & \textcolor{red}{Non Superato}\\
+					\hline
+					\texttt{src::server::processor::commands::recipe} & 1 & \textcolor{red}{Non Superato}\\
+					\hline
+					\texttt{src::server::processor::commands::requests} & 1 & \textcolor{red}{Non Superato}\\
+					\hline
+					\texttt{src::server::processor::commands::social} & 1 & \textcolor{red}{Non Superato}\\
+					\hline
+					\texttt{src::server::miner} & 0.75 & \textcolor{yellow}{Superato}\\
+					\hline
+					\texttt{src::server::miner::fb} & 1 & \textcolor{red}{Non Superato}\\
+					\hline
+					\texttt{src::server::miner::tw} & 1 & \textcolor{red}{Non Superato}\\
+					\hline
+					\texttt{src::server::miner::ig} & 1 & \textcolor{red}{Non Superato}\\
+					\hline
+					\texttt{src::server::endpoints} & ?? & ??\\
+					\hline
+					\texttt{src::server::endpoints::api} & ?? & ??\\
+					\hline
+					\texttt{src::server::endpoints::api::public} & ?? & ??\\
+					\hline
+					\texttt{src::server::endpoints::api::private} & ?? & ??\\
+					\hline
+					\texttt{src::server::endpoints::resp} & ?? & ??\\
+					\hline
+					\texttt{src::server::endpoints::resp::public} & ?? & ??\\
+					\hline
+					\texttt{src::server::endpoints::resp::public::fb} & ?? & ??\\
+					\hline
+					\texttt{src::server::endpoints::resp::public::tw} & ?? & ??\\
+					\hline
+					\texttt{src::server::endpoints::resp::public::ig} & ?? & ??\\
+					\hline
+					\texttt{src::server::endpoints::resp::private} & ?? & ??\\
+					\hline
+				\end{tabularx}
+			\end{center}
+			\caption{Esiti indici di instabilità}
+		\end{table}
+		
+		
 	\subsection{Progettazione di dettaglio e codifica dei requisiti desiderabili}
 		\subsubsection{Processi}
 		Questa fase è stata appesantita dai ritardi accumolati nella fase precedente. Per questo motivo nel grafico non sono stati riportati i task pianificati nella fase antecedente, mentre i task che non erano stati \textit{Developed}, \textit{Verified}, \textit{Approved}, sono stati completati qui, togliendo tempo ai task pianificati in questa fase. Il risultato è che i task per i requisiti obbligatori sono stati completati, mentre parte di quelli per i requisiti desiderabili non sono stati sviluppati. Questo andrà ad aumentare il lavoro della fase successiva, con la possibilità di non terminare i requisiti opzionali.
 			\begin{figure}[htbp]
 				\centering
-				\centerline{\includegraphics[scale=1]{images/Grafico_fase_6.pdf}}
+				\centerline{\includegraphics[scale=0.6]{images/Grafico_fase_6.pdf}}
 				\caption{Grafico task Progettazione di dettaglio e codifica dei requisiti desiderabili}
 				\label{fig:taskfase6}
 			\end{figure}
