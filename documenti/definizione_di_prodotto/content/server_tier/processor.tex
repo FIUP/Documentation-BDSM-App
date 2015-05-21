@@ -46,13 +46,25 @@
         \end{itemize}
 		\item \textbf{Attributi}:
         	\begin{itemize}
-          		\item istance\_obj : RequestHandler
-        	\end{itemize} 
-		\item \textbf{Metodi}: 
+          		\item static istance\_obj : RequestHandler
+        	\end{itemize}
+					\begin{description}
+						\item \textbf{Descrizione}: rappresenta la singola istanza della classe RequestHandler.
+					\end{description}
+		\item \textbf{Metodi}:
         	\begin{itemize}
-         		 \item private RequestHandler() 
-         		 \item public dispatch\_request(request: Dictionary) : Dictionary
-         		 \item public get\_istance() : RequestHandler
+         		 \item private RequestHandler()
+							\begin{description}
+								\item \textbf{Descrizione}: construttore privato del singleton RequestHandler.
+							\end{description}
+         		 \item public dispatch\_request(request_name: String, request_args: Dictionary) : Dictionary
+							\begin{description}
+								\item \textbf{Descrizione}: metodo che si occupa di far confluire la richiesta in arrivo alla classe CommandDispatcher. I dati della richiesta vengono rappresentati come un dizionario chiave-valore, come quelli della risposta che saranno ritornati al chiamante.
+							\end{description}
+         		 \item public static get\_istance() : RequestHandler
+							\begin{description}
+								\item \textbf{Descrizione}: ritorna la singola istanza della classe RequestHandler o ne crea una se tale classe non risulta ancora istanziata.
+							\end{description}
         	\end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_processor_requesthandler (end)
@@ -66,13 +78,19 @@
         \begin{itemize}
           \item server::processor::commands::ICommand
         \end{itemize}
-		\item \textbf{Attributi}: 
+		\item \textbf{Attributi}:
         	\begin{itemize}
           		\item commands\_dict : Dictionary
+							\begin{description}
+								\item \textbf{Descrizione}: contiene una mappa che collega ogni tipologia di richiesta ad un determinato comando. Una richiesta è rappresentata da una specifica stringa.
+							\end{description}
         	\end{itemize}
-		\item \textbf{Metodi}: 
+		\item \textbf{Metodi}:
         	\begin{itemize}
-          		\item public dispatch(request: Dictionary) : Dictionary
+          		\item public dispatch(request_name: String, request: Dictionary) : Dictionary
+							\begin{description}
+								\item \textbf{Descrizione}: metodo che si occupa di far confluire un determinata richiesta (ed i dati associati mappati in un dizionario) ad un determinato comando grazie all'attributo \texttt{commands_dict}. Ritorna la risposta alla chiamata tramite un dizionario.
+							\end{description}
         	\end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_processor_commanddispatcher (end)
@@ -87,9 +105,12 @@
           \item server::miner::MinerScheduler
         \end{itemize}
 		\item \textbf{Attributi}: N/A
-		\item \textbf{Metodi}: 
+		\item \textbf{Metodi}:
         	\begin{itemize}
-          		\item public get() : void
+          		\item public static get() : void
+							\begin{description}
+								\item \textbf{Descrizione}: metodo definito secondo gli standard della Google cloud Platform. Si occupa di ricavare le Recipe scadute per fornirle alla classe \texttt{MinerScheduler} che procederà all'aggiornamento dei dati di ogni singola metrica.
+							\end{description}
         	\end{itemize}
     \end{itemize}
     % subparagraph bdsm_app::server_processor_updaterecipetask (end)
@@ -127,9 +148,12 @@
         \item \textbf{Descrizione}: rappresenta un'interfaccia comune per tutti i comandi presenti nel package \texttt{server::commands} e figli;
         \item \textbf{Utilizzo}: espone un metodo \texttt{execute()}, il quale sarà implementato da tutti i comandi concreti;
 		\item \textbf{Attributi}: N/A
-		\item \textbf{Metodi}: 
+		\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
+							\begin{description}
+								\item \textbf{Descrizione}: TO DO
+							\end{description}
         	\end{itemize}
       \end{itemize}
       % subparagraph bdsm_app::server_processor_abscommand (end)
@@ -181,9 +205,13 @@
               \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
+							\begin{description}
+								\item \textbf{Descrizione}: aggiunge un nuovo utente al database.
+							\end{description}
+						\end{description}
         	\end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -198,9 +226,12 @@
               \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
+							\begin{description}
+								\item \textbf{Descrizione}: ritorna un determinato utente presente nel database.
+							\end{description}
         	\end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -215,9 +246,12 @@
               \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
+							\begin{description}
+								\item \textbf{Descrizione}: elimina un determinato utente dal database.
+							\end{description}
         	\end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -232,9 +266,12 @@
               \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
+							\begin{description}
+								\item \textbf{Descrizione}: modifica i dati associati ad un determinato utente presente nel database.
+							\end{description}
         	\end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -249,9 +286,12 @@
               \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
+							\begin{description}
+								\item \textbf{Descrizione}: modifica i permessi di un determinato utente presente nel database.
+							\end{description}
         	\end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -266,9 +306,12 @@
               \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
+							\begin{description}
+								\item \textbf{Descrizione}: ritorna i preferiti associati ad un determinato utente.
+							\end{description}
         	\end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -283,9 +326,12 @@
               \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
+							\begin{description}
+								\item \textbf{Descrizione}: rimuove dal database un determinato preferito associato ad un utente.
+							\end{description}
         	\end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -300,9 +346,12 @@
               \item server::processor::commands::user::AbsUserCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
+							\begin{description}
+								\item \textbf{Descrizione}: aggiunge al database un preferito associato ad un determinato utente.
+							\end{description}
         	\end{itemize}
         \end{itemize}
         % subparagraph (end)
@@ -355,7 +404,7 @@
               \item server::processor::commands::recipe::AbsRecipeCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
         	\end{itemize}
@@ -372,7 +421,7 @@
               \item server::processor::commands::recipe::AbsRecipeCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
         	\end{itemize}
@@ -389,7 +438,7 @@
               \item server::processor::commands::recipe::AbsRecipeCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
         	\end{itemize}
@@ -406,7 +455,7 @@
               \item server::processor::commands::recipe::AbsRecipeCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
         	\end{itemize}
@@ -423,7 +472,7 @@
               \item server::processor::commands::recipe::AbsRecipeCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
         	\end{itemize}
@@ -477,7 +526,7 @@
               \item server::processor::commands::requests::AbsRequestCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
         	\end{itemize}
@@ -494,7 +543,7 @@
               \item server::processor::commands::requests::AbsRequestCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
         	\end{itemize}
@@ -511,7 +560,7 @@
               \item server::processor::commands::requests::AbsRequestCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
         	\end{itemize}
@@ -528,7 +577,7 @@
               \item server::processor::commands::requests::AbsRequestCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
         	\end{itemize}
@@ -545,7 +594,7 @@
               \item server::processor::commands::requests::AbsRequestCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
         	\end{itemize}
@@ -614,7 +663,7 @@
               \item server::processor::commands::social::AbsFbCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
         	\end{itemize}
@@ -631,7 +680,7 @@
               \item server::processor::commands::social::AbsFbCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
         	\end{itemize}
@@ -648,7 +697,7 @@
               \item server::processor::commands::social::AbsFbCommand
             \end{itemize}
             \item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
         	\end{itemize}
@@ -665,7 +714,7 @@
               \item server::processor::commands::social::AbsFbCommand
             \end{itemize}
             \item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
         	\end{itemize}
@@ -682,7 +731,7 @@
               \item server::processor::commands::social::AbsFbCommand
             \end{itemize}
             \item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
         	\end{itemize}
@@ -699,7 +748,7 @@
               \item server::processor::commands::social::AbsFbCommand
             \end{itemize}
             \item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
         	\end{itemize}
@@ -732,7 +781,7 @@
               \item server::processor::commands::social::AbsTwCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
         	\end{itemize}
@@ -749,7 +798,7 @@
               \item server::processor::commands::social::AbsTwCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
         	\end{itemize}
@@ -766,7 +815,7 @@
               \item server::processor::commands::social::AbsTwCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
         	\end{itemize}
@@ -783,7 +832,7 @@
               \item server::processor::commands::social::AbsTwCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
         	\end{itemize}
@@ -816,7 +865,7 @@
               \item server::processor::commands::social::AbsIgCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
         	\end{itemize}
@@ -833,7 +882,7 @@
               \item server::processor::commands::social::AbsIgCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
         	\end{itemize}
@@ -850,7 +899,7 @@
               \item server::processor::commands::social::AbsIgCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
         	\end{itemize}
@@ -867,7 +916,7 @@
               \item server::processor::commands::social::AbsIgCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
         	\end{itemize}
@@ -884,7 +933,7 @@
               \item server::processor::commands::social::AbsIgCommand
             \end{itemize}
 			\item \textbf{Attributi}: N/A
-			\item \textbf{Metodi}: 
+			\item \textbf{Metodi}:
         	\begin{itemize}
           		\item public execute(request: Dictionary) : Dictionary
         	\end{itemize}
