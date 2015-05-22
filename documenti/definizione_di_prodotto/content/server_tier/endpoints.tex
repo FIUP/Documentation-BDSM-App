@@ -377,8 +377,9 @@
       
 	  \item \textbf{Attributi}: 
 	  	\begin{itemize}
-	  		\item name\_str : String
-	  		\item category\_str : String
+	  		\item name : String
+	  		\item category : String
+	  		\item node\_id : String
 	  	\end{itemize}
 	  \item \textbf{Metodi}: N/A
       \end{itemize}
@@ -406,8 +407,8 @@
       %\item \textbf{Relazioni con altre classi}:
 	  \item \textbf{Attributi}:  
 	  	\begin{itemize}
-	  		\item likes\_int : int
-	  		\item talking\_about\_int : int
+	  		\item likes : int
+	  		\item talking\_about : int
 	  	\end{itemize}
 	  \item \textbf{Metodi}: N/A
     \end{itemize}
@@ -435,8 +436,9 @@
       
 	  \item \textbf{Attributi}:  
 	  	\begin{itemize}
-	  		\item name\_str : String
-	  		\item location\_obj : RawLocation
+	  		\item name : String
+	  		\item location : RawLocation
+	  		\item node\_id : String
 	  	\end{itemize}
 	  \item \textbf{Metodi}: N/A
       \end{itemize}
@@ -464,10 +466,10 @@
       
 	  \item \textbf{Attributi}:  
 	  	\begin{itemize}
-	  		\item invited\_int : int
-	  		\item attending\_int : int
-	  		\item declined\_int : int
-	  		\item maybe\_int : int
+	  		\item invited : int
+	  		\item attending : int
+	  		\item declined : int
+	  		\item maybe : int
 	  	\end{itemize}
 	  \item \textbf{Metodi}: N/A
       \end{itemize}
@@ -495,13 +497,13 @@
       
 	  \item \textbf{Attributi}:  
 	  	\begin{itemize}
-	  		\item date\_created\_date : Date
-	  		\item posts\_int : int
-	  		\item comments\_int : int
-	  		\item admin\_posts\_int : int
-	  		\item admin\_comments\_int : int
-	  		\item posts\_likes\_int : int
-	  		\item comments\_likes\_int :int
+	  		\item date\_created : Date
+	  		\item posts : int
+	  		\item comments : int
+	  		\item admin\_posts : int
+	  		\item admin\_comments : int
+	  		\item posts\_likes : int
+	  		\item comments\_likes :int
 	  	\end{itemize}
 	  \item \textbf{Metodi}: N/A
     \end{itemize}
@@ -546,10 +548,10 @@
       
 	  \item \textbf{Attributi}:  
 	  	\begin{itemize}
-	  		\item email\_str : String
-	  		\item full\_name\_str : String
-	  		\item photo\_url\_str : String
-	  		\item screen\_name\_str : String
+	  		\item email : String
+	  		\item full\_name : String
+	  		\item photo\_url : String
+	  		\item screen\_name : String
 	  	\end{itemize}
 	  \item \textbf{Metodi}: N/A
       \end{itemize}
@@ -577,10 +579,10 @@
       
 	  \item \textbf{Attributi}:  
 	  	\begin{itemize}
-	  		\item favourites\_count\_int : int
-	  		\item followers\_count\_int : int
-	  		\item friends\_count\_int : int
-	  		\item statuses\_count\_int : int
+	  		\item favourites\_count : int
+	  		\item followers\_count : int
+	  		\item friends\_count : int
+	  		\item statuses\_count : int
 	  	\end{itemize}
 	  \item \textbf{Metodi}: N/A
     \end{itemize}
@@ -608,7 +610,7 @@
       
 	  \item \textbf{Attributi}:  
 	  	\begin{itemize}
-	  		\item hashtag\_name\_str : String
+	  		\item hashtag\_name : String
 	  	\end{itemize}
 	  \item \textbf{Metodi}: N/A
     \end{itemize}
@@ -636,12 +638,12 @@
       
 	  \item \textbf{Attributi}: 
 	  	\begin{itemize}
-	  		\item source\_devices\_list : List
-	  		\item favourites\_count\_int : int
-	  		\item media\_count\_int : int
-	  		\item retweets\_count\_int : int
-	  		\item tweets\_count\_int : int
-	  		\item time\_zone\_list : List
+	  		\item source\_devices : List
+	  		\item favourites\_count : int
+	  		\item media\_count : int
+	  		\item retweets\_count : int
+	  		\item tweets\_count : int
+	  		\item time\_zone : List
 	  	\end{itemize}
 	  \item \textbf{Metodi}: N/A
     \end{itemize}
@@ -686,8 +688,8 @@
       
 	  \item \textbf{Attributi}: 
 	  	\begin{itemize}
-	  		\item id\_int : int
-	  		\item fullname\_str : String
+	  		\item id : int
+	  		\item fullname : String
 	  	\end{itemize}
 	  \item \textbf{Metodi}: N/A
       \end{itemize}
@@ -715,9 +717,9 @@
       
 	  \item \textbf{Attributi}:  
 	  	\begin{itemize}
-	  		\item media\_int : int
-	  		\item followed\_by\_int : int
-	  		\item follows\_int : int
+	  		\item media : int
+	  		\item followed\_by : int
+	  		\item follows : int
 	  	\end{itemize}
 	  \item \textbf{Metodi}: N/A
       \end{itemize}
@@ -745,7 +747,7 @@
       
 	  \item \textbf{Attributi}:  
 	  	\begin{itemize}
-	  		\item name\_str : String
+	  		\item name : String
 	  	\end{itemize}
 	  \item \textbf{Metodi}: N/A
       \end{itemize}
@@ -773,7 +775,7 @@
       
 	  \item \textbf{Attributi}: 
 	  	\begin{itemize}
-	  		\item media\_count\_int : int
+	  		\item media\_count : int
 	  	\end{itemize}
 	  \item \textbf{Metodi}: N/A
       \end{itemize}
@@ -801,13 +803,13 @@
       
 	  \item \textbf{Attributi}:  
 	  	\begin{itemize}
-	  		\item date\_created\_date : Date
-	  		\item media\_int : int
-	  		\item comments\_int : int
-	  		\item likes\_int : int
-	  		\item photos\_count\_int : int
-	  		\item videos\_count\_int : int
-	  		\item location\_obj : RawLocation
+	  		\item date\_createde : Date
+	  		\item media : int
+	  		\item comments : int
+	  		\item likes : int
+	  		\item photos\_count : int
+	  		\item videos\_countt : int
+	  		\item location : RawLocation
 	  	\end{itemize}
 	  \item \textbf{Metodi}: N/A
       \end{itemize}
@@ -858,11 +860,11 @@
 		\end{itemize}
 	  \item \textbf{Attributi}:  
 	  	\begin{itemize}
-	  		\item id\_str : String
-	  		\item title\_str : String
-	  		\item desc\_str : String
-	  		\item data\_create\_date : Date
-	  		\item rating\_float : Float
+	  		\item id : String
+	  		\item title : String
+	  		\item desc : String
+	  		\item data\_create : Date
+	  		\item rating : Float
 	  	\end{itemize}
 	  \item \textbf{Metodi}: N/A
       \end{itemize}
@@ -889,8 +891,8 @@
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una richiesta di Recipe al client;
 	  \item \textbf{Attributi}:  
 	  	\begin{itemize}
-	  		\item desc\_str : String
-	  		\item title\_str : String
+	  		\item desc : String
+	  		\item title : String
 	  	\end{itemize}
 	  \item \textbf{Metodi}: N/A
       \end{itemize}
@@ -917,12 +919,12 @@
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response contenente i dati un un utente al client;
 	  \item \textbf{Attributi}:  
 	  	\begin{itemize}
-	  		\item username\_str : String
-	  		\item email\_str : String
-	  		\item pwd\_str : String
-	  		\item data\_create\_date : Date
-	  		\item access\_token\_str : String
-	  		\item active\_bool : boolean
+	  		\item username : String
+	  		\item email : String
+	  		\item pwd : String
+	  		\item data\_create : Date
+	  		\item access\_token : String
+	  		\item active : boolean
 	  	\end{itemize}
 	  \item \textbf{Metodi}: N/A
     \end{itemize}
@@ -945,8 +947,8 @@
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una View preferita al client;
 	  \item \textbf{Attributi}:  
 	  	\begin{itemize}
-	  		\item chart\_type\_str : String
-	  		\item metric\_list : List
+	  		\item chart\_type : String
+	  		\item metric : List
 	  	\end{itemize}
 	  \item \textbf{Metodi}: N/A
     \end{itemize}
