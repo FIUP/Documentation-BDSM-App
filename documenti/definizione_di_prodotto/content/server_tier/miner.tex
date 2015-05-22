@@ -804,12 +804,25 @@
 					\end{itemize}
 				\item \textbf{Attributi}:    
 					\begin{itemize}
-						\item name\_str : String
+						\item \textcolor{forestgreen}{\texttt{+ name\_str : String}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene l'id univoco della risorsa presente nel social network Instagram;
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}:  
 					\begin{itemize}
-						\item public get\_data() : void
-						\item public get\_trend\_data() : void
+						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(name\_str : String) : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: costruttore della classe di default. Il metodo invoca la costruzione della classe astratta derivata. Inoltre inizializza name\_str con l'id appropriato della risorsa;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ abstract get\_data() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo viene definito astratto ma non viene implementato;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ abstract get\_trend\_data() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo viene definito astratto ma non viene implementato;
+						\end{description}
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_ig_AbsIgFetcher
@@ -826,13 +839,25 @@
 					\end{itemize}
 				\item \textbf{Attributi}:    
 					\begin{itemize}
-						\item user\_obj : RawIgUser
-						\item user\_trend\_obj : RawIgUserTrend
+						\item \textcolor{forestgreen}{\texttt{+ user\_obj : RawIgUser}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene la metrica cui andranno collegati i figli. Nel seguente caso la metrica riguarda l'utente di Instagram;
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}:  
 					\begin{itemize}
-						\item public get\_data() : void
-						\item public get\_trend\_data() : void
+						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(name\_str : String)}}
+						\begin{description}
+							\item \textbf{Descrizione}: costruttore della classe di default. Il metodo invoca la costruzione della classe astratta derivata. Inoltre inizializza la variabile user\_obj;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ get\_data() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo tramite le chiamate alle API di Instagram recupera i dati statici dell'utente e li memorizza nella base di dati. Effettua un controllo preventivo che questi non siano già esistenti;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ get\_trend\_data() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo tramite le chiamate alle API di Instagram recupera i dati di trend dell'utente. Effettua le opportune chiamate per l'aggregazione dei dati e aggiunge i dati come figli all'oggeto user\_obj creato precedentemente;
+						\end{description}
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_ig_IgUserFetcher
@@ -849,13 +874,25 @@
 					\end{itemize}
 				\item \textbf{Attributi}:    
 					\begin{itemize}
-						\item hashtag\_obj : RawIgHashtag
-						\item hashtag\_trend\_obj : RawIgHashtagTrend
+						\item \textcolor{forestgreen}{\texttt{+ hashtag\_obj : RawIgHashtag}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene la metrica cui andranno collegati i figli. Nel seguente caso la metrica riguarda l'hashtag su Instagram;
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}:  
 					\begin{itemize}
-						\item public get\_data() : void
-						\item public get\_trend\_data() : void
+						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(name\_str : String) : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: costruttore della classe di default. Il metodo invoca la costruzione della classe astratta derivata. Inoltre inizializza la variabile hashtag\_obj;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ get\_data() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo tramite le chiamate alle API di Instagram recupera i dati statici dell'hashtag e li memorizza nella base di dati. Effettua un controllo preventivo che questi non siano già esistenti;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ get\_trend\_data() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo tramite le chiamate alle API di Instagram recupera i dati di trend dell'hashtag. Effettua le opportune chiamate per l'aggregazione dei dati e aggiunge i dati come figli all'oggeto hashtag\_obj creato precedentemente;
+						\end{description}
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_ig_IgHashtagFetcher
@@ -870,10 +907,43 @@
 					\begin{itemize}
 						\item server::miner::ig::MediaCounter
 					\end{itemize}
-				\item \textbf{Attributi}: N/A
+				\item \textbf{Attributi}:
+					\begin{itemize}
+						\item \textcolor{forestgreen}{\texttt{+ counter\_int : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene il numero di cicli effettuati per la somma;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ node\_name : String}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene l'id della risorsa utile per la memorizzazione dei dati acquisiti successivamente;
+						\end{description}
+					\end{itemize}
 				\item \textbf{Metodi}: 
 					\begin{itemize}
-						\item public count() : int
+						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(node\_name : String) : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: costruttore della classe di default. Il metodo invoca la costruzione della classe astratta derivata. Inoltre inizializza gli attributi presenti;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ count() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo ha il compito di avviare il count dei trend utente e dei trend hashtag;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ count\_user() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo ha il compito di sommare i dati dinamici dell'utente per ottenere i dati di trend;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ count\_tag() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo ha il compito di sommare i dati dinamici dell'hashtag per ottenere i dati di trend;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ abstract action() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo viene definito astratto ma non viene implementato;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ abstract break\_condition() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo viene definito astratto ma non viene implementato;
+						\end{description}
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_ig_AbsIgCounter
@@ -887,16 +957,41 @@
 				\item \textbf{Classi ereditate}: server::miner::ig::AbsIgCounter
 				\item \textbf{Attributi}:    
 					\begin{itemize}
-						\item public likes\_count\_int : int
-						\item public comments\_count\_int : int
-						\item public photos\_count\_int : int
-						\item public videos\_count\_int : int
-						\item public geolist\_list : List
+						\item \textcolor{forestgreen}{\texttt{+ likes\_count\_int : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene il numero di likes sommati;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ comments\_count\_int : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene il numero di commenti sommati;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ photos\_count\_int : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene il numero di foto sommate;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ videos\_count\_int : int}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene il numero di video sommati;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ geolist\_list : List}}
+						\begin{description}
+							\item \textbf{Descrizione}: la variabile contiene una lista formata da chiave-valore di GeoPoint riguardanti la localizzazione dei media;
+						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}:  
 					\begin{itemize}
-						\item protected action() : boolean
-						\item protected break\_condition() : boolean
+						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: costruttore della classe di default. Il metodo invoca la costruzione della classe astratta derivata. Inoltre inizializza gli attributi presenti a 0;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ action() : void}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo invoca le funzioni di somma dei campi dato da acquisire;
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ break\_condition() : boolean}}
+						\begin{description}
+							\item \textbf{Descrizione}: il metodo definisce la condizione di stop per i cicli di somma;
+						\end{description}
 					\end{itemize}
 			\end{itemize}
 		% subparagraph server_miner_ig_MediaCounter
