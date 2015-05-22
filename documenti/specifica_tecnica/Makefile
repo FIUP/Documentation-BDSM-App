@@ -2,8 +2,8 @@ latex=pdflatex -synctex=1
 # aspell=sudo aspell --mode=tex --lang=it check
 
 compile:
-	python ../../script/tracciamento/tracciamento_st.py
-	mv requisiti-componenti-base.tex content/tracciamento/requisiti-componenti.tex
+	# python ../../script/tracciamento/tracciamento_st.py
+	# mv requisiti-componenti-base.tex content/tracciamento/requisiti-componenti.tex
 	$(latex) specifica_tecnica.tex && $(latex) specifica_tecnica.tex
 	rm -rf *.aux
 	rm -rf *.log

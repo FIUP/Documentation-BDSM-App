@@ -185,7 +185,8 @@ class RequisitiFonti():
         self.__write_doc_file.write("% subsubsection requisiti_fonti (end)\n")
 
     def write_list_req(self):
-        """TODO
+        """This method write all requirements in the left column and set them components associated.
+        If there aren't components a TODO it's set
 
         Returns:
             TODO
@@ -215,7 +216,7 @@ class RequisitiFonti():
                     if counter != length:
                         self.__write_list_req_file.write("\\newline ")
             else:
-                self.__write_list_req_file.write(val + " & TO DO: Componente non tracciato! ")
+                self.__write_list_req_file.write(val + " & TO DO: Requisito non tracciato con alcun componente! ")
 
             self.__write_list_req_file.write("\\\\\n")
             self.__write_list_req_file.write("\hline\n")
