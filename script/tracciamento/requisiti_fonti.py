@@ -256,7 +256,7 @@ class RequisitiFonti():
         self.__write_list_req_classi_file.write("\\begin{center}\n")
         self.__write_list_req_classi_file.write("\def\\arraystretch{1.5}\n")
         self.__write_list_req_classi_file.write("\\bgroup\n")
-        self.__write_list_req_classi_file.write("\\begin{longtable}{| p{4cm} | p{8cm} |}\n")
+        self.__write_list_req_classi_file.write("\\begin{longtable}{| p{2.5cm} | p{11cm} |}\n")
         self.__write_list_req_classi_file.write("\hline\n")
         self.__write_list_req_classi_file.write("\\textbf{Requisito} & \\textbf{Classi} \\\\\n")
         self.__write_list_req_classi_file.write("\hline\n")
