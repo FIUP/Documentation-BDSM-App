@@ -1000,17 +1000,21 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{- getRequestList()}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: metodo che attraverso l'invocazione del metodo \textbf{getListOfRecipesRequest()} sul servizio \textbf{recipeAdminService} riceve una promessa alla chiamata effettiva per recuperare i dati dal back-end. Quando questa sarà soddisfatta, l'attributo \textbf{requestList} verrà popolato con i dati ricevuti.
 							\end{description}
-
+						\item \textcolor{forestgreen}{\texttt{+ discardRequest(idReqRecipe)}}
+							\begin{description}
+								\item \textbf{Descrizione}: metodo che attraverso l'invocazione del metodo \textbf{discardRecipeRequest(idReqRecipe)} sul servizio \textbf{recipeAdminService} riceve una promessa alla chiamata effettiva per andare a rifiutare la richiesta per quella recipe. Quando questa sarà soddisfatta, verrà visualizzato un messaggio di conferma.
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ approveRequest(idReqRecipe)}}
+							\begin{description}
+								\item \textbf{Descrizione}: metodo che attraverso l'invocazione del metodo \textbf{approveRecipeRequest(idReqRecipe)} sul servizio \textbf{recipeAdminService} riceve una promessa alla chiamata effettiva per andare ad accettare e inserire la richiesta per quella recipe. Quando questa sarà soddisfatta, verrà visualizzato un messaggio di conferma.
+							\end{description}
 					\end{itemize}
 
-				\item \textbf{Servizi AngularJS utilizzati}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
+				\item \textbf{Servizi AngularJS utilizzati}: N/A
 
 			\end{itemize}
 		% subparagraph bdsm_app_client_controller_admin_requestlistctrl (end)
