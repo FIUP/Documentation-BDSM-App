@@ -263,23 +263,19 @@ class RequisitiFonti():
 
         for val in self.__req_array:
             val = val.strip()
-            if val in self.__req_comp_dict:
-                comp_for_req = self.__req_comp_dict[val]
-                self.__write_list_req_classi_file.write(val + " & ")
-                length = len(comp_for_req)
-                counter = 0
-                for r in comp_for_req:
-                    self.__write_list_req_classi_file.write(r + " ")
-                    counter += 1
-                    if counter != length:
-                        self.__write_list_req_classi_file.write("\\newline ")
-            else:
-                self.__write_list_req_classi_file.write(val + " & TO DO: Requisito non tracciato con nessuna classe! ")
-
-            self.__write_list_req_classi_file.write("\\\\\n")
+            self.__write_list_req_classi_file.write(val + " & TO DO: Requisito non tracciato con nessuna classe! \\\\\n")
             self.__write_list_req_classi_file.write("\hline\n")
 
         self.__write_list_req_classi_file.write("\end{longtable}\n")
         self.__write_list_req_classi_file.write("\egroup\n")
         self.__write_list_req_classi_file.write("\end{center}\n")
         self.__write_list_req_classi_file.write("% subsection componenti_requisiti (end)\n")
+
+
+if __name__ == '__main__':
+    pass
+    # r = RequisitiFonti()
+    # r.open_doc_req()
+    # r.open_doc_classi()
+    # r.take_req()
+    # r.write_list_req_for_class()
