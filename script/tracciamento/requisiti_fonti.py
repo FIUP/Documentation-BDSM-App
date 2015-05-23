@@ -46,13 +46,16 @@ class RequisitiFonti():
 
     __req_doc_file = ""
     __comp_doc_file = ""
+    __class_doc_file = ""
     __write_doc_file = ""
-    __write_list_req_file = ""
+    __write_list_req_comp_file = ""
+    __write_list_req_classi_file = ""
 
     __req_file_line = []
     __comp_file_line = []
+    __class_file_line = []
     # array di soli requisiti per poterli scorrere dal primo all'ultimo nell'ordine di inserimento
-    __req_fonti_array = []
+    __req_array = []
 
     # dizionario per fare il tracciamento inverso fonti-requisiti
     __fonti_req_dict = {}
@@ -60,6 +63,8 @@ class RequisitiFonti():
     __req_fonti_dict = {}
     # dizionario per ricavarmi i componenti sapendo il requisito come chiave
     __req_comp_dict = {}
+    # dizionario per ricavarmi le classi sapendo il componente come chiave
+    __classi_req_dict = {}
 
     def __init__(self):
         pass
@@ -70,8 +75,8 @@ class RequisitiFonti():
         Returns:
             TODO
         """
-        self.__req_doc_path_str = "../../documenti/analisi_dei_requisiti/content/requisiti.tex"
-        self.__req_doc_file = open(self.__req_doc_path_str, "r")
+
+        self.__req_doc_file = open("../../documenti/analisi_dei_requisiti/content/requisiti.tex", "r")
         self.__req_file_line = [line.strip() for line in self.__req_doc_file]
         # mi salvo tutte le righe del file in una lista togliendoli il carattere di ritorno a capo
         self.__req_doc_file.close()
@@ -82,11 +87,25 @@ class RequisitiFonti():
         Returns:
             TODO
         """
-        self.__comp_doc_path_str = "../../documenti/specifica_tecnica/content/tracciamento/componenti-requisiti.tex"
-        self.__comp_doc_file = open(self.__comp_doc_path_str, "r")
+        self.__comp_doc_file = open("../../documenti/specifica_tecnica/content/tracciamento/componenti-requisiti.tex",
+                                    "r")
         self.__comp_file_line = [line.strip() for line in self.__comp_doc_file]
         # mi salvo tutte le righe del file in una lista togliendoli il carattere di ritorno a capo
         self.__comp_doc_file.close()
+
+    def open_doc_classi(self):
+        """TODO
+
+        Returns:
+            TODO
+        """
+        self.__class_doc_file = open("../../documenti/specifica_tecnica/content/tracciamento/componenti-requisiti.tex",
+                                     "r")
+        self.__class_file_line = [line.strip() for line in self.__comp_doc_file]
+        # mi salvo tutte le righe del file in una lista togliendoli il carattere di ritorno a capo
+        self.__class_doc_file.close()
+
+    ########################
 
     def take_req(self):
         """TODO
@@ -104,7 +123,7 @@ class RequisitiFonti():
                     # aggiorno il dizionario con il nuovo valore del requisito e le sue fonti
                     self.__req_fonti_dict.update({req.group(): fonti_for_req_array})
                     # aggiorno l'array solo dei requisiti
-                    self.__req_fonti_array.append(req.group())
+                    self.__req_array.append(req.group())
 
                     for fonte in fonti_single_array:
                         if fonte.strip() in self.__fonti_req_dict:
@@ -137,8 +156,6 @@ class RequisitiFonti():
                             self.__req_comp_dict[req.strip()].append(comp.strip())
                         else:
                             self.__req_comp_dict[req.strip()] = [comp.strip()]
-
-        # print self.__req_comp_dict
 
     def get_list_req(self):
         """TODO
@@ -174,7 +191,7 @@ class RequisitiFonti():
         self.__write_doc_file.write("\\textbf{Requisito} & \\textbf{Fonti} \\\\\n")
         self.__write_doc_file.write("\hline\n")
 
-        for val in self.__req_fonti_array:
+        for val in self.__req_array:
             fonti_val = self.__req_fonti_dict[val]
             self.__write_doc_file.write(val + "  &  " + fonti_val + "\n")
             self.__write_doc_file.write("\hline\n")
@@ -184,7 +201,7 @@ class RequisitiFonti():
         self.__write_doc_file.write("\end{center}\n")
         self.__write_doc_file.write("% subsubsection requisiti_fonti (end)\n")
 
-    def write_list_req(self):
+    def write_list_req_for_comp(self):
         """This method write all requirements in the left column and set them components associated.
         If there aren't components a TODO it's set
 
@@ -192,36 +209,73 @@ class RequisitiFonti():
             TODO
         """
         self.__write_list_req_str = "requisiti-componenti-base.tex"
-        self.__write_list_req_file = open(self.__write_list_req_str, "w")
-        self.__write_list_req_file.write("\subsection{Requisiti-Componenti} % (fold)\n")
-        self.__write_list_req_file.write("\label{sub:componenti_requisiti}\n")
-        self.__write_list_req_file.write("\\begin{center}\n")
-        self.__write_list_req_file.write("\def\\arraystretch{1.5}\n")
-        self.__write_list_req_file.write("\\bgroup\n")
-        self.__write_list_req_file.write("\\begin{longtable}{| p{4cm} | p{8cm} |}\n")
-        self.__write_list_req_file.write("\hline\n")
-        self.__write_list_req_file.write("\\textbf{Requisito} & \\textbf{Componenti} \\\\\n")
-        self.__write_list_req_file.write("\hline\n")
+        self.__write_list_req_comp_file = open(self.__write_list_req_str, "w")
+        self.__write_list_req_comp_file.write("\subsection{Requisiti-Componenti} % (fold)\n")
+        self.__write_list_req_comp_file.write("\label{sub:componenti_requisiti}\n")
+        self.__write_list_req_comp_file.write("\\begin{center}\n")
+        self.__write_list_req_comp_file.write("\def\\arraystretch{1.5}\n")
+        self.__write_list_req_comp_file.write("\\bgroup\n")
+        self.__write_list_req_comp_file.write("\\begin{longtable}{| p{4cm} | p{8cm} |}\n")
+        self.__write_list_req_comp_file.write("\hline\n")
+        self.__write_list_req_comp_file.write("\\textbf{Requisito} & \\textbf{Componenti} \\\\\n")
+        self.__write_list_req_comp_file.write("\hline\n")
 
-        for val in self.__req_fonti_array:
+        for val in self.__req_array:
             val = val.strip()
             if val in self.__req_comp_dict:
                 comp_for_req = self.__req_comp_dict[val]
-                self.__write_list_req_file.write(val + " & ")
+                self.__write_list_req_comp_file.write(val + " & ")
                 length = len(comp_for_req)
                 counter = 0
                 for r in comp_for_req:
-                    self.__write_list_req_file.write(r + " ")
+                    self.__write_list_req_comp_file.write(r + " ")
                     counter += 1
                     if counter != length:
-                        self.__write_list_req_file.write("\\newline ")
+                        self.__write_list_req_comp_file.write("\\newline ")
             else:
-                self.__write_list_req_file.write(val + " & TO DO: Requisito non tracciato con alcun componente! ")
+                self.__write_list_req_comp_file.write(val + " & TO DO: Requisito non tracciato con nessun componente! ")
 
-            self.__write_list_req_file.write("\\\\\n")
-            self.__write_list_req_file.write("\hline\n")
+            self.__write_list_req_comp_file.write("\\\\\n")
+            self.__write_list_req_comp_file.write("\hline\n")
 
-        self.__write_list_req_file.write("\end{longtable}\n")
-        self.__write_list_req_file.write("\egroup\n")
-        self.__write_list_req_file.write("\end{center}\n")
-        self.__write_list_req_file.write("% subsection componenti_requisiti (end)\n")
+        self.__write_list_req_comp_file.write("\end{longtable}\n")
+        self.__write_list_req_comp_file.write("\egroup\n")
+        self.__write_list_req_comp_file.write("\end{center}\n")
+        self.__write_list_req_comp_file.write("% subsection componenti_requisiti (end)\n")
+
+    def write_list_req_for_class(self):
+        """This method write all requirements in the left column and left empty right column with a TODO marker.
+
+        Returns:
+            TODO
+        """
+        self.__write_list_req_str = "requisiti-classi-base.tex"
+        self.__write_list_req_classi_file = open(self.__write_list_req_str, "w")
+        self.__write_list_req_classi_file.write("\subsection{Requisiti-Componenti} % (fold)\n")
+        self.__write_list_req_classi_file.write("\label{sub:componenti_requisiti}\n")
+        self.__write_list_req_classi_file.write("\\begin{center}\n")
+        self.__write_list_req_classi_file.write("\def\\arraystretch{1.5}\n")
+        self.__write_list_req_classi_file.write("\\bgroup\n")
+        self.__write_list_req_classi_file.write("\\begin{longtable}{| p{2.5cm} | p{11cm} |}\n")
+        self.__write_list_req_classi_file.write("\hline\n")
+        self.__write_list_req_classi_file.write("\\textbf{Requisito} & \\textbf{Classi} \\\\\n")
+        self.__write_list_req_classi_file.write("\hline\n")
+
+        for val in self.__req_array:
+            val = val.strip()
+            self.__write_list_req_classi_file.write(val + " & TO DO: Requisito non tracciato con nessuna classe! \\\\\n")
+            self.__write_list_req_classi_file.write("\hline\n")
+
+        self.__write_list_req_classi_file.write("\end{longtable}\n")
+        self.__write_list_req_classi_file.write("\egroup\n")
+        self.__write_list_req_classi_file.write("\end{center}\n")
+        self.__write_list_req_classi_file.write("% subsection componenti_requisiti (end)\n")
+
+
+if __name__ == '__main__':
+    pass
+    # r = RequisitiFonti()
+    # r.open_doc_req()
+    # r.open_doc_classi()
+    # r.take_req()
+    # r.write_list_req_for_class()

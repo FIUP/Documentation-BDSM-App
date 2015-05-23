@@ -2,6 +2,8 @@ latex=pdflatex -synctex=1 -interaction=nonstopmode
 # aspell=sudo aspell --mode=tex --lang=it check
 
 compile: 
+	python ../../script/tracciamento/classi_requisiti.py
+	mv classi-requisiti.tex content/tracciamento/classi-requisiti.tex
 	$(latex) definizione_di_prodotto.tex && $(latex) definizione_di_prodotto.tex
 	rm -rf *.aux 
 	rm -rf *.log
@@ -17,6 +19,8 @@ compile:
 	esac
 
 compilenoopen:
+	python ../../script/tracciamento/classi_requisiti.py
+	mv classi-requisiti.tex content/tracciamento/classi-requisiti.tex
 	$(latex) definizione_di_prodotto.tex && $(latex) definizione_di_prodotto.tex
 	rm -rf *.aux 
 	rm -rf *.log
