@@ -395,7 +395,14 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{ + listRecipes : array di oggetti JSON}}
 							\begin{description}
-								\item \textbf{Descrizione}: array di oggetti nel formato JSON che rappresentano la lista delle recipe presenti nel sistema. Questa variabile viene inizializzata tramite la chiamata immediata alla funzione privata getListOfRecipes.
+								\item \textbf{Descrizione}: array di oggetti nel formato JSON che rappresentano la lista delle recipe presenti nel sistema. Questa variabile viene inizializzata tramite la chiamata immediata al metodo privata getListOfRecipes. Il formato degli oggetti JSON contenuti nell'array è il seguente:
+								\begin{verbatim}
+									{
+									    id: '42',
+									    title: 'Titolo della Recipe',
+									    desc: 'Descrizione della Recipe'
+									}
+								\end{verbatim}
 							\end{description}
 
 					\end{itemize}
@@ -404,7 +411,7 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{- getListOfRecipes()}}
 							\begin{description}
-								\item \textbf{Descrizione}: funzione che preleva la lista delle recipe tramite una chiamata al metodo \textbf{getRecipesList} della classe RecipeService.
+								\item \textbf{Descrizione}: metodo che preleva la lista delle recipe tramite una chiamata al metodo \textbf{getRecipesList} della classe RecipeService.
 							\end{description}
 
 					\end{itemize}
