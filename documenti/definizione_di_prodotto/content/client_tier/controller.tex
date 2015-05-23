@@ -981,9 +981,36 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 						\item client::controller::admin::RecipeListRoute
 					\end{itemize}
 
-				\item \textbf{Attributi associati allo \$scope}: N/A
-				\item \textbf{Metodi associati allo \$scope e privati}: N/A
-				\item \textbf{Servizi AngularJS utilizzati}: N/A
+				\item \textbf{Attributi associati allo \$scope}:
+					\begin{itemize}
+						\item \textcolor{forestgreen}{\texttt{+ requestList : array di oggetti JSON}}
+							\begin{description}
+								\item \textbf{Descrizione}: contiene la lista delle richieste di nuove Recipe proveniente dagli utenti non amministratori. Il formato degli oggetti JSON contenuti nell'array è il seguente:
+								\begin{verbatim}
+									{
+									    idRequestRecipe: '42',
+									    titleRecipe: 'Titolo della Recipe',
+									    descRecipe: 'Descrizione della Recipe',
+									    emailUser: 'info@mashup-unipd.it'
+									}
+								\end{verbatim}
+							\end{description}
+
+					\end{itemize}
+
+				\item \textbf{Metodi associati allo \$scope e privati}:
+					\begin{itemize}
+						\item \textcolor{forestgreen}{\texttt{TODO}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+
+					\end{itemize}
+
+				\item \textbf{Servizi AngularJS utilizzati}:
+					\begin{itemize}
+						\item TODO
+					\end{itemize}
 
 			\end{itemize}
 		% subparagraph bdsm_app_client_controller_admin_requestlistctrl (end)
@@ -1176,9 +1203,9 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{usersList} : }
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: 
 							\end{description}
 
 					\end{itemize}
