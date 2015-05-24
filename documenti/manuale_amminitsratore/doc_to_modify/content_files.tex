@@ -11,7 +11,21 @@
 % =================================================================================================
 %
 
+% DEFINIZIONE FUNZIONE GLOSSARIO
+% Questa funzione si occupa di disegnare la lettera per ogni sezione del glossario
+
+\newcommand{\letteraGlossario}[1] { 
+  \phantomsection
+  \vspace{11pt}
+  \textbf{\huge{#1} }
+  \\
+  % Traccia linea orizzontale
+  \rule[0.3pt]{\linewidth}{0.4pt} \\
+} 
+
 % DEFINIZIONE DEI CONTENUTI DEL DOCUMENTO
 
 \input{./content/introduzione} \newpage \clearpage
-\input{./content/nome_del_capitolo}
+\input{./content/gest_recipe} \newpage \clearpage
+\input{./content/gest_utenti} \newpage \clearpage
+\input{./content/mini_glossario} \newpage \clearpage
