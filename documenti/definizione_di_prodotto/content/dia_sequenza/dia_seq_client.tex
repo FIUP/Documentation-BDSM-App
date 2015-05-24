@@ -32,12 +32,13 @@ Questi diagrammi riguardano solo la parte appunto del client. La comunicazione q
 	Il diagramma descrive le interazioni tra gli oggetti che compongono il front-end quando un utente vuole effettuare il login nell'applicazione.
 	\begin{itemize}
 		\item \textbf{Utente non autenticato}: l'oggetto Utente non autenticato individua un qualsiasi attore che vuole effettuare l'accesso al sistema. L'utente inserisce i propri dati e preme il bottone ``Login'';
-		\item \textbf{PublicRoute}: l'oggetto PublicRoute re-indirizza l'utente alla corretta pagina, dalla quale potrà effettuare l'accesso;
-		\item \textbf{Login (login.html)}: l'oggetto Login è la vera pagina che permette l'autenticazione dell'utente. Qui verranno inserite le credenziali per accedere e sarà presente il pulsante che una volta premuto invocherà il metodo \textbf{login()};
-		\item \textbf{LoginCtrl}: TODO
-		\item \textbf{AuthService}: TODO
-		\item \textbf{UserApi}: TODO
-		\item \textbf{Recipe (recipe.html)}: TODO
+		\item \textbf{aPublicRoute}: l'oggetto aPublicRoute re-indirizza l'utente alla corretta pagina, dalla quale potrà effettuare l'accesso;
+		\item \textbf{aLogin (login.html)}: l'oggetto aLogin è la vera pagina che permette l'autenticazione dell'utente. Qui verranno inserite le credenziali per accedere e sarà presente il pulsante che una volta premuto invocherà il metodo \textbf{login(cred)};
+		\item \textbf{aLoginCtrl}: l'oggetto aLoginCtrl è il controller che si occupa di gestire le funzioni disponibili in \textbf{aLogin}, in particolare di \textbf{login(cred)}. Questo metodo invoca ulteriormente il metodo \textbf{login(cred)} dell'oggetto \textbf{aAuthService} passandogli come parametro un oggetto JSON contenete le credenziali recuperate dal form di inserimento;
+		\item \textbf{aAuthService}: l'oggetto aAuthService chiama il metodo \textbf{submitLogin(cred)} del servizio aNg-Auth
+		\item \textbf{aNg-Auth}: l'oggetto aNg-Auth rappresenta un modulo esterno, iniettato come servizio tramite Dependency Injection, che gestisce le principali azioni di un utente per quando riguarda autenticazione, registrazione, cambio dati personali, ecc... . In questo caso viene utilizzato per autenticare un utente al sistema. Una volta ricevuta risposta dal server, viene immagazzinato un access token riguardante la sessione in corso. Attraverso quel token si potranno recuperare tutte le informazioni dell'utente ed effettuare determinate azioni previste dall'applicativo;
+		\item \textbf{aUserApi}: l'oggetto aUserApi è il modulo che si occupa di TODO
+		\item \textbf{aRecipe (recipe.html)}: l'oggetto aRecipe è la pagina nella quale l'utente che ha inserito le credenziali corrette viene re-indirizzato.
 	\end{itemize}
 	% subsubsection login (end)
 
@@ -50,12 +51,13 @@ Questi diagrammi riguardano solo la parte appunto del client. La comunicazione q
 
 	Il diagramma descrive le interazioni tra gli oggetti che compongono il front-end quando un utente vuole visualizzare la lista delle Recipe presenti nel sistema.
 	\begin{itemize}
-		\item \textbf{Utente autenticato}: TODO
-		\item \textbf{RecipeRoute}: TODO
-		\item \textbf{Recipe (recipe.html)}: TODO
-		\item \textbf{RecipeCtrl}: TODO
-		\item \textbf{RecipeService}: TODO
-		\item \textbf{DataManagerService}: TODO
+		\item \textbf{Utente autenticato}: l'oggetto Utente individua un utente che ha effettuato l'accesso al sistema;
+		\item \textbf{aRecipeRoute}: l'oggetto aRecipeRoute re-indirizza l'utente alla corretta pagina, dalla quale potrà visualizzare la lista di tutte le recipe;
+		\item \textbf{aRecipe (recipe.html)}: l'oggetto aRecipe è la vera pagina che permette la visualizzazione di tutte le recipe presenti nel sistema. La schermata viene riempita grazie all'invocazione in automatico del metodo \textbf{getListOfRecipes()};
+		\item \textbf{aRecipeCtrl}: l'oggetto aRecipeCtrl è il controller che si occupa di gestire le funzioni disponibili in \textbf{aRecipe}, in particolare del metodo \textbf{getListOfRecipes()} che chiama ulteriormente il metodo \textbf{getRecipesList()} dell'oggetto \textbf{aRecipeService};
+		\item \textbf{aRecipeService}: l'oggetto aRecipeService TODO
+		\item \textbf{aDataManagerService}: l'oggetto aDataManagerService TODO
+		\item \textbf{aRecipeApi}: l'oggetto aRecipeApi TODO
 	\end{itemize}
 	% subsubsection visualizzazione_delle_recipe (end)
 
