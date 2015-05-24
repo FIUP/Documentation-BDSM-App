@@ -58,20 +58,17 @@ Per tutte le altre classi quindi verranno solo forniti gli attributi che ogni og
 						\item client::controller::user::ChartsCtrl
 					\end{itemize}
 
-				\item \textbf{Attributi}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
+				\item \textbf{Attributi}: N/A
 
 				\item \textbf{Metodi}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{- getViews(conf, cat, type)}}
+						\begin{description}
+							\item \textbf{Descrizione}: metodo che restituisce in un oggetto JSON i vari tipi di grafico da generare (views) in base alla categoria e al tipo della metrica, e in base al fatto che si tratti di un grafico di confronto o meno.
+						\end{description}
 					\end{itemize}
 
-				\item \textbf{Servizi AngularJS utilizzati}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
+				\item \textbf{Servizi AngularJS utilizzati}: N/A
 
 			\end{itemize}
 		% subparagraph client_model_data_viewtypedata (end)
@@ -85,25 +82,24 @@ Per tutte le altre classi quindi verranno solo forniti gli attributi che ogni og
 			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: è la classe che rappresenta la struttura della documentazione di una API;
-				\item \textbf{Utilizzo}: viene utilizzata dal controller ApiDocsController per generare la documentazione dei servizi pubblici che vengono messi a disposizione per l'interrogazione;
+				\item \textbf{Utilizzo}: viene utilizzata dai controller ApiDocsController e TokenConfigCtrl per generare la documentazione dei servizi pubblici che vengono messi a disposizione per l'interrogazione;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item client::controller::public::ApiDocsCtrl
+						\item client::controller::user::TokenConfigCtrl
 					\end{itemize}
 				\item \textbf{Attributi}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{- services : array di oggetti JSON}}
+						\begin{description}
+							\item \textbf{Descrizione}: questo attributo contiene la descrizione dei vari servizi REST pubblici dell'applicazione e ne costituisce la documentazione.
+						\end{description}
 					\end{itemize}
 
-				\item \textbf{Metodi}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
+				\item \textbf{Metodi}: N/A
 
-				\item \textbf{Servizi AngularJS utilizzati}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
+				\item \textbf{Servizi AngularJS utilizzati}: N/A
+
 			\end{itemize}
 		% subparagraph client_model_data_apidocsmodel (end)
 
@@ -116,7 +112,7 @@ Per tutte le altre classi quindi verranno solo forniti gli attributi che ogni og
 				\caption{Classe - client::model::data::UserModel}
 			\end{figure}
 			\begin{itemize}
-				\item \textbf{Descrizione}: è la classe che rappresenta la struttura dati relativa all'utente normale;
+				\item \textbf{Descrizione}: è la classe che rappresenta la struttura dati relativa agli utenti;
 				\item \textbf{Utilizzo}: viene utilizzata da diversi servizi e controller per accedere agli attributi associati all'utente;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
@@ -128,12 +124,33 @@ Per tutte le altre classi quindi verranno solo forniti gli attributi che ogni og
 					\end{itemize}
 				\item \textbf{Attributi}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{- idUser : numero}}
+						\begin{description}
+							\item \textbf{Descrizione}: Identificativo dell'utente all'interno del sistema
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{- username : stringa}}
+						\begin{description}
+							\item \textbf{Descrizione}: Username dell'utente
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{- password : stringa}}
+						\begin{description}
+							\item \textbf{Descrizione}: Chiave di accesso dell'utente.
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{- permission : stringa}}
+						\begin{description}
+							\item \textbf{Descrizione}: Descrive se l'utente è un utente normale o amministratore.
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{- email : stringa}}
+						\begin{description}
+							\item \textbf{Descrizione}: L'indirizzo email dell'utente.
+						\end{description}
 					\end{itemize}
 
 			\end{itemize}
 		% subparagraph client_model_data_user (end)
 
+%Non c'è più distinzione tra utenti normali e amministratori a livello di attributi.	
+\begin{comment}
 		\subparagraph{client::model::data::UserAdminModel} % (fold)
 		\label{subp:client_model_data_useradminmodel}
 			\begin{figure}[htbp]
@@ -158,6 +175,7 @@ Per tutte le altre classi quindi verranno solo forniti gli attributi che ogni og
 					\end{itemize}
 			\end{itemize}
 		% subparagraph client_model_data_useradminmodel (end)
+\end{comment}
 
 		\subparagraph{client::model::data::RecipeModel} % (fold)
 		\label{subp:client_model_data_recipe}
@@ -177,7 +195,22 @@ Per tutte le altre classi quindi verranno solo forniti gli attributi che ogni og
 					\end{itemize}
 				\item \textbf{Attributi}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{- id : intero}}
+						\begin{description}
+							\item \textbf{Descrizione}: Identificativo della Recipe all'interno del sistema
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{- title : stringa}}
+						\begin{description}
+							\item \textbf{Descrizione}: Nome della Recipe
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{- desc : stringa}}
+						\begin{description}
+							\item \textbf{Descrizione}: Descrizione del contenuto della Recipe.
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{- metrics : array di oggetti JSON nella forma descritta da MetricModel}}
+						\begin{description}
+							\item \textbf{Descrizione}: La lista delle metriche che fanno parte della recipe.
+						\end{description}
 					\end{itemize}
 			\end{itemize}
 
@@ -201,7 +234,22 @@ Per tutte le altre classi quindi verranno solo forniti gli attributi che ogni og
 					\end{itemize}
 				\item \textbf{Attributi}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{- title : stringa}}
+						\begin{description}
+							\item \textbf{Descrizione}: Nome della Recipe
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{- desc : stringa}}
+						\begin{description}
+							\item \textbf{Descrizione}: Descrizione del contenuto della Recipe.
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{- metrics : array di oggetti JSON nella forma descritta da MetricModel}}
+						\begin{description}
+							\item \textbf{Descrizione}: La lista delle metriche che fanno parte della recipe.
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{- user\_id : intero}}
+						\begin{description}
+							\item \textbf{Descrizione}: Identificativo dell'utente che invia la richiesta.
+						\end{description}
 					\end{itemize}
 			\end{itemize}
 		% subparagraph client_model_data_reciperequestmodel (end)
@@ -224,7 +272,22 @@ Per tutte le altre classi quindi verranno solo forniti gli attributi che ogni og
 					\end{itemize}
 				\item \textbf{Attributi}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{- title : stringa}}
+						\begin{description}
+							\item \textbf{Descrizione}: Nome della Recipe
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{- desc : stringa}}
+						\begin{description}
+							\item \textbf{Descrizione}: Descrizione del contenuto della Recipe.
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{- metrics : array di oggetti JSON nella forma descritta da MetricModel}}
+						\begin{description}
+							\item \textbf{Descrizione}: La lista delle metriche che fanno parte della recipe.
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{- admin\_id : intero}}
+						\begin{description}
+							\item \textbf{Descrizione}: Identificativo dell'amministratore che aggiunge la richiesta.
+						\end{description}
 					\end{itemize}
 			\end{itemize}
 		% subparagraph client_model_data_recipeinsertmodel (end)
@@ -249,7 +312,19 @@ Per tutte le altre classi quindi verranno solo forniti gli attributi che ogni og
 					\end{itemize}
 				\item \textbf{Attributi}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{- category : stringa}}
+						\begin{description}
+							\item \textbf{Descrizione}: Social network al quale la metrica si riferisce
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{- category\_type : stringa}}
+						\begin{description}
+							\item \textbf{Descrizione}: Tipo di metrica.
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{- id : stringa}}
+						\begin{description}
+							\item \textbf{Descrizione}: Valore della metrica.
+						\end{description}
+
 					\end{itemize}
 			\end{itemize}
 		% subparagraph client_model_data_metricmodel (end)
@@ -271,7 +346,10 @@ Per tutte le altre classi quindi verranno solo forniti gli attributi che ogni og
 					\end{itemize}
 				\item \textbf{Attributi}:
 					\begin{itemize}
-						\item TODO
+						\item \textcolor{forestgreen}{\texttt{- metrics : array di oggetti JSON nella forma descritta da MetricModel}}
+						\begin{description}
+							\item \textbf{Descrizione}: La lista delle metriche che fanno parte del confronto.
+						\end{description}
 					\end{itemize}
 			\end{itemize}
 		% subparagraph client_model_data_comparemodel (end)
