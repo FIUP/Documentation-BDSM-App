@@ -55,8 +55,9 @@ Questi diagrammi riguardano solo la parte appunto del client. La comunicazione q
 		\item \textbf{aRecipeRoute}: l'oggetto aRecipeRoute re-indirizza l'utente alla corretta pagina, dalla quale potrà visualizzare la lista di tutte le recipe;
 		\item \textbf{aRecipe (recipe.html)}: l'oggetto aRecipe è la vera pagina che permette la visualizzazione di tutte le recipe presenti nel sistema. La schermata viene riempita grazie all'invocazione in automatico del metodo \textbf{getListOfRecipes()};
 		\item \textbf{aRecipeCtrl}: l'oggetto aRecipeCtrl è il controller che si occupa di gestire le funzioni disponibili in \textbf{aRecipe}, in particolare del metodo \textbf{getListOfRecipes()} che chiama ulteriormente il metodo \textbf{getRecipesList()} dell'oggetto \textbf{aRecipeService};
-		\item \textbf{aRecipeService}: l'oggetto aRecipeService TODO
-		\item \textbf{aDataManagerService}: l'oggetto aDataManagerService TODO
+		\item \textbf{aRecipeService}: l'oggetto aRecipeService attraverso la chiamata al metodo \textbf{getRestCall('recipes')} del servizio \textbf{aDataManagerService} fa ritornare una promise all'oggetto \textbf{aRecipeCtrl} che verrà risolta quando la chiamata sarà eseguita correttamente;
+		\item \textbf{aDataManagerService}: l'oggetto aDataManagerService riceve le direttive da impostare per effettuare la chiamata al server. Prima di effettuare la chiamata vera e propria però controlla se i dati richiesti non siano già presenti nel localStorage o che non siano troppo vecchi, attraverso l'invocazione del metodo \textbf{getLocalItem(key)} dove il parametro key rappresenta l'indirizzo della chiamata http, che viene usato come chiave per salvare i dati in locale. Se i dati sono presenti gli restituisce incapsulandoli in una promise che verrà risolta immediatamente, altrimenti effettua la chiamata vera e proprio invocando il metodo \textbf{httpGetRequest} dell'oggetto stesso. Una volta ricevuti i dati, il metodo \textbf{setLocalItem(key, value)} provvederà a salvarli in locale;
+
 		\item \textbf{aRecipeApi}: l'oggetto aRecipeApi TODO
 	\end{itemize}
 	% subsubsection visualizzazione_delle_recipe (end)
