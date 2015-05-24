@@ -15,5 +15,23 @@
 
 \subsection{Diagrammi di sequenza del server} % (fold)
 \label{ssub:diagrammi_di_sequenza_server}
+Quelli che seguono sono i diagrammi di sequenza che rappresentano le più rilaventi interazioni tra i vali moduli presenti nel livello server. Per quanto riguarda il client, fare riferimento alla sezione \ref{ssub:diagrammi_di_sequenza_client}.
+
+    \subsubsection{Cron task} % (fold)
+    \label{ssub:cron_task}
+    Il seguente diagramma descrive il processo di avvio dell'aggiornamento dei dati grezzi relativi ad ogni Recipe presente nel sistema. Tale sequenza è attivata a cadenza regolare tramite le funzionalità di \textit{task scheduling} offerte da Google App Engine. Per semplicità, è stato descritto in dettaglio esclusivamente l'aggiornamento dei dati relativi a Facebook, indicando solamente i metodi principali per i restanti social network. \newline
+
+    TODO (grafico) \newline
+    \noindent
+
+
+    \begin{itemize}
+        \item \textbf{UpdateRecipeTask}: classe implementata secondo gli standard di Google App Engine, definisce il metodo statico \texttt{get()} attivato ad ogni avvio del componente Cron di Google. \texttt{UpdateRecipeTask} istanzia la classe \texttt{MinerManager} invocando il metodo \texttt{schedule\_fetchers(recipe\_id\_list)} per effettuare l'aggiornamento dei dati grezzi;
+        \item \textbf{MinerScheduler}: definisce il metodo \texttt{schedule\_fetchers(recipe\_id\_list)} che cicla la lista di id delle Recipe scadute invocando per ognuna il metodo \texttt{update\_fb\_metrics(id)} per ogni metrica Facebook contenuta nella Recipe in questione. Tale metodo avvia un fetcher differente a seconda del tipo di metrica ricavata. Tale procedimento avviene sequenzialmente anche per gli altri social tramite i metodi \texttt{update\_tw\_metrics(id)} e \texttt{update\_ig\_metrics(id)}
+        \item \textbf{FbPageFetcher}: classe che viene istanziata ed avviata tramite il metodo \texttt{run()} per avviare l'aggiornamento dei dati relativi ad una pagina Facebook.
+        \item \textbf{FbEventFetcher}: classe che viene istanziata ed avviata tramite il metodo \texttt{run()} per avviare l'aggiornamento dei dati relativi ad un evento Facebook.
+    \end{itemize}
+
+
 
 % section diagrammi_di_sequenza_server (end)
