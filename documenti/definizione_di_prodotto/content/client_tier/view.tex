@@ -78,7 +78,7 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 					\begin{itemize}
 						\item \textbf{ng-controller}: permette l'attivazione del controller associato al template HTML relativo alla pagina di Login;
 						\item \textbf{ng-submit}: rileva una scelta di invio dati dell'utente e attiva una funzione, in questo caso \textbf{login(credentials)} definita in LoginCtrl;
-						\item \textbf{ng-model}: permette di creare un legame tra le variabili presenti nel controller e i campi di tipo input dell'HTML. Questi campi appartengono di fatto allo scope, ma vengono gestiti in una maniera diversa TODO;
+						\item \textbf{ng-model}: permette di creare un legame tra le variabili presenti nel controller e i campi di tipo input dell'HTML, realizzando così il two-way data binding.
 						\item \textbf{ng-disabled}: permette di bloccare un determinato campo fintanto che una o più condizioni non vengono soddisfatte. Viene utilizzata per bloccare il pulsante di login qualora non fossero stati completati correttamente i campi presenti.
 					\end{itemize}
 			\end{itemize}
@@ -112,7 +112,7 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item \textbf{ng-controller}: permette l'attivazione del controller associato al template HTML relativo alla pagina di registrazione;
 						\item \textbf{ng-submit}: rileva una scelta di invio dati dell'utente e attiva una funzione, in questo caso \textbf{register(credentials)} definita in RegisterCtrl;
 						\item \textbf{ng-disabled}: permette di bloccare un determinato campo fintanto che una o più condizioni non vengono soddisfatte. Viene utilizzata per bloccare il pulsante di login qualora non fossero stati completati correttamente i campi presenti;
-						\item \textbf{ng-model}: TODO
+						\item \textbf{ng-model}: permette di creare un legame tra le variabili presenti nel controller e i campi di tipo input dell'HTML, realizzando così il two-way data binding;
 						\item \textbf{ng-message}: permette di visualizzare un determinato messaggio che viene associato ad un particolare errore scaturito nel form di registrazione;
 						\item \textbf{ng-if}: permette di visualizzare un determinato elemento, e il contenuto al suo interno, qualora la condizione specificata risultasse vera. Viene utilizzata per nascondere i messaggi d'errore e renderli visibili qualora l'errore si verificasse;
 						\item \textbf{ng-class}: permette di associare una determinata classe, a un elemento del template, qualora la condizione specificata risultasse vera. Questa viene utilizzata per mostrare un colore rosso d'errore sui campi che non soddisfano le specifiche richieste dal form.
@@ -291,7 +291,7 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item \textbf{ng-submit}: permette di rilevare una scelta di invio dati dell'utente e attiva una funzione, in questo caso \textbf{insertRecipeRequest()} definita in RecipeRequestCtrl;
 						\item \textbf{ng-click}: permette di rilevare una scelta dell'utente e attiva una funzione, in questo caso \textbf{addMetric()} definita in RecipeRequestCtrl.
 						\item \textbf{ng-disabled}: permette di bloccare un determinato campo fintanto che una o più condizioni non vengono soddisfatte. Viene utilizzata per bloccare il pulsante di inserimento della richiesta qualora non fossero stati completati correttamente i campi presenti;
-						\item \textbf{ng-model}: TODO;
+						\item \textbf{ng-model}: permette di creare un legame tra le variabili presenti nel controller e i campi di tipo input dell'HTML, realizzando così il two-way data binding;
 						\item \textbf{ng-if}: permette di visualizzare un determinato elemento, e il contenuto al suo interno, qualora la condizione specificata risultasse vera. Viene utilizzata per nascondere i messaggi d'errore e renderli visibili qualora l'errore si verificasse;
 						\item \textbf{ng-repeat}: permette di iterare ogni elemento di una lista e di poterlo utilizzare all'interno del template HTML grazie alla direttiva \textbf{ng-bind} potendone ricavare dati o eseguire metodi su di esso. Viene utilizzata per stampare la lista di tutte le metriche aggiunte alla richiesta di inserimento di una recipe;
 						\item \textbf{ng-bind}: permette di rimpiazzare il contenuto di un elemento con il valore dato dall'espressione definita. Questa direttiva viene preferita all'uso dell'operatore \{\{ \}\}. Viene utilizzata per stampare il valore degli elementi che si stanno iterando tramite la direttiva \textbf{ng-repeat}.
@@ -358,7 +358,7 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 					\begin{itemize}
 						\item \textbf{ng-controller}: permette l'attivazione del controller associato al template HTML relativo alla pagina di visualizzazione del form delle impostazioni personali del profilo utente;
 						\item \textbf{ng-init}: permette di inizializzare una variabile definita all'interno del template con un determinato valore. Viene utilizzata per impostare le variabili \textbf{editUserName} e \textbf{editMail} inizialmente a \textbf{true};
-						\item \textbf{ng-model}: TODO;
+						\item \textbf{ng-model}: permette di creare un legame tra le variabili presenti nel controller e i campi di tipo input dell'HTML, realizzando così il two-way data binding;
 						\item \textbf{ng-submit}: permette di rilevare una scelta di invio dati dell'utente e attiva una funzione, in questo caso \textbf{saveEdit()} definita in SettingsCtrl;
 						\item \textbf{ng-click}: permette di rilevare una scelta dell'utente e attiva una funzione o cambia il valore di qualche variabile dichiarata all'interno del template, in questo caso cambia la variabile \textbf{editUserName} o \textbf{editMail} nel valore \textbf{editUserName} o \textbf{editMail};
 						\item \textbf{ng-disabled}: permette di bloccare un determinato campo fintanto che una o più condizioni non vengono soddisfatte. Viene utilizzata per bloccare il pulsante di salvataggio delle modifiche o per bloccare i campi di modifica della password e della mail, attivabile solo premendo su un apposito pulsante.
@@ -509,12 +509,12 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
 						\item \textbf{ng-controller}: permette l'attivazione del controller associato al template HTML relativo al form di inserimento di nuova recipe;
-						\item \textbf{ng-submit}: TODO
-						\item \textbf{ng-click}: TODO
-						\item \textbf{ng-show}: TODO
-						\item \textbf{ng-model}: TODO
-						\item \textbf{ng-repeat}: TODO
-						\item \textbf{ng-bind}: TODO
+						\item \textbf{ng-submit}: rileva una scelta di invio dati dell'utente e attiva una funzione, in questo caso \textbf{insertRecipe()} definita in RecipeCtrl;
+						\item \textbf{ng-click}: permette di rilevare una scelta dell'utente e attiva una funzione o cambia il valore di qualche variabile dichiarata all'interno del template, in questo viene utilizzato dal pulsante che aggiunge un metrica tramite la funzione \textbf{addMetric(cat, typeCat, value)};
+						\item \textbf{ng-show}: permette di visualizzare o meno del contenuti HTML a seconda se una determina condizione sia verificata. Viene utilizzato per nascondere/visualizzare gli errori di inserimento dei campi dati o qualche informazione di successo delle operazioni previste;
+						\item \textbf{ng-model}: permette di creare un legame tra le variabili presenti nel controller e i campi di tipo input dell'HTML, realizzando così il two-way data binding;
+						\item \textbf{ng-repeat}: permette di iterare ogni elemento di una lista e di poterlo utilizzare all'interno del template HTML grazie alla direttiva \textbf{ng-bind} potendone ricavare dati o eseguire metodi su di esso. Viene utilizzata per stampare la lista di tutte le metriche che si vogliono aggiungere alla Recipe;
+						\item \textbf{ng-bind}: permette di rimpiazzare il contenuto di un elemento con il valore dato dall'espressione definita. Questa direttiva viene preferita all'uso dell'operatore \{\{ \}\}. Viene utilizzata per stampare il valore degli elementi che si stanno iterando tramite la direttiva \textbf{ng-repeat};
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_admin_insert (end)
