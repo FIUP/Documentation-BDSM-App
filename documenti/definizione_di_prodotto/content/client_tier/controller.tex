@@ -293,6 +293,7 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 					\end{itemize}
 				\item \textbf{Attributi associati allo \$scope}: N/A
 				\item \textbf{Metodi associati allo \$scope e privati}: N/A
+				\item \textbf{Servizi AngularJS utilizzati}: N/A
 			\end{itemize}
 		% subparagraph client_controller_user_menumainctrl (end)
 
@@ -316,6 +317,7 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 					\end{itemize}
 				\item \textbf{Attributi associati allo \$scope}: N/A
 				\item \textbf{Metodi associati allo \$scope e privati}: N/A
+				\item \textbf{Servizi AngularJS utilizzati}: N/A
 			\end{itemize}
 		% subparagraph client_controller_user_menusecondctrl (end)
 
@@ -615,37 +617,94 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{+ titleRecipe : String}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: attributo che identifica il titolo della Recipe che si andrà a richiedere. Viene inizializzato con la stringa vuota. Questo campo è obbligatorio da inserire per poter inserire una nuova Recipe;
 							\end{description}
-
+						\item \textcolor{forestgreen}{\texttt{+ descRecipe : String}}
+							\begin{description}
+								\item \textbf{Descrizione}: attributo che identifica la descrizione della Recipe che si andrà a richiedere. Viene inizializzato con la stringa vuota;
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ categories : array di oggetti JSON}}
+							\begin{description}
+								\item \textbf{Descrizione}: attributo che contiene le categoria di metriche possibili. L'attributo viene inizializzato andando a prelevare i dati tramite il servizio \textbf{RecipeService} attraverso la chiamata al metodo \textbf{getMetricType()};
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ types : array di JSON}}
+							\begin{description}
+								\item \textbf{Descrizione}: attributo che contiene i tipi di categoria disponibili per una determinata categoria. L'attributo viene inizializzato quando viene effettuata la scelta di quale categoria si vuole inserire tramite la chiamata al metodo \textbf{updateTypeMetric(category)};
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ type : String}}
+							\begin{description}
+								\item \textbf{Descrizione}: attributo che identifica il tipo di metrica che si andrà ad inserire. Viene inizializzato con la stringa vuota;
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ valueMetric : String}}
+							\begin{description}
+								\item \textbf{Descrizione}: attributo che identifica il valore di una metrica che si andrà a richiedere. Viene inizializzato con la stringa vuota;
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ metrics : array di oggetti JSON}}
+							\begin{description}
+								\item \textbf{Descrizione}: attributo che contiene tutte le metriche aggiunte alla Recipe. Viene inizializzato con un array vuoto;
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ insertSuccess : bool}}
+							\begin{description}
+								\item \textbf{Descrizione}: attributo che identifica se l'inserimento della richiesta di una nuova Recipe è avvenuto con successo. Viene inizializzato a false;
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ insertError : bool}}
+							\begin{description}
+								\item \textbf{Descrizione}: attributo che identifica se l'inserimento della richiesta di una nuova Recipe è fallito. Viene inizializzato a false;
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ metricQuantityError : bool}}
+							\begin{description}
+								\item \textbf{Descrizione}: attributo che identifica se si sono inserite almeno due metriche prima di poter effettuare la richiesta di inserimento di una nuova Recipe. Viene inizializzato a false e viene modificato tramite la chiamata al metodo \textbf{checkMetricsQuantity()} nel caso la quantità fosse inferiore a quanto descritto.
+							\end{description}
 					\end{itemize}
 
 				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{+ insertRecipeRequest() : void}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: metodo che viene invocato quando si vuole inviare una nuova richiesta Recipe. Questo prima controlla se i campi obbligatori sono stati inseriti e se il numero di metriche minimo è stato aggiunto attraverso il metodo \textbf{checkMetricsQuantity()}. Se tutti i valori sono corretti allora crea un oggetto JSON con i dati prelevati dal form e chiama il metodo \textbf{createRecipe(value)} del servizio \textbf{RecipeAdminService}. Il formato dell'oggetto JSON passato dovrà essere il seguente:
+									\begin{verbatim}
+										{
+										    'title': vm.titleRecipe,
+										    'desc': vm.descRecipe,
+										    'user_id': id,
+										    'metrics': vm.metrics
+										}
+									\end{verbatim}
 							\end{description}
 
+						\item \textcolor{forestgreen}{\texttt{+ addMetric(cat, typeCat, value) : void}}
+							\begin{description}
+								\item \textbf{Descrizione}: metodo che aggiunge la metrica inserita nel form in un array che contiene tutte le metriche aggiunte e cioè \textbf{metrics}. Prima di inserirla controlla se i campi siano stati inseriti correttamente. Il formato dell'oggetto JSON inserito nell'array dovrà essere il seguente:
+									\begin{verbatim}
+										{
+										    'id': val,
+										    'category': cat,
+										    'category_type': typeCat
+										}
+									\end{verbatim}
+							\end{description}
+
+						\item \textcolor{forestgreen}{\texttt{+ updateTypeMetric(category) : void}}
+							\begin{description}
+								\item \textbf{Descrizione}: metodo che aggiorna l'attributo \textbf{types} quando dal form viene scelta la categoria della metrica. Questi valori vengono presi dal servizio \textbf{RecipeService} attraverso la chiamata al metodo \textbf{getMetricTypeNode(category)};
+							\end{description}
+
+						\item \textcolor{forestgreen}{\texttt{- checkMetricsQuantity() : bool}}
+							\begin{description}
+								\item \textbf{Descrizione}: metodo che controlla che nell'array \textbf{metrics} ci siano almeno due valori e restituisce true in tal caso.
+							\end{description}
 					\end{itemize}
 
-				\item \textbf{Servizi AngularJS utilizzati}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
+				\item \textbf{Servizi AngularJS utilizzati}: N/A
+
 
 			\end{itemize}
 		% subparagraph client_controller_user_reciperequestctrl (end)
 
 		\subparagraph{client::controller::user::FavouritesRoute} % (fold)
 		\label{subp:bdsm_app_client_controller_user_favouritesroute}
-			\begin{figure}[htbp]
-				\centering
-				\centerline{\includegraphics[scale=0.7]{./images/client/classes/example_class.png}}
-				\caption{Classe - client::controller:user::FavouritesRoute}
-			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: la classe serve a gestire l'indirizzamento e l'assegnazione di uno stato al template HTML riguardante la pagina che serve ad un utente per guardare tutti i grafici che si è salvato tra i preferiti;
 				\item \textbf{Utilizzo}: viene utilizzata per reindirizzare l'utente al template HTML della pagina che permette all'utente di visualizzare i grafici che ha tra i preferiti ed assegnare al template scelto il controller opportuno per gestire i diversi compiti;
@@ -746,20 +805,37 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{+ accessToken : String}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: attributo che identifica il token di accesso ai servizi REST utilizzabili dall'utente. Questo campo viene inizializzato con la stringa vuota se il token non è ancora stato generato, altrimenti riceve il valore corretto;
 							\end{description}
-
+						\item \textcolor{forestgreen}{\texttt{+ restServices : array di oggetti JSON}}
+							\begin{description}
+								\item \textbf{Descrizione}: attributo che identifica la lista dei servizi REST disponibili all'utente. Il formato degli oggetti JSON contenuti nell'array è il seguente:
+								\begin{verbatim}
+									{
+									    type: 'GET',
+									    req: '/recipes',
+									    desc: 'Get the list of the available recipes'
+									}
+								\end{verbatim}
+							\end{description}
 					\end{itemize}
 
 				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{+ getAccessToken() : void}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: metodo che chiama il metodo \textbf{getAccessToken(idUser)} del servizio \textbf{UserService} per recuperare il token e lo assegna all'attributo \textbf{accessToken} se la chiamata è andata a buon fine;
 							\end{description}
-
+						\item \textcolor{forestgreen}{\texttt{+ deleteAccessToken() : void}}
+							\begin{description}
+								\item \textbf{Descrizione}: metodo che chiama il metodo \textbf{deleteAccessToken(idUser)} del servizio \textbf{UserService} per rimuovere il token e assegna all'attributo \textbf{accessToken} una stringa vuota;
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{- checkIfAccessTokenIsAssigned() : void}}
+							\begin{description}
+								\item \textbf{Descrizione}: metodo che attraverso una chiamata al metodo checkAccessToken(idUser) del servizio \textbf{UserService} salva il valore del token qualora fosse già stato generato e lo assegna all'attributo \textbf{accessToken}.
+							\end{description}
 					\end{itemize}
 
 				\item \textbf{Servizi AngularJS utilizzati}: N/A
@@ -769,11 +845,6 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 		\subparagraph{client::controller::user::SettingsRoute} % (fold)
 		\label{subp:bdsm_app_client_controller_user_settingsroute}
-			\begin{figure}[htbp]
-				\centering
-				\centerline{\includegraphics[scale=0.7]{./images/client/classes/example_class.png}}
-				\caption{Classe - client::controller:user::SettingsRoute}
-			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: la classe serve a gestire l'indirizzamento e l'assegnazione di uno stato al template HTML riguardante la pagina contenente le informazioni associate ad un utente e le modifiche che può effettuare su quei dati;
 				\item \textbf{Utilizzo}: viene utilizzata per reindirizzare l'utente al template HTML della pagina che permette all'utente di visualizzare le impostazione del suo profilo ed assegnare al template scelto il controller opportuno per gestire i diversi compiti;
