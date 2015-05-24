@@ -115,7 +115,13 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 						\item \textcolor{forestgreen}{\texttt{+ credentials : oggetto JSON}}
 							\begin{description}
-								\item \textbf{Descrizione}: oggetto nel formato JSON che contiene il valore iniziale dei campi mail e password che inizialmente saranno vuoti.
+								\item \textbf{Descrizione}: oggetto nel formato JSON che contiene il valore iniziale dei campi mail e password che inizialmente saranno vuoti. Il formato dell'oggetto JSON è il seguente:
+								\begin{verbatim}
+									{
+									    email: 'info@mashup-unipd.it',
+									    pwd: 'password'
+									}
+								\end{verbatim}
 							\end{description}
 
 					\end{itemize}
@@ -155,7 +161,15 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ credentials : oggetto JSON}}
 							\begin{description}
-								\item \textbf{Descrizione}: oggetto nel formato JSON che contiene il valore iniziale dei campi username, mail, password e password da confermare che inizialmente saranno vuoti.
+								\item \textbf{Descrizione}: oggetto nel formato JSON che contiene il valore iniziale dei campi username, mail, password e password da confermare che inizialmente saranno vuoti. Il formato dell'oggetto JSON è il seguente:
+								\begin{verbatim}
+									{
+									    username: 'MashUp',
+									    email: 'info@mashup.unipd.it',
+									    pwd: 'gruppo',
+									    confirmPwd: 'gruppo'
+									}
+								\end{verbatim}
 							\end{description}
 
 						\item \textcolor{forestgreen}{\texttt{+ matchPwd : bool}} 
@@ -212,7 +226,7 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 				\begin{itemize}
 					\item \textcolor{forestgreen}{\texttt{- getRestService()}}
 						\begin{description}
-							\item \textbf{Descrizione}: funzione che preleva la lista delle API pubbliche tramite una chiamata alla classe ApiDocsModel.
+							\item \textbf{Descrizione}: metodo che preleva la lista delle API pubbliche tramite una chiamata alla classe ApiDocsModel.
 						\end{description}
 				\end{itemize}
 
@@ -395,7 +409,14 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{ + listRecipes : array di oggetti JSON}}
 							\begin{description}
-								\item \textbf{Descrizione}: array di oggetti nel formato JSON che rappresentano la lista delle recipe presenti nel sistema. Questa variabile viene inizializzata tramite la chiamata immediata alla funzione privata getListOfRecipes.
+								\item \textbf{Descrizione}: array di oggetti nel formato JSON che rappresentano la lista delle recipe presenti nel sistema. Questa variabile viene inizializzata tramite la chiamata immediata al metodo privata getListOfRecipes. Il formato degli oggetti JSON contenuti nell'array è il seguente:
+								\begin{verbatim}
+									{
+									    id: '42',
+									    title: 'Titolo della Recipe',
+									    desc: 'Descrizione della Recipe'
+									}
+								\end{verbatim}
 							\end{description}
 
 					\end{itemize}
@@ -404,7 +425,7 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{- getListOfRecipes()}}
 							\begin{description}
-								\item \textbf{Descrizione}: funzione che preleva la lista delle recipe tramite una chiamata al metodo \textbf{getRecipesList} della classe RecipeService.
+								\item \textbf{Descrizione}: metodo che preleva la lista delle recipe tramite una chiamata al metodo \textbf{getRecipesList} della classe RecipeService.
 							\end{description}
 
 					\end{itemize}
@@ -465,10 +486,7 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 					\end{itemize}
 
-				\item \textbf{Servizi AngularJS utilizzati}:
-					\begin{itemize}
-						\item \$stateParams
-					\end{itemize}
+				\item \textbf{Servizi AngularJS utilizzati}: N/A
 
 			\end{itemize}
 		% subparagraph client_controller_user_metricsctrl (end)
@@ -744,10 +762,7 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 					\end{itemize}
 
-				\item \textbf{Servizi AngularJS utilizzati}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
+				\item \textbf{Servizi AngularJS utilizzati}: N/A
 
 			\end{itemize}
 		% subparagraph client_controller_user_tokenconfigctrl (end)
@@ -795,26 +810,38 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{+ settings : oggetto JSON}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: oggetto nel formato JSON che contiene i valori delle impostazioni del profilo utente. I campi username e mail vengono inizializzati quando l'utente accede alla impostazioni, tramite il servizio AuthService. Il formato dell'oggetto JSON è il seguente:
+								\begin{verbatim}
+									{
+									    username: '',
+									    email: '',
+									    oldPassword: '',
+									    newPassword: ''
+									    confirmNewPwd: ''
+									}
+								\end{verbatim}
 							\end{description}
-
-					\end{itemize}
+						\end{itemize}
 
 				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{+ saveEdit(settings)}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: metodo che preso in input un oggetto JSON del tipo di quello visto per l'attributo \textbf{settings} va a chiamare il servizio AuthService per salvare le modifiche effettuate. Tutto questo dopo avere controllato se la password vecchia era valida e se la password nuova combaciava con quella di conferma;
 							\end{description}
-
+						\item \textcolor{forestgreen}{\texttt{- checkModifyFields(settings)}}
+							\begin{description}
+								\item \textbf{Descrizione}: metodo che controlla quali campi e se sono stati modificati effettivamente e ritorna true se è stata effettuata qualche modifica e quindi ha senso chiamare il servizio per aggiornare i valori. Questo metodo viene utilizzato dentro il metodo saveEdit(settings);
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{- matchNewPassword(newPwd, newConfirmPwd)}}
+							\begin{description}
+								\item \textbf{Descrizione}: metodo che presi in input due valori, controlla se sono uguali e in tal caso restituisce true.
+							\end{description}
 					\end{itemize}
 
-				\item \textbf{Servizi AngularJS utilizzati}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
+				\item \textbf{Servizi AngularJS utilizzati}: N/A
 
 			\end{itemize}
 		% subparagraph client_controller_user_settingsctrl (end)
@@ -832,7 +859,13 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 						\item client::controller::public::PublicRoute
 					\end{itemize}
 				\item \textbf{Attributi associati allo \$scope}: N/A
-				\item \textbf{Metodi associati allo \$scope e privati}: N/A
+				\item \textbf{Metodi associati allo \$scope e privati}:
+					\begin{itemize}
+						\item \textcolor{forestgreen}{\texttt{+ logout()}}
+							\begin{description}
+								\item \textbf{Descrizione}: metodo che chiama il servizio AuthService utilizzando il metodo logout() per fare uscire l'utente dal sistema;
+							\end{description}
+					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_controller_user_logoutctrl (end)
 
@@ -903,11 +936,6 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 		\subparagraph{client::controller::admin::RecipeConfigCtrl} % (fold)
 		\label{subp:bdsm_app_client_controller_admin_recipeconfigctrl}
-			\begin{figure}[htbp]
-				\centering
-				\centerline{\includegraphics[scale=0.7]{./images/client/classes/example_class.png}}
-				\caption{Classe - client::controller::admin::RecipeConfigCtrl}
-			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: la classe è il controller che serve a gestire la logica applicativa riguardante la pagina che consente ad un amministratore di andare ad inserire una nuova Recipe;
 				\item \textbf{Utilizzo}: viene utilizzata per gestire le operazioni che servono ad andare ad inserire una nuova Recipe;
@@ -918,28 +946,9 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 						\item client::controller::admin::RecipeConfigRoute
 					\end{itemize}
 
-				\item \textbf{Attributi associati allo \$scope}:
-					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
-							\begin{description}
-								\item \textbf{Descrizione}: TODO
-							\end{description}
-
-					\end{itemize}
-
-				\item \textbf{Metodi associati allo \$scope e privati}:
-					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
-							\begin{description}
-								\item \textbf{Descrizione}: TODO
-							\end{description}
-
-					\end{itemize}
-
-				\item \textbf{Servizi AngularJS utilizzati}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
+				\item \textbf{Attributi associati allo \$scope}: N/A
+				\item \textbf{Metodi associati allo \$scope e privati}: N/A
+				\item \textbf{Servizi AngularJS utilizzati}: N/A
 
 			\end{itemize}
 		% subparagraph bdsm_app_client_controller_admin_recipeconfigctrl (end)
@@ -981,8 +990,39 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 						\item client::controller::admin::RecipeListRoute
 					\end{itemize}
 
-				\item \textbf{Attributi associati allo \$scope}: N/A
-				\item \textbf{Metodi associati allo \$scope e privati}: N/A
+				\item \textbf{Attributi associati allo \$scope}:
+					\begin{itemize}
+						\item \textcolor{forestgreen}{\texttt{+ requestList : array di oggetti JSON}}
+							\begin{description}
+								\item \textbf{Descrizione}: contiene la lista delle richieste di nuove Recipe proveniente dagli utenti non amministratori. Il formato degli oggetti JSON contenuti nell'array è il seguente:
+								\begin{verbatim}
+									{
+									    idRequestRecipe: '42',
+									    titleRecipe: 'Titolo della Recipe',
+									    descRecipe: 'Descrizione della Recipe',
+									    emailUser: 'info@mashup-unipd.it'
+									}
+								\end{verbatim}
+							\end{description}
+
+					\end{itemize}
+
+				\item \textbf{Metodi associati allo \$scope e privati}:
+					\begin{itemize}
+						\item \textcolor{forestgreen}{\texttt{- getRequestList() : array JSON}}
+							\begin{description}
+								\item \textbf{Descrizione}: metodo che attraverso l'invocazione del metodo \textbf{getListOfRecipesRequest()} sul servizio \textbf{recipeAdminService} riceve una promessa alla chiamata effettiva per recuperare i dati dal back-end. Quando questa sarà soddisfatta, l'attributo \textbf{requestList} verrà popolato con i dati ricevuti.
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ discardRequest(idReqRecipe) : void}}
+							\begin{description}
+								\item \textbf{Descrizione}: metodo che attraverso l'invocazione del metodo \textbf{discardRecipeRequest(idReqRecipe)} sul servizio \textbf{recipeAdminService} riceve una promessa alla chiamata effettiva per andare a rifiutare la richiesta per quella recipe. Quando questa sarà soddisfatta, verrà visualizzato un messaggio di conferma.
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ approveRequest(idReqRecipe) : void}}
+							\begin{description}
+								\item \textbf{Descrizione}: metodo che attraverso l'invocazione del metodo \textbf{approveRecipeRequest(idReqRecipe)} sul servizio \textbf{recipeAdminService} riceve una promessa alla chiamata effettiva per andare ad accettare e inserire la richiesta per quella recipe. Quando questa sarà soddisfatta, verrà visualizzato un messaggio di conferma.
+							\end{description}
+					\end{itemize}
+
 				\item \textbf{Servizi AngularJS utilizzati}: N/A
 
 			\end{itemize}
@@ -1007,61 +1047,83 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{+ titleRecipe : String}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: attributo che identifica il titolo della Recipe che si andrà ad inserire. Viene inizializzato con la stringa vuota. Questo campo è obbligatorio da inserire per poter inserire una nuova Recipe;
 							\end{description}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{+ descRecipe : String}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: attributo che identifica la descrizione della Recipe che si andrà ad inserire. Viene inizializzato con la stringa vuota;
 							\end{description}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{+ categories : array di oggetti JSON}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: attributo che contiene le categoria di metriche possibili. L'attributo viene inizializzato andando a prelevare i dati tramite il servizio \textbf{RecipeService} attraverso la chiamata al metodo \textbf{getMetricType()};
 							\end{description}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{+ types : array di JSON}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: attributo che contiene i tipi di categoria disponibili per una determinata categoria. L'attributo viene inizializzato quando viene effettuata la scelta di quale categoria si vuole inserire tramite la chiamata al metodo \textbf{updateTypeMetric(category)};
 							\end{description}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{+ type : String}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: attributo che identifica il tipo di metrica che si andrà ad inserire. Viene inizializzato con la stringa vuota;
 							\end{description}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{+ valueMetric : String}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: attributo che identifica il valore di una metrica che si andrà ad inserire. Viene inizializzato con la stringa vuota;
 							\end{description}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{+ metrics : array di oggetti JSON}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: attributo che contiene tutte le metriche aggiunte alla Recipe. Viene inizializzato con un array vuoto;
 							\end{description}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{+ insertSuccess : bool}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: attributo che identifica se l'inserimento della nuova Recipe è avvenuto con successo. Viene inizializzato a false;
 							\end{description}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{+ insertError : bool}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: attributo che identifica se l'inserimento della nuova Recipe è fallito. Viene inizializzato a false;
 							\end{description}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{+ metricQuantityError : bool}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: attributo che identifica se si sono inserite almeno due metriche prima di poter effettuare l'inserimento di una nuova Recipe. Viene inizializzato a false e viene modificato tramite la chiamata al metodo \textbf{checkMetricsQuantity()} nel caso la quantità fosse inferiore a quanto descritto.
 							\end{description}
 					\end{itemize}
 
 				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{+ insertRecipe() : void}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: metodo che viene invocato quando si vuole inserire una nuova Recipe. Questo prima controlla se i campi obbligatori sono stati inseriti e se il numero di metriche minimo è stato aggiunto attraverso il metodo \textbf{checkMetricsQuantity()}. Se tutti i valori sono corretti allora crea un oggetto JSON con i dati prelevati dal form e chiama il metodo \textbf{createRecipe(value)} del servizio \textbf{RecipeAdminService}. Il formato dell'oggetto JSON passato dovrà essere il seguente:
+									\begin{verbatim}
+										{
+										    'title': vm.titleRecipe,
+										    'desc': vm.descRecipe,
+										    'admin_id': id,
+										    'metrics': vm.metrics
+										}
+									\end{verbatim}
 							\end{description}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+
+						\item \textcolor{forestgreen}{\texttt{+ addMetric(cat, typeCat, value) : void}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: metodo che aggiunge la metrica inserita nel form in un array che contiene tutte le metriche aggiunte e cioè \textbf{metrics}. Prima di inserirla controlla se i campi siano stati inseriti correttamente. Il formato dell'oggetto JSON inserito nell'array dovrà essere il seguente:
+									\begin{verbatim}
+										{
+										    'id': val,
+										    'category': cat,
+										    'category_type': typeCat
+										}
+									\end{verbatim}
 							\end{description}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+
+						\item \textcolor{forestgreen}{\texttt{+ updateTypeMetric(category) : void}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: metodo che aggiorna l'attributo \textbf{types} quando dal form viene scelta la categoria della metrica. Questi valori vengono presi dal servizio \textbf{RecipeService} attraverso la chiamata al metodo \textbf{getMetricTypeNode(category)};
+							\end{description}
+
+						\item \textcolor{forestgreen}{\texttt{- checkMetricsQuantity() : bool}}
+							\begin{description}
+								\item \textbf{Descrizione}: metodo che controlla che nell'array \textbf{metrics} ci siano almeno due valori e restituisce true in tal caso.
 							\end{description}
 					\end{itemize}
 
@@ -1072,11 +1134,6 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 		\subparagraph{client::controller::admin::RatingsRoute} % (fold)
 		\label{subp:bdsm_app_client_controller_admin_ratingsroute}
-			\begin{figure}[htbp]
-				\centering
-				\centerline{\includegraphics[scale=0.7]{./images/client/classes/example_class.png}}
-				\caption{Classe - client::controller::admin::RatingsRoute}
-			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: la classe serve a gestire l'indirizzamento e l'assegnazione di uno stato al template HTML riguardante la pagina che mostra la lista di tutte le Recipe votate con la media del valore assegnato dagli utenti;
 				\item \textbf{Utilizzo}: viene utilizzata per reindirizzare l'utente al template HTML della pagina che permette all'amministratore di visualizzare la lista di tutte le Recipe votate, in ordine dalla più votata, ed assegnare al template scelto il controller opportuno per gestire i diversi compiti;
@@ -1113,26 +1170,31 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{+ listRecipes : array di oggetti JSON}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: attributo che contiene la lista di tutte le Recipe aventi una valutazione. Il formato degli oggetti JSON contenuti nell'array è il seguente:
+								\begin{verbatim}
+									{
+									    id: '42',
+									    title: 'Titolo della Recipe',
+									    desc: 'Descrizione della Recipe',
+									    ratings: '3.44'
+									}
+								\end{verbatim}
 							\end{description}
 
 					\end{itemize}
 
 				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{- getListOfRecipes() : void}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: metodo che recupera la lista della recipe, aventi una valutazione, attraverso la chiamata del metodo \textbf{getRecipesListAll()} del servizio \textbf{recipeAdminService}. Quando i dati sono disponibili, riempe l'array \textbf{listRecipes}. L'invocazione del metodo avviene subito nel momento in cui un utente accede alla pagina \textbf{Ratings}.
 							\end{description}
 
 					\end{itemize}
 
-				\item \textbf{Servizi AngularJS utilizzati}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
+				\item \textbf{Servizi AngularJS utilizzati}: N/A
 
 			\end{itemize}
 		% subparagraph bdsm_app_client_controller_admin_ratingsctrl (end)
@@ -1176,27 +1238,38 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{+ usersList} : array di oggetti JSON}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: attributo che contiene la lista di tutti gli utenti registrati nel sistema. Il formato degli oggetti JSON contenuti nell'array è il seguente:
+								\begin{verbatim}
+									{
+									    access_token: '3253224346356',
+									    username: 'MashUp',
+									    email: 'info@mashup-unipd.it',
+									    permission: 'user'
+									}
+								\end{verbatim}
 							\end{description}
 
 					\end{itemize}
 
 				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{- getUsers() : void}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: metodo che recupera la lista degli utenti attraverso la chiamata del metodo \textbf{getListOfUsers} del servizio \textbf{userAdminService}. Quando i dati sono disponibili, riempe l'array \textbf{usersList}. L'invocazione del metodo avviene subito nel momento in cui un utente accede alla pagina \textbf{UsersConfig};
 							\end{description}
-
+						\item \textcolor{forestgreen}{\texttt{+ editPermissions(idUser, index, permission) : void}}
+							\begin{description}
+								\item \textbf{Descrizione}: metodo che modifica il tipo dell'utente, attraverso la chiamata del metodo \textbf{editUserPermissions(idUser, permission)} del servizio \textbf{userAdminService}. Quando la modifica è stata effettuata viene visualizzato un messaggio di successo e viene anche modificato il valore relativo presente nell'array \textbf{usersList} in modo da rispecchiare visivamente la diversa situazione;
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ deleteUserAccount(idUser, index) : void}}
+							\begin{description}
+								\item \textbf{Descrizione}: metodo che cancella l'utente, attraverso la chiamata del metodo \textbf{deleteUserAccount(idUser)} del servizio \textbf{userAdminService}. Quando la cancellazione è stata effettuata viene visualizzato un messaggio di successo e viene anche rimosso il valore relativo presente nell'array \textbf{usersList} in modo da rispecchiare visivamente la diversa situazione.
+							\end{description}
 					\end{itemize}
 
-				\item \textbf{Servizi AngularJS utilizzati}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
-
+				\item \textbf{Servizi AngularJS utilizzati}: N/A
 			\end{itemize}
 		% subparagraph bdsm_app_client_controller_admin_userconfigctrl (end)
 
