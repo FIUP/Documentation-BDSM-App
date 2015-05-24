@@ -115,7 +115,13 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 						\item \textcolor{forestgreen}{\texttt{+ credentials : oggetto JSON}}
 							\begin{description}
-								\item \textbf{Descrizione}: oggetto nel formato JSON che contiene il valore iniziale dei campi mail e password che inizialmente saranno vuoti.
+								\item \textbf{Descrizione}: oggetto nel formato JSON che contiene il valore iniziale dei campi mail e password che inizialmente saranno vuoti. Il formato dell'oggetto JSON è il seguente:
+								\begin{verbatim}
+									{
+									    email: 'info@mashup-unipd.it',
+									    pwd: 'password'
+									}
+								\end{verbatim}
 							\end{description}
 
 					\end{itemize}
@@ -155,7 +161,15 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ credentials : oggetto JSON}}
 							\begin{description}
-								\item \textbf{Descrizione}: oggetto nel formato JSON che contiene il valore iniziale dei campi username, mail, password e password da confermare che inizialmente saranno vuoti.
+								\item \textbf{Descrizione}: oggetto nel formato JSON che contiene il valore iniziale dei campi username, mail, password e password da confermare che inizialmente saranno vuoti. Il formato dell'oggetto JSON è il seguente:
+								\begin{verbatim}
+									{
+									    username: 'MashUp',
+									    email: 'info@mashup.unipd.it',
+									    pwd: 'gruppo',
+									    confirmPwd: 'gruppo'
+									}
+								\end{verbatim}
 							\end{description}
 
 						\item \textcolor{forestgreen}{\texttt{+ matchPwd : bool}} 
@@ -212,7 +226,7 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 				\begin{itemize}
 					\item \textcolor{forestgreen}{\texttt{- getRestService()}}
 						\begin{description}
-							\item \textbf{Descrizione}: funzione che preleva la lista delle API pubbliche tramite una chiamata alla classe ApiDocsModel.
+							\item \textbf{Descrizione}: metodo che preleva la lista delle API pubbliche tramite una chiamata alla classe ApiDocsModel.
 						\end{description}
 				\end{itemize}
 
@@ -472,10 +486,7 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 					\end{itemize}
 
-				\item \textbf{Servizi AngularJS utilizzati}:
-					\begin{itemize}
-						\item \$stateParams
-					\end{itemize}
+				\item \textbf{Servizi AngularJS utilizzati}: N/A
 
 			\end{itemize}
 		% subparagraph client_controller_user_metricsctrl (end)
@@ -802,7 +813,23 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{+ username : String}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ email : String}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ oldPassword : String}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ newPassword}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ confirmNewPassword}}
 							\begin{description}
 								\item \textbf{Descrizione}: TODO
 							\end{description}
@@ -811,11 +838,18 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
+						\item \textcolor{forestgreen}{\texttt{+ saveEdit}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{- checkOldPassword(pwdToCheck)}}
+							\begin{description}
+								\item \textbf{Descrizione}: TODO
+							\end{description}
 						\item \textcolor{forestgreen}{\texttt{TODO}}
 							\begin{description}
 								\item \textbf{Descrizione}: TODO
 							\end{description}
-
 					\end{itemize}
 
 				\item \textbf{Servizi AngularJS utilizzati}:
