@@ -11,6 +11,8 @@
 % =================================================================================================
 % 0.0.2			2015-05-23			iniziata stesura sezioni						Tesser Paolo
 % =================================================================================================
+% 0.0.3			2015-05-24			iniziata descrizione oggetti					Tesser Paolo
+% =================================================================================================
 %
 
 % CONTENUTO DEL CAPITOLO
@@ -22,25 +24,39 @@ Questi diagrammi riguardano solo la parte appunto del client. La comunicazione q
 
 	\subsubsection{Login} % (fold)
 	\label{ssub:login}
-	Il seguente diagramma di sequenza descrive le collaborazioni tra le classi del front-end dell'applicazione durante l'operazione di autenticazione. Di come  \newline
+	Il seguente diagramma di sequenza descrive le collaborazioni tra gli oggetti del front-end dell'applicazione durante l'operazione di autenticazione. \newline
 
-	\noindent
 	TODO (grafico) \newline
+	\noindent
 
 	Il diagramma descrive le interazioni tra gli oggetti che compongono il front-end quando un utente vuole effettuare il login nell'applicazione.
 	\begin{itemize}
-		\item \textbf{Utente non autenticato}: TODO
-		\item \textbf{PublicRoute}: TODO
-		\item \textbf{Login (login.html)}: TODO
+		\item \textbf{Utente non autenticato}: l'oggetto Utente non autenticato individua un qualsiasi attore che vuole effettuare l'accesso al sistema. L'utente inserisce i propri dati e preme il bottone ``Login'';
+		\item \textbf{PublicRoute}: l'oggetto PublicRoute re-indirizza l'utente alla corretta pagina, dalla quale potrà effettuare l'accesso;
+		\item \textbf{Login (login.html)}: l'oggetto Login è la vera pagina che permette l'autenticazione dell'utente. Qui verranno inserite le credenziali per accedere e sarà presente il pulsante che una volta premuto invocherà il metodo \textbf{login()};
 		\item \textbf{LoginCtrl}: TODO
 		\item \textbf{AuthService}: TODO
 		\item \textbf{UserApi}: TODO
+		\item \textbf{Recipe (recipe.html)}: TODO
 	\end{itemize}
 	% subsubsection login (end)
 
 	\subsubsection{Visualizzazione delle Recipe} % (fold)
 	\label{ssub:visualizzazione_delle_recipe}
-	TODO
+	Il seguente diagramma di sequenza descrive le collaborazioni tra gli oggetti del front-end dell'applicazione durante la visualizzazione delle Recipe. \newline
+
+	TODO (grafico) \newline
+	\noindent
+
+	Il diagramma descrive le interazioni tra gli oggetti che compongono il front-end quando un utente vuole visualizzare la lista delle Recipe presenti nel sistema.
+	\begin{itemize}
+		\item \textbf{Utente autenticato}: TODO
+		\item \textbf{RecipeRoute}: TODO
+		\item \textbf{Recipe (recipe.html)}: TODO
+		\item \textbf{RecipeCtrl}: TODO
+		\item \textbf{RecipeService}: TODO
+		\item \textbf{DataManagerService}: TODO
+	\end{itemize}
 	% subsubsection visualizzazione_delle_recipe (end)
 
 	\subsubsection{Visualizzazione dei grafici} % (fold)
