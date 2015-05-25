@@ -37,7 +37,7 @@ ROF1.6 & client::view::public \newline client::controller::public \newline serve
 \hline
 ROF1.7 & client::view::public \newline client::controller::public \\
 \hline
-RDF1.8 & client::view::public \newline client::controller::public \\
+RDF1.8 & server::processor::commands::user \\
 \hline
 ROF2 & client::view::public \newline client::controller::public \\
 \hline
@@ -79,9 +79,9 @@ ROF3.3 & client::view::user \newline client::controller::user \\
 \hline
 ROF3.3.1 & client::model::services \newline client::view::user \newline client::controller::user \\
 \hline
-ROF3.3.2 & client::view::user \newline client::controller::user \newline server::processor::commands::user \\
+ROF3.3.2 & client::view::user \newline client::controller::user \\
 \hline
-ROF3.3.2.1 & client::view::user \newline client::controller::user \newline client::controller::user \newline server::processor::commands::user \\
+ROF3.3.2.1 & client::view::user \newline client::controller::user \newline server::processor::commands::user \\
 \hline
 ROF3.3.2.2 & client::view::user \newline client::controller::user \newline server::processor::commands::user \\
 \hline
@@ -265,7 +265,7 @@ RDF6.2 & client::model::services \newline client::view::user \\
 \hline
 RDF6.2.1 & client::view::user \\
 \hline
-RDF6.2.2 & client::model::services \newline client::view::user \newline server::db::app\_data::user \newline server::endpoints::api::private \\
+RDF6.2.2 & client::model::services \newline client::view::user \newline server::endpoints::api::private \\
 \hline
 RDF6.3 & client::model::services \newline client::view::user \newline client::controller::user \newline server::processor::commands::user \\
 \hline
@@ -273,7 +273,7 @@ RDF6.3.1 & client::model::services \newline client::view::user \newline client::
 \hline
 RDF6.4 & server::db::app\_data::user \\
 \hline
-RFF7 & client::model::data \newline client::view::user \newline client::controller::user \newline server::db::app\_data::recipe \newline server::endpoints::api::private \newline server::processor::commands::recipe \newline server::processor::commands::requests \\
+RFF7 & client::model::data \newline client::view::user \newline client::controller::user \newline server::db::app\_data::recipe \newline server::endpoints::api::private \newline server::processor::commands::requests \\
 \hline
 RFF7.1 & client::model::data \newline client::view::user \newline client::controller::user \\
 \hline
@@ -309,7 +309,7 @@ RFF7.1.3 & client::controller::user \\
 \hline
 RFF7.2 & client::model::services \newline server::endpoints::api::private \\
 \hline
-ROF8 & client::view::admin \newline client::controller::admin \newline server::db::app\_data::user \newline server::db::app\_data::recipe \newline server::endpoints::api::private \newline server::processor::commands::recipe \\
+ROF8 & client::view::admin \newline client::controller::admin \newline server::db::app\_data::user \newline server::endpoints::api::private \newline server::processor::commands::recipe \\
 \hline
 ROF8.1 & client::view::admin \newline client::controller::admin \\
 \hline
@@ -337,9 +337,9 @@ ROF8.3 & client::view::admin \newline client::controller::admin \\
 \hline
 ROF8.3.1 & client::view::admin \\
 \hline
-ROF8.3.2 & server::db::app\_data::recipe \newline server::processor::commands::recipe \\
+ROF8.3.2 & server::processor::commands::recipe \\
 \hline
-ROF8.3.3 & server::db::raw\_data \newline server::processor::commands::recipe \\
+ROF8.3.3 & server::processor::commands::recipe \\
 \hline
 RFF8.4 & client::model::services \newline client::view::admin \newline client::controller::admin \\
 \hline
