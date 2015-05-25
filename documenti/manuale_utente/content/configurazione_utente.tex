@@ -1,0 +1,81 @@
+% =================================================================================================
+% File:			registrazione_e_autenticazione.tex
+% Description:	Definisce la sezione relativa ad un capitolo del documento
+% Created:		2015-04-21
+% Author:		Santacatterina Luca
+% Email:		santacatterina.luca@mashup-unipd.it
+% =================================================================================================
+% Modification History:
+% Version		Modifier Date		Change											Author
+% 0.0.1 		2015-05-24 			inizio stesura sezione capitolo					Santacatterina Luca
+% =================================================================================================
+%
+
+% CONTENUTO DEL CAPITOLO
+\section{Configurazione utente} % (fold)
+\label{sec:configurazione_utente}
+	Dopo aver eseguito le istruzioni per l'autenticazione viene visualizzata la dashboard dell’applicazione.\newline
+	Cliccando sull'icona del menù utente (Figura: \ref{fig:menu_configurazione_utente}) presente in alto a destra nella schermata principale si ottengono le seguenti opzioni:
+	\begin{itemize}
+		\item Settings;
+		\item API Token config;
+		\item Logout.
+	\end{itemize}
+	Ogni voce del menù ricopre un ruolo di personalizzione del profilo utente.
+	\begin{figure}[htbp]
+		\centering
+		\centerline{\includegraphics[width=14cm]{images/menu_configurazione_utente.png}}
+		\caption{Menu configurazione utente}
+		\label{fig:menu_configurazione_utente}
+	\end{figure}
+
+
+	\subsection{Settings utente} % (fold)
+	\label{sec:settings_utente}
+		Cliccando sull'elemento \textbf{settings} nel menù utente (Figura: \ref{fig:menu_configurazione_utente}) si carica la pagina \textbf{General profile settings} (Figura: \ref{fig:configurazione_utente}).
+		\begin{figure}[htbp]
+			\centering
+			\centerline{\includegraphics[width=14cm]{images/configurazione_utente.png}}
+			\caption{Configurazione utente}
+			\label{fig:configurazione_utente}
+		\end{figure}
+		Dalla pagina di amministrazione si possono effettuare le seguenti operazioni:
+		\begin{itemize}
+			\item \textbf{modifica username}: per abilitare la modifica è necessario premere sul link a sinistra \textbf{modify} così da sbloccare il riquadro ed editare il campo dati;
+			\item \textbf{modifica email}: per abilitare la modifica è necessario premere sul link a sinistra \textbf{modify} così da sbloccare il riquadro ed editare il campo dati;
+			\item \textbf{modifica password}: per cambiare la password è necessario inserire la vecchia password nel primo campo e successivamente la nuova password nei relativi due campi.
+		\end{itemize}
+		Le modifiche avranno successo solamente quanto verrà premuto il pulsante \textbf{Save} di Figura: \ref{fig:configurazione_utente}.
+	% section Settings utente (end)
+
+
+	\subsection{Configurazione API Token} % (fold)
+	\label{sec:settings_utente}
+		Cliccando sull'elemento \textbf{API Token config} nel menù utente (Figura: \ref{fig:menu_configurazione_utente}) si carica la pagina \textbf{Token managment} (Figura: \ref{fig:token_config}).
+		\begin{figure}[htbp]
+			\centering
+			\centerline{\includegraphics[width=14cm]{images/token_config.png}}
+			\caption{Pagina gestione API e token}
+			\label{fig:token_config}
+		\end{figure}
+		Nella seguente pagina (Figura: \ref{fig:menu_configurazione_utente}) si possono visualizzare sulla parte inferiore tutte le API che il sistema mette a disposizione. Tutti i servizi REST offerti dichiarano titolo, metodo e descrizione.\newline
+		Per usufruire dei servizi REST è necessario ottenere il \textbf{token} di autenticazione alla piattaforma.\newline 
+		E' possibile ottenere il token premendo sul pulsante \textbf{Get your token!} di Figura: \ref{fig:menu_configurazione_utente}.\newline
+		Successivamente sarà possibile visualizzare la stringa contenente il token (Figura: \ref{fig:token_generate}). Da questo punto in poi si potranno utilizzare i servizi REST messi a disposizione dall'applicazione.
+		\begin{figure}[htbp]
+			\centering
+			\centerline{\includegraphics[width=14cm]{images/token_generate.png}}
+			\caption{Generazione token utente}
+			\label{fig:token_generate}
+		\end{figure}
+	% section Configurazione API Token (end)
+
+
+	\subsection{Logout} % (fold)
+	\label{sec:logout}
+		Cliccando sull'elemento \textbf{Logout} nel menù utente (Figura: \ref{fig:menu_configurazione_utente}) è possibile effettuare la disconnessione dal portale.\newline
+		Se il processo avverrà correttamente si caricherà la schermata di autenticazione (Figura: \ref{fig:registrazione_utente_accesso}), sarà così possibile chiudere il browser.		
+	% section Logout (end)
+
+
+% section Configurazione utente (end)
