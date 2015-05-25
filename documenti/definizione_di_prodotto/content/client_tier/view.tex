@@ -268,7 +268,13 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
-						\item TODO
+						\item \textbf{ng-controller}: permette l'attivazione del controller associato al template HTML relativo alla pagina di che permette di confronta più metriche di una stessa Recipe;
+						\item \textbf{ng-submit}: permette di rilevare una scelta di invio dati dell'utente e attiva una funzione, in questo caso \textbf{generate()} definita in CompareCtrl;
+						\item \textbf{ng-click}: permette di rilevare una scelta dell'utente e attiva una funzione, in questo caso \textbf{addMetric()} definita in CompareCtrl;
+						\item \textbf{ng-change}: permette di rilevare un cambiamento su un determinato elemento di una form, in questo caso aggiorna i valori di alcuni array a seconda del tipo di cambiamento che viene effettuato;
+						\item \textbf{ng-if}: permette di visualizzare un determinato elemento, e il contenuto al suo interno, qualora la condizione specificata risultasse vera. Viene utilizzata per nascondere i messaggi d'errore e renderli visibili qualora l'errore si verificasse;
+						\item \textbf{ng-repeat}: permette di iterare ogni elemento di una lista e di poterlo utilizzare all'interno del template HTML grazie alla direttiva \textbf{ng-bind} potendone ricavare dati o eseguire metodi su di esso. Viene utilizzata per stampare la lista di tutte le metriche aggiunte alla richiesta di confronto;
+						\item \textbf{ng-bind}: permette di rimpiazzare il contenuto di un elemento con il valore dato dall'espressione definita. Questa direttiva viene preferita all'uso dell'operatore \{\{ \}\}. Viene utilizzata per stampare il valore degli elementi che si stanno iterando tramite la direttiva \textbf{ng-repeat}.
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_compare (end)
