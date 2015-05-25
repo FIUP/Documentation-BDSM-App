@@ -772,8 +772,6 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 				\item avere accesso al codice sorgente;
 				\item verificare nel codice sorgente che la creazione del token di accesso sia programmato in modo da rispettare la combinazione seguente: ''id utente'' + ''data creazione token'' + ''valore random''.
 			\end{itemize}
-			
-\pagebreak
 
 	\subsection{Test di sistema}
 		I test di sistema servono per verificare che il sistema software completamente integrato soddisfi tutti i requisiti software individuati e descritti nel documento \docNameVersionAdR.
@@ -1220,6 +1218,7 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 					TU92 & Viene verificato che l'API, una volta ricevuti il nome di una Recipe e il voto da assegnarli, chiami correttamente la classe del processor che si occuperà di assegnare tale voto alla Recipe presente nel sistema. & N.I.\\
 					\hline
 					TU93 & Viene verificato che l'API ritorni una lista contenente tanti utenti tanti quelli registrati nel sistema. & N.I.\\
+					\hline
 					TU94 & Viene verificato che l'API, una volta ricevuto il nome di un utente registrato nel sistema, ritorni i dati relativi a tale utente. & N.I.\\
 					\hline
 					TU95 & Viene verificato che l'API, una volta ricevuto il nome di un utente registrato nel sistema e i dati da modificare di tale utente, modifichi correttamente i dati di tale utente. & N.I.\\
@@ -1510,7 +1509,77 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 					\hline
 					TU72 & RawIgHashtagTrend.query().fetch() \\
 					\hline
+					TU73 & MetricApi.recipe\_list() \\
+					\hline
+					TU74 & MetricApi.metric\_list() \\
+					\hline
+					TU75 & FbMetricsApi.get\_page() \\
+					\hline
+					TU76 & FbMetricsApi.get\_page\_trend() \\
+					\hline
+					TU77 & FbMetricsApi.get\_page\_posts() \\
+					\hline
+					TU78 & FbMetricsApi.get\_event() \\
+					\hline
+					TU79 & FbMetricsApi.get\_event\_trend() \\
+					\hline
+					TU80 & FbMetricsApi.get\_event\_posts() \\
+					\hline
+					TU81 & TwMetricsApi.get\_user() \\
+					\hline
+					TU82 & TwMetricsApi.get\_user\_trend() \\
+					\hline
+					TU83 & TwMetricsApi.get\_user\_tweets() \\
+					\hline
+					TU84 & TwMetricsApi.get\_hashtag\_tweets() \\
+					\hline
+					TU85 & IgMetricsApi.get\_user() \\
+					\hline
+					TU86 & IgMetricsApi.get\_user\_trend() \\
+					\hline
+					TU87 & IgMetricsApi.get\_media() \\
+					\hline
+					TU88 & IgMetricsApi.get\_hashtag() \\
+					\hline
+					TU89 & IgMetricsApi.get\_hashtag\_trend() \\
+					\hline
+					TU90 & GetRecipe.add\_recipe() \\
+					\hline
+					TU91 & GetRecipe.remove\_recipe() \\
+					\hline
+					TU92 & GetRecipe.rate\_recipe() \\
+					\hline
+					TU93 & UserApi.user\_list() \\
+					\hline
+					TU94 & UserApi.user\_details() \\
+					\hline
+					TU95 & UserApi.edit\_user() \\
+					\hline
+					TU96 & UserApi.edit\_permission() \\
+					\hline
+					TU97 & UserApi.remove\_user() \\
+					\hline
+					TU98 & OAuthApi.add\_user() \\
+					\hline
+					TU99 & OAuthApi.login() \\
+					\hline
+					TU100 & OAuthApi.logout() \\
+					\hline
+					TU101 & RecipeRequestApi.request\_list() \\
+					\hline
+					TU102 & RecipeRequestApi.add\_request() \\
+					\hline
+					TU103 & RecipeRequestApi.remove\_request() \\
+					\hline
+					TU104 & FavouritesApi.favourites\_list() \\
+					\hline
+					TU105 & FavouritesApi.add\_favourite() \\
+					\hline
+					TU106 & FavouritesApi.remove\_favourite() \\
+					\hline
 			\caption{Tabella tracciamento test di unità - metodi}
 			\end{longtable}
 			\egroup
 			\end{center}
+			
+	\pagebreak
