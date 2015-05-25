@@ -458,34 +458,52 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ titleRecipe : String}}
 							\begin{description}
-								\item \textbf{Descrizione}: parametro che identifica il nome della Recipe che contiene le metriche visualizzate dalla pagina.
+								\item \textbf{Descrizione}: parametro che identifica il nome della Recipe che contiene le metriche visualizzate dalla pagina. Questo parametro viene inizializzato con il valore preso in input dalla pagina delle Recipe quando si sceglie di visualizzare le metriche per una determinata di esse;
 							\end{description}
-						\item \textcolor{forestgreen}{\texttt{+ titleRecipe : String}}
+						\item \textcolor{forestgreen}{\texttt{+ metricsType : array di oggetti JSON}}
 							\begin{description}
-								\item \textbf{Descrizione}: parametro che identifica il nome della Recipe che contiene le metriche visualizzate dalla pagina.
+								\item \textbf{Descrizione}: parametro che contiene la lista delle categorie possibile di metriche. Questo campo viene inizializzato invocando il metodo \textbf{getMetricTypes()};
 							\end{description}
-						\item \textcolor{forestgreen}{\texttt{+ titleRecipe : String}}
+						\item \textcolor{forestgreen}{\texttt{+ metrics : array di oggetti JSON}}
 							\begin{description}
-								\item \textbf{Descrizione}: parametro che identifica il nome della Recipe che contiene le metriche visualizzate dalla pagina.
-							\end{description}
-						\item \textcolor{forestgreen}{\texttt{+ titleRecipe : String}}
-							\begin{description}
-								\item \textbf{Descrizione}: parametro che identifica il nome della Recipe che contiene le metriche visualizzate dalla pagina.
-							\end{description}
-						\item \textcolor{forestgreen}{\texttt{+ titleRecipe : String}}
-							\begin{description}
-								\item \textbf{Descrizione}: parametro che identifica il nome della Recipe che contiene le metriche visualizzate dalla pagina.
+								\item \textbf{Descrizione}: parametro che contiene la lista delle metriche di una determinata Recipe.
 							\end{description}
 
 					\end{itemize}
 
 				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{- getMetricTypes() : array di oggetti JSON}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: metodo che recupera il tipo di metriche presenti attraverso la chiamata \textbf{getMetricType()} al servizio \textbf{RecipeService}. L'array restituito sarà il seguente:
+									\begin{verbatim}
+										[
+										    {
+										        key: 'facebook',
+										        value: 'Facebook'
+										     },
+										     {
+										        key: 'twitter',
+										        value: 'Twitter'
+										      },
+										      {
+										         key: 'instagram',
+										         value: 'Instagram'
+										       }
+										]
+									\end{verbatim}
 							\end{description}
-
+						\item \textcolor{forestgreen}{\texttt{- getMetricsList() : void}}
+							\begin{description}
+								\item \textbf{Descrizione}: metodo che viene invocato quando la classe viene attivata. Questo effettua la chiamata \textbf{getMetricsList(idRecipe)} sul servizio \textbf{RecipeService} e va a riempire l'attributo \textbf{metrics} con un array di oggetti JSON del seguente formato:
+								\begin{verbatim}
+									    {
+									        id: 'StarWars.it',
+									        category: 'facebook',
+									        category_type: 'page'
+									     }
+								\end{verbatim}
+							\end{description}
 					\end{itemize}
 
 				\item \textbf{Servizi AngularJS utilizzati}: N/A
@@ -555,26 +573,92 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{+ titleRecipe : String}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: parametro che identifica il nome della Recipe della quale si vogliono usare le metriche per effettuare un confronto. Questo parametro viene inizializzato con il valore preso in input dalla pagina delle Recipe quando si sceglie di visualizzare le metriche per una determinata di esse;
 							\end{description}
-
+						\item \textcolor{forestgreen}{\texttt{+ metricsType : array di oggetti JSON}}
+							\begin{description}
+								\item \textbf{Descrizione}: parametro che contiene la lista delle categorie possibile di metriche. Questo campo viene inizializzato invocando il metodo \textbf{getMetricTypes()};
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ oneInserted : bool}}
+							\begin{description}
+								\item \textbf{Descrizione}: parametro che serve ad indicare quando almeno una metrica è stata aggiunta. Questo blocca degli elementi della form che non possono più essere modificati. Viene inizializzata a false e cambia il suo valore la prima volta che il metodo \textbf{addMetric(cat, typeCat, value)} viene eseguito;
+							\end{description}
+							\item \textcolor{forestgreen}{\texttt{+ maxReached : bool}}
+								\begin{description}
+									\item \textbf{Descrizione}: parametro che serve ad indicare se si è raggiunto il massimo numero di metriche possibili per un confronto. Viene inizializzato a false e può cambiare il suo valore all'interno del metodo \textbf{addMetric(cat, typeCat, value)};
+								\end{description}
+							\item \textcolor{forestgreen}{\texttt{+ categories : array di oggetti JSON}}
+								\begin{description}
+									\item \textbf{Descrizione}: attributo che contiene le categoria di metriche possibili. L'attributo viene inizializzato andando a prelevare i dati tramite il servizio \textbf{RecipeService} attraverso la chiamata al metodo \textbf{getMetricType()};
+								\end{description}
+							\item \textcolor{forestgreen}{\texttt{+ types : array di JSON}}
+								\begin{description}
+									\item \textbf{Descrizione}: attributo che contiene i tipi di categoria disponibili per una determinata categoria. L'attributo viene inizializzato quando viene effettuata la scelta di quale categoria si vuole inserire tramite la chiamata al metodo \textbf{updateTypeMetric(category)};
+								\end{description}
+							\item \textcolor{forestgreen}{\texttt{+ type : String}}
+								\begin{description}
+									\item \textbf{Descrizione}: attributo che identifica il tipo di metrica che si andrà ad inserire. Viene inizializzato con la stringa vuota;
+								\end{description}
+							\item \textcolor{forestgreen}{\texttt{+ valueMetric : String}}
+								\begin{description}
+									\item \textbf{Descrizione}: attributo che identifica il valore di una metrica che si andrà a richiedere. Viene inizializzato con la stringa vuota;
+								\end{description}
+							\item \textcolor{forestgreen}{\texttt{+ metrics : array di oggetti JSON}}
+								\begin{description}
+									\item \textbf{Descrizione}: attributo che contiene tutte le metriche aggiunte alla Recipe. Viene inizializzato con un array vuoto;
+								\end{description}
 					\end{itemize}
 
 				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+
+						\item \textcolor{forestgreen}{\texttt{- getMetricTypes() : array di oggetti JSON}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: metodo che recupera il tipo di metriche presenti attraverso la chiamata \textbf{getMetricType()} al servizio \textbf{RecipeService}. L'array restituito sarà il seguente:
+									\begin{verbatim}
+										[
+										    {
+										        key: 'facebook',
+										        value: 'Facebook'
+										     },
+										     {
+										        key: 'twitter',
+										        value: 'Twitter'
+										      },
+										      {
+										         key: 'instagram',
+										         value: 'Instagram'
+										       }
+										]
+									\end{verbatim}
 							\end{description}
 
+							\item \textcolor{forestgreen}{\texttt{+ addMetric(cat, typeCat, value) : void}}
+								\begin{description}
+									\item \textbf{Descrizione}: metodo che aggiunge la metrica inserita nel form in un array che contiene tutte le metriche aggiunte e cioè \textbf{metrics}. Prima di inserirla controlla se i campi siano stati inseriti correttamente. Il formato dell'oggetto JSON inserito nell'array dovrà essere il seguente:
+										\begin{verbatim}
+											{
+											    'id': val,
+											    'category': cat,
+											    'category_type': typeCat
+											}
+										\end{verbatim}
+								\end{description}
+
+							\item \textcolor{forestgreen}{\texttt{+ updateTypeMetric(category) : void}}
+								\begin{description}
+									\item \textbf{Descrizione}: metodo che aggiorna l'attributo \textbf{types} quando dal form viene scelta la categoria della metrica. Questi valori vengono presi dal servizio \textbf{RecipeService} attraverso la chiamata al metodo \textbf{getMetricTypeNode(category)};
+								\end{description}
+
+						\item \textcolor{forestgreen}{\texttt{+ updateMetrics(category, type) : void}}
+							\begin{description}
+								\item \textbf{Descrizione}: metodo che aggiorna i valori disponibili per una determinata selezione di categoria e tipo di categoria avvenuta nella form. Questo chiama il metodo \textbf{getMetricsList(idRecipe)} del servizio \textbf{RecipeService} e filtra i risultati ottenuti in base ai valori inseriti. Una volta filtrati gli associa all'attributo \textbf{metrics}.
+							\end{description}
 					\end{itemize}
 
-				\item \textbf{Servizi AngularJS utilizzati}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
+				\item \textbf{Servizi AngularJS utilizzati}: N/A
 
 			\end{itemize}
 		% subparagraph client_controller_user_comparectrl (end)
