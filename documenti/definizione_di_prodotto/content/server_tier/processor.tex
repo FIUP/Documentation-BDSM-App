@@ -175,6 +175,46 @@
         \end{itemize}
         % subparagraph (end)
 
+        \subparagraph{server::processor::commands::user::LoginCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_user_LoginCommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: definisce la logica per effettuare il login al sistema;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per scambiare le informazioni di accesso al sistema;
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item server::processor::commands::user::AbsUserCommand
+            \end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
+              \begin{description}
+                \item \textbf{Descrizione}: esegue l'accesso al sistema.
+              \end{description}
+          \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
+        \subparagraph{server::processor::commands::user::LogoutCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_user_LogoutCommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: definisce la logica per effettuare la disconnessione dal sistema;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per effettuare l'operazione di logout dal sistema;
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item server::processor::commands::user::AbsUserCommand
+            \end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
+              \begin{description}
+                \item \textbf{Descrizione}: esegue la disconnessione dal sistema.
+              \end{description}
+          \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
         \subparagraph{server::processor::commands::user::AddUserCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_user_addusercommand}
         \begin{itemize}
