@@ -93,14 +93,13 @@
       \item \textbf{Utilizzo}: i suoi metodi vengono invocati quando viene richiesto dal client di recuperare la lista delle Recipe e delle metriche;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item server::endpoints::resp::public::MetricListResponse;
           \item server::endpoints::resp::private::RecipeListResponse;
         \end{itemize}
 		\item \textbf{Attributi}: N/A
-		\item \textbf{Metodi}:   
+		\item \textbf{Metodi}:
 			\begin{itemize}
 				\item public recipe\_list() : RecipeListResponse
-				\item public metric\_list(request : ResourceContainer) : MetricListResponse
+				\item public metric\_list(request : ResourceContainer) : RecipeResponse
 			\end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_public_recipeapi (end)
@@ -119,7 +118,7 @@
           \item server::endpoints::resp::public::fb::EventTrendListResponse
         \end{itemize}
 		\item \textbf{Attributi}: N/A
-		\item \textbf{Metodi}:   
+		\item \textbf{Metodi}:
 			\begin{itemize}
 				\item public get\_page(request : ResourceContainer) : PageResponse
 				\item public get\_page\_trend(request : ResourceContainer) : PageTrendListResponse
@@ -143,7 +142,7 @@
           \item server::endpoints::resp::public::tw::TweetListResponse
         \end{itemize}
 		\item \textbf{Attributi}: N/A
-		\item \textbf{Metodi}:   
+		\item \textbf{Metodi}:
 			\begin{itemize}
 				\item public get\_user(request : ResourceContainer) : UserResponse
 				\item public get\_user\_trend(request : ResourceContainer) : UserTrendListResponse
@@ -166,7 +165,7 @@
           \item server::endpoints::resp::public::ig::HashtagTrendListResponse
         \end{itemize}
 		\item \textbf{Attributi}: N/A
-		\item \textbf{Metodi}:   
+		\item \textbf{Metodi}:
 			\begin{itemize}
 				\item public get\_user(request : ResourceContainer) : UserResponse
 				\item public get\_user\_trend(request : ResourceContainer) : UserTrendListResponse
@@ -198,8 +197,8 @@
 
 	\paragraph{Classi} % (fold)
 
-    \subparagraph{server::endpoints::api::private::RecipeApi} % (fold)
-    \label{subp:bdsm_app_server_endpoints_api_private_recipeapi}
+    \subparagraph{server::endpoints::api::private::RecipePrivateApi} % (fold)
+    \label{subp:bdsm_app_server_endpoints_api_private_recipeprivateapi}
     \begin{itemize}
       \item \textbf{Descrizione}: classe che rappresenta l'implementazione delle web API relative alla gestione delle Recipe;
       \item \textbf{Utilizzo}: i suoi metodi vengono invocati quando viene richiesto dal client di aggiungere, rimuovere o valutare una Recipe;
@@ -208,7 +207,7 @@
           \item server::endpoints::resp::private::RecipeListResponse
         \end{itemize}
 		\item \textbf{Attributi}: N/A
-		\item \textbf{Metodi}:   
+		\item \textbf{Metodi}:
 			\begin{itemize}
 				\item public add\_recipe(request : ResourceContainer) : void
 				\item public remove\_recipe(request : ResourceContainer) : void
@@ -228,7 +227,7 @@
           \item server::endpoints::resp::private::UserListResponse
         \end{itemize}
 		\item \textbf{Attributi}: N/A
-		\item \textbf{Metodi}:   
+		\item \textbf{Metodi}:
 			\begin{itemize}
 				\item public user\_list() : UserListResponse
 				\item public user\_details(request : ResourceContainer) : UserResponse
@@ -250,7 +249,7 @@
           \item server::endpoints::resp::private::RecipeReqListResponse
         \end{itemize}
 		\item \textbf{Attributi}: N/A
-		\item \textbf{Metodi}:   
+		\item \textbf{Metodi}:
 			\begin{itemize}
 				\item public request\_list() : RecipeReqListResponse
 				\item public add\_request(request : ResourceContainer) : void
@@ -269,7 +268,7 @@
           \item server::endpoints::resp::private::FavoriteListResponse
         \end{itemize}
 		\item \textbf{Attributi}: N/A
-		\item \textbf{Metodi}:   
+		\item \textbf{Metodi}:
 			\begin{itemize}
 				\item public favourites\_list() : FavouriteListResponse
 				\item public add\_favourite(request : ResourceContainer) : void
@@ -277,14 +276,14 @@
      	 \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_private_favoritesapi (end)
-    
+
 	\subparagraph{server::endpoints::api::private::OAuthApi} % (fold)
     \label{subp:bdsm_app_server_endpoints_api_private_oauthapi}
     \begin{itemize}
       	\item \textbf{Descrizione}: classe che rappresenta l'implementazione delle web API relative alla registrazione e all'autenticazione dell'utente;
       	\item \textbf{Utilizzo}: i suoi metodi vengono invocati quando viene richiesto dal client la registrazione al sistema, quando viene richiesto di autenticarsi o de-autenticarsi;
 		\item \textbf{Attributi}: N/A
-		\item \textbf{Metodi}: N/A   
+		\item \textbf{Metodi}: N/A
     \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_private_favoritesapi (end)
 
@@ -331,26 +330,52 @@
 \end{itemize}
 % subsubsection
 
-	\paragraph{Classi} % (fold)
+  \paragraph{Classi}
 
-    \subparagraph{server::endpoints::resp::public::MetricListResponse} % (fold)
-    \label{subp:bdsm_app_server_endpoints_resp_public_metriclistresponse}
+    \subparagraph{server::endpoints::resp::public::MetricResponse} % (fold)
+    \label{subp:bdsm_app_server_endpoints_resp_public_metricresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: rappresenta il modello dei dati della lista di metriche da ritornare al client;
+      \item \textbf{Descrizione}: rappresenta il modello dei dati di una metrica da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response della lista delle metriche relative ad un Recipe al client;
+    \item \textbf{Attributi}: N/A
+    \item \textbf{Metodi}: N/A
+      \end{itemize}
+    % subparagraph bdsm_app_server_endpoints_resp_public_metricresponse (end)
+
+    \subparagraph{server::endpoints::resp::public::RecipeResponse} % (fold)
+    \label{subp:bdsm_app_server_endpoints_resp_private_reciperesponse}
+    \begin{itemize}
+      \item \textbf{Descrizione}: rappresenta il modello dei dati di una Recipe da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una Recipe al client inseme alla lista delle metriche contenute dalla stessa;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item server::endpoints::resp::public::fb::PageResponse
-          \item server::endpoints::resp::public::fb::EventResponse
-          \item server::endpoints::resp::public::tw::UserResponse
-          \item server::endpoints::resp::public::tw::HashtagResponse
-          \item server::endpoints::resp::public::ig::UserResponse
-          \item server::endpoints::resp::public::ig::HashtagResponse
-        \end{itemize}
-		\item \textbf{Attributi}: N/A
-		\item \textbf{Metodi}: N/A
+        \item server::endpoints::resp::public::MetricResponse
+    \end{itemize}
+    \item \textbf{Attributi}:
+      \begin{itemize}
+        \item id : String
+        \item title : String
+        \item desc : String
+        \item data\_create : Date
+        \item rating : Float
       \end{itemize}
-    % subparagraph bdsm_app_server_endpoints_resp_public_metriclistresponse (end)
+    \item \textbf{Metodi}: N/A
+      \end{itemize}
+    % subparagraph bdsm_app_server_endpoints_resp_public_reciperesponse (end)
+
+    \subparagraph{server::endpoints::resp::public::RecipeListResponse} % (fold)
+    \label{subp:bdsm_app_server_endpoints_resp_private_recipelistresponse}
+    \begin{itemize}
+      \item \textbf{Descrizione}: rappresenta il modello dei dati di una Recipe da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una Recipe al client;
+      \item \textbf{Relazioni con altre classi}:
+        \begin{itemize}
+          \item server::endpoints::resp::private::RecipeResponse
+        \end{itemize}
+    \item \textbf{Attributi}: N/A
+    \item \textbf{Metodi}: N/A
+      \end{itemize}
+    % subparagraph bdsm_app_server_endpoints_resp_public_recipelistresponse (end)
 
 \subsubsection{server::endpoints::resp::public::fb} % (fold)
 \label{ssub:bdsm_app_server_endpoints_resp_public_fb}
@@ -374,8 +399,8 @@
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati di una pagina Facebook da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati di una pagina Facebook al client;
-      
-	  \item \textbf{Attributi}: 
+
+	  \item \textbf{Attributi}:
 	  	\begin{itemize}
 	  		\item name : String
 	  		\item category : String
@@ -405,7 +430,7 @@
       \item \textbf{Descrizione}: rappresenta il modello dei dati dei trend di una pagina Facebook da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei trend di una pagina Facebook al client;
       %\item \textbf{Relazioni con altre classi}:
-	  \item \textbf{Attributi}:  
+	  \item \textbf{Attributi}:
 	  	\begin{itemize}
 	  		\item likes : int
 	  		\item talking\_about : int
@@ -433,8 +458,8 @@
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati di un evento di Facebook da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati di un evento Facebook al client;
-      
-	  \item \textbf{Attributi}:  
+
+	  \item \textbf{Attributi}:
 	  	\begin{itemize}
 	  		\item name : String
 	  		\item location : RawLocation
@@ -463,8 +488,8 @@
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati dei trend di un evento Facebook da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei trend di un evento Facebook al client;
-      
-	  \item \textbf{Attributi}:  
+
+	  \item \textbf{Attributi}:
 	  	\begin{itemize}
 	  		\item invited : int
 	  		\item attending : int
@@ -494,8 +519,8 @@
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati dei post di Facebook da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati dei post Facebook al client;
-      
-	  \item \textbf{Attributi}:  
+
+	  \item \textbf{Attributi}:
 	  	\begin{itemize}
 	  		\item date\_created : Date
 	  		\item posts : int
@@ -545,8 +570,8 @@
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati di un profilo Twitter da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati di un profilo Twitter al client;
-      
-	  \item \textbf{Attributi}:  
+
+	  \item \textbf{Attributi}:
 	  	\begin{itemize}
 	  		\item email : String
 	  		\item full\_name : String
@@ -576,8 +601,8 @@
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati dei trend di un profilo Twitter da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei trend di un profilo Twitter al client;
-      
-	  \item \textbf{Attributi}:  
+
+	  \item \textbf{Attributi}:
 	  	\begin{itemize}
 	  		\item favourites\_count : int
 	  		\item followers\_count : int
@@ -607,8 +632,8 @@
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati di un hashtag di Twitter da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati di un hashtag di Twitter al client;
-      
-	  \item \textbf{Attributi}:  
+
+	  \item \textbf{Attributi}:
 	  	\begin{itemize}
 	  		\item hashtag\_name : String
 	  	\end{itemize}
@@ -635,8 +660,8 @@
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati dei tweet di Twitter da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati dei tweet di Twitter al client;
-      
-	  \item \textbf{Attributi}: 
+
+	  \item \textbf{Attributi}:
 	  	\begin{itemize}
 	  		\item source\_devices : List
 	  		\item favourites\_count : int
@@ -685,8 +710,8 @@
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati di un profilo Instagram da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati di un profilo Instagram al client;
-      
-	  \item \textbf{Attributi}: 
+
+	  \item \textbf{Attributi}:
 	  	\begin{itemize}
 	  		\item id : int
 	  		\item fullname : String
@@ -714,8 +739,8 @@
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati dei trend di un profilo Instagram da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei trend di un profilo Instagram al client;
-      
-	  \item \textbf{Attributi}:  
+
+	  \item \textbf{Attributi}:
 	  	\begin{itemize}
 	  		\item media : int
 	  		\item followed\_by : int
@@ -744,8 +769,8 @@
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati di un hashtag di Instagram da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati di un hashtag di Instagram al client;
-      
-	  \item \textbf{Attributi}:  
+
+	  \item \textbf{Attributi}:
 	  	\begin{itemize}
 	  		\item name : String
 	  	\end{itemize}
@@ -772,8 +797,8 @@
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati dei trend di un hashtag di Instagram da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei trend di un hashtag di Instagram al client;
-      
-	  \item \textbf{Attributi}: 
+
+	  \item \textbf{Attributi}:
 	  	\begin{itemize}
 	  		\item media\_count : int
 	  	\end{itemize}
@@ -800,8 +825,8 @@
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati dei media di Instagram da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati dei media di Instagram al client;
-      
-	  \item \textbf{Attributi}:  
+
+	  \item \textbf{Attributi}:
 	  	\begin{itemize}
 	  		\item date\_createde : Date
 	  		\item media : int
@@ -849,47 +874,12 @@
 
 	\paragraph{Classi} % (fold)
 
-    \subparagraph{server::endpoints::resp::private::RecipeResponse} % (fold)
-    \label{subp:bdsm_app_server_endpoints_resp_private_reciperesponse}
-    \begin{itemize}
-      \item \textbf{Descrizione}: rappresenta il modello dei dati di una Recipe da ritornare al client;
-      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una Recipe al client;
-      \item \textbf{Relazioni con altre classi}:
-        \begin{itemize}
-  			\item server::endpoints::resp::public::MetricListResponse
-		\end{itemize}
-	  \item \textbf{Attributi}:  
-	  	\begin{itemize}
-	  		\item id : String
-	  		\item title : String
-	  		\item desc : String
-	  		\item data\_create : Date
-	  		\item rating : Float
-	  	\end{itemize}
-	  \item \textbf{Metodi}: N/A
-      \end{itemize}
-    % subparagraph bdsm_app_server_endpoints_resp_private_reciperesponse (end)
-
-    \subparagraph{server::endpoints::resp::private::RecipeListResponse} % (fold)
-    \label{subp:bdsm_app_server_endpoints_resp_private_recipelistresponse}
-    \begin{itemize}
-      \item \textbf{Descrizione}: rappresenta il modello dei dati di una Recipe da ritornare al client;
-      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una Recipe al client;
-      \item \textbf{Relazioni con altre classi}:
-        \begin{itemize}
-          \item server::endpoints::resp::private::RecipeResponse
-        \end{itemize}
-	  \item \textbf{Attributi}: N/A
-	  \item \textbf{Metodi}: N/A
-      \end{itemize}
-    % subparagraph bdsm_app_server_endpoints_resp_private_recipelistresponse (end)
-
     \subparagraph{server::endpoints::resp::private::RecipeReqResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_private_recipereqresponse}
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati di una richiesta di Recipe da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una richiesta di Recipe al client;
-	  \item \textbf{Attributi}:  
+	  \item \textbf{Attributi}:
 	  	\begin{itemize}
 	  		\item desc : String
 	  		\item title : String
@@ -917,7 +907,7 @@
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati di un utente da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response contenente i dati un un utente al client;
-	  \item \textbf{Attributi}:  
+	  \item \textbf{Attributi}:
 	  	\begin{itemize}
 	  		\item username : String
 	  		\item email : String
@@ -929,7 +919,7 @@
 	  \item \textbf{Metodi}: N/A
     \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_private_userresponse (end)
-    
+
     \subparagraph{server::endpoints::resp::private::UserListResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_private_userlistresponse}
     \begin{itemize}
@@ -945,7 +935,7 @@
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati di una View preferita da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una View preferita al client;
-	  \item \textbf{Attributi}:  
+	  \item \textbf{Attributi}:
 	  	\begin{itemize}
 	  		\item chart\_type : String
 	  		\item metric : List
