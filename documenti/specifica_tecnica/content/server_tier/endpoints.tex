@@ -93,7 +93,6 @@
       \item \textbf{Utilizzo}: i suoi metodi vengono invocati quando viene richiesto dal client di recuperare la lista delle Recipe e delle metriche;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
-          \item server::endpoints::resp::public::MetricListResponse;
           \item server::endpoints::resp::private::RecipeListResponse;
         \end{itemize}
       \end{itemize}
@@ -165,8 +164,8 @@
 
 	\paragraph{Classi} % (fold)
 
-    \subparagraph{server::endpoints::api::private::RecipeApi} % (fold)
-    \label{subp:bdsm_app_server_endpoints_api_private_recipeapi}
+    \subparagraph{server::endpoints::api::private::RecipePrivateApi} % (fold)
+    \label{subp:bdsm_app_server_endpoints_api_private_recipeprivateapi}
     \begin{itemize}
       \item \textbf{Descrizione}: classe che rappresenta l'implementazione delle web API relative alla gestione delle Recipe;
       \item \textbf{Utilizzo}: i suoi metodi vengono invocati quando viene richiesto dal client di aggiungere, rimuovere o valutare una Recipe;
@@ -213,7 +212,7 @@
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_private_favoritesapi (end)
-    
+
     \subparagraph{server::endpoints::api::private::OAuthApi} % (fold)
     \label{subp:bdsm_app_server_endpoints_api_private_oauthapi}
     \begin{itemize}
@@ -267,7 +266,7 @@
 
 	\paragraph{Classi} % (fold)
 
-    \subparagraph{server::endpoints::resp::public::MetricListResponse} % (fold)
+    \subparagraph{server::endpoints::resp::public::MetricResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_metriclistresponse}
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati della lista di metriche da ritornare al client;
@@ -283,6 +282,30 @@
         \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_metriclistresponse (end)
+
+    \subparagraph{server::endpoints::resp::private::RecipeResponse} % (fold)
+    \label{subp:bdsm_app_server_endpoints_resp_private_reciperesponse}
+    \begin{itemize}
+      \item \textbf{Descrizione}: rappresenta il modello dei dati di una Recipe da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una Recipe al client insieme alle metriche contenute da essa;
+      \item \textbf{Relazioni con altre classi}:
+        \begin{itemize}
+        \item server::endpoints::resp::public::MetricResponse
+    \end{itemize}
+      \end{itemize}
+    % subparagraph bdsm_app_server_endpoints_resp_private_reciperesponse (end)
+
+    \subparagraph{server::endpoints::resp::private::RecipeListResponse} % (fold)
+    \label{subp:bdsm_app_server_endpoints_resp_private_recipelistresponse}
+    \begin{itemize}
+      \item \textbf{Descrizione}: rappresenta il modello dei dati di una lista di Recipe da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una lista Recipe al client;
+      \item \textbf{Relazioni con altre classi}:
+        \begin{itemize}
+          \item server::endpoints::resp::private::RecipeResponse
+        \end{itemize}
+      \end{itemize}
+    % subparagraph bdsm_app_server_endpoints_resp_private_recipelistresponse (end)
 
 \subsubsection{server::endpoints::resp::public::fb} % (fold)
 \label{ssub:bdsm_app_server_endpoints_resp_public_fb}
@@ -648,30 +671,6 @@
 % subsubsection
 
 	\paragraph{Classi} % (fold)
-
-    \subparagraph{server::endpoints::resp::private::RecipeResponse} % (fold)
-    \label{subp:bdsm_app_server_endpoints_resp_private_reciperesponse}
-    \begin{itemize}
-      \item \textbf{Descrizione}: rappresenta il modello dei dati di una Recipe da ritornare al client;
-      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una Recipe al client;
-      \item \textbf{Relazioni con altre classi}:
-        \begin{itemize}
-  			\item server::endpoints::resp::public::MetricListResponse
-		\end{itemize}
-      \end{itemize}
-    % subparagraph bdsm_app_server_endpoints_resp_private_reciperesponse (end)
-
-    \subparagraph{server::endpoints::resp::private::RecipeListResponse} % (fold)
-    \label{subp:bdsm_app_server_endpoints_resp_private_recipelistresponse}
-    \begin{itemize}
-      \item \textbf{Descrizione}: rappresenta il modello dei dati di una Recipe da ritornare al client;
-      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una Recipe al client;
-      \item \textbf{Relazioni con altre classi}:
-        \begin{itemize}
-          \item server::endpoints::resp::private::RecipeResponse
-        \end{itemize}
-      \end{itemize}
-    % subparagraph bdsm_app_server_endpoints_resp_private_recipelistresponse (end)
 
     \subparagraph{server::endpoints::resp::private::RecipeReqResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_private_recipereqresponse}
