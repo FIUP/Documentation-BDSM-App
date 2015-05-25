@@ -902,6 +902,11 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 							\begin{description}
 								\item \textbf{Descrizione}: metodo che preso in input un oggetto JSON del tipo di quello visto per l'attributo \textbf{settings} va a chiamare il servizio AuthService per salvare le modifiche effettuate. Tutto questo dopo avere controllato se la password vecchia era valida e se la password nuova combaciava con quella di conferma;
 							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ deleteAccount()}}
+							\begin{description}
+								\item \textbf{Descrizione}: metodo che cancella l'account dell'utente che ne ha richiesto la cancellazione. Questo richiama il metodo \textbf{deleteAccount(idUser)} del servizio \textbf{AuthService};
+							\end{description}
+
 						\item \textcolor{forestgreen}{\texttt{- checkModifyFields(settings)}}
 							\begin{description}
 								\item \textbf{Descrizione}: metodo che controlla quali campi e se sono stati modificati effettivamente e ritorna true se è stata effettuata qualche modifica e quindi ha senso chiamare il servizio per aggiornare i valori. Questo metodo viene utilizzato dentro il metodo saveEdit(settings);
