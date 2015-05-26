@@ -327,7 +327,7 @@ ROF8.2.1.1 & server::db::app\_data::recipe::RecipeModel \\
 \hline
 ROF8.2.1.2 & server::db::app\_data::recipe::RecipeModel \\
 \hline
-ROF8.2.2 & client::model::service::RecipeAdminService \newline client::model::service::DataManagerService \newline server::endpoints::resp::public::TO DO \newline server::processor::commands::recipe::AddRecipeCommand \newline server::processor::commands::recipe::GetRecipeListCommand \\
+ROF8.2.2 & client::model::service::RecipeAdminService \newline client::model::service::DataManagerService \newline server::endpoints::resp::public::RecipeResponse \newline server::processor::commands::recipe::AddRecipeCommand \newline server::processor::commands::recipe::GetRecipeListCommand \\
 \hline
 ROF8.3 & client::view::user::Recipe \newline client::controller::user::RecipeCtrl \\
 \hline
@@ -394,18 +394,16 @@ RFF10.5 & client::view::admin::RequestList \newline client::controller::admin::R
 \hline
 RFF10.5.1 & client::view::admin::RequestList \newline client::controller::admin::RequestListCtrl \newline client::model::service::RecipeAdminService \newline client::model::service::DataManagerService \\
 \hline
-RFF10.5.1.1 & TODO \newline TODO \\
+RFF10.5.1.1 & server::endpoints::api::private::RecipeRequestModel \newline server::processor::commands::requests::AddRequestModel\\
 \hline
-ROF11 & client::model::data::ApiDocsModel \newline client::view::public::ApiDocs \newline client::view::user::TokenConfig \newline server::endpoints::api::TODO \\
+ROF11 & client::model::data::ApiDocsModel \newline client::view::public::ApiDocs \newline client::view::user::TokenConfig \newline server::endpoints::resp::private::RecipeReqListResponse \newline server::endpoints::resp::private::FavouriteListResponse \newline server::endpoints::resp::private::UserListResponse \newline server::endpoints::resp::private::RecipeReqResponse \newline server::endpoints::resp::private::FavouritesResponse \newline server::endpoints::resp::private::UserResponse \newline server::endpoints::resp::public::RecipeListResponse \newline server::endpoints::resp::public::RecipeResponse \newline server::endpoints::resp::public::MetricResponse\\
 \hline
-ROF11.1 & client::controller::user::TokenConfigCtrl \newline client::model::service::UserService \newline server::endpoints::api::private::TO DO \\
+ROF11.1 & client::controller::user::TokenConfigCtrl \newline client::model::service::UserService \newline server::endpoints::api::private::OAuthApi \\
 \hline
 ROF11.1.1 & client::controller::user::TokenConfigCtrl \newline client::view::user::TokenConfig \newline server::endpoints::api::private::OAuthApi \newline server::processor::commands::user::LoginCommand \\
 \hline
 ROF11.1.2 & client::controller::user::TokenConfigCtrl \newline client::view::user::TokenConfig \newline server::endpoints::api::private::OAuthApi \newline server::processor::commands::user::LoginCommand \\
 \hline
-
-
 ROF11.2 & client::view::user:TokenConfig \newline client::controller::user::TokenConfigCtrl \\
 \hline
 ROF11.2.1 & server::db::app\_data::user::UserModel \newline server::endpoints::api::private::OAuthApi \newline server::processor::commands::user::LogoutCommand \\
