@@ -137,8 +137,8 @@ avere lo stesso un ottimo indice Gulpease. Visto lo scopo dei documenti e e la l
 				\end{itemize}
 				\item \textbf{Linee di codice per linee di commento:} metrica atta a migliorare la manutenibilità del codice attraverso il monitoraggio del rapporto tra questi valori.
 				\begin{itemize}
-					\item \textbf{range di accettazione:} <0.35;
-					\item \textbf{range ottimale:} <0.20.
+					\item \textbf{range di accettazione:} >0.20;
+					\item \textbf{range ottimale:} >0.35.
 				\end{itemize}				
 				
 				\item \textbf{Numero di bug per linee di codice:} metrica per la misura dei bug trovati per un certo quantitativo di linee di codice. Questa metrica è utile in quanto all'aumentare dell'ampiezza del codice si aumenta la probabilità di nascondere degli errori. Presupponendo che nessuno del gruppo avrà conoscenze sufficienti dello stack tecnologico che si andrà ad utilizzare si partirà con un valore di accettazione alto per poi cercare di ridurlo in modo incrementale. L'obbiettivo fissato è quello di raggiungere valori compresi tra 0 e 20. Difficoltà particolari verranno gestite dal responsabile di progetto;
@@ -167,6 +167,10 @@ avere lo stesso un ottimo indice Gulpease. Visto lo scopo dei documenti e e la l
 				\end{itemize}
 				
 				\item \textbf{Logical SLOC:} misura le dimensioni del software basandosi sul numero di linee di codice sorgente. Ci sono due tipi di SLOC, quello \textit{physical} e quello \textit{logical} : si userà il secondo, che conta solamente gli statement, ignorando le righe vuote, quelle bianche e i commenti.
+				\begin{itemize}
+					\item \textbf{range di accettazione:} [1 - 50]; 
+					\item \textbf{range ottimale:} [1 - 25]
+				\end{itemize}
 								
 				\item \textbf{Copertura del codice:} metrica che misura la copertura dei test. Maggiore sarà questo valore più significativi saranno i test eseguiti. Questa metrica può essere raffinata tralasciando nell'analisi i metodi semplici che non richiedono test.
 				\begin{itemize}
