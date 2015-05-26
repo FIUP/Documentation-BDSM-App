@@ -246,9 +246,11 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 						\item client::controller::user::ChartsCtrl
 					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
+						\item \textbf{ng-controller}: permette l'attivazione del controller associato al template HTML relativo alla pagina di visualizzazione di grafici generati da una metrica o da confronto;
+						\item \textbf{ng-repeat}: permette di iterare ogni elemento di una lista e di poterlo utilizzare all'interno del template HTML grazie alla direttiva \textbf{ng-bind} potendone ricavare dati o eseguire metodi su di esso. Viene utilizzata per visualizzare tutti i grafici generati;
+						\item \textbf{ng-bind}: permette di rimpiazzare il contenuto di un elemento con il valore dato dall'espressione definita. Questa direttiva viene preferita all'uso dell'operatore \{\{ \}\}. Viene utilizzata per stampare la descrizione dei grafici che si stanno iterando tramite la direttiva \textbf{ng-repeat}.
+						\item \textbf{ng-bind-html}: permette di rimpiazzare il contenuto di un elemento con del codice HTML che non viene interpretato come stringa ma come codice della pagina. Viene usato per 
+						il valore dato dall'espressione definita. Questa direttiva viene preferita all'uso dell'operatore \{\{ \}\}. Viene utilizzata per visualizzare i grafici che si stanno iterando tramite la direttiva \textbf{ng-repeat}.
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_charts (end)
 
@@ -320,7 +322,11 @@ In questa sezione e in tutte quelle inerenti al package \textbf{view}, il termin
 					\end{itemize}
 				\item \textbf{Direttive AngularJS}:
 					\begin{itemize}
-						\item TODO
+						\item \textbf{ng-controller}: permette l'attivazione del controller associato al template HTML relativo alla pagina di visualizzazione dei grafici preferiti;
+						\item \textbf{ng-repeat}: permette di iterare ogni elemento di una lista e di poterlo utilizzare all'interno del template HTML grazie alla direttiva \textbf{ng-bind} potendone ricavare dati o eseguire metodi su di esso. Viene utilizzata per visualizzare tutti i grafici favoriti;
+						\item \textbf{ng-bind}: permette di rimpiazzare il contenuto di un elemento con il valore dato dall'espressione definita. Questa direttiva viene preferita all'uso dell'operatore \{\{ \}\}. Viene utilizzata per stampare la descrizione dei grafici che si stanno iterando tramite la direttiva \textbf{ng-repeat}.
+						\item \textbf{ng-bind-html}: permette di rimpiazzare il contenuto di un elemento con del codice HTML che non viene interpretato come stringa ma come codice della pagina. Viene usato per 
+						il valore dato dall'espressione definita. Questa direttiva viene preferita all'uso dell'operatore \{\{ \}\}. Viene utilizzata per visualizzare i grafici che si stanno iterando tramite la direttiva \textbf{ng-repeat}.
 					\end{itemize}
 			\end{itemize}
 		% subparagraph bdsm_app_client_view_user_favourites (end)

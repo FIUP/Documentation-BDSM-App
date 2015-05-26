@@ -523,25 +523,50 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{+ metric : String}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: parametro che identifica il nome della metrica da cui generare i grafici. Se sono presenti altre metriche è una delle metriche da cui generare il confronto.
 							\end{description}
-
+						\item \textcolor{forestgreen}{\texttt{+ metric2 : String}}
+							\begin{description}
+								\item \textbf{Descrizione}: parametro opzionale, se non vuoto identifica una delle metriche con cui effettuare confronto.
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ metric3 : String}}
+							\begin{description}
+								\item \textbf{Descrizione}: parametro opzionale, se non vuoto identifica una delle metriche con cui effettuare confronto.
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ cat : String}}
+							\begin{description}
+								\item \textbf{Descrizione}: parametro che identifica la categoria della/e metrica/metriche.
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ type : String}}
+							\begin{description}
+								\item \textbf{Descrizione}: parametro che identifica il tipo della/e metrica/metriche.
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ graphs : Array di oggetti JSON}}
+							\begin{description}
+								\item \textbf{Descrizione}: contiene i grafici che devono essere visualizzati in un JSON della forma:
+								\begin{verbatim}
+									    {
+									        desc: 'Descrizione del grafico',
+									        data: codice HTML per generare il grafico
+									     }
+								\end{verbatim}
+							\end{description}
 					\end{itemize}
 
 				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{- getGraphs: Array di oggetti JSON}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: metodo per chiamare i metodi di RecipeService per la creazione di grafici. Ritorna un array di JSON nella forma descritta per l'attributo graphs.
 							\end{description}
 
 					\end{itemize}
 
 				\item \textbf{Servizi AngularJS utilizzati}:
 					\begin{itemize}
-						\item TODO
+						\item \$stateParams
 					\end{itemize}
 
 			\end{itemize}
@@ -819,26 +844,30 @@ Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'ap
 
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{+ graphs : Array di oggetti JSON}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: contiene i grafici che devono essere visualizzati in un JSON della forma:
+								\begin{verbatim}
+									    {
+									        desc: 'Descrizione del grafico',
+									        data: codice HTML per generare il grafico
+									     }
+								\end{verbatim}
 							\end{description}
 
 					\end{itemize}
 
 				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{TODO}}
+						\item \textcolor{forestgreen}{\texttt{- getFavouriteGraphs: Array di oggetti JSON}}
 							\begin{description}
-								\item \textbf{Descrizione}: TODO
+								\item \textbf{Descrizione}: metodo per chiamare i metodi di RecipeService per ottenere i grafici favoriti. Ritorna un array di JSON nella forma descritta per l'attributo graphs.
 							\end{description}
 
+
 					\end{itemize}
 
-				\item \textbf{Servizi AngularJS utilizzati}:
-					\begin{itemize}
-						\item TODO
-					\end{itemize}
+				\item \textbf{Servizi AngularJS utilizzati}: N/A
 
 			\end{itemize}
 		% subparagraph client_controller_user_favouritesctrl (end)
