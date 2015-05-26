@@ -123,131 +123,134 @@ ROF4.1 & client::controller::user::HomeCtrl \newline client::controller::user::M
 \hline
 ROF4.1.1 & client::view::user::MenuMain \newline client::model::services::AuthServiceAdapter  \\
 \hline
-ROF4.1.1.1 & server::db::app\_data::user::UserModel \newline server::endpoints::api::private::OAuthApi \newline client::model::services::TO DO \newline client::view::public:: TO DO \newline client::view::user::TO DO  \\
+ROF4.1.1.1 & server::db::app\_data::user::UserModel \newline server::endpoints::api::private::OAuthApi \newline client::model::services::AuthService \newline client::view::public:.Login \newline client::view::user::Home  \\
 \hline
-ROF4.1.2 & client::model::services::TO DO \newline client::view::public::TO DO \newline client::controller::public::TO DO \\
+ROF4.1.2 & client::model::services::AuthService \newline client::view::public:.Login \newline client::view::user::Home  \\
 \hline
-ROF5 & client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5 & client::view::user::Recipe \newline client::controller::user::RecipeCtrl \\
 \hline
-ROF5.1 & server::db::app\_data::recipe::RecipeModel \newline server::endpoints::api::public::RecipeApi \newline server::processor::commands::recipe::GetRecipeListCommand \newline client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO\\
+ROF5.1 & server::db::app\_data::recipe::RecipeModel \newline server::endpoints::api::public::RecipeApi \newline server::processor::commands::recipe::GetRecipeListCommand \newline client::model::services::RecipeService \newline client::model::services::DataManagerService \newline client::view::user::Recipe \newline client::controller::user::RecipeCtrl \\
 \hline
-ROF5.1.1 & server::db::app\_data::recipe::RecipeModel \newline server::endpoints::api::public::RecipeApi \newline server::processor::commands::recipe::GetRecipeListCommand \newline client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO\\
+ROF5.1.1 & server::db::app\_data::recipe::RecipeModel \newline server::endpoints::api::public::RecipeApi \newline server::processor::commands::recipe::GetRecipeListCommand \newline client::model::services::RecipeService \newline client::view::user::Recipe \newline client::controller::user::RecipeCtrl \\
 \hline
-ROF5.1.2 & client::view::user::TO DO \\
+ROF5.1.2 & client::view::user::Recipe \\
 \hline
-RFF5.1.3 & client::view::user::TO DO \\
+RFF5.1.3 & client::view::user::Recipe \\
 \hline
-RFF5.1.3.1 & server::db::app\_data::recipe::RatingModel \newline server::endpoints::api::private::RecipePrivateApi \newline server::processor::commands::recipe::RateRecipeCommand \newline client::model::services::TO DO\\
+RFF5.1.3.1 & server::db::app\_data::recipe::RatingModel \newline server::endpoints::api::private::RecipePrivateApi \newline server::processor::commands::recipe::RateRecipeCommand \newline client::controller::user::RecipeCtrl \\
 \hline
-RFF5.1.3.2 & client::view::user::TO DO \newline client::controller::public::TO DO \\
+RFF5.1.3.2 & client::view::user::Recipe \newline client::controller::user::RecipeCtrl \\
 \hline
-ROF5.2 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.2 & client::model::services::RecipeService \newline client::model::services::DataManagerService \newline client::view::user::Metrics \newline client::controller::user::MetricsCtrl \\
 \hline
-ROF5.2.1 & client::view::user::TO DO \\
+ROF5.2.1 & client::view::user::Metrics \\
 \hline
-ROF5.2.1.1 & server::dbraw\_data::AbsRawData \\
+ROF5.2.1.1 & server::db::raw\_data::AbsRawData \\
 \hline
-ROF5.2.1.2 & server::dbraw\_data::AbsRawData \newline server::endpoints::api::public::TwMetricsApi \newline server::endpoints::api::public::FbMetricsApi \newline server::endpoints::api::public::IgMetricsApi \newline server::processor::commands::social::AbsSocialCommand \newline client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.2.1.2 & server::db::raw\_data::AbsRawData \newline server::endpoints::api::public::TwMetricsApi \newline server::endpoints::api::public::FbMetricsApi \newline server::endpoints::api::public::IgMetricsApi \newline server::processor::commands::social::AbsSocialCommand \newline client::view::user::Metrics \newline client::controller::user::MetricsCtrl \\
 \hline
-ROF5.2.1.3 & client::view::user::TO DO \\
+ROF5.2.1.3 & client::view::user::Metrics \\
 \hline
-ROF5.2.2 & server::endpoints::api::public::TwMetricsApi \newline server::endpoints::api::public::FbMetricsApi \newline server::endpoints::api::public::IgMetricsApi \newline server::processor::commands::social::AbsSocialCommand \newline client::view::user::TO DO \newline client::controller::user::TO DO\\
+ROF5.2.2 & server::endpoints::api::public::TwMetricsApi \newline server::endpoints::api::public::FbMetricsApi \newline server::endpoints::api::public::IgMetricsApi \newline server::processor::commands::social::AbsSocialCommand \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.3 & server::processor::commands::social::AbsFbCommand \newline client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO\\
+ROF5.3 & server::processor::commands::social::AbsFbCommand \newline client::model::services::ChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl\\
 \hline
-ROF5.3.1 & client::model::services::TO DO \\
+ROF5.3.1 & client::model::services::LineChartCreator \newline client::model::services::BarChartCreator \newline client::model::services::MapChartCreator \newline client::model::services::PieChartCreator \\
 \hline
-ROF5.3.1.1 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.3.1.1 & client::model::services::LineChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.3.1.2 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.3.1.2 & client::model::services::PieChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.3.1.3 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.3.1.3 & client::model::services::PieChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.3.1.4 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.3.1.4 & client::model::services::PieChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.3.1.5 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.3.1.5 & client::model::services::MapChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.3.1.6 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.3.1.6 & client::model::services::BarChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.4 & server::processor::commands::social::AbsTwCommand \newline client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.4 & server::processor::commands::social::AbsTwCommand \newline client::model::services::ChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.4.1 & client::model::services::TO DO \\
+ROF5.4.1 & client::model::services::LineChartCreator \newline client::model::services::BarChartCreator \newline client::model::services::MapChartCreator \newline client::model::services::PieChartCreator \newline client::model::services::RadarChartCreator \\
 \hline
-ROF5.4.1.1 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.4.1.1 & client::model::services::BarChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.4.1.2 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.4.1.2 & client::model::services::LineChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.4.1.3 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.4.1.3 & client::model::services::MapChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.4.1.4 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.4.1.4 & client::model::services::LineChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.4.1.5 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.4.1.5 & client::model::services::PieChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.4.1.6 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.4.1.6 & client::model::services::RadarChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.4.1.7 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.4.1.7 & client::model::services::PieChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.5 & server::processor::commands::social::AbsIgComman \newline client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.5 & server::processor::commands::social::AbsIgCommand \newline client::model::services::ChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.5.1 & client::model::services::TO DO \\
+ROF5.5.1 & client::model::services::LineChartCreator \newline client::model::services::BarChartCreator \newline client::model::services::MapChartCreator \newline client::model::services::PieChartCreator \newline client::model::services::RadarChartCreator \\
 \hline
-ROF5.5.1.1 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.5.1.1 & client::model::services::BarChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.5.1.2 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.5.1.2 & client::model::services::LineChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.5.1.3 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.5.1.3 & client::model::services::LineChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.5.1.4 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.5.1.4 & client::model::services::LineChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.5.1.5 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.5.1.5 & client::model::services::LineChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.5.1.6 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.5.1.6 & client::model::services::RadarChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.5.1.7 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.5.1.7 & client::model::services::LineChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.5.1.8 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.5.1.8 & client::model::services::LineChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.5.1.9 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.5.1.9 & client::model::services::MapChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.5.1.10 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.5.1.10 & client::model::services::PieChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.6 & client::model::data::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+ROF5.6 & client::view::user::Compare \newline client::controller::user::CompareCtrl \\
 \hline
-ROF5.6.1 & client::view::user::TO DO \\
+ROF5.6.1 & client::view::user::Compare \\
 \hline
-ROF5.6.2 & server::endpoints::api::public::TwMetricsApi \newline server::endpoints::api::public::FbMetricsApi \newline server::endpoints::api::public::IgMetricsApi \newline client::view::user::TO DO \\
+ROF5.6.2 & server::endpoints::api::public::TwMetricsApi \newline server::endpoints::api::public::FbMetricsApi \newline server::endpoints::api::public::IgMetricsApi \newline client::view::user::Compare \\
 \hline
-ROF5.6.2.1 & client::view::user::TO DO \newline server::dbraw\_data::fbraw\_FbPage \newline server::dbraw\_data::fbraw\_FbEvent \\
+ROF5.6.2.1 & client::view::user::Compare \newline client::model::service::RecipeService \newline server::db::raw\_data::fb::raw\_FbPage \newline server::db::raw\_data::fb::raw\_FbEvent \\
 \hline
-ROF5.6.2.2 & client::view::user::TO DO \newline server::dbraw\_data::twraw\_TwUser \newline server::dbraw\_data::twraw\_TwHashtag \\
+ROF5.6.2.2 & client::view::user::Compare \newline client::model::service::RecipeService \newline server::db::raw\_data::tw::raw\_TwUser \newline server::db::raw\_data::tw::raw\_TwHashtag \\
 \hline
-ROF5.6.2.3 & client::view::user::TO DO \newline server::dbraw\_data::igraw\_IgUser \newline server::dbraw\_data::igraw\_IgHashtag \\
+ROF5.6.2.3 & client::view::user::Compare \newline client::model::service::RecipeService \newline server::db::raw\_data::ig::raw\_IgUser \newline server::db::raw\_data::ig::raw\_IgHashtag \\
 \hline
-ROF5.6.3 & client::view::user::TO DO \newline server::endpoints::api::public::RecipeApi \newline server::processor::commands::social::AbsFbCommand \newline server::processor::commands::social::AbsTwCommand \newline server::processor::commands::social::AbsIgCommand\\
+ROF5.6.3 & client::view::user::Compare \newline client::model::service::RecipeService \newline client::model::service::DataManagerService \newline server::endpoints::api::public::RecipeApi \newline server::processor::commands::social::AbsFbCommand \newline server::processor::commands::social::AbsTwCommand \newline server::processor::commands::social::AbsIgCommand\\
 \hline
-ROF5.6.3.1 & client::view::user::TO DO \\
+ROF5.6.3.1 & client::view::user::Compare \\
 \hline
-ROF5.6.4 & client::model::services::TO DO \newline client::view::user:: TO DO \newline server::endpoints::api::public::FbMetricsApi \newline server::endpoints::api::public::TwMetricsApi \newline server::endpoints::api::public::IgMetricsApi \\
+ROF5.6.4 & client::controller::user::CompareCtrl \newline client::view::user::Compare \newline server::endpoints::api::public::FbMetricsApi \newline server::endpoints::api::public::TwMetricsApi \newline server::endpoints::api::public::IgMetricsApi \\
 \hline
-ROF5.6.4.1 & client::view::user::TO DO \newline client::controller::user::TO DO \newline server::endpoints::api::public::RecipeApi \\
+ROF5.6.4.1 & client::view::user::Compare \newline client::controller::user::CompareCtrl \newline client::model::service::ChartCreator \newline client::model::service::DataManagerService \newline server::endpoints::api::public::RecipeApi \\
 \hline
-ROF5.6.4.1.1 & client::model::services::TO DO \newline client::view::user:: TO DO \newline server::endpoints::api::public::FbMetricsApi \\
+ROF5.6.4.1.1 & client::model::services::PieChartCreator \newline client::view::user::Compare \newline client::controller::user::CompareCtrl \\
 \hline
-ROF5.6.4.1.2 & client::model::services::TO DO \newline client::view::user:: TO DO \newline server::endpoints::api::public::FbMetricsApi \\
+ROF5.6.4.1.2 & client::model::services::LineChartCreator \newline client::model::services::BarChartCreator \newline client::model::services::PieChartCreator \newline client::view::user::Compare \newline client::controller::user::CompareCtrl \\
 \hline
-ROF5.6.4.1.3 & client::model::services::TO DO \newline client::view::user:: TO DO \newline server::endpoints::api::public::TwMetricsApi \\
+ROF5.6.4.1.3 & client::model::services::LineChartCreator \newline client::model::services::BarChartCreator \newline client::model::services::PieChartCreator \newline client::view::user::Compare \newline server::endpoints::api::public::TwMetricsApi \\
 \hline
-ROF5.6.4.1.4 & client::model::services::TO DO \newline client::view::user:: TO DO \newline server::endpoints::api::public::TwMetricsApi \\
+ROF5.6.4.1.4 & client::model::services::LineChartCreator \newline client::model::services::BarChartCreator \newline client::model::services::PieChartCreator \newline client::view::user::Compare \newline server::endpoints::api::public::TwMetricsApi \\
 \hline
-ROF5.6.4.1.5 & client::model::services::TO DO \newline client::view::user:: TO DO \newline server::endpoints::api::public::IgMetricsApi \\
+ROF5.6.4.1.5 & client::model::services::LineChartCreator \newline client::model::services::BarChartCreator \newline client::model::services::PieChartCreator \newline client::view::user::Compare \newline server::endpoints::api::public::IgMetricsApi \\
 \hline
-ROF5.6.4.1.6 & client::model::services::TO DO \newline client::view::user:: TO DO \newline server::endpoints::api::public::IgMetricsApi \\
+ROF5.6.4.1.6 & client::model::services::LineChartCreator \newline client::model::services::BarChartCreator \newline client::model::services::PieChartCreator \newline client::view::user::Compare \newline server::endpoints::api::public::IgMetricsApi \\
 \hline
-ROF5.6.4.2 & client::model::services::TO DO \newline client::view::user::TO DO\\
+ROF5.6.4.2 & client::model::services::ChartCreator \newline client::view::user::Compare \\
 \hline
-ROF5.6.4.3 & client::model::services::TO DO \newline client::view::user:: TO DO \newline server::endpoints::api::public::FbMetricsApi \newline server::endpoints::api::public::TwMetricsApi \newline server::endpoints::api::public::IgMetricsApi \\
+ROF5.6.4.3 & client::controller::user::CompareCtrl \newline client::view::user::Compare \newline server::endpoints::api::public::FbMetricsApi \newline server::endpoints::api::public::TwMetricsApi \newline server::endpoints::api::public::IgMetricsApi \\
 \hline
-RDF6 & client::model::services::TO DO \newline server::endpoints::api::private::FavoritesApi \newline server::processor::commands::user::AddFavoritesCommand \newline server::processor::commands::user::DeleteFavoritesCommand \\
+
+
+
+RDF6 & client::model::services::TO DO \newline server::endpoints::api::private::FavouritesApi \newline server::processor::commands::user::AddFavouritesCommand \newline server::processor::commands::user::DeleteFavouritesCommand \\
 \hline
 RDF6.1 & client::model::services::TO DO \newline client::view::user::TO DO \\
 \hline
@@ -263,7 +266,7 @@ RDF6.3 & client::model::services::TO DO \newline client::view::user::TO DO \newl
 \hline
 RDF6.3.1 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
 \hline
-RDF6.4 & server::db::app\_data::user::FavoritesModel \\
+RDF6.4 & server::db::app\_data::user::FavouritesModel \\
 \hline
 RFF7 & client::model::data::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \newline server::db::app\_data::recipe::RecipeRequestModel \newline server::endpoints::api::private::RecipeRequestApi \newline server::processor::commands::requests::AddRequestCommand \\
 \hline
