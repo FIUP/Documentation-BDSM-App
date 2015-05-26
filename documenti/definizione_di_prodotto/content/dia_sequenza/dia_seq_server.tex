@@ -13,7 +13,7 @@
 
 % CONTENUTO DEL CAPITOLO
 
-\subsection{Diagrammi di sequenza del server} % (fold)
+\subsection{Server} % (fold)
 \label{ssub:diagrammi_di_sequenza_server}
 Quelli che seguono sono i diagrammi di sequenza che rappresentano le più rilaventi interazioni tra i vali moduli presenti nel livello server. Per quanto riguarda il client, fare riferimento alla sezione \ref{ssub:diagrammi_di_sequenza_client}.
 
@@ -27,11 +27,31 @@ Quelli che seguono sono i diagrammi di sequenza che rappresentano le più rilave
 
     \begin{itemize}
         \item \textbf{UpdateRecipeTask}: classe implementata secondo gli standard di Google App Engine, definisce il metodo statico \texttt{get()} attivato ad ogni avvio del componente Cron di Google. \texttt{UpdateRecipeTask} istanzia la classe \texttt{MinerManager} invocando il metodo \texttt{schedule\_fetchers(recipe\_id\_list)} per effettuare l'aggiornamento dei dati grezzi;
-        \item \textbf{MinerScheduler}: definisce il metodo \texttt{schedule\_fetchers(recipe\_id\_list)} che cicla la lista di id delle Recipe scadute invocando per ognuna il metodo \texttt{update\_fb\_metrics(id)} per ogni metrica Facebook contenuta nella Recipe in questione. Tale metodo avvia un fetcher differente a seconda del tipo di metrica ricavata. Tale procedimento avviene sequenzialmente anche per gli altri social tramite i metodi \texttt{update\_tw\_metrics(id)} e \texttt{update\_ig\_metrics(id)}
-        \item \textbf{FbPageFetcher}: classe che viene istanziata ed avviata tramite il metodo \texttt{run()} per avviare l'aggiornamento dei dati relativi ad una pagina Facebook.
+        \item \textbf{MinerScheduler}: definisce il metodo \texttt{schedule\_fetchers(recipe\_id\_list)} che cicla la lista di id delle Recipe scadute invocando per ognuna il metodo \texttt{update\_fb\_metrics(id)} per ogni metrica Facebook contenuta nella Recipe in questione. Tale metodo avvia un fetcher differente a seconda del tipo di metrica ricavata. Tale procedimento avviene sequenzialmente anche per gli altri social tramite i metodi \texttt{update\_tw\_metrics(id)} e \texttt{update\_ig\_metrics(id)};
+        \item \textbf{FbPageFetcher}: classe che viene istanziata ed avviata tramite il metodo \texttt{run()} per avviare l'aggiornamento dei dati relativi ad una pagina Facebook;
         \item \textbf{FbEventFetcher}: classe che viene istanziata ed avviata tramite il metodo \texttt{run()} per avviare l'aggiornamento dei dati relativi ad un evento Facebook.
     \end{itemize}
 
+
+	\subsubsection{Miner Facebook} % (fold)
+    \label{ssub:miner_facebook}
+    Il seguente diagramma descrive l'aggiornamento dei dati, relativi ad una metrica che descrive una pagina di Facebook, a seguito della chiamata del cron che richiede l'aggiornamento della Recipe a cui la metrica appartiene. Tale sequenza verrà attivata ogni qualvolta una metrica che descrive una pagina di Facebook dovrà essere aggiornata. \newline
+
+    \begin{figure}[!htbp]
+		\centering
+			\centerline{\includegraphics[scale=0.4]{./images/sequence_diagram/fb_page_fetcher.pdf}}
+		\caption{Diagramma di sequenza - Miner Facebook}
+	\end{figure}
+
+
+    \begin{itemize}
+        \item \textbf{FbPageFetcher}: classe richiamata dalla classe \texttt{MinerScheduler} e contenente i metodi \texttt{get\_data} e \texttt{get\_trend\_data}. Il primo metodo si occupa di recuperare i dati statici di una pagina Facebook se non ancora presente nel database; il secondo metodo si occupa di recuperare i dati dinamici della pagina;
+        \item \textbf{RawFbPage}: classe utilizzata dal metodo \texttt{get\_data} della classe \texttt{FbPageFetcher} per salvare i dati statici di una pagina Facebook tramite il metodo \texttt{put};
+        \item \textbf{RawFbPageTrend}: classe utilizzata dal metodo \texttt{get\_trend\_data} della classe \texttt{FbPageFetcher} per salvare i dati dinamici di una pagina Facebook tramite il metodo \texttt{put};
+        \item \textbf{PostCounter}: classe utilizzata dal metodo \texttt{get\_trend\_data} della classe \texttt{FbPageFetcher} per effettuare il conteggio dei post di una pagina nell'arco di tre giorni e per calcolarsi i vari trend relativi ai post;
+        \item \textbf{CommentCounter}: classe utilizzata dal metodo \texttt{action} della classe \texttt{PostCounter} per effettuare il conteggio dei commenti in un post tramite il metodo \texttt{count};
+        \item \textbf{RawFbPostTrend}: classe utilizzata dal metodo \texttt{get\_trend\_data} della classe \texttt{FbPageFetcher} per salvare i dati dinamici relativi ai post all'interno di una pagina Facebook tramite il metodo \texttt{put}.
+    \end{itemize}
 
 
 % section diagrammi_di_sequenza_server (end)
