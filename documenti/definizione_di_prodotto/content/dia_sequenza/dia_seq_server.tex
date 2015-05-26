@@ -75,4 +75,23 @@ Quelli che seguono sono i diagrammi di sequenza che rappresentano le più rileva
         \item \textbf{UserResponse}: classe utilizzata dal metodo \texttt{login()} della classe \texttt{OAuthApi} per ritornare la risposta al client.
     \end{itemize}
 
+
+	\subsubsection{Recipe List API} % (fold)
+    \label{ssub:recipe_list_api}
+    Il seguente diagramma descrive il funzionamento del servizio REST offerto dal sistema e utile ad ottenere la lista di tutte le Recipe presenti nel sistema. Il client tramite il metodo \texttt{get\_recipe\_list()} della classe \texttt{DataManagerService} utilizza il servizio REST definito nella classe \texttt{MetricApi}. \newline
+
+    \begin{figure}[!htbp]
+		\centering
+			\centerline{\includegraphics[angle=90, scale=0.4]{./images/sequence_diagram/recipe_list_api.pdf}}
+		\caption{Diagramma di sequenza - Recipe List API}
+	\end{figure}
+
+
+    \begin{itemize}
+        \item \textbf{MetricApi}: classe utilizzata dal client attraverso il metodo \texttt{get\_recipe\_list()} della classe \texttt{DataManagerService}. Si occupa di creare un'istanza della classe \texttt{RequestHandler} dopodiché richiama il processor passandogli il tipo di richiesta;
+        \item \textbf{RequestHandler}: classe che rappresenta un singleton che viene istanziato dal metodo \texttt{get\_instance()} della classe \texttt{MetricApi}. Attraverso il metodo \texttt{dispatch\_request()} riceve il tipo di richiesta da soddisfare;
+        \item \textbf{CommandDispatcher}: classe che riceve il tipo di richiesta da soddisfare dalla classe \texttt{RequestHandler}. Si occupa di reindirizzare tale richiesta al command che si occupa di prelevare tutte le Recipe dal sistema;
+        \item \textbf{GetRecipeListCommand}: classe che si occupa di soddisfare la richiesta di prelievo di tutte le Recipe ricevuta dal metodo \texttt{execute()} della classe \texttt{CommandDispatcher} ritornando una lista contenente i dettagli di tutte le Recipe presenti nel sistema;
+        \item \textbf{RecipeListResponse}: classe utilizzata dal metodo \texttt{get\_recipe\_list()} della classe \texttt{MetricApi} per ritornare la risposta al client.
+    \end{itemize}
 % section diagrammi_di_sequenza_server (end)
