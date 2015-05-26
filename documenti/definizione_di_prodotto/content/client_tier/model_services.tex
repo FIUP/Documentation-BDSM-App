@@ -39,18 +39,7 @@
 		\label{subp:client_model_services_authservice}
 			\begin{itemize}
 				\item \textbf{Descrizione}: è la classe di interfaccia per gestire le chiamate al modulo esterno usato per gestire l'autenticazione secondo il pattern \emph{Adapter} ;
-				\item \textbf{Utilizzo}: i metodi di questa classe saranno invocati quando un utente effettua la registrazione al servizio o effettua un login/logout;
-				\item \textbf{Relazioni con altre classi}:
-					\begin{itemize}
-						\item client::controller::public::LoginCtrl
-						\item client::controller::public::RegisterCtrl
-						\item client::controller::user::LogoutCtrl
-					\end{itemize}
-				\item \textbf{Attributi}: N/A
-				\item \textbf{Metodi}:
-					\begin{itemize}
-						\item public ourApiName() : void
-					\end{itemize}
+				\item \textbf{Utilizzo}: Questa classe non è stata implementata in quanto non esistono interfacce in JavaScript, e grazie alla Dependency Injection è stato  possibile iniettare direttamente la classe AuthServiceAdapter dove è stato necessario.
 			\end{itemize}
 		% subparagraph client_model_services_authservicetarget (end)
 
@@ -58,11 +47,7 @@
 		\label{subp:client_model_services_authservice}
 			\begin{itemize}
 				\item \textbf{Descrizione}: è la classe \emph{Adapter} che permette di invocare i metodi del modulo di autenticazione esterno invocando i metodi come presentati in AuthServiceTarget;
-				\item \textbf{Utilizzo}:  i metodi di questa classe saranno invocati quando un utente effettua la registrazione al servizio o effettua un login/logout;
-				\item \textbf{Classi ereditate}:
-					\begin{itemize}
-						\item client::model::services::AuthServiceTarget
-					\end{itemize}
+				\item \textbf{Utilizzo}:  i metodi di questa classe saranno invocati quando un utente effettua la registrazione al servizio o effettua un login/logout. Questa classe è stata implementata col nome più semplice di AuthService in quanto non è necessario distinguerla dalla classe Target (non implementata);
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item client::controller::public::LoginCtrl
@@ -72,9 +57,48 @@
 					\end{itemize}
 				\item \textbf{Attributi}: N/A
 				\item \textbf{Metodi}:
-					\begin{itemize}
-						\item public ourApiName() : void
-					\end{itemize}
+				\begin{itemize}
+					\item \textcolor{forestgreen}{\texttt{+ login(credentials)}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo per effettuare il login. Invia al server il JSON credentials, nella forma:
+								\begin{verbatim}
+									{
+									    email: "info@mashup-unipd.it",
+										pwd: 'password'
+									}
+								\end{verbatim}  
+					\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ register(credentials)}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo per effettuare la registrazione. Invia al server il JSON credentials, nella forma:
+								\begin{verbatim}
+									{
+									    username: "MashUp",
+									    email: "info@mashup-unipd.it",
+										pwd: 'password'
+									}
+								\end{verbatim}  
+					\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ deleteAccount()}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo per eliminare l'account che invia la richiesta al server. 
+					\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ isLogged()}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo che restituisce un booleano true se l'utente è autenticato al servizio.
+					\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ updateSettingsAccount(credToChange)}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo per cambiare le proprie credenziali. Invia al server un JSON nella forma seguente:
+								\begin{verbatim}
+									{
+									    username: "MashUp",
+									    email: "info@mashup-unipd.it",
+										pwd: 'password'
+									}
+								\end{verbatim}  
+					\end{description}
+				\end{itemize}	
 			\end{itemize}
 		% subparagraph client_model_services_authserviceadapter (end)
 
@@ -82,7 +106,7 @@
 		\subparagraph{client::model::services::RecipeService} % (fold)
 		\label{subp:client_model_services_recipeservice}
 			\begin{itemize}
-				\item \textbf{Descrizione}: p la classe che racchiude i metodi per reperire i dati relativi alle Recipe, siano essi salvati in locale o da recuperare dal server, inoltre gestisce l'invio di richieste di Recipe al server;
+				\item \textbf{Descrizione}: è la classe che racchiude i metodi per reperire i dati relativi alle Recipe, siano essi salvati in locale o da recuperare dal server, inoltre gestisce l'invio di richieste di Recipe al server;
 				\item \textbf{Utilizzo}: i suoi metodi vengono invocati ogni volta che sia necessario avere dei dati relativi a una o più Recipe per un utente non amministratore, o se un utente non amministratore desidera inviare una richiesta di Recipe;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
@@ -94,7 +118,41 @@
 						\item client::controller::user::CompareCtrl
 					\end{itemize}
 				\item \textbf{Attributi}: N/A
-				\item \textbf{Metodi}: N/A
+				\item \textbf{Metodi}:
+				\begin{itemize}
+					\item \textcolor{forestgreen}{\texttt{+ getRecipeList()}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo per ottenere la lista delle recipe disponibili. 
+					\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ getMetricsList(idRecipe)}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo per ottenere la lista delle metriche dato l'id di una recipe.
+					\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ getMetricType()}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo che restituisce la lista delle categorie presenti (i vari social). 
+					\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ getMetricTypeNode(typeMetric)}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo che la lista dei tipi di metriche data la categoria.
+					\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ createRecipeRequest(recipeReq)}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo per inviare una nuova richiesta di ricetta. Invia un JSON nella forma descritta dalla classe RecipeRequestModel.
+					\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ setRecipeRating(idRecipe)}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo per impostare un rating a una recipe e inviare il voto al server.
+					\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ generateViews(metric)}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo che data una metrica (nel formato descritto da MetricModel) restituisce l'html per generare i grafici associati a quella metrica. 
+					\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ generateCompare(metrics)}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo che dato un array di metriche (nel formato descritto da MetricModel) restituisce l'html per generare i grafici di confronto di quelle metriche. 
+					\end{description}
+				\end{itemize}	
 			\end{itemize}
 		% subparagraph client_model_services_recipeservice (end)
 
@@ -115,7 +173,37 @@
 						\item client::controller::admin::InsertRecipeCtrl
 					\end{itemize}
 				\item \textbf{Attributi}: N/A
-				\item \textbf{Metodi}: N/A
+				\item \textbf{Metodi}:
+				\begin{itemize}
+					\item \textcolor{forestgreen}{\texttt{+ getRecipeListAll()}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo per ottenere la lista delle recipe disponibili con tutti i dati ad esse associate (inclusi i ratings). 
+					\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ getListOfRecipesRequest()}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo per ottenere la lista delle richieste di recipe.
+					\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ createRecipe(recipe)}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo per aggiungere una ricetta al sistema (l'argomento è nella forma descritta da RecipeModel). 
+					\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ getMetricTypeNode(typeMetric)}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo che la lista dei tipi di metriche data la categoria.
+					\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ createRecipeRequest(recipeReq)}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo per inviare una nuova richiesta di ricetta. Invia un JSON nella forma descritta dalla classe RecipeRequestModel.
+					\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ discardRecipeRequest(idRecipeRequest)}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo che elimina una richiesta di Recipe (dato il suo id). 
+					\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ approveRecipeRequest(idRecipeRequest)}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo che genera una Recipe come descritta da una richiesta di recipe (di cui è dato l'id), eliminando poi quella richiesta.
+					\end{description}
+				\end{itemize}
 			\end{itemize}
 		% subparagraph client_model_services_recipeadminservice (end)
 
@@ -132,7 +220,32 @@
 						\item client::controller::user::SettingsCtrl
 					\end{itemize}
 				\item \textbf{Attributi}: N/A
-				\item \textbf{Metodi}: N/A
+				\item \textbf{Metodi}:
+				\begin{itemize}
+					\item \textcolor{forestgreen}{\texttt{+ getFavourites()}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo che restituisce la lista dei grafici favoriti. 
+					\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ addFavourite(graph)}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo per aggiungere ai favoriti un grafico. Riceve un JSON nella forma:
+								\begin{verbatim}
+									{
+									    metrics: array di MetricModel,
+									    kind: JSON nella forma descritta da TypeView
+									}
+								\end{verbatim}  
+					\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ getAccessToken(idUser)}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo per generare un token di accesso alle api. Prende come argomento l'id dell'utente per cui generare il token.
+					\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ deleteAccessToken(idUser)}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo che elimina il token generato per l'utente identificato da idUser.
+					\end{description}
+					
+				\end{itemize}
 			\end{itemize}
 		% subparagraph client_model_services_userservice (end)
 
@@ -152,7 +265,19 @@
 						\item client::controller::user::UserConfigCtrl
 					\end{itemize}
 				\item \textbf{Attributi}: N/A
-				\item \textbf{Metodi}: N/A
+				\item \textbf{Metodi}:
+				\item \textcolor{forestgreen}{\texttt{+ getListOfUsers()}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo per ottenere la lista degli utenti.
+					\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ editUserPermissions(idUser)}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo per cambiare i permessi di un utente.
+					\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ deleteUserAccount(idUser)}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo per eliminare un utente.
+					\end{description}
 				\end{itemize}
 		% subparagraph client_model_services_useradminservice (end)
 
@@ -180,8 +305,23 @@
 				\item \textbf{Attributi}: N/A
 				\item \textbf{Metodi}: 
 					\begin{itemize}
-						\item protected templateCreazioneGrafico() : JSONObject
-						\item protected formattaDati() : JSONObject
+						\item \textcolor{forestgreen}{\texttt{+ chartGeneration(data)}}
+						\begin{description}
+							\item \textbf{Descrizione}: metodo che definisce le operazioni comuni di generazione di un grafico. Riceve com aargomento un JSON nella forma:
+							\begin{verbatim}
+									{
+									    desc: "descrizione del grafico",
+									    datasets: array di array di numeri,
+									    labels: array di stringhe,
+									    grouping: "weekly/monthly/year/per post" 
+									}
+								\end{verbatim}  
+						\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ dataFormat(data)}}
+						\begin{description}
+							\item \textbf{Descrizione}: metodo per portare i dati nel formato corretto per lo specifico tipo di grafico. Riceve un JSON nella forma descritta per il metodo chartGeneration.
+						\end{description}
+
 					\end{itemize}
 			\end{itemize}
 		% subparagraph chartcreator (end)
@@ -207,9 +347,10 @@
 					\end{itemize}
 				\item \textbf{Attributi}: N/A
 				\item \textbf{Metodi}: 
-					\begin{itemize}
-						\item protected formattaDati() : JSONObject
-					\end{itemize}
+					\item \textcolor{forestgreen}{\texttt{+ dataFormat(data)}}
+						\begin{description}
+							\item \textbf{Descrizione}: metodo per portare i dati nel formato corretto per un line chart. Riceve un JSON nella forma descritta per il metodo chartGeneration.
+						\end{description}
 			\end{itemize}
 		% subparagraph linechartcreator (end)
 
@@ -235,9 +376,10 @@
 					\end{itemize}
 				\item \textbf{Attributi}: N/A
 				\item \textbf{Metodi}: 
-					\begin{itemize}
-						\item protected formattaDati() : JSONObject
-					\end{itemize}
+					\item \textcolor{forestgreen}{\texttt{+ dataFormat(data)}}
+						\begin{description}
+							\item \textbf{Descrizione}: metodo per portare i dati nel formato corretto per un bar chart. Riceve un JSON nella forma descritta per il metodo chartGeneration.
+						\end{description}
 			\end{itemize}
 		% subparagraph barchartcreator (end)
 
@@ -262,9 +404,10 @@
 					\end{itemize}
 				\item \textbf{Attributi}: N/A
 				\item \textbf{Metodi}: 
-					\begin{itemize}
-						\item protected formattaDati() : JSONObject
-					\end{itemize}
+					\item \textcolor{forestgreen}{\texttt{+ dataFormat(data)}}
+						\begin{description}
+							\item \textbf{Descrizione}: metodo per portare i dati nel formato corretto per un pie chart. Riceve un JSON nella forma descritta per il metodo chartGeneration.
+						\end{description}
 			\end{itemize}
 		% subparagraph piechartcreator (end)
 
@@ -289,9 +432,10 @@
 					\end{itemize}
 				\item \textbf{Attributi}: N/A
 				\item \textbf{Metodi}: 
-					\begin{itemize}
-						\item protected formattaDati() : JSONObject
-					\end{itemize}
+					\item \textcolor{forestgreen}{\texttt{+ dataFormat(data)}}
+						\begin{description}
+							\item \textbf{Descrizione}: metodo per portare i dati nel formato corretto per un map chart. Riceve un JSON nella forma descritta per il metodo chartGeneration.
+						\end{description}
 			\end{itemize}
 		% subparagraph mapchartcreator (end)
 
@@ -316,9 +460,10 @@
 					\end{itemize}
 				\item \textbf{Attributi}: N/A
 				\item \textbf{Metodi}: 
-					\begin{itemize}
-						\item protected formattaDati() : JSONObject
-					\end{itemize}
+					\item \textcolor{forestgreen}{\texttt{+ dataFormat(data)}}
+						\begin{description}
+							\item \textbf{Descrizione}: metodo per portare i dati nel formato corretto per un radar chart. Riceve un JSON nella forma descritta per il metodo chartGeneration.
+						\end{description}
 			\end{itemize}
 		% subparagraph radarchartcreator (end)
 
@@ -335,7 +480,25 @@
 						\item client::model::services::UserAdminService
 					\end{itemize}
 				\item \textbf{Attributi}: N/A
-				\item \textbf{Metodi}: N/A
+				\item \textbf{Metodi}: 
+				\begin{itemize}
+					\item \textcolor{forestgreen}{\texttt{+ getRestCall(restCall)}}
+						\begin{description}
+							\item \textbf{Descrizione}: metodo che controlla se i risultati di una chiamata rest passata per argomento sono presenti in locale, e se non lo sono chiama il server restituendo comunque i dati richiesti.
+						\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ postRestCall(data)}}
+						\begin{description}
+							\item \textbf{Descrizione}: metodo per inviare chiamate Rest di tipo post al Server. Prima di aggiornare i dati sul Server aggiorna prima i dati eventualmente presenti in locale.
+						\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ putRestCall(data)}}
+						\begin{description}
+							\item \textbf{Descrizione}: metodo per inviare chiamate Rest di tipo put al Server. Prima di aggiornare i dati sul Server aggiorna prima i dati eventualmente presenti in locale.
+						\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ deleteRestCall(data)}}
+						\begin{description}
+							\item \textbf{Descrizione}: metodo per inviare chiamate Rest di tipo delete al Server. Prima di aggiornare i dati sul Server aggiorna prima i dati eventualmente presenti in locale.
+						\end{description}
+				\end{itemize}		
 			\end{itemize}
 		% subparagraph managerdataexpirationdate (end)
 
