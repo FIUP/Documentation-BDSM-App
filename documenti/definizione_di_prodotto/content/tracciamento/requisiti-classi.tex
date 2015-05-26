@@ -53,7 +53,7 @@ ROF2.4.1 & client::controller::public::LoginCtrl \newline client::view::public::
 \hline
 ROF2.4.2 & client::controller::public::LoginCtrl \newline client::view::public::Login \\
 \hline
-ROF2.5 & client::controller::user::RecipeRoute \newline client::view::user::Home \newline client::view::user::Recipe \\
+ROF2.5 & client::controller::user::HomeRoute \newline client::controller::user::RecipeRoute \newline client::view::user::Home \newline client::view::user::Recipe \\
 \hline
 ROF3 & client::view::user::MenuMain \newline client::view::user::MenuSecond \\
 \hline
@@ -121,11 +121,11 @@ ROF4 & client::view::user::Home \newline client::view::user::MenuMain \newline c
 \hline
 ROF4.1 & client::controller::user::HomeCtrl \newline client::controller::user::MenuMainCtrl \\
 \hline
-ROF4.1.1 & client::view::user::MenuMain \newline client::model::services::AuthServiceAdapter  \\
+ROF4.1.1 & client::view::user::MenuMain \newline client::model::services::AuthServiceTargetAdapter  \\
 \hline
-ROF4.1.1.1 & server::db::app\_data::user::UserModel \newline server::endpoints::api::private::OAuthApi \newline client::model::services::AuthService \newline client::view::public:.Login \newline client::view::user::Home  \\
+ROF4.1.1.1 & server::db::app\_data::user::UserModel \newline server::endpoints::api::private::OAuthApi \newline client::model::services::AuthServiceTarget \newline client::view::public:.Login \newline client::view::user::Home  \\
 \hline
-ROF4.1.2 & client::model::services::AuthService \newline client::view::public:.Login \newline client::view::user::Home  \\
+ROF4.1.2 & client::model::services::AuthServiceTarget \newline client::view::public:.Login \newline client::view::user::Home  \\
 \hline
 ROF5 & client::view::user::Recipe \newline client::controller::user::RecipeCtrl \\
 \hline
@@ -153,7 +153,7 @@ ROF5.2.1.3 & client::view::user::Metrics \\
 \hline
 ROF5.2.2 & server::endpoints::api::public::TwMetricsApi \newline server::endpoints::api::public::FbMetricsApi \newline server::endpoints::api::public::IgMetricsApi \newline server::processor::commands::social::AbsSocialCommand \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-ROF5.3 & server::processor::commands::social::AbsFbCommand \newline client::model::services::ChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl\\
+ROF5.3 & client::model::data::ViewTypeModel \newline server::processor::commands::social::AbsFbCommand \newline client::model::services::ChartCreator \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl\\
 \hline
 ROF5.3.1 & client::model::services::LineChartCreator \newline client::model::services::BarChartCreator \newline client::model::services::MapChartCreator \newline client::model::services::PieChartCreator \\
 \hline
@@ -250,170 +250,173 @@ ROF5.6.4.3 & client::controller::user::CompareCtrl \newline client::view::user::
 
 
 
-RDF6 & client::model::services::TO DO \newline server::endpoints::api::private::FavouritesApi \newline server::processor::commands::user::AddFavouritesCommand \newline server::processor::commands::user::DeleteFavouritesCommand \\
+RDF6 & client::controller::user::FavouritesRoute \newline client::model::services::RecipeService \newline server::endpoints::api::private::FavouritesApi \newline server::processor::commands::user::AddFavouritesCommand \newline server::processor::commands::user::DeleteFavouritesCommand \\
 \hline
-RDF6.1 & client::model::services::TO DO \newline client::view::user::TO DO \\
+RDF6.1 & client::model::services::RecipeService \newline client::model::services::DataManagerService \newline client::view::user::Favourites \newline client::controller::user::FavouritesCtrl \\
 \hline
-RDF6.1.1 & client::model::services::TO DO \newline client::view::user::TO DO \\
+RDF6.1.1 & client::controller::user::FavouritesCtrl \newline client::view::user::Favourites \\
 \hline
-RDF6.2 & client::model::services::TO DO \newline client::view::user::TO DO \\
+RDF6.2 & client::model::services::RecipeService \newline client::model::services::DataManagerService \newline client::view::user::Charts \newline client::controller::user::ChartsCtrl \\
 \hline
-RDF6.2.1 & client::view::user::TO DO \\
+RDF6.2.1 & client::view::user::Charts \\
 \hline
-RDF6.2.2 & client::model::services::TO DO \newline client::view::user::TO DO \newline server::endpoints::api::private::FavouritesApi\\
+RDF6.2.2 & client::model::services::RecipeService \newline client::view::user::Charts \newline client::view::controller::ChartsCtrl \newline server::endpoints::api::private::FavouritesApi \\
 \hline
-RDF6.3 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \newline server::processor::commands::user::DeleteFavoriteCommand \\
+RDF6.3 & client::model::services::RecipeService \newline client::view::user::Favourites \newline client::controller::user::FavouritesCtrl \newline server::processor::commands::user::DeleteFavoriteCommand \\
 \hline
-RDF6.3.1 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \\
+RDF6.3.1 & client::model::services::RecipeService \newline client::view::user::Favourites \newline client::controller::user::FavouritesCtrl \\
 \hline
 RDF6.4 & server::db::app\_data::user::FavouritesModel \\
 \hline
-RFF7 & client::model::data::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO \newline server::db::app\_data::recipe::RecipeRequestModel \newline server::endpoints::api::private::RecipeRequestApi \newline server::processor::commands::requests::AddRequestCommand \\
+RFF7 & client::model::service::RecipeService \newline client::view::user::RecipeRequest \newline client::controller::user::RecipeRequestRoute \newline client::controller::user::RecipeRequestCtrl \newline server::db::app\_data::recipe::RecipeRequestModel \newline server::endpoints::api::private::RecipeRequestApi \newline server::processor::commands::requests::AddRequestCommand \\
 \hline
-RFF7.1 & client::model::data::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO\\
+RFF7.1 &  client::view::user::RecipeRequest \newline client::controller::user::RecipeRequestCtrl \\
 \hline
-RFF7.1.1 & client::view::user::TO DO \newline client::controller::user::TO DO\\
+RFF7.1.1 & client::view::user::RecipeRequest \newline client::controller::user::RecipeRequestCtrl \\
 \hline
-RFF7.1.1.1 & client::model::data::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO\\
+RFF7.1.1.1 & client::view::user::RecipeRequest \newline client::controller::user::RecipeRequestCtrl \\
 \hline
-RFF7.1.1.2 & client::model::data::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO\\
+RFF7.1.1.2 & client::view::user::RecipeRequest \newline client::controller::user::RecipeRequestCtrl \\
 \hline
-RFF7.1.1.3 & client::model::data::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO\\
+RFF7.1.1.3 & client::view::user::RecipeRequest \newline client::controller::user::RecipeRequestCtrl \\
 \hline
-RFF7.1.1.4 & client::model::data::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO\\
+RFF7.1.1.4 & client::view::user::RecipeRequest \newline client::controller::user::RecipeRequestCtrl \newline client::model::services::RecipeService \\
 \hline
-RFF7.1.1.5 & client::model::data::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO\\
+RFF7.1.1.5 & client::view::user::RecipeRequest \newline client::controller::user::RecipeRequestCtrl \newline client::model::services::RecipeService \\
 \hline
-RFF7.1.1.6 & client::model::data::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO\\
+RFF7.1.1.6 & client::view::user::RecipeRequest \newline client::controller::user::RecipeRequestCtrl \newline client::model::services::RecipeService \\
 \hline
-RFF7.1.1.7 & client::model::data::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO\\
+RFF7.1.1.7 & client::view::user::RecipeRequest \newline client::controller::user::RecipeRequestCtrl \newline client::model::services::RecipeService \\
 \hline
-RFF7.1.1.8 & client::model::data::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO\\
+RFF7.1.1.8 & client::view::user::RecipeRequest \newline client::controller::user::RecipeRequestCtrl \\
 \hline
-RFF7.1.1.9 & client::model::data::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO\\
+RFF7.1.1.9 & client::view::user::RecipeRequest \newline client::controller::user::RecipeRequestCtrl \\
 \hline
-RFF7.1.1.10 & client::model::data::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO\\
+RFF7.1.1.10 & client::view::user::RecipeRequest \newline client::controller::user::RecipeRequestCtrl \\
 \hline
-RFF7.1.1.11 & client::view::user::TO DO\\
+RFF7.1.1.11 & client::view::user::RecipeRequest \\
 \hline
-RFF7.1.1.12 & client::view::user::TO DO\\
+RFF7.1.1.12 & client::view::user::RecipeRequest \\
 \hline
-RFF7.1.2 & client::model::services::TO DO \newline client::view::user::TO DO \newline client::controller::user::TO DO\\
+RFF7.1.2 & client::view::user::RecipeRequest \newline client::controller::user::RecipeRequestCtrl \\
 \hline
-RFF7.1.3 & client::view::user::TO DO\\
+RFF7.1.3 & client::view::user::RecipeRequest \newline client::controller::user::RecipeRequestCtrl \\
 \hline
-RFF7.2 & client::model::services::TO DO \newline server::endpoints::api::private::RecipeRequestApi\\
+RFF7.2 & server::endpoints::api::private::RecipeRequestApi \\
 \hline
-ROF8 & client::view::admin::TO DO \newline client::controller::admin::TO DO \newline server::db::app\_data::user::AdminModel \newline
-server::endpoints::api::private::UserApi \newline server::processor::commands::recipe::AddRecipeCommand \newline server::processor::commands::recipe::DeleteRecipeCommand\\
+ROF8 & client::controller::user::MenuSecondCtrl \newline client::controller::admin::RatingsRoute \newline client::controller::admin::UserConfigRoute \newline client::controller::admin::RequestListRoute \newline client::controller::admin::RecipeConfigRoute \newline client::controller::admin::MenuSecondAdminCtrl \newline client::view::admin::MenuSecondAdmin \newline server::db::app\_data::user::AdminModel \newline
+server::endpoints::api::private::UserApi \newline server::processor::commands::recipe::AddRecipeCommand \newline server::processor::commands::recipe::DeleteRecipeCommand \\
 \hline
-ROF8.1 & client::view::admin::TO DO \newline client::controller::admin::TO DO \\
+ROF8.1 & client::controller::admin::RecipeConfigRoute \newline client::view::admin::RecipeConfig \newline client::view::admin::Insert \newline client::controller::admin::InsertRecipeCtrl \newline client::controller::admin::RecipeConfigCtrl \\
 \hline
-ROF8.1.1 & client::controller::admin::TO DO \\
+ROF8.1.1 & client::controller::admin::InsertRecipeCtrl \newline client::view::admin::Insert \\
 \hline
-ROF8.1.1.1 & client::view::admin::TO DO \newline client::controller::admin::TO DO \\
+ROF8.1.1.1 & client::controller::admin::InsertRecipeCtrl \newline client::view::admin::Insert \\
 \hline
-ROF8.1.1.2 & client::view::admin::TO DO \newline client::controller::admin::TO DO \\
+ROF8.1.1.2 & client::controller::admin::InsertRecipeCtrl \newline client::view::admin::Insert \\
 \hline
-ROF8.1.1.3 & client::view::admin::TO DO \newline client::controller::admin::TO DO \newline server::endpoints::api::public::RecipeApi\\
+ROF8.1.1.3 & client::controller::admin::InsertRecipeCtrl \newline client::view::admin::Insert \newline server::endpoints::api::public::RecipeApi \\
 \hline
-ROF8.1.1.4 & client::view::admin::TO DO \newline client::controller::admin::TO DO \newline server::endpoints::api::public::RecipeApi\\
+ROF8.1.1.4 & client::controller::admin::InsertRecipeCtrl \newline client::view::admin::Insert \newline server::endpoints::api::public::RecipeApi \\
 \hline
-ROF8.2 & client::view::admin::TO DO \newline client::controller::admin::TO DO \newline server::db::app\_data::recipe::RecipeModel \newline server::endpoints::api::private::RecipeApi \newline server::processor::commands::recipe::AddRecipeCommand \\
+ROF8.2 & client::controller::admin::InsertRecipeCtrl \newline client::view::admin::Insert \newline server::db::app\_data::recipe::RecipeModel \newline server::endpoints::api::private::RecipeApi \newline server::processor::commands::recipe::AddRecipeCommand \\
 \hline
-ROF8.2.1 & client::view::admin::TO DO \newline client::controller::admin::TO DO \\
+ROF8.2.1 & client::controller::admin::InsertRecipeCtrl \newline client::view::admin::Insert \\
 \hline
 ROF8.2.1.1 & server::db::app\_data::recipe::RecipeModel \\
 \hline
 ROF8.2.1.2 & server::db::app\_data::recipe::RecipeModel \\
 \hline
-ROF8.2.2 & client::view::admin::TO DO \newline client::controller::admin::TO DO \newline server::endpoints::resp::public::TO DO \newline server::processor::commands::recipe::AddRecipeCommand \newline server::processor::commands::recipe::GetRecipeListCommand \\
+ROF8.2.2 & client::model::service::RecipeAdminService \newline client::model::service::DataManagerService \newline server::endpoints::resp::public::TO DO \newline server::processor::commands::recipe::AddRecipeCommand \newline server::processor::commands::recipe::GetRecipeListCommand \\
 \hline
-ROF8.3 & client::view::admin::TO DO \newline client::controller::admin::TO DO \\
+ROF8.3 & client::view::user::Recipe \newline client::controller::user::RecipeCtrl \\
 \hline
-ROF8.3.1 & client::view::admin::TO DO \\
+ROF8.3.1 & client::view::user::Recipe \\
 \hline
 ROF8.3.2 & server::processor::commands::recipe::DeleteRecipeCommand \\
 \hline
 ROF8.3.3 & server::processor::commands::recipe::DeleteRecipeCommand \\
 \hline
-RFF8.4 & client::model::services::TO DO \newline client::view::admin::TO DO \newline client::controller::admin::TO DO \\
+
+
+
+RFF8.4 & client::model::services::RecipeService \newline client::view::admin::Ratings \newline client::controller::admin::RatingsCtrl \newline client::controller::admin::RatingsRoute \\
 \hline
-RFF8.4.1 & client::view::admin::TO DO \\
+RFF8.4.1 & client::view::admin::Ratings \\
 \hline
 RFF8.4.1.1 & server::db::app\_data::recipe::RatingModel \\
 \hline
 RFF8.4.1.2 & server::db::app\_data::recipe::RatingModel  \\
 \hline
-RFF8.4.2 & client::view::admin::TO DO \newline client::controller::admin::TO DO \\
+RFF8.4.2 & client::view::admin::Ratings \newline client::controller::admin::RatingsCtrl \\
 \hline
-ROF9 & client::view::admin::TO DO \\
+ROF9 & client::view::admin::MenuSecondAdmin \\
 \hline
-ROF9.1 & client::view::admin::TO DO \newline client::controller::admin::TO DO \\
+ROF9.1 & client::view::admin::UserConfig \newline client::controller::admin::UserConfigCtrl \\
 \hline
-RFF9.1.1 & client::view::admin::TO DO \newline client::controller::admin::TO DO \newline client::model::services::TO DO \\
+RFF9.1.1 & client::model::services::DataManagerService \newline client::controller::admin::UserConfigCtrl \newline client::model::services::UserAdminService \\
 \hline
 ROF9.1.2 & server::processor::commands::user::EditPermissionCommand \\
 \hline
-ROF9.2 & client::view::admin::TO DO \newline client::controller::admin::TO DO \\
+ROF9.2 & client::view::admin::UserConfig \newline client::controller::admin::UserConfigCtrl \\
 \hline
-RFF9.2.1 & client::view::admin::TO DO \newline client::controller::admin::TO DO \newline client::model::services::TO DO \\
+RFF9.2.1 & client::model::services::DataManagerService \newline client::controller::admin::UserConfigCtrl \newline client::model::services::UserAdminService \\
 \hline
 ROF9.2.2 & server::processor::commands::user::DeleteUserCommand \\
 \hline
-ROF9.3 & client::view::admin::TO DO \newline client::controller::admin::TO DO \\
+ROF9.3 & client::view::admin::UserConfig \newline client::controller::admin::UserConfigCtrl \\
 \hline
-ROF9.3.1 & client::view::admin::TO DO \newline client::controller::admin::TO DO \newline client::model::services::TO DO \\
+ROF9.3.1 & client::view::admin::UserConfig \newline client::controller::admin::UserConfigCtrl \newline client::model::services::UserAdminService \\
 \hline
-ROF9.3.2 & client::view::admin::TO DO \newline client::controller::admin::TO DO \newline client::model::services::TO DO \\
+ROF9.3.2 & client::view::admin::UserConfig \newline client::controller::admin::UserConfigCtrl \newline client::model::services::UserAdminService \\
 \hline
-RFF10 & client::view::admin::TO DO \newline client::controller::admin::TO DO \newline client::model::services::TO DO \newline server::endpoints::api::private::RecipeRequestApi \newline server::processor::commands::requests::GetRequestListCommand \\
+RFF10 & client::view::admin::RequestList \newline client::controller::admin::RequestListCtrl \newline client::controller::admin::RequestListRoute \newline client::model::services::RecipeAdminService \newline server::endpoints::api::private::RecipeRequestApi \newline server::processor::commands::requests::GetRequestListCommand \\
 \hline
-RFF10.1 & client::view::admin::TO DO \newline client::controller::admin::TO DO \\
+RFF10.1 & client::view::admin::RequestList \newline client::controller::admin::RequestListCtrl \\
 \hline
-RFF10.1.1 & client::view::admin::TO DO \newline client::controller::admin::TO DO \newline client::model::services::TO DO  \newline server::processor::commands::requests::GetRequestListCommand \\
+RFF10.1.1 & client::view::admin::RequestList \newline client::controller::admin::RequestListCtrl \newline server::processor::commands::requests::GetRequestListCommand \\
 \hline
-RFF10.1.2 & client::view::admin::TO DO \\
+RFF10.1.2 & client::view::admin::RequestList \newline client::controller::admin::RequestListCtrl \\
 \hline
-RFF10.2 & client::view::admin::TO DO \newline client::controller::admin::TO DO \newline client::model::services::TO DO \\
+RFF10.2 & client::view::admin::RequestList \newline client::controller::admin::RequestListCtrl \newline client::model::services::RecipeAdminService \\
 \hline
-RFF10.3 & client::view::admin::TO DO \newline client::controller::admin::TO DO \\
+RFF10.3 & client::view::admin::RequestList \newline client::controller::admin::RequestListCtrl \\
 \hline
-RFF10.3.1 & client::controller::admin::TO DO \newline server::db::app\_data::recipe::RecipeRequestModel \newline server::processor::commands::recipe::AddRecipeCommand \\
+RFF10.3.1 & client::view::admin::RequestList \newline client::controller::admin::RequestListCtrl \newline server::db::app\_data::recipe::RecipeRequestModel \newline server::processor::commands::recipe::AddRecipeCommand \\
 \hline
-RFF10.3.2 & client::controller::admin::TO DO \newline server::processor::commands::recipe::AddRecipeCommand \\
+RFF10.3.2 & client::view::admin::RequestList \newline client::controller::admin::RequestListCtrl \newline server::processor::commands::recipe::AddRecipeCommand \\
 \hline
-RFF10.3.2.1 & client::controller::admin::TO DO \newline server::processor::commands::recipe::AddRecipeCommand \\
+RFF10.3.2.1 & client::view::admin::RequestList \newline client::controller::admin::RequestListCtrl \newline server::processor::commands::recipe::AddRecipeCommand \\
 \hline
-RFF10.4 & client::view::admin::TO DO \newline client::controller::admin::TO DO \newline server::db::app\_data::recipe::RecipeModel
-\newline server::processor::commands::recipe::AddRecipeCommand \\
+RFF10.4 & client::view::admin::RequestList \newline client::controller::admin::RequestListCtrl \newline client::model::service::RecipeAdminService \newline client::model::service::DataManagerService \newline server::db::app\_data::recipe::RecipeModel \newline server::processor::commands::recipe::AddRecipeCommand \\
 \hline
-RFF10.5 & client::view::admin::TO DO \newline client::controller::admin::TO DO \newline server::db::app\_data::recipe::RecipeModel
-\newline server::processor::commands::recipe::AddRecipeCommand \\
+RFF10.5 & client::view::admin::RequestList \newline client::controller::admin::RequestListCtrl \newline client::model::service::RecipeAdminService \newline client::model::service::DataManagerService \newline server::db::app\_data::recipe::RecipeModel \newline server::processor::commands::recipe::AddRecipeCommand \\
 \hline
-RFF10.5.1 & client::model::data::TO DO \newline client::view::admin:: TO DO \newline client::controller::admin:: TO DO\\
+RFF10.5.1 & client::view::admin::RequestList \newline client::controller::admin::RequestListCtrl \newline client::model::service::RecipeAdminService \newline client::model::service::DataManagerService \\
 \hline
-RFF10.5.1.1 & client::model::services::TO DO \newline client::view::user::TO DO\\
+RFF10.5.1.1 & TODO \newline TODO \\
 \hline
-ROF11 & server::endpoints::api::TO DO \\
+ROF11 & client::model::data::ApiDocsModel \newline client::view::public::ApiDocs \newline client::view::user::TokenConfig \newline server::endpoints::api::TODO \\
 \hline
-ROF11.1 & client::controller::user::TO DO \newline server::endpoints::api::private::TO DO \\
+ROF11.1 & client::controller::user::TokenConfigCtrl \newline client::model::service::UserService \newline server::endpoints::api::private::TO DO \\
 \hline
-ROF11.1.1 & client::controller::user::TO DO \newline server::endpoints::api::private::OAuthApi \newline server::processor::commands::user::LoginCommand \\
+ROF11.1.1 & client::controller::user::TokenConfigCtrl \newline client::view::user::TokenConfig \newline server::endpoints::api::private::OAuthApi \newline server::processor::commands::user::LoginCommand \\
 \hline
-ROF11.1.2 & client::controller::user::TO DO \newline server::endpoints::api::private::OAuthApi \newline server::processor::commands::user::LoginCommand \\
+ROF11.1.2 & client::controller::user::TokenConfigCtrl \newline client::view::user::TokenConfig \newline server::endpoints::api::private::OAuthApi \newline server::processor::commands::user::LoginCommand \\
 \hline
-ROF11.2 & client::view::user:TO DO \newline client::controller::user::TO DO \\
+
+
+ROF11.2 & client::view::user:TokenConfig \newline client::controller::user::TokenConfigCtrl \\
 \hline
 ROF11.2.1 & server::db::app\_data::user::UserModel \newline server::endpoints::api::private::OAuthApi \newline server::processor::commands::user::LogoutCommand \\
 \hline
-ROF11.2.2 & client::view::user::TO DO \newline server::endpoints::api::private::OAuthApi \newline server::processor::commands::user::LogoutCommand \\
+ROF11.2.2 & client::view::user::TokenConfig \newline server::endpoints::api::private::OAuthApi \newline server::processor::commands::user::LogoutCommand \\
 \hline
-ROF11.2.3 & client::view::user::TO DO \newline server::endpoints::api::private::OAuthApi \newline server::processor::commands::user::LogoutCommand \\
+ROF11.2.3 & client::view::user::TokenConfig \newline server::endpoints::api::private::OAuthApi \newline server::processor::commands::user::LogoutCommand \\
 \hline
 ROF11.3 & server::endpoints::api::public::FbMetricsApi \newline server::endpoints::api::public::TwMetricsApi \newline server::endpoints::api::public::IgMetricsApi \newline server::processor::commands::recipe::GetRecipeCommand \\
 \hline
-ROF11.3.1 & client::view::user::TO DO \newline client::controller::user::TO DO \newline server::endpoints::api::public::FbMetricsApi \newline server::endpoints::api::public::TwMetricsApi \newline server::endpoints::api::public::IgMetricsApi \newline server::processor::commands::recipe::GetRecipeCommand \\
+ROF11.3.1 & client::view::user::TokenConfig \newline client::controller::user::TokenConfigCtrl \newline client::model::service::UserService \newline client::model::service::DataManagerService \newline server::endpoints::api::public::FbMetricsApi \newline server::endpoints::api::public::TwMetricsApi \newline server::endpoints::api::public::IgMetricsApi \newline server::processor::commands::recipe::GetRecipeCommand \\
 \hline
 ROF11.3.1.1 & server::db::app\_data::recipe::RecipeModel \newline server::endpoints::api::public::RecipeApi \newline server::processor::commands::recipe::GetRecipeListCommand\\
 \hline
@@ -421,19 +424,19 @@ ROF11.3.1.2 & server::db::app\_data::recipe::AbsSocialMetricModel \newline serve
 \hline
 ROF11.3.1.3 & server::db::raw\_data::AbsFbRawData \newline server::db::raw\_data::AbsTwRawData \newline server::db::raw\_data::AbsIgRawData\newline server::endpoints::api::public:::RespApi \newline server::processor::commands::social::AbsSocialCommand\\
 \hline
-ROF11.3.2 & client::view::user::TO DO \newline client::controller::user::TO DO \newline server::endpoints::api::public::RecipeApi \newline server::processor::commands::recipe::GetRecipeCommand \\
+ROF11.3.2 & client::view::user::TokenConfig \newline client::controller::user::TokenConfigCtrl \newline server::endpoints::api::public::RecipeApi \newline server::processor::commands::recipe::GetRecipeCommand \\
 \hline
-ROF12 & client::view::public::TO DO \\
+ROF12 & client::controller::user::TokenConfigRoute \newline client::view::user::TokenConfig \newline client::view::user::MenuMain \\
 \hline
-ROF12.1 & client::view::public::TO DO \\
+ROF12.1 & client::view::user::TokenConfig \newline client::view::public::ApiDocs \\
 \hline
-ROF12.1.1 & client::view::public::TO DO \\
+ROF12.1.1 & client::view::user::TokenConfig \newline client::view::public::ApiDocs \\
 \hline
-ROF12.1.2 & client::view::public::TO DO \\
+ROF12.1.2 & client::view::user::TokenConfig \newline client::view::public::ApiDocs \\
 \hline
-ROF12.1.3 & client::view::public::TO DO \\
+ROF12.1.3 & client::view::user::TokenConfig \newline client::view::public::ApiDocs \\
 \hline
-ROF12.2 & client::view::public::TO DO \\
+ROF12.2 & client::view::user::TokenConfig \newline client::view::public::ApiDocs \\
 \hline
 \end{longtable}
 \egroup
