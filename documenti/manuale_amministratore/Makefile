@@ -2,7 +2,7 @@ latex=pdflatex -synctex=1 -interaction=nonstopmode
 # aspell=sudo aspell --mode=tex --lang=it check
 
 compile: 
-	$(latex) manuale_amminitsratore.tex && $(latex) manuale_amminitsratore.tex
+	$(latex) manuale_amministratore.tex && $(latex) manuale_amministratore.tex
 	rm -rf *.aux 
 	rm -rf *.log
 	rm -rf *.out
@@ -12,12 +12,12 @@ compile:
 	rm -rf *.lot
 	@echo "*** Apertura file PDF ***"
 	@case $(shell uname) in \
-		Darwin*) open manuale_amminitsratore.pdf;; \
-		Linux*) manuale_amminitsratore.pdf;; \
+		Darwin*) open manuale_amministratore.pdf;; \
+		Linux*) manuale_amministratore.pdf;; \
 	esac
 
 compilenoopen:
-	$(latex) manuale_amminitsratore.tex && $(latex) manuale_amminitsratore.tex
+	$(latex) manuale_amministratore.tex && $(latex) manuale_amministratore.tex
 	rm -rf *.aux 
 	rm -rf *.log
 	rm -rf *.out
