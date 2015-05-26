@@ -1293,7 +1293,7 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 					\hline
 					TU130 & Viene verificato che, se la chiamata al metodo insertRecipe ha avuto successo, allora i valori contenuti nella form siano resettati correttamente. & N.I.\\
 					\hline
-					TU131 & Viene verificato che il metodo requestList ritorni una lista contenente tante richieste quante quelle presenti nel sistema. & N.I.\\
+					TU131 & Viene verificato che il metodo getRequestList ritorni una lista contenente tante richieste quante quelle presenti nel sistema. & N.I.\\
 					\hline
 					TU132 & Viene verificato che il metodo discardRequest ritorni una lista contenente un numero di richieste pari al precedente meno uno. & N.I.\\
 					\hline
@@ -1307,7 +1307,7 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 					\hline
 					TU137 & Viene verificato che venga restituita una promise. & N.I.\\
 					\hline
-					TU128 & Viene verificato che il numero di dati passato al metodo sia uguale al numero di entries nel grafico. & N.I.\\
+					TU138 & Viene verificato che il numero di dati passato al metodo sia uguale al numero di entries nel grafico. & N.I.\\
 					\hline
 					TU139 & Viene verificato che nella generazione del grafico PieChart le percentuali vengano rispettate. & N.I.\\
 					\hline
@@ -1648,6 +1648,99 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 					TU105 & FavouritesApi.add\_favourite() \\
 					\hline
 					TU106 & FavouritesApi.remove\_favourite() \\
+					\hline
+					TU107 & ApiDocs \\
+					\hline
+					TU108 & ApiDocsCtrl.getRestService() \\
+					\hline
+					TU109 & LoginCtrl \\
+					\hline
+					TU110 & LoginCtrl.login() \\
+					\hline
+					TU111 & RegisterCtrl \\
+					\hline
+					TU112 & RegisterCtrl.checkMatchPwd() \\
+					\hline
+					TU113 & RegisterCtrl.register() \\
+					\hline
+					TU114 & TokenConfigCtrl.getAccessToken() \\
+					\hline
+					TU115 & TokenConfigCtrl.deleteAccessToken() \\
+					\hline
+					TU116 & SettingsCtrl.matchNewPassword() \\
+					\hline
+					TU117 & SettingsCtrl.checkModifyFields() \\
+					\hline
+					TU118 & SettingsCtrl.saveEdit() \\
+					\hline
+					TU119 & RecipeCtrl \\
+					\hline
+					TU120 & RecipeCtrl.getListOfRecipes() \\
+					\hline
+					TU121 & MatricsCtrl \\
+					\hline
+					TU122 & MetricsCtrl.getMetricType() \\
+					\hline
+					TU123 & MetricsCtrl.getMetricList() \\
+					\hline
+					TU124 & UserConfigCtrl \\
+					\hline
+					TU125 & UserConfigCtrl.getUsers() \\
+					\hline
+					TU126 & UserConfigCtrl.editPermissions() \\
+					\hline
+					TU127 & UserConfigCtrl.deletUserAccount() \\
+					\hline
+					TU128 & InsertRecipeCtrl.checkMetricsQuantity() \\
+					\hline
+					TU129 & InsertRecipeCtrl.addMetric() \\
+					\hline
+					TU130 & InsertRecipeCtrl.insertRecipe() \\
+					\hline
+					TU131 & RequestListCtrl.getRequestList() \\
+					\hline
+					TU132 & RequestListCtrl.discardRequest() \\
+					\hline
+					TU133 & RequestListCtrl.approveRequest() \\
+					\hline
+					TU134 & RatingsCtrl.getListOfRecipes() \\
+					\hline
+					TU135 & UserService.getFavourites() \newline
+					UserService.addFavourite() \newline
+					UserService.getAccessToken() \newline
+					UserService.deleteAccessToken() \newline
+					UserAdminService.getListOfUsers() \newline
+					UserAdminService.editUserPermissions() \newline
+					UserAdminService.deleteUserAccount() \\
+					\hline
+					TU136 & RecipeService.getRecipesList() \newline
+					RecipeService.getMetricsList() \newline
+					RecipeService.getMetricType() \newline
+					RecipeService.getMetricTypeNode() \newline
+					RecipeAdminService.getRecipesListAll() \newline
+					RecipeAdminService.getListOfRecipesRequest() \newline
+					RecipeAdminService.createRecipe() \newline
+					RecipeAdminService.setRecipeRating() \newline
+					RecipeAdminService.discardRecipeRequest() \newline
+					RecipeAdminService.approveRecipeRequest() \\
+					\hline
+					TU137 & AuthService.login() \newline
+					AuthService.register() \newline
+					AuthService.deleteAccount() \newline
+					AuthService.isLogged() \newline
+					AuthService.updateSettingsAccount() \\
+					\hline
+					TU138 & ChartCreator.dataFormat() \\
+					\hline
+					TU139 & PieChartCreator.dataFormat() \newline
+					ChartCreator.chartGeneration() \\
+					\hline
+					TU140 & LineChartCreator.dataFormat() \newline
+					ChartCreator.chartGeneration() \\
+					\hline
+					TU141 & DataManagerService.postRestCall() \\
+					\hline
+					TU142 & DataManagerService.deleteRestCall() \\
 					\hline
 			\caption{Tabella tracciamento test di unità - metodi}
 			\end{longtable}
