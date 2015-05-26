@@ -14,66 +14,75 @@
 % CONTENUTO DEL CAPITOLO
 \section{Gestione richieste recipe} % (fold)
 \label{sec:gest_richieste}
+
+
 	\subsection{Contenuti Sezione} % (fold)
 	\label{sub:contenuti_sezione}
-	\begin{itemize}
-		\item Visualizza elenco richieste;
-		\item Visualizza dettagli richiesta;
-		\item Modifica richiesta Recipe;
-		\item Accettazione richiesta;
-		\item Respinta richiesta;
-	\end{itemize}
+		L'amministratore può provvedere ad approvare o respingere l'inserimento di una nuova recipe\gloss{} proposta da un utente.\newline
+		Vengono messe a disposizione dell'amministratore le seguenti funzioni:
+		\begin{itemize}
+			\item \textbf{See Details}: visualizza i dettagli della recipe richiesta;
+			\item \textbf{Discard}: disapprova la richiesta;
+			\item \textbf{Approve}: approva la richiesta di aggiunta;
+		\end{itemize}
+		E' possibile visualizzare l'elenco delle recipe\gloss{} in attesa di approvazione (Figura: \ref{fig:richiesta_ricette}).
+		\begin{figure}[H]
+			\centering
+			\centerline{\includegraphics[width=14cm]{images/richiesta_ricette.png}}
+			\caption{Approvazioni e eliminazione richieste utente}
+			\label{fig:richiesta_ricette}
+		\end{figure}
 
+
+	\pagebreak
 	\subsection{Visualizza elenco richieste}
-	L'amministratore può visualizzare un elenco delle richieste per delle nuove Recipe che sono state inviate dagli utenti normali e non ancore marcate come ''chiuse'' da un utente amministratore.
-	Per accedere all'elenco delle richieste, selezionare l'apposito pulsante dal Menu principale nella Home Page del sistema.
+		L'utente amministratore può visualizzare un elenco delle richieste delle recipe\gloss{} che sono state inviate dagli utenti normali e non ancore marcate come \textbf{chiuse}.\newline
+		Per accedere all'elenco delle richieste (Figura: \ref{fig:richiesta_ricette}), selezionare l'apposito pulsante dal Menu principale della dashboard\gloss{} (Figura: \ref{fig:dashboard}).
 	% END
 	
+
 	\subsection{Visualizza dettagli richiesta}
-	L'amministratore può visualizzare tutti i dettagli di una richiesta, dopo averla selezionata dall'elenco delle richieste.
-	I dettagli di una richiesta includono:
-	\begin{itemize}
-		\item Il nome dell'utente che l'ha inoltrata;
-		\item Il titolo della richiesta;
-		\item La descrizione della richiesta;
-	\end{itemize}
-	Un utente amministratore può accettare o respingere una richiesta.
-	Può inoltre modificare il titolo o la descrizione qualora li ritenesse inopportuni.
+		L'utente amministratore può visualizzare tutti i dettagli di una richiesta, dopo aver premuto il pulsante \textbf{See Details} dall'elenco delle richieste.\newline
+		I dettagli di una richiesta includono:
+		\begin{itemize}
+			\item Il nome dell'utente che l'ha inoltrata;
+			\item Il titolo della richiesta;
+			\item La descrizione della richiesta;
+			\item L'identificativo presente sul social network.
+		\end{itemize}
+		Un utente amministratore può accettare o respingere una richiesta.\newline
+		Può inoltre modificare il titolo o la descrizione qualora li ritenesse inopportuni.
 	% END
 	
 	
 	\subsection{Modifica richiesta Recipe}
-	L'amministratore può modificare titolo e descrizione della richiesta per renderla più efficace da comprendere per gli altri amministratori.
-	Per eseguire questa operazione accedere all'elenco delle richieste Recipe, selezionare una richiesta per visualizzarne i dettagli e selezionare il pulsante di Modifica richiesta nella schermata corrente.
-	I parametri che si possono modificare sono i seguenti:
-	\begin{itemize}
-	 	\item Il titolo della richiesta;
-	 	\item La descrizione della richiesta;
-	\end{itemize}
-	Una volta terminate le modifiche è necessario selezionare il pulsante Conferma modifiche affinché queste siano attive nel sistema.
-	\subsubsection{Note all'operazione}
-	Prestare attenzione, questa operazione non è reversibile.
+		L'utente amministratore può modificare titolo e descrizione della richiesta per renderla più efficace da comprendere per gli altri amministratori.
+		Per eseguire questa operazione occorre identificare dall'elenco delle richieste recipe\gloss{} e premere sul pulsante \textbf{See Details}.
+		I parametri che si possono modificare sono i seguenti:
+		\begin{itemize}
+		 	\item Il titolo della richiesta;
+		 	\item La descrizione della richiesta;
+		\end{itemize}
+		Una volta terminate le modifiche è necessario selezionare il pulsante \textbf{Save} affinché queste siano attive nel sistema.
 	% END
-	
+
+
 	\subsection{Accettazione richiesta}
-	L'amministratore, una volta controllata la bontà della Recipe richiesta, potrà accettarla in modo che venga inserita nel sistema come Recipe
-	Per svolgere questa operazione, accedere innanzitutto all'elenco delle richieste Recipe dal Menu principale situato nella Home Page.
-	Una volta visualizzato l'elenco, selezionare la richiesta desiderata per visualizzarne i dettagli.
-	A questo punto è possibile verificare che i dati richiesti siano accettabili e confermare la richiesta selezionando il pulsante Accetta richiesta nella schermata corrente. 
-	E' necessario confermare l'operazione selezionando il pulsante Conferma quando richiesto.
-	Il sistema a questo punto crea una Recipe utilizzando i dati forniti dall'utente e confermati con l'operazione appena descritta.
-	\subsubsection{Note all'operazione}
-	Una richiesta marcata come accettata viene rimossa dall'elenco delle richieste e non più visualizzata dagli altri amministratori.
+		L'utente amministratore, una volta controllata la validità della recipe\gloss{} richiesta, potrà accettarla in modo che venga inserita nel sistema\gloss{}.\newline
+		Per svolgere questa operazione occorre accedere innanzitutto all'elenco delle richieste recipe\gloss{} (Figura: \ref{fig:richiesta_ricette}) dal Menu principale della dashboard\gloss{} (Figura: \ref{fig:dashboard}).\newline
+		Per confermare la richiesta basta solamente premere il pulsante \textbf{Approve} presente nell'elenco.\newline
+		E' necessario confermare l'operazione selezionando il pulsante \textbf{Save} quando richiesto.\newline
+		Il sistema a questo punto crea una recipe\gloss{} utilizzando i dati forniti dall'utente e confermati con l'operazione appena descritta.\newline
+		Una richiesta marcata come accettata viene rimossa dall'elenco delle richieste e non più visualizzata dagli amministratori.\newline
 	% END
-	
+
+
 	\subsection{Respinta richiesta}
-	L'amministratore, una volta controllata la bontà della Recipe richiesta, potrà rifiutarla, qualora non la ritenesse conforme o appropriata come contenuti.
-	Per svolgere questa operazione, accedere innanzitutto all'elenco delle richieste Recipe dal Menu principale situato nella Home Page.
-	Una volta visualizzato l'elenco, selezionare la richiesta desiderata per visualizzarne i dettagli.
-	A questo punto è possibile respingere la richiesta inopportuna o non conforme selezionando il pulsante Respingi richiesta, visualizzato nella schermata corrente.
-	E' necessario confermare l'operazione selezionando il pulsante Conferma quando richiesto.
-	\subsubsection{Note all'operazione}
-	Una richiesta marcata come respinta viene rimossa dall'elenco delle richieste e non più visualizzata dagli altri amministratori.
+		L'utente amministratore può decidere di rifiutare la richiesta.
+		Per svolgere questa operazione è necessario accedere innanzitutto all'elenco delle richieste recipe\gloss{} (Figura: \ref{fig:richiesta_ricette}) dal Menu principale della dashboard\gloss{} (Figura: \ref{fig:dashboard}).\newline
+		Per eliminare la richiesta è necessario premere il pulsante \textbf{Discard}. In seguito è necessario confermare l'operazione selezionando il pulsante \textbf{Save} quando richiesto.\newline
+		Una richiesta marcata come respinta viene rimossa dall'elenco delle richieste e non più visualizzata dagli altri amministratori.
 	% END
-	
+
+
 % section Gestione degli utenti (end)
