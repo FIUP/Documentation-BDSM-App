@@ -15,13 +15,11 @@
 
 \subsubsection{server::db} % (fold)
 \label{ssub:bdsm_app_server_db}
-
 	\begin{figure}[htbp]
 		\centering
 		\centerline{\includegraphics[scale=0.5]{./images/server/db.pdf}}
 		\caption{Package - server::db}
 	\end{figure}
-
 	\begin{itemize}
 		\item \textbf{Descrizione}: è il package che contiene le componenti che gestiscono e mantengono coerente la base di dati. Esse utilizzano standard proprietari Google per la loro implementazione. Sono suddivise in due package: uno atto a rappresentare il modello dei dati grezzi, l'altro dei parametri del software e degli utenti;
 		\item \textbf{Padre}: server;
@@ -32,8 +30,6 @@
 			\end{itemize}
 	\end{itemize}
 
-
-
 % subsubsection RAW_DATA
 \subsubsection{server::db::raw\_data} % (fold)
 \label{ssub:bdsm_app_server_raw_data}
@@ -42,7 +38,6 @@
 		\centerline{\includegraphics[scale=0.4]{./images/server/raw_data.pdf}}
 		\caption{Package - server::db::raw\_data}
 	\end{figure}
-
 	\begin{itemize}
 	\item \textbf{Descrizione}: package che definisce il modello dei dati grezzi ricavati dai vari social network;
 		\item \textbf{Padre}: server::db;
@@ -54,9 +49,7 @@
 		\end{itemize}
 	\end{itemize}
 
-
 	\paragraph{Classi} % (fold)
-
 		\subparagraph{server::db::raw\_data::AbsRawData} % (fold)
 		\label{subp:bdsm_app_server_raw_data_absrawdata}
 			\begin{itemize}
@@ -86,7 +79,6 @@
 				\item \textbf{Metodi}: N/A
 			\end{itemize}
 
-
 		% subsubsection FACEBOOK
 		\subsubsection{server::db::raw\_data::fb} % (fold)
 		\label{ssub:bdsm_app_server_db_raw_data_fb}
@@ -95,7 +87,6 @@
 			\centerline{\includegraphics[scale=0.5]{./images/server/raw_data_fb.pdf}}
 			\caption{Package - server::db::raw\_data::fb}
 		\end{figure}
-
 		\begin{itemize}
 		  \item \textbf{Descrizione}:  è il package contenente le classi che definiscono i modelli dei dati grezzi relativi a Facebook;
 		  \item \textbf{Padre}: server::db::raw\_data
@@ -107,9 +98,13 @@
 		% subsubsection
 
 		\paragraph{Classi} % (fold)
-
 			\subparagraph{server::db::raw\_data::fb::AbsFbRawData} % (fold)
 			\label{subp:server_db_raw_data_fb_absfbrawdata}
+				\begin{figure}[htbp]
+					\centering
+					\centerline{\includegraphics[scale=0.75]{./images/server/classes/db/abs_fb_raw_data.pdf}}
+					\caption{Classe - server::db::raw\_data::fb::AbsFbRawData}
+				\end{figure}
 				\begin{itemize}
 					\item \textbf{Descrizione}: classe astratta che definisce il modello dati grezzi relativi a Facebook;
 					\item \textbf{Utilizzo}: la classe contiene l'id fornito dall'utente il quale permette di identificare univocamente la risorsa nel social media;
@@ -127,7 +122,12 @@
 
 
 			\subparagraph{server::db::raw\_data::fb::RawFbPage} % (fold)
-			\label{subp:server_db_raw_data_fb_rawfbpage}
+			\label{subp:server_db_raw_data_fb_rawfbpage}			
+				\begin{figure}[htbp]
+					\centering
+					\centerline{\includegraphics[scale=0.75]{./images/server/classes/db/raw_fb_page.pdf}}
+					\caption{Classe - server::db::raw\_data::fb::RawFbPage}
+				\end{figure}
 				\begin{itemize}
 					\item \textbf{Descrizione}: classe che rappresenta il modello di una pagina Facebook;
 					\item \textbf{Utilizzo}: la classe fornisce metodi per memorizzare i dati statici di una pagina Facebook;
@@ -155,6 +155,11 @@
 
 			\subparagraph{server::db::raw\_data::fb::RawFbPageTrend} % (fold)
 			\label{subp:server_db_raw_data_fb_rowfbpagetrend}
+				\begin{figure}[htbp]
+					\centering
+					\centerline{\includegraphics[scale=0.75]{./images/server/classes/db/raw_fb_page_trend.pdf}}
+					\caption{Classe - server::db::raw\_data::fb::RawFbPageTrend}
+				\end{figure}
 				\begin{itemize}
 					\item \textbf{Descrizione}: classe che rappresenta il modello del trend dei dati una pagina Facebook;
 					\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare e il numero di like e di talking about di ogni singola pagina;
@@ -177,6 +182,11 @@
 
 			\subparagraph{server::db::raw\_data::fb::RawFbEvent} % (fold)
 			\label{subp:server_db_raw_data_fb_rawfbevent}
+				\begin{figure}[htbp]
+					\centering
+					\centerline{\includegraphics[scale=0.75]{./images/server/classes/db/raw_fb_event.pdf}}
+					\caption{Classe - server::db::raw\_data::fb::RawFbEvent}
+				\end{figure}
 				\begin{itemize}
 					\item \textbf{Descrizione}: classe che rappresenta il modello di un evento Facebook;
 					\item \textbf{Utilizzo}: la classe fornisce metodi per memorizzare i dati statici di un evento Facebook;
@@ -201,9 +211,13 @@
 				\end{itemize}
 			% subparagraph server_db_raw_data_fb_rawfbevent [end]
 
-
 			\subparagraph{server::db::raw\_data::fb::RawFbEventTrend} % (fold)
 			\label{subp:server_db_raw_data_fb_rowfbeventtrend}
+				\begin{figure}[htbp]
+					\centering
+					\centerline{\includegraphics[scale=0.75]{./images/server/classes/db/raw_fb_event_trend.pdf}}
+					\caption{Classe - server::db::raw\_data::fb::RawFbEventTrend}
+				\end{figure}
 				\begin{itemize}
 					\item \textbf{Descrizione}: classe che rappresenta il modello del trend di un evento su Facebook;
 					\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di utenti invitati, partecipanti e non di un evento;
@@ -293,6 +307,11 @@
 
 		\subparagraph{server::db::raw\_data::tw::AbsTwRawData} % (fold)
 		\label{subp:server_db_raw_data_tw_abstwrawdata}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.75]{./images/server/classes/db/abs_tw_raw_data.pdf}}
+				\caption{Classe - server::db::raw\_data::tw::AbsTwRawData}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe astratta che definisce il modello dati grezzi relativi a Twitter;
 				\item \textbf{Utilizzo}: la classe contiene l'id fornito dall'utente il quale permette di identificare univocamente la risorsa nel social media;
@@ -311,6 +330,11 @@
 
 		\subparagraph{server::db::raw\_data::tw::RawTwUser} % (fold)
 		\label{subp:server_db_raw_data_tw_rawtwuser}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.75]{./images/server/classes/db/raw_tw_user.pdf}}
+				\caption{Classe - server::db::raw\_data::tw::RawTwUser}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati di un utente Twitter;
 				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione completa dell'utente Twitter. Vengono forniti metodi automatici per il conteggio dei parametri che verranno utilizzati per seguire un trend;;
@@ -338,6 +362,11 @@
 
 		\subparagraph{server::db::raw\_data::tw::RawTwUserTrend} % (fold)
 		\label{subp:server_db_raw_data_tw_rawigusertrend}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.75]{./images/server/classes/db/raw_tw_user_trend.pdf}}
+				\caption{Classe - server::db::raw\_data::tw::RawTwUserTrend}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend di un utente Twitter;
 				\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di favoriti, di followers, di friends e statuses di una determinata persona;
@@ -368,6 +397,11 @@
 
 		\subparagraph{server::db::raw\_data::tw::RawTwUserTweet} % (fold)
 		\label{subp:server_db_raw_data_tw_rawtwusertweet}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.75]{./images/server/classes/db/raw_tw_user_tweet.pdf}}
+				\caption{Classe - server::db::raw\_data::tw::RawTwUserTweet}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend dei tweet relativi ad un utente Twitter;
 				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione dettagliata di un tweet creato da un utente specifico su Twitter;
@@ -410,6 +444,11 @@
 
 		\subparagraph{server::db::raw\_data::tw::RawTwHashtagTweet} % (fold)
 		\label{subp:server_db_raw_data_tw_rawtwhashtagtweet}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.75]{./images/server/classes/db/raw_tw_hashtag_tweet.pdf}}
+				\caption{Classe - server::db::raw\_data::tw::RawTwHashtagTweet}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend dei tweet relativi ad un hashtag Twitter;
 				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione della locazione spaziale di un tweet relativo all'hashtag su Twitter;
@@ -454,6 +493,11 @@
 
 		\subparagraph{server::db::raw\_data::ig::AbsIgRawData} % (fold)
 		\label{subp:server_db_raw_data_ig_absigrawdata}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.75]{./images/server/classes/db/abs_ig_raw_data.pdf}}
+				\caption{Classe - server::db::raw\_data::ig::AbsIgRawData}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe astratta che definisce il modello dei dati grezzi relativi ad Instagram;
 				\item \textbf{Utilizzo}: la classe contiene l'id fornito dall'utente il quale permette di identificare univocamente la risorsa nel social media;
@@ -472,6 +516,11 @@
 
 		\subparagraph{server::db::raw\_data::ig::RawIgUser} % (fold)
 		\label{subp:server_db_raw_data_ig_rawiguser}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.75]{./images/server/classes/db/raw_ig_user.pdf}}
+				\caption{Classe - server::db::raw\_data::ig::RawIgUser}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati di un utente Instagram;
 				\item \textbf{Utilizzo}:  la classe viene utilizzata per memorizzare le i dettagli di un utente Instagram;
@@ -499,6 +548,11 @@
 
 		\subparagraph{server::db::raw\_data::ig::RawIgUserTrend} % (fold)
 		\label{subp:server_db_raw_data_ig_rawigusertrend}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.75]{./images/server/classes/db/raw_ig_user_trend.pdf}}
+				\caption{Classe - server::db::raw\_data::ig::RawIgUserTrend}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend di un utente Instagram;
 				\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di media, di followed e follows di una determinata persona;
@@ -542,6 +596,11 @@
 
 		\subparagraph{server::db::raw\_data::ig::RawIgHashtagTrend} % (fold)
 		\label{subp:server_db_raw_data_ig_rawighashtagtrend}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.75]{./images/server/classes/db/raw_ig_hashtag_trend.pdf}}
+				\caption{Classe - server::db::raw\_data::ig::RawIgHashtagTrend}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend di un hastag Instagram;
 				\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di media caricati di un determinato hashtag;
@@ -560,6 +619,11 @@
 
 		\subparagraph{server::db::raw\_data::ig::RawIgMedia} % (fold)
 		\label{subp:server_db_raw_data_ig_rawigmedia}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.75]{./images/server/classes/db/raw_ig_media.pdf}}
+				\caption{Classe - server::db::raw\_data::ig::RawIgMedia}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati di un media realtivo ad Instagram;
 				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione dettagliata di un media caricato da un utente specifico su Instagram. Vengono forniti metodi automatici per il conteggio dei parametri che verranno utilizzati per seguire un trend;
@@ -595,7 +659,7 @@
 			\end{itemize}
 		% subparagraph server_db_raw_data_ig_rawigmedia [end]
 
-\subsubsection{server::db::app\_data} % (fold) -----------------------------------------------------
+\subsubsection{server::db::app\_data} % (fold)
 \label{ssub:bdsm_app_server_app_data}
 
 
@@ -636,6 +700,11 @@
 
 		\subparagraph{server::db::app\_data::user::UserModel} % (fold)
 		\label{subp:server_db_app_data_user_user_model}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.75]{./images/server/classes/db/user_model.pdf}}
+				\caption{Classe - server::db::app\_data::user::UserModel}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati degli utenti all'interno della base di dati;
 				\item \textbf{Utilizzo}: la classe conterrà i metodi per la creazione, eliminazione, modifica degli account utente;
@@ -695,6 +764,11 @@
 
 		\subparagraph{server::db::app\_data::user::FavouritesModel} % (fold)
 		\label{subp:server_db_app_data_user_favorites}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.75]{./images/server/classes/db/favourites_model.pdf}}
+				\caption{Classe - server::db::app\_data::user::FavouritesModel}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati relativo ai preferiti dell'utente;
 				\item \textbf{Utilizzo}: la classe  permette all'utente di aggiungere dei modelli di view nei preferiti. Contiene metodi per l'inserimento e rimozione di preferiti;
@@ -732,6 +806,11 @@
 
 		\subparagraph{server::db::app\_data::recipe::AbsRecipeModel} % (fold)
 		\label{subp:server_db_app_data_recipe_absrecipemodel}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.75]{./images/server/classes/db/abs_recipe_model.pdf}}
+				\caption{Classe - server::db::app\_data::recipe::AbsRecipeModel}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe astratta che rappresenta un modello comune per Recipe e richiesta di aggiunta Recipe;
 				\item \textbf{Utilizzo}: la classe mantiene l'estensibilità per eventuali nuovi tipi di Recipe;
@@ -775,6 +854,11 @@
 
 		\subparagraph{server::db::app\_data::recipe::RecipeModel} % (fold)
 		\label{subp:server_db_app_data_recipe_recipemodel}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.75]{./images/server/classes/db/recipe_model.pdf}}
+				\caption{Classe - server::db::app\_data::recipe::RecipeModel}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati realtivo ad una Recipe;
 				\item \textbf{Utilizzo}: la classe specializza la ricetta. Vengono forniti i campi dati per il possibile incremento temporale dei dati;
@@ -800,6 +884,11 @@
 
 		\subparagraph{server::db::app\_data::recipe::RatingModel} % (fold)
 		\label{subp:server_db_app_data_recipe_recipemodel}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.75]{./images/server/classes/db/rating_model.pdf}}
+				\caption{Classe - server::db::app\_data::recipe::RatingModel}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che rappresenta il modello del rating di una Recipe;
 				\item \textbf{Utilizzo}: viene utilizzata per risalire al voto di ogni utente per una determinata Recipe;
@@ -836,6 +925,11 @@
 
 		\subparagraph{server::db::app\_data::recipe::AbsSocialMetricModel} % (fold)
 		\label{subp:server_db_app_data_recipe_abssocialmetricmodel}
+			\begin{figure}[htbp]
+				\centering
+				\centerline{\includegraphics[scale=0.75]{./images/server/classes/db/abs_social_metric_model.pdf}}
+				\caption{Classe - server::db::app\_data::recipe::AbsSocialMetricModel}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati delle metriche relative ai social media;
 				\item \textbf{Utilizzo}: la classe ha il compito di raggruppare i social media da rappresentare e identificarli univocamente;

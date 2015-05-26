@@ -40,7 +40,7 @@
      id="namedview121"
      showgrid="false"
      inkscape:zoom="0.35435435"
-     inkscape:cx="440"
+     inkscape:cx="439.99999"
      inkscape:cy="333"
      inkscape:window-x="151"
      inkscape:window-y="96"
@@ -184,19 +184,6 @@
       </clipPath>
     </defs>
   </defs>
-  <g
-     id="g53"
-     style="fill:#c0c0c0;fill-opacity:0.50199998;stroke:#c0c0c0;stroke-opacity:0.50199998;shape-rendering:crispEdges;text-rendering:geometricPrecision"
-     transform="matrix(1.3333,0,0,1.3333,6.6665,6.6665)">
-    <rect
-       clip-path="url(#clipPath2)"
-       id="rect55"
-       height="480"
-       style="fill:none"
-       width="640"
-       y="10"
-       x="10" />
-  </g>
   <g
      id="g71"
      style="font-weight:bold;font-family:sans-serif;fill:#c0c0c0;fill-opacity:0.50199998;stroke:#c0c0c0;stroke-width:2;stroke-opacity:0.50199998;shape-rendering:crispEdges;text-rendering:geometricPrecision"
