@@ -15,15 +15,17 @@
 
 \subsection{Server} % (fold)
 \label{ssub:diagrammi_di_sequenza_server}
-Quelli che seguono sono i diagrammi di sequenza che rappresentano le più rilaventi interazioni tra i vali moduli presenti nel livello server. Per quanto riguarda il client, fare riferimento alla sezione \ref{ssub:diagrammi_di_sequenza_client}.
+Quelli che seguono sono i diagrammi di sequenza che rappresentano le più rilevanti interazioni tra i vali moduli presenti nel livello server. Per quanto riguarda il client, fare riferimento alla sezione \ref{ssub:diagrammi_di_sequenza_client}.
 
     \subsubsection{Cron task} % (fold)
     \label{ssub:cron_task}
     Il seguente diagramma descrive il processo di avvio dell'aggiornamento dei dati grezzi relativi ad ogni Recipe presente nel sistema. Tale sequenza è attivata a cadenza regolare tramite le funzionalità di \textit{task scheduling} offerte da Google App Engine. Per semplicità, è stato descritto in dettaglio esclusivamente l'aggiornamento dei dati relativi a Facebook, indicando solamente i metodi principali per i restanti social network. \newline
 
-    TODO (grafico) \newline
-    \noindent
-
+    \begin{figure}[!htbp]
+		\centering
+			\centerline{\includegraphics[scale=0.4]{./images/sequence_diagram/cron_task.pdf}}
+		\caption{Diagramma di sequenza - Cron task}
+	\end{figure}
 
     \begin{itemize}
         \item \textbf{UpdateRecipeTask}: classe implementata secondo gli standard di Google App Engine, definisce il metodo statico \texttt{get()} attivato ad ogni avvio del componente Cron di Google. \texttt{UpdateRecipeTask} istanzia la classe \texttt{MinerManager} invocando il metodo \texttt{schedule\_fetchers(recipe\_id\_list)} per effettuare l'aggiornamento dei dati grezzi;
@@ -45,13 +47,32 @@ Quelli che seguono sono i diagrammi di sequenza che rappresentano le più rilave
 
 
     \begin{itemize}
-        \item \textbf{FbPageFetcher}: classe richiamata dalla classe \texttt{MinerScheduler} e contenente i metodi \texttt{get\_data} e \texttt{get\_trend\_data}. Il primo metodo si occupa di recuperare i dati statici di una pagina Facebook se non ancora presente nel database; il secondo metodo si occupa di recuperare i dati dinamici della pagina;
-        \item \textbf{RawFbPage}: classe utilizzata dal metodo \texttt{get\_data} della classe \texttt{FbPageFetcher} per salvare i dati statici di una pagina Facebook tramite il metodo \texttt{put};
-        \item \textbf{RawFbPageTrend}: classe utilizzata dal metodo \texttt{get\_trend\_data} della classe \texttt{FbPageFetcher} per salvare i dati dinamici di una pagina Facebook tramite il metodo \texttt{put};
-        \item \textbf{PostCounter}: classe utilizzata dal metodo \texttt{get\_trend\_data} della classe \texttt{FbPageFetcher} per effettuare il conteggio dei post di una pagina nell'arco di tre giorni e per calcolarsi i vari trend relativi ai post;
-        \item \textbf{CommentCounter}: classe utilizzata dal metodo \texttt{action} della classe \texttt{PostCounter} per effettuare il conteggio dei commenti in un post tramite il metodo \texttt{count};
-        \item \textbf{RawFbPostTrend}: classe utilizzata dal metodo \texttt{get\_trend\_data} della classe \texttt{FbPageFetcher} per salvare i dati dinamici relativi ai post all'interno di una pagina Facebook tramite il metodo \texttt{put}.
+        \item \textbf{FbPageFetcher}: classe richiamata dalla classe \texttt{MinerScheduler} e contenente i metodi \texttt{get\_data()} e \texttt{get\_trend\_data()}. Il primo metodo si occupa di recuperare i dati statici di una pagina Facebook se non ancora presente nel database; il secondo metodo si occupa di recuperare i dati dinamici della pagina;
+        \item \textbf{RawFbPage}: classe utilizzata dal metodo \texttt{get\_data()} della classe \texttt{FbPageFetcher} per salvare i dati statici di una pagina Facebook tramite il metodo \texttt{put()};
+        \item \textbf{RawFbPageTrend}: classe utilizzata dal metodo \texttt{get\_trend\_data()} della classe \texttt{FbPageFetcher} per salvare i dati dinamici di una pagina Facebook tramite il metodo \texttt{put};
+        \item \textbf{PostCounter}: classe utilizzata dal metodo \texttt{get\_trend\_data()} della classe \texttt{FbPageFetcher} per effettuare il conteggio dei post di una pagina nell'arco di tre giorni e per calcolarsi i vari trend relativi ai post;
+        \item \textbf{CommentCounter}: classe utilizzata dal metodo \texttt{action()} della classe \texttt{PostCounter} per effettuare il conteggio dei commenti in un post tramite il metodo \texttt{count()};
+        \item \textbf{RawFbPostTrend}: classe utilizzata dal metodo \texttt{get\_trend\_data()} della classe \texttt{FbPageFetcher} per salvare i dati dinamici relativi ai post all'interno di una pagina Facebook tramite il metodo \texttt{put()}.
     \end{itemize}
 
+
+	\subsubsection{Login API} % (fold)
+    \label{ssub:login_api}
+    Il seguente diagramma descrive il funzionamento del servizio REST di autenticazione offerto dal sistema. Il client tramite il metodo \texttt{login()} della classe \texttt{DataManagerService} utilizza il servizio REST di autenticazione definito nella classe \texttt{OAuthApi}. \newline
+
+    \begin{figure}[!htbp]
+		\centering
+			\centerline{\includegraphics[angle=90, scale=0.4]{./images/sequence_diagram/login_api.pdf}}
+		\caption{Diagramma di sequenza - Login API}
+	\end{figure}
+
+
+    \begin{itemize}
+        \item \textbf{OAuthApi}: classe che riceve i dati di autenticazione dal client attraverso il metodo \texttt{login()} della classe \texttt{DataManagerService}. Si occupa di creare un'istanza della classe \texttt{RequestHandler} dopodiché richiama il processor passandogli il tipo di richiesta e il dizionario per soddisfare tale richiesta;
+        \item \textbf{RequestHandler}: classe che rappresenta un singleton che viene istanziato dal metodo \texttt{get\_instance()} della classe \texttt{OAuthApi}. Attraverso il metodo \texttt{dispatch\_request()} riceve il tipo di richiesta e un dizionario contenente i dati per soddisfare tale richiesta;
+        \item \textbf{CommandDispatcher}: classe che riceve il tipo di richiesta e il dizionario per soddisfare tale richiesta dalla classe \texttt{RequestHandler}. Si occupa di reindirizzare tale richiesta al command che si occupa di effettuare l'autenticazione;
+        \item \textbf{LoginCommand}: classe che si occupa di soddisfare la richiesta di login ricevuta dal metodo \texttt{execute()} della classe \texttt{CommandDispatcher} ritornando i dati dell'utente che ha effettuato l'autenticazione e un access token generato tramite l'utilizzo del metodo \texttt{generate\_oauth\_token()};
+        \item \textbf{UserResponse}: classe utilizzata dal metodo \texttt{login()} della classe \texttt{OAuthApi} per ritornare la risposta al client.
+    \end{itemize}
 
 % section diagrammi_di_sequenza_server (end)
