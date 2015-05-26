@@ -76,7 +76,7 @@
 						\item server::db::raw\_data::ig::RawIgHashtagTrend
 						\item server::db::raw\_data::ig::RawIgMedia
 					\end{itemize}
-				\item \textbf{Attributi}: 
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ date\_created\_date : Date}}
 						\begin{description}
@@ -114,7 +114,7 @@
 					\item \textbf{Descrizione}: classe astratta che definisce il modello dati grezzi relativi a Facebook;
 					\item \textbf{Utilizzo}: la classe contiene l'id fornito dall'utente il quale permette di identificare univocamente la risorsa nel social media;
 					\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
-					\item \textbf{Attributi}: 
+					\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ node\_id\_str : String}}
 						\begin{description}
@@ -159,7 +159,7 @@
 					\item \textbf{Descrizione}: classe che rappresenta il modello del trend dei dati una pagina Facebook;
 					\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare e il numero di like e di talking about di ogni singola pagina;
 					\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
-					\item \textbf{Attributi}: 
+					\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ likes\_int : int}}
 						\begin{description}
@@ -186,7 +186,7 @@
 							\item server::db::raw\_data::fb::RawFbEventTrend
 							\item server::db::raw\_data::fb::RawFbPostTrend
 						\end{itemize}
-					\item \textbf{Attributi}: 
+					\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ name\_str : String}}
 						\begin{description}
@@ -208,7 +208,7 @@
 					\item \textbf{Descrizione}: classe che rappresenta il modello del trend di un evento su Facebook;
 					\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di utenti invitati, partecipanti e non di un evento;
 					\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
-					\item \textbf{Attributi}: 
+					\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ invited\_int : int}}
 						\begin{description}
@@ -237,7 +237,7 @@
 				\begin{itemize}
 					\item \textbf{Descrizione}: classe che rappresenta il modello del trend dei post di una pagina o di un evento su Facebook;
 					\item \textbf{Utilizzo}: la classe fornisce metodi per sommare i dati statici sui post di Facebook;
-					\item \textbf{Attributi}: 
+					\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ posts\_int : int}}
 						\begin{description}
@@ -297,7 +297,7 @@
 				\item \textbf{Descrizione}: classe astratta che definisce il modello dati grezzi relativi a Twitter;
 				\item \textbf{Utilizzo}: la classe contiene l'id fornito dall'utente il quale permette di identificare univocamente la risorsa nel social media;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
-				\item \textbf{Attributi}: 
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ name\_str : String}}
 						\begin{description}
@@ -320,7 +320,7 @@
 						\item server::db::raw\_data::tw::RawTwUserTrend
 						\item server::db::raw\_data::tw::RawTwUserTweet
 					\end{itemize}
-				\item \textbf{Attributi}: 
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ full\_name\_str : String}}
 						\begin{description}
@@ -342,7 +342,7 @@
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend di un utente Twitter;
 				\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di favoriti, di followers, di friends e statuses di una determinata persona;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsTwRawData
-				\item \textbf{Attributi}: 
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ favourites\_count\_int : int}}
 						\begin{description}
@@ -372,7 +372,7 @@
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend dei tweet relativi ad un utente Twitter;
 				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione dettagliata di un tweet creato da un utente specifico su Twitter;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
-				\item \textbf{Attributi}: 
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ source\_devices\_list : List}}
 						\begin{description}
@@ -414,7 +414,7 @@
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend dei tweet relativi ad un hashtag Twitter;
 				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione della locazione spaziale di un tweet relativo all'hashtag su Twitter;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::RawTwUserTweet
-				\item \textbf{Attributi}:  
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ time\_zone\_list : List}}
 						\begin{description}
@@ -458,9 +458,9 @@
 				\item \textbf{Descrizione}: classe astratta che definisce il modello dei dati grezzi relativi ad Instagram;
 				\item \textbf{Utilizzo}: la classe contiene l'id fornito dall'utente il quale permette di identificare univocamente la risorsa nel social media;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
-				\item \textbf{Attributi}:  
+				\item \textbf{Attributi}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{+ name\_node\_str : String}}
+						\item \textcolor{forestgreen}{\texttt{+ node\_name\_str : String}}
 						\begin{description}
 							\item \textbf{Descrizione}: nome identificativo pagina o hashtag
 						\end{description}
@@ -481,7 +481,7 @@
 						\item server::db::raw\_data::ig::RawIgUserTrend
 						\item server::db::raw\_data::ig::RawIgMedia
 					\end{itemize}
-				\item \textbf{Attributi}:  
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ id\_int : int}}
 						\begin{description}
@@ -503,7 +503,7 @@
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend di un utente Instagram;
 				\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di media, di followed e follows di una determinata persona;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
-				\item \textbf{Attributi}:  
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ media\_int : int}}
 						\begin{description}
@@ -546,7 +546,7 @@
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend di un hastag Instagram;
 				\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di media caricati di un determinato hashtag;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
-				\item \textbf{Attributi}:  
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ media\_count\_int : int}}
 						\begin{description}
@@ -564,7 +564,7 @@
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati di un media realtivo ad Instagram;
 				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione dettagliata di un media caricato da un utente specifico su Instagram. Vengono forniti metodi automatici per il conteggio dei parametri che verranno utilizzati per seguire un trend;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
-				\item \textbf{Attributi}:  
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ media\_int : int}}
 						\begin{description}
@@ -645,7 +645,7 @@
 						\item server::db:::app\_data::user::AdminModel
 						\item server::db::app\_data::recipe::RecipeRequestModel
 					\end{itemize}
-				\item \textbf{Attributi}: 
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ username\_str : String}}
 						\begin{description}
@@ -702,7 +702,7 @@
 					\begin{itemize}
 						\item server::db::app\_data::recipe::AbsMetricModel
 					\end{itemize}
-				\item \textbf{Attributi}: 
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{chart\_type\_str : String}}
 						\begin{description}
@@ -741,7 +741,7 @@
 						\item server::db::app\_data::recipe::RecipeRequestModel
 						\item server::db::app\_data::recipe::AbsMetricModel
 					\end{itemize}
-				\item \textbf{Attributi}:  
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{data\_create\_date : Date}}
 						\begin{description}
@@ -783,7 +783,7 @@
 					\begin{itemize}
 						\item server::db::app\_data::recipe::RatingModel
 					\end{itemize}
-				\item \textbf{Attributi}:  
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ update\_interval\_hours\_int : int}}
 						\begin{description}
@@ -803,7 +803,7 @@
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che rappresenta il modello del rating di una Recipe;
 				\item \textbf{Utilizzo}: viene utilizzata per risalire al voto di ogni utente per una determinata Recipe;
-				\item \textbf{Attributi}:  
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ rating\_float : float}}
 						\begin{description}
@@ -846,7 +846,7 @@
 						\item server::db::app\_data::recipe::IgMetricModel
 						\item server::db::app\_data::recipe::TwMetricModel
 					\end{itemize}
-				\item \textbf{Attributi}:  
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ type\_str : String}}
 						\begin{description}
