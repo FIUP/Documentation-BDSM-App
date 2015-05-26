@@ -467,10 +467,10 @@
 			\end{itemize}
 		% subparagraph radarchartcreator (end)
 
-		\subparagraph{client::model::services::ManagerDataExpirationDate} % (fold)
+		\subparagraph{client::model::services::DataManagerService} % (fold)
 		\label{subp:radarchartcreator}
 			\begin{itemize}
-				\item \textbf{Descrizione}: questa classe controlla se i dati che vengono richiesti sono già presenti in locale o se devono essere richiesti al server: in particolare li richiede al server solo se questi sono assenti o se sono l'ultima volta che sono stati chiesti al server è passata da troppo tempo;
+				\item \textbf{Descrizione}: questa classe gestisce l'inoltro di chiamate REST al server. Se si tratta di chiamate Get controlla se i dati che vengono richiesti sono già presenti in locale o se devono essere richiesti al server. In particolare, li richiede al server solo se questi sono assenti o se sono l'ultima volta che sono stati chiesti al server è passata da troppo tempo;
 				\item \textbf{Utilizzo}: i suoi metodi vengono invocati dalle classi che desiderano fare richieste al server;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
