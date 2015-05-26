@@ -64,10 +64,10 @@ Di seguito sono riportate tutte le web API offerte dal back-end specificando per
     \item \textbf{Tipo:} GET
     \item \textbf{Utilizzo:} restituisce la lista di tutte le Recipe presenti nel sistema.
   \end{itemize}
-  \item \textit{\textbf{/recipes/\{recipe-id\}/metrics}}
+  \item \textit{\textbf{/recipes/\{recipe-id\}}}
   \begin{itemize}
     \item \textbf{Tipo:} GET
-    \item \textbf{Utilizzo:} restituisce la lista di tutte le metriche associate ad una Recipe.
+    \item \textbf{Utilizzo:} restituisce le info generali di una Recipe insieme alla lista di tutte le metriche associate ad essa.
   \end{itemize}
 
   % Facebook
@@ -159,59 +159,59 @@ Di seguito sono riportate tutte le web API offerte dal back-end specificando per
 \begin{itemize}
 
   % User
-  \item \textbf{/users}
+  \item \textit{\textbf{/users}}
   \begin{itemize}
     \item \textbf{Tipo:} POST
     \item \textbf{Tipo:} aggiunge un utente al sistema.
   \end{itemize}
-  \item \textbf{/users/\{user-id\}}
+  \item \textit{\textbf{/users/\{user-id\}}}
   \begin{itemize}
     \item \textbf{Tipo:} GET
     \item \textbf{Tipo:} ottiene le informazioni associate ad un utente.
   \end{itemize}
-  \item \textbf{/users/\{user-id\}}
+  \item \textit{\textbf{/users/\{user-id\}}}
   \begin{itemize}
     \item \textbf{Tipo:} PUT
     \item \textbf{Tipo:} modifica le informazioni associate ad un utente.
   \end{itemize}
-  \item \textbf{/users/\{user-id\}}
+  \item \textit{\textbf{/users/\{user-id\}}}
   \begin{itemize}
     \item \textbf{Tipo:} DELETE
     \item \textbf{Tipo:} elimina un utente dal sistema.
   \end{itemize}
-  \item \textbf{/users/\{user-id\}/permission}
+  \item \textit{\textbf{/users/\{user-id\}/permission}}
   \begin{itemize}
     \item \textbf{Tipo:} PUT
     \item \textbf{Tipo:} modifica i permessi di un utente.
   \end{itemize}
-  \item \textbf{/users/\{user-id\}/favourites}
+  \item \textit{\textbf{/users/\{user-id\}/favourites}}
   \begin{itemize}
     \item \textbf{Tipo:} GET
     \item \textbf{Tipo:} ottiene la lista delle View preferite di un utente.
   \end{itemize}
-  \item \textbf{/users/\{user-id\}/favourites}
+  \item \textit{\textbf{/users/\{user-id\}/favourites}}
   \begin{itemize}
     \item \textbf{Tipo:} POST
     \item \textbf{Tipo:} aggiunge una View tra le preferite di un utente.
   \end{itemize}
-  \item \textbf{/users/\{user-id\}/favourites}
+  \item \textit{\textbf{/users/\{user-id\}/favourites}}
   \begin{itemize}
     \item \textbf{Tipo:} DELETE
     \item \textbf{Tipo:} rimuove una View dalle preferite di un utente.
   \end{itemize}
 
   % Recipe
-  \item \textbf{/recipes}
+  \item \textit{\textbf{/recipes}}
   \begin{itemize}
     \item \textbf{Tipo:} POST
     \item \textbf{Tipo:} aggiunge una nuova Recipe al sistema.
   \end{itemize}
-  \item \textbf{/recipes/\{recipe-id\}}
+  \item \textit{\textbf{/recipes/\{recipe-id\}}}
   \begin{itemize}
     \item \textbf{Tipo:} DELETE
     \item \textbf{Tipo:} rimuove una nuova Recipe dal sistema.
   \end{itemize}
-  \item \textbf{/recipes/\{recipe-id\}/rate}
+  \item \textit{\textbf{/recipes/\{recipe-id\}/rate}}
   \begin{itemize}
     \item \textbf{Tipo:} POST
     \item \textbf{Tipo:} aggiunge un voto ad un Recipe.
@@ -219,22 +219,22 @@ Di seguito sono riportate tutte le web API offerte dal back-end specificando per
 
 
   % Recipe request
-  \item \textbf{/recipes/requests}
+  \item \textit{\textbf{/recipes/requests}}
   \begin{itemize}
     \item \textbf{Tipo:} POST
     \item \textbf{Tipo:} aggiunge una nuova richiesta di creazione Recipe al sistema.
   \end{itemize}
-  \item \textbf{/recipes/requests}
+  \item \textit{\textbf{/recipes/requests}}
   \begin{itemize}
     \item \textbf{Tipo:} GET
     \item \textbf{Tipo:} ottiene la lista delle richieste di creazione Recipe presenti nel sistema.
   \end{itemize}
-  \item \textbf{/recipes/requests/\{request-id\}}
+  \item \textit{\textbf{/recipes/requests/\{request-id\}}}
   \begin{itemize}
     \item \textbf{Tipo:} GET
     \item \textbf{Tipo:} ottiene i dati associati ad una richiesta di creazione Recipe.
   \end{itemize}
-  \item \textbf{/recipes/requests/\{request-id\}}
+  \item \textit{\textbf{/recipes/requests/\{request-id\}}}
   \begin{itemize}
     \item \textbf{Tipo:} DELETE
     \item \textbf{Tipo:} rimuove una richiesta di creazione Recipe dal sistema.

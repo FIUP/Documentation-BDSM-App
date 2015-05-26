@@ -170,19 +170,21 @@
 					\hline
 					\textbf{Nome documento} & \textbf{Valore indice} & \textbf{Esito}\\
 					\hline						
-					\docNameVersionAdR & ?? & \textcolor{green}{Superato}\\
+					\docNameVersionAdR & 57 & \textcolor{green}{Superato}\\
 					\hline
-					\docNameVersionGlo & ?? & \textcolor{green}{Superato}\\
+					\docNameVersionDdP & 58 & \textcolor{green}{Superato}\\
+					\hline
+					\docNameVersionGlo & 51 & \textcolor{green}{Superato}\\
 					\hline					
-					\docNameVersionNdP & ?? & \textcolor{green}{Superato}\\
+					\docNameVersionNdP & 55 & \textcolor{green}{Superato}\\
 					\hline					
-					\docNameVersionPdP & ?? & \textcolor{green}{Superato}\\
+					\docNameVersionPdP & 59 & \textcolor{green}{Superato}\\
 					\hline					
-					\docNameVersionPdQ & ?? & \textcolor{green}{Superato}\\
+					\docNameVersionPdQ & 60 & \textcolor{green}{Superato}\\
 					\hline					
-					\docNameVersionSdF & ?? & \textcolor{green}{Superato}\\
+					\docNameVersionSdF & 48 & \textcolor{green}{Superato}\\
 					\hline	
-					\docNameVersionST & ?? & \textcolor{green}{Superato}\\
+					\docNameVersionST & 54 & \textcolor{green}{Superato}\\
 					\hline			
 				\end{tabularx}
 			\end{center}
@@ -257,7 +259,7 @@
 					\hline
 					\texttt{src::server::miner::ig} & 1 & \textcolor{red}{Non Superato}\\
 					\hline
-					\texttt{src::server::endpoints} 1 & \textcolor{red}{Non Superato}\\
+					\texttt{src::server::endpoints} & 1 & \textcolor{red}{Non Superato}\\
 					\hline
 					\texttt{src::server::endpoints::api} & 1 & \textcolor{red}{Non Superato}\\
 					\hline
@@ -289,28 +291,29 @@
 				\begin{itemize}
 						\item Backend:
 							\begin{itemize}
-								\item medio: ??
-								\item massimo: ??
+								\item Branch coverage: 70\%
+								\item Statements coverage: 75\%
 							\end{itemize}
 						\item Client:
 							\begin{itemize}
-								\item medio: ??
-								\item massimo: ??
+								\item Branch coverage: 66\%
+								\item Statements coverage: 71\%
 							\end{itemize}
+						Il risultato ottenuto non supera i limiti di accettazione in quanto il gruppo non è riuscito a codificare tutti i test necessari per coprire meglio il software.
 					\end{itemize}
 				
 				\item \textbf{Complessità ciclomatica:}
 					\begin{itemize}
 						\item Backend:
 							\begin{itemize}
-								\item medio: 4;
-								\item massimo: 8.
+								\item medio: 4.1
+								\item massimo: 8
 							\end{itemize}
 						Questo risultato così basso è stato raggiunto grazie alla divisione delle classi e alle numerose classi astratte che avranno complessità 1 e abbassano così la media.
 						\item Client:
 							\begin{itemize}
-								\item medio: ??
-								\item massimo: ??
+								\item medio: 3.5
+								\item massimo: 7
 							\end{itemize}
 					\end{itemize}
 						
@@ -318,14 +321,14 @@
 					\begin{itemize}
 						\item Backend:
 							\begin{itemize}
-								\item medio: 5;
-								\item massimo: 11.
+								\item medio: 5.1
+								\item massimo: 11
 							\end{itemize}
 						In alcuni metodi non si è superato questo tipo di test in quanto la loro funzione era quella di istanziare dei nuovi oggetti nel database e quindi necessitavano di tutti i loro parametri per svolgere il compito.
 						\item Client:
 							\begin{itemize}
-								\item medio: ??
-								\item massimo: ??
+								\item medio: 1.5
+								\item massimo: 4
 							\end{itemize}
 					\end{itemize}
 					
@@ -333,11 +336,11 @@
 					\begin{itemize}
 						\item Backend:
 							\begin{itemize}
-								\item medio: 0.68.
+								\item medio: 0.68
 							\end{itemize}
 						\item Client:
 							\begin{itemize}
-								\item medio: 0.49.
+								\item medio: 0.49
 							\end{itemize}
 					\end{itemize}
 				Questo test supera abbondantemente le aspettative, infatti il range ottimale era > 0.35. Il risultato ottenuto è da implicare all'utilizzo da parte del gruppo delle Google style guide. 
@@ -346,34 +349,39 @@
 					\begin{itemize}
 						\item Backend:
 							\begin{itemize}
-								\item medio: 2;
-								\item massimo: 5.
+								\item medio: 3.4
+								\item massimo: 5
 							\end{itemize}
 						\item Client:
 							\begin{itemize}
-								\item medio: ??
-								\item massimo: ??
+								\item medio: 2.3
+								\item massimo: 4
 							\end{itemize}
 					\end{itemize}
 					
-				\item \textbf{Logical SLOC:}
-					Totale:
-					\begin{itemize}
-						\item Backend: 2711;
-						\item Client: 4015.
-					\end{itemize}
-					Parziale:
-					\item Backend:
+				\item \textbf{Logical SLOC:}\\
+					\begin{itemize}	
+						\item Totale:
 							\begin{itemize}
-								\item medio: 31.7;
-								\item massimo: 122.
+								\item Backend: 2711
+								\item Client: 4015
 							\end{itemize}
+						\item Parziale:
+							\begin{itemize}		
+								\item Backend:
+									\begin{itemize}
+										\item medio: 20.8
+										\item massimo: 122
+									\end{itemize}
 					In questo caso alcuni moduli, soprattutto del miner, e nella cancellazione delle recipe, non rientrano nel range di accettazione, questo è dovuto a causa dell’elevata quantità di attributi che questi devono istanziare o cancellare dal database.			
 					\item Client:
 						\begin{itemize}
-							\item medio: ??
-							\item massimo: ??
+							\item medio: 35.5
+							\item massimo: 115
 						\end{itemize}
+					Alcuni moduli non hanno superato questo test in quanto riguardano le funzioni principali dell'applicativo. Questo pur essendo oggetto di un futuro miglioramento, non preoccupa particolarmente in quanto la loro afferenza è molto elevata.
+					\end{itemize}
+					\end{itemize}
 			\end{description}
 					
 	\subsection{Progettazione di dettaglio e codifica dei requisiti desiderabili}
@@ -394,19 +402,21 @@
 					\hline
 					\textbf{Nome documento} & \textbf{Valore indice} & \textbf{Esito}\\
 					\hline						
-					\docNameVersionAdR & ?? & \textcolor{green}{Superato}\\
+					\docNameVersionAdR & 57 & \textcolor{green}{Superato}\\
 					\hline
-					\docNameVersionGlo & ?? & \textcolor{green}{Superato}\\
+					\docNameVersionDdP & 59 & \textcolor{green}{Superato}\\
+					\hline
+					\docNameVersionGlo & 51 & \textcolor{green}{Superato}\\
 					\hline					
-					\docNameVersionNdP & ?? & \textcolor{green}{Superato}\\
+					\docNameVersionNdP & 55 & \textcolor{green}{Superato}\\
 					\hline					
-					\docNameVersionPdP & ?? & \textcolor{green}{Superato}\\
+					\docNameVersionPdP & 59 & \textcolor{green}{Superato}\\
 					\hline					
-					\docNameVersionPdQ & ?? & \textcolor{green}{Superato}\\
+					\docNameVersionPdQ & 60 & \textcolor{green}{Superato}\\
 					\hline					
-					\docNameVersionSdF & ?? & \textcolor{green}{Superato}\\
+					\docNameVersionSdF & 48 & \textcolor{green}{Superato}\\
 					\hline	
-					\docNameVersionST & ?? & \textcolor{green}{Superato}\\
+					\docNameVersionST & 54 & \textcolor{green}{Superato}\\
 					\hline			
 				\end{tabularx}
 			\end{center}

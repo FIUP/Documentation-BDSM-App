@@ -172,11 +172,31 @@ avere lo stesso un ottimo indice Gulpease. Visto lo scopo dei documenti e e la l
 					\item \textbf{range ottimale:} [1 - 25]
 				\end{itemize}
 								
-				\item \textbf{Copertura del codice:} metrica che misura la copertura dei test. Maggiore sarà questo valore più significativi saranno i test eseguiti. Questa metrica può essere raffinata tralasciando nell'analisi i metodi semplici che non richiedono test.
+				\item \textbf{Copertura del codice:} metrica che misura la copertura dei test. Maggiore sarà questo valore più significativi saranno i test eseguiti. Questa metrica può essere raffinata tralasciando nell'analisi i metodi semplici che non richiedono test. La copertura del codice può essere di due tipologie:
 				\begin{itemize}
-					\item \textbf{range di accettazione:} [80\% - 100\%];
-					\item \textbf{range ottimale:} [90\% - 100\%].
-				\end{itemize}			
+					\item \textbf{Statement coverage:}\\
+					\begin{center}
+						\begin{math}
+							\frac{number\ of\ statements\ exercised} {total\ number\ of\ statements} * 100
+						\end{math}
+					\end{center}
+					 . Questo rappresenta il valore in percentuale del numero di linee di codice esaminate dai test.
+					\begin{itemize}
+						\item \textbf{range di accettazione:} [80\% - 100\%];
+						\item \textbf{range ottimale:} [90\% - 100\%].
+					\end{itemize}\end{itemize}
+					\item \textbf{Branch coverage:}\\
+					\begin{center}
+						\begin{math}
+							\frac{number\ of\ decision\ outcomes\ exercised}{total\ number\ of\ decision\ outcomes} * 100
+						\end{math}
+					\end{center}
+										
+					Verifica che ciascun ramo della logica del flusso di controllo sia eseguito.
+					\begin{itemize}
+						\item \textbf{range di accettazione:} [80\% - 100\%];
+						\item \textbf{range ottimale:} [90\% - 100\%].
+					\end{itemize}						
 				
 				\item \textbf{Validazione W3C:} l'applicativo web deve superare correttamente i test di validazione offerti dal W3C. Qui si controlla il numero di avvisi o inesattezze per pagina che il test segnala.
 				\begin{itemize}
