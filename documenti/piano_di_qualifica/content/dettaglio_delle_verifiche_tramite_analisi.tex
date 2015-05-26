@@ -257,25 +257,25 @@
 					\hline
 					\texttt{src::server::miner::ig} & 1 & \textcolor{red}{Non Superato}\\
 					\hline
-					\texttt{src::server::endpoints} & ?? & ??\\
+					\texttt{src::server::endpoints} 1 & \textcolor{red}{Non Superato}\\
 					\hline
-					\texttt{src::server::endpoints::api} & ?? & ??\\
+					\texttt{src::server::endpoints::api} & 1 & \textcolor{red}{Non Superato}\\
 					\hline
-					\texttt{src::server::endpoints::api::public} & ?? & ??\\
+					\texttt{src::server::endpoints::api::public} & 1 & \textcolor{red}{Non Superato}\\
 					\hline
-					\texttt{src::server::endpoints::api::private} & ?? & ??\\
+					\texttt{src::server::endpoints::api::private} & 1 & \textcolor{red}{Non Superato}\\
 					\hline
-					\texttt{src::server::endpoints::resp} & ?? & ??\\
+					\texttt{src::server::endpoints::resp} & 0 & \textcolor{green}{Superato}\\
 					\hline
-					\texttt{src::server::endpoints::resp::public} & ?? & ??\\
+					\texttt{src::server::endpoints::resp::public} & 0 & \textcolor{green}{Superato}\\
 					\hline
-					\texttt{src::server::endpoints::resp::public::fb} & ?? & ??\\
+					\texttt{src::server::endpoints::resp::public::fb} & 0 & \textcolor{green}{Superato}\\
 					\hline
-					\texttt{src::server::endpoints::resp::public::tw} & ?? & ??\\
+					\texttt{src::server::endpoints::resp::public::tw} & 0 & \textcolor{green}{Superato}\\
 					\hline
-					\texttt{src::server::endpoints::resp::public::ig} & ?? & ??\\
+					\texttt{src::server::endpoints::resp::public::ig} & 0 & \textcolor{green}{Superato}\\
 					\hline
-					\texttt{src::server::endpoints::resp::private} & ?? & ??\\
+					\texttt{src::server::endpoints::resp::private} & 0 & \textcolor{green}{Superato}\\
 					\hline
 					\caption{Tracciamento test di sistema - requisiti}
 				\end{longtable}
@@ -303,9 +303,10 @@
 					\begin{itemize}
 						\item Backend:
 							\begin{itemize}
-								\item medio: ??
-								\item massimo: ??
+								\item medio: 4;
+								\item massimo: 8.
 							\end{itemize}
+						Questo risultato così basso è stato raggiunto grazie alla divisione delle classi e alle numerose classi astratte che avranno complessità 1 e abbassano così la media.
 						\item Client:
 							\begin{itemize}
 								\item medio: ??
@@ -317,9 +318,10 @@
 					\begin{itemize}
 						\item Backend:
 							\begin{itemize}
-								\item medio: ??
-								\item massimo: ??
+								\item medio: 5;
+								\item massimo: 11.
 							\end{itemize}
+						In alcuni metodi non si è superato questo tipo di test in quanto la loro funzione era quella di istanziare dei nuovi oggetti nel database e quindi necessitavano di tutti i loro parametri per svolgere il compito.
 						\item Client:
 							\begin{itemize}
 								\item medio: ??
@@ -331,22 +333,21 @@
 					\begin{itemize}
 						\item Backend:
 							\begin{itemize}
-								\item medio: ??
-								\item massimo: ??
+								\item medio: 0.68.
 							\end{itemize}
 						\item Client:
 							\begin{itemize}
-								\item medio: ??
-								\item massimo: ??
+								\item medio: 0.49.
 							\end{itemize}
 					\end{itemize}
+				Questo test supera abbondantemente le aspettative, infatti il range ottimale era > 0.35. Il risultato ottenuto è da implicare all'utilizzo da parte del gruppo delle Google style guide. 
 							
 				\item \textbf{Numero di livelli di annidamento:}
 					\begin{itemize}
 						\item Backend:
 							\begin{itemize}
-								\item medio: ??
-								\item massimo: ??
+								\item medio: 2;
+								\item massimo: 5.
 							\end{itemize}
 						\item Client:
 							\begin{itemize}
@@ -356,10 +357,23 @@
 					\end{itemize}
 					
 				\item \textbf{Logical SLOC:}
+					Totale:
 					\begin{itemize}
-						\item Backend:
-						\item Client:
+						\item Backend: 2711;
+						\item Client: 4015.
 					\end{itemize}
+					Parziale:
+					\item Backend:
+							\begin{itemize}
+								\item medio: 31.7;
+								\item massimo: 122.
+							\end{itemize}
+					In questo caso alcuni moduli, soprattutto del miner, e nella cancellazione delle recipe, non rientrano nel range di accettazione, questo è dovuto a causa dell’elevata quantità di attributi che questi devono istanziare o cancellare dal database.			
+					\item Client:
+						\begin{itemize}
+							\item medio: ??
+							\item massimo: ??
+						\end{itemize}
 			\end{description}
 					
 	\subsection{Progettazione di dettaglio e codifica dei requisiti desiderabili}
