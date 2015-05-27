@@ -7,6 +7,7 @@
 # Documenti per RP
 # INTERNI=("norme_di_progetto")
 # ESTERNI=("analisi_dei_requisiti" "piano_di_progetto" "piano_di_qualifica" "glossario" "specifica_tecnica")
+
 # Documenti per RQ
 INTERNI=("norme_di_progetto")
 ESTERNI=("analisi_dei_requisiti" "piano_di_progetto" "piano_di_qualifica" "glossario" "specifica_tecnica" "definizione_di_prodotto")

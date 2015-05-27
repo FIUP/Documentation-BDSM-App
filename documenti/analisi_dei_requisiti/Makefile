@@ -2,9 +2,9 @@ latex=pdflatex -synctex=1 -interaction=nonstopmode
 # aspell=sudo aspell --mode=tex --lang=it check
 
 compile:
-	python ../../script/tracciamento/tracciamento_adr.py
-	mv requisiti-fonti.tex content/requisiti-fonti.tex
-	mv fonti-requisiti.tex content/fonti-requisiti.tex
+	# python ../../script/tracciamento/tracciamento_adr.py
+	# mv requisiti-fonti.tex content/requisiti-fonti.tex
+	# mv fonti-requisiti.tex content/fonti-requisiti.tex
 	$(latex) analisi_dei_requisiti.tex && $(latex) analisi_dei_requisiti.tex
 	rm -rf *.aux 
 	rm -rf *.log
@@ -20,9 +20,9 @@ compile:
 	esac
 
 compilenoopen:
-	python ../../script/tracciamento/tracciamento.py
-	mv requisiti-fonti.tex content/requisiti-fonti.tex
-	mv fonti-requisiti.tex content/fonti-requisiti.tex
+	# python ../../script/tracciamento/tracciamento.py
+	# mv requisiti-fonti.tex content/requisiti-fonti.tex
+	# mv fonti-requisiti.tex content/fonti-requisiti.tex
 	$(latex) analisi_dei_requisiti.tex && $(latex) analisi_dei_requisiti.tex
 	rm -rf *.aux 
 	rm -rf *.log
