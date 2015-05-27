@@ -41,6 +41,11 @@
 \paragraph{Classi} % (fold)
 		\subparagraph{server::miner::MinerScheduler} % (fold)
 		\label{subp:server_miner_MinerScheduler}
+		    \begin{figure}[!htbp]
+ 		 		\centering
+ 				\centerline{\includegraphics[scale=0.75]{./images/server/classes/miner/miner_scheduler.pdf}}
+ 				\caption{Classe - server::miner::MinerScheduler}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che si occupa di creare i fetcher che preleveranno i dati per ogni metrica di ogni social network;
 				\item \textbf{Utilizzo}: contiene la lista degli id delle Recipe da aggiornare ed un metodo che inizializza e avvia i vari fetcher;
@@ -83,6 +88,11 @@
 
 		\subparagraph{server::miner::AbsCounter} % (fold)
 		\label{subp:server_miner_AbsCounter}
+		    \begin{figure}[!htbp]
+ 		 		\centering
+ 				\centerline{\includegraphics[scale=0.75]{./images/server/classes/miner/abs_counter.pdf}}
+ 				\caption{Classe - server::miner::AbsCounter}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe astratta che rappresenta il padre delle classi counter delle varie metriche;
 				\item \textbf{Utilizzo}: descrive lo scheletro dell'algoritmo di counting necessario ad effettuare il conteggio di determinati dati ricavati con lo scopo ottenere un trend;
@@ -153,6 +163,11 @@
 
 		\subparagraph{server::miner::SocialAuth} % (fold)
 		\label{subp:server_miner_SocialAuth}
+		    \begin{figure}[!htbp]
+ 		 		\centering
+ 				\centerline{\includegraphics[scale=0.75]{./images/server/classes/miner/social_auth.pdf}}
+ 				\caption{Classe - server::miner::SocialAuth}
+			\end{figure}
 				\begin{itemize}
 				\item \textbf{Descrizione}: classe che rappresenta la fase di autenticazione dei social network;
 				\item \textbf{Utilizzo}: fornisce metodi statici per effettuare l'autenticazione ai social network presi in considerazione;
@@ -230,6 +245,11 @@
 	\paragraph{Classi} % (fold)
 		\subparagraph{server::miner::fb::AbsFbFetcher} % (fold)
 		\label{subp:server_miner_fb_AbsFbFetcher}
+		    \begin{figure}[!htbp]
+ 		 		\centering
+ 				\centerline{\includegraphics[scale=0.75]{./images/server/classes/miner/abs_fb_fetcher.pdf}}
+ 				\caption{Classe - server::miner::fb::AbsFbFetcher}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe astratta che rappresenta il padre di ogni fetcher relativo a Facebook;
 				\item \textbf{Utilizzo}: contiene un metodo che ricava i dati statici di un'entità Facebook ed un metodo astratto che verrà definito nelle classi figlie;
@@ -262,6 +282,11 @@
 
 		\subparagraph{server::miner::fb::FbPageFetcher} % (fold)
 		\label{subp:server_miner_fb_FbPageFetcher}
+		    \begin{figure}[!htbp]
+ 		 		\centering
+ 				\centerline{\includegraphics[scale=0.75]{./images/server/classes/miner/fb_page_fetcher.pdf}}
+ 				\caption{Classe - server::miner::fb::FbPageFetcher}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che si occupa ricava i dati dalle pagine Facebook;
 				\item \textbf{Utilizzo}: contiene un campo che descrive i dati statici di una pagina, un campo che descrive i dati dinamici ed un metodo che li ricava tramite l'utilizzo della classe \texttt{PostsCounter};
@@ -305,6 +330,11 @@
 
 		\subparagraph{server::miner::fb::FbEventFetcher} % (fold)
 		\label{subp:server_miner_fb_FbEventFetcher}
+		    \begin{figure}[!htbp]
+ 		 		\centering
+ 				\centerline{\includegraphics[scale=0.75]{./images/server/classes/miner/fb_event_fetcher.pdf}}
+ 				\caption{Classe - server::miner::fb::FbEventFetcher}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che ricava i dati di un evento Facebook;
 				\item \textbf{Utilizzo}: contiene un campo che descrive i dati statici di un evento, un campo che descrive i dati dinamici e un metodo che li ricava tramite l'utilizzo della classe \texttt{PostsCounter};
@@ -352,6 +382,11 @@
 
 		\subparagraph{server::miner::fb::AbsFbCounter} % (fold)
 		\label{subp:server_miner_fb_AbsFbCounter}
+		    \begin{figure}[!htbp]
+ 		 		\centering
+ 				\centerline{\includegraphics[scale=0.75]{./images/server/classes/miner/abs_fb_counter.pdf}}
+ 				\caption{Classe - server::miner::fb::AbsFbCounter}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe astratta che rappresenta il padre per tutte le classi counter delle metriche di Facebook;
 				\item \textbf{Utilizzo}: classe che contiene l'id delle metriche su cui effettuare il counting, questa classe effettua l'overloading dei metodi della classe padre specificando la struttura dell'algoritmo per il counting su dati Facebook;
@@ -405,6 +440,11 @@
 
 	\subparagraph{server::miner::fb::PostsCounter} % (fold)
 		\label{subp:server_miner_fb_PostsCounter}
+		    \begin{figure}[!htbp]
+ 		 		\centering
+ 				\centerline{\includegraphics[scale=0.75]{./images/server/classes/miner/posts_counter.pdf}}
+ 				\caption{Classe - server::miner::fb::PostsCounter}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che descrive l'algoritmo per calcolare il numero dei post per ogni evento o pagina;
 				\item \textbf{Utilizzo}: classe che contiene un campo per il numero dei like e un campo per il numero dei talking about per ogni post di Facebook;
@@ -452,6 +492,11 @@
 
 	\subparagraph{server::miner::fb::CommentsCounter} % (fold)
 		\label{subp:server_miner_fb_CommentsCounter}
+		    \begin{figure}[!htbp]
+ 		 		\centering
+ 				\centerline{\includegraphics[scale=0.75]{./images/server/classes/miner/comments_counter.pdf}}
+ 				\caption{Classe - server::miner::fb::CommentsCounter}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che descrive l'algoritmo per calcolare il numero di commenti per ogni post;
 				\item \textbf{Utilizzo}: classe che ricava il numero di commenti per ogni post;
@@ -506,6 +551,11 @@
 	\paragraph{Classi} % (fold)
 	\subparagraph{server::miner::tw::AbsTwFetcher} % (fold)
 		\label{subp:server_miner_tw_AbsTwFetcher}
+		    \begin{figure}[!htbp]
+ 		 		\centering
+ 				\centerline{\includegraphics[scale=0.75]{./images/server/classes/miner/abs_tw_fetcher.pdf}}
+ 				\caption{Classe - server::miner::tw::AbsTwFetcher}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe astratta che rappresenta il padre di ogni fetcher relativo a Twitter;
 				\item \textbf{Utilizzo}: contiene un metodo che ricava i dati statici di un'entità Twitter ed un metodo astratto che verrà definito nelle classi figlie;
@@ -534,6 +584,11 @@
 
 	\subparagraph{server::miner::tw::TwHashtagFetcher} % (fold)
 		\label{subp:server_miner_tw_TwHashtagFetcher}
+		    \begin{figure}[!htbp]
+ 		 		\centering
+ 				\centerline{\includegraphics[scale=0.75]{./images/server/classes/miner/tw_hashtag_fetcher.pdf}}
+ 				\caption{Classe - server::miner::tw::TwHashtagFetcher}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che ricava i dati degli hashtag di Twitter;
 				\item \textbf{Utilizzo}: classe che contiene un campo che descrive i dati statici di un hashtag di Twitter e un metodo che ricava i dati dinamici tramite l'utilizzo di \texttt{HashtagTweetCounter};
@@ -569,6 +624,11 @@
 
 	\subparagraph{server::miner::tw::TwUserFetcher} % (fold)
 		\label{subp:server_miner_tw_TwUserFetcher}
+		    \begin{figure}[!htbp]
+ 		 		\centering
+ 				\centerline{\includegraphics[scale=0.75]{./images/server/classes/miner/tw_user_fetcher.pdf}}
+ 				\caption{Classe - server::miner::tw::TwUserFetcher}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che ricava i dati degli utenti di Twitter;
 				\item \textbf{Utilizzo}: classe che contiene un campo che descrive i dati statici dell'utente ed un metodo che ricava i dati dinamici tramite l'utilizzo di \texttt{UserTweetCounter};
@@ -604,6 +664,11 @@
 
 	\subparagraph{server::miner::tw::AbsTwCounter} % (fold)
 		\label{subp:server_miner_tw_AbsTwCounter}
+		    \begin{figure}[!htbp]
+ 		 		\centering
+ 				\centerline{\includegraphics[scale=0.75]{./images/server/classes/miner/abs_tw_counter.pdf}}
+ 				\caption{Classe - server::miner::tw::AbsTwCounter}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe astratta che rappresenta il padre per tutte le classi counter delle metriche di Twitter;
 				\item \textbf{Utilizzo}: oltre a contenere l’id delle metriche su cui effettuare il counting, questa classe effettua l'overloading dei metodi della classe padre specificando la struttura dell'algoritmo per il counting su dati Twitter;
@@ -643,6 +708,11 @@
 
 	\subparagraph{server::miner::tw::UserTweetCounter} % (fold)
 		\label{subp:server_miner_tw_UserTweetCounter}
+		    \begin{figure}[!htbp]
+ 		 		\centering
+ 				\centerline{\includegraphics[scale=0.75]{./images/server/classes/miner/user_tweet_counter.pdf}}
+ 				\caption{Classe - server::miner::tw::UserTweetCounter}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che descrive l'algoritmo per il counting dei campi di un tweet, relativo ad un utente, di cui ci interessa fare un trend;
 				\item \textbf{Utilizzo}: classe che ricava il numero dei retweets, il numero dei favoriti, il tipo di device, e il numero di media per ogni tweet;
@@ -687,6 +757,11 @@
 
 	\subparagraph{server::miner::tw::HashtagTweetCounter} % (fold)
 		\label{subp:server_miner_tw_HashtagTweetCounter}
+		    \begin{figure}[!htbp]
+ 		 		\centering
+ 				\centerline{\includegraphics[scale=0.75]{./images/server/classes/miner/hashtag_tweet_counter.pdf}}
+ 				\caption{Classe - server::miner::tw::HashtagTweetCounter}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che descrive l'algoritmo per il counting dei campi di un tweet, relativo ad un hashtag, di cui ci interessa fare un trend;
 				\item \textbf{Utilizzo}: classe che ricava anche la time zone di ogni tweet;
@@ -755,6 +830,11 @@
 	\paragraph{Classi} % (fold)
 	\subparagraph{server::miner::ig::AbsIgFetcher} % (fold)
 		\label{subp:server_miner_ig_AbsIgFetcher}
+		    \begin{figure}[!htbp]
+ 		 		\centering
+ 				\centerline{\includegraphics[scale=0.75]{./images/server/classes/miner/abs_ig_fetcher.pdf}}
+ 				\caption{Classe - server::miner::ig::AbsIgFetcher}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe astratta che rappresenta il padre di ogni fetcher relativo a Instagram;
 				\item \textbf{Utilizzo}: contiene un metodo che ricava i dati statici di un'entità Instagram ed un metodo astratto che verrà definito nelle classi figlie;
@@ -791,6 +871,11 @@
 
 	\subparagraph{server::miner::ig::IgUserFetcher} % (fold)
 		\label{subp:server_miner_ig_IgUserFetcher}
+		    \begin{figure}[!htbp]
+ 		 		\centering
+ 				\centerline{\includegraphics[scale=0.75]{./images/server/classes/miner/ig_user_fetcher.pdf}}
+ 				\caption{Classe - server::miner::ig::IgUserFetcher}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che ricava i dati dagli utenti di Instagram;
 				\item \textbf{Utilizzo}: classe che contiene un campo che descrive i dati statici dell'utente ed un metodo che ricava i dati dinamici tramite l'utilizzo di \texttt{MediaCounter};
@@ -826,6 +911,11 @@
 
 	\subparagraph{server::miner::ig::IgHashtagFetcher} % (fold)
 		\label{subp:server_miner_ig_IgHashtagFetcher}
+		    \begin{figure}[!htbp]
+ 		 		\centering
+ 				\centerline{\includegraphics[scale=0.75]{./images/server/classes/miner/ig_hashtag_fetcher.pdf}}
+ 				\caption{Classe - server::miner::ig::IgHashtagFetcher}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che ricava i dati dagli hashtag di Instagram;
 				\item \textbf{Utilizzo}: classe che contiene un campo che descrive i dati statici dell'hashtag ed un metodo che ricava i dati dinamici tramite l'utilizzo di \texttt{MediaCounter};
@@ -861,6 +951,11 @@
 
 	\subparagraph{server::miner::ig::AbsIgCounter} % (fold)
 		\label{subp:server_miner_ig_AbsIgCounter}
+		    \begin{figure}[!htbp]
+ 		 		\centering
+ 				\centerline{\includegraphics[scale=0.75]{./images/server/classes/miner/abs_ig_counter.pdf}}
+ 				\caption{Classe - server::miner::ig::AbsIgCounter}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe astratta che rappresenta il padre per tutte le classi counter delle metriche relative ad Instagram;
 				\item \textbf{Utilizzo}: classe che contiene l’id delle metriche su cui effettuare il counting, questa classe effettua l'overloading dei metodi della classe padre per specificarne l’utilizzo sui dati relativi ad Instagram;
@@ -913,6 +1008,11 @@
 
 	\subparagraph{server::miner::ig::MediaCounter} % (fold)
 		\label{subp:server_miner_ig_MediaCounter}
+		    \begin{figure}[!htbp]
+ 		 		\centering
+ 				\centerline{\includegraphics[scale=0.75]{./images/server/classes/miner/media_counter.pdf}}
+ 				\caption{Classe - server::miner::ig::MediaCounter}
+			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che descrive l'algoritmo per il counting delle metriche necessarie a descrivere il trend dei media di un utente o di un hashtag  Instagram;
 				\item \textbf{Utilizzo}: classe che ricava il numero di commenti, il numero di like, il numero di foto e il numero di video di un media;
