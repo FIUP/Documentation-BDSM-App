@@ -21,6 +21,7 @@ Design responsive
 Diagramma di Gantt
 Diagramma di PERT
 Driver
+Duck-typing
 Express.js
 Framework
 Form
@@ -58,6 +59,7 @@ Proponente
 Qt
 Repository
 Recipe
+Responsive
 REST
 Reveal.js
 Schema-less

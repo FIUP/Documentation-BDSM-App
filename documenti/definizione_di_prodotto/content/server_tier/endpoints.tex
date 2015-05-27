@@ -376,12 +376,12 @@
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_private_reciperequestapi (end)
 
-    \subparagraph{server::endpoints::api::private::FavoritesApi} % (fold)
+    \subparagraph{server::endpoints::api::private::FavouritesApi} % (fold)
     \label{subp:bdsm_app_server_endpoints_api_private_favoritesapi}
 	\begin{figure}[!htbp]
 		\centering
 		\centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/favorites_api.pdf}}
-		\caption{Classe - server::endpoints::api::private::FavoritesApi}
+		\caption{Classe - server::endpoints::api::private::FavouritesApi}
 	\end{figure}
     \begin{itemize}
       \item \textbf{Descrizione}: classe che rappresenta l'implementazione delle web API relative alla gestione delle View preferite per ogni utente;
@@ -512,7 +512,7 @@
   \end{figure}
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati di una Recipe da ritornare al client;
-      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una Recipe al client inseme alla lista delle metriche contenute dalla stessa;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una Recipe al client insieme alla lista delle metriche contenute dalla stessa;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
         \item server::endpoints::resp::public::MetricResponse
@@ -1359,10 +1359,9 @@
           \item \textbf{Descrizione}: impostazione utilizzata dal client per generare il grafico che l'utente ha aggiunto ai preferiti.
         \end{description}
         \item \textcolor{forestgreen}{\texttt{metric : List}}
-        \begin{description}
-          \item \textbf{Descrizione}: metriche utilizzate nel grafico che l'utente ha aggiunto ai preferiti.
-        \end{description}
-        \end{description}
+	       \begin{description}
+	         \item \textbf{Descrizione}: metriche utilizzate nel grafico che l'utente ha aggiunto ai preferiti.
+	       \end{description}
       \end{itemize}
     \item \textbf{Metodi}: N/A
     \end{itemize}
