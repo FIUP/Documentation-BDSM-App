@@ -17,7 +17,7 @@ if __name__ == '__main__':
 
     # prelevo dalla lista solo le cartelle su sulla quale devo effettuare le sostituzioni
     docs_dir_list = [d for d in doc_file_list if os.path.isdir(os.path.join(doc_path, d)) and d != "glossario" and
-                     d != "template" and d != "template_document" and d != "lettera_di_presentazione"]
+                     d != "template" and d != "template_document" and d != "lettera_di_presentazione" and d != "manuale_utente" and d != "manuale_amministratore"]
 
     # itero sulle cartelle dei documenti sui quali mi interessa fare le sostituzioni
     for doc_dir in docs_dir_list:

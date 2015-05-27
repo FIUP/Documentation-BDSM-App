@@ -264,7 +264,7 @@
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ comments\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero totate di commenti ai post della pagina o dell'evento.
+							\item \textbf{Descrizione}: numero totale di commenti ai post della pagina o dell'evento.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ admin\_posts\_int : int}}
 						\begin{description}
@@ -466,7 +466,7 @@
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ tweets\_count\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: totale dei tweet contentente un determinato hashtag.
+							\item \textbf{Descrizione}: totale dei tweet contenenti un determinato hashtag.
 						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
@@ -570,7 +570,7 @@
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ followed\_by\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero di followed dell'utente su Intagram.
+							\item \textbf{Descrizione}: numero di followed dell'utente su Instagram.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ follows\_int : int}}
 						\begin{description}
@@ -586,7 +586,7 @@
 		\label{subp:server_db_raw_data_ig_rawighashtag}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati di un hashtag Instagram;
-				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione minimale dell'hashtag su Instagram. Sebbene tale classe non fornisca metodi o campi dati, risulta molto utile per distinguere un hashtag Instagram da un'altra metica tramite type checking;
+				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione minimale dell'hashtag su Instagram. Sebbene tale classe non fornisca metodi o campi dati, risulta molto utile per distinguere un hashtag Instagram da un'altra metrica tramite type checking;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsIgRawData
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
@@ -607,7 +607,7 @@
 				\caption{Classe - server::db::raw\_data::ig::RawIgHashtagTrend}
 			\end{figure}
 			\begin{itemize}
-				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend di un hastag Instagram;
+				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend di un hashtag Instagram;
 				\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di media caricati di un determinato hashtag. Come per tutti gli oggetti di tipo trend, vengono ricavati i dati fino a 3 giorni prima della creazione dell'oggetto;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
 				\item \textbf{Attributi}:
@@ -630,8 +630,8 @@
 				\caption{Classe - server::db::raw\_data::ig::RawIgMedia}
 			\end{figure}
 			\begin{itemize}
-				\item \textbf{Descrizione}: classe che definisce il modello dei dati di un media realtivo ad Instagram;
-				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione dettagliata del trend dei media realativi ad un utente o un hashtag specifico su Instagram. Come per tutti gli oggetti di tipo trend, vengono ricavati i dati fino a 3 giorni prima della creazione dell'oggetto;
+				\item \textbf{Descrizione}: classe che definisce il modello dei dati di un media relativo ad Instagram;
+				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione dettagliata del trend dei media relativi ad un utente o un hashtag specifico su Instagram. Come per tutti gli oggetti di tipo trend, vengono ricavati i dati fino a 3 giorni prima della creazione dell'oggetto;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
 				\item \textbf{Attributi}:
 					\begin{itemize}
@@ -712,7 +712,7 @@
 			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati degli utenti all'interno della base di dati;
-				\item \textbf{Utilizzo}: la classe utlizzata per aggiungere, modificare o eliminare un utente dal database;
+				\item \textbf{Utilizzo}: la classe utilizzata per aggiungere, modificare o eliminare un utente dal database;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item server::db::app\_data::user::FavouritesModel
@@ -853,7 +853,7 @@
 		\label{subp:server_db_app_data_recipe_reciperequestmodel}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati per la richiesta di aggiunta Recipe;
-				\item \textbf{Utilizzo}: la classe specializza la richiesta identificandone l'utente tramite il rapposto parent-child delle classi di Google Datastore;
+				\item \textbf{Utilizzo}: la classe specializza la richiesta identificandone l'utente tramite il rapporto parent-child delle classi di Google Datastore;
 				\item \textbf{Classi ereditate}: server::db::app\_data::recipe::AbsRecipeModel
 				\item \textbf{Attributi}: N/A
 				\item \textbf{Metodi}: N/A
@@ -869,7 +869,7 @@
 				\caption{Classe - server::db::app\_data::recipe::RecipeModel}
 			\end{figure}
 			\begin{itemize}
-				\item \textbf{Descrizione}: classe che definisce il modello dei dati realtivo ad una Recipe;
+				\item \textbf{Descrizione}: classe che definisce il modello dei dati relativo ad una Recipe;
 				\item \textbf{Utilizzo}: la classe specializza la ricetta. Vengono forniti i campi dati per il possibile incremento temporale dei dati;
 				\item \textbf{Classi ereditate}: server::db::app\_data::recipe::AbsRecipeModel
 				\item \textbf{Relazioni con altre classi}:
@@ -941,7 +941,7 @@
 			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati delle metriche relative ai social media;
-				\item \textbf{Utilizzo}: la classe rappreseta il modello di una metrica relativa ad un social network fornendo il tipo di metrica e il suo identificativo;
+				\item \textbf{Utilizzo}: la classe rappresenta il modello di una metrica relativa ad un social network fornendo il tipo di metrica e il suo identificativo;
 				\item \textbf{Classi ereditate}: server::db::app\_data::recipe::AbsMetricModel
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}

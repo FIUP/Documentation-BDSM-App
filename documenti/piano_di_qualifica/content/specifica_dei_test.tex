@@ -784,13 +784,13 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 					\hline
 					\textbf{Test} & \textbf{Descrizione} & \textbf{Stato} & \textbf{Requisito}\\
 					\hline						
-					TSF1 & Viene verificato che il sistema permetta, all'utente non autenticato, la registrazione al servizio & N.I. & ROF1\\
+					TSF1 & Viene verificato che il sistema permetta, all'utente non autenticato, la registrazione al servizio & \textcolor{green}{Superato}. & ROF1\\
 					\hline
-					TSF2 & Viene verificato che il sistema permetta all'utente di effettuare l'autenticazione & N.I. & ROF2\\
+					TSF2 & Viene verificato che il sistema permetta all'utente di effettuare l'autenticazione & \textcolor{green}{Superato}. & ROF2\\
 					\hline
 					TSF3 & Viene verificato che il sistema permetta, all'utente autenticato, di accedere al menù delle informazioni personali e delle statistiche del sistema & N.I. & ROF3\\
 					\hline
-					TSF4 & Viene verificato che il sistema permetta, all'utente autenticato, di effettuare la deautenticazione & N.I. & ROF4\\
+					TSF4 & Viene verificato che il sistema permetta, all'utente autenticato, di effettuare la deautenticazione & \textcolor{green}{Superato}. & ROF4\\
 					\hline
 					TSF5 & Viene verificato che il sistema permetta, all'utente autenticato, di visualizzare tutte le Recipe presenti nel sistema & N.I. & ROF5\\
 					\hline
@@ -852,81 +852,81 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 
 			\def\arraystretch{1.5}
 			\bgroup
-			\begin{longtable}{| p{3.8cm} | p{4.5cm} | p{3.2cm} | p{1cm} |}
+			\begin{longtable}{| p{3.6cm} | p{4.2cm} | p{3cm} | p{1.7cm} |}
 					\hline
 					\textbf{Test} & \textbf{Descrizione} & \textbf{Componente} & \textbf{Stato}\\
 					\hline
 					TIadmin\_controller & Viene verificato che il sistema gestisca correttamente le decisioni su quali pagine HTML mostrare all'utente amministratore e su quali operazioni può interagire quest'ultimo. & bdsm\_app::\-client::\-controller::\-admin & N.I.\\
 					\hline
-					TIadmin\_view & Viene verificato che il sistema permetta una corretta visualizzazione di tutte le pagine HTML disponibili per l'utente amministratore. & bdsm\_app::\-client::\-view::\-admin & N.I.\\
+					TIadmin\_view & Viene verificato che il sistema permetta una corretta visualizzazione di tutte le pagine HTML disponibili per l'utente amministratore. & bdsm\_app::\-client::\-view::\-admin & \textcolor{green}{Superato}\\
 					\hline
 					TIapi & Viene verificato che il sistema fornisca delle API funzionanti al client che le utilizzerà. & bdsm\_app::\-server::\-endpoints::\-api & N.I.\\
 					\hline
-					TIapp\_data & Viene verificato che il sistema gestisca correttamente il modello di dati degli utenti, delle Recipe, dei preferiti e delle richieste di nuove Recipe. & bdsm\_app::\-server::\-db::\-app\_data & N.I.\\
+					TIapp\_data & Viene verificato che il sistema gestisca correttamente il modello di dati degli utenti, delle Recipe, dei preferiti e delle richieste di nuove Recipe. & bdsm\_app::\-server::\-db::\-app\_data & \textcolor{green}{Superato}\\
 					\hline
 					TIbdsm\_app & Viene verificata la correttezza generale del sistema integrante i livelli client, database e server. & bdsm\_app & N.I.\\
 					\hline				
 					TIclient & Viene verificato che il sistema gestisca correttamente il front-end del prodotto. & bdsm\_app::\-client & N.I.\\
 					\hline
-					TIcommands & Viene verificato che il sistema gestisca correttamente le chiamate provenienti dal client.  & bdsm\_app::\-server::\-processor::\-commands & N.I.\\
+					TIcommands & Viene verificato che il sistema gestisca correttamente le chiamate provenienti dal client.  & bdsm\_app::\-server::\-processor::\-commands & \textcolor{green}{Superato}\\
 					\hline
 					%TIcontroller & Viene verificato che il sistema gestisca correttamente la componente Controller del design pattern MVC verificando che si integri correttamente nell'applicazione. & bdsm\_app::\-client::\-controller & N.I.\\
 					%\hline
 					TIdata & Viene verificato che il sistema gestisca correttamente la struttura di memorizzazione dei dati utilizzata. & bdsm\_app::\-client::\-model::\-data & N.I.\\
 					\hline
-					TIdb & Viene verificato che il sistema gestisca correttamente l'interazione con il database. & bdsm\_app::\-server::\-db & N.I.\\
+					TIdb & Viene verificato che il sistema gestisca correttamente l'interazione con il database. & bdsm\_app::\-server::\-db & \textcolor{green}{Superato}\\
 					\hline
 					TIendpoints & Viene verificato che il sistema gestisca correttamente la componente endpoints del server. Più precisamente viene verificato che il sistema gestisca correttamente le chiamate provenienti dal client e le relative risposte. & bdsm\_app::\-server::\-endpoints & N.I.\\
 					\hline
-					TIfb\_miner & Viene verificato che il sistema prelevi, elabori e salvi correttamente i dati dal social network Facebook. & bdsm\_app::\-server::\-miner::\-fb & N.I.\\
+					TIfb\_miner & Viene verificato che il sistema prelevi, elabori e salvi correttamente i dati dal social network Facebook. & bdsm\_app::\-server::\-miner::\-fb & \textcolor{green}{Superato}\\
 					\hline
-					TIfb\_resp & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST pubblici che riguardano i dati provenienti dal social network Facebook. & bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-fb & N.I.\\
+					TIfb\_resp & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST pubblici che riguardano i dati provenienti dal social network Facebook. & bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-fb & \textcolor{green}{Superato}\\
 					\hline
-					TIig\_miner & Viene verificato che il sistema prelevi, elabori e salvi correttamente i dati dal social network Instagram. & bdsm\_app::\-server::\-miner::\-ig & N.I.\\
+					TIig\_miner & Viene verificato che il sistema prelevi, elabori e salvi correttamente i dati dal social network Instagram. & bdsm\_app::\-server::\-miner::\-ig & \textcolor{green}{Superato}\\
 					\hline
-					TIig\_resp & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST pubblici che riguardano i dati provenienti dal social network Instagram. & bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-ig & N.I.\\
+					TIig\_resp & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST pubblici che riguardano i dati provenienti dal social network Instagram. & bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-ig & \textcolor{green}{Superato}\\
 					\hline
-					TIminer & Viene verificato che il sistema prelevi, elabori e salvi correttamente i dati dai diversi servizi. & bdsm\_app::\-server::\-miner & N.I.\\
+					TIminer & Viene verificato che il sistema prelevi, elabori e salvi correttamente i dati dai diversi servizi. & bdsm\_app::\-server::\-miner & \textcolor{green}{Superato}\\
 					\hline
 					%TImodel & TO DO & bdsm\_app::\-client::\-model & N.I.\\
 					%\hline
 					TIprivate\_api & Viene verificato che il sistema effettui correttamente le chiamate ai servizi REST privati provenienti dal client. & bdsm\_app::\-server::\-endpoints::\-api::\-private & N.I.\\
 					\hline
-					TIprivate\_resp & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST privati verso il client. & bdsm\_app::\-server::\-endpoints::\-resp::\-private & N.I.\\
+					TIprivate\_resp & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST privati verso il client. & bdsm\_app::\-server::\-endpoints::\-resp::\-private & \textcolor{green}{Superato}\\
 					\hline
-					TIprocessor & Viene verificato che il sistema gestisca correttamente le chiamate provenienti dai servizi REST utilizzati dal client. & bdsm\_app::\-server::\-processor & N.I.\\
+					TIprocessor & Viene verificato che il sistema gestisca correttamente le chiamate provenienti dai servizi REST utilizzati dal client. & bdsm\_app::\-server::\-processor & \textcolor{green}{Superato}\\
 					\hline
 					TIpublic\_api & Viene verificato che il sistema effettui correttamente le chiamate ai servizi REST pubblici provenienti dal client. & bdsm\_app::\-server::\-endpoints::\-api::\-public & N.I.\\
 					\hline
-					TIpublic\_controller & Viene verificato che il sistema gestisca correttamente le decisioni su quali pagine HTML mostrare all'utente non autenticato e su quali operazioni può interagire quest'ultimo. & bdsm\_app::\-client::\-controller::\-public & N.I.\\
+					TIpublic\_controller & Viene verificato che il sistema gestisca correttamente le decisioni su quali pagine HTML mostrare all'utente non autenticato e su quali operazioni può interagire quest'ultimo. & bdsm\_app::\-client::\-controller::\-public & \textcolor{green}{Superato}\\
 					\hline
-					TIpublic\_resp & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST pubblici verso il client. & bdsm\_app::\-server::\-endpoints::\-resp::\-public & N.I.\\
+					TIpublic\_resp & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST pubblici verso il client. & bdsm\_app::\-server::\-endpoints::\-resp::\-public & \textcolor{green}{Superato}\\
 					\hline
-					TIpublic\_view & Viene verificato che il sistema permetta una corretta visualizzazione di tutte le pagine HTML disponibili per l'utente non autenticato. & bdsm\_app::\-client::\-view::\-public & N.I.\\
+					TIpublic\_view & Viene verificato che il sistema permetta una corretta visualizzazione di tutte le pagine HTML disponibili per l'utente non autenticato. & bdsm\_app::\-client::\-view::\-public & \textcolor{green}{Superato}\\
 					\hline
-					TIraw\_data & Viene verificato che il sistema gestisca correttamente il modello di dati grezzi ricavati dai vari social network. & bdsm\_app::\-server::\-db::\-raw\_data & N.I.\\
+					TIraw\_data & Viene verificato che il sistema gestisca correttamente il modello di dati grezzi ricavati dai vari social network. & bdsm\_app::\-server::\-db::\-raw\_data & \textcolor{green}{Superato}\\
 					\hline
-					TIrecipe\_commands & Viene verificato che il sistema gestisca correttamente i comandi relativi alla gestione delle Recipe. & bdsm\_app::\-server::\-processor::\-commands::\-recipe & N.I.\\
+					TIrecipe\_commands & Viene verificato che il sistema gestisca correttamente i comandi relativi alla gestione delle Recipe. & bdsm\_app::\-server::\-processor::\-commands::\-recipe & \textcolor{green}{Superato}\\
 					\hline
 					TIrequests\_commands & Viene verificato che il sistema gestisca correttamente i comandi relativi alla gestione delle richieste di aggiunta delle Recipe. & bdsm\_app::\-server::\-processor::\-commands::\-requests & N.I.\\
 					\hline
-					TIresp & Viene verificato che il sistema gestisca correttamente le risposte verso il client. & bdsm\_app::\-server::\-endpoints::\-resp & N.I.\\
+					TIresp & Viene verificato che il sistema gestisca correttamente le risposte verso il client. & bdsm\_app::\-server::\-endpoints::\-resp & \textcolor{green}{Superato}\\
 					\hline
 					TIserver & Viene verificato che il sistema gestisca correttamente il back-end del prodotto. & bdsm\_app::\-server & N.I.\\
 					\hline
 					TIservices & Viene verificato che il sistema gestisca correttamente l'interazione con il back-end. & bdsm\_app::\-client::\-model::\-services & N.I.\\
 					\hline
-					TIsocial\_commands & Viene verificato che il sistema gestisca correttamente i comandi relativi alla raccolta dei dati grezzi ricavati dai social network. & bdsm\_app::\-server::\-processor::\-commands::\-social & N.I.\\
+					TIsocial\_commands & Viene verificato che il sistema gestisca correttamente i comandi relativi alla raccolta dei dati grezzi ricavati dai social network. & bdsm\_app::\-server::\-processor::\-commands::\-social & \textcolor{green}{Superato}\\
 					\hline
-					TItw\_miner & Viene verificato che il sistema prelevi, elabori e salvi correttamente i dati dal social network Twitter. & bdsm\_app::\-server::\-miner::\-tw & N.I.\\
+					TItw\_miner & Viene verificato che il sistema prelevi, elabori e salvi correttamente i dati dal social network Twitter. & bdsm\_app::\-server::\-miner::\-tw & \textcolor{green}{Superato}\\
 					\hline
-					TItw\_resp & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST pubblici che riguardano i dati provenienti dal social network Twitter. & bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-tw & N.I.\\
+					TItw\_resp & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST pubblici che riguardano i dati provenienti dal social network Twitter. & bdsm\_app::\-server::\-endpoints::\-resp::\-public::\-tw & \textcolor{green}{Superato}\\
 					\hline
-					TIuser\_commands & Viene verificato che il sistema gestisca correttamente i comandi relativi alla gestione degli utenti.  & bdsm\_app::\-server::\-processor::\-commands::\-user & N.I.\\
+					TIuser\_commands & Viene verificato che il sistema gestisca correttamente i comandi relativi alla gestione degli utenti.  & bdsm\_app::\-server::\-processor::\-commands::\-user & \textcolor{green}{Superato}\\
 					\hline
 					TIuser\_controller & Viene verificato che il sistema gestisca correttamente le decisioni su quali pagine HTML mostrare all'utente autenticato e su quali operazioni può interagire quest'ultimo. & bdsm\_app::\-client::\-controller::\-user & N.I.\\
 					\hline
-					TIuser\_view & Viene verificato che il sistema permetta una corretta visualizzazione di tutte le pagine HTML disponibili per l'utente autenticato. & bdsm\_app::\-client::\-view::\-user & N.I.\\
+					TIuser\_view & Viene verificato che il sistema permetta una corretta visualizzazione di tutte le pagine HTML disponibili per l'utente autenticato. & bdsm\_app::\-client::\-view::\-user & \textcolor{green}{Superato}\\
 					\hline
 					%TIview & Viene verificato che il sistema permetta una corretta visualizzazione dell'interfaccia grafica. & bdsm\_app::\-client::\-view & N.I.\\
 					%\hline
@@ -1245,41 +1245,41 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 					\hline
 					TU106 & Viene verificato che l'API, una volta ricevuto il nome di una View impostata come preferita da un utente, elimini dai preferiti tale View. & N.I.\\
 					\hline
-					TU107 & Viene verificato che il controller ApiDocs esista e sia associato alla pagina ApiDocs. & N.I.\\
+					TU107 & Viene verificato che il controller ApiDocs esista e sia associato alla pagina ApiDocs. & \textcolor{green}{Superato}\\
 					\hline
 					TU108 & Viene verificato che, alla fine dell'esecuzione del metodo getRestService, la variabile contenga una lista di servizi REST aventi un determinato formato. & N.I.\\
 					\hline
-					TU109 & Viene verificato che il controller Login esista e sia associato alla pagina Login. & N.I.\\
+					TU109 & Viene verificato che il controller Login esista e sia associato alla pagina Login. & \textcolor{green}{Superato}\\
 					\hline
 					TU110 & Viene verificato che, alla fine dell'esecuzione del metodo login, la variabile contenente le credenziali d'accesso sia vuota se l'autenticazione è avvenuta con successo. & N.I.\\
 					\hline
 					TU111 & Viene verificato che il controller Register esista e sia associato alla pagina Register. & N.I.\\
 					\hline
-					TU112 & Viene verificato che, nel metodo checkMatchPwd, se la password e la password di conferma inserite coincidono venga ritornato true. & N.I.\\
+					TU112 & Viene verificato che, nel metodo checkMatchPwd, se la password e la password di conferma inserite coincidono venga ritornato true. & \textcolor{green}{Superato}\\
 					\hline
 					TU113 & Viene verificato che, alla fine dell'esecuzione del metodo register, la variabile contenente le credenziali sia vuota se la registrazione è avvenuta con successo. & N.I.\\
 					\hline
-					TU114 & Viene verificato che la lunghezza dell'access token sia di lunghezza uguale a quanto descritto nel documento d'analisi. & N.I.\\
+					TU114 & Viene verificato che la lunghezza dell'access token sia di lunghezza uguale a quanto descritto nel documento d'analisi. & \textcolor{green}{Superato}\\
 					\hline
 					TU115 & Viene verificato che, se la chiamata al metodo deleteAccessToken è avvenuta con successo, il valore della variabile accessToken sia vuoto. & N.I.\\
 					\hline
-					TU116 & Viene verificato che il metodo matchNewPassword restituisca true nel caso la password nuova e quella di conferma coincidano. & N.I.\\
+					TU116 & Viene verificato che il metodo matchNewPassword restituisca true nel caso la password nuova e quella di conferma coincidano. & \textcolor{green}{Superato}\\
 					\hline
 					TU117 & Viene verificato che il metodo checkModifyFields restituisca true nel caso siano avvenute modifiche da salvare nel form. & N.I.\\
 					\hline
 					TU118 & Viene verificato che il metodo saveEdit restituisca true nel caso in cui il salvataggio delle modifiche sia avvenuto correttamente. & N.I.\\
 					\hline
-					TU119 & Viene verificato che il controller Recipe esista e sia associato alla pagina Recipe. & N.I.\\
+					TU119 & Viene verificato che il controller Recipe esista e sia associato alla pagina Recipe. & \textcolor{green}{Superato}\\
 					\hline
 					TU120 & Viene verificato che, se la chiamata al metodo è avvenuta con successo, la variabile contenente la lista delle Recipe non sia vuota e gli oggetti in essa siano nel formato previsto. & N.I.\\
 					\hline
-					TU121 & Viene verificato che il controller Metrics esista e sia associato alla pagina Metrics. & N.I.\\
+					TU121 & Viene verificato che il controller Metrics esista e sia associato alla pagina Metrics. & \textcolor{green}{Superato}\\
 					\hline
 					TU122 & Viene verificato che il metodo getMetricType ritorni un oggetto nel formato corretto. & N.I.\\
 					\hline
 					TU123 & Viene verificato che il metodo getMetricList ritorni una lista di metriche nel formato corretto. & N.I.\\
 					\hline
-					TU124 & Viene verificato che il controller UsersConfig esista e sia associato alla pagina UsersConfig. & N.I.\\
+					TU124 & Viene verificato che il controller UsersConfig esista e sia associato alla pagina UsersConfig. & \textcolor{green}{Superato}\\
 					\hline
 					TU125 & Viene verificato che, se la chiamata al metodo è avvenuta con successo, la variabile contenente la lista degli utenti non sia vuota e gli oggetti in essa siano nel formato previsto. & N.I.\\
 					\hline
@@ -1287,7 +1287,7 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 					\hline
 					TU127 & Viene verificato che, a seguito dell'esecuzione del metodo deleteUserAccount, la lista degli utenti iscritti al sistema sia diminuito di uno. & N.I.\\
 					\hline
-					TU128 & Viene verificato che il metodo checkMetricQuantitty restituisca true se il numero di metriche inserito sia maggiore o uguale a due. & N.I.\\
+					TU128 & Viene verificato che il metodo checkMetricQuantitty restituisca true se il numero di metriche inserito sia maggiore o uguale a due. & \textcolor{green}{Superato}\\
 					\hline
 					TU129 & Viene verificato che, a seguito della chiamata al metodo addMetric, il numero di metriche presenti nella ricetta sia aumentato di uno. & N.I.\\
 					\hline
@@ -1301,11 +1301,11 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 					\hline
 					TU134 & Viene verificato che il metodo getListOfRecipe ritorni una lista contenente tante ricette quante quelle presenti nel sistema. & N.I.\\
 					\hline
-					TU135 & Viene verificato che venga restituita una promise. & N.I.\\
+					TU135 & Viene verificato che venga restituita una promise. & \textcolor{green}{Superato}\\
 					\hline
-					TU136 & Viene verificato che venga restituita una promise. & N.I.\\
+					TU136 & Viene verificato che venga restituita una promise. & \textcolor{green}{Superato}\\
 					\hline
-					TU137 & Viene verificato che venga restituita una promise. & N.I.\\
+					TU137 & Viene verificato che venga restituita una promise. & \textcolor{green}{Superato}\\
 					\hline
 					TU138 & Viene verificato che il numero di dati passato al metodo sia uguale al numero di entries nel grafico. & N.I.\\
 					\hline

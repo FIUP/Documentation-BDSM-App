@@ -133,15 +133,33 @@
           \item server::endpoints::resp::public::fb::EventResponse
           \item server::endpoints::resp::public::fb::EventTrendListResponse
         \end{itemize}
-		\item \textbf{Attributi}: N/A
-		\item \textbf{Metodi}:
+		  \item \textbf{Attributi}: N/A
+		  \item \textbf{Metodi}:
 			\begin{itemize}
 				\item \textcolor{forestgreen}{\texttt{public get\_page(request : ResourceContainer) : PageResponse}}
+        \begin{description}
+           \item \textbf{Descrizione}: restituisce alla chiamata i dettagli di una pagina Facebook.
+         \end{description}
 				\item \textcolor{forestgreen}{\texttt{public get\_page\_trend(request : ResourceContainer) : PageTrendListResponse}}
+        \begin{description}
+           \item \textbf{Descrizione}: restituisce alla chiamata l'elenco dei trend relativi ad una pagina Facebook.
+         \end{description}
 				\item \textcolor{forestgreen}{\texttt{public get\_page\_posts(request : ResourceContainer) : PostListResponse}}
+        \begin{description}
+           \item \textbf{Descrizione}: restituisce alla chiamata l'elenco dei trend relativi ai post di una pagina Facebook.
+         \end{description}
 				\item \textcolor{forestgreen}{\texttt{public get\_event(request : ResourceContainer) : EventResponse}}
+        \begin{description}
+           \item \textbf{Descrizione}: restituisce alla chiamata i dettagli di un event Facebook.
+         \end{description}
 				\item \textcolor{forestgreen}{\texttt{public get\_event\_trend(request : ResourceContainer) : EventTrendListResponse}}
+        \begin{description}
+           \item \textbf{Descrizione}: restituisce alla chiamata l'elenco dei trend relativi ad un evento Facebook.
+         \end{description}
 				\item \textcolor{forestgreen}{\texttt{public get\_event\_posts(request : ResourceContainer) : PostListResponse}}
+        \begin{description}
+           \item \textbf{Descrizione}: restituisce alla chiamata l'elenco dei trend relativi ai post di un evento Facebook.
+         \end{description}
 			\end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_public_fbmetricsapi (end)
@@ -166,9 +184,21 @@
 		\item \textbf{Metodi}:
 			\begin{itemize}
 				\item \textcolor{forestgreen}{\texttt{public get\_user(request : ResourceContainer) : UserResponse}}
+        \begin{description}
+           \item \textbf{Descrizione}: restituisce alla chiamata i dettagli relativi ad un utente Twitter.
+         \end{description}
 				\item \textcolor{forestgreen}{\texttt{public get\_user\_trend(request : ResourceContainer) : UserTrendListResponse}}
+        \begin{description}
+           \item \textbf{Descrizione}: restituisce alla chiamata l'elenco dei trend relativi ad un utente Twitter.
+         \end{description}
 				\item \textcolor{forestgreen}{\texttt{public get\_user\_tweet(request : ResourceContainer) : TweetListResponse}}
+        \begin{description}
+           \item \textbf{Descrizione}: restituisce alla chiamata l'elenco dei trend relativi ai tweet di un utente Twitter.
+         \end{description}
 				\item \textcolor{forestgreen}{\texttt{public get\_hashtag\_tweet(request : ResourceContainer) : TweetListResponse}}
+        \begin{description}
+           \item \textbf{Descrizione}: restituisce alla chiamata l'elenco dei trend relativi ai tweet di un hashtag Twitter.
+         \end{description}
 			\end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_public_twmetricsapi (end)
@@ -194,10 +224,25 @@
 		\item \textbf{Metodi}:
 			\begin{itemize}
 				\item \textcolor{forestgreen}{\texttt{public get\_user(request : ResourceContainer) : UserResponse}}
+        \begin{description}
+           \item \textbf{Descrizione}: restituisce alla chiamata i dettagli relativi ad un utente Instagram.
+         \end{description}
 				\item \textcolor{forestgreen}{\texttt{public get\_user\_trend(request : ResourceContainer) : UserTrendListResponse}}
+        \begin{description}
+           \item \textbf{Descrizione}: restituisce alla chiamata l'elenco dei trend relativi ad un utente Instagram.
+         \end{description}
 				\item \textcolor{forestgreen}{\texttt{public get\_user\_media(request : ResourceContainer) :MediaListResponse}}
+        \begin{description}
+           \item \textbf{Descrizione}: restituisce alla chiamata l'elenco dei trend relativi ai media di un utente Instagram.
+         \end{description}
 				\item \textcolor{forestgreen}{\texttt{public get\_hashtag\_trend(request : ResourceContainer) : HashtagTrendtListResponse}}
+        \begin{description}
+           \item \textbf{Descrizione}: restituisce alla chiamata l'elenco dei trend relativi ad un hashtag Instagram.
+         \end{description}
 				\item \textcolor{forestgreen}{\texttt{public get\_hashtag\_media(request : ResourceContainer) : MediaListResponse}}
+        \begin{description}
+           \item \textbf{Descrizione}: restituisce alla chiamata l'elenco dei trend dei media relativi ad un hashtag Instagram.
+         \end{description}
 			\end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_public_igmetricsapi (end)
@@ -241,8 +286,17 @@
 		\item \textbf{Metodi}:
 			\begin{itemize}
 				\item \textcolor{forestgreen}{\texttt{public add\_recipe(request : ResourceContainer) : void}}
+        \begin{description}
+           \item \textbf{Descrizione}: aggiunge una nuova Recipe al sistema.
+         \end{description}
 				\item \textcolor{forestgreen}{\texttt{public remove\_recipe(request : ResourceContainer) : void}}
+        \begin{description}
+           \item \textbf{Descrizione}: rimuove una specifica Recipe dal sistema.
+         \end{description}
 				\item \textcolor{forestgreen}{\texttt{public rate\_recipe(request : ResourceContainer) : void}}
+        \begin{description}
+           \item \textbf{Descrizione}: aggiunge un rating ad un specifica Recipe.
+         \end{description}
      	 \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_private_recipeapi (end)
@@ -266,11 +320,25 @@
 		\item \textbf{Metodi}:
 			\begin{itemize}
 				\item \textcolor{forestgreen}{\texttt{public user\_list() : UserListResponse}}
+        \begin{description}
+           \item \textbf{Descrizione}: restituisce alla chiamata la lista degli utenti registrati al sistema.
+         \end{description}
 				\item \textcolor{forestgreen}{\texttt{public user\_details(request : ResourceContainer) : UserResponse}}
-				\item \textcolor{forestgreen}{\texttt{public add\_user(request : ResourceContainer) : void}}
+        \begin{description}
+           \item \textbf{Descrizione}: restituisce alla chiamata i dettagli di un utente specifico.
+         \end{description}
 				\item \textcolor{forestgreen}{\texttt{public edit\_user(request : ResourceContainer) : void}}
+        \begin{description}
+           \item \textbf{Descrizione}: modifica i dati associati ad un utente registrato nel sistema.
+         \end{description}
 				\item \textcolor{forestgreen}{\texttt{public edit\_permission(request : ResourceContainer) : void}}
+        \begin{description}
+           \item \textbf{Descrizione}: modifica i permessi ad un utente registrato al sistema.
+         \end{description}
 				\item \textcolor{forestgreen}{\texttt{public remove\_user(request : ResourceContainer) : void}}
+        \begin{description}
+           \item \textbf{Descrizione}: rimuove tutti i dati associati ad un utente registrato nel sistema.
+         \end{description}
      	 \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_private_userapi (end)
@@ -293,18 +361,27 @@
 		\item \textbf{Metodi}:
 			\begin{itemize}
 				\item \textcolor{forestgreen}{\texttt{public request\_list() : RecipeReqListResponse}}
+          \begin{description}
+           \item \textbf{Descrizione}: ritorna l'elenco delle richieste di aggiunta Recipe presenti nel sistema.
+         \end{description}
 				\item \textcolor{forestgreen}{\texttt{public add\_request(request : ResourceContainer) : void}}
+          \begin{description}
+           \item \textbf{Descrizione}: aggiunge una richiesta di aggiunta Recipe al sistema.
+         \end{description}
 				\item \textcolor{forestgreen}{\texttt{public remove\_request(request : ResourceContainer) : void}}
+          \begin{description}
+           \item \textbf{Descrizione}: rimuove una richiesta di aggiunta Recipe dal sistema.
+         \end{description}
      	 \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_private_reciperequestapi (end)
 
-    \subparagraph{server::endpoints::api::private::FavoritesApi} % (fold)
+    \subparagraph{server::endpoints::api::private::FavouritesApi} % (fold)
     \label{subp:bdsm_app_server_endpoints_api_private_favoritesapi}
 	\begin{figure}[!htbp]
 		\centering
 		\centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/favorites_api.pdf}}
-		\caption{Classe - server::endpoints::api::private::FavoritesApi}
+		\caption{Classe - server::endpoints::api::private::FavouritesApi}
 	\end{figure}
     \begin{itemize}
       \item \textbf{Descrizione}: classe che rappresenta l'implementazione delle web API relative alla gestione delle View preferite per ogni utente;
@@ -317,8 +394,18 @@
 		\item \textbf{Metodi}:
 			\begin{itemize}
 				\item \textcolor{forestgreen}{\texttt{public favourites\_list() : FavouriteListResponse}}
+        \begin{description}
+           \item \textbf{Descrizione}: ritorna alla chiamata la lista dei preferiti di uno specifico utente.
+         \end{description}
 				\item \textcolor{forestgreen}{\texttt{public add\_favourite(request : ResourceContainer) : void}}
-				\item \textcolor{forestgreen}{\texttt{public remove\_favourite(request : ResourceContainer) : void}}
+        \begin{description}
+           \item \textbf{Descrizione}: aggiunge un nuovo preferito ad un determinato utente.
+         \end{description}
+				\item \textcolor{forestgreen}{\texttt{public remove\_favourite(request : ResourceContainer) : void}
+        }
+         \begin{description}
+           \item \textbf{Descrizione}: rimuove uno specifico preferito da un determinato utente.
+         \end{description}
      	 \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_private_favoritesapi (end)
@@ -329,50 +416,64 @@
       	\item \textbf{Descrizione}: classe che rappresenta l'implementazione delle web API relative alla registrazione e all'autenticazione dell'utente;
       	\item \textbf{Utilizzo}: i suoi metodi vengono invocati quando viene richiesto dal client la registrazione al sistema, quando viene richiesto di autenticarsi o de-autenticarsi;
 		\item \textbf{Attributi}: N/A
-		\item \textbf{Metodi}: N/A
+		\item \textbf{Metodi}:
+    \begin{itemize}
+        \item \textcolor{forestgreen}{\texttt{public add\_user(request : ResourceContainer) : void}}
+        \begin{description}
+           \item \textbf{Descrizione}: aggiunge un utente al sistema.
+         \end{description}
+        \item \textcolor{forestgreen}{\texttt{public login(request : ResourceContainer) : UserResponse}}
+        \begin{description}
+           \item \textbf{Descrizione}: autentica l'utente al sistema e ritorna alla chiamata il token di autenticazione generato.
+         \end{description}
+         \item \textcolor{forestgreen}{\texttt{public add\_user(request : ResourceContainer) : void}}
+        \begin{description}
+           \item \textbf{Descrizione}: annulla l'autenticazione dell'utente al sistema rimuovendo il relativo codice di autenticazione.
+         \end{description}
+       \end{itemize}
     \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_private_favoritesapi (end)
 
 \subsubsection{server::endpoints::resp} % (fold)
 \label{ssub:bdsm_app_server_endpoints_resp}
 \begin{figure}[!htbp]
-	\centering
-	\centerline{\includegraphics[scale=0.45]{./images/server/resp.pdf}}
-	\caption{Package - server::endpoints::resp}
+  \centering
+  \centerline{\includegraphics[scale=0.45]{./images/server/resp.pdf}}
+  \caption{Package - server::endpoints::resp}
 \end{figure}
 
 \begin{itemize}
   \item \textbf{Descrizione}: è il package che definisce il modelli delle risposte da passare al client in seguito alle chiamate API;
   \item \textbf{Padre}: server::endpoints
   \item \textbf{Package contenuti}:
-  	\begin{itemize}
-  		\item server::endpoints::resp::public
-  		\item server::endpoints::resp::private
-	\end{itemize}
+    \begin{itemize}
+      \item server::endpoints::resp::public
+      \item server::endpoints::resp::private
+  \end{itemize}
 \end{itemize}
 % subsubsection
 
 \subsubsection{server::endpoints::resp::public} % (fold)
 \label{ssub:bdsm_app_server_endpoints_resp_public}
 \begin{figure}[!htbp]
-	\centering
-	\centerline{\includegraphics[scale=0.55]{./images/server/resp_public.pdf}}
-	\caption{Package - server::endpoints::resp::public}
+  \centering
+  \centerline{\includegraphics[scale=0.55]{./images/server/resp_public.pdf}}
+  \caption{Package - server::endpoints::resp::public}
 \end{figure}
 
 \begin{itemize}
   \item \textbf{Descrizione}: è il package che definisce il modello delle risposte da passare al client in seguito alle chiamate delle API pubbliche;
   \item \textbf{Padre}: server::endpoints::resp
   \item \textbf{Package contenuti}:
-  	\begin{itemize}
-  		\item server::endpoints::resp::public::fb
-  		\item server::endpoints::resp::public::tw
-  		\item server::endpoints::resp::public::ig
-	\end{itemize}
+    \begin{itemize}
+      \item server::endpoints::resp::public::fb
+      \item server::endpoints::resp::public::tw
+      \item server::endpoints::resp::public::ig
+  \end{itemize}
   \item \textbf{Interazione con altri componenti}:
-  	\begin{itemize}
-  		\item server::endpoints::resp::private
-	\end{itemize}
+    \begin{itemize}
+      \item server::endpoints::resp::private
+  \end{itemize}
 \end{itemize}
 % subsubsection
 
@@ -383,21 +484,35 @@
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati di una metrica da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response della lista delle metriche relative ad un Recipe al client;
-    \item \textbf{Attributi}: N/A
+    \item \textbf{Attributi}:
+    \begin{itemize}
+        \item \textcolor{forestgreen}{\texttt{id : String}}
+        \begin{description}
+           \item \textbf{Descrizione}: id della metrica.
+         \end{description}
+        \item \textcolor{forestgreen}{\texttt{category : String}}
+        \begin{description}
+           \item \textbf{Descrizione}: categoria della metrica.
+         \end{description}
+        \item \textcolor{forestgreen}{\texttt{category\_type : String}}
+        \begin{description}
+           \item \textbf{Descrizione}: tipo di metrica.
+         \end{description}
+     \end{itemize}
     \item \textbf{Metodi}: N/A
-      \end{itemize}
+    \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_metricresponse (end)
 
     \subparagraph{server::endpoints::resp::public::RecipeResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_private_reciperesponse}
-	\begin{figure}[!htbp]
-		\centering
-		\centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/recipe_response.pdf}}
-		\caption{Classe - server::endpoints::resp::public::RecipeResponse}
-	\end{figure}
+  \begin{figure}[!htbp]
+    \centering
+    \centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/recipe_response.pdf}}
+    \caption{Classe - server::endpoints::resp::public::RecipeResponse}
+  \end{figure}
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati di una Recipe da ritornare al client;
-      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una Recipe al client inseme alla lista delle metriche contenute dalla stessa;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una Recipe al client insieme alla lista delle metriche contenute dalla stessa;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
         \item server::endpoints::resp::public::MetricResponse
@@ -405,10 +520,25 @@
     \item \textbf{Attributi}:
       \begin{itemize}
         \item \textcolor{forestgreen}{\texttt{id : String}}
+        \begin{description}
+           \item \textbf{Descrizione}: id della Recipe.
+         \end{description}
         \item \textcolor{forestgreen}{\texttt{title : String}}
+        \begin{description}
+           \item \textbf{Descrizione}: titolo della Recipe.
+         \end{description}
         \item \textcolor{forestgreen}{\texttt{desc : String}}
+        \begin{description}
+           \item \textbf{Descrizione}: descrizione della Recipe.
+         \end{description}
         \item \textcolor{forestgreen}{\texttt{data\_create : Date}}
+        \begin{description}
+           \item \textbf{Descrizione}: data di creazione della Recipe.
+         \end{description}
         \item \textcolor{forestgreen}{\texttt{rating : Float}}
+        \begin{description}
+           \item \textbf{Descrizione}: rating della Recipe.
+         \end{description}
       \end{itemize}
     \item \textbf{Metodi}: N/A
       \end{itemize}
@@ -417,8 +547,8 @@
     \subparagraph{server::endpoints::resp::public::RecipeListResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_private_recipelistresponse}
     \begin{itemize}
-      \item \textbf{Descrizione}: rappresenta il modello dei dati di una Recipe da ritornare al client;
-      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una Recipe al client;
+      \item \textbf{Descrizione}: rappresenta il modello dei dati di una lista di Recipe da ritornare al client;
+      \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una lista di Recipe al client;
       \item \textbf{Relazioni con altre classi}:
         \begin{itemize}
           \item server::endpoints::resp::private::RecipeResponse
@@ -431,9 +561,9 @@
 \subsubsection{server::endpoints::resp::public::fb} % (fold)
 \label{ssub:bdsm_app_server_endpoints_resp_public_fb}
 \begin{figure}[!htbp]
-	\centering
-	\centerline{\includegraphics[scale=0.55]{./images/server/resp_fb.pdf}}
-	\caption{Package - server::endpoints::resp::public::fb}
+  \centering
+  \centerline{\includegraphics[scale=0.55]{./images/server/resp_fb.pdf}}
+  \caption{Package - server::endpoints::resp::public::fb}
 \end{figure}
 
 \begin{itemize}
@@ -443,26 +573,35 @@
 \end{itemize}
 % subsubsection
 
-	\paragraph{Classi} % (fold)
+  \paragraph{Classi} % (fold)
 
     \subparagraph{server::endpoints::resp::public::fb::PageResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_fb_pageresponse}
-	\begin{figure}[!htbp]
-		\centering
-		\centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/fb/page_response.pdf}}
-		\caption{Classe - server::endpoints::resp::public::fb::PageResponse}
-	\end{figure}
+  \begin{figure}[!htbp]
+    \centering
+    \centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/fb/page_response.pdf}}
+    \caption{Classe - server::endpoints::resp::public::fb::PageResponse}
+  \end{figure}
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati di una pagina Facebook da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati di una pagina Facebook al client;
 
-	  \item \textbf{Attributi}:
-	  	\begin{itemize}
-	  		\item \textcolor{forestgreen}{\texttt{name : String}}
-	  		\item \textcolor{forestgreen}{\texttt{category : String}}
-	  		\item \textcolor{forestgreen}{\texttt{node\_id : String}}
-	  	\end{itemize}
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}:
+      \begin{itemize}
+        \item \textcolor{forestgreen}{\texttt{name : String}}
+        \begin{description}
+           \item \textbf{Descrizione}: nome della pagina Facebook.
+         \end{description}
+        \item \textcolor{forestgreen}{\texttt{category : String}}
+        \begin{description}
+           \item \textbf{Descrizione}: categoria della pagina Facebook.
+         \end{description}
+        \item \textcolor{forestgreen}{\texttt{node\_id : String}}
+        \begin{description}
+           \item \textbf{Descrizione}: id della pagina Facebook.
+         \end{description}
+      \end{itemize}
+    \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_pageresponse (end)
 
@@ -475,28 +614,34 @@
         \begin{itemize}
           \item server::endpoints::resp::public::fb::PageResponse
         \end{itemize}
-	  \item \textbf{Attributi}: N/A
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}: N/A
+    \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_pagelistresponse (end)
 
     \subparagraph{server::endpoints::resp::public::fb::PageTrendResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_fb_pagetrendresponse}
-	\begin{figure}[!htbp]
-		\centering
-		\centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/fb/page_trend_response.pdf}}
-		\caption{Classe - server::endpoints::resp::public::fb::PageTrendResponse}
-	\end{figure}
+  \begin{figure}[!htbp]
+    \centering
+    \centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/fb/page_trend_response.pdf}}
+    \caption{Classe - server::endpoints::resp::public::fb::PageTrendResponse}
+  \end{figure}
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati dei trend di una pagina Facebook da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei trend di una pagina Facebook al client;
       %\item \textbf{Relazioni con altre classi}:
-	  \item \textbf{Attributi}:
-	  	\begin{itemize}
-	  		\item \textcolor{forestgreen}{\texttt{likes : int}}
-	  		\item \textcolor{forestgreen}{\texttt{talking\_about : int}}
-	  	\end{itemize}
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}:
+      \begin{itemize}
+        \item \textcolor{forestgreen}{\texttt{likes : int}}
+        \begin{description}
+           \item \textbf{Descrizione}: likes della pagina Facebook.
+         \end{description}
+        \item \textcolor{forestgreen}{\texttt{talking\_about : int}}
+        \begin{description}
+           \item \textbf{Descrizione}: talking about della pagina Facebook.
+         \end{description}
+      \end{itemize}
+    \item \textbf{Metodi}: N/A
     \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_pagetrendresponse (end)
 
@@ -509,29 +654,38 @@
         \begin{itemize}
           \item server::endpoints::resp::public::fb::PageTrendResponse
         \end{itemize}
-	  \item \textbf{Attributi}: N/A
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}: N/A
+    \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_pagetrendlistresponse (end)
 
     \subparagraph{server::endpoints::resp::public::fb::EventResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_fb_eventresponse}
-	\begin{figure}[!htbp]
-		\centering
-		\centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/fb/event_response.pdf}}
-		\caption{Classe - server::endpoints::resp::public::fb::EventResponse}
-	\end{figure}
+  \begin{figure}[!htbp]
+    \centering
+    \centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/fb/event_response.pdf}}
+    \caption{Classe - server::endpoints::resp::public::fb::EventResponse}
+  \end{figure}
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati di un evento di Facebook da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati di un evento Facebook al client;
 
-	  \item \textbf{Attributi}:
-	  	\begin{itemize}
-	  		\item \textcolor{forestgreen}{\texttt{name : String}}
-	  		\item \textcolor{forestgreen}{\texttt{location : RawLocation}}
-	  		\item \textcolor{forestgreen}{\texttt{node\_id : String}}
-	  	\end{itemize}
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}:
+      \begin{itemize}
+        \item \textcolor{forestgreen}{\texttt{name : String}}
+        \begin{description}
+           \item \textbf{Descrizione}: nome dell'evento Facebook.
+         \end{description}
+        \item \textcolor{forestgreen}{\texttt{location : String}}
+        \begin{description}
+           \item \textbf{Descrizione}: location dell'evento Facebook.
+         \end{description}
+        \item \textcolor{forestgreen}{\texttt{node\_id : String}}
+        \begin{description}
+           \item \textbf{Descrizione}: id dell'evento Facebook.
+         \end{description}
+      \end{itemize}
+    \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_eventresponse (end)
 
@@ -544,30 +698,42 @@
         \begin{itemize}
           \item server::endpoints::resp::public::fb::EventResponse
         \end{itemize}
-	  \item \textbf{Attributi}: N/A
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}: N/A
+    \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_eventlistresponse (end)
 
     \subparagraph{server::endpoints::resp::public::fb::EventTrendResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_fb_eventtrendresponse}
-	\begin{figure}[!htbp]
-		\centering
-		\centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/fb/event_trend_response.pdf}}
-		\caption{Classe - server::endpoints::resp::public::fb::EventTrendResponse}
-	\end{figure}
+  \begin{figure}[!htbp]
+    \centering
+    \centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/fb/event_trend_response.pdf}}
+    \caption{Classe - server::endpoints::resp::public::fb::EventTrendResponse}
+  \end{figure}
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati dei trend di un evento Facebook da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei trend di un evento Facebook al client;
 
-	  \item \textbf{Attributi}:
-	  	\begin{itemize}
-	  		\item invited : int
-	  		\item attending : int
-	  		\item declined : int
-	  		\item maybe : int
-	  	\end{itemize}
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}:
+      \begin{itemize}
+        \item \textcolor{forestgreen}{\texttt{invited : int}}
+        \begin{description}
+           \item \textbf{Descrizione}: numero di invitati all'evento Facebook.
+         \end{description}
+        \item \textcolor{forestgreen}{\texttt{attending : int}}
+        \begin{description}
+           \item \textbf{Descrizione}: numero di partecipanti all'evento Facebook.
+         \end{description}
+        \item \textcolor{forestgreen}{\texttt{declined : int}}
+        \begin{description}
+           \item \textbf{Descrizione}: numero di utenti non partecipanti all'evento Facebook.
+         \end{description}
+        \item \textcolor{forestgreen}{\texttt{maybe : int}}
+        \begin{description}
+           \item \textbf{Descrizione}: numero di utenti con la partecipazione in forse all'evento Facebook.
+         \end{description}
+      \end{itemize}
+    \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_eventtrendresponse (end)
 
@@ -580,33 +746,51 @@
         \begin{itemize}
           \item server::endpoints::resp::public::fb::EventTrendResponse
         \end{itemize}
-	  \item \textbf{Attributi}: N/A
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}: N/A
+    \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_eventtrendlistresponse (end)
 
     \subparagraph{server::endpoints::resp::public::fb::PostResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_fb_postresponse}
-	\begin{figure}[!htbp]
-		\centering
-		\centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/fb/post_response.pdf}}
-		\caption{Classe - server::endpoints::resp::public::fb::PostResponse}
-	\end{figure}
+  \begin{figure}[!htbp]
+    \centering
+    \centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/fb/post_response.pdf}}
+    \caption{Classe - server::endpoints::resp::public::fb::PostResponse}
+  \end{figure}
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati dei post di Facebook da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati dei post Facebook al client;
 
-	  \item \textbf{Attributi}:
-	  	\begin{itemize}
-	  		\item date\_created : Date
-	  		\item posts : int
-	  		\item comments : int
-	  		\item admin\_posts : int
-	  		\item admin\_comments : int
-	  		\item posts\_likes : int
-	  		\item comments\_likes :int
-	  	\end{itemize}
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}:
+      \begin{itemize}
+        \item \textcolor{forestgreen}{\texttt{posts : int}}
+        \begin{description}
+           \item \textbf{Descrizione}: numero totale dei post di una pagina o evento Facebook.
+         \end{description}
+        \item \textcolor{forestgreen}{\texttt{comments : int}}
+        \begin{description}
+           \item \textbf{Descrizione}: numero totale dei commenti ai post di una pagina o evento Facebook.
+         \end{description}
+        \item \textcolor{forestgreen}{\texttt{admin\_posts : int}}
+        \begin{description}
+           \item \textbf{Descrizione}: numero totale dei post di una pagina Facebook ed effettuati dalla pagina stessa.
+         \end{description}
+        \item \textcolor{forestgreen}{\texttt{admin\_comments : int}}
+        \begin{description}
+           \item \textbf{Descrizione}: numero totale dei commenti ai post di una pagina Facebook ed effettuati dalla pagina stessa.
+         \end{description}
+        \item \textcolor{forestgreen}{\texttt{posts\_likes : int}}
+        \begin{description}
+           \item \textbf{Descrizione}: numero totale dei likes ai post di una pagina o evento Facebook.
+         \end{description}
+        \item \textcolor{forestgreen}{\texttt{comments\_likes :int}}
+        \begin{description}
+           \item \textbf{Descrizione}: numero totale dei likes ai commenti dei post di una pagina o evento
+            Facebook.
+         \end{description}
+      \end{itemize}
+    \item \textbf{Metodi}: N/A
     \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_postresponse (end)
 
@@ -619,17 +803,17 @@
         \begin{itemize}
           \item server::endpoints::resp::public::fb::PostResponse
         \end{itemize}
-	  \item \textbf{Attributi}: N/A
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}: N/A
+    \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_fb_postlistresponse (end)
 
 \subsubsection{server::endpoints::resp::public::tw} % (fold)
 \label{ssub:bdsm_app_server_endpoints_resp_public_tw}
 \begin{figure}[!htbp]
-	\centering
-	\centerline{\includegraphics[scale=0.5]{./images/server/resp_tw.pdf}}
-	\caption{Package - server::endpoints::resp::public::tw}
+  \centering
+  \centerline{\includegraphics[scale=0.5]{./images/server/resp_tw.pdf}}
+  \caption{Package - server::endpoints::resp::public::tw}
 \end{figure}
 
 \begin{itemize}
@@ -639,27 +823,39 @@
 \end{itemize}
 % subsubsection
 
-	\paragraph{Classi} % (fold)
+  \paragraph{Classi} % (fold)
 
     \subparagraph{server::endpoints::resp::public::tw::UserResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_tw_userresponse}
-	\begin{figure}[!htbp]
-		\centering
-		\centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/tw/user_response.pdf}}
-		\caption{Classe - server::endpoints::resp::public::tw::UserResponse}
-	\end{figure}
+  \begin{figure}[!htbp]
+    \centering
+    \centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/tw/user_response.pdf}}
+    \caption{Classe - server::endpoints::resp::public::tw::UserResponse}
+  \end{figure}
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati di un profilo Twitter da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati di un profilo Twitter al client;
 
-	  \item \textbf{Attributi}:
-	  	\begin{itemize}
-	  		\item email : String
-	  		\item full\_name : String
-	  		\item photo\_url : String
-	  		\item screen\_name : String
-	  	\end{itemize}
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}:
+      \begin{itemize}
+        \item \textcolor{forestgreen}{\texttt{email : String}}
+      \begin{description}
+         \item \textbf{Descrizione}: email dell'utente Twitter.
+       \end{description}
+        \item \textcolor{forestgreen}{\texttt{full\_name : String}}
+        \begin{description}
+         \item \textbf{Descrizione}: nome completo dell'utente Twitter.
+       \end{description}
+        \item \textcolor{forestgreen}{\texttt{photo\_url : String}}
+        \begin{description}
+         \item \textbf{Descrizione}: url della foto profilo dell'utente Twitter.
+       \end{description}
+        \item \textcolor{forestgreen}{\texttt{screen\_name : String}}
+        \begin{description}
+         \item \textbf{Descrizione}: username dell'utente Twitter.
+       \end{description}
+      \end{itemize}
+    \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_tw_pageresponse (end)
 
@@ -672,30 +868,42 @@
         \begin{itemize}
           \item server::endpoints::resp::public::tw::UserResponse
         \end{itemize}
-	  \item \textbf{Attributi}: N/A
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}: N/A
+    \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_tw_userlistresponse (end)
 
     \subparagraph{server::endpoints::resp::public::tw::UserTrendResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_tw_usertrendresponse}
-	\begin{figure}[!htbp]
-		\centering
-		\centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/tw/user_trend_response.pdf}}
-		\caption{Classe - server::endpoints::resp::public::tw::UserTrendResponse}
-	\end{figure}
+  \begin{figure}[!htbp]
+    \centering
+    \centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/tw/user_trend_response.pdf}}
+    \caption{Classe - server::endpoints::resp::public::tw::UserTrendResponse}
+  \end{figure}
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati dei trend di un profilo Twitter da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei trend di un profilo Twitter al client;
 
-	  \item \textbf{Attributi}:
-	  	\begin{itemize}
-	  		\item favourites\_count : int
-	  		\item followers\_count : int
-	  		\item friends\_count : int
-	  		\item statuses\_count : int
-	  	\end{itemize}
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}:
+      \begin{itemize}
+        \item \textcolor{forestgreen}{\texttt{favourites\_count : int}}
+        \begin{description}
+          \item \textbf{Descrizione}: numero totale di preferiti aggiungi dall'utente Twitter.
+        \end{description}
+        \item \textcolor{forestgreen}{\texttt{followers\_count : int}}
+        \begin{description}
+          \item \textbf{Descrizione}: numero totale dei followers dell'utente Twitter.
+        \end{description}
+        \item \textcolor{forestgreen}{\texttt{friends\_count : int}}
+        \begin{description}
+          \item \textbf{Descrizione}: numero totale dei following dell'utente Twitter.
+        \end{description}
+        \item \textcolor{forestgreen}{\texttt{statuses\_count : int}}
+        \begin{description}
+          \item \textbf{Descrizione}: numero totale dei tweet dell'utente Twitter.
+        \end{description}
+      \end{itemize}
+    \item \textbf{Metodi}: N/A
     \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_tw_usertrendresponse (end)
 
@@ -708,27 +916,30 @@
         \begin{itemize}
           \item server::endpoints::resp::public::tw::UserTrendResponse
         \end{itemize}
-	  \item \textbf{Attributi}: N/A
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}: N/A
+    \item \textbf{Metodi}: N/A
     \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_tw_usertrendlistresponse (end)
 
     \subparagraph{server::endpoints::resp::public::tw::HashtagResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_tw_hashtagresponse}
-	\begin{figure}[!htbp]
-		\centering
-		\centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/tw/hashtag_response.pdf}}
-		\caption{Classe - server::endpoints::resp::public::tw::HashtagResponse}
-	\end{figure}
+  \begin{figure}[!htbp]
+    \centering
+    \centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/tw/hashtag_response.pdf}}
+    \caption{Classe - server::endpoints::resp::public::tw::HashtagResponse}
+  \end{figure}
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati di un hashtag di Twitter da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati di un hashtag di Twitter al client;
 
-	  \item \textbf{Attributi}:
-	  	\begin{itemize}
-	  		\item hashtag\_name : String
-	  	\end{itemize}
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}:
+      \begin{itemize}
+        \item \textcolor{forestgreen}{\texttt{hashtag\_name : String}}
+        \begin{description}
+          \item \textbf{Descrizione}: nome dell'hashtag Twitter.
+        \end{description}
+      \end{itemize}
+    \item \textbf{Metodi}: N/A
     \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_tw_hashtagresponse (end)
 
@@ -741,32 +952,49 @@
         \begin{itemize}
           \item server::endpoints::resp::public::tw::HashtagResponse
         \end{itemize}
-	  \item \textbf{Attributi}: N/A
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}: N/A
+    \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_tw_hashtaglistresponse (end)
 
     \subparagraph{server::endpoints::resp::public::tw::TweetResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_tw_tweetresponse}
-	\begin{figure}[!htbp]
-		\centering
-		\centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/tw/tweet_response.pdf}}
-		\caption{Classe - server::endpoints::resp::public::tw::TweetResponse}
-	\end{figure}
+  \begin{figure}[!htbp]
+    \centering
+    \centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/tw/tweet_response.pdf}}
+    \caption{Classe - server::endpoints::resp::public::tw::TweetResponse}
+  \end{figure}
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati dei tweet di Twitter da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati dei tweet di Twitter al client;
-
-	  \item \textbf{Attributi}:
-	  	\begin{itemize}
-	  		\item source\_devices : List
-	  		\item favourites\_count : int
-	  		\item media\_count : int
-	  		\item retweets\_count : int
-	  		\item tweets\_count : int
-	  		\item time\_zone : List
-	  	\end{itemize}
-	  \item \textbf{Metodi}: N/A
+      \item \textbf{Attributi}:
+      \begin{itemize}
+        \item \textcolor{forestgreen}{\texttt{source\_devices : List}}
+        \begin{description}
+          \item \textbf{Descrizione}: tipo ed occorrenza dei dispositivi raccolti dai tweet di un utente o di un hashtag Twitter.
+        \end{description}
+        \item \textcolor{forestgreen}{\texttt{favourites\_count : int}}
+        \begin{description}
+          \item \textbf{Descrizione}: numero totale dei preferiti dei tweet di un utente o di un hashtag Twitter.
+        \end{description}
+        \item \textcolor{forestgreen}{\texttt{media\_count : int}}
+        \begin{description}
+          \item \textbf{Descrizione}: numero totale dei media dei tweet di un utente o di un hashtag Twitter.
+        \end{description}
+        \item \textcolor{forestgreen}{\texttt{retweets\_count : int}}
+        \begin{description}
+          \item \textbf{Descrizione}: numero totale dei retweet dei tweet di un utente o di un hashtag Twitter.
+        \end{description}
+        \item \textcolor{forestgreen}{\texttt{tweets\_count : int}}
+        \begin{description}
+          \item \textbf{Descrizione}: numero totale dei tweet di un utente o di un hashtag Twitter.
+        \end{description}
+        \item \textcolor{forestgreen}{\texttt{time\_zone : List}}
+        \begin{description}
+          \item \textbf{Descrizione}: valore ed occorrenza delle timezone raccolte dai tweet relativi ad un hashtag Twitter.
+        \end{description}
+      \end{itemize}
+    \item \textbf{Metodi}: N/A
     \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_tw_tweetresponse (end)
 
@@ -779,17 +1007,17 @@
         \begin{itemize}
           \item server::endpoints::resp::public::tw::TweetResponse
         \end{itemize}
-	  \item \textbf{Attributi}: N/A
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}: N/A
+    \item \textbf{Metodi}: N/A
     \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_tw_tweetlistresponse (end)
 
 \subsubsection{server::endpoints::resp::public::ig} % (fold)
 \label{ssub:bdsm_app_server_endpoints_resp_public_ig}
 \begin{figure}[!htbp]
-	\centering
-	\centerline{\includegraphics[scale=0.5]{./images/server/resp_ig.pdf}}
-	\caption{Package - server::endpoints::resp::public::ig}
+  \centering
+  \centerline{\includegraphics[scale=0.5]{./images/server/resp_ig.pdf}}
+  \caption{Package - server::endpoints::resp::public::ig}
 \end{figure}
 
 \begin{itemize}
@@ -799,25 +1027,31 @@
 \end{itemize}
 % subsubsection
 
-	\paragraph{Classi} % (fold)
+  \paragraph{Classi} % (fold)
 
     \subparagraph{server::endpoints::resp::public::ig::UserResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_ig_userresponse}
-	\begin{figure}[!htbp]
-		\centering
-		\centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/ig/user_response.pdf}}
-		\caption{Classe - server::endpoints::resp::public::ig::UserResponse}
-	\end{figure}
+  \begin{figure}[!htbp]
+    \centering
+    \centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/ig/user_response.pdf}}
+    \caption{Classe - server::endpoints::resp::public::ig::UserResponse}
+  \end{figure}
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati di un profilo Instagram da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati di un profilo Instagram al client;
 
-	  \item \textbf{Attributi}:
-	  	\begin{itemize}
-	  		\item id : int
-	  		\item fullname : String
-	  	\end{itemize}
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}:
+      \begin{itemize}
+        \item \textcolor{forestgreen}{\texttt{id : int}}
+        \begin{description}
+          \item \textbf{Descrizione}: id dell'utente Instagram.
+        \end{description}
+        \item \textcolor{forestgreen}{\texttt{fullname : String}}
+        \begin{description}
+          \item \textbf{Descrizione}: nome completo dell'utente Instagram.
+        \end{description}
+      \end{itemize}
+    \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_ig_pageresponse (end)
 
@@ -830,29 +1064,38 @@
         \begin{itemize}
           \item server::endpoints::resp::public::ig::UserResponse
         \end{itemize}
-	  \item \textbf{Attributi}: N/A
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}: N/A
+    \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_ig_userlistresponse (end)
 
     \subparagraph{server::endpoints::resp::public::ig::UserTrendResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_ig_usertrendresponse}
-	\begin{figure}[!htbp]
-		\centering
-		\centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/ig/user_trend_response.pdf}}
-		\caption{Classe - server::endpoints::resp::public::ig::UserTrendResponse}
-	\end{figure}
+  \begin{figure}[!htbp]
+    \centering
+    \centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/ig/user_trend_response.pdf}}
+    \caption{Classe - server::endpoints::resp::public::ig::UserTrendResponse}
+  \end{figure}
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati dei trend di un profilo Instagram da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei trend di un profilo Instagram al client;
 
-	  \item \textbf{Attributi}:
-	  	\begin{itemize}
-	  		\item media : int
-	  		\item followed\_by : int
-	  		\item follows : int
-	  	\end{itemize}
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}:
+      \begin{itemize}
+        \item \textcolor{forestgreen}{\texttt{media : int}}
+        \begin{description}
+          \item \textbf{Descrizione}: numero di media dell'utente Instagram.
+        \end{description}
+        \item \textcolor{forestgreen}{\texttt{followed\_by : int}}
+        \begin{description}
+          \item \textbf{Descrizione}: numero di followed dell'utente Instagram.
+        \end{description}
+        \item \textcolor{forestgreen}{\texttt{follows : int}}
+        \begin{description}
+          \item \textbf{Descrizione}: numero di following dell'utente Instagram.
+        \end{description}
+      \end{itemize}
+    \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_ig_usertrendresponse (end)
 
@@ -865,27 +1108,29 @@
         \begin{itemize}
           \item server::endpoints::resp::public::ig::UserTrendResponse
         \end{itemize}
-	  \item \textbf{Attributi}: N/A
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}: N/A
+    \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_ig_usertrendlistresponse (end)
 
     \subparagraph{server::endpoints::resp::public::ig::HashtagResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_ig_hashtagresponse}
-	\begin{figure}[!htbp]
-		\centering
-		\centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/ig/hashtag_response.pdf}}
-		\caption{Classe - server::endpoints::resp::public::ig::HashtagResponse}
-	\end{figure}
+  \begin{figure}[!htbp]
+    \centering
+    \centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/ig/hashtag_response.pdf}}
+    \caption{Classe - server::endpoints::resp::public::ig::HashtagResponse}
+  \end{figure}
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati di un hashtag di Instagram da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati di un hashtag di Instagram al client;
-
-	  \item \textbf{Attributi}:
-	  	\begin{itemize}
-	  		\item name : String
-	  	\end{itemize}
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}:
+      \begin{itemize}
+        \item \textcolor{forestgreen}{\texttt{name : String}}
+        \begin{description}
+          \item \textbf{Descrizione}: nome dell'hashtag Instagram.
+        \end{description}
+      \end{itemize}
+    \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_ig_hashtagresponse (end)
 
@@ -898,27 +1143,29 @@
         \begin{itemize}
           \item server::endpoints::resp::public::ig::HashtagResponse
         \end{itemize}
-	  \item \textbf{Attributi}: N/A
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}: N/A
+    \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_ig_hashtaglistresponse (end)
 
     \subparagraph{server::endpoints::resp::public::ig::HashtagTrendResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_ig_hashtagtrendresponse}
-	\begin{figure}[!htbp]
-		\centering
-		\centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/ig/hashtag_trend_response.pdf}}
-		\caption{Classe - server::endpoints::resp::public::ig::HashtagTrendResponse}
-	\end{figure}
+  \begin{figure}[!htbp]
+    \centering
+    \centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/ig/hashtag_trend_response.pdf}}
+    \caption{Classe - server::endpoints::resp::public::ig::HashtagTrendResponse}
+  \end{figure}
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati dei trend di un hashtag di Instagram da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei trend di un hashtag di Instagram al client;
-
-	  \item \textbf{Attributi}:
-	  	\begin{itemize}
-	  		\item media\_count : int
-	  	\end{itemize}
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}:
+      \begin{itemize}
+        \item \textcolor{forestgreen}{\texttt{media\_count : int}}
+        \begin{description}
+          \item \textbf{Descrizione}: numero di media totali relativi ad un determinato hashtag Instagram.
+        \end{description}
+      \end{itemize}
+    \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_ig_hashtagtrendresponse (end)
 
@@ -931,33 +1178,53 @@
         \begin{itemize}
           \item server::endpoints::resp::public::ig::HashtagTrendResponse
         \end{itemize}
-	  \item \textbf{Attributi}: N/A
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}: N/A
+    \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_ig_hashtagtrendlistresponse (end)
 
     \subparagraph{server::endpoints::resp::public::ig::MediaResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_public_ig_mediaresponse}
-	\begin{figure}[!htbp]
-		\centering
-		\centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/ig/media_response.pdf}}
-		\caption{Classe - server::endpoints::resp::public::ig::MediaResponse}
-	\end{figure}
+  \begin{figure}[!htbp]
+    \centering
+    \centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/ig/media_response.pdf}}
+    \caption{Classe - server::endpoints::resp::public::ig::MediaResponse}
+  \end{figure}
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati dei media di Instagram da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response dei dati dei media di Instagram al client;
-
-	  \item \textbf{Attributi}:
-	  	\begin{itemize}
-	  		\item date\_createde : Date
-	  		\item media : int
-	  		\item comments : int
-	  		\item likes : int
-	  		\item photos\_count : int
-	  		\item videos\_countt : int
-	  		\item location : RawLocation
-	  	\end{itemize}
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}:
+      \begin{itemize}
+        \item \textcolor{forestgreen}{\texttt{date\_created : Date}}
+        \begin{description}
+          \item \textbf{Descrizione}: data di creazione dell'oggetto di trend.
+        \end{description}
+        \item \textcolor{forestgreen}{\texttt{media : int}}
+        \begin{description}
+          \item \textbf{Descrizione}: numero dei media relativi un determinato utente o hashtag Instagram.
+        \end{description}
+        \item \textcolor{forestgreen}{\texttt{comments : int}}
+        \begin{description}
+          \item \textbf{Descrizione}: numero dei commenti relativi ai media di un determinato utente o hashtag Instagram.
+        \end{description}
+        \item \textcolor{forestgreen}{\texttt{likes : int}}
+        \begin{description}
+          \item \textbf{Descrizione}: numero dei likes relativi ai media di un determinato utente o hashtag Instagram.
+        \end{description}
+        \item \textcolor{forestgreen}{\texttt{photos\_count : int}}
+        \begin{description}
+          \item \textbf{Descrizione}: numero di foto relative ad un determinato utente o hashtag Instagram.
+        \end{description}
+        \item \textcolor{forestgreen}{\texttt{videos\_count : int}}
+        \begin{description}
+          \item \textbf{Descrizione}: numero di video relativi ad un determinato utente o hashtag Instagram.
+        \end{description}
+        \item \textcolor{forestgreen}{\texttt{location : List}}
+        \begin{description}
+          \item \textbf{Descrizione}: lista delle location relative ai media di un determinato utente o hashtag Instagram.
+        \end{description}
+      \end{itemize}
+    \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_ig_mediaresponse (end)
 
@@ -970,47 +1237,53 @@
         \begin{itemize}
           \item server::endpoints::resp::public::ig::MediaResponse
         \end{itemize}
-	  \item \textbf{Attributi}: N/A
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}: N/A
+    \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_public_ig_medialistresponse (end)
 
 \subsubsection{server::endpoints::resp::private} % (fold)
 \label{ssub:bdsm_app_server_endpoints_resp_private}
 \begin{figure}[!htbp]
-	\centering
-	\centerline{\includegraphics[scale=0.45]{./images/server/resp_private.pdf}}
-	\caption{Package - server::endpoints::resp::private}
+  \centering
+  \centerline{\includegraphics[scale=0.45]{./images/server/resp_private.pdf}}
+  \caption{Package - server::endpoints::resp::private}
 \end{figure}
 
 \begin{itemize}
   \item \textbf{Descrizione}: è il package che definisce i modelli delle risposte da passare al client in seguito alle chiamate API;
   \item \textbf{Padre}: server::endpoints::resp
   \item \textbf{Interazione con altri componenti}:
-  	\begin{itemize}
-  		\item server::endpoints::resp::public
-	\end{itemize}
+    \begin{itemize}
+      \item server::endpoints::resp::public
+  \end{itemize}
 \end{itemize}
 % subsubsection
 
-	\paragraph{Classi} % (fold)
+  \paragraph{Classi} % (fold)
 
     \subparagraph{server::endpoints::resp::private::RecipeReqResponse} % (fold)
     \label{subp:bdsm_app_server_endpoints_resp_private_recipereqresponse}
-	\begin{figure}[!htbp]
-		\centering
-		\centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/recipe_req_response.pdf}}
-		\caption{Classe - server::endpoints::resp::private::RecipeReqResponse}
-	\end{figure}
+  \begin{figure}[!htbp]
+    \centering
+    \centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/recipe_req_response.pdf}}
+    \caption{Classe - server::endpoints::resp::private::RecipeReqResponse}
+  \end{figure}
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati di una richiesta di Recipe da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una richiesta di Recipe al client;
-	  \item \textbf{Attributi}:
-	  	\begin{itemize}
-	  		\item desc : String
-	  		\item title : String
-	  	\end{itemize}
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}:
+      \begin{itemize}
+        \item \textcolor{forestgreen}{\texttt{desc : String}}
+        \begin{description}
+          \item \textbf{Descrizione}: descrizione della richiesta di aggiunta Recipe.
+        \end{description}
+        \item \textcolor{forestgreen}{\texttt{title : String}}
+        \begin{description}
+          \item \textbf{Descrizione}: titolo della richiesta di aggiunta Recipe.
+        \end{description}
+      \end{itemize}
+    \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_private_recipereqresponse (end)
 
@@ -1023,8 +1296,8 @@
         \begin{itemize}
           \item server::endpoints::resp::private::RecipeReqResponse
         \end{itemize}
-	  \item \textbf{Attributi}: N/A
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}: N/A
+    \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_private_recipereqlistresponse (end)
 
@@ -1033,16 +1306,34 @@
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati di un utente da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response contenente i dati un un utente al client;
-	  \item \textbf{Attributi}:
-	  	\begin{itemize}
-	  		\item username : String
-	  		\item email : String
-	  		\item pwd : String
-	  		\item data\_create : Date
-	  		\item access\_token : String
-	  		\item oauth\_token: String
-	  	\end{itemize}
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}:
+      \begin{itemize}
+        \item \textcolor{forestgreen}{\texttt{username : String}}
+        \begin{description}
+          \item \textbf{Descrizione}: username dell'utente registrato al sistema.
+        \end{description}
+        \item \textcolor{forestgreen}{\texttt{email : String}}
+        \begin{description}
+          \item \textbf{Descrizione}: email dell'utente registrato al sistema.
+        \end{description}
+        \item \textcolor{forestgreen}{\texttt{pwd : String}}
+        \begin{description}
+          \item \textbf{Descrizione}: password dell'utente registrato al sistema.
+        \end{description}
+        \item \textcolor{forestgreen}{\texttt{data\_create : Date}}
+        \begin{description}
+          \item \textbf{Descrizione}: data di creazione dell'utente registrato al sistema.
+        \end{description}
+        \item \textcolor{forestgreen}{\texttt{access\_token : String}}
+        \begin{description}
+          \item \textbf{Descrizione}: access token dell'utente registrato al sistema.
+        \end{description}
+        \item \textcolor{forestgreen}{\texttt{oauth\_token: String}}
+        \begin{description}
+          \item \textbf{Descrizione}: codice di autenticazione dell'utente registrato al sistema.
+        \end{description}
+      \end{itemize}
+    \item \textbf{Metodi}: N/A
     \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_private_userresponse (end)
 
@@ -1051,8 +1342,8 @@
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati della lista degli utenti registrati da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response della lista degli utenti al client;
-	  \item \textbf{Attributi}: N/A
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}: N/A
+    \item \textbf{Metodi}: N/A
     \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_private_userlistresponse (end)
 
@@ -1061,12 +1352,18 @@
     \begin{itemize}
       \item \textbf{Descrizione}: rappresenta il modello dei dati di una View preferita da ritornare al client;
       \item \textbf{Utilizzo}: viene utilizzata dalle API per restituire la response di una View preferita al client;
-	  \item \textbf{Attributi}:
-	  	\begin{itemize}
-	  		\item chart\_type : String
-	  		\item metric : List
-	  	\end{itemize}
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}:
+      \begin{itemize}
+        \item \textcolor{forestgreen}{\texttt{chart\_type : String}}
+        \begin{description}
+          \item \textbf{Descrizione}: impostazione utilizzata dal client per generare il grafico che l'utente ha aggiunto ai preferiti.
+        \end{description}
+        \item \textcolor{forestgreen}{\texttt{metric : List}}
+	       \begin{description}
+	         \item \textbf{Descrizione}: metriche utilizzate nel grafico che l'utente ha aggiunto ai preferiti.
+	       \end{description}
+      \end{itemize}
+    \item \textbf{Metodi}: N/A
     \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_private_favoriteresponse (end)
 
@@ -1079,7 +1376,7 @@
         \begin{itemize}
           \item server::endpoints::resp::private::FavoriteResponse
         \end{itemize}
-	  \item \textbf{Attributi}: N/A
-	  \item \textbf{Metodi}: N/A
+    \item \textbf{Attributi}: N/A
+    \item \textbf{Metodi}: N/A
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_resp_private_favoritelistresponse (end)
