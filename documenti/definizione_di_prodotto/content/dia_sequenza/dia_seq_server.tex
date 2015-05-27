@@ -37,12 +37,13 @@ Quelli che seguono sono i diagrammi di sequenza che rappresentano le più rileva
 
 	\subsubsection{Miner Facebook} % (fold)
     \label{ssub:miner_facebook}
-    Il seguente diagramma descrive l'aggiornamento dei dati, relativi ad una metrica che descrive una pagina di Facebook, a seguito della chiamata del cron che richiede l'aggiornamento della Recipe a cui la metrica appartiene. Tale sequenza verrà attivata ogni qualvolta una metrica che descrive una pagina di Facebook dovrà essere aggiornata. \newline
+    Il diagramma alla figura~\ref{fig:miner_facebook} descrive l'aggiornamento dei dati, relativi ad una metrica che descrive una pagina di Facebook, a seguito della chiamata del cron che richiede l'aggiornamento della Recipe a cui la metrica appartiene. Tale sequenza verrà attivata ogni qualvolta una metrica che descrive una pagina di Facebook dovrà essere aggiornata. \newline
 
     \begin{figure}[!htbp]
 		\centering
 			\centerline{\includegraphics[scale=0.4]{./images/sequence_diagram/fb_page_fetcher.pdf}}
 		\caption{Diagramma di sequenza - Miner Facebook}
+    \label{fig:miner_facebook}
 	\end{figure}
 
 
@@ -58,12 +59,13 @@ Quelli che seguono sono i diagrammi di sequenza che rappresentano le più rileva
 
 	\subsubsection{Login API} % (fold)
     \label{ssub:login_api}
-    Il seguente diagramma descrive il funzionamento del servizio REST di autenticazione offerto dal sistema. Il client tramite il metodo \texttt{login()} della classe \texttt{DataManagerService} utilizza il servizio REST di autenticazione definito nella classe \texttt{OAuthApi}. \newline
+    Il diagramma nella figura~\ref{fig:login_api} descrive il funzionamento del servizio REST di autenticazione offerto dal sistema. Il client tramite il metodo \texttt{login()} della classe \texttt{DataManagerService} utilizza il servizio REST di autenticazione definito nella classe \texttt{OAuthApi}. \newline
 
     \begin{figure}[!htbp]
 		\centering
 			\centerline{\includegraphics[angle=90, scale=0.4]{./images/sequence_diagram/login_api.pdf}}
 		\caption{Diagramma di sequenza - Login API}
+        \label{fig:login_api}
 	\end{figure}
 
 
@@ -78,12 +80,13 @@ Quelli che seguono sono i diagrammi di sequenza che rappresentano le più rileva
 
 	\subsubsection{Recipe List API} % (fold)
     \label{ssub:recipe_list_api}
-    Il seguente diagramma descrive il funzionamento del servizio REST offerto dal sistema e utile ad ottenere la lista di tutte le Recipe presenti nel sistema. Il client tramite il metodo \texttt{get\_recipe\_list()} della classe \texttt{DataManagerService} utilizza il servizio REST definito nella classe \texttt{MetricApi}. \newline
+    Il diagramma alla figura~\ref{fig:recipe_list} descrive il funzionamento del servizio REST offerto dal sistema e utile ad ottenere la lista di tutte le Recipe presenti nel sistema. Il client tramite il metodo \texttt{get\_recipe\_list()} della classe \texttt{DataManagerService} utilizza il servizio REST definito nella classe \texttt{MetricApi}. \newline
 
     \begin{figure}[!htbp]
 		\centering
 			\centerline{\includegraphics[angle=90, scale=0.4]{./images/sequence_diagram/recipe_list_api.pdf}}
 		\caption{Diagramma di sequenza - Recipe List API}
+        \label{fig:recipe_list}
 	\end{figure}
 
 
