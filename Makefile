@@ -40,7 +40,7 @@ RP:
 		bash script/consegne/compile_doc.sh; \
 		echo -e "\x1B[01;32m Script: compilazione documenti per RP terminata \x1B[0m"; \
 		bash script/consegne/copy_doc.sh "RP"; \
-		@echo -e "\x1B[01;32m Script: compia documenti dentro consegne/revisione_di_progettazione terminata \x1B[0m"; \
+		echo -e "\x1B[01;32m Script: compia documenti dentro consegne/revisione_di_progettazione terminata \x1B[0m"; \
 	else \
 		echo -e "\x1B[01;31m Cartella già presente. Non serve creare una nuova struttura per la RP! \x1B[0m"; \
 	fi
@@ -61,7 +61,7 @@ RQ:
 		bash script/consegne/compile_doc.sh; \
 		echo -e "\x1B[01;32m Script: compilazione documenti per RQ terminata \x1B[0m"; \
 		bash script/consegne/copy_doc.sh "RQ"; \
-		@echo -e "\x1B[01;32m Script: compia documenti dentro consegne/revisione_di_qualifica terminata \x1B[0m"; \
+		echo -e "\x1B[01;32m Script: compia documenti dentro consegne/revisione_di_qualifica terminata \x1B[0m"; \
 	else \
 		echo -e "\x1B[01;31m Cartella già presente. Non serve creare una nuova struttura per la RQ! \x1B[0m"; \
 	fi
@@ -82,7 +82,7 @@ RA:
 		bash script/consegne/compile_doc.sh; \
 		echo -e "\x1B[01;32m Script: compilazione documenti per RA terminata \x1B[0m"; \
 		bash script/consegne/copy_doc.sh "RA"; \
-		@echo -e "\x1B[01;32m Script: compia documenti dentro consegne/revisione_di_accettazione terminata \x1B[0m"; \
+		echo -e "\x1B[01;32m Script: compia documenti dentro consegne/revisione_di_accettazione terminata \x1B[0m"; \
 	else \
 		echo -e "\x1B[01;31m Cartella già presente. Non serve creare una nuova struttura per la RA! \x1B[0m"; \
 	fi
