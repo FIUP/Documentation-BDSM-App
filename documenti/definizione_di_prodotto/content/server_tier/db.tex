@@ -21,7 +21,7 @@
 		\caption{Package - server::db}
 	\end{figure}
 	\begin{itemize}
-		\item \textbf{Descrizione}: è il package che contiene le componenti che gestiscono e mantengono coerente la base di dati. Esse utilizzano standard proprietari Google per la loro implementazione. Sono suddivise in due package: uno atto a rappresentare il modello dei dati grezzi, l'altro dei parametri del software e degli utenti;
+		\item \textbf{Descrizione}: è il package che contiene le componenti che gestiscono e mantengono coerente la base di dati. Esse utilizzano standard proprietari Google per la loro implementazione. Sono suddivise in due package: uno atto a rappresentare il modello dei dati grezzi, l'altro per parametri del software e degli utenti;
 		\item \textbf{Padre}: server;
 		\item \textbf{Package contenuti}:
 			\begin{itemize}
@@ -113,7 +113,7 @@
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ node\_id\_str : String}}
 						\begin{description}
-							\item \textbf{Descrizione}: codice identificativo evento o pagina Facebook
+							\item \textbf{Descrizione}: codice identificativo di un evento o di una pagina Facebook.
 						\end{description}
 					\end{itemize}
 					\item \textbf{Metodi}: N/A
@@ -142,11 +142,11 @@
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ name\_str : String}}
 						\begin{description}
-							\item \textbf{Descrizione}: nome pagina Facebook
+							\item \textbf{Descrizione}: nome della pagina Facebook.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ category\_str : String}}
 						\begin{description}
-							\item \textbf{Descrizione}: categoria pagina Facebook
+							\item \textbf{Descrizione}: categoria della pagina Facebook.
 						\end{description}
 					\end{itemize}
 					\item \textbf{Metodi}: N/A
@@ -162,17 +162,17 @@
 				\end{figure}
 				\begin{itemize}
 					\item \textbf{Descrizione}: classe che rappresenta il modello del trend dei dati una pagina Facebook;
-					\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare e il numero di like e di talking about di ogni singola pagina;
+					\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare e il numero di like e di talking about di ogni singola pagina. Come per tutti gli oggetti di tipo trend, vengono ricavati i dati fino a 3 giorni prima della creazione dell'oggetto;
 					\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
 					\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ likes\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero likes di una determinata pagina Facebook
+							\item \textbf{Descrizione}: numero dei likes di una determinata pagina Facebook,
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ talking\_about\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero di talking about di una determinata pagina Facebook
+							\item \textbf{Descrizione}: numero di talking about di una determinata pagina Facebook.
 						\end{description}
 					\end{itemize}
 					\item \textbf{Metodi}: N/A
@@ -200,11 +200,11 @@
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ name\_str : String}}
 						\begin{description}
-							\item \textbf{Descrizione}: nome evento Facebook
+							\item \textbf{Descrizione}: nome dell'evento Facebook.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ location\_obj : GeoPoint}}
 						\begin{description}
-							\item \textbf{Descrizione}: localizzazione tramite latitudine e longitudine pagina evento Facebook
+							\item \textbf{Descrizione}: location dell'evento espressa in latitudine e longitudine.
 						\end{description}
 					\end{itemize}
 					\item \textbf{Metodi}: N/A
@@ -220,25 +220,25 @@
 				\end{figure}
 				\begin{itemize}
 					\item \textbf{Descrizione}: classe che rappresenta il modello del trend di un evento su Facebook;
-					\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di utenti invitati, partecipanti e non di un evento;
+					\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di utenti invitati, partecipanti e non di un evento. Come per tutti gli oggetti di tipo trend, vengono ricavati i dati fino a 3 giorni prima della creazione dell'oggetto;
 					\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
 					\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ invited\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero persone invitate evento Facebook
+							\item \textbf{Descrizione}: numero delle persone invitate all'evento Facebook.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ attending\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero persone partecipanti evento Facebook
+							\item \textbf{Descrizione}: numero persone partecipanti all'evento Facebook
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ declined\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero persone che hanno rifiutato la partecipazione evento Facebook
+							\item \textbf{Descrizione}: numero persone che hanno rifiutato la partecipazione all'evento Facebook.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ maybe\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero persone incerte se partecipare evento Facebook
+							\item \textbf{Descrizione}: numero persone incerte se partecipare all'evento Facebook.
 						\end{description}
 					\end{itemize}
 					\item \textbf{Metodi}: N/A
@@ -255,32 +255,32 @@
 				\end{figure}
 				\begin{itemize}
 					\item \textbf{Descrizione}: classe che rappresenta il modello del trend dei post di una pagina o di un evento su Facebook;
-					\item \textbf{Utilizzo}: la classe fornisce metodi per sommare i dati statici sui post di Facebook;
+					\item \textbf{Utilizzo}: viene utilizzata per memorizzare i dati relativi al trend dei post di una pagina o un pagina o evento Facebook. Come per tutti gli oggetti di tipo trend, vengono ricavati i dati fino a 3 giorni prima della creazione dell'oggetto;
 					\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ posts\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero post utente
+							\item \textbf{Descrizione}: numero dei post presenti nella pagina o nell'evento.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ comments\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero commenti utente
+							\item \textbf{Descrizione}: numero totate di commenti ai post della pagina o dell'evento.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ admin\_posts\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero post admin
+							\item \textbf{Descrizione}: numero dei post effettuati esclusivamente da una pagina Facebook e non da terzi.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ admin\_comments\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero commenti admin
+							\item \textbf{Descrizione}: numero dei commenti effettuati esclusivamente da una pagina Facebook e non da terzi.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ posts\_like\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero like del post
+							\item \textbf{Descrizione}: numero totale dei likes ai post di una pagina o evento Facebook.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ comments\_like\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero like dei commenti
+							\item \textbf{Descrizione}: numero totale ai likes dei commenti presenti nei post di una pagina o evento Facebook.
 						\end{description}
 					\end{itemize}
 					\item \textbf{Metodi}: N/A
@@ -325,7 +325,7 @@
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ name\_str : String}}
 						\begin{description}
-							\item \textbf{Descrizione}: nome identificativo pagina o hashtag
+							\item \textbf{Descrizione}: nome identificativo della pagina o dell'hashtag Twitter.
 						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
@@ -353,11 +353,11 @@
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ full\_name\_str : String}}
 						\begin{description}
-							\item \textbf{Descrizione}: nome completo del profilo utente
+							\item \textbf{Descrizione}: nome completo dell'utente Twitter.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ photo\_url\_str : String}}
 						\begin{description}
-							\item \textbf{Descrizione}: indirizzo url foto profilo utente
+							\item \textbf{Descrizione}: indirizzo url della foto profilo dell'utente Twitter.
 						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
@@ -366,7 +366,7 @@
 
 
 		\subparagraph{server::db::raw\_data::tw::RawTwUserTrend} % (fold)
-		\label{subp:server_db_raw_data_tw_rawigusertrend}
+		\label{subp:server_db_raw_data_tw_rawtwusertrend}
 			\begin{figure}[htbp]
 				\centering
 				\centerline{\includegraphics[scale=0.75]{./images/server/classes/db/raw_tw_user_trend.pdf}}
@@ -374,25 +374,25 @@
 			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend di un utente Twitter;
-				\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di favoriti, di followers, di friends e statuses di una determinata persona;
+				\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di favoriti, di followers, di friends e statuses di un determinato utente Twitter. Come per tutti gli oggetti di tipo trend, vengono ricavati i dati fino a 3 giorni prima della creazione dell'oggetto;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsTwRawData
 				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ favourites\_count\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero di favoriti utente Twitter
+							\item \textbf{Descrizione}: numero totale dei preferiti ai tweets di utente Twitter.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ followers\_count\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero di followers utente Twitter
+							\item \textbf{Descrizione}: numero dei followers di un utente Twitter.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ friends\_count\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero di amici utente Twitter
+							\item \textbf{Descrizione}: numero dei TO DO di un utente Twitter.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ tweets\_count\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero di tweets utente Twitter
+							\item \textbf{Descrizione}: numero di tweets di un utente Twitter.
 						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
@@ -415,15 +415,15 @@
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ source\_devices\_list : List}}
 						\begin{description}
-							\item \textbf{Descrizione}: lista composta da quantità e tipo dispositivi utilizzati per pubblicazione tweet
+							\item \textbf{Descrizione}: lista composta da quantità e tipo dispositivi utilizzati in relazione ai tweet di un utente Twitter.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ favourites\_count\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: somma della quantità di favoriti dei tweets
+							\item \textbf{Descrizione}: totale dei preferiti dei tweets di TO DO
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ retweets\_count\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: somma della quantità di retweets dei tweets
+							\item \textbf{Descrizione}: numero totale dei retweet ai tweets di utente Twitter.
 						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
@@ -435,7 +435,7 @@
 		\label{subp:server_db_raw_data_tw_rawtwhashtag}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati di un hashtag su Twitter;
-				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione minimale di un hashtag su Twitter. Vengono forniti metodi automatici per il conteggio dei parametri che verranno utilizzati per seguire un trend;
+				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione minimale di un hashtag su Twitter. Sebbene tale classe non presenti metodi o attributi, risulta molto utile per distinguere un hashtag Twitter da un'altra metrica effettuando un type checking;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsTwRawData
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
@@ -456,17 +456,17 @@
 			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend dei tweet relativi ad un hashtag Twitter;
-				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione della locazione spaziale di un tweet relativo all'hashtag su Twitter;
+				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione della locazione spaziale di un tweet relativo all'hashtag su Twitter. Come per tutti gli oggetti di tipo trend, vengono ricavati i dati fino a 3 giorni prima della creazione dell'oggetto;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::RawTwUserTweet
 				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ time\_zone\_list : List}}
 						\begin{description}
-							\item \textbf{Descrizione}: lista composta da quantità è timezone ricavati dai tweets contenenti il determinato hashtag
+							\item \textbf{Descrizione}: contiene informazioni sulle timezone ricavate dai vari tweet contenenti un determinato hashtag Twitter e dalle occorrenze delle stesse.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ tweets\_count\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: somma dei tweets contenenti un determinato hashtag
+							\item \textbf{Descrizione}: totale dei tweet contentente un determinato hashtag.
 						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
@@ -511,7 +511,7 @@
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ node\_name\_str : String}}
 						\begin{description}
-							\item \textbf{Descrizione}: nome identificativo pagina o hashtag
+							\item \textbf{Descrizione}: nome identificativo di un utente o di un hashtag Instagram.
 						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
@@ -528,7 +528,7 @@
 			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati di un utente Instagram;
-				\item \textbf{Utilizzo}:  la classe viene utilizzata per memorizzare le i dettagli di un utente Instagram;
+				\item \textbf{Utilizzo}:  la classe viene utilizzata per memorizzare i dettagli di un utente Instagram;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsIgRawData
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
@@ -539,11 +539,11 @@
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ id\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero identificativo utente Instagram
+							\item \textbf{Descrizione}: numero identificativo di utente Instagram.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ fullname\_str : String}}
 						\begin{description}
-							\item \textbf{Descrizione}: nome completo del profilo utente Instagram
+							\item \textbf{Descrizione}: nome completo di utente Instagram.
 						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
@@ -560,21 +560,21 @@
 			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend di un utente Instagram;
-				\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di media, di followed e follows di una determinata persona;
+				\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di media, di followed e follows di una determinata persona. Come per tutti gli oggetti di tipo trend, vengono ricavati i dati fino a 3 giorni prima della creazione dell'oggetto;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
 				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ media\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero di media caricati dall'utente su Instagram
+							\item \textbf{Descrizione}: numero di media caricati dall'utente su Instagram.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ followed\_by\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero di followed dell'utente
+							\item \textbf{Descrizione}: numero di followed dell'utente su Intagram.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ follows\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero di follows che segue l'utente
+							\item \textbf{Descrizione}: numero di following dell'utente su Instagram.
 						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
@@ -586,7 +586,7 @@
 		\label{subp:server_db_raw_data_ig_rawighashtag}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati di un hashtag Instagram;
-				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione minimale dell'hashtag su Instagram;
+				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione minimale dell'hashtag su Instagram. Sebbene tale classe non fornisca metodi o campi dati, risulta molto utile per distinguere un hashtag Instagram da un'altra metica tramite type checking;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsIgRawData
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
@@ -608,13 +608,13 @@
 			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati del trend di un hastag Instagram;
-				\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di media caricati di un determinato hashtag;
+				\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare il numero di media caricati di un determinato hashtag. Come per tutti gli oggetti di tipo trend, vengono ricavati i dati fino a 3 giorni prima della creazione dell'oggetto;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
 				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ media\_count\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero totale di media caricati dato un hashtag su Instagram
+							\item \textbf{Descrizione}: numero totale di media relativi ad un hashtag su Instagram.
 						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
@@ -631,33 +631,33 @@
 			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati di un media realtivo ad Instagram;
-				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione dettagliata di un media caricato da un utente specifico su Instagram. Vengono forniti metodi automatici per il conteggio dei parametri che verranno utilizzati per seguire un trend;
+				\item \textbf{Utilizzo}: la classe viene utilizzata per fornire una descrizione dettagliata del trend dei media realativi ad un utente o un hashtag specifico su Instagram. Come per tutti gli oggetti di tipo trend, vengono ricavati i dati fino a 3 giorni prima della creazione dell'oggetto;
 				\item \textbf{Classi ereditate}: server::db::raw\_data::AbsRawData
 				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ media\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero identificativo media su Instagram
+							\item \textbf{Descrizione}: numero di media ricavati.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ comments\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero di commenti del media
+							\item \textbf{Descrizione}: numero totale dei commenti presenti in tutti i media ricavati.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ likes\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero di like del media
+							\item \textbf{Descrizione}: numero totale dei likes presenti in tutti i media ricavati.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ photos\_count\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero di foto del media
+							\item \textbf{Descrizione}: numero totale di media di tipo foto.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ videos\_count\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: numero di video del media
+							\item \textbf{Descrizione}: numero totale di media di tipo video.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ location\_obj : GeoPoint}}
 						\begin{description}
-							\item \textbf{Descrizione}: localizzazione tramite latitudine e longitudine di un media su Instagram
+							\item \textbf{Descrizione}: localizzazione tramite latitudine e longitudine di un media su Instagram.
 						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
@@ -712,7 +712,7 @@
 			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati degli utenti all'interno della base di dati;
-				\item \textbf{Utilizzo}: la classe conterrà i metodi per la creazione, eliminazione, modifica degli account utente;
+				\item \textbf{Utilizzo}: la classe utlizzata per aggiungere, modificare o eliminare un utente dal database;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item server::db::app\_data::user::FavouritesModel
@@ -723,31 +723,31 @@
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ username\_str : String}}
 						\begin{description}
-							\item \textbf{Descrizione}: username utente
+							\item \textbf{Descrizione}: lo username dell'utente.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ email\_str : String}}
 						\begin{description}
-							\item \textbf{Descrizione}: email utente
+							\item \textbf{Descrizione}: l'email dell'utente.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ pwd\_str : String}}
 						\begin{description}
-							\item \textbf{Descrizione}: password utente
+							\item \textbf{Descrizione}: la password dell'utente.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ data\_created\_date : Date}}
 						\begin{description}
-							\item \textbf{Descrizione}: data creazione account utente
+							\item \textbf{Descrizione}: la data creazione account dell'utente.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ access\_token\_str : String}}
 						\begin{description}
-							\item \textbf{Descrizione}: access token utilizzato per i servizi rest
+							\item \textbf{Descrizione}: l'access token utilizzato per i servizi REST.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ oauth\_token : String}}
 						\begin{description}
-							\item \textbf{Descrizione}: token utilizzato per il processo di autenticazione dell'utente
+							\item \textbf{Descrizione}: il token utilizzato per il processo di autenticazione dell'utente.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ active\_bool : boolean}}
 						\begin{description}
-							\item \textbf{Descrizione}: utente attivo o disattivo
+							\item \textbf{Descrizione}: valore che indica se l'utente attivo nel sistema.
 						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
@@ -759,7 +759,7 @@
 		\label{subp:server_db_app_data_user_admin_model}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati degli utenti amministratori all'interno della base di dati;
-				\item \textbf{Utilizzo}: la classe specializza l'utente amministratore. Viene implementata con dei metodi per l'aggiunta la modifica e la rimozione;
+				\item \textbf{Utilizzo}: la classe specializza l'utente amministratore. Viene utilizzata esclusivamente per distinguere un amministratore da un utente normale tramite type checking;
 				\item \textbf{Classi ereditate}: server::db::app\_data::user::UserModel;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
@@ -780,7 +780,7 @@
 			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati relativo ai preferiti dell'utente;
-				\item \textbf{Utilizzo}: la classe  permette all'utente di aggiungere dei modelli di view nei preferiti. Contiene metodi per l'inserimento e rimozione di preferiti;
+				\item \textbf{Utilizzo}: la classe viene utilizzata per memorizzare e ricavare le View preferite relative ad un utente.
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item server::db::app\_data::recipe::AbsMetricModel
@@ -789,7 +789,7 @@
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{chart\_type\_str : String}}
 						\begin{description}
-							\item \textbf{Descrizione}: tipo di grafico scelto dall'utente e salvato nei preferiti
+							\item \textbf{Descrizione}: tipo di grafico scelto dall'utente e salvato nei preferiti.
 						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
@@ -833,15 +833,15 @@
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{data\_create\_date : Date}}
 						\begin{description}
-							\item \textbf{Descrizione}: data creazione recipe
+							\item \textbf{Descrizione}: data di creazione della Recipe.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{desc\_str : String}}
 						\begin{description}
-							\item \textbf{Descrizione}: descrizione dettagliata recipe
+							\item \textbf{Descrizione}: descrizione dettagliata dell Recipe.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{title\_str : String}}
 						\begin{description}
-							\item \textbf{Descrizione}: titolo recipe
+							\item \textbf{Descrizione}: titolo della Recipe.
 						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
@@ -853,7 +853,7 @@
 		\label{subp:server_db_app_data_recipe_reciperequestmodel}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati per la richiesta di aggiunta Recipe;
-				\item \textbf{Utilizzo}: la classe specializza la richiesta identificandone l'utente;
+				\item \textbf{Utilizzo}: la classe specializza la richiesta identificandone l'utente tramite il rapposto parent-child delle classi di Google Datastore;
 				\item \textbf{Classi ereditate}: server::db::app\_data::recipe::AbsRecipeModel
 				\item \textbf{Attributi}: N/A
 				\item \textbf{Metodi}: N/A
@@ -880,11 +880,11 @@
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ update\_interval\_hours\_int : int}}
 						\begin{description}
-							\item \textbf{Descrizione}: intervallo di tempo schedulazione recipe
+							\item \textbf{Descrizione}: intervallo di tempo per la schedulazione dell'update della Recipe.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ last\_update\_date : Date}}
 						\begin{description}
-							\item \textbf{Descrizione}: data ultimo avvio miner recipe
+							\item \textbf{Descrizione}: data dell'ultimo processo di update Recipe.
 						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
@@ -905,12 +905,12 @@
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ rating\_float : float}}
 						\begin{description}
-							\item \textbf{Descrizione}: punteggio gradimento recipe utente
+							\item \textbf{Descrizione}: punteggio gradimento relativo alla Recipe.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ user\_id\_int : int}}
 					\end{itemize}
 					\begin{description}
-							\item \textbf{Descrizione}: identificativo utente votante
+							\item \textbf{Descrizione}: identificativo dell'utente votante.
 						\end{description}
 				\item \textbf{Metodi}: N/A
 			\end{itemize}
@@ -921,7 +921,7 @@
 		\label{subp:server_db_app_data_recipe_absmetricmodel}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati di una metrica contenuta in una Ricetta;
-				\item \textbf{Utilizzo}: la classe ha il compito di inglobare tutte le sotto-metriche e non solo quelle derivate dai social media;
+				\item \textbf{Utilizzo}: la classe rappresenta il modello dei dati di una metrica generale;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
 						\item server::db::app\_data::recipe::AbsSocialMetricModel
@@ -941,7 +941,7 @@
 			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati delle metriche relative ai social media;
-				\item \textbf{Utilizzo}: la classe ha il compito di raggruppare i social media da rappresentare e identificarli univocamente;
+				\item \textbf{Utilizzo}: la classe rappreseta il modello di una metrica relativa ad un social network fornendo il tipo di metrica e il suo identificativo;
 				\item \textbf{Classi ereditate}: server::db::app\_data::recipe::AbsMetricModel
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
@@ -953,11 +953,11 @@
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ type\_str : String}}
 						\begin{description}
-							\item \textbf{Descrizione}: tipo di metrica
+							\item \textbf{Descrizione}: tipo della metrica (pagina, evento, hashtag).
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ node\_name\_str : String}}
 						\begin{description}
-							\item \textbf{Descrizione}: nome categoria metrica
+							\item \textbf{Descrizione}: nome identificativo della metrica.
 						\end{description}
 					\end{itemize}
 				\item \textbf{Metodi}: N/A
@@ -969,7 +969,7 @@
 		\label{subp:server_db_app_data_recipe_fbmetricmodel}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati delle metriche relative a Facebook;
-				\item \textbf{Utilizzo}: la classe ha il compito di identificare univocamente l'id della pagina o l'id dell'evento da analizzare. La classe fornisce metodi per l'aggiunta e la rimozione ricorsiva in caso di cancellazione;
+				\item \textbf{Utilizzo}: viene utilizzata esclusivamente per offrire una distinzione di tipo per le metriche relative a Facebook rispetto ai restanti social network;
 				\item \textbf{Classi ereditate}: server::db::app\_data::recipe::AbsSocialMetricModel;
 				\item \textbf{Attributi}: N/A
 				\item \textbf{Metodi}: N/A
@@ -981,7 +981,7 @@
 		\label{subp:server_db_app_data_recipe_igmetricmodel}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati delle metriche relative a Instagram;
-				\item \textbf{Utilizzo}: la classe ha il compito di identificare univocamente l'id della pagina o l'hashtag da analizzare. La classe fornisce metodi per l'aggiunta e la rimozione ricorsiva in caso di cancellazione;
+				\item \textbf{Utilizzo}: viene utilizzata esclusivamente per offrire una distinzione di tipo per le metriche relative a Instagram rispetto ai restanti social network;
 				\item \textbf{Classi ereditate}: server::db::app\_data::recipe::AbsSocialMetricModel;
 				\item \textbf{Attributi}: N/A
 				\item \textbf{Metodi}: N/A
@@ -993,7 +993,7 @@
 		\label{subp:server_db_app_data_recipe_twmetricmodel}
 			\begin{itemize}
 				\item \textbf{Descrizione}: classe che definisce il modello dei dati delle metriche relative a Twitter;
-				\item \textbf{Utilizzo}: la classe ha il compito di identificare univocamente l'id della pagina o l'hashtag da analizzare. La classe fornisce metodi per l'aggiunta e la rimozione ricorsiva in caso di cancellazione;
+				\item \textbf{Utilizzo}: viene utilizzata esclusivamente per offrire una distinzione di tipo per le metriche relative a Twitter rispetto ai restanti social network;
 				\item \textbf{Classi ereditate}: server::db::app\_data::recipe::AbsSocialMetricModel;
 				\item \textbf{Attributi}: N/A
 				\item \textbf{Metodi}: N/A

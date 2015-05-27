@@ -39,7 +39,7 @@
 \subsubsection{server::endpoints::api} % (fold)
 \label{ssub:bdsm_app_server_endpoints_api}
 
-	In questo package e nei suoi package figli viene utilizzata la classe \textbf{ResourceContainer} offerta dai Google Cloud Endpoints per le richieste contenenti percorsi e query.
+	In questo package e nei suoi package figli viene utilizzata la classe \textbf{ResourceContainer} offerta dai Google Cloud Endpoints per le richieste contenenti dei dati da inoltrare al server.
 \begin{figure}[!htbp]
 	\centering
 	\centerline{\includegraphics[scale=0.4]{./images/server/api.pdf}}
@@ -47,7 +47,7 @@
 \end{figure}
 
 \begin{itemize}
-  \item \textbf{Descrizione}: è il package che definisce le web API offerte dall'applicazione e utilizzati dal client;
+  \item \textbf{Descrizione}: è il package che definisce le web API offerte dall'applicazione e utilizzate dal client;
   \item \textbf{Padre}: server::endpoints
   \item \textbf{Package contenuti}:
   	\begin{itemize}
@@ -99,11 +99,18 @@
         \begin{itemize}
           \item server::endpoints::resp::private::RecipeListResponse;
         \end{itemize}
-		\item \textbf{Attributi}: N/A
-		\item \textbf{Metodi}:
+		  \item \textbf{Attributi}: N/A
+		  \item \textbf{Metodi}:
 			\begin{itemize}
-				\item public recipe\_list() : RecipeListResponse
-				\item public metric\_list(request : ResourceContainer) : RecipeResponse
+				\item \textcolor{forestgreen}{\texttt{public recipe\_list() : RecipeListResponse}}
+        \begin{description}
+          \item \textbf{Descrizione}: restituisce alla chiamata la lista delle Recipe presenti nel sistema.
+        \end{description}
+				\item \textcolor{forestgreen}{\texttt{public metric\_list(request : ResourceContainer) :
+        RecipeResponse}}
+        \begin{description}
+           \item \textbf{Descrizione}: restituisce alla chiamata delle informazioni generali su una specifica Recipe insieme alla lista delle metriche relative alla Recipe stessa.
+        \end{description}
 			\end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_public_recipeapi (end)
@@ -129,12 +136,12 @@
 		\item \textbf{Attributi}: N/A
 		\item \textbf{Metodi}:
 			\begin{itemize}
-				\item public get\_page(request : ResourceContainer) : PageResponse
-				\item public get\_page\_trend(request : ResourceContainer) : PageTrendListResponse
-				\item public get\_page\_posts(request : ResourceContainer) : PostListResponse
-				\item public get\_event(request : ResourceContainer) : EventResponse
-				\item public get\_event\_trend(request : ResourceContainer) : EventTrendListResponse
-				\item public get\_event\_posts(request : ResourceContainer) : PostListResponse
+				\item \textcolor{forestgreen}{\texttt{public get\_page(request : ResourceContainer) : PageResponse}}
+				\item \textcolor{forestgreen}{\texttt{public get\_page\_trend(request : ResourceContainer) : PageTrendListResponse}}
+				\item \textcolor{forestgreen}{\texttt{public get\_page\_posts(request : ResourceContainer) : PostListResponse}}
+				\item \textcolor{forestgreen}{\texttt{public get\_event(request : ResourceContainer) : EventResponse}}
+				\item \textcolor{forestgreen}{\texttt{public get\_event\_trend(request : ResourceContainer) : EventTrendListResponse}}
+				\item \textcolor{forestgreen}{\texttt{public get\_event\_posts(request : ResourceContainer) : PostListResponse}}
 			\end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_public_fbmetricsapi (end)
@@ -158,10 +165,10 @@
 		\item \textbf{Attributi}: N/A
 		\item \textbf{Metodi}:
 			\begin{itemize}
-				\item public get\_user(request : ResourceContainer) : UserResponse
-				\item public get\_user\_trend(request : ResourceContainer) : UserTrendListResponse
-				\item public get\_user\_tweet(request : ResourceContainer) : TweetListResponse
-				\item public get\_hashtag\_tweet(request : ResourceContainer) : TweetListResponse
+				\item \textcolor{forestgreen}{\texttt{public get\_user(request : ResourceContainer) : UserResponse}}
+				\item \textcolor{forestgreen}{\texttt{public get\_user\_trend(request : ResourceContainer) : UserTrendListResponse}}
+				\item \textcolor{forestgreen}{\texttt{public get\_user\_tweet(request : ResourceContainer) : TweetListResponse}}
+				\item \textcolor{forestgreen}{\texttt{public get\_hashtag\_tweet(request : ResourceContainer) : TweetListResponse}}
 			\end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_public_twmetricsapi (end)
@@ -186,11 +193,11 @@
 		\item \textbf{Attributi}: N/A
 		\item \textbf{Metodi}:
 			\begin{itemize}
-				\item public get\_user(request : ResourceContainer) : UserResponse
-				\item public get\_user\_trend(request : ResourceContainer) : UserTrendListResponse
-				\item public get\_user\_media(request : ResourceContainer) :MediaListResponse
-				\item public get\_hashtag\_trend(request : ResourceContainer) : HashtagTrendtListResponse
-				\item public get\_hashtag\_media(request : ResourceContainer) : MediaListResponse
+				\item \textcolor{forestgreen}{\texttt{public get\_user(request : ResourceContainer) : UserResponse}}
+				\item \textcolor{forestgreen}{\texttt{public get\_user\_trend(request : ResourceContainer) : UserTrendListResponse}}
+				\item \textcolor{forestgreen}{\texttt{public get\_user\_media(request : ResourceContainer) :MediaListResponse}}
+				\item \textcolor{forestgreen}{\texttt{public get\_hashtag\_trend(request : ResourceContainer) : HashtagTrendtListResponse}}
+				\item \textcolor{forestgreen}{\texttt{public get\_hashtag\_media(request : ResourceContainer) : MediaListResponse}}
 			\end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_public_igmetricsapi (end)
@@ -233,15 +240,15 @@
 		\item \textbf{Attributi}: N/A
 		\item \textbf{Metodi}:
 			\begin{itemize}
-				\item public add\_recipe(request : ResourceContainer) : void
-				\item public remove\_recipe(request : ResourceContainer) : void
-				\item public rate\_recipe(request : ResourceContainer) : void
+				\item \textcolor{forestgreen}{\texttt{public add\_recipe(request : ResourceContainer) : void}}
+				\item \textcolor{forestgreen}{\texttt{public remove\_recipe(request : ResourceContainer) : void}}
+				\item \textcolor{forestgreen}{\texttt{public rate\_recipe(request : ResourceContainer) : void}}
      	 \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_private_recipeapi (end)
 
     \subparagraph{server::endpoints::api::private::UserApi} % (fold)
-    \label{subp:bdsm_app_server_endpoints_api_private_userapi}   
+    \label{subp:bdsm_app_server_endpoints_api_private_userapi}
 	\begin{figure}[!htbp]
 		\centering
 		\centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/user_api.pdf}}
@@ -258,18 +265,18 @@
 		\item \textbf{Attributi}: N/A
 		\item \textbf{Metodi}:
 			\begin{itemize}
-				\item public user\_list() : UserListResponse
-				\item public user\_details(request : ResourceContainer) : UserResponse
-				\item public add\_user(request : ResourceContainer) : void
-				\item public edit\_user(request : ResourceContainer) : void
-				\item public edit\_permission(request : ResourceContainer) : void
-				\item public remove\_user(request : ResourceContainer) : void
+				\item \textcolor{forestgreen}{\texttt{public user\_list() : UserListResponse
+				\item \textcolor{forestgreen}{\texttt{public user\_details(request : ResourceContainer) : UserResponse
+				\item \textcolor{forestgreen}{\texttt{public add\_user(request : ResourceContainer) : void
+				\item \textcolor{forestgreen}{\texttt{public edit\_user(request : ResourceContainer) : void
+				\item \textcolor{forestgreen}{\texttt{public edit\_permission(request : ResourceContainer) : void
+				\item \textcolor{forestgreen}{\texttt{public remove\_user(request : ResourceContainer) : void
      	 \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_private_userapi (end)
 
     \subparagraph{server::endpoints::api::private::RecipeRequestApi} % (fold)
-    \label{subp:bdsm_app_server_endpoints_api_private::reciperequestapi}   
+    \label{subp:bdsm_app_server_endpoints_api_private::reciperequestapi}
 	\begin{figure}[!htbp]
 		\centering
 		\centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/recipe_request_api.pdf}}
@@ -285,15 +292,15 @@
 		\item \textbf{Attributi}: N/A
 		\item \textbf{Metodi}:
 			\begin{itemize}
-				\item public request\_list() : RecipeReqListResponse
-				\item public add\_request(request : ResourceContainer) : void
-				\item public remove\_request(request : ResourceContainer) : void
+				\item \textcolor{forestgreen}{\texttt{public request\_list() : RecipeReqListResponse
+				\item \textcolor{forestgreen}{\texttt{public add\_request(request : ResourceContainer) : void
+				\item \textcolor{forestgreen}{\texttt{public remove\_request(request : ResourceContainer) : void
      	 \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_private_reciperequestapi (end)
 
     \subparagraph{server::endpoints::api::private::FavoritesApi} % (fold)
-    \label{subp:bdsm_app_server_endpoints_api_private_favoritesapi}  
+    \label{subp:bdsm_app_server_endpoints_api_private_favoritesapi}
 	\begin{figure}[!htbp]
 		\centering
 		\centerline{\includegraphics[scale=0.6]{./images/server/classes/endpoints/favorites_api.pdf}}
@@ -309,9 +316,9 @@
 		\item \textbf{Attributi}: N/A
 		\item \textbf{Metodi}:
 			\begin{itemize}
-				\item public favourites\_list() : FavouriteListResponse
-				\item public add\_favourite(request : ResourceContainer) : void
-				\item public remove\_favourite(request : ResourceContainer) : void
+				\item \textcolor{forestgreen}{\texttt{public favourites\_list() : FavouriteListResponse
+				\item \textcolor{forestgreen}{\texttt{public add\_favourite(request : ResourceContainer) : void
+				\item \textcolor{forestgreen}{\texttt{public remove\_favourite(request : ResourceContainer) : void
      	 \end{itemize}
       \end{itemize}
     % subparagraph bdsm_app_server_endpoints_api_private_favoritesapi (end)
@@ -397,11 +404,11 @@
     \end{itemize}
     \item \textbf{Attributi}:
       \begin{itemize}
-        \item id : String
-        \item title : String
-        \item desc : String
-        \item data\_create : Date
-        \item rating : Float
+        \item \textcolor{forestgreen}{\texttt{id : String}}
+        \item \textcolor{forestgreen}{\texttt{title : String}}
+        \item \textcolor{forestgreen}{\texttt{desc : String}}
+        \item \textcolor{forestgreen}{\texttt{data\_create : Date}}
+        \item \textcolor{forestgreen}{\texttt{rating : Float}}
       \end{itemize}
     \item \textbf{Metodi}: N/A
       \end{itemize}
@@ -451,9 +458,9 @@
 
 	  \item \textbf{Attributi}:
 	  	\begin{itemize}
-	  		\item name : String
-	  		\item category : String
-	  		\item node\_id : String
+	  		\item \textcolor{forestgreen}{\texttt{name : String}}
+	  		\item \textcolor{forestgreen}{\texttt{category : String}}
+	  		\item \textcolor{forestgreen}{\texttt{node\_id : String}}
 	  	\end{itemize}
 	  \item \textbf{Metodi}: N/A
       \end{itemize}
@@ -486,8 +493,8 @@
       %\item \textbf{Relazioni con altre classi}:
 	  \item \textbf{Attributi}:
 	  	\begin{itemize}
-	  		\item likes : int
-	  		\item talking\_about : int
+	  		\item \textcolor{forestgreen}{\texttt{likes : int}}
+	  		\item \textcolor{forestgreen}{\texttt{talking\_about : int}}
 	  	\end{itemize}
 	  \item \textbf{Metodi}: N/A
     \end{itemize}
@@ -520,9 +527,9 @@
 
 	  \item \textbf{Attributi}:
 	  	\begin{itemize}
-	  		\item name : String
-	  		\item location : RawLocation
-	  		\item node\_id : String
+	  		\item \textcolor{forestgreen}{\texttt{name : String}}
+	  		\item \textcolor{forestgreen}{\texttt{location : RawLocation}}
+	  		\item \textcolor{forestgreen}{\texttt{node\_id : String}}
 	  	\end{itemize}
 	  \item \textbf{Metodi}: N/A
       \end{itemize}
