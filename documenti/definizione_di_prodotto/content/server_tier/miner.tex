@@ -70,15 +70,15 @@
 						\begin{description}
 							\item \textbf{Descrizione}: avvia l'update delle recipes contenute nella lista passata;
 						\end{description}
-						\item \textcolor{forestgreen}{\texttt{+ update\_fb\_metrics(recipe\_id : String) : void}}
+						\item \textcolor{forestgreen}{\texttt{+ static update\_fb\_metrics(recipe\_id : String) : void}}
 						\begin{description}
 							\item \textbf{Descrizione}: il metodo controlla il tipo di recipe e avvia l'aggiornamento della recipe di Facebook;
 						\end{description}
-						\item \textcolor{forestgreen}{\texttt{+ update\_ig\_metrics(recipe\_id : String) : void}}
+						\item \textcolor{forestgreen}{\texttt{+ static update\_ig\_metrics(recipe\_id : String) : void}}
 						\begin{description}
 							\item \textbf{Descrizione}: il metodo controlla il tipo di recipe e avvia l'aggiornamento della recipe di Instagram;
 						\end{description}
-						\item \textcolor{forestgreen}{\texttt{+ update\_tw\_metrics(recipe\_id : String) : void}}
+						\item \textcolor{forestgreen}{\texttt{+ static update\_tw\_metrics(recipe\_id : String) : void}}
 						\begin{description}
 							\item \textbf{Descrizione}: il metodo controlla il tipo di recipe e avvia l'aggiornamento della recipe di Twitter;
 						\end{description}
@@ -117,13 +117,13 @@
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ abstract action() : void}}
 						\begin{description}
-							\item \textbf{Descrizione}: il metodo in questa classe viene solamente marcato come astratto, verrà implementato successivamente nelle classi figlie. Il metodo viene utilizzato in ogni elemento ciclato;
+							\item \textbf{Descrizione}: il metodo in questa classe viene solamente marcato come astratto, verrà implementato successivamente nelle classi figlie. Il metodo viene utilizzato in ogni elemento iterato;
 						\end{description}
-						\item \textcolor{forestgreen}{\texttt{+ abstract break\_condition() : void}}
+						\item \textcolor{forestgreen}{\texttt{\# abstract break\_condition() : void}}
 						\begin{description}
 							\item \textbf{Descrizione}: il metodo in questa classe viene solamente marcato come astratto, verrà implementato successivamente nelle classi figlie. Il metodo blocca il count degli elementi;
 						\end{description}
-						\item \textcolor{forestgreen}{\texttt{+ abstract count() : void}}
+						\item \textcolor{forestgreen}{\texttt{\# abstract count() : void}}
 						\begin{description}
 							\item \textbf{Descrizione}: il metodo in questa classe viene solamente marcato come astratto, verrà implementato successivamente nelle classi figlie. Il metodo avvia il count degli elementi ;
 						\end{description}
@@ -229,7 +229,7 @@
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ static get\_coordinates(location\_str : String) : Dictionary}}
 						\begin{description}
-							\item \textbf{Descrizione}: il metodo deve essere dichiarato statico. Il metodo ha il compito di ricevere un indirizzo o una città e restituire le relative coordinate di latitudine e longitudine sottoforma di dizionario;
+							\item \textbf{Descrizione}: il metodo deve essere dichiarato statico. Il metodo ha il compito di ricevere un indirizzo o una città e restituire le relative coordinate di latitudine e longitudine sotto forma di dizionario;
 						\end{description}
 					\end{itemize}
 			\end{itemize}
@@ -239,7 +239,7 @@
 \label{ssub:bdsm_app_server_miner_fb}
 \begin{figure}[htbp]
 	\centering
-	\centerline{\includegraphics[scale=0.3]{./images/server/miner_fb.pdf}}
+	\centerline{\includegraphics[scale=0.4]{./images/server/miner_fb.pdf}}
 	\caption{Package - server::miner::fb}
 \end{figure}
 
@@ -255,7 +255,7 @@
 	\paragraph{Classi} % (fold)
 		\subparagraph{server::miner::fb::AbsFbFetcher} % (fold)
 		\label{subp:server_miner_fb_AbsFbFetcher}
-		    \begin{figure}[!htbp]
+		    \begin{figure}[H]
  		 		\centering
  				\centerline{\includegraphics[scale=0.75]{./images/server/classes/miner/abs_fb_fetcher.pdf}}
  				\caption{Classe - server::miner::fb::AbsFbFetcher}
@@ -282,7 +282,7 @@
 						\begin{description}
 							\item \textbf{Descrizione}: costruttore della classe di default. Inizializza la variabile node\_id\_str con l'id della risorsa;
 						\end{description}
-						\item \textcolor{forestgreen}{\texttt{+ fetch\_item() : String}}
+						\item \textcolor{forestgreen}{\texttt{+ abstract fetch\_item() : String}}
 						\begin{description}
 							\item \textbf{Descrizione}: il metodo attiva l'autenticazione sulle API di Facebook ed effettua la chiamata utilizzando node\_id\_str. Ritorna i dati ottenuti dalla chiamata;
 						\end{description}
@@ -307,7 +307,7 @@
 					\end{itemize}
 				\item \textbf{Attributi}: 
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{+ page\_obj : RawFbPage}}
+						\item \textcolor{forestgreen}{\texttt{- page\_obj : RawFbPage}}
 						\begin{description}
 							\item \textbf{Descrizione}: la variabile contiene i risultati della chiamata effettuata tramite le API di Facebook riguardante una pagina utente;
 						\end{description}
@@ -355,11 +355,11 @@
 					\end{itemize}
 				\item \textbf{Attributi}: 
 					\begin{itemize}
-						\item \item \textcolor{forestgreen}{\texttt{+ parent\_key\_int : int}}
+						\item \textcolor{forestgreen}{\texttt{+ parent\_key\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: viene indicata la chiave del padre per poter collegare il nuovo nodo come figlio;
 						\end{description}
-						\item \item \textcolor{forestgreen}{\texttt{+ event\_obj : RawFbEvent}}
+						\item \textcolor{forestgreen}{\texttt{- event\_obj : RawFbEvent}}
 						\begin{description}
 							\item \textbf{Descrizione}: la variabile contiene i risultati della chiamata effettuata tramite le API di Facebook riguardante una pagina evento;
 						\end{description}
@@ -530,7 +530,7 @@
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ action() : boolean}}
 						\begin{description}
-							\item \textbf{Descrizione}: il metodo effettua i conteggi per ricavare la quanità di commenti dell'utente amministratore;
+							\item \textbf{Descrizione}: il metodo effettua i conteggi per ricavare la quantità di commenti dell'utente amministratore;
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ break\_condition() : void}}
 						\begin{description}
@@ -552,16 +552,16 @@
 		\end{itemize}
 \end{itemize}
 
-	\begin{figure}[!htbp]
+	\begin{figure}[H]
 		\centering
-		\centerline{\includegraphics[scale=0.4]{./images/server/miner_tw.pdf}}
+		\centerline{\includegraphics[scale=0.5]{./images/server/miner_tw.pdf}}
 		\caption{Package - server::miner::tw}
 	\end{figure}
 
 	\paragraph{Classi} % (fold)
 	\subparagraph{server::miner::tw::AbsTwFetcher} % (fold)
 		\label{subp:server_miner_tw_AbsTwFetcher}
-		    \begin{figure}[!htbp]
+		    \begin{figure}[H]
  		 		\centering
  				\centerline{\includegraphics[scale=0.75]{./images/server/classes/miner/abs_tw_fetcher.pdf}}
  				\caption{Classe - server::miner::tw::AbsTwFetcher}
@@ -609,7 +609,7 @@
 					\end{itemize}
 				\item \textbf{Attributi}:    
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{+ hashtag\_obj : RawTwHashtag}}
+						\item \textcolor{forestgreen}{\texttt{- hashtag\_obj : RawTwHashtag}}
 						\begin{description}
 							\item \textbf{Descrizione}: la variabile contiene l'oggetto RawTwHashtag per poterne poi aggiungere i figli associati;
 						\end{description}
@@ -649,7 +649,7 @@
 					\end{itemize}
 				\item \textbf{Attributi}:    
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{+ user\_obj : RawTwUser}}
+						\item \textcolor{forestgreen}{\texttt{- user\_obj : RawTwUser}}
 						\begin{description}
 							\item \textbf{Descrizione}: la variabile contiene l'oggetto RawTwUser per poterne poi aggiungere i figli associati;
 						\end{description}
@@ -782,18 +782,6 @@
 						\begin{description}
 							\item \textbf{Descrizione}: la variabile contiene la somma dei favoriti dell'hashtag Twitter;
 						\end{description}
-						\item \textcolor{forestgreen}{\texttt{+ retweets\_count\_int : int}}
-						\begin{description}
-							\item \textbf{Descrizione}: la variabile contiene la somma dei retweets dell'hashtag Twitter;
-						\end{description}
-						\item \textcolor{forestgreen}{\texttt{+ source\_devices\_list : List}}
-						\begin{description}
-							\item \textbf{Descrizione}: la variabile contiene la lista formata da chiave-valore dei dispositivi utilizzati per la scrittura dell'hashtag Twitter;
-						\end{description}
-						\item \textcolor{forestgreen}{\texttt{+ date\_created\_date : Date}}
-						\begin{description}
-							\item \textbf{Descrizione}: la variabile contiene la data di acquisizione dei dati;
-						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ time\_zone\_list : Date}}
 						\begin{description}
 							\item \textbf{Descrizione}: la variabile contiene la lista formata da chiave-valore dei timezone della pubblicazione dell'hashtag Twitter;
@@ -821,9 +809,9 @@
 
 \subsubsection{server::miner::ig} % (fold)
 \label{ssub:bdsm_app_server_miner_ig}
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
-	\centerline{\includegraphics[scale=0.4]{./images/server/miner_ig.pdf}}
+	\centerline{\includegraphics[scale=0.5]{./images/server/miner_ig.pdf}}
 	\caption{Package - server::miner::ig}
 \end{figure}
 
@@ -840,7 +828,7 @@
 	\paragraph{Classi} % (fold)
 	\subparagraph{server::miner::ig::AbsIgFetcher} % (fold)
 		\label{subp:server_miner_ig_AbsIgFetcher}
-		    \begin{figure}[!htbp]
+		    \begin{figure}[H]
  		 		\centering
  				\centerline{\includegraphics[scale=0.75]{./images/server/classes/miner/abs_ig_fetcher.pdf}}
  				\caption{Classe - server::miner::ig::AbsIgFetcher}
@@ -936,7 +924,7 @@
 					\end{itemize}
 				\item \textbf{Attributi}:    
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{+ hashtag\_obj : RawIgHashtag}}
+						\item \textcolor{forestgreen}{\texttt{- hashtag\_obj : RawIgHashtag}}
 						\begin{description}
 							\item \textbf{Descrizione}: la variabile contiene la metrica cui andranno collegati i figli. Nel seguente caso la metrica riguarda l'hashtag su Instagram;
 						\end{description}
@@ -1056,11 +1044,11 @@
 						\begin{description}
 							\item \textbf{Descrizione}: costruttore della classe di default. Il metodo invoca la costruzione della classe astratta derivata. Inoltre inizializza gli attributi presenti a 0;
 						\end{description}
-						\item \textcolor{forestgreen}{\texttt{+ action() : void}}
+						\item \textcolor{forestgreen}{\texttt{\# action() : void}}
 						\begin{description}
 							\item \textbf{Descrizione}: il metodo invoca le funzioni di somma dei campi dato da acquisire;
 						\end{description}
-						\item \textcolor{forestgreen}{\texttt{+ break\_condition() : boolean}}
+						\item \textcolor{forestgreen}{\texttt{\# break\_condition() : boolean}}
 						\begin{description}
 							\item \textbf{Descrizione}: il metodo definisce la condizione di stop per i cicli di somma;
 						\end{description}
