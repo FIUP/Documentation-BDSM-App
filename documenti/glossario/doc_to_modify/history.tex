@@ -11,73 +11,87 @@
 % =================================================================================================
 % 1.0.1			2015-04-02			inserita history per RP							Tesser Paolo
 % =================================================================================================
+% 3.0.1			2015-06-08			cambiato ordinamento per versione				Santacatterina Luca
+% =================================================================================================
 %
 
 \begin{center}
 \begin{small}
 	\textbf{\huge Diario Revisioni}
 	\vspace{0.5cm}
-	\begin{longtable}{p{6cm}|c|c|c}
+	\begin{longtable}{c|c|p{6cm}|c}
 		\label{tab:history}
-		\textbf{Modifica} & \textbf{Autore \& Ruolo} & \textbf{Data} & \textbf{Versione} \\
-		\hline
-		
-		% Fasi di Progettazione di dettaglio e codifica dei requisiti obbligatori - RQ
-		
-		\emph{Approvazione documento} & 
-			\begin{tabular}[c]{c c}
-				Cusinato Giacomo \\
-				\emph{Responsabile di progetto} \\
-		\end{tabular} & 2015-05-12 & v3.0.0 \\
-		\hline
-		\emph{Eseguita verifica documento} & 
-			\begin{tabular}[c]{c c}
-				Carnovalini Filippo \\
-				\emph{Verificatore} \\
-		\end{tabular} & 2014-05-12 & v2.1.0 \\
+		\textbf{Versione} & \textbf{Data} & \textbf{Modifica} & \textbf{Autore \& Ruolo} \\
 		\hline
 
-		\emph{Inseriti vocabolo: Responsive} & 
-			\begin{tabular}[c]{c c}
-				Faccin Nicola \\
-				\emph{Analista} \\
-		\end{tabular} & 2015-05-11 & v2.0.2 \\
+		% Fase di Progettazione di Detagglio - Requisiti opzionali - RA
+		% Fase di Progettazione di Detagglio - Requisiti desiderbaili - RA
+		v3.0.1 & 2015-06-08 & \emph{Sistemazione history ordinata sulla base della versione} & 
+		\begin{tabular}[c]{c c}
+			Luca Santacatterina \\
+			\emph{Progettista} \\
+		\end{tabular} \\
 		\hline
-		\emph{Inseriti vocabolo: Duck-typing} & 
-			\begin{tabular}[c]{c c}
-				Faccin Nicola \\
-				\emph{Analista} \\
-		\end{tabular} & 2015-05-05 & v2.0.1 \\
+
+
+		% Fasi di Progettazione di dettaglio e codifica dei requisiti obbligatori - RQ
+		v3.0.0 & 2015-05-12 & \emph{Approvazione documento} & 
+		\begin{tabular}[c]{c c}
+			Cusinato Giacomo \\
+			\emph{Responsabile di progetto} \\
+		\end{tabular} \\
 		\hline
+		
+		v2.1.0 & 2014-05-12 & \emph{Eseguita verifica documento} & 
+		\begin{tabular}[c]{c c}
+			Carnovalini Filippo \\
+			\emph{Verificatore} \\
+		\end{tabular} \\
+		\hline
+		
+		v2.0.2 & 2015-05-11 & \emph{Inseriti vocabolo: Responsive} & 
+		\begin{tabular}[c]{c c}
+			Faccin Nicola \\
+			\emph{Analista} \\
+		\end{tabular} \\
+		\hline
+		
+		v2.0.1 & 2015-05-05 & \emph{Inseriti vocabolo: Duck-typing} & 
+		\begin{tabular}[c]{c c}
+			Faccin Nicola \\
+			\emph{Analista} \\
+		\end{tabular} \\
+		\hline
+
 
 		% Fasi di Progettazione Architetturale - RP
-
-		\emph{Approvazione documento} & 
-			\begin{tabular}[c]{c c}
-				Santacatterina Luca \\
-				\emph{Responsabile di progetto} \\
-		\end{tabular} & 2015-03-30 & v2.0.0 \\
+		v2.0.0 & 2015-03-30 & \emph{Approvazione documento} & 
+		\begin{tabular}[c]{c c}
+			Santacatterina Luca \\
+			\emph{Responsabile di progetto} \\
+		\end{tabular} \\
 		\hline
-		\emph{Eseguita verifica documento} & 
-			\begin{tabular}[c]{c c}
-				Ceccon Lorenzo \\
-				\emph{Verificatore} \\
-		\end{tabular} & 2014-03-28 & v1.1.0 \\
-		\hline
-
-		\emph{Inseriti vocaboli: Markup, Schema-less} & 
-			\begin{tabular}[c]{c c}
-				Tesser Paolo \\
-				\emph{Analista} \\
-		\end{tabular} & 2015-03-05 & v1.0.2 \\
-		\hline
-		\emph{Inseriti vocaboli: Categoria, Form} & 
-			\begin{tabular}[c]{c c}
-				Tesser Paolo \\
-				\emph{Analista} \\
-		\end{tabular} & 2015-03-02 & v1.0.1 \\
+		
+		v1.1.0 & 2014-03-28 & \emph{Eseguita verifica documento} & 
+		\begin{tabular}[c]{c c}
+			Ceccon Lorenzo \\
+			\emph{Verificatore} \\
+		\end{tabular} \\
 		\hline
 
+		v1.0.2 & 2015-03-05 & \emph{Inseriti vocaboli: Markup, Schema-less} & 
+		\begin{tabular}[c]{c c}
+			Tesser Paolo \\
+			\emph{Analista} \\
+		\end{tabular} \\
+		\hline
+		
+		v1.0.1 & 2015-03-02 & \emph{Inseriti vocaboli: Categoria, Form} & 
+		\begin{tabular}[c]{c c}
+			Tesser Paolo \\
+			\emph{Analista} \\
+		\end{tabular} \\
+		\hline
 
 
 		% Fasi di Analisi di Dettaglio - Interno
@@ -85,32 +99,34 @@
 
 
 		% Fasi di Analisi dei Requisiti - RR
+		v1.0.0 & 2014-01-21 & \emph{Approvazione documento} & 
+		\begin{tabular}[c]{c c}
+			Tesser Paolo \\
+			\emph{Responsabile di progetto} \\
+		\end{tabular} \\
+		\hline
+		
+		v0.1.0 & 2014-01-19 & \emph{Eseguita verifica documento} & 
+		\begin{tabular}[c]{c c}
+			Santacatterina Luca \\
+			\emph{Verificatore} \\
+		\end{tabular} \\
+		\hline
+		
+		v0.0.2 & 2014-01-16 & \emph{Terminata stesura del documento} & 
+		\begin{tabular}[c]{c c}
+			Faccin Nicola \\
+			\emph{Verificatore} \\
+		\end{tabular} \\
+		\hline
+		
+		v0.0.1 & 2014-12-23 & \emph{Inizio stesura del documento} & 
+		\begin{tabular}[c]{c c}
+			Ceccon Lorenzo \\
+			\emph{Verificatore} \\
+		\end{tabular} \\
+		\hline
 
-		\emph{Approvazione documento} & 
-			\begin{tabular}[c]{c c}
-				Tesser Paolo \\
-				\emph{Responsabile di progetto} \\
-		\end{tabular} & 2014-01-21 & v1.0.0 \\
-		\hline
-		\emph{Eseguita verifica documento} & 
-			\begin{tabular}[c]{c c}
-				Santacatterina Luca \\
-				\emph{Verificatore} \\
-		\end{tabular} & 2014-01-19 & v0.1.0 \\
-		\hline
-		\emph{Terminata stesura del documento} & 
-			\begin{tabular}[c]{c c}
-				Faccin Nicola \\
-				\emph{Verificatore} \\
-		\end{tabular} & 2014-01-16 & v0.0.2 \\
-		\hline
-		\emph{Inizio stesura del documento} & 
-			\begin{tabular}[c]{c c}
-				Ceccon Lorenzo \\
-				\emph{Verificatore} \\
-		\end{tabular} & 2014-12-23 & v0.0.1 \\
-		\hline
 	\end{longtable}
-
 \end{small}
 \end{center}
