@@ -28,8 +28,8 @@
 
 
 	\subsection{Aggiunta di una nuova recipe}
-		Dal menu principale situato nella dashboard\gloss{} del sistema è possibile visualizzare l'elenco delle recipe\gloss{} premendo sull'apposito pulsante \textbf{Recipe}.\newline
-		Tramite il pulsante \textbf{New Recipe} è possibile accedere alla nuova pagina (Figura: \ref{fig:aggiunta_nuova_recipe}) per l'inserimento guidato di nuove recipe\gloss{}.
+		Dal menu principale (Figura: \ref{fig:menu_principale_utente}) situato nella dashboard\gloss{} del sistema è possibile visualizzare l'elenco delle recipe\gloss{} premendo sull'apposito pulsante \textbf{Recipe}.\newline
+		Tramite il pulsante \textbf{New Recipe} (Figura: \ref{fig:menu_principale_utente}) è possibile accedere alla nuova pagina (Figura: \ref{fig:aggiunta_nuova_recipe}) per l'inserimento guidato di nuove recipe\gloss{}.
 		\begin{figure}[H]
 			\centering
 			\centerline{\includegraphics[width=14cm]{images/nuova_ricetta.png}}
@@ -38,31 +38,34 @@
 		\end{figure}
 		Per aggiungere una nuova nuova recipe\gloss{} è necessario compilare tutti i campi del form\gloss{} (Figura: \ref{fig:aggiunta_nuova_recipe}) con i seguenti dati:
 		\begin{itemize}
-			\item Nome della recipe;
-			\item Descrizione della recipe;
-			\item Parametri relativi alla recipe dipendenti dal/dai social network di interesse;
+			\item \textbf{Recipe title}: Nome della recipe\gloss{} (Figura: \ref{fig:aggiunta_nuova_recipe}, rif. 1);
+			\item \textbf{Recipe description}: Descrizione dettagliata della recipe\gloss{} (Figura: \ref{fig:aggiunta_nuova_recipe}, rif. 2);
+			\item \textbf{Category}: categoria di classificazione della recipe\gloss{} (Figura: \ref{fig:aggiunta_nuova_recipe}, rif. 3);
+			\item \textbf{Metric type}: tipo di metrica associata alla recipe\gloss{} (Figura: \ref{fig:aggiunta_nuova_recipe}, rif. 4);
+			\item \textbf{Value}: codice identificativo prelevato dal social network (Figura: \ref{fig:aggiunta_nuova_recipe}, rif. 5);
 		\end{itemize}
-		È possibile selezionare uno o più social network e uno o più parametri per ciascuna selezione.\newline
-		Al termine della procedura guidata è necessario premere il pulsante di \textbf{Insert Recipe} per salvare le modifiche ed aggiungere così la recipe\gloss{} al sistema.
+		È possibile selezionare uno o più social network e uno o più parametri per ciascuna selezione utilizzando il tasto \textbf{Add metric +} (Figura: \ref{fig:aggiunta_nuova_recipe}, rif. 6)\newline
+		Al termine della procedura guidata è necessario premere il pulsante di \textbf{Insert Recipe} (Figura: \ref{fig:aggiunta_nuova_recipe}, rif. 7) per salvare le modifiche ed aggiungere così la recipe\gloss{} al sistema.
 	% END
 
 
 	\subsection{Eliminazione Recipe}
 		L'amministratore può eliminare una recipe\gloss{} e tutti i dati ad essa associati dal sistema.\newline
-		Per accedere all'area dedicata della dashboard\gloss{} si deve premere sul pulsante \textbf{Recipe}\gloss{}. Dall'elenco delle recipe\gloss{} (Figura: \ref{fig:dashboard}) è disponibile il pulsante \textbf{Delete recipe}.
+		Per accedere all'area dedicata dalla dashboard\gloss{} si deve premere sul pulsante \textbf{Recipe}\gloss{} (Figura: \ref{fig:menu_principale_utente}). Dall'elenco delle recipe\gloss{} (Figura: \ref{fig:dashboard}) è disponibile il pulsante \textbf{Delete recipe} (Figura: \ref{fig:dashboard}, rif. 4).
 		L'eliminazione della recipe è istantanea si può così procedere ad una nuova operazione.
 	% END
 
 	
 	\subsection{Visualizzazione classifica recipe}
 		L'utente amministratore può visualizzare la classifica (Figura: \ref{fig:votazioni_ricette}) delle recipe\gloss{} in ordine dalla più apprezzata alla meno apprezzata.\newline
-		Per accedere alla sezione è richiesto di premere l'apposito pulsante \textbf{Recipes Ratings} dal menu principale nella dashboard\gloss{}.\newline
+		Per accedere alla sezione è richiesto di premere l'apposito pulsante \textbf{Recipes Ratings} dal menu principale nella dashboard\gloss{} (Figura: \ref{fig:menu_principale_utente}).\newline
 		\begin{figure}[H]
 			\centering
 			\centerline{\includegraphics[width=14cm]{images/votazioni_ricette.png}}
 			\caption{Punteggi recipes}
 			\label{fig:votazioni_ricette}
 		\end{figure}
+		Il punteggio è visualizzato per ogni singola recipe presente nell'applicazione (Figura: \ref{fig:votazioni_ricette}).
 		Nel caso in cui nessun utente abbia ancora dato un giudizio sulle recipe presenti nel sistema, la classifica risulterà vuota.\newline
 		Un messaggio avviserà l'utente amministratore se questa situazione dovesse verificarsi.
 	% END
