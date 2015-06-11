@@ -47,7 +47,7 @@
  				\caption{Classe - server::miner::MinerScheduler}
 			\end{figure}
 			\begin{itemize}
-				\item \textbf{Descrizione}: classe che si occupa di creare i fetcher che preleveranno i dati per ogni metrica di ogni social network;
+				\item \textbf{Descrizione}: classe che si occupa di creare i fetcher che preleveranno i dati per ogni metrica di ogni social network. La classe implementa metodi statici rispetto che classi singleton in quanto se si decide di utilizzare i thread messi a disposizione dalla piattaforma Google App Engine non creerebbero conflitti interni;
 				\item \textbf{Utilizzo}: contiene la lista degli id delle Recipe da aggiornare ed un metodo che inizializza e avvia i vari fetcher;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
@@ -174,7 +174,7 @@
  				\caption{Classe - server::miner::SocialAuth}
 			\end{figure}
 				\begin{itemize}
-				\item \textbf{Descrizione}: classe che rappresenta la fase di autenticazione dei social network;
+				\item \textbf{Descrizione}: classe che rappresenta la fase di autenticazione dei social network. Essa presenta dei metodi statici in quanto l'autenticazione ai social network può avvenire più volte contemporaneamente, causerebbe dei conflitti l'utilizzo di una implementazione di tipo singleton. Inoltre si è scelto di usare i metodi statici al posto delle classi singleton in quanto se si dovessero utilizzare i thread della Google App Engine non creerebbero conflitti;
 				\item \textbf{Utilizzo}: fornisce metodi statici per effettuare l'autenticazione ai social network presi in considerazione;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
@@ -216,7 +216,7 @@
  					\caption{Classe - server::miner::GeocodeHelper}
 				\end{figure}
 				\begin{itemize}
-				\item \textbf{Descrizione}: classe che si occupa di convertire la geolocalizzazione;
+				\item \textbf{Descrizione}: classe che si occupa di convertire la geolocalizzazione. Essa è stata implementata utilizzando metodi statici, in quanto non è prevista una futura implementazione e fornisce un singolo metodo di conversione da località a coordinate geografiche. Non vi sono interfacce da implementare;
 				\item \textbf{Utilizzo}: fornisce metodi statici ai social network presi in considerazione per la conversione dei luoghi in latitudine e longitudine;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
