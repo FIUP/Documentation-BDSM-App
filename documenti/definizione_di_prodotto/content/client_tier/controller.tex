@@ -23,7 +23,9 @@
 
 \subsubsection{client::controller} % (fold)
 \label{ssub:bdsm_app_client_controller}
-Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'applicazione, e cioè quelle terminanti con \textbf{Route}, rappresentano delle configurazioni. Questo implica che non possiedono metodi o attributi, ma al massimo utilizzano servizi per attuare il loro compito che vengono descritti nella nota introduttiva in \ref{sub:client}. La zona quindi dedicata a quei valori sarà marcata come specificato in \ref{sub:note_specifica} e non verrà fornita nessuna immagine.
+Le classi definite per la gestione dell'indirizzamento delle pagine HTML dell'applicazione, e cioè quelle terminanti con \textbf{Route}, rappresentano le configurazioni necessarie al sistema per indirizzare l'utente nella pagina corretta a seconda di che voce seleziona nei menu messi a disposizione e associare a quella pagina il controller necessario alla sua gestione. \newline
+Questo implica che non possiedono metodi o attributi, ma al massimo utilizzano servizi per attuare il loro compito che vengono descritti nella nota introduttiva in \ref{sub:client}. Tutti questi moduli di routing vengono iniettati nell'applicazione tramite il meccanismo di Dependency Injection offerto dal framework che avvia il meccanismo appena viene caricato il sito. \newline
+La zona quindi dedicata a quei valori sarà marcata come specificato in \ref{sub:note_specifica} e non verrà fornita nessuna immagine, la codifica dovrà quindi seguire le linee guida e i template descritti nel documento \docNameVersionNdP.
 
 
 \begin{figure}[htbp]
