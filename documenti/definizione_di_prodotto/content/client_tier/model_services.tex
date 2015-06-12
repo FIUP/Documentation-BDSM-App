@@ -71,7 +71,9 @@
 									    email: "info@mashup-unipd.it",
 									    pwd: 'password'
 									}
-								\end{verbatim}  
+								\end{verbatim}
+					Le credenziali non vengono criptate in quanto questa operazione non porta nessun vantaggio se fatta lato client. Questo tipo di sicurezza è garantita solo tramite l'utilizzo del protocollo \textbf{HTTPS (HyperText Transfer Protocol over Secure Socket Layer)}. I Google Cloud Endpoints che utilizziamo implementano questo protocollo ed esso viene implementato anche sul nostro sito web attraverso le tecniche descritte nell'articolo seguente: \url{https://konklone.com/post/github-pages-now-sorta-supports-https-so-use-it}
+
 					\end{description}
 					\item \textcolor{forestgreen}{\texttt{+ register(credentials)}}
 					\begin{description}
