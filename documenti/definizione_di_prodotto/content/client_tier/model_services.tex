@@ -258,7 +258,7 @@
 					\end{description}
 					\item \textcolor{forestgreen}{\texttt{+ getAccessToken(idUser)}}
 					\begin{description}
-						\item \textbf{Descrizione}: metodo per generare un token di accesso alle api. Prende come argomento l'id dell'utente per cui generare il token.
+						\item \textbf{Descrizione}: metodo per generare un token di accesso alle api. Prende come argomento l'id dell'utente per cui generare il token. Questo metodo chiama il servizio \textbf{DataManagerService} per effettuare il collegamento con il \textbf{server}, il quale genererà il token secondo lo schema previsto e lo invierà in risposta al client associandolo alle informazioni dell'utente;
 					\end{description}
 					\item \textcolor{forestgreen}{\texttt{+ deleteAccessToken(idUser)}}
 					\begin{description}
@@ -332,7 +332,7 @@
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ chartGeneration(data)}}
 						\begin{description}
-							\item \textbf{Descrizione}: metodo che definisce le operazioni comuni di generazione di un grafico. Riceve com aargomento un JSON nella forma:
+							\item \textbf{Descrizione}: metodo che definisce le operazioni comuni di generazione di un grafico. Riceve com argomento un JSON nella forma:
 							\begin{verbatim}
 									{
 									    desc: "descrizione del grafico",
