@@ -756,6 +756,26 @@
         \end{itemize}
         % subparagraph (end)
 
+        \subparagraph{server::processor::commands::social::FbPageEventCommand} % (fold)
+        \label{subp:bdsm_app_server_processor_commands_social_fbpageeventcommand}
+        \begin{itemize}
+          \item \textbf{Descrizione}: definisce la logica per ottenere i dati relativi a tutti gli eventi associati ad una pagina Facebook;
+          \item \textbf{Utilizzo}: implementa il metodo \texttt{execute()} che conterrà la logica per ottenere i dati relativi a tutti gli eventi associati ad una pagina Facebook;
+          \item \textbf{Relazioni con altre classi}:
+            \begin{itemize}
+              \item server::processor::commands::social::AbsFbCommand
+            \end{itemize}
+          \item \textbf{Attributi}: N/A
+          \item \textbf{Metodi}:
+          \begin{itemize}
+              \item \textcolor{forestgreen}{\texttt{+ execute(request: Dictionary) : Dictionary}}
+              \begin{description}
+                \item \textbf{Descrizione}: restituisce i dati associati a tutti gli eventi di una determinata pagina Facebook presente nel database.
+              \end{description}
+          \end{itemize}
+        \end{itemize}
+        % subparagraph (end)
+
         \subparagraph{server::processor::commands::social::FbEventCommand} % (fold)
         \label{subp:bdsm_app_server_processor_commands_social_fbeventcommand}
         \begin{itemize}
