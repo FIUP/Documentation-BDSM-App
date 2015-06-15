@@ -269,12 +269,13 @@
 
 		% subsubsection strumenti (end)
 
-
-	\subsection{Processo di verifica}
-	Con il processo di verifica si vuole introdurre una approfondita analisi del rispetto dei requisiti fissati prima dell'inizio del progetto.\\
+	\subsection{Processo di Verifica e Validazione}
+	Con il processo di verifica e validazione, che fa parte delle procedure di assicurazione di qualità del prodotto, si vuole introdurre una approfondita analisi del rispetto dei requisiti fissati prima dell'inizio del progetto.\\
 	Tale tecnica permette di aumentare il fattore efficienza/efficacia e di ridurre il tempo impiegato nell'analisi.\\
-	Il processo prevede una prima fase di pianificazione e successivamente di verifica.
-
+	Con il processo di validazione, in particolare, si vuole determinare se il sistema finale, cosi come è stato costruito, svolge il compito per cui è stato progettato. La parte di validazione può essere svolta dall'acquirente, dal fornitore oppure da una parte indipendente. Per questo progetto verrà svolta internamente al team di sviluppo, utilizzando i test di validazione dettagliatamente tracciati ed elencati nel \docNameVersionPdQ e identificati da una specifica sigla come descritto nel capitolo \ref{subp:validazione} di questo documento.\\
+	Per ulteriori informazioni sul Processo di Validazione si veda lo standard ISO/IEC 12220-5. \\
+	Il processo di verifica e validazione prevede una prima fase di pianificazione e successivamente una di verifica.
+	
 		\subsubsection{Attività}
 
 			\paragraph{Analisi statica} % (fold)
@@ -304,22 +305,17 @@
 
 			\paragraph{Gestione anomalie}
 			Il \roleVerifier, durante le attività di controllo, nel caso si riscontrassero anomalie o discordanze normative avrà il compito di notificarle all'assegnatario del task sul quale sta effettuando la verifica.\\
-			Nella sezione \ref{par:Procedure_assegnazione_delle_anomalie}. è indicata la procedura per l'apertura di una nuova anomalia.
-			
+			Nella sezione \ref{par:Procedure_assegnazione_delle_anomalie}. è indicata la procedura per l'apertura di una nuova anomalia.		
+
 			\paragraph{Validazione}
-			In ottemperanza di quanto riportato nello standard ISO 12207, adottato per questo progetto, è prevista una lista di test di validazione per verificare quanto il prodotto software soddisfi i requisiti individuati dall'analisi dei requisiti. Questi test vengono eseguiti successivamente ai test di sistema e garantiscono che il prodotto software che si è andato a creare sia esattamente quello che soddisfa le richieste del proponente. 
-			\newline
-			Per facilitare l'esecuzione sistematica di questi test vengono utilizzati una serie di script automatizzati che generano un unico report con i risultati, allo stesso modo di quanto è stato fatto per i test di sistema.
-			\newline
-			Tutte le componenti software dovranno superare i suddetti test di validazione, i quali sono stati dettagliatamente tracciati ed elencati nel  \docNameVersionPdQ e identificati da una specifica sigla come descritto nel capitolo \ref{subp:validazione} di questo documento.	
-			\newline
-			La fase di Verifica e Validazione si conclude con la Revisione di Accettazione.
-			\newline
+			In ottemperanza di quanto riportato nello standard ISO 12207, adottato per questo progetto, è prevista una lista di test di validazione per verificare quanto il prodotto software soddisfi i requisiti individuati dall'analisi dei requisiti. Questi test vengono eseguiti successivamente ai test di sistema e garantiscono che il prodotto software che si è andato a creare sia esattamente quello che soddisfa le richieste del proponente. \\
+			Per facilitare l'esecuzione sistematica di questi test vengono utilizzati una serie di script automatizzati che generano un unico report con i risultati, allo stesso modo di quanto è stato fatto per i test di sistema. \\
+			Questi script vengono eseguiti manualmente dai verificatori per ciascuna parte del progetto. \\
 			In aggiunta, le pagine web di questo progetto potranno essere validate tramite i seguenti servizi forniti da W3C:
 			\begin{itemize}
 				\item Markup Validation: controlla la validazione secondo gli standard HTML5;
 				\item CSS Validation: controlla la validazione secondo gli standard CSS3.
-			\end{itemize}			
+			\end{itemize}
 
 			\paragraph{Test} % (fold)
 			\label{par:test}
@@ -356,7 +352,6 @@
 			\label{par:tracciamento}
 			L'attività di tracciamento, eseguita dai \emph{Verificatori}, prevede il controllo della corrispondenza dei requisiti definiti nelle fasi precedenti. In oltre ogni requisito deve essere tracciato al componente che lo soddisfa, in modo da garantire che ogni requisito venga soddisfatto. Questo consente anche di misurare il progresso nell'attività di progettazione.
 			% paragraph tracciamento (end)
-
 
 		\subsubsection{Procedure}
 		\label{ssub:procedure}
