@@ -18,6 +18,7 @@
 % CONTENUTO DEL CAPITOLO
 
 \section{Specifica dei test}
+	\label{sub:specifica_dei_test}
 	\subsection{Informazioni generali dei test}
 		In seguito sono descritti tutti i test di validazione, sistema, di integrazione e di unità pianificati.
 Lo stato \textbf{N.I.} presente nelle tabelle sottostanti è da intendersi come non applicato, tali test verranno infatti svolti successivamente come descritto in \docNameVersionPdP.\\
@@ -855,17 +856,17 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 					\hline
 					\textbf{Test} & \textbf{Descrizione} & \textbf{Componente} & \textbf{Stato}\\
 					\hline
-					TIadmin\_controller & Viene verificato che il sistema gestisca correttamente le decisioni su quali pagine HTML mostrare all'utente amministratore e su quali operazioni può interagire quest'ultimo. & bdsm\_app::\-client::\-controller::\-admin & N.I.\\
+					TIadmin\_controller & Viene verificato che il sistema gestisca correttamente le decisioni su quali pagine HTML mostrare all'utente amministratore e su quali operazioni può interagire quest'ultimo. & bdsm\_app::\-client::\-controller::\-admin & \textcolor{green}{Superato}\\
 					\hline
 					TIadmin\_view & Viene verificato che il sistema permetta una corretta visualizzazione di tutte le pagine HTML disponibili per l'utente amministratore. & bdsm\_app::\-client::\-view::\-admin & \textcolor{green}{Superato}\\
 					\hline
-					TIapi & Viene verificato che il sistema fornisca delle API funzionanti al client che le utilizzerà. & bdsm\_app::\-server::\-endpoints::\-api & N.I.\\
+					TIapi & Viene verificato che il sistema fornisca delle API funzionanti al client che le utilizzerà. & bdsm\_app::\-server::\-endpoints::\-api & \textcolor{green}{Superato}\\
 					\hline
 					TIapp\_data & Viene verificato che il sistema gestisca correttamente il modello di dati degli utenti, delle Recipe, dei preferiti e delle richieste di nuove Recipe. & bdsm\_app::\-server::\-db::\-app\_data & \textcolor{green}{Superato}\\
 					\hline
-					TIbdsm\_app & Viene verificata la correttezza generale del sistema integrante i livelli client, database e server. & bdsm\_app & N.I.\\
+					TIbdsm\_app & Viene verificata la correttezza generale del sistema integrante i livelli client, database e server. & bdsm\_app & \textcolor{green}{Superato}\\
 					\hline				
-					TIclient & Viene verificato che il sistema gestisca correttamente il front-end del prodotto. & bdsm\_app::\-client & N.I.\\
+					TIclient & Viene verificato che il sistema gestisca correttamente il front-end del prodotto. & bdsm\_app::\-client & \textcolor{green}{Superato}\\
 					\hline
 					TIcommands & Viene verificato che il sistema gestisca correttamente le chiamate provenienti dal client.  & bdsm\_app::\-server::\-processor::\-commands & \textcolor{green}{Superato}\\
 					\hline
@@ -875,7 +876,7 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 					\hline
 					TIdb & Viene verificato che il sistema gestisca correttamente l'interazione con il database. & bdsm\_app::\-server::\-db & \textcolor{green}{Superato}\\
 					\hline
-					TIendpoints & Viene verificato che il sistema gestisca correttamente la componente endpoints del server. Più precisamente viene verificato che il sistema gestisca correttamente le chiamate provenienti dal client e le relative risposte. & bdsm\_app::\-server::\-endpoints & N.I.\\
+					TIendpoints & Viene verificato che il sistema gestisca correttamente la componente endpoints del server. Più precisamente viene verificato che il sistema gestisca correttamente le chiamate provenienti dal client e le relative risposte. & bdsm\_app::\-server::\-endpoints & \textcolor{green}{Superato}\\
 					\hline
 					TIfb\_miner & Viene verificato che il sistema prelevi, elabori e salvi correttamente i dati dal social network Facebook. & bdsm\_app::\-server::\-miner::\-fb & \textcolor{green}{Superato}\\
 					\hline
@@ -889,7 +890,7 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 					\hline
 					%TImodel & TO DO & bdsm\_app::\-client::\-model & N.I.\\
 					%\hline
-					TIprivate\_api & Viene verificato che il sistema effettui correttamente le chiamate ai servizi REST privati provenienti dal client. & bdsm\_app::\-server::\-endpoints::\-api::\-private & N.I.\\
+					TIprivate\_api & Viene verificato che il sistema effettui correttamente le chiamate ai servizi REST privati provenienti dal client. & bdsm\_app::\-server::\-endpoints::\-api::\-private & \textcolor{green}{Superato}\\
 					\hline
 					TIprivate\_resp & Viene verificato che il sistema gestisca correttamente le risposte relative ai servivi REST privati verso il client. & bdsm\_app::\-server::\-endpoints::\-resp::\-private & \textcolor{green}{Superato}\\
 					\hline
@@ -907,13 +908,13 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 					\hline
 					TIrecipe\_commands & Viene verificato che il sistema gestisca correttamente i comandi relativi alla gestione delle Recipe. & bdsm\_app::\-server::\-processor::\-commands::\-recipe & \textcolor{green}{Superato}\\
 					\hline
-					TIrequests\_commands & Viene verificato che il sistema gestisca correttamente i comandi relativi alla gestione delle richieste di aggiunta delle Recipe. & bdsm\_app::\-server::\-processor::\-commands::\-requests & N.I.\\
+					TIrequests\_commands & Viene verificato che il sistema gestisca correttamente i comandi relativi alla gestione delle richieste di aggiunta delle Recipe. & bdsm\_app::\-server::\-processor::\-commands::\-requests & \textcolor{green}{Superato}\\
 					\hline
 					TIresp & Viene verificato che il sistema gestisca correttamente le risposte verso il client. & bdsm\_app::\-server::\-endpoints::\-resp & \textcolor{green}{Superato}\\
 					\hline
-					TIserver & Viene verificato che il sistema gestisca correttamente il back-end del prodotto. & bdsm\_app::\-server & N.I.\\
+					TIserver & Viene verificato che il sistema gestisca correttamente il back-end del prodotto. & bdsm\_app::\-server & \textcolor{green}{Superato}\\
 					\hline
-					TIservices & Viene verificato che il sistema gestisca correttamente l'interazione con il back-end. & bdsm\_app::\-client::\-model::\-services & N.I.\\
+					TIservices & Viene verificato che il sistema gestisca correttamente l'interazione con il back-end. & bdsm\_app::\-client::\-model::\-services & \textcolor{green}{Superato}\\
 					\hline
 					TIsocial\_commands & Viene verificato che il sistema gestisca correttamente i comandi relativi alla raccolta dei dati grezzi ricavati dai social network. & bdsm\_app::\-server::\-processor::\-commands::\-social & \textcolor{green}{Superato}\\
 					\hline
@@ -1023,6 +1024,7 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 		\end{center}
 		
 	\subsection{Test di unità}
+	\label{sub:test_unità}
 		\subsubsection{Descrizione dei test di unità}
 			\begin{center}
 
@@ -1090,11 +1092,11 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 					\hline
 					TU29 & Viene verificato che, dato il nome utente di un utente registrato al sistema, il metodo permetta la modifica dei permessi di tale utente facendolo diventare un utente amministratore. & \textcolor{green}{Superato}\\
 					\hline
-					TU30 & Viene verificato che, dati i dati di una View, il metodo permetta all'utente di aggiungere tale View tra quelle preferite. & N.I.\\
+					TU30 & Viene verificato che, dati i dati di una View, il metodo permetta all'utente di aggiungere tale View tra quelle preferite. & \textcolor{green}{Superato}\\
 					\hline
-					TU31 & Viene verificato che, dati i dati di una View tra quelle preferite, il metodo permetta all'utente la rimozione di una View dalle preferite. & N.I.\\
+					TU31 & Viene verificato che, dati i dati di una View tra quelle preferite, il metodo permetta all'utente la rimozione di una View dalle preferite. & \textcolor{green}{Superato}\\
 					\hline
-					TU32 & Viene verificato che il metodo permetta il recupero di tutte le View impostate come preferite da un determinato utente. & N.I.\\
+					TU32 & Viene verificato che il metodo permetta il recupero di tutte le View impostate come preferite da un determinato utente. & \textcolor{green}{Superato}\\
 					\hline
 					TU33 & Viene verificato che, dati i dati di una Recipe e delle sue metriche associate, il metodo permetta l'aggiunta di tale Recipe nel sistema. & \textcolor{green}{Superato}\\
 					\hline
@@ -1104,15 +1106,15 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 					\hline
 					TU36 & Viene verificato che il metodo restituisca correttamente la lista di tutte le Recipe presenti nel sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU37 & Viene verificato che, dato il titolo della Recipe e un voto, il metodo permetta di valutare tale Recipe assegnandoli tale voto. & N.I.\\
+					TU37 & Viene verificato che, dato il titolo della Recipe e un voto, il metodo permetta di valutare tale Recipe assegnandoli tale voto. & \textcolor{green}{Superato}\\
 					\hline
-					TU38 & Viene verificato che, passati i dati di una Recipe e delle sue metriche associate, il metodo permetta ad un utente non amministratore di richiedere l'inserimento di una nuova Recipe e delle metriche ad essa associata. & N.I.\\
+					TU38 & Viene verificato che, passati i dati di una Recipe e delle sue metriche associate, il metodo permetta ad un utente non amministratore di richiedere l'inserimento di una nuova Recipe e delle metriche ad essa associata. & \textcolor{green}{Superato}\\
 					\hline
-					TU39 & Viene verificato che, passato il titolo di una richiesta di Recipe effettuata precedentemente, il metodo permetta ad un utente di eliminare tale richiesta di nuova Recipe. & N.I.\\
+					TU39 & Viene verificato che, passato il titolo di una richiesta di Recipe effettuata precedentemente, il metodo permetta ad un utente di eliminare tale richiesta di nuova Recipe. & \textcolor{green}{Superato}\\
 					\hline
-					TU40 & Viene verificato che, passato il titolo di una richiesta di Recipe effettuata precedentemente, il metodo permetta di visualizzare tale richiesta di nuova Recipe. & N.I.\\
+					TU40 & Viene verificato che, passato il titolo di una richiesta di Recipe effettuata precedentemente, il metodo permetta di visualizzare tale richiesta di nuova Recipe. & \textcolor{green}{Superato}\\
 					\hline
-					TU41 & Viene verificato che il metodo permetta di visualizzare la lista delle richieste di nuove Recipe presenti nel sistema. & N.I.\\
+					TU41 & Viene verificato che il metodo permetta di visualizzare la lista delle richieste di nuove Recipe presenti nel sistema. & \textcolor{green}{Superato}\\
 					\hline
 					TU42 & Viene verificato che, dato il titolo di una richiesta di Recipe il metodo permetta di visualizzare la lista di tutte le metriche presenti in una richiesta di nuova Recipe. & N.I.\\
 					\hline
@@ -1176,111 +1178,111 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 					\hline	
 					TU72 & Viene verificato che, dopo aver recuperato i dati dinamici relativi ai trend di un hashtag di Instagram tramite le API e averli salvati nel database, il metodo permetta di interrogare il database e recuperare i dati dinamici dei trend relativi a tale hashtag. & \textcolor{green}{Superato}\\
 					\hline	
-					TU73 & Viene verificato che l'API ritorni una lista contenente tante Recipe quante quelle presenti nel sistema. & N.I.\\
+					TU73 & Viene verificato che l'API ritorni una lista contenente tante Recipe quante quelle presenti nel sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU74 & Viene verificato che l'API, una volta ricevuta una Recipe come parametro, ritorni una lista contenente tante metriche quante quelle presenti nel sistema relative a quella determinata Recipe. & N.I.\\
+					TU74 & Viene verificato che l'API, una volta ricevuta una Recipe come parametro, ritorni una lista contenente tante metriche quante quelle presenti nel sistema relative a quella determinata Recipe. & \textcolor{green}{Superato}\\
 					\hline
-					TU75 & Viene verificato che l'API, una volta ricevuta il nome di una pagina Facebook come parametro, ritorni i dati statici di quella pagina se già presente nel sistema. & N.I.\\
+					TU75 & Viene verificato che l'API, una volta ricevuta il nome di una pagina Facebook come parametro, ritorni i dati statici di quella pagina se già presente nel sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU76 & Viene verificato che l'API, una volta ricevuta il nome di una pagina Facebook come parametro, ritorni i dati dinamici dei trend di quella pagina se già presenti nel sistema. & N.I.\\
+					TU76 & Viene verificato che l'API, una volta ricevuta il nome di una pagina Facebook come parametro, ritorni i dati dinamici dei trend di quella pagina se già presenti nel sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU77 & Viene verificato che l'API, una volta ricevuta il nome di una pagina Facebook come parametro, ritorni i dati dinamici dei post di quella pagina se già presenti nel sistema. & N.I.\\
+					TU77 & Viene verificato che l'API, una volta ricevuta il nome di una pagina Facebook come parametro, ritorni i dati dinamici dei post di quella pagina se già presenti nel sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU78 & Viene verificato che l'API, una volta ricevuta il nome di un evento Facebook come parametro, ritorni i dati statici di quel evento se già presente nel sistema. & N.I.\\
+					TU78 & Viene verificato che l'API, una volta ricevuta il nome di un evento Facebook come parametro, ritorni i dati statici di quel evento se già presente nel sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU79 & Viene verificato che l'API, una volta ricevuta il nome di un evento Facebook come parametro, ritorni i dati dinamici dei trend di quel evento se già presenti nel sistema. & N.I.\\
+					TU79 & Viene verificato che l'API, una volta ricevuta il nome di un evento Facebook come parametro, ritorni i dati dinamici dei trend di quel evento se già presenti nel sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU80 & Viene verificato che l'API, una volta ricevuta il nome di un evento Facebook come parametro, ritorni i dati dinamici dei post di quel evento se già presenti nel sistema. & N.I.\\
+					TU80 & Viene verificato che l'API, una volta ricevuta il nome di un evento Facebook come parametro, ritorni i dati dinamici dei post di quel evento se già presenti nel sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU81 & Viene verificato che l'API, una volta ricevuta il nome di un utente Twitter come parametro, ritorni i dati statici di quel utente se già presente nel sistema. & N.I.\\
+					TU81 & Viene verificato che l'API, una volta ricevuta il nome di un utente Twitter come parametro, ritorni i dati statici di quel utente se già presente nel sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU82 & Viene verificato che l'API, una volta ricevuta il nome di un utente Twitter come parametro, ritorni i dati dinamici dei trend di quel utente se già presenti nel sistema. & N.I.\\
+					TU82 & Viene verificato che l'API, una volta ricevuta il nome di un utente Twitter come parametro, ritorni i dati dinamici dei trend di quel utente se già presenti nel sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU83 & Viene verificato che l'API, una volta ricevuta il nome di un utente Twitter come parametro, ritorni i dati dinamici dei tweet di quel utente se già presenti nel sistema. & N.I.\\
+					TU83 & Viene verificato che l'API, una volta ricevuta il nome di un utente Twitter come parametro, ritorni i dati dinamici dei tweet di quel utente se già presenti nel sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU84 & Viene verificato che l'API, una volta ricevuta il nome di un hashtag di Twitter come parametro, ritorni i dati dinamici dei tweet di quel hashtag se già presenti nel sistema. & N.I.\\
+					TU84 & Viene verificato che l'API, una volta ricevuta il nome di un hashtag di Twitter come parametro, ritorni i dati dinamici dei tweet di quel hashtag se già presenti nel sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU85 & Viene verificato che l'API, una volta ricevuta il nome di un utente di Instagram come parametro, ritorni i dati statici di quel utente se già presente nel sistema. & N.I.\\
+					TU85 & Viene verificato che l'API, una volta ricevuta il nome di un utente di Instagram come parametro, ritorni i dati statici di quel utente se già presente nel sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU86 & Viene verificato che l'API, una volta ricevuta il nome di un utente di Instagram come parametro, ritorni i dati dinamici dei trend di quel utente se già presenti nel sistema. & N.I.\\
+					TU86 & Viene verificato che l'API, una volta ricevuta il nome di un utente di Instagram come parametro, ritorni i dati dinamici dei trend di quel utente se già presenti nel sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU87 & Viene verificato che l'API, una volta ricevuta il nome di un utente di Instagram come parametro, ritorni i dati dinamici dei media di quel utente se già presenti nel sistema. & N.I.\\
+					TU87 & Viene verificato che l'API, una volta ricevuta il nome di un utente di Instagram come parametro, ritorni i dati dinamici dei media di quel utente se già presenti nel sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU88 & Viene verificato che l'API, una volta ricevuta il nome di un hashtag di Instagram come parametro, ritorni i dati dinamici dei trend di quel hashtag se già presenti nel sistema. & N.I.\\
+					TU88 & Viene verificato che l'API, una volta ricevuta il nome di un hashtag di Instagram come parametro, ritorni i dati dinamici dei trend di quel hashtag se già presenti nel sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU89 & Viene verificato che l'API, una volta ricevuta il nome di un hashtag di Instagram come parametro, ritorni i dati dinamici dei media di quel hashtag se già presenti nel sistema. & N.I.\\
+					TU89 & Viene verificato che l'API, una volta ricevuta il nome di un hashtag di Instagram come parametro, ritorni i dati dinamici dei media di quel hashtag se già presenti nel sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU90 & Viene verificato che l'API, una volta ricevuti dal client i dettagli di una nuova Recipe da inserire, chiami correttamente la classe del processor che si occuperà di inserire la nuova Recipe nel sistema. & N.I.\\
+					TU90 & Viene verificato che l'API, una volta ricevuti dal client i dettagli di una nuova Recipe da inserire, chiami correttamente la classe del processor che si occuperà di inserire la nuova Recipe nel sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU91 & Viene verificato che l'API, una volta ricevuto dal client il nome di una Recipe, chiami correttamente la classe del processor che si occuperà di rimuovere la Recipe presente nel sistema. & N.I.\\
+					TU91 & Viene verificato che l'API, una volta ricevuto dal client il nome di una Recipe, chiami correttamente la classe del processor che si occuperà di rimuovere la Recipe presente nel sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU92 & Viene verificato che l'API, una volta ricevuti il nome di una Recipe e il voto da assegnarli, chiami correttamente la classe del processor che si occuperà di assegnare tale voto alla Recipe presente nel sistema. & N.I.\\
+					TU92 & Viene verificato che l'API, una volta ricevuti il nome di una Recipe e il voto da assegnarli, chiami correttamente la classe del processor che si occuperà di assegnare tale voto alla Recipe presente nel sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU93 & Viene verificato che l'API ritorni una lista contenente tanti utenti tanti quelli registrati nel sistema. & N.I.\\
+					TU93 & Viene verificato che l'API ritorni una lista contenente tanti utenti tanti quelli registrati nel sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU94 & Viene verificato che l'API, una volta ricevuto il nome di un utente registrato nel sistema, ritorni i dati relativi a tale utente. & N.I.\\
+					TU94 & Viene verificato che l'API, una volta ricevuto il nome di un utente registrato nel sistema, ritorni i dati relativi a tale utente. & \textcolor{green}{Superato}\\
 					\hline
-					TU95 & Viene verificato che l'API, una volta ricevuto il nome di un utente registrato nel sistema e i dati da modificare di tale utente, modifichi correttamente i dati di tale utente. & N.I.\\
+					TU95 & Viene verificato che l'API, una volta ricevuto il nome di un utente registrato nel sistema e i dati da modificare di tale utente, modifichi correttamente i dati di tale utente. & \textcolor{green}{Superato}\\
 					\hline
-					TU96 & Viene verificato che l'API, una volta ricevuto il nome di un utente registrato nel sistema, cambi i permessi dell'utente registrato al sistema facendolo diventare amministratore . & N.I.\\
+					TU96 & Viene verificato che l'API, una volta ricevuto il nome di un utente registrato nel sistema, cambi i permessi dell'utente registrato al sistema facendolo diventare amministratore . & \textcolor{green}{Superato}\\
 					\hline
-					TU97 & Viene verificato che l'API, una volta ricevuto il nome di un utente registrato nel sistema, rimuova correttamente l'utente dal sistema. & N.I.\\
+					TU97 & Viene verificato che l'API, una volta ricevuto il nome di un utente registrato nel sistema, rimuova correttamente l'utente dal sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU98 & Viene verificato che l'API, una volta ricevuto i dati di registrazione di un nuovo utente, registri correttamente l'utente al sistema. & N.I.\\
+					TU98 & Viene verificato che l'API, una volta ricevuto i dati di registrazione di un nuovo utente, registri correttamente l'utente al sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU99 & Viene verificato che l'API, una volta ricevuto il nome e la password di un utente registrato nel sistema, effettui correttamente l'autenticazione di tale utente se i dati inseriti risultano esatti. & N.I.\\
+					TU99 & Viene verificato che l'API, una volta ricevuto il nome e la password di un utente registrato nel sistema, effettui correttamente l'autenticazione di tale utente se i dati inseriti risultano esatti. & \textcolor{green}{Superato}\\
 					\hline
-					TU100 & Viene verificato che l'API, una volta ricevuto il nome di un utente registrato nel sistema, deautentichi correttamente l'utente dal sistema. & N.I.\\
+					TU100 & Viene verificato che l'API, una volta ricevuto il nome di un utente registrato nel sistema, deautentichi correttamente l'utente dal sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU101 & Viene verificato che l'API ritorni una lista contenente tante richieste di nuove Recipe tante quelle presenti nel sistema. & N.I.\\
+					TU101 & Viene verificato che l'API ritorni una lista contenente tante richieste di nuove Recipe tante quelle presenti nel sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU102 & Viene verificato che l'API, una volta ricevuto i dettagli di una nuova richiesta di Recipe, salvi correttamente la richiesta al sistema. & N.I.\\
+					TU102 & Viene verificato che l'API, una volta ricevuto i dettagli di una nuova richiesta di Recipe, salvi correttamente la richiesta al sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU103 & Viene verificato che l'API, una volta ricevuto il nome di una richiesta di Recipe precedentemente effettuata, elimina tale richiesta dal sistema. & N.I.\\
+					TU103 & Viene verificato che l'API, una volta ricevuto il nome di una richiesta di Recipe precedentemente effettuata, elimina tale richiesta dal sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU104 & Viene verificato che l'API ritorni una lista contenente tante View quante quelle impostate dall'utente come preferite nel sistema. & N.I.\\
+					TU104 & Viene verificato che l'API ritorni una lista contenente tante View quante quelle impostate dall'utente come preferite nel sistema. & \textcolor{green}{Superato}\\
 					\hline
-					TU105 & Viene verificato che l'API, una volta ricevuto il nome di una View, inserisca tale View tra le preferite dell'utente che ha effettuato l'operazione. & N.I.\\
+					TU105 & Viene verificato che l'API, una volta ricevuto il nome di una View, inserisca tale View tra le preferite dell'utente che ha effettuato l'operazione. & \textcolor{green}{Superato}\\
 					\hline
-					TU106 & Viene verificato che l'API, una volta ricevuto il nome di una View impostata come preferita da un utente, elimini dai preferiti tale View. & N.I.\\
+					TU106 & Viene verificato che l'API, una volta ricevuto il nome di una View impostata come preferita da un utente, elimini dai preferiti tale View. & \textcolor{green}{Superato}\\
 					\hline
 					TU107 & Viene verificato che il controller ApiDocs esista e sia associato alla pagina ApiDocs. & \textcolor{green}{Superato}\\
 					\hline
-					TU108 & Viene verificato che, alla fine dell'esecuzione del metodo getRestService, la variabile contenga una lista di servizi REST aventi un determinato formato. & N.I.\\
+					TU108 & Viene verificato che, alla fine dell'esecuzione del metodo getRestService, la variabile contenga una lista di servizi REST aventi un determinato formato. & \textcolor{green}{Superato}\\
 					\hline
 					TU109 & Viene verificato che il controller Login esista e sia associato alla pagina Login. & \textcolor{green}{Superato}\\
 					\hline
-					TU110 & Viene verificato che, alla fine dell'esecuzione del metodo login, la variabile contenente le credenziali d'accesso sia vuota se l'autenticazione è avvenuta con successo. & N.I.\\
+					TU110 & Viene verificato che, alla fine dell'esecuzione del metodo login, la variabile contenente le credenziali d'accesso sia vuota se l'autenticazione è avvenuta con successo. & \textcolor{green}{Superato}\\
 					\hline
-					TU111 & Viene verificato che il controller Register esista e sia associato alla pagina Register. & N.I.\\
+					TU111 & Viene verificato che il controller Register esista e sia associato alla pagina Register. & \textcolor{green}{Superato}\\
 					\hline
 					TU112 & Viene verificato che, nel metodo checkMatchPwd, se la password e la password di conferma inserite coincidono venga ritornato true. & \textcolor{green}{Superato}\\
 					\hline
-					TU113 & Viene verificato che, alla fine dell'esecuzione del metodo register, la variabile contenente le credenziali sia vuota se la registrazione è avvenuta con successo. & N.I.\\
+					TU113 & Viene verificato che, alla fine dell'esecuzione del metodo register, la variabile contenente le credenziali sia vuota se la registrazione è avvenuta con successo. & \textcolor{green}{Superato}\\
 					\hline
 					TU114 & Viene verificato che la lunghezza dell'access token sia di lunghezza uguale a quanto descritto nel documento d'analisi. & \textcolor{green}{Superato}\\
 					\hline
-					TU115 & Viene verificato che, se la chiamata al metodo deleteAccessToken è avvenuta con successo, il valore della variabile accessToken sia vuoto. & N.I.\\
+					TU115 & Viene verificato che, se la chiamata al metodo deleteAccessToken è avvenuta con successo, il valore della variabile accessToken sia vuoto. & \textcolor{green}{Superato}\\
 					\hline
 					TU116 & Viene verificato che il metodo matchNewPassword restituisca true nel caso la password nuova e quella di conferma coincidano. & \textcolor{green}{Superato}\\
 					\hline
-					TU117 & Viene verificato che il metodo checkModifyFields restituisca true nel caso siano avvenute modifiche da salvare nel form. & N.I.\\
+					TU117 & Viene verificato che il metodo checkModifyFields restituisca true nel caso siano avvenute modifiche da salvare nel form. & \textcolor{green}{Superato}\\
 					\hline
-					TU118 & Viene verificato che il metodo saveEdit restituisca true nel caso in cui il salvataggio delle modifiche sia avvenuto correttamente. & N.I.\\
+					TU118 & Viene verificato che il metodo saveEdit restituisca true nel caso in cui il salvataggio delle modifiche sia avvenuto correttamente. & \textcolor{green}{Superato}\\
 					\hline
 					TU119 & Viene verificato che il controller Recipe esista e sia associato alla pagina Recipe. & \textcolor{green}{Superato}\\
 					\hline
-					TU120 & Viene verificato che, se la chiamata al metodo è avvenuta con successo, la variabile contenente la lista delle Recipe non sia vuota e gli oggetti in essa siano nel formato previsto. & N.I.\\
+					TU120 & Viene verificato che, se la chiamata al metodo è avvenuta con successo, la variabile contenente la lista delle Recipe non sia vuota e gli oggetti in essa siano nel formato previsto. & \textcolor{green}{Superato}\\
 					\hline
 					TU121 & Viene verificato che il controller Metrics esista e sia associato alla pagina Metrics. & \textcolor{green}{Superato}\\
 					\hline
-					TU122 & Viene verificato che il metodo getMetricType ritorni un oggetto nel formato corretto. & N.I.\\
+					TU122 & Viene verificato che il metodo getMetricType ritorni un oggetto nel formato corretto. & \textcolor{green}{Superato}\\
 					\hline
-					TU123 & Viene verificato che il metodo getMetricList ritorni una lista di metriche nel formato corretto. & N.I.\\
+					TU123 & Viene verificato che il metodo getMetricList ritorni una lista di metriche nel formato corretto. & \textcolor{green}{Superato}\\
 					\hline
 					TU124 & Viene verificato che il controller UsersConfig esista e sia associato alla pagina UsersConfig. & \textcolor{green}{Superato}\\
 					\hline
-					TU125 & Viene verificato che, se la chiamata al metodo è avvenuta con successo, la variabile contenente la lista degli utenti non sia vuota e gli oggetti in essa siano nel formato previsto. & N.I.\\
+					TU125 & Viene verificato che, se la chiamata al metodo è avvenuta con successo, la variabile contenente la lista degli utenti non sia vuota e gli oggetti in essa siano nel formato previsto. & \textcolor{green}{Superato}\\
 					\hline
 					TU126 & Viene verificato che l'esecuzione del metodo editPermission modifichi correttamente il valore del permesso di un determinato utente facendolo diventare amministratore. & N.I.\\
 					\hline
@@ -1288,17 +1290,17 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 					\hline
 					TU128 & Viene verificato che il metodo checkMetricQuantitty restituisca true se il numero di metriche inserito sia maggiore o uguale a due. & \textcolor{green}{Superato}\\
 					\hline
-					TU129 & Viene verificato che, a seguito della chiamata al metodo addMetric, il numero di metriche presenti nella ricetta sia aumentato di uno. & N.I.\\
+					TU129 & Viene verificato che, a seguito della chiamata al metodo addMetric, il numero di metriche presenti nella ricetta sia aumentato di uno. & \textcolor{green}{Superato}\\
 					\hline
-					TU130 & Viene verificato che, se la chiamata al metodo insertRecipe ha avuto successo, allora i valori contenuti nella form siano resettati correttamente. & N.I.\\
+					TU130 & Viene verificato che, se la chiamata al metodo insertRecipe ha avuto successo, allora i valori contenuti nella form siano resettati correttamente. & \textcolor{green}{Superato}\\
 					\hline
-					TU131 & Viene verificato che il metodo getRequestList ritorni una lista contenente tante richieste quante quelle presenti nel sistema. & N.I.\\
+					TU131 & Viene verificato che il metodo getRequestList ritorni una lista contenente tante richieste quante quelle presenti nel sistema. & \textcolor{green}{Superato}\\
 					\hline
 					TU132 & Viene verificato che il metodo discardRequest ritorni una lista contenente un numero di richieste pari al precedente meno uno. & N.I.\\
 					\hline
 					TU133 & Viene verificato che il metodo approveRequest ritorni una lista contenente un numero di richieste pari al precedente più uno. & N.I.\\
 					\hline
-					TU134 & Viene verificato che il metodo getListOfRecipe ritorni una lista contenente tante ricette quante quelle presenti nel sistema. & N.I.\\
+					TU134 & Viene verificato che il metodo getListOfRecipe ritorni una lista contenente tante ricette quante quelle presenti nel sistema. & \textcolor{green}{Superato}\\
 					\hline
 					TU135 & Viene verificato che venga restituita una promise. & \textcolor{green}{Superato}\\
 					\hline
@@ -1306,15 +1308,15 @@ Per una descrizione più dettagliata sui test si rimanda alla sezione dei test d
 					\hline
 					TU137 & Viene verificato che venga restituita una promise. & \textcolor{green}{Superato}\\
 					\hline
-					TU138 & Viene verificato che il numero di dati passato al metodo sia uguale al numero di entries nel grafico. & N.I.\\
+					TU138 & Viene verificato che il numero di dati passato al metodo sia uguale al numero di entries nel grafico. & \textcolor{green}{Superato}\\
 					\hline
-					TU139 & Viene verificato che nella generazione del grafico PieChart le percentuali vengano rispettate. & N.I.\\
+					TU139 & Viene verificato che nella generazione del grafico PieChart le percentuali vengano rispettate. & \textcolor{green}{Superato}\\
 					\hline
-					TU140 & Viene verificato che nella generazione del grafico LineChart le date disposte nell'ascissa siano ordinate in modo crescente. & N.I.\\
+					TU140 & Viene verificato che nella generazione del grafico LineChart le date disposte nell'ascissa siano ordinate in modo crescente. & \textcolor{green}{Superato}\\
 					\hline
-					TU141 & Viene verificato che nel datastorage sia stata inserita la coppia chiave-valore di cui si voleva effettuare l'inserimento. & N.I.\\
+					TU141 & Viene verificato che nel datastorage sia stata inserita la coppia chiave-valore di cui si voleva effettuare l'inserimento. & \textcolor{green}{Superato}\\
 					\hline
-					TU142 & Viene verificato che nel datastorage sia stata rimossa la coppia chiave-valore di cui si voleva effettuare la rimozione. & N.I.\\
+					TU142 & Viene verificato che nel datastorage sia stata rimossa la coppia chiave-valore di cui si voleva effettuare la rimozione. & \textcolor{green}{Superato}\\
 					\hline
 					\caption{Tabella test di unità}
 			\end{longtable}
