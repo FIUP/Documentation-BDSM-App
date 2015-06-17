@@ -9,10 +9,13 @@
 # ESTERNI=("analisi_dei_requisiti" "piano_di_progetto" "piano_di_qualifica" "glossario" "specifica_tecnica")
 
 # Documenti per RQ
-INTERNI=("norme_di_progetto")
-ESTERNI=("analisi_dei_requisiti" "piano_di_progetto" "piano_di_qualifica" "glossario" "specifica_tecnica" "definizione_di_prodotto")
+# INTERNI=("norme_di_progetto")
+# ESTERNI=("analisi_dei_requisiti" "piano_di_progetto" "piano_di_qualifica" "glossario" "specifica_tecnica" "definizione_di_prodotto")
 
 # Documenti per RA
+# Documenti per RQ
+INTERNI=("norme_di_progetto" "verbale_interno_2015_05_25")
+ESTERNI=("analisi_dei_requisiti" "piano_di_progetto" "piano_di_qualifica" "glossario" "specifica_tecnica" "definizione_di_prodotto")
 
 doc_to_copy="documenti_glossario/"
 tpl=${doc_to_copy}"/template"
