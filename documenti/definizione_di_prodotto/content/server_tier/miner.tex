@@ -47,7 +47,7 @@
  				\caption{Classe - server::miner::MinerScheduler}
 			\end{figure}
 			\begin{itemize}
-				\item \textbf{Descrizione}: classe che si occupa di creare i fetcher che preleveranno i dati per ogni metrica di ogni social network. La classe implementa metodi statici rispetto che classi singleton in quanto se si decide di utilizzare i thread messi a disposizione dalla piattaforma Google App Engine non creerebbero conflitti interni;
+				\item \textbf{Descrizione}: classe che si occupa di creare i fetcher che preleveranno i dati per ogni metrica di ogni social network. La classe implementa metodi statici in quanto, nel caso si scelga di utilizzare le funzionalità di multi-threading di Google App Engine, questi non creerebbero conflitti interni;
 				\item \textbf{Utilizzo}: contiene la lista degli id delle Recipe da aggiornare ed un metodo che inizializza e avvia i vari fetcher;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
@@ -60,7 +60,7 @@
 							\item \textbf{Descrizione}: lista di recipes da aggiornare;
 						\end{description}
 					\end{itemize}
-				\item \textbf{Metodi}:   
+				\item \textbf{Metodi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(recipe\_id\_list : int ) : void}}
 						\begin{description}
@@ -102,14 +102,14 @@
 						\item server::miner::tw::AbsTwCounter
 						\item server::miner::ig::AbsIgCounter
 					\end{itemize}
-				\item \textbf{Attributi}: 
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{counter\_int : int}}
 						\begin{description}
 							\item \textbf{Descrizione}: contiene la somma richiesta;
 						\end{description}
 					\end{itemize}
-				\item \textbf{Metodi}:   
+				\item \textbf{Metodi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_() : void}}
 						\begin{description}
@@ -174,7 +174,7 @@
  				\caption{Classe - server::miner::SocialAuth}
 			\end{figure}
 				\begin{itemize}
-				\item \textbf{Descrizione}: classe che rappresenta la fase di autenticazione dei social network. Essa presenta dei metodi statici in quanto l'autenticazione ai social network può avvenire più volte contemporaneamente, causerebbe dei conflitti l'utilizzo di una implementazione di tipo singleton. Inoltre si è scelto di usare i metodi statici al posto delle classi singleton in quanto se si dovessero utilizzare i thread della Google App Engine non creerebbero conflitti;
+				\item \textbf{Descrizione}: classe che rappresenta la fase di autenticazione dei social network. Essendo una classe di utilità, essa fornisce dei metodi statici per ottenere facilmente i dati relativi ai permessi da utilizzare per le API dei vari social network.
 				\item \textbf{Utilizzo}: fornisce metodi statici per effettuare l'autenticazione ai social network presi in considerazione;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
@@ -216,7 +216,7 @@
  					\caption{Classe - server::miner::GeocodeHelper}
 				\end{figure}
 				\begin{itemize}
-				\item \textbf{Descrizione}: classe che si occupa di convertire la geolocalizzazione. Essa è stata implementata utilizzando metodi statici, in quanto non è prevista una futura implementazione e fornisce un singolo metodo di conversione da località a coordinate geografiche. Non vi sono interfacce da implementare;
+				\item \textbf{Descrizione}: classe che si occupa di convertire la geolocalizzazione da una località a coordinate geografiche. Essa è stata implementata utilizzando metodi statici in quanto essendo un metodo di utilità, non presenta la necessità di interagire con l'istanza della classe.
 				\item \textbf{Utilizzo}: fornisce metodi statici ai social network presi in considerazione per la conversione dei luoghi in latitudine e longitudine;
 				\item \textbf{Relazioni con altre classi}:
 					\begin{itemize}
@@ -269,14 +269,14 @@
 						\item server::miner::fb::FbPageFetcher
 						\item server::miner::fb::FbEventFetcher
 					\end{itemize}
-				\item \textbf{Attributi}: 
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ node\_id\_str : String}}
 						\begin{description}
 							\item \textbf{Descrizione}: contiene ed identifica l'id univoco della risorsa sul sito Facebook;
 						\end{description}
 					\end{itemize}
-				\item \textbf{Metodi}:   
+				\item \textbf{Metodi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_() : void}}
 						\begin{description}
@@ -305,14 +305,14 @@
 					\begin{itemize}
 						\item server::miner::fb::PostsCounter
 					\end{itemize}
-				\item \textbf{Attributi}: 
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{- page\_obj : RawFbPage}}
 						\begin{description}
 							\item \textbf{Descrizione}: la variabile contiene i risultati della chiamata effettuata tramite le API di Facebook riguardante una pagina utente;
 						\end{description}
 					\end{itemize}
-				\item \textbf{Metodi}:   
+				\item \textbf{Metodi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(name\_str : String) : void}}
 						\begin{description}
@@ -353,7 +353,7 @@
 					\begin{itemize}
 						\item server::miner::fb::PostsCounter
 					\end{itemize}
-				\item \textbf{Attributi}: 
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ parent\_key\_int : int}}
 						\begin{description}
@@ -364,7 +364,7 @@
 							\item \textbf{Descrizione}: la variabile contiene i risultati della chiamata effettuata tramite le API di Facebook riguardante una pagina evento;
 						\end{description}
 					\end{itemize}
-				\item \textbf{Metodi}:   
+				\item \textbf{Metodi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_() : void}}
 						\begin{description}
@@ -406,7 +406,7 @@
 						\item server::miner::fb::PostsCounter
 						\item server::miner::fb::CommentsCounter
 					\end{itemize}
-				\item \textbf{Attributi}:  
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ API\_LIMIT : Dictionary}}
 						\begin{description}
@@ -425,7 +425,7 @@
 							\item \textbf{Descrizione}: la variabile contiene il numero di occorrenze dell'oggetto specifico di Facebook;
 						\end{description}
 					\end{itemize}
-				\item \textbf{Metodi}:   
+				\item \textbf{Metodi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(node\_id : int, fb\_edge : String)}}
 						\begin{description}
@@ -463,7 +463,7 @@
 					\begin{itemize}
 						\item server::miner::fb::CommentsCounter
 					\end{itemize}
-				\item \textbf{Attributi}:  
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ admin\_comments\_count\_int : int}}
 						\begin{description}
@@ -478,7 +478,7 @@
 							\item \textbf{Descrizione}: la variabile contiene il numero di likes della pagina;
 						\end{description}
 					\end{itemize}
-				\item \textbf{Metodi}:  
+				\item \textbf{Metodi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(node\_id\_str : String, fb\_edge\_str : String) : void}}
 						\begin{description}
@@ -511,7 +511,7 @@
 				\item \textbf{Descrizione}: classe che descrive l'algoritmo per calcolare il numero di commenti per ogni post;
 				\item \textbf{Utilizzo}: classe che ricava il numero di commenti per ogni post;
 				\item \textbf{Classe ereditate}: server::miner::fb::AbsFbCounter
-				\item \textbf{Attributi}: 
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ admin\_comments\_count\_int : int}}
 						\begin{description}
@@ -522,7 +522,7 @@
 							\item \textbf{Descrizione}: la variabile contiene il parametro ricavare i vari tipi di dato associati ad una metrica evento o pagina; ;
 						\end{description}
 					\end{itemize}
-				\item \textbf{Metodi}:  
+				\item \textbf{Metodi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(node\_id\_str : int, metric\_name\_str: String, fb\_edge\_str : String) : void}}
 						\begin{description}
@@ -575,14 +575,14 @@
 						\item server::miner::tw::TwHashtagFetcher
 						\item server::miner::tw::TwUserFetcher
 					\end{itemize}
-				\item \textbf{Attributi}:   
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ name\_str : String}}
 						\begin{description}
 							\item \textbf{Descrizione}: la variabile contiene l'id univoco della risorsa presente nel social network Twitter;
 						\end{description}
 					\end{itemize}
-				\item \textbf{Metodi}:  
+				\item \textbf{Metodi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(name\_str : String)}}
 						\begin{description}
@@ -607,14 +607,14 @@
 					\begin{itemize}
 						\item server::miner::tw::HashtagTweetCounter
 					\end{itemize}
-				\item \textbf{Attributi}:    
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{- hashtag\_obj : RawTwHashtag}}
 						\begin{description}
 							\item \textbf{Descrizione}: la variabile contiene l'oggetto RawTwHashtag per poterne poi aggiungere i figli associati;
 						\end{description}
 					\end{itemize}
-				\item \textbf{Metodi}:  
+				\item \textbf{Metodi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(name\_str : String)}}
 						\begin{description}
@@ -647,14 +647,14 @@
 					\begin{itemize}
 						\item server::miner::tw::UserTweetCounter
 					\end{itemize}
-				\item \textbf{Attributi}:    
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{- user\_obj : RawTwUser}}
 						\begin{description}
 							\item \textbf{Descrizione}: la variabile contiene l'oggetto RawTwUser per poterne poi aggiungere i figli associati;
 						\end{description}
 					\end{itemize}
-				\item \textbf{Metodi}:  
+				\item \textbf{Metodi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(name\_str: String) : void}}
 						\begin{description}
@@ -694,7 +694,7 @@
 							\item \textbf{Descrizione}: la variabile contiene il nome della metrica rispetto alla pagina Twitter analizzata;
 						\end{description}
 					\end{itemize}
-				\item \textbf{Metodi}: 
+				\item \textbf{Metodi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(recent\_tweet : String) : void}}
 						\begin{description}
@@ -727,7 +727,7 @@
 				\item \textbf{Descrizione}: classe che descrive l'algoritmo per il counting dei campi di un tweet, relativo ad un utente, di cui ci interessa fare un trend;
 				\item \textbf{Utilizzo}: classe che ricava il numero dei retweets, il numero dei favoriti, il tipo di device, e il numero di media per ogni tweet;
 				\item \textbf{Classi ereditate}: server::miner::tw::AbsTwCounter
-				\item \textbf{Attributi}:    
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ favourites\_count\_int : int}}
 						\begin{description}
@@ -746,7 +746,7 @@
 							\item \textbf{Descrizione}: la variabile contiene la data di acquisizione dei dati;
 						\end{description}
 					\end{itemize}
-				\item \textbf{Metodi}:  
+				\item \textbf{Metodi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(name\_str : String) : void}}
 						\begin{description}
@@ -776,7 +776,7 @@
 				\item \textbf{Descrizione}: classe che descrive l'algoritmo per il counting dei campi di un tweet, relativo ad un hashtag, di cui ci interessa fare un trend;
 				\item \textbf{Utilizzo}: classe che ricava anche la time zone di ogni tweet;
 				\item \textbf{Classi ereditate}: server::miner::tw::UserTweetCounter
-				\item \textbf{Attributi}:    
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ favourites\_count\_int : int}}
 						\begin{description}
@@ -791,7 +791,7 @@
 							\item \textbf{Descrizione}: la variabile contiene la somma dei tweets dell'hashtag Twitter;
 						\end{description}
 					\end{itemize}
-				\item \textbf{Metodi}:  
+				\item \textbf{Metodi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(name\_str: String) : void}}
 						\begin{description}
@@ -842,14 +842,14 @@
 						\item server::miner::ig::IgUserFetcher
 						\item server::miner::ig::IgHashtagFetcher
 					\end{itemize}
-				\item \textbf{Attributi}:    
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ name\_str : String}}
 						\begin{description}
 							\item \textbf{Descrizione}: la variabile contiene l'id univoco della risorsa presente nel social network Instagram;
 						\end{description}
 					\end{itemize}
-				\item \textbf{Metodi}:  
+				\item \textbf{Metodi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(name\_str : String) : void}}
 						\begin{description}
@@ -882,14 +882,14 @@
 					\begin{itemize}
 						\item server::miner::ig::MediaCounter
 					\end{itemize}
-				\item \textbf{Attributi}:    
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ user\_obj : RawIgUser}}
 						\begin{description}
 							\item \textbf{Descrizione}: la variabile contiene la metrica cui andranno collegati i figli. Nel seguente caso la metrica riguarda l'utente di Instagram;
 						\end{description}
 					\end{itemize}
-				\item \textbf{Metodi}:  
+				\item \textbf{Metodi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(name\_str : String)}}
 						\begin{description}
@@ -922,14 +922,14 @@
 					\begin{itemize}
 						\item server::miner::ig::MediaCounter
 					\end{itemize}
-				\item \textbf{Attributi}:    
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{- hashtag\_obj : RawIgHashtag}}
 						\begin{description}
 							\item \textbf{Descrizione}: la variabile contiene la metrica cui andranno collegati i figli. Nel seguente caso la metrica riguarda l'hashtag su Instagram;
 						\end{description}
 					\end{itemize}
-				\item \textbf{Metodi}:  
+				\item \textbf{Metodi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(name\_str : String) : void}}
 						\begin{description}
@@ -973,7 +973,7 @@
 							\item \textbf{Descrizione}: la variabile contiene l'id della risorsa utile per la memorizzazione dei dati acquisiti successivamente;
 						\end{description}
 					\end{itemize}
-				\item \textbf{Metodi}: 
+				\item \textbf{Metodi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_(node\_name : String) : void}}
 						\begin{description}
@@ -1015,7 +1015,7 @@
 				\item \textbf{Descrizione}: classe che descrive l'algoritmo per il counting delle metriche necessarie a descrivere il trend dei media di un utente o di un hashtag  Instagram;
 				\item \textbf{Utilizzo}: classe che ricava il numero di commenti, il numero di like, il numero di foto e il numero di video di un media;
 				\item \textbf{Classi ereditate}: server::miner::ig::AbsIgCounter
-				\item \textbf{Attributi}:    
+				\item \textbf{Attributi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ likes\_count\_int : int}}
 						\begin{description}
@@ -1038,7 +1038,7 @@
 							\item \textbf{Descrizione}: la variabile contiene una lista formata da chiave-valore di GeoPoint riguardanti la localizzazione dei media;
 						\end{description}
 					\end{itemize}
-				\item \textbf{Metodi}:  
+				\item \textbf{Metodi}:
 					\begin{itemize}
 						\item \textcolor{forestgreen}{\texttt{+ \_\_init\_\_() : void}}
 						\begin{description}
