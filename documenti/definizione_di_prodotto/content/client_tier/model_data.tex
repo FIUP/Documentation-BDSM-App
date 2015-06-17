@@ -62,17 +62,10 @@ Per tutte le altre classi quindi verranno solo forniti gli attributi che ogni og
 
 				\item \textbf{Metodi}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{- getViews(conf, cat, type, val)}}
+						\item \textcolor{forestgreen}{\texttt{- getViews(conf, cat, type, val, viewType)}}
 						\begin{description}
-							\item \textbf{Descrizione}: metodo che restituisce in un array di oggetti JSON i vari tipi di grafico da generare (views) in base alla categoria e al tipo della metrica, e in base al fatto che si tratti di un grafico di confronto o meno. L'argomento conf (booleano) determina se bisogna generare un confronto, cat e type contengono la categoria e il tipo della metrica, mentre val il suo valore. Il formato dei JSON restituiti è il seguente:
-								\begin{verbatim}
-									{
-									    kind: 'line',
-									    time: 'weekly',
-									    data: ['likes', 'talking-about'],
-									    desc: 'Likes and Talking About the page '+ val +' over time (weekly)'
-									}
-								\end{verbatim}
+							\item \textbf{Descrizione}: metodo che restituisce un array di funzioni che verranno applicate dalle classi figlie di ChartCreator per ottenere i vari tipi di grafico da generare (views) in base alla categoria e al tipo della metrica, e in base al fatto che si tratti di un grafico di confronto o meno.L'argomento conf (booleano) determina se bisogna generare un confronto, cat e type contengono la categoria e il tipo della metrica, mentre val il suo valore. Nel caso venga specificata la stringa viewType viene restituita solo la funzione relativa alla stringa passata.
+							Si noti che questa classe è in realtà suddivisa in una classe base e le sei sottoclassi viewTypeFbSingleModel, viewTypeFbConfModel, viewTypeTwSingleModel, viewTypeTwConfModel, viewTypeIgSingleModel, viewTypeIgConfModel (view singole e confronti per ogni social), in quanto la classe sarebbe diventata troppo grossa per linee di codice e SLOC. Logicamente però il sistema vede queste classi come la sola classe ViewTypeModel, ragion per cui non sono state descritte singolarmente queste classi.
 						\end{description}
 					\end{itemize}
 

@@ -114,7 +114,7 @@
 		\label{subp:client_model_services_recipeservice}
 		\begin{figure}[htbp]
 				\centering
-				\centerline{\includegraphics[scale=0.7]{./images/client/classes/model/recipe_service.pdf}}
+				\centerline{\includegraphics[scale=1.17]{./images/client/classes/model/recipe_service.pdf}}
 				\caption{Classe - client::model::services::RadarChartCreator}
 			\end{figure}
 			\begin{itemize}
@@ -156,13 +156,17 @@
 					\begin{description}
 						\item \textbf{Descrizione}: metodo per impostare un rating a una recipe e inviare il voto al server.
 					\end{description}
-					\item \textcolor{forestgreen}{\texttt{+ generateViews(metric)}}
+					\item \textcolor{forestgreen}{\texttt{+ generateViews(metric,typeView)}}
 					\begin{description}
-						\item \textbf{Descrizione}: metodo che data una metrica (nel formato descritto da MetricModel) restituisce l'html per generare i grafici associati a quella metrica. 
+						\item \textbf{Descrizione}: metodo che data una metrica (nel formato descritto da MetricModel) restituisce un promessa di un array di promesse contenenti l'html per generare i grafici associati a quella metrica. Riceve opzionalmente il nome di una funzione tratta da ViewTypeModel per generare un solo grafico specifico.
 					\end{description}
-					\item \textcolor{forestgreen}{\texttt{+ generateCompare(metrics)}}
+					\item \textcolor{forestgreen}{\texttt{+ generateCompare(metrics,typeView)}}
 					\begin{description}
-						\item \textbf{Descrizione}: metodo che dato un array di metriche (nel formato descritto da MetricModel) restituisce l'html per generare i grafici di confronto di quelle metriche. 
+						\item \textbf{Descrizione}: metodo che dato un array di metriche (nel formato descritto da MetricModel) restituisce un promessa di un array di promesse contenenti l'html per generare i grafici di confronto di quelle metriche. Riceve opzionalmente il nome di una funzione tratta da ViewTypeModel per generare un solo grafico specifico.
+					\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ generateFavourites(favouritesList)}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo che dato un array di favoriti restituisce una promessa di array di promesse contenenti l'html per generare i grafici segnati come favoriti. Riceve in input la lista dei favoriti come essa viene restituita dal server.
 					\end{description}
 				\end{itemize}	
 			\end{itemize}
@@ -229,8 +233,8 @@
 		\label{subp:client_model_services_userservice}
 		\begin{figure}[htbp]
 				\centering
-				\centerline{\includegraphics[scale=0.7]{./images/client/classes/model/user_service.pdf}}
-				\caption{Classe - client::model::services::RadarChartCreator}
+				\centerline{\includegraphics[scale=1.15]{./images/client/classes/model/user_service.pdf}}
+				\caption{Classe - client::model::services::UserService}
 			\end{figure}
 			\begin{itemize}
 				\item \textbf{Descrizione}: è la classe che gestisce il recupero e la modifica di dati utente relativi a sé stessi;
@@ -248,15 +252,13 @@
 					\begin{description}
 						\item \textbf{Descrizione}: metodo che restituisce la lista dei grafici favoriti. 
 					\end{description}
-					\item \textcolor{forestgreen}{\texttt{+ addFavourite(graph)}}
+					\item \textcolor{forestgreen}{\texttt{+ deleteFavourite(id)}}
 					\begin{description}
-						\item \textbf{Descrizione}: metodo per aggiungere ai favoriti un grafico. Riceve un JSON nella forma:
-								\begin{verbatim}
-									{
-									    metrics: array di MetricModel,
-									    kind: JSON nella forma descritta da TypeView
-									}
-								\end{verbatim}  
+						\item \textbf{Descrizione}: metodo che richiede la rimozione di un grafico dai favoriti. Riceve l'id del favorito da eliminiare. 
+					\end{description}
+					\item \textcolor{forestgreen}{\texttt{+ addFavourite(metrics, info)}}
+					\begin{description}
+						\item \textbf{Descrizione}: metodo per aggiungere ai favoriti un grafico. Riceve un array di MetricModel, e ilnome di una funzione tratta da ViewTypeModel 
 					\end{description}
 					\item \textcolor{forestgreen}{\texttt{+ getAccessToken(idUser)}}
 					\begin{description}
@@ -332,21 +334,13 @@
 				\item \textbf{Attributi}: N/A
 				\item \textbf{Metodi}: 
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{+ chartGeneration(data)}}
+						\item \textcolor{forestgreen}{\texttt{+ chartGeneration(data,info)}}
 						\begin{description}
-							\item \textbf{Descrizione}: metodo che definisce le operazioni comuni di generazione di un grafico. Riceve com argomento un JSON nella forma:
-							\begin{verbatim}
-									{
-									    desc: "descrizione del grafico",
-									    datasets: array di array di numeri,
-									    labels: array di stringhe,
-									    grouping: "weekly/monthly/year/per post" 
-									}
-								\end{verbatim}  
+							\item \textbf{Descrizione}: metodo che definisce le operazioni comuni di generazione di un grafico. Riceve com argomento una promessa di risultati di una chiamata REST (data) e una funzione estratta da ViewTypeModel. Restituisce una promessa del codice html di un grafico.
 						\end{description}
 						\item \textcolor{forestgreen}{\texttt{+ dataFormat(data)}}
 						\begin{description}
-							\item \textbf{Descrizione}: metodo per portare i dati nel formato corretto per lo specifico tipo di grafico. Riceve un JSON nella forma descritta per il metodo chartGeneration.
+							\item \textbf{Descrizione}: metodo per portare i dati nel formato corretto per lo specifico tipo di grafico. Riceve una funzione estratta da ViewTypeModel.
 						\end{description}
 
 					\end{itemize}

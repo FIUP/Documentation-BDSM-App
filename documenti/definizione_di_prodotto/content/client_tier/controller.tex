@@ -510,7 +510,7 @@ La zona quindi dedicata a quei valori sarà marcata come specificato in \ref{sub
 		\label{subp:client_controller_user_chartsctrl}
 			\begin{figure}[htbp]
 				\centering
-				\centerline{\includegraphics[scale=0.6]{./images/client/classes/controller/charts_ctrl.pdf}}
+				\centerline{\includegraphics[scale=1.15]{./images/client/classes/controller/charts_ctrl.pdf}}
 				\caption{Classe - client::controller:user::ChartsCtrl}
 			\end{figure}
 			\begin{itemize}
@@ -545,23 +545,44 @@ La zona quindi dedicata a quei valori sarà marcata come specificato in \ref{sub
 							\begin{description}
 								\item \textbf{Descrizione}: parametro che identifica il tipo della/e metrica/metriche.
 							\end{description}
-						\item \textcolor{forestgreen}{\texttt{+ graphs : Array di oggetti JSON}}
+						\item \textcolor{forestgreen}{\texttt{+ getGraph : Array di oggetti JSON}}
 							\begin{description}
 								\item \textbf{Descrizione}: contiene i grafici che devono essere visualizzati in un JSON della forma:
 								\begin{verbatim}
 									    {
 									        desc: 'Descrizione del grafico',
 									        data: codice HTML per generare il grafico
+									        info: nome della funzione di ViewTypeModel che ha generato il grafico
 									     }
 								\end{verbatim}
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ noGraphData : Boolean}}
+							\begin{description}
+								\item \textbf{Descrizione}: indica se non è presente nessun grafico.
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ addedFavourite : Boolean}}
+							\begin{description}
+								\item \textbf{Descrizione}: indica se è stato aggiunto un grafico ai favoriti.
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ failedAdd : Boolean}}
+							\begin{description}
+								\item \textbf{Descrizione}: indica se è stata fallita un'aggiunta ai favoriti.
+							\end{description}
+							\item \textcolor{forestgreen}{\texttt{- parameter : JSON nella forma di MetricModel}}
+							\begin{description}
+								\item \textbf{Descrizione}: JSON che viene passato al RecipeService per richiedere la generazione di grafici.
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{- graphPromise : Promise}}
+							\begin{description}
+								\item \textbf{Descrizione}: Promessa dei grafici da visualizzare.
 							\end{description}
 					\end{itemize}
 
 				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{- getGraphs: Array di oggetti JSON}}
+						\item \textcolor{forestgreen}{\texttt{+ addToFavourites(info)}}
 							\begin{description}
-								\item \textbf{Descrizione}: metodo per chiamare i metodi di RecipeService per la creazione di grafici. Ritorna un array di JSON nella forma descritta per l'attributo graphs.
+								\item \textbf{Descrizione}: metodo per chiamare i metodi di UserService per l'aggiunta di un favorito.
 							\end{description}
 
 					\end{itemize}
@@ -831,7 +852,7 @@ La zona quindi dedicata a quei valori sarà marcata come specificato in \ref{sub
 		\label{subp:client_controller_user_favouritesctrl}
 			\begin{figure}[htbp]
 				\centering
-				\centerline{\includegraphics[scale=0.7]{./images/client/classes/controller/favourites_ctrl.pdf}}
+				\centerline{\includegraphics[scale=1.17]{./images/client/classes/controller/favourites_ctrl.pdf}}
 				\caption{Classe - client::controller:user::FavouritesCtrl}
 			\end{figure}
 			\begin{itemize}
@@ -846,24 +867,55 @@ La zona quindi dedicata a quei valori sarà marcata come specificato in \ref{sub
 
 				\item \textbf{Attributi associati allo \$scope}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{+ graphs : Array di oggetti JSON}}
+						\item \textcolor{forestgreen}{\texttt{+ getGraph : Array di oggetti JSON}}
 							\begin{description}
 								\item \textbf{Descrizione}: contiene i grafici che devono essere visualizzati in un JSON della forma:
 								\begin{verbatim}
 									    {
 									        desc: 'Descrizione del grafico',
 									        data: codice HTML per generare il grafico
+									        info: nome della funzione di ViewTypeModel che ha generato il grafico
 									     }
 								\end{verbatim}
 							\end{description}
-
+						\item \textcolor{forestgreen}{\texttt{+ favourites : Array di oggetti JSON}}
+							\begin{description}
+								\item \textbf{Descrizione}: contiene i favoriti che devono essere visualizzati in un JSON della forma:
+								\begin{verbatim}
+									    {
+									        metric: MetricModel,
+									        id: identificativo del favorito,
+									        chart_type: nome della funzione di ViewTypeModel che ha generato il grafico
+									     }
+								\end{verbatim}
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ deleted : Boolean}}
+							\begin{description}
+								\item \textbf{Descrizione}: descrive se è stato cancellato un favorito 
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ failedDelete : Boolean}}
+							\begin{description}
+								\item \textbf{Descrizione}: descrive se è stata fallita una cancellazione di un favorito 
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{+ noFavs : Boolean}}
+							\begin{description}
+								\item \textbf{Descrizione}: descrive se non è presente nessun favorito 
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{- graphPromise : Promise}}
+							\begin{description}
+								\item \textbf{Descrizione}: Promessa dei grafici da visualizzare tra i favoriti 
+							\end{description}
+						\item \textcolor{forestgreen}{\texttt{- favPromise : Promise}}
+							\begin{description}
+								\item \textbf{Descrizione}: Promessa dei dati relativi ai favoriti 
+							\end{description}
 					\end{itemize}
 
 				\item \textbf{Metodi associati allo \$scope e privati}:
 					\begin{itemize}
-						\item \textcolor{forestgreen}{\texttt{- getFavouriteGraphs: Array di oggetti JSON}}
+						\item \textcolor{forestgreen}{\texttt{+ deleteFavourite(id)  }}
 							\begin{description}
-								\item \textbf{Descrizione}: metodo per chiamare i metodi di RecipeService per ottenere i grafici favoriti. Ritorna un array di JSON nella forma descritta per l'attributo graphs.
+								\item \textbf{Descrizione}: metodo per chiamare i metodi di UserService per richiedere la rimozione del favorito segnato come con identificativo id.
 							\end{description}
 
 
